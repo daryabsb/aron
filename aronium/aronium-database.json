@@ -1,0 +1,566 @@
+[
+{
+	"name": "ApplicationProperty",
+	"fields": [
+		"Name",
+		"Value"
+	]
+}
+	,
+{
+	"name": "Barcode",
+	"fields": [
+		"Id",
+		"ProductId",
+		"Value"
+	]
+}
+	,
+{
+	"name": "Company",
+	"fields": [
+		"Id",
+		"Name",
+		"Address",
+		"PostalCode",
+		"City",
+		"CountryId",
+		"TaxNumber",
+		"Email",
+		"PhoneNumber",
+		"Logo",
+		"BankAccountNumber",
+		"BankDetails"
+	]
+}
+	,
+{
+	"name": "Counter",
+	"fields": [
+		"Name",
+		"Value"
+	]
+}
+	,
+{
+	"name": "Country",
+	"fields": [
+		"Id",
+		"Name",
+		"Code"
+	]
+}
+	,
+{
+	"name": "Currency",
+	"fields": [
+		"Id",
+		"Name",
+		"Code"
+	]
+}
+	,
+{
+	"name": "Customer",
+	"fields": [
+		"Id",
+		"Code",
+		"Name",
+		"TaxNumber",
+		"Address",
+		"PostalCode",
+		"City",
+		"CountryId",
+		"DateCreated",
+		"DateUpdated",
+		"Email",
+		"PhoneNumber",
+		"IsEnabled",
+		"IsCustomer",
+		"IsSupplier",
+		"DueDatePeriod"
+	]
+}
+	,
+{
+	"name": "CustomerDiscount",
+	"fields": [
+		"Id",
+		"CustomerId",
+		"Type",
+		"Uid",
+		"Value"
+	]
+}
+	,
+{
+	"name": "Document",
+	"fields": [
+		"Id",
+		"Number",
+		"UserId",
+		"CustomerId",
+		"OrderNumber",
+		"Date",
+		"StockDate",
+		"Total",
+		"IsClockedOut",
+		"DocumentTypeId",
+		"WarehouseId",
+		"ReferenceDocumentNumber",
+		"DateCreated",
+		"DateUpdated",
+		"InternalNote",
+		"Note",
+		"DueDate",
+		"Discount",
+		"DiscountType",
+		"PaidStatus",
+		"DiscountApplyRule"
+	]
+}
+	,
+{
+	"name": "DocumentCategory",
+	"fields": [
+		"Id",
+		"Name",
+		"LanguageKey"
+	]
+}
+	,
+{
+	"name": "DocumentItem",
+	"fields": [
+		"Id",
+		"DocumentId",
+		"ProductId",
+		"Quantity",
+		"ExpectedQuantity",
+		"PriceBeforeTax",
+		"Price",
+		"Discount",
+		"DiscountType",
+		"ProductCost",
+		"PriceBeforeTaxAfterDiscount",
+		"PriceAfterDiscount",
+		"Total",
+		"TotalAfterDocumentDiscount",
+		"DiscountApplyRule"
+	]
+}
+	,
+{
+	"name": "DocumentItemTax",
+	"fields": [
+		"DocumentItemId",
+		"TaxId",
+		"Amount"
+	]
+}
+	,
+{
+	"name": "DocumentType",
+	"fields": [
+		"Id",
+		"Name",
+		"Code",
+		"DocumentCategoryId",
+		"WarehouseId",
+		"StockDirection",
+		"EditorType",
+		"PrintTemplate",
+		"PriceType",
+		"LanguageKey"
+	]
+}
+	,
+{
+	"name": "FiscalItem",
+	"fields": [
+		"PLU",
+		"Name",
+		"VAT"
+	]
+}
+	,
+{
+	"name": "FloorPlan",
+	"fields": [
+		"Id",
+		"Name",
+		"Color"
+	]
+}
+	,
+{
+	"name": "FloorPlanTable",
+	"fields": [
+		"Id",
+		"Name",
+		"FloorPlanId",
+		"PositionX",
+		"PositionY",
+		"Width",
+		"Height",
+		"IsRound"
+	]
+}
+	,
+{
+	"name": "LoyaltyCard",
+	"fields": [
+		"Id",
+		"CustomerId",
+		"CardNumber"
+	]
+}
+	,
+{
+	"name": "Migration",
+	"fields": [
+		"ID",
+		"Version",
+		"Description",
+		"FileName",
+		"Module",
+		"Date"
+	]
+}
+	,
+{
+	"name": "Payment",
+	"fields": [
+		"Id",
+		"DocumentId",
+		"PaymentTypeId",
+		"Amount",
+		"Date"
+	]
+}
+	,
+{
+	"name": "PaymentType",
+	"fields": [
+		"Id",
+		"Name",
+		"Code",
+		"IsCustomerRequired",
+		"IsFiscal",
+		"IsSlipRequired",
+		"IsChangeAllowed",
+		"Ordinal",
+		"IsEnabled",
+		"IsQuickPayment",
+		"OpenCashDrawer",
+		"ShortcutKey",
+		"MarkAsPaid"
+	]
+}
+	,
+{
+	"name": "PosOrder",
+	"fields": [
+		"Id",
+		"UserId",
+		"Number",
+		"Discount",
+		"DiscountType",
+		"Total"
+	]
+}
+	,
+{
+	"name": "PosOrderItem",
+	"fields": [
+		"Id",
+		"PosOrderId",
+		"ProductId",
+		"RoundNumber",
+		"Quantity",
+		"Price",
+		"IsLocked",
+		"Discount",
+		"DiscountType",
+		"IsFeatured",
+		"VoidedBy",
+		"Comment",
+		"DateCreated",
+		"Bundle"
+	]
+}
+	,
+{
+	"name": "PosPrinterSelection",
+	"fields": [
+		"Id",
+		"Key",
+		"PrinterName",
+		"IsEnabled"
+	]
+}
+	,
+{
+	"name": "PosPrinterSelectionSettings",
+	"fields": [
+		"Id",
+		"PosPrinterSelectionId",
+		"PaperWidth",
+		"Header",
+		"Footer",
+		"FeedLines",
+		"CutPaper",
+		"PrintBitmap",
+		"OpenCashDrawer",
+		"CashDrawerCommand",
+		"HeaderAlignment",
+		"FooterAlignment",
+		"IsFormattingEnabled",
+		"PrinterType",
+		"NumberOfCopies",
+		"CodePage",
+		"CharacterSet",
+		"Margin",
+		"LeftMargin",
+		"TopMargin",
+		"RightMargin",
+		"BottomMargin",
+		"PrintBarcode",
+		"FontName",
+		"FontSizePercent"
+	]
+}
+	,
+{
+	"name": "PosPrinterSettings",
+	"fields": [
+		"Id",
+		"PrinterName",
+		"PaperWidth",
+		"Header",
+		"Footer",
+		"FeedLines",
+		"CutPaper",
+		"PrintBitmap",
+		"OpenCashDrawer",
+		"CashDrawerCommand",
+		"HeaderAlignment",
+		"FooterAlignment",
+		"IsFormattingEnabled",
+		"PrinterType",
+		"NumberOfCopies",
+		"CodePage",
+		"CharacterSet"
+	]
+}
+	,
+{
+	"name": "PrintStation",
+	"fields": [
+		"Id",
+		"Name"
+	]
+}
+	,
+{
+	"name": "PrintStationPosPrinterSelection",
+	"fields": [
+		"PrintStationId",
+		"PosPrinterSelectionId"
+	]
+}
+	,
+{
+	"name": "Product",
+	"fields": [
+		"Id",
+		"ProductGroupId",
+		"Name",
+		"Code",
+		"PLU",
+		"MeasurementUnit",
+		"Price",
+		"IsTaxInclusivePrice",
+		"CurrencyId",
+		"IsPriceChangeAllowed",
+		"IsService",
+		"IsUsingDefaultQuantity",
+		"IsEnabled",
+		"Description",
+		"DateCreated",
+		"DateUpdated",
+		"Cost",
+		"Margin",
+		"Image",
+		"Color",
+		"AgeRestriction",
+		"LastPurchasePrice",
+		"Rank"
+	]
+}
+	,
+{
+	"name": "ProductComment",
+	"fields": [
+		"Id",
+		"ProductId",
+		"Comment"
+	]
+}
+	,
+{
+	"name": "ProductGroup",
+	"fields": [
+		"Id",
+		"Name",
+		"ParentGroupId",
+		"Color",
+		"Image",
+		"Rank"
+	]
+}
+	,
+{
+	"name": "ProductGroupPrintStation",
+	"fields": [
+		"ProductGroupId",
+		"PrintStationId"
+	]
+}
+	,
+{
+	"name": "ProductPrintStation",
+	"fields": [
+		"ProductId",
+		"PrintStationId"
+	]
+}
+	,
+{
+	"name": "ProductTax",
+	"fields": [
+		"ProductId",
+		"TaxId"
+	]
+}
+	,
+{
+	"name": "Promotion",
+	"fields": [
+		"Id",
+		"Name",
+		"StartDate",
+		"StartTime",
+		"EndDate",
+		"EndTime",
+		"DaysOfWeek",
+		"IsEnabled"
+	]
+}
+	,
+{
+	"name": "PromotionItem",
+	"fields": [
+		"Id",
+		"PromotionId",
+		"Uid",
+		"DiscountType",
+		"PriceType",
+		"Value",
+		"IsConditional",
+		"Quantity",
+		"ConditionType",
+		"QuantityLimit"
+	]
+}
+	,
+{
+	"name": "SecurityKey",
+	"fields": [
+		"Name",
+		"Level"
+	]
+}
+	,
+{
+	"name": "StartingCash",
+	"fields": [
+		"Id",
+		"UserId",
+		"Amount",
+		"Description",
+		"StartingCashType",
+		"ZReportNumber",
+		"DateCreated"
+	]
+}
+	,
+{
+	"name": "Stock",
+	"fields": [
+		"Id",
+		"ProductId",
+		"WarehouseId",
+		"Quantity"
+	]
+}
+	,
+{
+	"name": "StockControl",
+	"fields": [
+		"Id",
+		"ProductId",
+		"CustomerId",
+		"ReorderPoint",
+		"PreferredQuantity",
+		"IsLowStockWarningEnabled",
+		"LowStockWarningQuantity"
+	]
+}
+	,
+{
+	"name": "Tax",
+	"fields": [
+		"Id",
+		"Name",
+		"Rate",
+		"Code",
+		"IsFixed",
+		"IsTaxOnTotal",
+		"IsEnabled"
+	]
+}
+	,
+{
+	"name": "User",
+	"fields": [
+		"Id",
+		"FirstName",
+		"LastName",
+		"Username",
+		"Password",
+		"AccessLevel",
+		"IsEnabled",
+		"Email"
+	]
+}
+	,
+{
+	"name": "Warehouse",
+	"fields": [
+		"Id",
+		"Name"
+	]
+}
+	,
+{
+	"name": "ZReport",
+	"fields": [
+		"Id",
+		"Number",
+		"FromDocumentId",
+		"ToDocumentId",
+		"DateCreated"
+	]
+}
+]
