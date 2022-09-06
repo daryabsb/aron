@@ -1,0 +1,1500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="tr" name="Türkçe">
+  <Buttons>
+    <Yes Text="Evet"></Yes>
+    <Ok Text="TAMAM"></Ok>
+    <No Text="Hayır"></No>
+    <Cancel Text="İptal"></Cancel>
+    <Save Text="Kaydet"></Save>
+    <Close Text="Kapat"></Close>
+    <Add Text="Ekle"></Add>
+    <New Text="Yeni"></New>
+    <Edit Text="Düzenle"></Edit>
+    <Cut Text="Kes"></Cut>
+    <Copy Text="Kopyala"></Copy>
+    <Paste Text="Yapıştır"></Paste>
+    <Delete Text="Sil"></Delete>
+    <Refresh Text="Yenile"></Refresh>
+    <Login Text="GİRİŞ"></Login>
+    <Logout Text="Oturumu kapat"></Logout>
+    <Print Text="Yazdır"></Print>
+    <SavePdf Text="PDF olarak kaydet"></SavePdf>
+    <Excel Text="Excel"></Excel>
+    <Hide Text="Gizle"></Hide>
+    <FirstPage Text="İlk sayfa"></FirstPage>
+    <LastPage Text="Son sayfa"></LastPage>
+    <NextPage Text="Sonraki sayfa"></NextPage>
+    <PreviousPage Text="Önceki sayfa"></PreviousPage>
+    <Continue Text="Devam et"></Continue>
+    <Clear Text="Temizle"></Clear>
+    <Exit Text="Çıkış"></Exit>
+    <Search Text="Arama"></Search>
+    <Ignore Text="Yoksay"></Ignore>
+    <Retry Text="Tekrar dene"></Retry>
+    <DeleteAll Text="Tümünü Sil"></DeleteAll>
+    <Skip Text="Atla"></Skip>
+    <Restart Text="Yeniden başlat"></Restart>
+    <SaveAndClose Text="Kaydet &amp; kapat"></SaveAndClose>
+    <Help Text="Yardım"></Help>
+    <Back Text="Geri"></Back>
+    <LearnMore Text="Daha fazla öğren"></LearnMore>
+    <Done Text="Bitti"></Done>
+    <Send Text="Gönder"></Send>
+    <WhatsThis Text="Bu nedir?"></WhatsThis>
+    <Pdf Text="PDF" />
+    <Maximize Text="Büyüt" />
+    <Restore Text="Onar" />
+    <Browse Text="Göz at" />
+  </Buttons>
+  <Bootstrap>
+    <Initializing Text="Uygulama yükleniyor..."></Initializing>
+    <Load>
+      <Components Text="Uygulama bileşenleri yükleniyor..."></Components>
+      <Modules Text="Modüller yükleniyor ve başlatılıyor ..."></Modules>
+      <Products Text="Ürünler ükleniyor....">
+        <Error Text="Ürünler yüklenirken hata.">
+          <Info Text="Bazı ürünler satılık uygun olmayabilir. Başarısız ürünleri kontrol edin ve tekrar deneyin."></Info>
+          <DuplicateBarcode Text="Çift barkod &quot;{0}&quot;"></DuplicateBarcode>
+          <DuplicateCode Text="Çift kod &quot;{0}&quot;"></DuplicateCode>
+          <Copy Text="Panoya kopyala"></Copy>
+        </Error>
+      </Products>
+      <CashRegister Text="Yazar kasa verileri yükleniyor ..."></CashRegister>
+      <ScanTypes Text="Tarama türleri..."></ScanTypes>
+    </Load>
+    <Connect Text="Veritabanına bağlanıyor....">
+      <NoDataProvider Text="Veritabanına bağlanmak için modül mevcut değil.\nLütfen yöneticinize veya bayinize başvurun."></NoDataProvider>
+    </Connect>
+    <Error Text="Uygulama başlatmaya çalışırken hata oluştu. Lütfen sistem yöneticisine başvurun."></Error>
+    <Completed Text="Uygulama başlatılıyor"></Completed>
+    <BackupDatabase Text="Veritabanı sürümü doğrulanıyor..."></BackupDatabase>
+    <Migrations Text="Veritabanı konrol ediliyor...">
+      <Failed Text="Veritabanı taşıma başarısız!"></Failed>
+    </Migrations>
+    <RestartRequired Text="Değişikliklerin yürürlüğe girmesi için uygulama yeniden başlatma gereklidir.\nUygulamayı yeniden başlatmak için aşağıdaki düğmeye tıklayın."></RestartRequired>
+    <ValidateLicense Text="Lisans doğrulanıyor..." />
+    <Onboarding Text="Bütünleştirme durumu denetleniyor..." />
+    <CustomerDisplay Text="Müşteri ekranı başlatılıyor ..." />
+    <PrinterStatus Text="Yazıcı durumu denetleniyor..." />
+    <VerifyVersion Text="Uygulama sürümü doğrulanıyor..." />
+  </Bootstrap>
+  <Onboarding>
+    <Welcome Text="Hoşgeldiniz">
+      <Info Text="Mağazanız ve temel uygulama verilerinizi ayarlayalım.\nKatılım sürecinin tamamlanması sadece birkaç dakika sürecektir."></Info>
+      <Start Text="BAŞLAT"></Start>
+    </Welcome>
+    <Back Text="Geri"></Back>
+    <Skip Text="Bütünleştirmeyi atla"></Skip>
+    <Hide Text="Bunu bir daha gösterme"></Hide>
+    <Next Text="Atla"></Next>
+    <Continue Text="Kaydet &amp; Devam et"></Continue>
+    <Layout Text="Yerleşim seçin">
+      <LearnMore Text="Düzen ve çalışma alanı hakkında daha fazla bilgi edinin."></LearnMore>
+      <Standard Text="Standart">
+        <Description Text="Barkod kullanıyorsanız veya bilgisayarınıza bağlı bir fiziksel klavyeniz varsa bu düzeni kullanın."></Description>
+      </Standard>
+      <TouchScreen Text="Görsel">
+        <Description Text="Ürünlerinizi ve gruplarınızı görsel olarak ekranda görüntülemek isterseniz bu düzeni kullanın."></Description>
+      </TouchScreen>
+      <EnableVirtualKeyboard Text="Sanal klavyeyi etkinleştir"></EnableVirtualKeyboard>
+    </Layout>
+    <Registration Text="Kayıt">
+      <Info Text="Lütfen e-posta adresinizi girin, böylece sizin için daha özelleştirilmiş destek sağlayabiliriz.">
+        <Email Text="Bu e-posta varsayılan yönetici hesabına ayarlanacak ve şifreyi sıfırlamak için kullanılabilir. Bu e-posta adresini istediğiniz zaman değiştirebilirsiniz."></Email>
+      </Info>
+      <Email Text="Eposta adresiniz">
+        <Privacy Text="E-postanız kesinlikle gizli tutulur. E-postanızı daha kişiselleştirilmiş destek sağlamak ve size en son güncellemeleri göndermek için kullanacağız.\nBiz de &quot;spam&quot; dan nefret ediyoruz."></Privacy>
+      </Email>
+    </Registration>
+    <UserProfile>
+      <Title Text="Haydi kişisel hesabınızı ayarlayalım"></Title>
+      <Info Text="Lütfen adınızı ve yönetici erişimi için kullandığınız giriş bilgilerinizi giriniz."></Info>
+      <LearnMore Text="Kullanıcılar ve varsayılan kimlik bilgileri hakkında daha fazla bilgi edinin"></LearnMore>
+      <FirstName Text="Ad"></FirstName>
+      <LastName Text="Soyad"></LastName>
+      <Email Text="E-posta">
+        <Info Text="Bu e-posta hesabınız için bir kurtarma e-postası olarak kullanılacaktır. Geçerli e-posta adresi, şifrenizi e-posta ile sıfırlayabilirsiniz."></Info>
+        <Missing Text="Geçerli bir e-posta adresi girmezseniz, bloke edilme riskiniz vardır.\nParolanızı unutmanız durumunda, geçerli e-posta adresi olmadan kurtarmanız mümkün olmayacaktır.">
+          <Title Text="E-posta adresi ayarlanmadı" />
+          <Confirmation Text="E-posta adresi olmadan devam etmek istiyor musunuz?" />
+        </Missing>
+      </Email>
+      <Password Text="Şifre">
+        <Errors>
+          <Empty Text="Şifre gerekli kriterleri karşılamıyor. Şifre ayarlanmalı ve en az 4 karakter uzunluğunda olmalı"></Empty>
+          <ConfirmationError Text="Şifre onayı uyuşmuyor. Lütfen şifre ve şifre doğrulama alanlarında aynı değerleri girin."></ConfirmationError>
+        </Errors>
+      </Password>
+      <ConfirmPassword Text="Şifreyi onaylayın"></ConfirmPassword>
+    </UserProfile>
+    <Completed Text="Onboard tamamlandı">
+      <Info Text="Tebrikler! Hazırsınız ve hazırsınız. \nSonra, bazı ürünleri eklemek ve satmaya başlamak için &quot;Yönetim&quot; bölümünü açın."></Info>
+      <Finish Text="Kapat ve Devam Et"></Finish>
+    </Completed>
+    <PriceDisplay Text="Fiyat ekranı">
+      <Info Text="Fiyatların vergiden hariç mi dahil mi görüntüleneceğini ve yazdırılacağını seçin" />
+      <BeforeTax Text="Vergi Öncesi">
+        <Description Text="Fiyatlar vergi dahil olmadan fişte gösterilecek ve yazdırılacaktır." />
+      </BeforeTax>
+      <AfterTax Text="Vergi Sonrası">
+        <Description Text="Fiyatlar, vergi dahil olmak üzere makbuzda görüntülenecek ve yazdırılacaktır." />
+      </AfterTax>
+      <DiscountApplyRule>
+        <Info Text="İndirimler bu seçime göre vergi öncesi veya sonrası uygulanacaktır. İndirim kurallarını istediğiniz zaman ayarlardan değiştirebilirsiniz." />
+      </DiscountApplyRule>
+    </PriceDisplay>
+  </Onboarding>
+  <BusinessDay>
+    <Close>
+      <Authorization>
+        <Title Text="İş gününü kapatmak için lütfen şifre giriniz"></Title>
+      </Authorization>
+    </Close>
+    <Select Text="İş gününü seç">
+      <EnableSelection Text="(İş gününü değiştirmek için tarihte tıklayın)"></EnableSelection>
+    </Select>
+  </BusinessDay>
+  <Application>
+    <Close Text="Uygulamadan çık">
+      <Info Text="Uyulamadan çıkmak istediğinize emin misiniz?"></Info>
+      <ShutDown Text="Uygulamadan çık"></ShutDown>
+      <Restart Text="Uygulamayı yeniden başlat"></Restart>
+      <TurnOffComputer Text="Bilgisayarı Kapat" />
+    </Close>
+    <FullScreen Text="Tam ekran"></FullScreen>
+    <Exit Text="Uygulamadan çık"></Exit>
+    <Menu Text="Menü"></Menu>
+    <RestartRequired Text="Yeniden başlama gerekli">
+      <Info Text="Değişikliklerin etkin olması için uygulama yeniden başlatma gereklidir. Uygulamayı şimdi yeniden başlatmak istiyor musunuz?"></Info>
+    </RestartRequired>
+    <ReloadProducts Text="Ürünleri yeniden yükle">
+      <Info Text="Ürünler değişti. Ürünleri şimdi yeniden yüklemek istiyor musunuz?"></Info>
+    </ReloadProducts>
+  </Application>
+  <Period Text="Dönem">
+    <Start Text="Başlangıç"></Start>
+    <End Text="Bitiş"></End>
+    <Preset Text="Ön tanımlı dönem">
+      <Today Text="Bugün"></Today>
+      <Yesterday Text="Dün"></Yesterday>
+      <ThisWeek Text="Bu hafta"></ThisWeek>
+      <LastWeek Text="Geçen hafta"></LastWeek>
+      <ThisMonth Text="Bu ay"></ThisMonth>
+      <LastMonth Text="Geçen ay"></LastMonth>
+      <ThisYear Text="Bu yıl"></ThisYear>
+      <LastYear Text="Geçen Yıl"></LastYear>
+    </Preset>
+  </Period>
+  <Login Text="Giriş">
+    <Password Text="Şifre">
+      <Forgot Text="Şifremi unuttum?"></Forgot>
+    </Password>
+    <Error Text="Giriş başarısız. Şifrenizi kontrol edip tekrar deneyin."></Error>
+    <Authentication Text="Kullanıcı girişi">
+      <Failed Text="Kullanıcı bulunamadı. Şifrenizi kontrol edip tekrar deneyin."></Failed>
+    </Authentication>
+    <Reset Text="Şifreyi sıfırla">
+      <LearnMore Text="Şifrenizi sıfırlamak hakkında daha fazla bilgi edinin."></LearnMore>
+      <Email Text="Eposta adresinizi girin">
+        <Info Text="Şifreyi sıfırlamak istediğiniz kullanıcıyla ilişkili e-posta adresini girin.\nAşağıya girdiğiniz e-postaya bir doğrulama kodu göndereceğiz."></Info>
+        <Required Text="Eposta gerekli"></Required>
+        <EmailAddress Text="Eposta adresi">
+          <Tooltip Text="Eposta adresinizi girin"></Tooltip>
+        </EmailAddress>
+        <ExistingCode Text="Kodum var. Beni bir sonraki adıma götür."></ExistingCode>
+      </Email>
+      <Code Text="Kodu doğrula">
+        <Info Text="E-postanızı kontrol edin - size aşağıdaki kutuya girmeniz gereken bir yetki kodunu gönderdik.\nYetkilendirme kodu içeren bir e-posta almadıysanız, lütfen spam klasörünüzü kontrol edin veya bir e-posta göndermeyi tekrar deneyin."></Info>
+        <Email Text="Yetkilendirme kodu bu adrese gönderilir {0}."></Email>
+        <AuthorizationCode Text="Yetkilendirme kodu">
+          <Tooltip Text="Yetkilendirme kodunu buraya girin..."></Tooltip>
+        </AuthorizationCode>
+        <Verify Text="Kodu doğrula"></Verify>
+      </Code>
+      <Password Text="Yeni şifrenizi girin">
+        <Info Text="Yerel hesabınız için yeni şifre ve şifre onayı girin.\nYeni şifre ve yeni şifre doğrulama alanları eşleşmelidir.\n\nİşiniz bittiğinde, şifrenizi sıfırlamak için &quot;Tamam&quot; düğmesine tıklayın."></Info>
+        <NewPassword Text="Yeni şifre"></NewPassword>
+        <NewPasswordConfirmation Text="Yeni şifreyi onayla"></NewPasswordConfirmation>
+        <InUse Text="Belirtilen şifre zaten alınmış. Lütfen farklı şifre girin ve tekrar deneyin."></InUse>
+        <User Text="Kullanıcı: {0}"></User>
+        <SetPassword Text="Yeni şifrenizi ayarlayın"></SetPassword>
+        <Success Text="Parola başarıyla değiştirildi"></Success>
+      </Password>
+      <Error>
+        <Expired Text="Yetkilendirme kodunuzun süresi doldu.\nLütfen yeni yetkilendirme kodunu isteyin."></Expired>
+        <InvalidCode Text="Geçersiz kod. Lütfen geçerli bir kod girin ve tekrar deneyin."></InvalidCode>
+        <NoSuchUser Text="Belirtilen &quot;{0}&quot; e-posta adresine sahip kullanıcı mevcut değil.\nLütfen geçerli bir e-posta adresi girin ve tekrar deneyin."></NoSuchUser>
+        <InvalidEmailAddress Text="E-posta adresi geçerli değil. Lütfen geçerli bir e-posta adresi girin ve tekrar deneyin."></InvalidEmailAddress>
+        <LimitReached Text="Şifre sıfırlama sınırına ulaştınız.\n24 saat içinde tekrar deneyebilirsiniz."></LimitReached>
+        <GeneralError Text="Şifre sıfırlama isteğini göndermeye çalışırken hata oluştu.\nLütfen daha sonra tekrar deneyiniz."></GeneralError>
+      </Error>
+    </Reset>
+  </Login>
+  <Order>
+    <List Text="Sipariş listesini aç">
+      <Select Text="Sipariş seç"></Select>
+    </List>
+    <New Text="Yeni satış"></New>
+    <Estimate Text="Kilitle">
+      <Authorization>
+        <Title Text="Satışı kilitlemek için lütfen şifre giriniz"></Title>
+      </Authorization>
+      <Created Text="Sipariş başarıyla kilitlendi"></Created>
+      <Clear Text="Bu satışın kilidini aç">
+        <Authorization>
+          <Title Text="Satışı açmak için lütfen şifre giriniz"></Title>
+        </Authorization>
+        <Success Text="Satışın kilidi açıldı."></Success>
+      </Clear>
+      <Locked Text="Satış kilitli">
+        <Info Text="Kilitli bir satışı düzenlemek yasaktır."></Info>
+      </Locked>
+      <Issued Text="Bu satış zaten kilitlendi.\nKilitli bir satışı düzenlemek yasaktır."></Issued>
+      <NoItems Text="Kilitlenecek öğe yok."></NoItems>
+    </Estimate>
+    <Transfer Text="Aktar">
+      <Authorization>
+        <Title Text="Transfer seçeneğine erişmek için lütfen şifre giriniz"></Title>
+      </Authorization>
+      <All Text="Tüm siparişleri aktar">
+        <Confirmation Text="Tüm siparişlerin başka bir kullanıcıya aktarılması geri alınamaz!\n\nTüm siparişlerinizi {0} olarak aktarmak istediğinizden emin misiniz?"></Confirmation>
+        <Success Text="Tüm siaparişler başarıyla aktarıldı."></Success>
+        <Error Text="Siparişleri seçilen kullanıcıya aktarırken hata oluştu.\nLütfen tekrar deneyin."></Error>
+      </All>
+      <Orders Text="Siparişleri aç"></Orders>
+      <OrderNumber Text="Sipariş numarası">
+        <Select Text="Sipariş seç"></Select>
+      </OrderNumber>
+      <Quantity Text="Aktarılacak miktarları seçin"></Quantity>
+      <User Text="Kullanıcı">
+        <Current Text="Seçilen kullanıcı zaten siparişin sahibidir.\nÜrünler aynı kullanıcıya aktarılacaktır."></Current>
+      </User>
+      <Rounds Text="Servisleri Aktar">
+        <Summary Text="Sipariş öğeleri"></Summary>
+        <Selection Text="Aktarılacak servisleri seç"></Selection>
+      </Rounds>
+      <Items Text="Sipariş öğeleri">
+        <Selected Text="Aktarım için seçilen öğeler">
+          <NoItems Text="Aktarılacak öğeleri seç"></NoItems>
+        </Selected>
+        <All Text="Tümünü aktar"></All>
+        <Back Text="Tümünü kaldır"></Back>
+        <InvalidQuantity Text="Seçilen öğenin aktarılmasına izin verilmiyor">
+          <Info Text="Seçilen kalemlerin toplam miktarı, aktarın için seçilen miktardan daha azdır.\nAktarım miktarını, geçersiz öğeler kontrol edin ve tekrar deneyin."></Info>
+        </InvalidQuantity>
+        <BundledQuantity Text="Miktar değişikliğine izin verilmiyor">
+          <Info Text="Öğe bir gruba aittir. Grup öğeleri üzerinde değişen miktarlara izin verilmez."></Info>
+        </BundledQuantity>
+      </Items>
+      <CurrentOrder Text="Aynı siparişe aktarılıyor">
+        <Confirmation Text="Öğeleri aynı siparişe aktarmayı seçtiniz.\nÖğeleri aynı siparişe aktarmak istediğinizden emin misiniz?"></Confirmation>
+      </CurrentOrder>
+      <Failed Text="Öğeler aktarılırken hata oluştu">
+        <Info Text="Öğeleri aktarmaya çalışırken hata oluştu. Lütfen tekrar deneyin."></Info>
+      </Failed>
+      <Completed Text="Aktarım başarıyla tamamlandı"></Completed>
+      <NoItems Text="Aktarılacak öğe yok"></NoItems>
+      <Discount>
+        <Warning Text="Sabit indirim">
+          <Info Text="Mevcut sipariş, sepetin indirim setini sabitledi. Bu siparişten ürün transferi, sepet indirimini temizleyecektir.\n\nDevam etmek istiyor musun?" />
+        </Warning>
+      </Discount>
+    </Transfer>
+    <Void Text="Sipariş İptal">
+      <Authorization>
+        <Title Text="Bu siparişi iptal etmek için lütfen şifre girin"></Title>
+      </Authorization>
+      <Confirm Text="Sipariş iptal">
+        <Info Text="Bu siparişi iptal etmek istediğinizden emin misiniz?"></Info>
+      </Confirm>
+      <Completed Text="Sipariş başarılı bir şekilde iptal edildi"></Completed>
+      <NoItems Text="İptal edilecek öğe yok"></NoItems>
+    </Void>
+    <Rounds>
+      <Repeat Text="Servisi tekrarla">
+        <NoItems Text="Siparişte ürün yok.\nTekrar turu sadece tur mevcutsa yapılabilir."></NoItems>
+        <NoQuantities Text="Seçilen #{0} servisinde, tekrarlanması yeterli miktarlarda ürün yok"></NoQuantities>
+        <Bundle Text="Öğeler bir gruba aittir">
+          <Info Text="Gruplanmış öğeler için tekrar işlemine izin verilmez."></Info>
+        </Bundle>
+      </Repeat>
+      <New Text="Yeni Servis">
+        <NoItems Text="Yeni servis oluşturmak için siparişinizde hiç öğe yok.\nSiparişe öğeler ekleyin ve tekrar deneyin."></NoItems>
+        <NoUnsavedItems Text="Tüm öğeler sırayla kaydedildi. Yeni servis başladı."></NoUnsavedItems>
+      </New>
+      <SelectAll Text="Tümünü seç"></SelectAll>
+      <SelectNone Text="Tümünü reddet"></SelectNone>
+      <Total Text="Toplam:"></Total>
+      <NoItems Text="Seçili öğe yok"></NoItems>
+    </Rounds>
+    <Comment Text="Açıklama">
+      <Add Text="&quot;{0}&quot; öğesi için mevcut olanı seçin veya yorumunuzu yazın"></Add>
+      <Insert Text="Açıklama yazınız ..."></Insert>
+      <Change Text="Açıklama ekle">
+        <Forbidden Text="Seçilen öğenin düzenlenmesine izin verilmiyor.">
+          <Info Text="&quot;{0}&quot; öğesi sipariş edildi ve onaylandı.\nOnaylanmış bir öğeyi düzenlemek yasaktır."></Info>
+        </Forbidden>
+        <NoItem Text="Hiçbir öğe seçilmedi.\nYorum eklemek istediğiniz bir öğeyi seçin ve tekrar deneyin."></NoItem>
+      </Change>
+    </Comment>
+    <Subtotal Text="Aratoplam"></Subtotal>
+    <Tax Text="Vergi"></Tax>
+    <Total Text="TOPLAM"></Total>
+    <Checkout Text="Ödeme"></Checkout>
+    <Save Text="Satış kayıt"></Save>
+    <Refund Text="İade">
+      <Authorization Text="İade işlemi için şifre gereklidir"></Authorization>
+      <Title Text="İade öğeler"></Title>
+      <Total Text="TOPLAM İADE MİKTARI"></Total>
+      <ReceiptNumber Text="Makbuz numarası"></ReceiptNumber>
+      <PaymentType Text="Geri ödeme türü"></PaymentType>
+      <Description Text="İade işlemini onaylamak için makbuz numarası ve ödeme türünü girin"></Description>
+      <Print>
+        <PrinterNotFound Text="İade yazıcısı seçilmemiş."></PrinterNotFound>
+      </Print>
+      <MultyplePaymentTypes Text="Seçilen belge birden fazla ödeme türü içerir. Ödeme türlerini bu geri ödemeye kopyalamak için aşağıdaki seçeneği belirleyin.">
+        <PartialRefund Text="Orijinal satış belgesinde birden fazla ödeme türü kullanmak kısmi geri ödeme için  geçerli değildir."></PartialRefund>
+        <Copy Text="Orijinal dokümandan ödeme türlerini kopyala"></Copy>
+      </MultyplePaymentTypes>
+      <SelectAll Text="Tümü Seç / Bırak" />
+      <CartDiscountApplied Text="Sepet İndirimi uygulandı">
+        <Info Text="Sepet indirimi uygulanmakta ve toplam olarak hesaplanmaktadır.\nKısmi iade kullanılırsa, iade edilen ürünler üzerinden sepeti indirimi hesaplanacaktır." />
+      </CartDiscountApplied>
+    </Refund>
+    <Items>
+      <Name Text="Ürün adı"></Name>
+      <Quantity Text="Miktar">
+        <Change Text="Miktar değiştir">
+          <Info Text="Bir sonraki ürün için miktar girin"></Info>
+          <Item Text="Öğe &quot;{0}&quot;"></Item>
+          <Forbidden Text="Miktar değişikliğine izin verilmiyor">
+            <Info Text="&quot;{0}&quot; öğesi onaylandı.\nOnaylanmış bir öğeyi düzenlemeye izin verilmez."></Info>
+          </Forbidden>
+          <Product Text="Ürün &quot;{0}&quot;\nVarsayılan miktar: {1:#,#.000}"></Product>
+          <Bundled Text="Miktar değişikliğine izin verilmiyor">
+            <Info Text="Paketlenmiş öğelerdeki miktar değişikliği izin verilmiyor."></Info>
+          </Bundled>
+        </Change>
+        <Invalid Text="Geçersiz miktar. Geçerli miktarı girin ve tekrar deneyin."></Invalid>
+      </Quantity>
+      <Price Text="Fiyat">
+        <Change Text="Fiyat değiştir">
+          <Product Text="Ürün &quot;{0}&quot;\nFiyat: {1:#,#.00}"></Product>
+        </Change>
+      </Price>
+      <Total Text="Miktar"></Total>
+      <Empty Text="Öğe yok">
+        <Info Text="Barkod, kod kullanarak veya F3 tuşuna basarak arama yapmak için ürünleri ekleyin"></Info>
+      </Empty>
+      <Start Text="Başlangıç"></Start>
+      <Page Text="Sayfa"></Page>
+      <Add>
+        <Error Text="Öğe eklenirken hata oluştu. Geçersiz öğe verileri.\nÜrün fiyatını ve miktarını kontrol edip tekrar deneyin."></Error>
+      </Add>
+      <Void>
+        <NoItems Text="&quot;{0}&quot; öğesinin geçersiz olmasına izin verilmiyor. Yetersiz miktar."></NoItems>
+        <Bundle Text="Öğe bir gruba aittir. Bu öğeyi silmek aynı gruptaki tüm öğeleri kaldırır.\n\nBu gruptaki tüm öğeleri kaldırmak istediğinizden emin misiniz?">
+          <Title Text="Grup öğesi siliniyor"></Title>
+        </Bundle>
+      </Void>
+    </Items>
+    <Print>
+      <User Text="Kullanıcı: {0}"></User>
+      <Time Text="Zaman: {0}"></Time>
+      <Number Text="Sipariş No: {0}"></Number>
+      <Estimate Text="HESAPLAMA">
+        <Discount Text="İndirim"></Discount>
+        <Total Text="TOPLAM:"></Total>
+        <Footer Text="Bu bir resmi makbuz değildir.\nLütfen fatura için bekleyin."></Footer>
+      </Estimate>
+      <Kitchen>
+        <NumberAndRound Text="Sipariş: {0}. Servis: {1}"></NumberAndRound>
+        <TableAndRound Text="Masa: {0}. Servis: {1}" />
+      </Kitchen>
+      <Dialog>
+        <Title Text="Müşteri makbuzlarını nasıl ister?"></Title>
+        <Change Text="Para üstü"></Change>
+        <Receipt Text="Makbuzu yazdır"></Receipt>
+        <Invoice Text="Faturayı yazdır"></Invoice>
+        <Email Text="E-posta Gönder">
+          <Recipient Text="E-posta alıcısı">
+            <Title Text="Devam etmek için e-posta mesajı ayrıntılarını girin ve &quot;Gönder&quot; düğmesine tıklayın"></Title>
+            <EmailAddress Text="Alıcı adresi">
+              <Description Text="Müşteri e-posta adresini girin"></Description>
+              <AddCustomer Text="Müşteri ekle"></AddCustomer>
+            </EmailAddress>
+            <Subject Text="Konu">
+              <Description Text="Konu satırını girin"></Description>
+              <Default Text="Makbuz {0}"></Default>
+            </Subject>
+            <Message Text="Mesaj">
+              <Description Text="Müşteri için mesaj girin"></Description>
+              <Default Text="Değerli müşterimiz,\n\nEkli makbuza bakın.\n\nMakbuz tarihi: {0}\nToplam: {1}"></Default>
+            </Message>
+            <CopySelf Text="Bir kopyasını bana gönder"></CopySelf>
+            <Error>
+              <EmailFormat Text="E-posta adresi düzgün biçimlendirilmemiş.\nLütfen e-posta adresini kontrol edip tekrar deneyin."></EmailFormat>
+            </Error>
+            <Bcc Text="Bcc">
+              <Description Text="Bcc'ye ekle" />
+            </Bcc>
+          </Recipient>
+          <Sending Text="E-mail gönderiliyor... Lütfen bekleyin..."></Sending>
+          <Sent Text="Makbuz, {0} adresine gönderildi"></Sent>
+        </Email>
+        <Hide Text="Bunu bir daha gösterme"></Hide>
+      </Dialog>
+      <Table Text="Masa: {0}" />
+    </Print>
+    <Products>
+      <Search Text="Arama">
+        <Name Text="Ürün adı">
+          <Tooltip Text="Ürün adıyla ara"></Tooltip>
+          <NotFound Text="&quot;{0}&quot; için sonuç bulunamadı">
+            <Info Text="Lütfen arama parametrelerinizi kontrol edip tekrar deneyin"></Info>
+          </NotFound>
+        </Name>
+        <Barcode Text="Barkod">
+          <Tooltip Text="Barkodla ürün ara"></Tooltip>
+          <NotFound Text="Barkod bulunamadı"></NotFound>
+        </Barcode>
+        <Code Text="Ürün Kodu">
+          <Tooltip Text="Ürünü kodla ara"></Tooltip>
+          <NotFound Text="Kod bulunamadı"></NotFound>
+        </Code>
+        <NoItems Text="Ürün seçilmedi">
+          <Info Text="Devam etmek için ürünü ad veya kodla arayın"></Info>
+        </NoItems>
+        <Selection>
+          <Price Text="Fiyat"></Price>
+          <Description Text="Açıklama"></Description>
+        </Selection>
+        <NoResults Text="Sonuç yok"></NoResults>
+      </Search>
+      <NoProducts Text="Kullanılabilir ürün yok">
+        <Info Text="Devam etmek için lütfen ürün ekleyin veya mevcut fiyatlara satış fiyatı ayarlayın"></Info>
+      </NoProducts>
+    </Products>
+    <Lock Text="Kilitle"></Lock>
+    <Unlock Text="Kilidi aç"></Unlock>
+    <Item>
+      <Void>
+        <Authorization>
+          <Title Text="Seçilen öğeyi geçersiz kılmak için lütfen şifre girin"></Title>
+        </Authorization>
+      </Void>
+      <ChangePrice>
+        <Minimum Text="Min değer: {0}" />
+      </ChangePrice>
+    </Item>
+    <QuickPayment Text="Hızlı ödeme">
+      <Confirmation Text="Mevcut satış için &quot;{0}&quot; ödeme türünü seçtiniz.\n\nSeçilen ödeme türünü kullanmaya devam etmek istiyor musunuz?"></Confirmation>
+    </QuickPayment>
+    <Discount Text="İndirim">
+      <Authorization Text="İndirimleri uygulamak için lütfen şifre giriniz"></Authorization>
+      <Cart>
+        <Invalid Text="Geçersiz sepet indirimi">
+          <GreaterThenTotal Text="İndirim toplamı toplam siparişten\ndaha büyük olamaz\n"></GreaterThenTotal>
+        </Invalid>
+        <Cleared Text="Sepeti indirim temizlendi!">
+          <Info Text="Geçersiz toplam algılandı ve indirim siparişten kaldırıldı.\n\nLütfen, ürünlerinizi kontrol edin ve ödemeye devam etmeden önce geçerli bir indirim uygulayın." />
+        </Cleared>
+      </Cart>
+      <Item>
+        <NotSelected Text="Öğe seçilmemiş.\nTek bir öğeye indirim uygulamak için, bu iletişim kutusunu açmadan önce satış listesinden birini seçin."></NotSelected>
+        <Invalid Text="Geçersiz ürün indirimi">
+          <GreaterThenTotal Text="Sabit tutar ürünler toplanımdan \ndaha büyük olamaz"></GreaterThenTotal>
+        </Invalid>
+      </Item>
+    </Discount>
+  </Order>
+  <Closing Text="Gün sonu">
+    <Users Text="Açık işlemler">
+      <User>
+        <Total Text="TOPLAM:"></Total>
+      </User>
+      <Summary Text="Açık işlemler"></Summary>
+      <NoReports Text="Açık işlem yok"></NoReports>
+    </Users>
+    <Option Text="Hesap kesme türünü seçin">
+      <NotSelected Text="Hesap kesme türü seçilmedi">
+        <Info Text="Devam etmek için yukarıda listelenen seçeneklerden birini seçin"></Info>
+      </NotSelected>
+    </Option>
+    <User Text="Hesap kesim">
+      <Completed Text="{0} hesabı başarıyla kesildi."></Completed>
+    </User>
+    <Shift Text="Tüm kullanıcıların hesap kesimi">
+      <Closed Text="Tüm kullanıcıların hesapları başarıyla kesildi"></Closed>
+    </Shift>
+    <BusinessDay Text="Kaydı kapat">
+      <Income Text="Gün toplamı"></Income>
+      <Closed Text="Kayıt başarıyla kapatıldı"></Closed>
+      <Report Text="RAPOR"></Report>
+      <CashIn Text="Nakit girişi"></CashIn>
+      <CashOut Text="Nakit çıkışı"></CashOut>
+    </BusinessDay>
+    <Error>
+      <OpenOrders Text="Açık siparişler">
+        <Users Text="Açık siparişleri olan kullanıcılar var!\nGün kapanmadan önce tüm siparişleri kapatmalısınız."></Users>
+      </OpenOrders>
+    </Error>
+    <Print>
+      <User>
+        <Report>
+          <Total Text="TOPLAM TUTAR"></Total>
+          <User Text="Kullanıcı">
+            <ClosedBy Text="Alınan"></ClosedBy>
+          </User>
+          <Header Text="KULLANICI HESAP KAPANIŞI"></Header>
+        </Report>
+      </User>
+      <DayClose>
+        <Report>
+          <Header Text="GÜN KAPANIŞI"></Header>
+          <User>
+            <Total Text="TOPLAM"></Total>
+          </User>
+          <Summary Text="ÖZET"></Summary>
+          <Total Text="TOPLAM"></Total>
+        </Report>
+      </DayClose>
+    </Print>
+    <History Text="Geçmiş">
+      <Info Text="Önceden oluşturulan Z raporunun bir kopyasını seçmek ve yazdırmak için aşağıdaki listeyi kullanın."></Info>
+      <List>
+        <Reports Text="Raporlar"></Reports>
+        <Number Text="Sayı"></Number>
+        <Date Text="Tarih"></Date>
+      </List>
+      <Print Text="Seçili raporu yazdır">
+        <Unsupported Text="İşlem desteklenmiyor"></Unsupported>
+      </Print>
+    </History>
+  </Closing>
+  <User Text="Kullanıcı">
+    <Profile Text="Kullanıcı bilgisi">
+      <Info Text="Profil"></Info>
+      <Edit Text="Profili ya da şifreyi değiştir"></Edit>
+      <Data>
+        <FirstName Text="Adı"></FirstName>
+        <LastName Text="Soyadı"></LastName>
+        <Email Text="E-posta"></Email>
+        <Password Text="Şifre">
+          <Change Text="Şİfreyi değiştir">
+            <Password Text="Şifre"></Password>
+            <Confirm Text="Şifreyi onayla"></Confirm>
+            <ConfirmationFailed Text="Şifre ve onaylama şifresi alanı eşleşmiyor.\nŞifreyi kontrol edip tekrar deneyin."></ConfirmationFailed>
+            <InvalidPassword Text="Şifre zaten kullanımda. Lütfen farklı şifre kullanın."></InvalidPassword>
+          </Change>
+        </Password>
+        <Saved Text="Profil başarıyla değiştirildi"></Saved>
+      </Data>
+      <ShiftReport Text="Kullanıcı raporu">
+        <Report Text="Kullanıcı raporu">
+          <NoData Text="Açık işlem yok"></NoData>
+          <Total Text="TOPLAM"></Total>
+        </Report>
+        <ClockOut Text="Nakit çıkışı"></ClockOut>
+      </ShiftReport>
+    </Profile>
+  </User>
+  <Security>
+    <Authorize Text="Kullanıcı doğrulama"></Authorize>
+    <Level Text="Erişim seviyesi">
+      <Change Text="Seçilen işlem için erişim düzeyini değiştir">
+        <AccessDenied Text="Bu işlem için erişim seviyesini değiştirmek için yeterli ayrıcalığınız yok.\n\nErişim seviyesi, seçilen işlemi gerçekleştirmek için gerekli erişim seviyesi olan kullanıcı tarafından ayarlanabilir."></AccessDenied>
+      </Change>
+    </Level>
+    <AccessDenied Text="Erişim reddedildi">
+      <Info Text="Seçilen işlem için yeterli ayrıcalığınız yok."></Info>
+    </AccessDenied>
+  </Security>
+  <Payment>
+    <Details>
+      <Summary Text="Ürünler"></Summary>
+      <Actions Text="Eylemler">
+        <ShowItems Text="Ürünleri göster"></ShowItems>
+      </Actions>
+      <Discount Text="İndirim">
+        <Options Text="İndirim seçeneği">
+          <DisallowedItems Text="Doğrudan bir indirime atanamayan ürünler var."></DisallowedItems>
+        </Options>
+        <Type>
+          <Percent Text="Yüzde indirim uygula"></Percent>
+          <Fixed Text="Sabit tutar olarak indirim uygulayın"></Fixed>
+        </Type>
+        <Target>
+          <Item Text="Ürün indirimi">
+            <NotSelected Text="Hiçbir öğe seçilmedi.\nİndirim uygulamak için lütfen soldaki öğeyi seçin."></NotSelected>
+            <NotAllowed Text="Seçilen öğeler için indirim yapılamaz"></NotAllowed>
+            <Info Text="&quot;{0}&quot; a indirim uygulayın"></Info>
+          </Item>
+          <Cart Text="Sepet indirimi">
+            <Info Text="Sepet indirimini uygula"></Info>
+          </Cart>
+        </Target>
+        <Total Text="Toplam:"></Total>
+        <Subtotal Text="Alt toplam:"></Subtotal>
+        <TotalDiscount Text="Toplam indirim:"></TotalDiscount>
+        <Clear Text="İndirimleri temizle">
+          <Completed Text="Tüm indirimler kaldırıldı"></Completed>
+        </Clear>
+      </Discount>
+      <Split Text="Servisler">
+        <Rounds Text="Ödeme için servis seçin">
+          <RoundNumber Text="Servis:"></RoundNumber>
+          <RoundTotal Text="Tutar:"></RoundTotal>
+          <SelectAll Text="Tümünü seç"></SelectAll>
+          <SelectNone Text="Tümünü reddet"></SelectNone>
+        </Rounds>
+      </Split>
+      <Customer Text="Müşteri"></Customer>
+      <Total Text="Toplam:"></Total>
+      <TotalWithoutDiscount Text="İndirimsiz toplam:"></TotalWithoutDiscount>
+      <Money Text="Ödeme">
+        <Paid Text="Ödenen:">
+          <Hint>
+            <TypeAmount Text="Ücret tutarını yaz"></TypeAmount>
+            <TapToChange Text="Ücret tutarı girmek için buraya dokunun"></TapToChange>
+          </Hint>
+        </Paid>
+        <Change Text="Para üstü:"></Change>
+        <Balance Text="Bakiye:"></Balance>
+      </Money>
+      <PaymentTypes Text="Ödeme Türü">
+        <Other Text="Bölünmüş ödemeler"></Other>
+        <Invalid Text="Ödeme türüne izin verilmiyor">
+          <Fiscal Text="Seçilen ödeme türü, mali ve mali olmayan ödeme türlerinin geçersiz bir kombinasyonunu içerir.\n\nMali ve mali olmayan ödeme türlerini birleştirmesine izin verilmez."></Fiscal>
+        </Invalid>
+      </PaymentTypes>
+      <NoItems Text="Ürün yok"></NoItems>
+    </Details>
+    <NoPaymentSelected Text="Ödeme türü seçilmemiş"></NoPaymentSelected>
+    <Add Text="Ödeme türü ekle">
+      <Info Text="Mevcut satış için gerekli ödeme türlerini ve miktarlarını seçin"></Info>
+      <Amount Text="Ödeme tutarı &quot;{0}&quot;"></Amount>
+    </Add>
+    <Selected Text="Seçilen ödeme şekli"></Selected>
+    <Customer>
+      <Required Text="Müşteri gerekli">
+        <Info Text="&quot;{0}&quot; ödeme türü, müşterinin seçilmesini gerektirir. Devam etmek için lütfen bir müşteri seçin."></Info>
+      </Required>
+    </Customer>
+    <PaymentTypes>
+      <Validation>
+        <Change>
+          <Missing Text="Yanlış miktar">
+            <Info Text="Bu ödeme türü değişikliğe izin vermez. Doğru tutarı girin veya başka bir ödeme türü seçin."></Info>
+          </Missing>
+        </Change>
+      </Validation>
+    </PaymentTypes>
+  </Payment>
+  <Customer>
+    <Search Text="Müşteri ara">
+      <Name Text="Adı"></Name>
+      <PIN Text="Vergi numarası"></PIN>
+      <LoyaltyCard Text="Sadakat kartı"></LoyaltyCard>
+      <Email Text="Eposta"></Email>
+      <PhoneNumber Text="Telefon numarası" />
+    </Search>
+    <Selection Text="Seçilen müşteri">
+      <Details>
+        <PIN Text="Vergi numarası"></PIN>
+        <Address Text="Adres:"></Address>
+        <Email Text="Eposta:"></Email>
+        <PhoneNumber Text="Telefon:"></PhoneNumber>
+      </Details>
+      <None Text="Müşteri seçilmedi">
+        <Info Text="Listeden müşteri seçin"></Info>
+      </None>
+      <Clear Text="Seçilen müşteriyi temizle">
+        <Completed Text="Seçili müşteri kaldırıldı" />
+      </Clear>
+    </Selection>
+    <New Text="Yeni müşteri">
+      <Add Text="Yeni müşteri ekle"></Add>
+      <Name Text="Adı"></Name>
+      <TaxNumber Text="Vergi numarası"></TaxNumber>
+      <Address Text="Adres"></Address>
+      <City Text="Şehir"></City>
+      <PostalCode Text="Posta kodu"></PostalCode>
+      <Country Text="Bölge"></Country>
+      <PhoneNumber Text="Telefon"></PhoneNumber>
+      <Email Text="E-posta"></Email>
+    </New>
+  </Customer>
+  <Navigation>
+    <Back>
+      <NotAllowed Text="Seçilen operasyona izin verilmiyor."></NotAllowed>
+    </Back>
+  </Navigation>
+  <FloorPlans>
+    <Options Text="Seçenekler">
+      <Design Text="Kat planı / Masa Ayarları">
+        <FloorPlan>
+          <Add Text="Yeni kat planı ekle"></Add>
+          <Delete Text="Kat planını kaldır"></Delete>
+          <Rename Text="Kat planını yeniden \nadlandır"></Rename>
+          <Name Text="Ad"></Name>
+        </FloorPlan>
+        <Table>
+          <Add Text="Masa ekle"></Add>
+          <Delete Text="Seçili masayı kaldır"></Delete>
+          <Name Text="Ad"></Name>
+          <Height Text="Uzunluk"></Height>
+          <Width Text="Genişlik"></Width>
+          <Size Text="BOYUT"></Size>
+        </Table>
+        <Grid>
+          <Show Text="Cetveli göster" />
+          <SnapToGrid Text="Cetvele yasla" />
+          <Size Text="Cetvel boyutu" />
+        </Grid>
+      </Design>
+      <View>
+        <Orders Text="Siparişleri göster">
+          <Title Text="Açık siparişler"></Title>
+          <Order>
+            <Number Text="Sipariş Numarası"></Number>
+            <Total Text="Toplam"></Total>
+          </Order>
+          <NoOrders Text="Açık sipariş yok. Kat planını kullanarak yeni sipariş oluşturun."></NoOrders>
+        </Orders>
+        <FloorPlans Text="Kat planını göster"></FloorPlans>
+      </View>
+      <NoSelection Text="Seçim yapmadan devam et" />
+    </Options>
+    <Save>
+      <Success Text="Değişiklikler başarıyla kaydedildi"></Success>
+      <Error Text="Kaydetme sırasında hata oluştu\nVeriler saklanamıyor.\nSistem Mesaj: {0}">
+        <Duplicates Text="Yinelenen masa adları bulundu.\n\n{0}\n\nMasa isimleri benzersiz olmalıdır. Lütfen masa adlarını düzeltin ve tekrar deneyin.">
+          <Title Text="Çakışma bulundu"></Title>
+        </Duplicates>
+      </Error>
+    </Save>
+    <Table>
+      <Unavailable Text="&quot;{0}&quot; masası {1} tarafından alınmıştır. Devam ederseniz aynı masada ayrı sipariş oluşturacaksınız.\n\nYine de devam etmek istiyor musun?">
+        <Title Text="Masa daha önce alınmış" />
+      </Unavailable>
+    </Table>
+  </FloorPlans>
+  <Settings Text="Ayarlar">
+    <Basic Text="Basit ayarlar">
+      <Language Text="Dil"></Language>
+      <Style Text="Uygulama stili">
+        <ColorScheme Text="Renk düzeni"></ColorScheme>
+      </Style>
+      <Layout Text="Yerleşim">
+        <TouchScreen Text="Görsel"></TouchScreen>
+        <Keyboard Text="Standart"></Keyboard>
+      </Layout>
+      <VirtualKeyboard Text="Sanal klavyeyi etkinleştir"></VirtualKeyboard>
+      <ProductSearch>
+        <Barcode Text="Barkod"></Barcode>
+        <Code Text="Kod"></Code>
+        <Name Text="Ad"></Name>
+      </ProductSearch>
+      <ColorScheme>
+        <Dark Text="Koyu"></Dark>
+        <Light Text="Açık"></Light>
+      </ColorScheme>
+      <NotificationPosition>
+        <Top Text="Üst"></Top>
+        <Bottom Text="Alt"></Bottom>
+      </NotificationPosition>
+      <Notifications Text="Mesajlar">
+        <ShowClose Text="&quot;Kapat&quot; düğmesini göster"></ShowClose>
+        <ClickToClose Text="Kapatmak için tıklayın"></ClickToClose>
+        <SlideIn Text="İçeri kaydır"></SlideIn>
+        <Duration Text="Mesaj süresi (sn.)"></Duration>
+        <Position Text="Pozisyon"></Position>
+      </Notifications>
+      <StartingCash Text="Uygulama başlangıcında nakit göster"></StartingCash>
+      <BusinessDay Text="İş günleri">
+        <SelecBusinessDay Text="Uygulama başlangıcında iş günü seç"></SelecBusinessDay>
+      </BusinessDay>
+      <ButtonBar Text="Düğme çubuğu">
+        <Info Text="Üst düğme çubuğunda görünecek eylemleri seçin">
+          <VisualLayoutOnly Text="Yalnızca &quot;Görsel&quot; düzen için geçerlidir" />
+        </Info>
+        <IsCommentVisible Text="Açıklama"></IsCommentVisible>
+        <IsDiscountVisible Text="İndirim"></IsDiscountVisible>
+        <IsNewSaleVisible Text="Yeni satış"></IsNewSaleVisible>
+        <IsRefundVisible Text="İade"></IsRefundVisible>
+        <IsSearchVisible Text="Arama"></IsSearchVisible>
+        <IsTransferVisible Text="Aktar"></IsTransferVisible>
+      </ButtonBar>
+    </Basic>
+    <Order Text="Sipariş &amp; Ödeme">
+      <Standard Text="Temel işlemler">
+        <AutoOrderNumber Text="Kat planı kullan"></AutoOrderNumber>
+        <PlaySound Text="Sesler">
+          <SoundSettings>
+            <Navigation Text="Gezinme sesi" />
+            <ItemAdded Text="Öğe ekleme sesi" />
+            <ItemNotFound Text="Öğe bulunamadı sesi" />
+            <Show Text="Ses seçeneklerini göster" />
+            <Hide Text="Ses seçeneklerini gizle" />
+          </SoundSettings>
+        </PlaySound>
+        <ProductGrid Text="Sayı veya satır / sütun"></ProductGrid>
+      </Standard>
+      <Users Text="Kullanıcılar">
+        <SingleUser Text="Tek kullanıcı"></SingleUser>
+      </Users>
+      <Products Text="Ürünler">
+        <DefaultQuantity Text="Varsayılan miktar"></DefaultQuantity>
+        <DefaultSearch Text="Varsayılan arama">
+          <Options Text="Arama seçeneklerini göster"></Options>
+        </DefaultSearch>
+        <DefaultDiscountType Text="Varsayılan indirim tipi">
+          <Percent Text="Yüzde"></Percent>
+          <Fixed Text="Sabit"></Fixed>
+        </DefaultDiscountType>
+        <RowPerItem Text="Her öğe için ayrı satır"></RowPerItem>
+      </Products>
+      <Payment Text="Ödeme">
+        <ShowSummary Text="Ödeme formundaki ürünleri göster"></ShowSummary>
+        <FixedRows Text="Ödeme türü satır sayısı"></FixedRows>
+        <IsSingleItemDiscountAllowed Text="Tek ürün indirimine izin ver"></IsSingleItemDiscountAllowed>
+        <QuickPaymentConfirmation Text="Ödeme onayı için kısayol tuşları"></QuickPaymentConfirmation>
+        <ShowPrintReceiptDialog Text="Makbuz yazdırma iletişim kutusunu görüntüle"></ShowPrintReceiptDialog>
+        <DefaultDueDate Text="Varsayılan vade tarihi">
+          <Days Text="günler"></Days>
+        </DefaultDueDate>
+        <MergeItemsOnPayment Text="Makbuzdaki ürünleri birleştir"></MergeItemsOnPayment>
+      </Payment>
+      <Advanced>
+        <Show Text="Gelişmiş ayarları göster"></Show>
+        <Hide Text="Gelişmiş ayarları gizle"></Hide>
+        <ResetOrderNumber Text="Sipariş numarasını sıfırla"></ResetOrderNumber>
+        <ShowAllOccupiedTables Text="Kat planında tüm dolu masaları göster" />
+      </Advanced>
+    </Order>
+    <Print Text="Yazdırma seçenekleri">
+      <PrinterSelection Text="Yazıcı seçimi">
+        <Tour>
+          <Title Text="Yazıcı ayarlarını yap"></Title>
+          <Content Text="Yazıcınızı kurmak ve özelleştirmek için\n&quot;Yazıcı ayarları&quot; düğmesine tıklayın"></Content>
+        </Tour>
+      </PrinterSelection>
+      <Printers>
+        <KitchenTicket Text="Mutfak yazıcısı">
+          <Operation Text="Mutfak fişi yazdır"></Operation>
+        </KitchenTicket>
+        <Service Text="Servis yazıcısı">
+          <Operation Text="Servis mesajlarını yazdır"></Operation>
+        </Service>
+        <Estimate Text="Satış yazıcısı kilitli">
+          <Operation Text="Kilitli satışı yazdır"></Operation>
+        </Estimate>
+        <OrderSummary Text="Siparişi yazdır"></OrderSummary>
+      </Printers>
+      <PrinterOptions Text="Yazıcı ayarları">
+        <Tooltip Text="Yazıcı ayarlarını yap"></Tooltip>
+        <PrinterType Text="Yazıcı türü">
+          <A4 Text="A4"></A4>
+          <EscPos Text="ESC/POS"></EscPos>
+          <POS58 Text="POS 58"></POS58>
+          <POS58Rtl Text="POS 58 RTL"></POS58Rtl>
+          <POS80 Text="POS 80"></POS80>
+          <POS80Rtl Text="POS 80 RTL"></POS80Rtl>
+        </PrinterType>
+        <NumberOfCopies Text="Kopya sayısı"></NumberOfCopies>
+        <PaperWidth Text="Satır başına karakter"></PaperWidth>
+        <Header Text="Üst başlık"></Header>
+        <Footer Text="Alt başlık"></Footer>
+        <FeedLines Text="Besleme hatları"></FeedLines>
+        <CutPaper Text="Kağıdı kes"></CutPaper>
+        <PrintBitmap Text="Resim olarak yazdır"></PrintBitmap>
+        <RichFormatting Text="Zengin biçim"></RichFormatting>
+        <Alignment>
+          <Left Text="Sola hızala"></Left>
+          <Center Text="Ortala"></Center>
+        </Alignment>
+        <Revert Text="Değişiklikleri geri al">
+          <Completed Text="Önceden kaydedilen ayarlar uygulandı"></Completed>
+        </Revert>
+        <PrintTestPage Text="Test sayfası yazdır"></PrintTestPage>
+        <Advanced Text="Gelişmiş">
+          <CodePage Text="Kod sayfası"></CodePage>
+          <CharacterSet Text="Karakter seti">
+            <None Text="Yok (Yazıcı varsayılanı)"></None>
+            <USA Text="USA"></USA>
+            <France Text="France"></France>
+            <Germany Text="Germany"></Germany>
+            <UK Text="United Kingdom"></UK>
+            <DenmarkI Text="Denmark I"></DenmarkI>
+            <Sweden Text="Sweden"></Sweden>
+            <Italy Text="Italy"></Italy>
+            <SpainI Text="Spain I"></SpainI>
+            <Japan Text="Japan"></Japan>
+            <Norway Text="Norway"></Norway>
+            <DenmarkII Text="Denmark II"></DenmarkII>
+            <SpainII Text="Spain II"></SpainII>
+            <LatinAmerica Text="Latin America"></LatinAmerica>
+            <Korea Text="Korea"></Korea>
+            <SloveniaCroatia Text="Slovenia / Croatia"></SloveniaCroatia>
+            <China Text="China"></China>
+            <Vietnam Text="Vietnam"></Vietnam>
+            <Arabia Text="Arabia"></Arabia>
+          </CharacterSet>
+        </Advanced>
+        <Unavailable Text="Seçilen yazıcı türü için ek seçenekler mevcut değildir.\nEk yazıcı seçeneklerini görmek için lütfen farklı yazıcı tipi seçin.">
+          <Info Text="Yazıcı türünü seçme ve makbuz yazıcısını ayarlama hakkında daha fazla bilgi edinin."></Info>
+        </Unavailable>
+        <Margin Text="Kenar boşlukları (milimetre cinsinden)">
+          <Top Text="Üst"></Top>
+          <Right Text="Sağ"></Right>
+          <Bottom Text="Alt"></Bottom>
+          <Left Text="Sol"></Left>
+        </Margin>
+        <PrintBarcode Text="Barkodu yazdır" />
+        <Font Text="Font ayarları">
+          <Family Text="Font ailesi" />
+          <SizePercent Text="Font boyutu" />
+          <Reset Text="Font ailesini varsayılana sıfırlar ve font boyutunu% 100'e ayarlar" />
+        </Font>
+      </PrinterOptions>
+      <Templates Text="Şablonları yazdır">
+        <Font Text="Font">
+          <Info Text="Burada seçilen yazı tipi faturada, raporlarda ve diğer baskı şablonlarında kullanılacaktır. Hiçbiri seçilmezse, varsayılan yazı tipi kullanılacaktır." />
+        </Font>
+      </Templates>
+    </Print>
+    <AddOns Text="Kayıtlı modüller">
+      <Modules Text="Modüller"></Modules>
+      <Plugins Text="Eklentiler"></Plugins>
+    </AddOns>
+    <WeighingScale Text="Barkod ayarları">
+      <VariableMeasureBarcode Text="Tartı ölçekleri barkod">
+        <Enabled Text="Tartım ölçekleri barkodunu etkinleştir"></Enabled>
+        <Prefix Text="İlk iki basamak / önek"></Prefix>
+        <ProductCodeLength Text="Ürün kodu için basamak sayısı"></ProductCodeLength>
+        <DecimalPlaces Text="Ondalık değer sayısı"></DecimalPlaces>
+        <TrimZeros Text="Ürün kodundan sıfırları kaldır(sıfırı kırp)"></TrimZeros>
+        <IsUsingPriceBarcode Text="Ölçek, miktar yerine fiyat basar">
+          <Info Text="Bazı tartım ölçekleri ölçülen miktar yerine toplam fiyatı basar. Bu seçenek etkinleştirilirse, miktar ürün fiyatına ve toplam tutarı bağlı olacaktır."></Info>
+        </IsUsingPriceBarcode>
+      </VariableMeasureBarcode>
+    </WeighingScale>
+    <Email Text="Eposta ayarları">
+      <General>
+        <Host Text="Sunucu"></Host>
+        <Port Text="Port"></Port>
+        <EmailAddress Text="Eposta adresi"></EmailAddress>
+        <DisplayName Text="Görünen ad"></DisplayName>
+        <Password Text="Şifre"></Password>
+        <SSL Text="SSL kullan"></SSL>
+        <Defaults Text="Varsayılan e-posta mesajı değerleri">
+          <Subject Text="Konu"></Subject>
+          <Message Text="Mesaj"></Message>
+          <Description Text="Bu alanları boş bırakmaya karar verirseniz, otomatik olarak oluşturulan konu ve müşteri için mesaj kullanılacaktır. Mesaj gönderilmeden önce bunları değiştirebilirsiniz."></Description>
+          <Bcc Text="Bcc alıcıları" />
+        </Defaults>
+      </General>
+    </Email>
+    <About Text="Hakkında">
+      <HelpCenter Text="Yardım merkezini aç">
+        <Info Text="Destek isteği açmak için help.aronium.com adresine gidin."></Info>
+      </HelpCenter>
+      <ApplicationDirectory Text="Uygulama veri dizini">
+        <Info Text="Uygulama ayarlarının, kayıt dosyalarının ve diğer uygulama öğelerinin depolandığı yer."></Info>
+        <Open Text="Uygulama veri dizinini aç"></Open>
+      </ApplicationDirectory>
+      <Database Text="Veritabanı">
+        <Open Text="Veritabanı dizinini aç"></Open>
+        <Backup Text="Veritabanını yedekle">
+          <Success Text="Veritabanı yedekleme başarıyla tamamlandı.">
+            <Path Text="Dizin: {0}" />
+            <UnableToCopy Text="Yedekleme varsayılan konumda oluşturuldu. Yedekleme dosyası seçilen dizine kopyalanamıyor." />
+          </Success>
+          <Error Text="Veritabanı yedeği alınırken hata oluştu.\nDetay için loglara bakın. " />
+        </Backup>
+      </Database>
+      <Update>
+        <AutoUpdate Text="Otomatik güncelleme"></AutoUpdate>
+        <SendUsageData Text="Anonim kullanım verileri göndererek geliştirmemize yardımcı olun"></SendUsageData>
+        <Check Text="Güncellemeleri kontrol et">
+          <Checking Text="Güncellemeler kontrol ediliyor... Litfen bekleyin..."></Checking>
+          <Downloading Text="Güncelleme indiriliyor ... Lütfen bekleyin ..."></Downloading>
+          <UpToDate Text="Aronium güncel."></UpToDate>
+          <Available Text="Yeni versiyon var.">
+            <Run Text="Şimdi yüklemek için buraya tıklayın."></Run>
+          </Available>
+          <Error>
+            <NoConnection Text="Sunucuya bağlanılamıyor.\nLütfen internet bağlantınızı kontrol edin ve tekrar deneyin."></NoConnection>
+          </Error>
+        </Check>
+        <Ready Text="Güncelleme mevcut">
+          <Install Text="Yeni sürümü yüklemek için buraya tıklayın"></Install>
+          <Description Text="Yeni sürüm kurulmaya hazır.\nDaha fazla bilgi için &quot;Yenilikler&quot; i tıklayarak yayın notları sayfasını ziyaret edin.">
+            <Install Text="En son güncellemeleri yüklemek için &quot;Yükle&quot; düğmesine tıklayın."></Install>
+          </Description>
+          <Versions>
+            <Current Text="Şimdiki versiyonu:"></Current>
+            <New Text="Yeni versiyon:"></New>
+          </Versions>
+          <Ignore Text="Bu güncellemeyi yoksay"></Ignore>
+          <ReleaseNotes Text="Yeni ne var?"></ReleaseNotes>
+          <Postpone Text="Şimdi değil"></Postpone>
+          <Run Text="Yükle"></Run>
+        </Ready>
+      </Update>
+      <Account Text="Hesap">
+        <Email Text="Eposta adresinizi girin"></Email>
+        <Change Text="Değiştir"></Change>
+      </Account>
+      <TermsOfUse Text="Kullanım koşulları">
+        <Info Text="&quot;Kullanım koşullarımızı&quot; çevrimiçi okuyun" />
+      </TermsOfUse>
+    </About>
+    <Authorization>
+      <Title Text="Uygulama ayarlarına erişmek için lütfen şifre giriniz"></Title>
+    </Authorization>
+    <Products Text="Ürün Ayarları">
+      <TaxInclusivePrice Text="Öğeleri Vergi Dahil görüntüle ve yazdır">
+        <Tooltip Text="Seçilirse, ürünler satışlarda gösterilecek ve vergi dahil fiyatı makbuz üzerine yazdırılacaktır." />
+      </TaxInclusivePrice>
+      <DiscountApplyRule Text="İndirim uygulama kuralı">
+        <BeforeTax Text="Vergi Öncesi" />
+        <AfterTax Text="Vergi Sonrası" />
+      </DiscountApplyRule>
+    </Products>
+    <Database Text="Veritabanı">
+      <AutoBackup Text="Otomatik Yedekleme">
+        <Enabled Text="Otomatik Yedeklemeyi Etkinleştir" />
+        <BackupOnStart Text="Uygulama başlangıcında veritabanını yedekle" />
+        <BackupOnClose Text="Uygulama kapanışında veritabanını yedekle" />
+        <DirectoryPath Text="Yedekleme yeri">
+          <Choose Text="Yedekleme yerini seç" />
+          <Info Text="Yedekleme yerinizi seçin. Otomatik yedekleme dosyaları seçilen dizine kaydedilecektir." />
+        </DirectoryPath>
+        <RemoveOldFiles Text="Eski yedekleme dosyalarını kaldır">
+          <DaysToKeep Text="Eski yedekleme dosyalarının saklanacağı gün sayısı" />
+        </RemoveOldFiles>
+      </AutoBackup>
+    </Database>
+    <RestartRequired Text="Bu değişikliklerin geçerli olması için Aronium'un yeniden başlatılması gerekir.">
+      <Title Text="Yeniden başlatma gerekli" />
+    </RestartRequired>
+  </Settings>
+  <Document>
+    <Create>
+      <Error Text="Belge oluşturulurken bir hata oluştu.\nLütfen tekrar deneyin."></Error>
+    </Create>
+    <Category>
+      <Expenses Text="Masraflar">
+        <Purchase Text="Satınalma" />
+        <StockReturn Text="Stok iade" />
+      </Expenses>
+      <Inventory Text="Envanter">
+        <InventoryCount Text="Envater sayımı" />
+      </Inventory>
+      <Loss Text="Kayıp">
+        <LossAndDamage Text="Kayıp ve hasarlı" />
+      </Loss>
+      <Sales Text="Satışlar">
+        <Sales Text="Satışlar" />
+        <Refund Text="İade" />
+        <Proforma Text="Proforma" />
+      </Sales>
+    </Category>
+  </Document>
+  <Invoices Text="Satış geçmişini görüntüle">
+    <Title Text="Satış geçmişi"></Title>
+    <Documents Text="Dökümanlar">
+      <Customer Text="Müşteri">
+        <Change Text="Müşteri değiştir">
+          <Success Text="Müşteri başarıyla değiştirildi."></Success>
+        </Change>
+      </Customer>
+      <Print Text="Yazdır">
+        <CashReceipt Text="Makbuz">
+          <PrinterNotFound Text="Servis yazıcısı seçili değil veya devre dışı bırakılmış. Yazıcı ayarlarını kontrol edip tekrar deneyin."></PrinterNotFound>
+          <Address Text="Adres"></Address>
+          <VatNumber Text="Vergi numarası"></VatNumber>
+          <Date Text="Tarih"></Date>
+          <ReceiptNumber Text="Makbuz numarası"></ReceiptNumber>
+          <Customer Text="Müşteri"></Customer>
+          <Total Text="Toplam"></Total>
+          <Tax Text="Vergi"></Tax>
+          <TotalAmount Text="TOPLAM"></TotalAmount>
+          <FiscalReceiptNumber Text="Mali makbuz numarası"></FiscalReceiptNumber>
+          <Signature Text="İmza"></Signature>
+          <Stamp Text="P.S."></Stamp>
+          <Authorization>
+            <Title Text="Makbuz yazdırmak için lütfen şifre girin" />
+          </Authorization>
+        </CashReceipt>
+        <Pdf Text="PDF olarak kaydet">
+          <Success Text="&quot;{0}&quot; Belge kaydedildi"></Success>
+        </Pdf>
+        <Error Text="Hata belge yazdırılıyor">
+          <NoService Text="Yazdırma servisi kayıtlı değil"></NoService>
+        </Error>
+        <Refund Text="İade"></Refund>
+        <Preview Text="Baskı önizleme"></Preview>
+      </Print>
+      <Delete Text="Sil">
+        <Confirmation>
+          <Title Text="Belgeyi sil"></Title>
+          <Message Text="&quot;{0}&quot; belgesini silmek istediğinizden emin misiniz?"></Message>
+        </Confirmation>
+        <Unauthorized Text="Belgeleri silmek için izniniz yok."></Unauthorized>
+        <Error Text="Belgeyi silmeye çalışırken hata oluştu. Lütfen tekrar deneyin" />
+      </Delete>
+      <List Text="Belgeler">
+        <Document>
+          <Number Text="Numara"></Number>
+          <DocumentType Text="Belge türü"></DocumentType>
+          <Warehouse Text="Depo"></Warehouse>
+          <Customer Text="Müşteri">
+            <Refresh Text="Müşteri listesini yenile">
+              <Complete Text="Müşteriler yeniden yüklendi"></Complete>
+            </Refresh>
+          </Customer>
+          <Vendor Text="Satıcı">
+            <Refresh Text="Tedarikçi listesini yenile">
+              <Complete Text="Tedarikçiler yeniden yüklendi"></Complete>
+            </Refresh>
+          </Vendor>
+          <ExternalDocument Text="Dış belge"></ExternalDocument>
+          <Date Text="Tarih"></Date>
+          <DueDate Text="Son ödeme tarihi"></DueDate>
+          <StockDate Text="Stok tarihi"></StockDate>
+          <DateCreated Text="Oluşturuldu"></DateCreated>
+          <DateUpdated Text="Güncellendi"></DateUpdated>
+          <CashRegister Text="POS"></CashRegister>
+          <OrderNumber Text="Sipariş numarası"></OrderNumber>
+          <Warehouse Text="Depo"></Warehouse>
+          <User Text="Kullanıcı"></User>
+          <PaymentType Text="Ödeme şekli"></PaymentType>
+          <Discount Text="İndirim"></Discount>
+          <Paid Text="Ödenmiş"></Paid>
+          <Unpaid Text="Ödenmemiş"></Unpaid>
+          <Total Text="Toplam">
+            <Summary>
+              <TotalBeforeTax Text="Vergi Öncesi Toplam:"></TotalBeforeTax>
+              <Tax Text="Vergi:"></Tax>
+              <Total Text="Toplam:"></Total>
+              <Discount Text="İndirim:">
+                <DiscountType Text="İndirim türü:">
+                  <Percent Text="Yüzdesel indirim" />
+                  <Fixed Text="Tutar İndirimi" />
+                </DiscountType>
+                <DiscountApplyRule Text="Vergi öncesi veya sonrası indirim uygulayın.\nBu seçim, ürün ve alışveriş sepeti indirimleri için kullanılacaktır.">
+                  <BeforeTax Text="Vergi öncesi indirim uygula" />
+                  <AfterTax Text="Vergi sonrası indirim uygula" />
+                </DiscountApplyRule>
+              </Discount>
+              <Subtotal Text="Aratoplam:" />
+            </Summary>
+          </Total>
+          <Payments Text="Ödemeler">
+            <Add Text="Ödeme ekle"></Add>
+            <PaymentType Text="Ödeme şekli"></PaymentType>
+            <Amount Text="Tutar"></Amount>
+            <Date Text="Tarih"></Date>
+            <NewPayment Text="Yeni ödeme"></NewPayment>
+            <Delete Text="Ödeme silme">
+              <Confirmation Text="&quot;{0}&quot; ödemesini silmek istediğinizden emin misiniz?"></Confirmation>
+            </Delete>
+            <Totals>
+              <PaymentsTotal Text="Toplam ödeme:"></PaymentsTotal>
+              <DocumentTotal Text="Toplam belge:"></DocumentTotal>
+            </Totals>
+          </Payments>
+          <Items Text="Belge">
+            <Item>
+              <ProductCode Text="Kod"></ProductCode>
+              <Product Text="Ad"></Product>
+              <MeasurementUnit Text="Ölçü Birimi"></MeasurementUnit>
+              <Quantity Text="Adet"></Quantity>
+              <PriceNoTax Text="Fiyat vergi öncesi"></PriceNoTax>
+              <Price Text="Fiyat"></Price>
+              <Tax Text="Vergi">
+                <Add Text="Vegi ekle">
+                  <Tooltip Text="Bu ürüne vergi ekle" />
+                </Add>
+                <Remove>
+                  <Tooltip Text="Bu üründen vergi kaldır" />
+                </Remove>
+              </Tax>
+              <Discount Text="İndirim">
+                <DiscountType Text="İndirim türü">
+                  <Percent Text="Yüzde"></Percent>
+                  <Fixed Text="Sabit"></Fixed>
+                </DiscountType>
+                <DiscountApplyRule>
+                  <BeforeTax Text="vergi öncesi" />
+                  <AfterTax Text="vergi sonrası" />
+                </DiscountApplyRule>
+              </Discount>
+              <TotalBeforeTax Text="Vergi öncesi toplam"></TotalBeforeTax>
+              <Total Text="Toplam"></Total>
+              <TotalBeforeDiscount Text="İndirimden önce toplam"></TotalBeforeDiscount>
+              <Error>
+                <Taxes Text="Yinelenen vergiler bulundu. Vergi adı (&quot;{0}&quot;).\nLütfen geçerli vergi seçin ve tekrar deneyin." />
+              </Error>
+            </Item>
+            <Delete Text="Belge öğesini sil">
+              <Confirmation Text="&quot;{0}&quot; öğesini silmek istediğinizden emin misiniz?"></Confirmation>
+            </Delete>
+          </Items>
+          <Print>
+            <UnsavedChanges Text="Doküman kaydedilmemiş değişiklikler içeriyor. Yazdırmadan önce değişiklikleri kaydetmek ister misiniz?">
+              <Title Text="Kaydedilmemiş değişiklikler"></Title>
+            </UnsavedChanges>
+          </Print>
+        </Document>
+      </List>
+      <Count Text="Doküman sayısı:"></Count>
+      <Total Text="Toplam tutar:"></Total>
+      <AllUsers Text="Bütün kullanıcıları göster"></AllUsers>
+      <CashRegister>
+        <All Text="Tüm yazar kasalar" />
+        <Select Text="Seçili yazar kasa" />
+      </CashRegister>
+      <BulkActions Text="Toplu işlemler">
+        <Delete Text="Seçili belgeleri sil">
+          <Confirmation>
+            <Title Text="Seçili belgeleri sil" />
+            <Message Text="Seçili belgeleri silmek istediğinizden emin misiniz?" />
+          </Confirmation>
+          <Message Text="Belgeler siliniyor ... Lütfen bekleyin ..." />
+        </Delete>
+        <UpdatePaidStatus>
+          <Message Text="Ödeme durumu güncelleniyor ... Lütfen bekleyin ..." />
+        </UpdatePaidStatus>
+      </BulkActions>
+    </Documents>
+    <Reports Text="Raporlar">
+      <Date Text="Rapor tarihi"></Date>
+      <Print Text="Yazdır"></Print>
+      <Pdf Text="PDF olarak kaydet">
+        <Success Text="Rapor &quot;{0}&quot; başarıyla kaydedildi."></Success>
+      </Pdf>
+      <List>
+        <Products Text="Ürünler özeti"></Products>
+        <Customers Text="Müşteri özeti"></Customers>
+        <PaymentTypes Text="Ödemeler türü özet"></PaymentTypes>
+        <VATRates Text="Vergi oranları özet"></VATRates>
+      </List>
+    </Reports>
+    <Authorization>
+      <Title Text="Satış geçmişine erişmek için lütfen şifre giriniz"></Title>
+    </Authorization>
+  </Invoices>
+  <CashRegister>
+    <Select Text="Yazar kasa seç"></Select>
+  </CashRegister>
+  <Feedback Text="Geri bildirim">
+    <Title Text="Bize yardımcı olun Aronium"></Title>
+    <Description Text="Bir öneri sunmak için zaman ayırdığınız için teşekkür ederiz.\nGörüşleriniz Aronium uygulamasını daha iyi hale getirmemize yardımcı oluyor.">
+      <Contact Text="Her zaman bizimle temas kurmaktan çekinmeyin"></Contact>
+    </Description>
+    <Message>
+      <Name Text="Adınız"></Name>
+      <Email Text="E-posta adresi"></Email>
+      <Subject Text="Konu"></Subject>
+      <Message Text="Mesaj"></Message>
+      <Rating Text="Genel değerlendirme"></Rating>
+    </Message>
+    <Send Text="Geri bildirim gönder"></Send>
+    <Confirmation>
+      <Title Text="Teşekkürler!"></Title>
+      <Message Text="Görüşleriniz gönderildi. Aronium'u daha iyi yapmak için kullanacağız."></Message>
+    </Confirmation>
+  </Feedback>
+  <Security>
+    <Key>
+      <Management Text="Yönetim">
+        <Description Text="Yönetim bölümüne erişimi kontrol eder"></Description>
+      </Management>
+      <Settings Text="Ayarlar">
+        <Description Text="Ayarlara erişimi kontrol eder"></Description>
+      </Settings>
+      <VoidOrder Text="Sipariş iptali">
+        <Description Text="Kullanıcının tüm siparişi geçersiz kılma izni olup olmadığını kontrol eder"></Description>
+      </VoidOrder>
+      <VoidItem Text="Öğe iptali">
+        <Description Text="Kullanıcının açık siparişte tek bir öğeyi iptal etmesine izin verilip verilmediğini kontrol eder"></Description>
+      </VoidItem>
+      <LockSale Text="Kilit satışı"></LockSale>
+      <UnlockSale Text="Kilidini aç"></UnlockSale>
+      <SplitOrder Text="Sipariş ayırma">
+        <Description Text="Kullanıcının bir siparişin tamamını veya bir kısmını başka bir kullanıcıya veya masaya aktarmasına izin verir ( sipariş numarası)"></Description>
+      </SplitOrder>
+      <Discount Text="Indirimi uygula"></Discount>
+      <DeleteDocument Text="Belgeyi sil"></DeleteDocument>
+      <ClosingDay Text="Gün sonu">
+        <Description Text="Gün sonu erişimi kontrol eder bölüm"></Description>
+      </ClosingDay>
+      <Refund Text="İade">
+        <Description Text="Kullanıcının önceden yapılmış satış için iade yapmasına izin verir.\nBu, yeni &quot;İade&quot; belgesi oluşturur ve miktarları otomatik olarak stoklara geri koyar."></Description>
+      </Refund>
+      <OpenOrders Text="Tüm açık siparişleri görüntüle">
+        <Description Text="Kullanıcının tüm açık siparişleri görmesine izin verilip verilmediğini kontrol eder.\nBu seçenek, etkin kat planları ile kullanılabilir."></Description>
+      </OpenOrders>
+      <SalesHistory Text="Satış geçmişini görüntüle">
+        <Receipt Text="Makbuzu yeniden yazdır">
+          <Description Text="Kullanıcının satış geçmişinden fiş yazdırmasına izin verilip verilmediğini kontrol eder." />
+        </Receipt>
+      </SalesHistory>
+      <StartingCash Text="Günbaşı nakit">
+        <Description Text="Günbaşı nakit bölümüne erişimi kontrol eder"></Description>
+      </StartingCash>
+      <UserProfile Text="Kullanıcı profili"></UserProfile>
+    </Key>
+  </Security>
+  <Guide>
+    <Menu>
+      <Title Text="Ana menüyü aç"></Title>
+      <Content Text="Ana menüyü açmak için buraya tıklayın ve yönetim bölümüne erişin"></Content>
+    </Menu>
+    <Layout>
+      <SearchBox Text="Ürünleri ad, barkod veya kod ile arayın.">
+        <Title Text="Ürün arama"></Title>
+      </SearchBox>
+    </Layout>
+    <Dismiss>
+      <Title Text="Rehberli turu reddet"></Title>
+      <Confirmation Text="Bu ipuçlarını saklamak istediğinden emin misin?"></Confirmation>
+    </Dismiss>
+  </Guide>
+  <Layout>
+    <Visual>
+      <Item>
+        <Edit Text="Görsel görünümü düzenle">
+          <Color Text="Renk"></Color>
+          <Image Text="Resim">
+            <Select Text="Resim seç"></Select>
+            <Clear Text="Resmi temizle"></Clear>
+          </Image>
+        </Edit>
+      </Item>
+    </Visual>
+  </Layout>
+  <OpenOrders Text="Açık satışları göster">
+    <Total Text="TOPLAM TUTAR"></Total>
+    <NoOrders Text="Açık satış yok"></NoOrders>
+    <Authorization>
+      <Title Text="Lütfen şifre giriniz Açık satışlara erişmek için"></Title>
+    </Authorization>
+  </OpenOrders>
+  <StartingCash Text="Nakit Giriş / Çıkış">
+    <Type>
+      <CashIn Text="Para ekle"></CashIn>
+      <CashOut Text="Para çekiniz"></CashOut>
+    </Type>
+    <Amount Text="Tutar">
+      <Reason Text="Açıklama">
+        <Tooltip Text="Para eklenmesi veya kaldırılması için sebep giriniz..."></Tooltip>
+      </Reason>
+    </Amount>
+    <Hide Text="Bunu bir daha gösterme"></Hide>
+    <Entries Text="Nakit girişler">
+      <NoDescription Text="&lt;Açıklama yok&gt;"></NoDescription>
+      <NoEntries Text="Kayıt yok"></NoEntries>
+    </Entries>
+    <Saved Text="Başlangıç Nakdi başarıyla kaydedildi"></Saved>
+  </StartingCash>
+  <Account>
+    <FirstName Text="Adı" />
+    <LastName Text="Soyadı" />
+    <Email Text="Eposta" />
+    <Password Text="Parola">
+      <Confirmation Text="Parolayı doğrula">
+        <Error Text="Parola ve parola doğrulama eşleşmelidir" />
+      </Confirmation>
+    </Password>
+    <License>
+      <Info Text="Lisans bilgisi">
+        <Data Text="Lisans verisi">
+          <Id Text="Lisans ID" />
+          <StoreId Text="Mağaza ID" />
+          <LicensedTo Text="Lisanslı" />
+          <Email Text="Eposta" />
+        </Data>
+        <Products Text="Ürünler">
+          <Id Text="Id" />
+          <Name Text="Adı" />
+          <ValidUntil Text="Tarihine kadar geçerli" />
+          <LicenseType Text="Lisans tipi" />
+        </Products>
+        <NoLicense Text="Bu sistemle ilişkili lisans yok">
+          <Info Text="Premium özellikler hakkında daha fazla bilgi için www.aronium.com adresini ziyaret edin." />
+        </NoLicense>
+        <Refresh Text="Lisansı Güncelle">
+          <Success Text="Lisans başarıyla indirildi" />
+        </Refresh>
+        <Copy Text="Lisansı dosyaya kopyala" />
+        <Load Text="Lisansı dosyadan yükle" />
+      </Info>
+      <Login Text="Hesabınıza giriş yapın">
+        <NotRegistered Text="Kayıtlı değilmisiniz?">
+          <SignUp Text="Şimdi kayıt ol!" />
+        </NotRegistered>
+        <SignIn Text="Oturum aç" />
+      </Login>
+      <Register Text="Yeni hesap oluştur">
+        <AlreadyRegistered Text="Zaten kayıtlımısınız?">
+          <SignIn Text="Şimdi giriş yap!" />
+        </AlreadyRegistered>
+        <CreateAccount Text="Hesap oluştur" />
+        <Store Text="Mağaza oluştur">
+          <Details Text="Mağazanızı kurmak için bir dakika bekleyelim.\nŞirket verileriniz güncellenecek ve lisans otomatik olarak üretilecektir.">
+            <CompanyName Text="Şirket adı" />
+            <Address Text="Adres" />
+            <ZipCode Text="Posta kodu" />
+            <TaxNumber Text="Vergi No" />
+            <City Text="Şehir" />
+            <Country Text="Ülke" />
+          </Details>
+          <Create Text="Mağaza oluştur ve lisans üret" />
+        </Store>
+        <Success Text="Hesap başarıyla oluşturuldu" />
+      </Register>
+      <Load Text="Lisansı dosyadan yükle" />
+      <InvalidLicense Text="Geçersiz yada eksik lisans">
+        <Info Text="Bir veya daha fazla üründe geçerli bir lisans eksik.">
+          <SignInOrLoadFromFile Text="Lütfen lisansınızı yenilemek veya mevcut lisansı dosyadan yüklemek için hesabınıza giriş yapın." />
+        </Info>
+        <ProductName Text="Ürün adı:" />
+      </InvalidLicense>
+    </License>
+    <Error>
+      <ExistingAccount Text="Kullanıcı için belirtilen eposta adresi zaten mevcut." />
+      <Unauthorized Text="Yanlış kullanıcı adı yada parola. Lütfen bilgileri kontrol edip tekrar deneyin." />
+    </Error>
+  </Account>
+  <Validations>
+    <Info Text="Daha fazla ayrıntıya ve bu sorunun nasıl ele alınacağına bakın">
+      <Community Text="Topluluğumuz" />
+      <Or Text="yada" />
+      <ContactSupport Text="destek ile iletişim kurun" />
+    </Info>
+    <Cancel Text="Uygulamayı kapat" />
+    <Confirm Text="Anladım, devam et ve uygulamayı başlat" />
+    <Print>
+      <Warning>
+        <CustomTemplates Text="Özel makbuz veya fatura şablonları kullandığınızı tespit ettik. Bu sürümdeki veritabanı yapısı değişiklikleri nedeniyle, bu şablonlar artık çalışmayabilir.\nVarsayılan şablonları kullanabileceksiniz, böylece günlük işlemleriniz engellenmeyecek.\n\nHala eski şablonları kullanmak istiyorsanız, uygulamanın başlatılmasını şimdi durdurmalı ve eski sürüme geri almalısınız.">
+          <Title Text="UYARI! ÖZEL BASKI ŞABLONLARI ÇALIŞMAYABİLİR!" />
+        </CustomTemplates>
+      </Warning>
+    </Print>
+    <Refund>
+      <Invalid Text="İade geçerli değildir" />
+    </Refund>
+  </Validations>
+  <Print>
+    <Error Text="Yazdırma hatası oluştu">
+      <CustomTemplate Text="Özel şablonda hata tespit edildi!\nÖzel baskı şablonunuzla ilgili olası sorunları çözmek için lütfen Aronium desteğine başvurun.">
+        <Continue Text="Varsayılan şablonu kullanarak yazdırmaya devam etmek istiyor musunuz?" />
+      </CustomTemplate>
+    </Error>
+  </Print>
+</Language>

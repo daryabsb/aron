@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="pt-br" name="Português do Brasil">
+  <StockControl>
+    <Product>
+      <Title Text="Controle de estoque" />
+      <Supplier Text="Fornecedor">
+        <None Text="(nenhum)" />
+        <Clear Text="Limpar" />
+      </Supplier>
+      <ReorderPoint Text="Ponto de reabastecimento" />
+      <PreferredQuantity Text="Quantidade preferida" />
+      <LowStockWarning Text="Aviso de estoque baixo">
+        <WarningQuantity Text="Quantidade de aviso de estoque baixo" />
+      </LowStockWarning>
+      <Reset Text="Restaurar ao padrão" />
+      <Info Text="Defina regras de baixa quantidade de estoque que podem ser usadas como ponto de reabastecimento de estoque." />
+    </Product>
+    <Notification>
+      <Message Text="Alguns produtos atingiram o ponto de reabastecimento.&#xA;Considere comprar os seguintes itens: {0}.">
+        <Title Text="Os produtos estão atingindo baixa quantidade de estoque" />
+      </Message>
+    </Notification>
+    <Reports>
+      <Group Text="Controle de estoque" />
+      <ReorderProductList Text="Reordenar lista de produtos">
+        <OrderQuantity Text="Qtde do pedido." />
+      </ReorderProductList>
+      <LowStockWarning Text="Aviso de estoque baixo">
+        <QuantityOnHand Text="Qtd. disponível" />
+        <PreferredQuantity Text="Qtd. preferida" />
+        <WarningQuantity Text="Aviso qtd." />
+        <ReorderPoint Text="Ponto de reab." />
+      </LowStockWarning>
+    </Reports>
+  </StockControl>
+</Language>

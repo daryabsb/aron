@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <ReceiptPrinter Text="Kviitungiprinter">
+    <PrintReceipt Text="Prindi kviitung" />
+    <Receipt>
+      <PrinterNotFound Text="Kviitungiprinter pole valitud või on keelatud. Kontrollige printeri seadeid ja proovige uuesti." />
+      <PaymentTypes>
+        <PrintDisabled Text="Valitud maksetüüpide puhul on kviitungi printimine keelatud.&#xA;Enne kviitungi printimist lubage valitud maksetüüpide puhul kviitungite printimine." />
+      </PaymentTypes>
+      <Company>
+        <TaxNumber Text="Reg. nr." />
+      </Company>
+      <Customer Text="Klient">
+        <Address Text="Aadress" />
+        <TaxNumber Text="Reg. nr." />
+        <Code Text="Kood" />
+        <PhoneNumber Text="Telefon" />
+        <Email Text="E-post" />
+      </Customer>
+      <Number Text="Kviitungi nr." />
+      <RefundNumber Text="Tagasimakse nr." />
+      <OrderNumber Text="Tellimuse nr." />
+      <ItemsCount Text="Tooteid" />
+      <Subtotal Text="Vahesumma" />
+      <Tax Text="Käibemaks" />
+      <Discount Text="Ostukorvi allahindlus" />
+      <Total Text="KOKKU" />
+      <PaidAmount Text="Tasutud summa" />
+      <AmountDue Text="Tasumisele kuuluv summa" />
+      <DueDate Text="Maksetähtpäev" />
+      <User Text="Kasutaja" />
+      <Change Text="Raha tagasi" />
+      <Customize Text="Kohanda kviitungit">
+        <UseSystemCurrency Text="Kasutage süsteemi valuutavormingut">
+          <Info Text="Teie valuuta sümboliks on seatud „{0}”. Valuuta sümboli muutmiseks kasutage Windowsi juhtpaneeli.">
+            <OpenRegionalSettings Text="Ava piirkondlikud seaded" />
+          </Info>
+        </UseSystemCurrency>
+        <NumberOfDecimalPlaces Text="Kümnendkohad" />
+        <PrintTaxes Text="Maksusummade printimine" />
+        <PrintItemsCount Text="Prindi toodete arv">
+          <PrintItemsQuantity Text="Prindi üldkogus" />
+        </PrintItemsCount>
+        <PrintOrderNumber Text="Prindi tellimuse number" />
+        <ShortReceiptNumber Text="Lühike kviitungi number" />
+        <PrintTaxName Text="Prindi maksu nimetus" />
+        <Counter Text="Kviitungite loendur">
+          <Edit Text="Klõpsake kviitunginumbri loenduri muutmiseks" />
+        </Counter>
+        <Localize Text="Kviitungi teksti lokaliseerimine">
+          <Info Text="Selle vormi abil saate kviitungitele prinditud teksti tõlkida või muuta." />
+          <Company>
+            <TaxNumber Text="Ettevõtte registrikood" />
+          </Company>
+          <CustomerDetails Text="Kliendi andmed">
+            <Info Text="Valige, kuidas kliendi andmed kviitungil prinditakse. Kui te ei soovi kviitungil mõnda andmevälja printida, tühjendage märkeruut allolevast suvandist.&#xA;See jaotis käsitleb ainult andmevälju, mitte kviitungile prinditud kliendi tegelikke üksikasju." />
+          </CustomerDetails>
+          <Customer Text="Klient">
+            <Address Text="Aadress" />
+            <TaxNumber Text="Reg. number" />
+            <Code Text="Kood" />
+            <PhoneNumber Text="Telefoni number" />
+            <Email Text="E-post" />
+          </Customer>
+          <ReceiptNumber Text="Kviitungi number" />
+          <RefundNumber Text="Tagasimakse number" />
+          <OrderNumber Text="Tellimuse number" />
+          <ItemsCount Text="Toodete kogus" />
+          <Discount Text="Allahindlus" />
+          <Subtotal Text="Vahesumma" />
+          <Tax Text="Maksumäär" />
+          <Total Text="Kokku" />
+          <PaidAmount Text="Tasutud summa" />
+          <AmountDue Text="Tasumisele kuuluv summa" />
+          <DueDate Text="Maksetähtaeg" />
+          <User Text="Kasutaja" />
+          <Change Text="Tagasi anda" />
+        </Localize>
+        <CustomerDetails Text="Kliendi andmed">
+          <Info Text="Valige, millised kliendi andmed kviitungile prinditakse" />
+          <Name Text="Nimi" />
+          <Code Text="Kood" />
+          <TaxNumber Text="Reg. number" />
+          <Address Text="Aadress" />
+          <PhoneNumber Text="Telefoni number" />
+          <Email Text="E-post" />
+        </CustomerDetails>
+        <PrintMeasurementUnit Text="Prindi mõõtühik" />
+      </Customize>
+    </Receipt>
+    <DailyReport>
+      <ZReport Text="Z ARUANNE" />
+      <XReport Text="X ARUANNE" />
+      <CashRegister Text="KASSA #:" />
+      <Date Text="Aruande kuupäev:" />
+      <Time Text="Printimise aeg:" />
+      <ReportNumber Text="Aruanne #:" />
+      <FromDocument Text="Alates dokumendist:" />
+      <ToDocument Text="Kuni dokumendini:" />
+      <CashIn Text="Sularaha sisse:" />
+      <CashOut Text="Sularaha välja:" />
+      <UserSales Text="Kasutaja müük:" />
+      <PaymentTypes Text="Tasumiste tüübid:">
+        <Total Text="Tasumisi kokku:" />
+      </PaymentTypes>
+      <Refunds Text="Tagastused:">
+        <Total Text="Tagastusi kokku:" />
+      </Refunds>
+      <TaxCollected Text="Kogutud makse:" />
+      <TaxableTotal Text="Maksustatav summa:" />
+      <Tax Text="Maksud:" />
+      <Total Text="Kokku:" />
+      <TotalBalance Text="Lõppsaldo:" />
+      <Items Text="TOODETE ARUANNE">
+        <ReportNumber Text="Aruanne #:" />
+        <Products Text="TOOTED" />
+        <Groups Text="TOOTERÜHMAD" />
+        <Count Text="Tooteid kokku" />
+      </Items>
+      <DiscountsGranted Text="Tehtud allahindlusi:" />
+    </DailyReport>
+    <CashDrawer Text="Rahasahtel">
+      <OpenCashDrawer Text="Ava rahasahtel">
+        <AuthorizationRequired Text="Rahasahtli avamine vajab luba.&#xA;Sisestage rahasahtli avamiseks vajalik parool." />
+      </OpenCashDrawer>
+      <Command Text="Rahasahtli käsk:">
+        <LearnMore Text="Mis see on?" />
+      </Command>
+      <Error>
+        <CommandNotSet Text="Rahasahtli käsk pole määratud.&#xA;Jätkamiseks seadke palun rahasahtli käsk." />
+        <PrinterNotSet Text="Kviitungiprinter pole määratud.&#xA;Jätkamiseks konfigureerige kviitungprinter." />
+      </Error>
+      <Test Text="Testige rahasahtlit">
+        <InvalidCommand Text="Sisestage testimiseks kehtiv rahasahtli juhtimise käsk." />
+      </Test>
+    </CashDrawer>
+  </ReceiptPrinter>
+  <FiscalPrinter>
+    <Check Text="Kviitungprinteri laadimine ...">
+      <Status Text="Printeri oleku kontroll ..." />
+    </Check>
+    <CloseFiscalDay Text="Printige lõpparuanded">
+      <Info Text="Valige printimiseks aruanded. Veenduge, et teie printer on saadaval ja töökorras." />
+      <DailyReport Text="Prindi Z aruanne">
+        <InProgress Text="Z-aruande printimine ... Palun oodake ..." />
+      </DailyReport>
+      <SubReport Text="Prindi X aruanne">
+        <InProgress Text="X-aruande printimine ... Palun oodake ..." />
+      </SubReport>
+      <ItemsReport Text="Toodete aruande printimine">
+        <InProgress Text="Toodete aruande printimine ... Palun oodake ..." />
+      </ItemsReport>
+      <PrinterDisabled Text="Printer on keelatud või pole valitud. Aruandeid ei printida." />
+    </CloseFiscalDay>
+  </FiscalPrinter>
+</Language>

@@ -1,0 +1,1611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="et" name="Eesti">
+  <Buttons>
+    <Yes Text="Jah" />
+    <Ok Text="OK" />
+    <No Text="Ei" />
+    <Cancel Text="Tühista" />
+    <Save Text="Salvesta" />
+    <Close Text="Sulge" />
+    <Add Text="Lisa" />
+    <New Text="Uus" />
+    <Edit Text="Muuda" />
+    <Cut Text="Lõika" />
+    <Copy Text="Kopeeri" />
+    <Paste Text="Aseta" />
+    <Delete Text="Kustuta" />
+    <Refresh Text="Uuenda" />
+    <Login Text="SISENE" />
+    <Logout Text="Logi välja" />
+    <Print Text="Prindi" />
+    <Pdf Text="PDF" />
+    <SavePdf Text="Salvesta PDF" />
+    <Excel Text="Excel" />
+    <Hide Text="Peida" />
+    <FirstPage Text="Esimene lehekülg" />
+    <LastPage Text="Viimane lehekülg" />
+    <NextPage Text="Järgmine lehekülg" />
+    <PreviousPage Text="Eelmine lehekülg" />
+    <Continue Text="Jätka" />
+    <Clear Text="Tühjenda" />
+    <Exit Text="Välju" />
+    <Search Text="Otsi" />
+    <Ignore Text="Ignoreeri" />
+    <Retry Text="Proovi uuesti" />
+    <DeleteAll Text="Kustuta kõik" />
+    <Skip Text="Jäta vahele" />
+    <Restart Text="Taaskäivita" />
+    <SaveAndClose Text="Salvesta &amp; sulge" />
+    <Help Text="Abi" />
+    <Back Text="Tagasi" />
+    <LearnMore Text="Loe edasi" />
+    <Done Text="Valmis" />
+    <Send Text="Saada" />
+    <WhatsThis Text="Mis see on?" />
+    <Maximize Text="Maksimaliseeri" />
+    <Restore Text="Taasta" />
+    <Browse Text="Sirvi" />
+    <PrintPreview Text="Printimise eelvaade" />
+  </Buttons>
+  <Bootstrap>
+    <Initializing Text="Rakenduse käivitamine..." />
+    <Load>
+      <Components Text="Rakenduse komponentide laadimine..." />
+      <Modules Text="Moodulite laadimine ja lähtestamine..." />
+      <Products Text="Toodete laadimine...">
+        <Error Text="Viga toodete laadimisel.">
+          <Info Text="Mõni toode ei pruugi müügiks kõlblik olla. Kontrollige nurjunud tooteid ja proovige uuesti." />
+          <DuplicateBarcode Text="Korduv vöötkood &quot;{0}&quot;" />
+          <DuplicateCode Text="Korduv kood &quot;{0}&quot;" />
+          <Copy Text="Kopeeri lõikepuhvrisse" />
+        </Error>
+      </Products>
+      <CashRegister Text="Kassa andmete laadimine..." />
+      <ScanTypes Text="Tüüpide kontroll..." />
+    </Load>
+    <Connect Text="Andmebaasiga ühendamine...">
+      <NoDataProvider Text="Andmebaasi ühendusmoodul pole saadaval.\nPalun kontakteeru administraatoriga." />
+    </Connect>
+    <Error Text="Rakenduse käivitamisel ilmnes viga. Võtke ühendust süsteemiadministraatoriga." />
+    <Completed Text="Rakenduse käivitamine" />
+    <BackupDatabase Text="Andmebaasi versiooni kontroll..." />
+    <Migrations Text="Andmebaasi kontroll...">
+      <Failed Text="Andmebaasi üleviimine nurjus!" />
+    </Migrations>
+    <RestartRequired Text="Muudatuste jõustumiseks on vajalik rakenduse taaskäivitamine.\nRakenduse taaskäivitamiseks klõpsake allolevat nuppu." />
+    <ValidateLicense Text="Litsentsi kinnitamine..." />
+    <Onboarding Text="Käivitamise staatuse kontroll..." />
+    <CustomerDisplay Text="Kliendiekraani lähtestamine..." />
+    <PrinterStatus Text="Printeri oleku kontroll..." />
+    <VerifyVersion Text="Rakenduse versiooni kontroll..." />
+  </Bootstrap>
+  <Onboarding>
+    <Welcome Text="Tere tulemast">
+      <Info Text="Seadistame teie poe ja rakenduse põhiandmed.\nLaadimise lõpuleviimine võtab vaid paar minutit." />
+      <Start Text="KÄIVITA" />
+    </Welcome>
+    <Back Text="Tagasi" />
+    <Skip Text="Katkesta laadimine" />
+    <Hide Text="Ära näita edaspidi" />
+    <Next Text="Jäta vahele" />
+    <Continue Text="Salvesta &amp; Jätka" />
+    <PriceDisplay Text="Hindade kuvamine">
+      <Info Text="Valige, kas hindu kuvatakse ja prinditakse enne või pärast maksumäära" />
+      <BeforeTax Text="Enne maksumäära">
+        <Description Text="Hinnad kuvatakse ja prinditakse kviitungile ilma maksudeta" />
+      </BeforeTax>
+      <AfterTax Text="Peale maksumäära">
+        <Description Text="Hinnad kuvatakse ja prinditakse kviitungile koos maksudega" />
+      </AfterTax>
+      <DiscountApplyRule>
+        <Info Text="Selle valiku alusel rakendatakse allahindlusi enne maksustamist. Soodustuseeskirju saate seadetes igal ajal muuta." />
+      </DiscountApplyRule>
+    </PriceDisplay>
+    <Layout Text="Valige paigutus">
+      <LearnMore Text="Lisateave paigutuste ja töölaua kohta" />
+      <Standard Text="Tavapärane">
+        <Description Text="Kasutage seda paigutust, kui kasutate vöötkoode või kui teie arvutiga on ühendatud füüsiline klaviatuur." />
+      </Standard>
+      <TouchScreen Text="Visuaalne">
+        <Description Text="Kasutage seda paigutust, kui soovite oma tooteid ja gruppe visuaalselt müügiekraanil kuvada." />
+      </TouchScreen>
+      <EnableVirtualKeyboard Text="Luba virtuaalne klaviatuur" />
+    </Layout>
+    <Registration Text="Registreerimine">
+      <Info Text="Sisestage oma e-posti aadress, et saaksime teile rohkem kohandatud tuge pakkuda.">
+        <Email Text="See meil määratakse vaikimisi administraatori kontole ja seda saab kasutada parooli lähtestamiseks. Saate seda e-posti aadressi igal ajal muuta." />
+      </Info>
+      <Email Text="Teie e-posti aadress">
+        <Privacy Text="Teie e-posti aadressi hoitakse rangelt konfidentsiaalsena. Kasutame teie e-posti aadressi personaalsema toe pakkumiseks ja uusimate värskenduste saatmiseks ainult teie soovi korral.\nKa meie vihkame &quot;rämpsposti&quot; saatjaid." />
+      </Email>
+    </Registration>
+    <UserProfile>
+      <Title Text="Määrame teie isikliku konto" />
+      <Info Text="Sisestage oma nimi ja administraatori juurdepääsuks kasutatavad sisselogimisandmed." />
+      <LearnMore Text="Lisateave kasutajate ja vaikimandaatide kohta" />
+      <FirstName Text="Eesnimi" />
+      <LastName Text="Perenimi" />
+      <Email Text="E-posti aadress">
+        <Info Text="Seda e-posti aadressi kasutatakse teie konto varuaadressina.\nVeenduge, et sisestasite kehtiva e-posti aadressi, et saaksite e-posti teel oma parooli lähtestada." />
+        <Missing Text="Kui te ei sisesta kehtivat e-posti aadressi, on teil oht, et teid blokeeritakse.\nKui unustate oma parooli, pole seda ilma kehtiva e-posti aadressita võimalik taastada.">
+          <Title Text="E-posti aadress pole määratud" />
+          <Confirmation Text="Kas soovite jätkata ilma e-posti aadressita?" />
+        </Missing>
+      </Email>
+      <Password Text="Parool">
+        <Errors>
+          <Empty Text="Parool ei vasta nõutavatele kriteeriumidele. Parool peab olema määratud ja vähemalt 4 tähemärki pikk" />
+          <ConfirmationError Text="Parooli kinnitus ei ühti. Sisestage samad väärtused parooli ja parooli kinnitamise väljadele." />
+        </Errors>
+      </Password>
+      <ConfirmPassword Text="Kinnita parool" />
+      <PasswordPolicy Text="Parool peab olema vähemalt 4 tähemärki pikk" />
+    </UserProfile>
+    <Completed Text="Seadistamine on lõppenud">
+      <Info Text="Palju õnne! Te olete valmis jätkama.\nJärgmiseks avage &quot;Haldus&quot; jaotis, et lisada mõned tooted ja hakata müüma." />
+      <Finish Text="Sulge &amp; Jätka" />
+    </Completed>
+  </Onboarding>
+  <BusinessDay>
+    <Close>
+      <Authorization>
+        <Title Text="Tööpäeva sulgemiseks sisestage parool" />
+      </Authorization>
+    </Close>
+    <Select Text="Valige tööpäev">
+      <EnableSelection Text="(Tööpäeva muutmiseks klõpsake kuupäeval)" />
+    </Select>
+  </BusinessDay>
+  <Application>
+    <Close Text="Väljuge rakendusest">
+      <Info Text="Kas olete kindel, et soovite rakendusest väljuda?" />
+      <ShutDown Text="Välju rakendusest" />
+      <Restart Text="Taaskäivita rakendus" />
+      <TurnOffComputer Text="Lülita arvuti välja" />
+    </Close>
+    <FullScreen Text="Täisekraan" />
+    <Exit Text="Väljuge rakendusest" />
+    <Menu Text="Menüü" />
+    <RestartRequired Text="Taaskäivitamine on vajalik">
+      <Info Text="Muudatuste jõustumiseks on vajalik rakenduse taaskäivitamine. Kas soovite rakenduse kohe taaskäivitada?" />
+    </RestartRequired>
+    <ReloadProducts Text="Laadige tooted uuesti">
+      <Info Text="Tooteid on muudetud. Kas soovite tooted kohe laadida?" />
+    </ReloadProducts>
+  </Application>
+  <Period Text="Periood">
+    <Start Text="Algus" />
+    <End Text="Lõpp" />
+    <Preset Text="Eelseadistatud perioodid">
+      <Today Text="Täna" />
+      <Yesterday Text="Eile" />
+      <ThisWeek Text="Jooksev nädal" />
+      <LastWeek Text="Eelmine nädal" />
+      <ThisMonth Text="Jooksev kuu" />
+      <LastMonth Text="Eelmine kuu" />
+      <ThisYear Text="Käesolev aasta" />
+      <LastYear Text="Eelmine aasta" />
+    </Preset>
+  </Period>
+  <Login Text="Kasutaja">
+    <Password Text="Parool">
+      <Forgot Text="Unustasite parooli?" />
+    </Password>
+    <Error Text="Sisselogimine ebaõnnestus. Kontrollige oma parooli ja proovige uuesti." />
+    <Authentication Text="Kasutaja sisselogimine">
+      <Failed Text="Kasutajat ei leitud. Kontrollige oma parooli ja proovige uuesti." />
+    </Authentication>
+    <Reset Text="Parooli lähtestamine">
+      <LearnMore Text="Lisateave parooli lähtestamise kohta" />
+      <Email Text="Sisestage e-posti aadress">
+        <Info Text="Sisestage selle kasutajaga seotud e-posti aadress, kelle parooli soovite lähtestada.\nSaadame teile kinnituskoodi allpool sisestatud e-posti aadressile." />
+        <Required Text="E-posti aadress on nõutud" />
+        <EmailAddress Text="E-posti aadress">
+          <Tooltip Text="Sisestage oma e-posti aadress" />
+        </EmailAddress>
+        <ExistingCode Text="Mul on kood olemas. Viige mind järgmisele sammule." />
+      </Email>
+      <Code Text="Kontrollige koodi">
+        <Info Text="Kontrollige oma e-posti aadressi - saatsime teile autoriseerimiskoodi, mille peate sisestama allolevasse kasti.\nKui te ei saanud autoriseerimiskoodiga meili, kontrollige palun oma rämpspostikausta või proovige uuesti meilisõnumeid saata." />
+        <Email Text="Autoriseerimiskood saadetakse aadressile {0}." />
+        <AuthorizationCode Text="Autoriseerimiskood">
+          <Tooltip Text="Sisestage siia autoriseerimiskood..." />
+        </AuthorizationCode>
+        <Verify Text="Kontrollige koodi" />
+      </Code>
+      <Password Text="Sisestage uus parool">
+        <Info Text="Sisestage oma kohaliku konto jaoks uus parool ja parooli kinnitus.\nUus parool ja uue parooli kinnitamise väljad peavad olema sama sisuga.\n\nKui olete lõpetanud, klõpsake nuppu &quot;OK&quot; parooli lähtestamiseks." />
+        <NewPassword Text="Uus parool" />
+        <NewPasswordConfirmation Text="Kinnitage uut parooli" />
+        <InUse Text="Määratud parool on juba võetud. Sisestage teine parool ja proovige uuesti." />
+        <User Text="Kasutaja: {0}" />
+        <SetPassword Text="Määrake uus parool" />
+        <Success Text="Parooli muutmine õnnestus" />
+      </Password>
+      <Error>
+        <Expired Text="Teie autoriseerimiskood on aegunud.\nTaotlege uut autoriseerimiskoodi." />
+        <InvalidCode Text="Vale kood. Sisestage kehtiv kood ja proovige uuesti." />
+        <NoSuchUser Text="Kasutajat e-posti aadressiga &quot;{0}&quot; ei eksisteeri.\nSisestage kehtiv e-posti aadress ja proovige uuesti." />
+        <InvalidEmailAddress Text="E-posti aadress ei sobi. Sisestage kehtiv e-posti aadress ja proovige uuesti." />
+        <LimitReached Text="Parooli lähtestamiste arvu limiit on ületatud.\nSaate uuesti proovida 24 tunni pärast." />
+        <GeneralError Text="Parooli lähtestamise taotluse saatmisel ilmnes viga.\nProovige hiljem uuesti." />
+      </Error>
+    </Reset>
+  </Login>
+  <Order>
+    <List Text="Avage tellimuste loend">
+      <Select Text="Valige tellimus" />
+    </List>
+    <New Text="Uus müük" />
+    <Estimate Text="Lukusta">
+      <Authorization>
+        <Title Text="Müügi lukustamiseks sisestage parool" />
+      </Authorization>
+      <Created Text="Tellimus on edukalt lukustatud" />
+      <Clear Text="Avage see müük">
+        <Authorization>
+          <Title Text="Müügi avamiseks sisestage parool" />
+        </Authorization>
+        <Success Text="Müük on lukustamata." />
+      </Clear>
+      <Locked Text="Müük lukustatud">
+        <Info Text="Lukustatud müügi muutmine pole lubatud." />
+      </Locked>
+      <Issued Text="See müük on juba lukustatud.\nLukustatud müügi muutmine pole lubatud." />
+      <NoItems Text="Pole ühtegi lukustatavat toodet." />
+    </Estimate>
+    <Transfer Text="Üleandmine">
+      <Authorization>
+        <Title Text="Sisestage üleandmise võimalusele juurdepääsemiseks parool" />
+      </Authorization>
+      <All Text="Edastage kõik tellimused">
+        <Confirmation Text="Kõigi tellimuste teisele kasutajale edastamine on pöördumatu!\n\nKas soovite kindlasti kõik oma tellimused üle kanda kasutajale {0}?" />
+        <Success Text="Kõik tellimused on edukalt edastatud." />
+        <Error Text="Tellimuste ülekandmisel valitud kasutajale ilmnes viga.\nPalun proovige uuesti." />
+      </All>
+      <Orders Text="Avatud tellimused" />
+      <OrderNumber Text="Tellimuse number">
+        <Select Text="Valige tellimus" />
+      </OrderNumber>
+      <Quantity Text="Valige ülekantavad kogused" />
+      <User Text="Kasutaja">
+        <Current Text="Tellimus kuulub juba valitud kasutajale." />
+      </User>
+      <Rounds Text="Voorude ülekandmine">
+        <Summary Text="Tellimuse ühikud" />
+        <Selection Text="Valige ülekantavad voorud" />
+      </Rounds>
+      <Items Text="Tellimuse ühikud">
+        <Selected Text="Valitud üksused edastamiseks">
+          <NoItems Text="Valige ülekandmiseks üksused" />
+        </Selected>
+        <All Text="Kandke kõik üle" />
+        <Back Text="Eemaldage kõik" />
+        <InvalidQuantity Text="Valitud üksuse edastamine pole lubatud">
+          <Info Text="Valitud kaupade üldkogus on väiksem kui ülekandmiseks valitud kogus.\nKontrollige ülekandekogust, tühistatud tooteid ja proovige uuesti." />
+        </InvalidQuantity>
+        <BundledQuantity Text="Koguse muutmine pole lubatud">
+          <Info Text="Toode kuulub rühma. Grupiartiklite koguse muutmine pole lubatud." />
+        </BundledQuantity>
+      </Items>
+      <CurrentOrder Text="Ülekanne samale tellimusele">
+        <Confirmation Text="Edastate tooteid samale tellimusele. Muudatusi ei tehta.\nKas soovite kindlasti jätkata? " />
+      </CurrentOrder>
+      <Failed Text="Viga toodete ülekandmisel">
+        <Info Text="Toodete ülekandmisel ilmnes viga. Palun proovi uuesti." />
+      </Failed>
+      <Completed Text="Ülekanne on edukalt lõpule viidud" />
+      <NoItems Text="Puuduvad tooted ülekandmiseks" />
+      <Discount>
+        <Warning Text="Fikseeritud allahindlus">
+          <Info Text="Praegusel tellimusel on fikseeritud ostukorvi allahindlus. Sellest tellimusest üksuste ülekandmine tühistab ostukorvi allahindluse.\n\nKas soovite jätkata?" />
+        </Warning>
+      </Discount>
+    </Transfer>
+    <Void Text="Tühista tellimus">
+      <Authorization>
+        <Title Text="Selle tellimuse tühistamiseks sisestage parool" />
+      </Authorization>
+      <Confirm Text="Tühista tellimus">
+        <Info Text="Kas soovite kindlasti selle tellimuse kehtetuks tunnistada?" />
+      </Confirm>
+      <Completed Text="Tellimus tühistati" />
+      <NoItems Text="Ühtegi tühistatavat toodet pole" />
+    </Void>
+    <Rounds>
+      <Repeat Text="Korda vooru">
+        <NoItems Text="Tellimusel pole tooteid.\nKordusvooru saab teha ainult siis, kui voor on olemas." />
+        <NoQuantities Text="Valitud voorul {0} pole üksusi, mille kordamiseks oleks piisav kogus" />
+        <Bundle Text="Tooted kuuluvad rühma">
+          <Info Text="Rühmitatud toodete puhul pole kordusoperatsioon lubatud." />
+        </Bundle>
+      </Repeat>
+      <New Text="Uus voor">
+        <NoItems Text="Teie tellimusel pole ühtegi toodet uue vooru loomiseks.\nLisage tellimusele tooted ja proovige uuesti." />
+        <NoUnsavedItems Text="Kõik tellimusel olevad tooted on salvestatud. Algas uus voor." />
+      </New>
+      <SelectAll Text="Vali kõik" />
+      <SelectNone Text="Tühist valik" />
+      <Total Text="Kokku:" />
+      <NoItems Text="Valitud tooteid pole" />
+    </Rounds>
+    <Comment Text="Kommentaar">
+      <Add Text="Valige olemasolev kommentaar või lisage enda kommentaar tootele &quot;{0}&quot;" />
+      <Insert Text="Kirjutage kommentaar siia..." />
+      <Change Text="Lisa kommentaar">
+        <Forbidden Text="Valitud toote muutmine pole lubatud">
+          <Info Text="Toode &quot;{0}&quot; on tellitud ja kinnitatud.\nKinnitatud toote muutmine pole lubatud." />
+        </Forbidden>
+        <NoItem Text="Toodet pole valitud.\nVali toode, millele kommentaar lisada ja proovi uuesti." />
+      </Change>
+    </Comment>
+    <Subtotal Text="Vahesumma" />
+    <Tax Text="Käibemaks" />
+    <Total Text="KOKKU" />
+    <Checkout Text="Tasumine" />
+    <Save Text="Salvesta müük" />
+    <Refund Text="Tagasimakse">
+      <Authorization Text="Tagasimakse tegemiseks on vajalik parool" />
+      <Title Text="Tagastage tooted" />
+      <CartDiscountApplied Text="Rakendati ostukorvi allahindlust">
+        <Info Text="Ostukorvi allahindlus rakendatakse ja arvutatakse lõppsummas.\nOsalise tagasimakse kasutamisel, arvutatakse tagasimakstud kaupadele ostukorvi allahindlus." />
+      </CartDiscountApplied>
+      <Total Text="TAGASIMAKSE SUMMA KOKKU" />
+      <ReceiptNumber Text="Kviitungi number" />
+      <PaymentType Text="Tagasimakse tüüp" />
+      <Description Text="Tagasimakse kinnitamiseks sisestage kviitungi number ja maksetüüp" />
+      <SelectAll Text="Vali / Tühista valik" />
+      <Print>
+        <PrinterNotFound Text="Tagasimakse printerit pole valitud." />
+      </Print>
+      <MultyplePaymentTypes Text="Valitud dokument sisaldab mitut tüüpi makset. Valige tagasimakse maksetüüpide kopeerimiseks allpool olev valik.">
+        <PartialRefund Text="Originaalsest müügidokumendist mitme maksetüübi kasutamine pole osalise tagasimakse jaoks saadaval." />
+        <Copy Text="Kopeerige maksetüübid originaaldokumendist" />
+      </MultyplePaymentTypes>
+    </Refund>
+    <Items>
+      <Name Text="Toode" />
+      <Quantity Text="Kogus">
+        <Change Text="Muuda kogust">
+          <Info Text="Sisestage järgmise kauba kogus" />
+          <Item Text="Toode &quot;{0}&quot;" />
+          <Forbidden Text="Koguse muutmine pole lubatud">
+            <Info Text="Toode &quot;{0}&quot; on kinnitatud.\nKinnitatud toote muutmine pole lubatud." />
+          </Forbidden>
+          <Product Text="Toode &quot;{0}&quot;\nVaikekogus: {1:#,#.000}" />
+          <Bundled Text="Koguse muutmine pole lubatud">
+            <Info Text="Komplektis olevate toodete koguse muutmine pole lubatud." />
+          </Bundled>
+        </Change>
+        <Invalid Text="Kehtetu kogus. Sisestage kehtiv kogus ja proovige uuesti." />
+      </Quantity>
+      <Price Text="Hind">
+        <Change Text="Muuda hinda">
+          <Product Text="Toode &quot;{0}&quot;\nHind: {1:#,#.00}" />
+        </Change>
+      </Price>
+      <Total Text="Summa" />
+      <Empty Text="Tooteid pole">
+        <Info Text="Lisage tooted vöötkoodi, tootekoodi abil kviitungile või otsige, vajutades nuppu F3" />
+      </Empty>
+      <Start Text="Tagasi" />
+      <Page Text="Lehekülg" />
+      <Add>
+        <Error Text="Viga toote lisamisel. Toote andmed on valed.\nKontrollige toote hinda ja kogust ning proovige uuesti." />
+      </Add>
+      <Void>
+        <NoItems Text="Toote &quot;{0}&quot; tühistamine pole lubatud. Ebapiisav kogus." />
+        <Bundle Text="Toode kuulub rühma. Selle toote kustutamisel eemaldatakse kõik sama rühma tooted.\n\nKas soovite kindlasti kõik selles grupis olevad tooted eemaldada?">
+          <Title Text="Grupis oleva toote kustutamine" />
+        </Bundle>
+      </Void>
+    </Items>
+    <Print>
+      <User Text="Kasutaja: {0}" />
+      <Time Text="Aeg: {0}" />
+      <Number Text="Tellimuse number: {0}" />
+      <Table Text="Laud: {0}" />
+      <Estimate Text="ESTIMATE">
+        <Discount Text="Allahindlus" />
+        <Total Text="KOKKU:" />
+        <Footer Text="See pole kviitung.\nOodake lõplikku kviitungit." />
+      </Estimate>
+      <Kitchen>
+        <TableAndRound Text="Laud: {0}. Voor: {1}" />
+        <NumberAndRound Text="Tellimus: {0}. Voor: {1}" />
+      </Kitchen>
+      <Dialog>
+        <Title Text="Kuidas kliendile nende kviitung väljastada?" />
+        <Change Text="Raha tagasi" />
+        <Receipt Text="Prindi kviitung" />
+        <Invoice Text="Prindi arve" />
+        <Email Text="Saada e-postiga">
+          <Recipient Text="E-posti adressaat">
+            <Title Text="Sisestage e-kirja üksikasjad ja klõpsake nuppu &quot;Saada&quot; jätkamiseks" />
+            <EmailAddress Text="Saaja aadress">
+              <Description Text="Sisestage kliendi e-posti aadress" />
+              <AddCustomer Text="Lisa klient" />
+            </EmailAddress>
+            <Bcc Text="Pimekoopia">
+              <Description Text="Lisage pimekoopia saajad" />
+            </Bcc>
+            <Subject Text="Teema">
+              <Description Text="Sisestage teemarida" />
+              <Default Text="Kviitung {0}" />
+            </Subject>
+            <Message Text="Sõnum">
+              <Description Text="Sisestage kliendile teade" />
+              <Default Text="Hea klient,\n\nKirjaga on manusena kaasas Teie kviitung.\n\nKviitungi kuupäev: {0}\nKokku: {1}" />
+            </Message>
+            <CopySelf Text="Saada koopia endale" />
+            <Error>
+              <EmailFormat Text="E-posti aadress pole õigesti vormindatud.\nKontrollige e-posti aadressi ja proovige uuesti." />
+            </Error>
+          </Recipient>
+          <Sending Text="E-kirja saatmine... Palun oodake..." />
+          <Sent Text="Kviitung on saadetud saajale {0}" />
+        </Email>
+        <Hide Text="Ära näita seda edaspidi" />
+      </Dialog>
+    </Print>
+    <Products>
+      <Search Text="Otsi">
+        <Name Text="Toote nimetus">
+          <Tooltip Text="Otsige tooteid nimetuse järgi" />
+          <NotFound Text="Vastet ei leitud päringule &quot;{0}&quot;">
+            <Info Text="Kontrollige oma otsinguparameetreid ja proovige uuesti" />
+          </NotFound>
+        </Name>
+        <Barcode Text="Vöötkood">
+          <Tooltip Text="Otsige toodet vöötkoodi järgi" />
+          <NotFound Text="Vöötkoodi ei leitud" />
+        </Barcode>
+        <Code Text="Toote kood">
+          <Tooltip Text="Otsige toodet koodi järgi" />
+          <NotFound Text="Koodi ei leitud" />
+        </Code>
+        <NoItems Text="Toodet pole valitud">
+          <Info Text="Jätkamiseks otsige toodet nime või koodi järgi" />
+        </NoItems>
+        <Selection>
+          <Price Text="Hind" />
+          <Description Text="Kirjeldus" />
+        </Selection>
+        <NoResults Text="Tulemused puuduvad" />
+      </Search>
+      <NoProducts Text="Tooted pole saadaval">
+        <Info Text="Jätkamiseks lisage palun tooted või määrake olemasolevatele müügihind" />
+      </NoProducts>
+    </Products>
+    <Lock Text="Lukusta" />
+    <Unlock Text="Ava lukustusest" />
+    <Item>
+      <Void>
+        <Authorization>
+          <Title Text="Valitud toote tühistamiseks sisestage parool" />
+        </Authorization>
+      </Void>
+      <ChangePrice>
+        <Minimum Text="Minimaalne väärtus: {0}" />
+      </ChangePrice>
+    </Item>
+    <QuickPayment Text="Kiirmakse">
+      <Confirmation Text="Olete valinud &quot;{0}&quot; antud müügi eest tasumiseks.\n\nKas soovite jätkata valitud maksetüübi kasutamist?" />
+    </QuickPayment>
+    <Discount Text="Allahindlus">
+      <Authorization Text="Allahindluste rakendamiseks sisestage parool" />
+      <Cart>
+        <Invalid Text="Kehtetu ostusoodustus">
+          <GreaterThenTotal Text="Allahindlustega summa ei saa olla suurem\nkogu tellimuse summast." />
+        </Invalid>
+        <Cleared Text="Ostukorvi allahindlus on kustutatud!">
+          <Info Text="Tuvastati kehtetu lõppsumma ja allahindlus eemaldati tellimusest.\n\nEnne makse jätkamist, kontrollige tooteid ja rakendage uuesti kehtiv allahindlus." />
+        </Cleared>
+      </Cart>
+      <Item>
+        <NotSelected Text="Toodet pole valitud.\nÜksiku toote allahindluse rakendamiseks, valige konkreetne toode müügiloendist enne selle dialoogi avamist" />
+        <Invalid Text="Kehtetu toote allahindlus">
+          <GreaterThenTotal Text="Fikseeritud summa ei saa olla suurem,\nkui toodete summa kokku" />
+        </Invalid>
+        <Cleared Text="Toote allahindlus tühistatud">
+          <Info Text="Tuvastati sobimatu toode ja eemaldati varem rakendatud allahindlus.&#xA;&#xA;Enne makse jätkamist kontrollige, kas sellele tootele tuleks kohaldada allahindlusi." />
+        </Cleared>
+      </Item>
+    </Discount>
+  </Order>
+  <Closing Text="Päeva lõpetamine">
+    <Users Text="Avatud tehingud">
+      <User>
+        <Total Text="KOKKU:" />
+      </User>
+      <Summary Text="Avatud tehingud" />
+      <NoReports Text="Avatud tehinguid pole" />
+    </Users>
+    <Option Text="Vahetuse lõpetamise valikud">
+      <NotSelected Text="Vahetuse lõpetamise selgitust pole valitud">
+        <Info Text="Jätkamiseks valige üks ülaltoodud võimalustest" />
+      </NotSelected>
+    </Option>
+    <User Text="Vahetuse lõpetamine">
+      <Completed Text="{0} vahetus edukalt lõpetatud." />
+    </User>
+    <Shift Text="Kõigi kasutajate vahetuse lõpetamine">
+      <Closed Text="Kõigi kasutajate vahetuse lõpetamine õnnestus" />
+    </Shift>
+    <BusinessDay Text="Sulge kassa">
+      <Income Text="Päev kokku" />
+      <Closed Text="Kassa edukalt suletud" />
+      <Report Text="ARUANNE" />
+      <CashIn Text="Sularaha sissemakseid" />
+      <CashOut Text="Sularaha väljamakseid" />
+    </BusinessDay>
+    <Error>
+      <OpenOrders Text="Avatud tellimused">
+        <Users Text="On avatud tellimustega kasutajaid!\nKõik tellimused peavad olema suletud enna päeva lõpetamisyt." />
+      </OpenOrders>
+    </Error>
+    <Print>
+      <User>
+        <Report>
+          <Total Text="KOGU SUMMA" />
+          <User Text="Kasutaja">
+            <ClosedBy Text="Saadud" />
+          </User>
+          <Header Text="KASUTAJA PÄEVA LÕPETAMINE" />
+        </Report>
+      </User>
+      <DayClose>
+        <Report>
+          <Header Text="PÄEVA LÕPETAMINE" />
+          <User>
+            <Total Text="KOKKU" />
+          </User>
+          <Summary Text="KOKKUVÕTE" />
+          <Total Text="KOKKU" />
+        </Report>
+      </DayClose>
+    </Print>
+    <History Text="Ajalugu">
+      <Info Text="Kasutage allpool toodud loendit mis tahes varem loodud Z-aruande koopia valimiseks ja printimiseks." />
+      <List>
+        <Reports Text="Aruabded" />
+        <Number Text="Number" />
+        <Date Text="Kuupäev" />
+      </List>
+      <Print Text="Valitud aruande printimine">
+        <Unsupported Text="Operatsiooni ei toetata" />
+      </Print>
+    </History>
+  </Closing>
+  <User Text="Kasutaja">
+    <Profile Text="Kasutaja info">
+      <Info Text="Profiil" />
+      <Edit Text="Muutke profiili või parooli" />
+      <Data>
+        <FirstName Text="Eesnimi" />
+        <LastName Text="Perenimi" />
+        <Email Text="E-post" />
+        <Password Text="Parool">
+          <Change Text="Muutke parooli">
+            <Password Text="Parool" />
+            <Confirm Text="Kinnitage parooli" />
+            <ConfirmationFailed Text="Parooli ja parooli kinnitamise väli ei ühti.\nKontrollige parooli ja proovige uuesti." />
+            <InvalidPassword Text="Parool on juba kasutusel. Palun kasutage muud parooli." />
+          </Change>
+        </Password>
+        <Saved Text="Profiili muutmine õnnestus" />
+      </Data>
+      <ShiftReport Text="Kasutaja aruanne">
+        <Report Text="Kasutaja aruanne">
+          <NoData Text="Avatud tehinguid pole" />
+          <Total Text="KOKKU" />
+        </Report>
+        <ClockOut Text="Vahetuse lõpetamine" />
+      </ShiftReport>
+    </Profile>
+  </User>
+  <Security>
+    <Authorize Text="Kasutaja autentimine" />
+    <Level Text="Juurdepääsu tase">
+      <Change Text="Valitud toimingu juurdepääsutaseme muutmine">
+        <AccessDenied Text="Teil pole selle toimingu juurdepääsutaseme muutmiseks piisavalt õigusi.\n\nJuurdepääsutaset saab kasutaja põhiselt reguleerida, kui juurdepääsutase on vajalik valitud toimingu sooritamiseks." />
+      </Change>
+    </Level>
+    <AccessDenied Text="Ligipääs keelatud">
+      <Info Text="Teil pole valitud toimingu jaoks piisavalt õigusi." />
+    </AccessDenied>
+  </Security>
+  <Payment>
+    <Details>
+      <Summary Text="Tooted" />
+      <Actions Text="Toimingud">
+        <ShowItems Text="Näita tooteid" />
+      </Actions>
+      <Discount Text="Allahindlus">
+        <Options Text="Allahindluste seaded">
+          <DisallowedItems Text="On tooteid, mida ei saa otseselt allahindlusele määrata." />
+        </Options>
+        <Type>
+          <Percent Text="Rakenda allahindlust protsentides" />
+          <Fixed Text="Rakenda allahindlust kindla summana" />
+        </Type>
+        <Target>
+          <Item Text="Toote allahindlus">
+            <NotSelected Text="Tooteid pole valitud.\nSoodustuse rakendamiseks valige vasakul olev toode." />
+            <NotAllowed Text="Tühistatud toodete puhul pole allahindlus lubatud" />
+            <Info Text="Rakenda allahindlust &quot;{0}&quot;" />
+          </Item>
+          <Cart Text="Ostukorvi allahindlus">
+            <Info Text="Rakenda ostukorvi allahindlust" />
+          </Cart>
+        </Target>
+        <Total Text="Kokku:" />
+        <Subtotal Text="Vahesumma:" />
+        <TotalDiscount Text="Allahindlus kokku:" />
+        <Clear Text="Tühista allahindlused">
+          <Completed Text="Kõik allahindlused on tühistatud" />
+        </Clear>
+      </Discount>
+      <Split Text="Voorud">
+        <Rounds Text="Valige voor maksmiseks">
+          <RoundNumber Text="Voor:" />
+          <RoundTotal Text="Summa:" />
+          <SelectAll Text="Valige kõik" />
+          <SelectNone Text="Jätta kõik" />
+        </Rounds>
+      </Split>
+      <Customer Text="Klient" />
+      <Total Text="Kokku:" />
+      <TotalWithoutDiscount Text="Kokku ilma allahindluseta:" />
+      <Money Text="Maksmine">
+        <Paid Text="Makstud:">
+          <Hint>
+            <TypeAmount Text="Sisestage makstud summa" />
+            <TapToChange Text="Tasutud summa sisestamiseks puudutage siin" />
+          </Hint>
+        </Paid>
+        <Change Text="Tagasi antud:" />
+        <Balance Text="Jääk:" />
+      </Money>
+      <PaymentTypes Text="Maksetüüp">
+        <Other Text="Jagatud maksed" />
+        <Invalid Text="Maksetüüp pole lubatud">
+          <Fiscal Text="Valitud maksetüüp sisaldab vale maksu- ja muude maksetüüpide kombinatsiooni.\n\nMaksude ja muude maksude tüüpe pole lubatud kombineerida." />
+        </Invalid>
+      </PaymentTypes>
+      <NoItems Text="Tooteid pole " />
+    </Details>
+    <NoPaymentSelected Text="Maksetüüpi pole valitud" />
+    <Add Text="Lisage makse tüüp">
+      <Info Text="Valige praeguse müügi jaoks vajalikud maksetüübid ja summad" />
+      <Amount Text="Maksesumma &quot;{0}&quot;" />
+    </Add>
+    <Selected Text="Valitud maksetüüp" />
+    <Customer>
+      <Required Text="Vajalik kliendi valimine">
+        <Info Text="Maksetüübi &quot;{0}&quot; kasutamiseks peab kliendi andmed lisama. Valige jätkamiseks klient." />
+      </Required>
+    </Customer>
+    <PaymentTypes>
+      <Validation>
+        <Change>
+          <Missing Text="Vale summa">
+            <Info Text="See maksetüüp ei võimalda muudatusi teha. Sisestage õige summa või valige mõni muu maksetüüp." />
+          </Missing>
+        </Change>
+      </Validation>
+    </PaymentTypes>
+  </Payment>
+  <Customer>
+    <Search Text="Otsi klienti">
+      <Name Text="Nimi" />
+      <PIN Text="Reg. nr." />
+      <LoyaltyCard Text="Püsikliendikaart" />
+      <Email Text="E-post" />
+      <PhoneNumber Text="Telefoni number" />
+    </Search>
+    <Selection Text="Valitud klient">
+      <Details>
+        <PIN Text="Reg. nr.:" />
+        <Address Text="Aadress:" />
+        <Email Text="E-post:" />
+        <PhoneNumber Text="Telefoni number:" />
+      </Details>
+      <None Text="Klienti pole valitud">
+        <Info Text="Valige loendist klient" />
+      </None>
+      <Clear Text="Tühjenda valitud klient">
+        <Completed Text="Valitud klient on eemaldatud" />
+      </Clear>
+    </Selection>
+    <New Text="Uus klient">
+      <Add Text="Lisa uus klient">
+        <Error Text="Tekkis viga kliendi lisamisel.\nSüsteemi teade:  {0}" />
+      </Add>
+      <Name Text="Nimi" />
+      <TaxNumber Text="Reg, nr." />
+      <Address Text="Aadress" />
+      <City Text="Linn" />
+      <PostalCode Text="Postiindeks" />
+      <Country Text="Maakond/Riik" />
+      <PhoneNumber Text="Telefoni number" />
+      <Email Text="E-post" />
+      <Code Text="Kood" />
+    </New>
+  </Customer>
+  <Navigation>
+    <Back>
+      <NotAllowed Text="Valitud toiming pole lubatud." />
+    </Back>
+  </Navigation>
+  <FloorPlans>
+    <Options Text="Valikud">
+      <Design Text="Korruse plaan / laudade seaded">
+        <Grid>
+          <Show Text="Kuva ruudustik" />
+          <SnapToGrid Text="Haarake ruudustiku külge" />
+          <Size Text="Ruudusiku suurus" />
+        </Grid>
+        <FloorPlan>
+          <Add Text="Lisage uus korruse plaan" />
+          <Delete Text="Eemaldage korruse plaan" />
+          <Rename Text="Nimetage korruse plaam ümber" />
+          <Name Text="Nimetus" />
+          <Color Text="Korruse plaani värvilahendus">
+            <Reset Text="Taasta vaikeväärtused" />
+          </Color>
+        </FloorPlan>
+        <Table>
+          <Add Text="Lisa laud" />
+          <Delete Text="Eemdalda valitud laud" />
+          <Name Text="Nimetus" />
+          <Height Text="Kõrgus" />
+          <Width Text="Laius" />
+          <Size Text="SUURUS" />
+        </Table>
+      </Design>
+      <View>
+        <Orders Text="Näita tellimusi">
+          <Title Text="Avatud tellimused " />
+          <Order>
+            <Number Text="Tellimuse number" />
+            <Total Text="Kokku" />
+          </Order>
+          <NoOrders Text="Avatud tellimusi pole. Looge uus tellimus, kasutades korruse plaani." />
+        </Orders>
+        <FloorPlans Text="Näita korruste plaane" />
+      </View>
+      <NoSelection Text="Jätkake ilma valikuta" />
+    </Options>
+    <Save>
+      <Success Text="Muudatused on edukalt salvestatud." />
+      <Error Text="Salvestamisel ilmnes viga\nAndmeid ei säilitata.\nSüsteemi teade: {0}">
+        <Duplicates Text="Korduv laua nimetus leitud.\n\n{0}\n\nLaudade nimetused peavad olema unikaalsed. Parandage laudade nimetused ja proovige uuesti.">
+          <Title Text="Leiti duplikaadid" />
+        </Duplicates>
+      </Error>
+    </Save>
+    <Table>
+      <Unavailable Text="Laud &quot;{0}&quot; on juba valitud kasutajal {1}. Kui jätkate, avate te eraldi tellimuse sellele lauale.\n\nKas soovite ikkagi jätkata?">
+        <Title Text="Laud on juba võetud" />
+      </Unavailable>
+    </Table>
+  </FloorPlans>
+  <Settings Text="Seaded">
+    <Basic Text="Põhiseaded">
+      <Language Text="Keel" />
+      <Style Text="Rakenduse stiil">
+        <ColorScheme Text="Värvilahendus" />
+      </Style>
+      <Layout Text="Paigutus">
+        <TouchScreen Text="Visuaalne" />
+        <Keyboard Text="Tavaline" />
+      </Layout>
+      <VirtualKeyboard Text="Luba virtuaalne klaviatuur" />
+      <ProductSearch>
+        <Barcode Text="Vöötkood" />
+        <Code Text="Kood" />
+        <Name Text="Nimetus" />
+      </ProductSearch>
+      <ColorScheme>
+        <Dark Text="Tume" />
+        <Light Text="Hele" />
+        <Dimmed Text="Tumendatud" />
+        <HighContrast Text="Kõrge kontrastsus" />
+        <Gray Text="Hall" />
+      </ColorScheme>
+      <NotificationPosition>
+        <Top Text="Ülal" />
+        <Bottom Text="All" />
+      </NotificationPosition>
+      <Notifications Text="Sõnumid">
+        <ShowClose Text="Näita &quot;Sulge&quot; nuppu" />
+        <ClickToClose Text="Klõpsake sulgemiseks" />
+        <SlideIn Text="Libistage sisse" />
+        <Duration Text="Sõnumi kestus (sek.)" />
+        <Position Text="Asukoht" />
+      </Notifications>
+      <StartingCash Text="Näidake sularaha sissemakset rakenduse käivitamisel" />
+      <BusinessDay Text="Tööpäev">
+        <SelecBusinessDay Text="Valige rakenduse käivitamisel tööpäev" />
+      </BusinessDay>
+      <ButtonBar Text="Nupuriba">
+        <Info Text="Valige nupuribal kuvatavad toimingud">
+          <VisualLayoutOnly Text="Kohaldatav ainult &quot;Visuaalne&quot; paigutuse korral" />
+        </Info>
+        <IsCommentVisible Text="Kommentaar" />
+        <IsDiscountVisible Text="Allahindlus" />
+        <IsNewSaleVisible Text="Uus müük" />
+        <IsRefundVisible Text="Tagasimakse" />
+        <IsSearchVisible Text="Otsing" />
+        <IsTransferVisible Text="Edastus" />
+      </ButtonBar>
+      <Zoom Text="Suum" />
+      <WritingDirection Text="Kirjutamise suund">
+        <LeftToRight Text="Vasakult paremale" />
+        <RightToLeft Text="Paremalt vasakule" />
+      </WritingDirection>
+    </Basic>
+    <Order Text="Tellimus &amp; Tasumine">
+      <Standard Text="Põhitoimingud">
+        <AutoOrderNumber Text="Kasutage korruseplaane" />
+        <PlaySound Text="Helid">
+          <SoundSettings>
+            <Navigation Text="Navigeerimisheli" />
+            <ItemAdded Text="Toote lisamise heli" />
+            <ItemNotFound Text="Heli, kui toodet ei leitud" />
+            <Show Text="Kuva helivalikud" />
+            <Hide Text="Peida helivalikud" />
+          </SoundSettings>
+        </PlaySound>
+        <ProductGrid Text="Number või read/veerud" />
+      </Standard>
+      <Users Text="Kasutajad">
+        <SingleUser Text="Üks kasutaja" />
+      </Users>
+      <Products Text="Tooted">
+        <DefaultQuantity Text="Vaikekogus" />
+        <DefaultSearch Text="Vaikotsing">
+          <Options Text="Kuva otsinguvõimalused" />
+        </DefaultSearch>
+        <DefaultDiscountType Text="Allahindluse vaiketüüp">
+          <Percent Text="Protsent" />
+          <Fixed Text="Fikseeritud summa" />
+        </DefaultDiscountType>
+        <RowPerItem Text="Iga toote jaoks eraldage rida" />
+      </Products>
+      <Payment Text="Tasumine">
+        <ShowSummary Text="Kuva tooted maksevormil" />
+        <FixedRows Text="Maksetüübi ridade arv" />
+        <IsSingleItemDiscountAllowed Text="Lubatud on ühe toote allahindlus" />
+        <QuickPaymentConfirmation Text="Kiirklahvide maksekinnitus" />
+        <ShowPrintReceiptDialog Text="Kuva kviitungi printimise dialoog" />
+        <DefaultDueDate Text="Maksete vaiketähtaeg">
+          <Days Text="päev(a)" />
+        </DefaultDueDate>
+        <MergeItemsOnPayment Text="Ühendage tooted kviitungil" />
+      </Payment>
+      <Advanced>
+        <Show Text="Kuva täpsemad seaded" />
+        <Hide Text="Peida täpsemad seaded" />
+        <ResetOrderNumber Text="Lähtesta järgmisel päeval tellimuste numeratsioon" />
+        <ShowAllOccupiedTables Text="Kuva kõik hõivatud lauad korruseplaanil" />
+      </Advanced>
+    </Order>
+    <Products Text="Toodete seaded">
+      <TaxInclusivePrice Text="Kuvada ja printida tooted koos maksudega">
+        <Tooltip Text="Kui see on valitud, kuvatakse ja prinditakse toodete hinnad koos maksudega." />
+      </TaxInclusivePrice>
+      <DiscountApplyRule Text="Allahindluse reegel">
+        <BeforeTax Text="Enne maksude arvestamist" />
+        <AfterTax Text="Peale maksude arvestamist" />
+      </DiscountApplyRule>
+      <AllowNegativePrices Text="Luba negatiivne hind">
+        <Tooltip Text="Kui see on valitud, lubatakse negatiivne müügihind." />
+      </AllowNegativePrices>
+      <Sorting Text="Sorteerimine">
+        <Name Text="Nimetus" />
+        <Code Text="Kood" />
+      </Sorting>
+    </Products>
+    <Print Text="Printimise valikud">
+      <PrinterSelection Text="Printeri valik">
+        <Tour>
+          <Title Text="Reguleerige printeri sätteid" />
+          <Content Text="Vajutage &quot;Printeri seaded&quot; nuppu\nprinteri valikuteks ja seadistamiseks" />
+        </Tour>
+      </PrinterSelection>
+      <Printers>
+        <KitchenTicket Text="Köögiprinter">
+          <Operation Text="Prindi köögitellimus" />
+        </KitchenTicket>
+        <Service Text="Teeninduse printer">
+          <Operation Text="Teenusesõnumite printimine" />
+        </Service>
+        <Estimate Text="Lukustatud müügi printer">
+          <Operation Text="Prindi lukustatud müük" />
+        </Estimate>
+        <OrderSummary Text="Prindi tellimus" />
+      </Printers>
+      <PrinterOptions Text="Printeri sätted">
+        <Tooltip Text="Reguleerige printeri sätteid" />
+        <PrinterType Text="Printeri tüüp">
+          <A4 Text="A4" />
+          <EscPos Text="ESC/POS" />
+          <POS58 Text="POS 58" />
+          <POS58Rtl Text="POS 58 RTL" />
+          <POS80 Text="POS 80" />
+          <POS80Rtl Text="POS 80 RTL" />
+          <WindowsPrinter Text="Windowsi printer" />
+          <GenericTextOnly Text="Üldine / ainult tekst" />
+        </PrinterType>
+        <NumberOfCopies Text="Koopiate arv" />
+        <PaperWidth Text="Tähemärkide arv ühel real" />
+        <Header Text="Päis" />
+        <Footer Text="Jalus" />
+        <FeedLines Text="Tühjad read" />
+        <CutPaper Text="Lõika paber" />
+        <PrintBitmap Text="Prindi rastergraafika" />
+        <RichFormatting Text="Täiustatud vormindus" />
+        <Alignment>
+          <Left Text="Joondage vasakule" />
+          <Center Text="Joondage keskele" />
+        </Alignment>
+        <Revert Text="Muudatuste ennistamine">
+          <Completed Text="Varem salvestatud seaded on rakendatud" />
+        </Revert>
+        <PrintTestPage Text="Testlehe printimine" />
+        <Advanced Text="Täpsemad seaded">
+          <CodePage Text="Koodileht" />
+          <CharacterSet Text="Tähemärkide komplekt">
+            <None Text="None (Printer default)" />
+            <USA Text="USA" />
+            <France Text="France" />
+            <Germany Text="Germany" />
+            <UK Text="United Kingdom" />
+            <DenmarkI Text="Denmark I" />
+            <Sweden Text="Sweden" />
+            <Italy Text="Italy" />
+            <SpainI Text="Spain I" />
+            <Japan Text="Japan" />
+            <Norway Text="Norway" />
+            <DenmarkII Text="Denmark II" />
+            <SpainII Text="Spain II" />
+            <LatinAmerica Text="Latin America" />
+            <Korea Text="Korea" />
+            <SloveniaCroatia Text="Slovenia / Croatia" />
+            <China Text="China" />
+            <Vietnam Text="Vietnam" />
+            <Arabia Text="Arabia" />
+          </CharacterSet>
+        </Advanced>
+        <Unavailable Text="Lisasuvandid pole valitud printeritüübi jaoks saadaval.\nPrinteri lisavalikute nägemiseks valige mõni muu printeri tüüp.">
+          <Info Text="Lisateave printeri tüübi valimise ja kviitungprinteri seadistamise kohta." />
+        </Unavailable>
+        <Margin Text="Äärised (millimeetrites)">
+          <Top Text="Ülal" />
+          <Right Text="Paremal" />
+          <Bottom Text="All" />
+          <Left Text="Vasakul" />
+        </Margin>
+        <PrintBarcode Text="Printige vöötkood" />
+        <Font Text="Kirjatüübi seaded">
+          <Family Text="Kirjatüüp" />
+          <SizePercent Text="Kirjatüübi suurus" />
+          <Reset Text="Lähtestab kirjatüübi vaikimisi ja määrab fondi suuruseks 100%" />
+        </Font>
+        <BasicSettings Text="Põhiseaded" />
+        <PaperSize Text="Paberi suurus">
+          <RollPaper58 Text="58 mm" />
+          <RollPaper80 Text="80 mm" />
+          <A4 Text="A4" />
+        </PaperSize>
+        <RightToLeft Text="Paremalt vasakule" />
+      </PrinterOptions>
+      <Templates Text="Printimise mallid">
+        <Font Text="Kirjatüüp">
+          <Info Text="Siin valitud kirjatüüpi kasutatakse arvetes, aruannetes ja muudes prindimallides. Kui ühtegi pole valitud, kasutatakse vaikimisi kirjatüüpi." />
+        </Font>
+        <Invoice Text="Arve seaded">
+          <Title Text="Pealkiri" />
+          <Columns Text="Veergude valik">
+            <TaxColumn Text="Maksu veerg" />
+            <DiscountColumn Text="Allahindluse veerg" />
+          </Columns>
+          <CustomerDetails Text="Kliendi andmed">
+            <TaxNumber Text="Reg. number" />
+            <Code Text="Kood" />
+            <PhoneNumber Text="Telefoni number" />
+            <Email Text="E-post" />
+          </CustomerDetails>
+          <Other Text="Muud seaded">
+            <PrintPaymentTypes Text="Makseviisid" />
+          </Other>
+          <Footer Text="Jalus" />
+        </Invoice>
+      </Templates>
+    </Print>
+    <AddOns Text="Registreeritud moodulid">
+      <Modules Text="Moodulid" />
+      <Plugins Text="Pistikprogrammid" />
+    </AddOns>
+    <Barcode Text="Vöötkoodi seaded">
+      <VariableMeasureBarcode Text="Kaalude vöötkood">
+        <Enabled Text="Luba kaalude vöötkood" />
+        <Prefix Text="Esimesed kaks numbrit / eesliide" />
+        <ProductCodeLength Text="Tootekoodi numbrite arv " />
+        <DecimalPlaces Text="Kümnendkohtade arv" />
+        <TrimZeros Text="Eemaldage tootekoodist nullid (kärpige nullid)" />
+        <IsUsingPriceBarcode Text="Kaal prindib koguse asemel hinna">
+          <Info Text="Mõni kaal kaalub mõõdetud koguse asemel koguhinna. Kui see valik on lubatud, põhineb kogus toote hinnal ja kaalul oleval kogusummal." />
+        </IsUsingPriceBarcode>
+      </VariableMeasureBarcode>
+    </Barcode>
+    <Email Text="E-posti seaded">
+      <Host Text="Server" />
+      <Port Text="Port" />
+      <EmailAddress Text="E-posti aadress" />
+      <DisplayName Text="Saatja nimi" />
+      <Password Text="Parool" />
+      <SSL Text="Kasuta SSL-i" />
+      <Defaults Text="E-kirja vaikeväärtused">
+        <Subject Text="Teema" />
+        <Message Text="Kirja sisu" />
+        <Description Text="Kui otsustate need väljad tühjaks jätta, kasutatakse kliendi jaoks automaatselt loodud teemat ja teadet. Enne sõnumi saatmist saate neid muuta." />
+        <Bcc Text="Pimekoopia saajad" />
+      </Defaults>
+      <Username Text="Kasutajanimi" />
+      <General Text="Üldine">
+        <Host Text="Väljuv e-posti server" />
+        <Port Text="Port" />
+        <EmailAddress Text="E-posti aadress" />
+        <DisplayName Text="Saatja nimena kuvatakse" />
+        <Username Text="Kasutajanimi" />
+        <Password Text="Parool" />
+        <SSL Text="SSL lubatud" />
+        <Defaults Text="Meilisõnumi vaikeväärtused">
+          <Subject Text="Teema" />
+          <Message Text="Sõnum" />
+          <Description Text="Kui otsustate need väljad tühjaks jätta, kasutatakse kliendile automaatselt genereeritud teemat ja sõnumit. Saate neid enne sõnumi saatmist muuta." />
+          <Bcc Text="Pimekoopia saajad" />
+        </Defaults>
+      </General>
+    </Email>
+    <About Text="Üldine info">
+      <HelpCenter Text="Avage abikeskus">
+        <Info Text="Tugitaotluse avamiseks minge saidile help.aronium.com." />
+      </HelpCenter>
+      <ApplicationDirectory Text="Rakenduse andmete kataloog">
+        <Info Text="Asukoht, kuhu on salvestatud rakenduse sätted, logifailid ja muud rakendusega seotud üksused." />
+        <Open Text="Ava rakenduse andmete kataloog" />
+      </ApplicationDirectory>
+      <Database Text="Andmebaas">
+        <Open Text="Ava andmebaasi asukoht" />
+        <Backup Text="Andmebaasi varundamine">
+          <Success Text="Andmebaasi varundamine on edukalt lõpule viidud.">
+            <Path Text="Asukoht: {0}" />
+            <UnableToCopy Text="Varukoopia on loodud vaikeasukohas. Varundusfaili ei saa valitud kataloogi kopeerida." />
+          </Success>
+          <Error Text="Viga andmebaasi varukoopia loomisel.\nLisateavet leiate logidest." />
+        </Backup>
+      </Database>
+      <Update>
+        <AutoUpdate Text="Automaatne värskendamine" />
+        <SendUsageData Text="Aidake meil rakendust täiustada, saates anonüümseid kasutusandmeid" />
+        <Check Text="Kontrolli kas uuendused on saadaval">
+          <Checking Text="Värskenduste otsimine... Palun oodake..." />
+          <Downloading Text="Värskenduste allalaadimine... Palun oodake..." />
+          <UpToDate Text="Aronium on ajakohane." />
+          <Available Text="Uus versioon on saadaval.">
+            <Run Text="Koheseks installimiseks klõpsake siin." />
+          </Available>
+          <Error>
+            <NoConnection Text="Serveriga ei saa ühendus.\nPalun kontrollige oma interneti ühendust ja proovige uuesti." />
+            <InvalidFile Text="Faili allalaadimisel ilmnes viga. See ei pruugi olla saadaval või rikutud.&#xA;Palun proovi hiljem uuesti." />
+          </Error>
+        </Check>
+        <Ready Text="Värskendus on saadaval">
+          <Install Text="Uue versiooni installimiseks klõpsake siin" />
+          <Description Text="Uus versioon on installimiseks valmis.\nLisateabe saamiseks külastage lehte, klõpsates &quot;Mis on uut?&quot; nuppu.">
+            <Install Text="Vajuta &quot;Paigalda&quot; nuppu viimaste uuenduste paigaldamiesks." />
+          </Description>
+          <Versions>
+            <Current Text="Praegune versioon:" />
+            <New Text="Uus versioon:" />
+          </Versions>
+          <Ignore Text="Jäta uuendus vahele" />
+          <ReleaseNotes Text="Mis on uut?" />
+          <Postpone Text="Mitte praegu" />
+          <Run Text="Paigalda" />
+        </Ready>
+      </Update>
+      <Account Text="Konto">
+        <Email Text="Sisestage oma e-posti aadress" />
+        <Change Text="Muuda" />
+      </Account>
+      <TermsOfUse Text="Kasutustingimused">
+        <Info Text="Lugege meie &quot;Kasutustingimusi&quot; veebis" />
+      </TermsOfUse>
+      <Version Text="Versioon" />
+      <ApplicationId Text="Rakenduse ID" />
+    </About>
+    <Authorization>
+      <Title Text="Rakenduse seadetele juurdepääsemiseks sisestage parool" />
+    </Authorization>
+    <Database Text="Andmebaas">
+      <AutoBackup Text="Automaatne varundamine">
+        <Enabled Text="Lubage automaatne varundamine" />
+        <BackupOnStart Text="Varundage andmebaas rakenduse käivitamisel" />
+        <BackupOnClose Text="Varundage andmebaas rakenduse sulgemisel" />
+        <DirectoryPath Text="Varukoopia asukoht">
+          <Choose Text="Valige varukoopia asukoht" />
+          <Info Text="Valige varukoopia asukoht. Automaatse varundamise failid salvestatakse valitud kataloogi." />
+        </DirectoryPath>
+        <RemoveOldFiles Text="Eemaldage vanad varukoopiad">
+          <DaysToKeep Text="Vanade varundusfailide säilitamise päevade arv" />
+        </RemoveOldFiles>
+      </AutoBackup>
+    </Database>
+    <RestartRequired Text="Nende muudatuste jõustumiseks tuleb rakendus taaskäivitada.">
+      <Title Text="Taaskäivitamine on vajalik" />
+    </RestartRequired>
+    <WeighingScale Text="Kaal">
+      <VariableMeasureBarcode Text="Kaalude vöötkood">
+        <Enabled Text="Lubage kaalude vöötkood" />
+        <Prefix Text="Kaks esimest numbrit / eesliide" />
+        <ProductCodeLength Text="Tootekoodi numbrite arv" />
+        <DecimalPlaces Text="Kümnendkohtade arv" />
+        <TrimZeros Text="Eemaldage tootekoodist nullid" />
+        <IsUsingPriceBarcode Text="Kaal prindib koguse asemel hinna">
+          <Info Text="Mõned kaalud prindivad koguse hinna koguse asemel. Kui see suvand on lubatud, põhineb kogus toote hinnal ja kaalu kogusummal." />
+        </IsUsingPriceBarcode>
+      </VariableMeasureBarcode>
+    </WeighingScale>
+  </Settings>
+  <Document>
+    <Category>
+      <Expenses Text="Kulud">
+        <Purchase Text="Ost" />
+        <StockReturn Text="Varude tootlus" />
+      </Expenses>
+      <Inventory Text="Inventuur">
+        <InventoryCount Text="Varude arv" />
+      </Inventory>
+      <Loss Text="Kadu">
+        <LossAndDamage Text="Kadu ja riknemine" />
+      </Loss>
+      <Sales Text="Müük">
+        <Sales Text="Müük" />
+        <Refund Text="Tagasimakse" />
+        <Proforma Text="Proform" />
+      </Sales>
+    </Category>
+    <Create>
+      <Error Text="Dokumendi loomisel ilmnes viga.\nPalun proovige uuesti." />
+    </Create>
+  </Document>
+  <Invoices Text="Vaadake müügiajalugu">
+    <Title Text="Müügiajalugu" />
+    <Documents Text="Dokumendid">
+      <Customer Text="Klient">
+        <Change Text="Muutke klienti">
+          <Success Text="Klient on edukalt muudetud." />
+        </Change>
+      </Customer>
+      <CashRegister>
+        <All Text="Kõik kassad" />
+        <Select Text="Valige kassaa" />
+      </CashRegister>
+      <Print Text="Prindi">
+        <CashReceipt Text="Kviitung">
+          <PrinterNotFound Text="Teenindusprinter pole valitud või on keelatud. Kontrollige printeri seadeid ja proovige uuesti." />
+          <Address Text="Aadress" />
+          <VatNumber Text="Reg. nr." />
+          <Date Text="Date" />
+          <ReceiptNumber Text="Kviitungi number" />
+          <Customer Text="Klient" />
+          <Total Text="Kokku" />
+          <Tax Text="Maksud" />
+          <TotalAmount Text="KOKKU" />
+          <FiscalReceiptNumber Text="Maksekviitungi number" />
+          <Signature Text="Allkiri" />
+          <Stamp Text="P.S." />
+          <Authorization>
+            <Title Text="Sisestage kviitungi printimiseks parool" />
+          </Authorization>
+        </CashReceipt>
+        <Pdf Text="Salvesta PDF failina">
+          <Success Text="Dokument &quot;{0}&quot; salvestatud" />
+        </Pdf>
+        <Error Text="Viga dokumendi printimisel">
+          <NoService Text="Printimisteenus pole registreeritud" />
+        </Error>
+        <Refund Text="Tagasimakse" />
+        <Preview Text="Eelvaade" />
+      </Print>
+      <Delete Text="Kustuta">
+        <Confirmation>
+          <Title Text="Kustuta dokument" />
+          <Message Text="Kas soovite kindlasti &quot;{0}&quot; dokumendi kustutada?" />
+        </Confirmation>
+        <Error Text="Dokumendi kustutamisel ilmnes viga. Palun proovi uuesti" />
+        <Unauthorized Text="Teil pole dokumentide kustutamiseks õigusi." />
+      </Delete>
+      <List Text="Dokumendid">
+        <Document>
+          <Number Text="Number" />
+          <DocumentType Text="Dokumendi tüüp" />
+          <Warehouse Text="Ladu" />
+          <Customer Text="Klient">
+            <Refresh Text="Värskendage klientide loendit">
+              <Complete Text="Klientide loend on uuendatud" />
+            </Refresh>
+          </Customer>
+          <Vendor Text="Müüja">
+            <Refresh Text="Värskendage tarnijate loendit">
+              <Complete Text="Tarnijate loend on uuendatud" />
+            </Refresh>
+          </Vendor>
+          <ExternalDocument Text="Väline dokument" />
+          <Date Text="Kuupäev" />
+          <DueDate Text="Tähtaeg" />
+          <StockDate Text="Tehingu ajatempel" />
+          <DateCreated Text="Loodud" />
+          <DateUpdated Text="Muudetud" />
+          <CashRegister Text="KASSA" />
+          <OrderNumber Text="Tellimuse number" />
+          <Warehouse Text="Ladu" />
+          <User Text="Kasutaja" />
+          <PaymentType Text="Maksetüüp" />
+          <Discount Text="Allahindlus" />
+          <Paid Text="Makstud" />
+          <Unpaid Text="Maksmata" />
+          <Total Text="Kokku">
+            <Summary>
+              <Subtotal Text="Vahesumma:" />
+              <TotalBeforeTax Text="Netosumma:" />
+              <Tax Text="Maksud:" />
+              <Total Text="Kokku:" />
+              <Discount Text="Allahindlus:">
+                <DiscountApplyRule Text="Rakendage allahindlust enne või pärast maksu.\nSeda valikut kasutatakse kaupade ja ostukorvi allahindluste jaoks.">
+                  <BeforeTax Text="Rakendage allahindlust enne maksude arvestamist" />
+                  <AfterTax Text="Rakendage allahindlust pärast maksude arvestamist" />
+                </DiscountApplyRule>
+                <DiscountType Text="Valige allahindluse tüüp">
+                  <Percent Text="Allahindluse protsent" />
+                  <Fixed Text="Allahindluse summa" />
+                </DiscountType>
+              </Discount>
+            </Summary>
+          </Total>
+          <Payments Text="Maksed">
+            <Add Text="Lisage makse" />
+            <PaymentType Text="Makseviis" />
+            <Amount Text="Summa" />
+            <Date Text="Kuupäev" />
+            <NewPayment Text="Uus makse" />
+            <Delete Text="Kustuta makse">
+              <Confirmation Text="Kas soovite kindlasti makse &quot;{0}&quot; kustutada?" />
+            </Delete>
+            <Totals>
+              <PaymentsTotal Text="Maksed kokku:" />
+              <DocumentTotal Text="Dokumendi kogusumma:" />
+            </Totals>
+          </Payments>
+          <Items Text="Dokumendi üksused">
+            <Item>
+              <ProductCode Text="Kood" />
+              <Product Text="Nimetus" />
+              <MeasurementUnit Text="Mõõtühik" />
+              <Quantity Text="Kogus" />
+              <PriceNoTax Text="Netohind" />
+              <Price Text="Hind" />
+              <Tax Text="Maksud">
+                <Add Text="Lisa maksud">
+                  <Tooltip Text="Lisage maksud antud tootele" />
+                </Add>
+                <Remove>
+                  <Tooltip Text="Eemaldage maksud antud tootelt" />
+                </Remove>
+              </Tax>
+              <Discount Text="Allahindlus">
+                <DiscountType Text="Valige allahindluse tüüp">
+                  <Percent Text="Allahindluse protsent" />
+                  <Fixed Text="Allahindluse summa" />
+                </DiscountType>
+                <DiscountApplyRule>
+                  <BeforeTax Text="enne maksude arvestust" />
+                  <AfterTax Text="peale maksude arvestust" />
+                </DiscountApplyRule>
+              </Discount>
+              <TotalBeforeTax Text="Netosumma" />
+              <Total Text="Kokku" />
+              <TotalBeforeDiscount Text="Kokku enne allahindlust" />
+              <Error>
+                <Taxes Text="Leiti duplikaadid maksudest. Maksu tüüp (&quot;{0}&quot;).\nValige kehtivad maksud ja proovige uuesti." />
+              </Error>
+            </Item>
+            <Delete Text="Kustuta dokumendi üksus">
+              <Confirmation Text="Kas soovite kindlasti kustutada &quot;{0}&quot;?" />
+            </Delete>
+          </Items>
+          <Print>
+            <UnsavedChanges Text="Dokument sisaldab salvestamata muudatusi. Kas soovite muudatused enne printimist salvestada?">
+              <Title Text="Salvestamata muudatused" />
+            </UnsavedChanges>
+          </Print>
+        </Document>
+      </List>
+      <Count Text="Dokumente kokku:" />
+      <Total Text="Kogu summa:" />
+      <AllUsers Text="Kuva kõik kasutajad" />
+      <BulkActions Text="Hulgitoimingud">
+        <Delete Text="Kustutage valitud dokumendid">
+          <Confirmation>
+            <Title Text="Kustutage valitud dokumendid" />
+            <Message Text="Kas soovite kindlasti valitud dokumendid kustutada?" />
+          </Confirmation>
+          <Message Text="Dokumentide kustutamine... Palun oodake..." />
+        </Delete>
+        <UpdatePaidStatus>
+          <Message Text="Tasumiste info uuendamine... Palun oodake..." />
+        </UpdatePaidStatus>
+      </BulkActions>
+      <DocumentNumber Text="Dokumendi number">
+        <NotFound Text="Dokumenti &quot;{0}&quot; ei leitud" />
+      </DocumentNumber>
+    </Documents>
+    <Authorization>
+      <Title Text="Müügiajaloole juurdepääsu saamiseks sisestage parool" />
+    </Authorization>
+  </Invoices>
+  <Feedback Text="Tagasiside">
+    <Title Text="Aidake meil Aronium muuta paremaks" />
+    <Description Text="Täname, et leidsite aega ettepaneku esitamiseks.\nTeie tagasiside aitab meil rakendust Aronium paremaks muuta.">
+      <Contact Text="Võtke meiega igal ajal ühendust aadressil" />
+    </Description>
+    <Message>
+      <Name Text="Teie nimi" />
+      <Email Text="E-posti aadress" />
+      <Subject Text="Teema" />
+      <Message Text="Teade" />
+      <Rating Text="Üldine hinnang" />
+    </Message>
+    <Send Text="Saada tagasiside" />
+    <Confirmation>
+      <Title Text="Täname Teid!" />
+      <Message Text="Teie tagasiside on saadetud. Kasutame seda Aronium'i paremaks muutmiseks." />
+    </Confirmation>
+  </Feedback>
+  <Security>
+    <Key>
+      <Management Text="Haldus">
+        <Description Text="Juhtimise jaotisele juurdepääsu kontrollimine" />
+      </Management>
+      <Settings Text="Seaded">
+        <Description Text="Kontrollib juurdepääsu seadetele" />
+      </Settings>
+      <VoidOrder Text="Tühista tellimus">
+        <Description Text="Määrab, kas kasutajal on õigus tühistada kogu tellimus" />
+      </VoidOrder>
+      <VoidItem Text="Tühista toode tellimusel">
+        <Description Text="Määrab, kas kasutajal on õigus tühistada toode avatud tellimusel" />
+      </VoidItem>
+      <LockSale Text="Lukusta müük" />
+      <UnlockSale Text="Lukustamise tühistamine" />
+      <SplitOrder Text="Tellimuse jagamine">
+        <Description Text="Võimaldab kasutajal kogu tellimuse või selle osa teisele kasutajale või lauale (tellimusele) üle kanda" />
+      </SplitOrder>
+      <Discount Text="Allahindluse rakendamine" />
+      <DeleteDocument Text="Dokumendi kustutamine" />
+      <ClosingDay Text="Päeva lõpetamine">
+        <Description Text="Kontrollib juurdepääsu päeva lõpetamise sektsioonile" />
+      </ClosingDay>
+      <Refund Text="Tagasimakse">
+        <Description Text="Võimaldab kasutajal varem tehtud müügi eest raha tagasi maksta.\nSee loob uue &quot;Tagasimakse&quot; dokumendi ja paneb kogused automaatselt varudesse tagasi." />
+      </Refund>
+      <OpenOrders Text="Vaadake kõiki avatud tellimusi">
+        <Description Text="Määrab, kas kasutajal on lubatud näha kõiki avatud tellimusi.\nSee valik on saadaval, kui saaliplaanid/laua valikud on lubatud." />
+      </OpenOrders>
+      <SalesHistory Text="Vaadake müügiajalugu">
+        <Receipt Text="Kviitung uuesti printida">
+          <Description Text="Kontrollib, kas kasutajal on lubatud kviitung müügiajaloost printida." />
+        </Receipt>
+      </SalesHistory>
+      <StartingCash Text="Alustamise sularaha seis">
+        <Description Text="Kontrollib juurdepääsu sularaha jaotisele" />
+      </StartingCash>
+      <UserProfile Text="Kasutajaprofiil" />
+    </Key>
+  </Security>
+  <Guide>
+    <Menu>
+      <Title Text="Ava peamenüü" />
+      <Content Text="Peamenüü ja juurdepääsu haldamise jaotise avamiseks klõpsake siin" />
+    </Menu>
+    <Layout>
+      <SearchBox Text="Otsige tooteid nime, vöötkoodi või koodi järgi.">
+        <Title Text="Tooteotsing" />
+      </SearchBox>
+    </Layout>
+    <Dismiss>
+      <Title Text="Loobuge tutvustuse näitamisest" />
+      <Confirmation Text="Kas soovite kindlasti need näpunäited peita?" />
+    </Dismiss>
+  </Guide>
+  <Layout>
+    <Visual>
+      <Item>
+        <Edit Text="Muuda visuaalset välimust">
+          <Color Text="Värvus" />
+          <Image Text="Pilt">
+            <Select Text="Valige pilt" />
+            <Clear Text="Eemaldage pilt" />
+          </Image>
+        </Edit>
+      </Item>
+    </Visual>
+  </Layout>
+  <OpenOrders Text="Vaadake avatud müüki">
+    <Total Text="KOGU SUMMA" />
+    <NoOrders Text="Avatud müügid puuduvad" />
+    <Authorization>
+      <Title Text="Avatud müügi kuvamiseks sisestage parool" />
+    </Authorization>
+  </OpenOrders>
+  <StartingCash Text="Sularaha Sisse / Välja">
+    <Type>
+      <CashIn Text="Sularaha sissemakse" />
+      <CashOut Text="Sularaha väljamakse" />
+    </Type>
+    <Amount Text="Summa">
+      <Reason Text="Selgitus">
+        <Tooltip Text="Sisestage sisse- või väljamakse selgitus..." />
+      </Reason>
+    </Amount>
+    <Hide Text="Ära näita seda rohkem" />
+    <Entries Text="Sularaha liikumised">
+      <NoDescription Text="&lt;Kirjeldus puudub&gt;" />
+      <NoEntries Text="Kanded puuduvad" />
+    </Entries>
+    <Saved Text="Alustamise sularaha summa salvestatud" />
+  </StartingCash>
+  <Account>
+    <FirstName Text="Eesnimi" />
+    <LastName Text="Perenimi" />
+    <LastName Text="Perenimi" />
+    <Email Text="E-post" />
+    <Password Text="Parool">
+      <Confirmation Text="Parooli kinnitamine">
+        <Error Text="Parool ja parooli kinnitus peavad kattuma" />
+      </Confirmation>
+    </Password>
+    <License>
+      <Info Text="Teave litsentsi kohta">
+        <Data Text="Litsentsi andmed">
+          <LicensedTo Text="Litsentsitud kasutajale" />
+          <Email Text="E-post" />
+          <StoreId Text="Kaupmehe tunnus" />
+          <Id Text="Litsentsi tunnus" />
+        </Data>
+        <Products Text="Tooted">
+          <Id Text="Tunnus" />
+          <Name Text="Nimetus" />
+          <ValidUntil Text="Kehtiv kuni" />
+          <LicenseType Text="Litsentsi tüüp" />
+        </Products>
+        <NoLicense Text="Selle süsteemiga pole seotud litsentsi">
+          <Info Text="Lisafunktsioonide kohta lisateabe saamiseks külastage veebisaiti www.aronium.com" />
+        </NoLicense>
+        <Refresh Text="Värskendage litsentsi">
+          <Success Text="Litsentsi allalaadimine õnnestus." />
+        </Refresh>
+        <Copy Text="Kopeeri litsents faili" />
+        <Load Text="Lae litsents failist" />
+        <UnlicensedProducts Text="Litsentseerimata moodulid" />
+      </Info>
+      <Login Text="Logige sisse oma kontole">
+        <NotRegistered Text="Pole veel registreerunud?">
+          <SignUp Text="Registreeru nüüd!" />
+        </NotRegistered>
+        <SignIn Text="Logige sisse" />
+      </Login>
+      <Register Text="Registreerige uus konto">
+        <AlreadyRegistered Text="Juba registreeritud?">
+          <SignIn Text="Logige kohe sisse!" />
+        </AlreadyRegistered>
+        <CreateAccount Text="Loo konto" />
+        <Store Text="Looge oma pood">
+          <Details Text="Võtame teie poe seadistamiseks minuti.\nTeie ettevõtte andmeid värskendatakse ja litsents luuakse automaatselt.">
+            <CompanyName Text="Ettevõtte nimi" />
+            <Address Text="Aadress" />
+            <ZipCode Text="Postiindeks" />
+            <TaxNumber Text="Reg. kood" />
+            <City Text="Linn" />
+            <Country Text="Riik" />
+          </Details>
+          <Create Text="Loo pood ja genereeri litsents" />
+        </Store>
+        <Success Text="Konto on edukalt loodud" />
+      </Register>
+      <Load Text="Lae litsents failist">
+        <Successful Text="Litsentsi laadimine õnnestus" />
+        <Error Text="Viga litsentsi laadimisel">
+          <Unknown Text="Teie litsentsi laadimisel ilmnes tundmatu viga. Palun proovi hiljem uuesti.&#xA;Süsteemisõnum: {0}" />
+        </Error>
+      </Load>
+      <InvalidLicense Text="Kehtetu või puuduv litsents">
+        <Info Text="Ühel või mitmel tootel puudub kehtiv litsents. Litsentsi uuendamiseks või olemasoleva litsentsi failist laadimiseks logige sisse oma kontole.">
+          <SignInOrLoadFromFile Text="Litsentsi allalaadimiseks või olemasoleva litsentsi failist laadimiseks logige sisse oma kontole." />
+          <FollowInstructions Text="Jätkamiseks järgige allolevaid juhiseid." />
+        </Info>
+        <Hide Text="Ärge näidake seda uuesti nende moodulite puhul" />
+      </InvalidLicense>
+      <SelectStore Text="Valige kauplus">
+        <Info Text="Valige allolevast loendist kauplus, mille litsentsi soovite laadida.">
+          <Register Text="Kui olete kaupluse valinud, palutakse teil registreerida kõik selle kaupluse litsentsi alusel litsentsimata tooted." />
+        </Info>
+        <NoStores Text="Kauplusi ei leitud">
+          <Info Text="Paistab, et kontoga &quot;{0}&quot; pole seotud ühtegi kauplust. Litsentsi aktiveerimiseks peab teil olema sellega seotud kauplus." />
+          <Reload Text="Looge esmalt kauplus ja seejärel klõpsake jätkamiseks alloleval nupul &quot;Uuenda”." />
+          <Add Text="Oma esimese kaupluse loomiseks avage My Aronium" />
+        </NoStores>
+        <Successfull Text="Olete edukalt sisse loginud">
+          <Info Text="Kui valitud kaupluse litsents on olemas, laaditakse see automaatselt alla" />
+        </Successfull>
+      </SelectStore>
+      <StartTrial Text="Alustage prooviversiooni">
+        <Info Text="Kõigi litsentsimata toodete prooviperioodi alustamiseks, valige allolev valik" />
+        <SelectedStore Text="Valige kauplus">
+          <Change Text="Kasutage teist kauplust" />
+        </SelectedStore>
+        <Now Text="Alustage kohe prooviversiooni" />
+      </StartTrial>
+      <ActivationKey Text="Aktiveerimise võti">
+        <Invalid Text="Teie aktiveerimisvõti ei ühti litsentsifailis olevaga. Kasutage selle installi jaoks kehtivat litsentsi." />
+      </ActivationKey>
+    </License>
+    <Error>
+      <ExistingAccount Text="Määratud e-posti aadressiga kasutaja on juba olemas." />
+      <Unauthorized Text="Vale kasutajanimi või parool. Kontrollige oma sisestust ja proovige uuesti." />
+    </Error>
+    <Switch Text="Logige sisse teise kontoga" />
+    <SignOut Text="Logige välja">
+      <Successful Text="Logisite edukalt välja" />
+    </SignOut>
+  </Account>
+  <Validations>
+    <Info Text="Lisateavet selle probleemi lahendamise kohta leiate aadressilt">
+      <Community Text="meie kogukond" />
+      <Or Text="or" />
+      <ContactSupport Text="võtke ühendust meie tugiteenusega" />
+    </Info>
+    <Cancel Text="Sulge rakendus" />
+    <Confirm Text="Saan aru, jätkake rakenduse käivitamisega" />
+    <Print>
+      <Warning>
+        <CustomTemplates Text="Tuvastasime, et kasutate kohandatud kviitungi- või arvemalle. Selle rakenduse versiooni andmebaasistruktuuri muudatuste tõttu ei pruugi need mallid enam töötada.\nSaate kasutada vaikemalle, nii et teie igapäevaseid toiminguid ei blokeerita.\n\nKui soovite endiselt kasutada vanu malle, peate rakenduse käivitamise kohe peatama ja pöörduma tagasi vana versiooni juurde.">
+          <Title Text="HOIATUS! KOHANDATUD PRINTIMISE MALLID EI PRUUGI TÖÖTADA!" />
+        </CustomTemplates>
+      </Warning>
+    </Print>
+    <Refund>
+      <Invalid Text="Tagasimakse ei kehti" />
+    </Refund>
+    <MaxLength>
+      <Error Text="Väli on lubatust pikem">
+        <Message Text="Välja &quot;{0}&quot; väärtus on liiga pikk. Maksimaalne lubatud pikkus on {1} tähemärki." />
+      </Error>
+    </MaxLength>
+    <InvalidValue>
+      <TryAgain Text="Sisestage kehtiv(ad) väärtus(ed) ja proovige uuesti." />
+    </InvalidValue>
+  </Validations>
+  <Print>
+    <Error Text="Ilmnes printimisviga">
+      <CustomTemplate Text="Tuvastati kohandatud malli viga!\nKohandatud printimismalliga seotud võimalike probleemide lahendamiseks võtke ühendust Aronium tugiteenusega.">
+        <Continue Text="Kas soovite printimist jätkata vaikemalli abil?" />
+      </CustomTemplate>
+    </Error>
+  </Print>
+</Language>

@@ -1,0 +1,9 @@
+CREATE TABLE StartingCash (
+  Id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE, 
+  UserId INTEGER REFERENCES User (Id) NOT NULL, 
+  Amount NUMERIC NOT NULL, 
+  Description TEXT, 
+  StartingCashType INTEGER NOT NULL DEFAULT (0), 
+  ZReportNumber INTEGER, 
+  DateCreated DATETIME NOT NULL
+);

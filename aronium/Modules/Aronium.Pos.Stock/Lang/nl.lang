@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <Stock Text="Voorraad">
+    <Items>
+      <Item>
+        <Product>
+          <Id Text="Id" />
+          <Code Text="Code" />
+          <Name Text="Naam" />
+          <MeasurementUnit Text="Maateenheid" />
+        </Product>
+        <Quantity Text="Aantal stuks" />
+        <NegativeQuantity Text="Negatieve voorraadhoeveelheid" />
+        <TotalCostBeforeTax Text="Kosten" />
+        <TotalCost Text="Kosten incl. BTW" />
+        <TotalBeforeTax Text="Waarde" />
+        <TotalAfterTax Text="Waarde incl. belasting" />
+      </Item>
+      <Filter>
+        <NegativeQuantity Text="Negatieve hoeveelheid">
+          <Info Text="Laat alleen producten zien met een negatieve hoeveelheid" />
+        </NegativeQuantity>
+        <NonZeroQuantity Text="Geen nulhoeveelheid">
+          <Info Text="Toon alleen producten met niet-nulhoeveelheden" />
+        </NonZeroQuantity>
+        <ZeroQuantity Text="Geen hoeveelheid">
+          <Info Text="Toon producten met alleen nul aantal" />
+        </ZeroQuantity>
+      </Filter>
+      <Summary>
+        <NegativeCount Text="Totaal artikelen met negatieve hoeveelheid op voorraad" />
+        <ZeroCount Text="Totaal aantal artikelen zonder voorraad in stock" />
+        <PositiveCount Text="Totaal artikelen met positieve hoeveelheid op voorraad" />
+        <TotalBeforeTax Text="Totaal:" />
+        <TotalIncludingTax Text="Totaal inc. BTW:" />
+        <SellPrice Text="Verkoopprijs" />
+        <CostPrice Text="Kostprijs">
+          <TotalCostBeforeTax Text="Totale prijs:" />
+          <TotalCostAfterTax Text="Totale kosten inc. BTW:" />
+        </CostPrice>
+      </Summary>
+    </Items>
+    <Reset Text="Herbereken de voorraadhoeveelheden">
+      <Completed Text="Stockberekening succesvol afgerond." />
+    </Reset>
+    <History Text="Voorraad geschiedenis">
+      <Start Text="Start" />
+      <End Text="Einde" />
+      <Document Text="Document">
+        <DocumentType Text="Document type" />
+        <Customer Text="Klant" />
+        <Date Text="Datum" />
+        <StockDate Text="Voorraad datum" />
+      </Document>
+      <ChangeQuantity Text="Hoeveelheid" />
+      <InStock Text="In voorraad" />
+      <MeasurementUnit Text="Maateenheid" />
+    </History>
+    <Print>
+      <Report Text="Voorraad telling rapport" />
+    </Print>
+    <ProductDetails>
+      <OnHand Text="Hoeveelheid op voorraad" />
+    </ProductDetails>
+    <Control>
+      <Settings>
+        <PreventNegativeQuantities Text="Voorkom negatieve voorraad" />
+      </Settings>
+      <NegativeQuantity Text="Geen verkoop van voorraadhoeveelheden">
+        <Confirmation Text="U hebt niet voldoende hoeveelheid bij de hand om dit artikel te verkopen. De verkoop van dit artikel kan resulteren in een negatieve voorraadhoeveelheid.\n\nAantal bij de hand: {0}\nBenodigde hoeveelheid: {1}\n\nWeet je zeker dat je dit item aan de huidige verkoop wilt toevoegen?" />
+        <Title Text="Voorraadhoeveelheid ontbreekt" />
+        <PermissionDenied Text="U hebt onvoldoende rechten om items met nulhoeveelheden te verkopen. Raadpleeg de beheerder." />
+        <Authorization>
+          <Title Text="Voorraadbeheer is ingeschakeld.\nGeef alsjeblieft een wachtwoord op voor het verkopen van een nulvoorraadartikel om door te gaan" />
+        </Authorization>
+        <AllowMultiple>
+          <NotAllowed Text="Herhalingsronde is niet toegestaan als voorraadbeheer is ingeschakeld." />
+        </AllowMultiple>
+      </NegativeQuantity>
+    </Control>
+    <QuickInventory Text="Snelle inventaris">
+      <Description Text="Verander de voorraadhoeveelheden voor het geselecteerde artikel" />
+      <Title Text="Voorraadhoeveelheid bijwerken" />
+      <Subtitle Text="Stel de voorraadhoeveelheden in voor het geselecteerde product.\nVoorraadtellingsdocument wordt automatisch aangemaakt." />
+      <Success Text="Voorraadhoeveelheid succesvol gewijzigd.\nDocument {0} gemaakt." />
+    </QuickInventory>
+    <LearnMore Text="Meer informatie over voorraad en inventaris" />
+  </Stock>
+</Language>

@@ -1,0 +1,2 @@
+ALTER TABLE PosPrinterSettings ADD COLUMN PrinterType INT(1) NOT NULL DEFAULT 0;
+ALTER TABLE PosPrinterSettings ADD COLUMN NumberOfCopies INT(1) NOT NULL DEFAULT 1;

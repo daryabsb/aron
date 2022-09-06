@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Loyalty Text="Lojaalsusprogramm">
+    <Promotions Text="Pakkumised ja kampaaniad">
+      <New Text="Lisage pakkumine">
+        <Title Text="Uus pakkumine" />
+      </New>
+      <Edit>
+        <Title Text="Muuda pakkumist &quot;{0}&quot;" />
+      </Edit>
+      <Delete Text="Kustuta pakkumine">
+        <Confirmation Text="Kas soovite kindlasti pakkumise &quot;{0}&quot; kustutada?" />
+        <Error Text="Pakkumise kustutamisel ilmnes viga." />
+      </Delete>
+      <View>
+        <Enabled Text="Lubatud" />
+        <Name Text="Nimetus" />
+        <DaysOfWeek Text="Nädalapäev" />
+        <StartDate Text="Alguse kuupäev" />
+        <StartTime Text="Alguse kellaaeg" />
+        <EndDate Text="Lõppkuupäev" />
+        <EndTime Text="Lõpu kellaaeg" />
+      </View>
+      <Promotion>
+        <Empty Text="Ühtegi toodet pole pakkumises." />
+        <Name Text="Pakkumise nimetus" />
+        <Active Text="Aktiivne" />
+        <DaysOfWeek>
+          <All Text="Kõik päevad">
+            <ShortName Text="Kõik" />
+          </All>
+          <Monday Text="Esmaspäev">
+            <ShortName Text="E" />
+          </Monday>
+          <Tuesday Text="Teisipäev">
+            <ShortName Text="T" />
+          </Tuesday>
+          <Wednesday Text="Kolmapäev">
+            <ShortName Text="K" />
+          </Wednesday>
+          <Thursday Text="Neljapäev">
+            <ShortName Text="N" />
+          </Thursday>
+          <Friday Text="Reede">
+            <ShortName Text="R" />
+          </Friday>
+          <Saturday Text="Laupäv">
+            <ShortName Text="L" />
+          </Saturday>
+          <Sunday Text="Pühapäev">
+            <ShortName Text="P" />
+          </Sunday>
+        </DaysOfWeek>
+        <Duration>
+          <Start Text="Algus" />
+          <End Text="Lõpp" />
+        </Duration>
+        <Item>
+          <PriceType>
+            <Discount Text="Allahindlus" />
+            <FixedPrice Text="Püsihind" />
+          </PriceType>
+          <Condition Text="Tingimuslik">
+            <Title Text="Koguse tingimus" />
+            <ApplyToAll Text="Rakenda kõigile" />
+            <Quantity>
+              <Description Text="Sisestage selle kampaania jaoks vajalik kogus" />
+            </Quantity>
+            <LimitToNext Text="Rakenda järgmisele">
+              <Description Text="Sisestage koguselimiit, mida saab rakendada, kui selle kampaania nõutav kogus on saavutatud" />
+            </LimitToNext>
+            <CopyToAll Text="Kopeeri tingimus kõigile toodetele">
+              <Completed Text="Tingimuste väärtused on kõigile kampaaniatoodetele kopeeritud" />
+            </CopyToAll>
+          </Condition>
+          <InvalidValue Text="Vale väärtus" />
+          <Errors>
+            <Existing Text="Toode &quot;{0}” on selles pakkumises juba olemas." />
+          </Errors>
+        </Item>
+        <Saved Text="Pakkumine edukalt salvestatud." />
+        <InvalidItems Text="Pakkumist ei saa salvestada. Mõnes tootes on viga. Kontrollige oma andmeid ja proovige uuesti." />
+      </Promotion>
+      <NoPromotions Text="Pakkumisi ei ole">
+        <Add Text="Koosta uus pakkumine" />
+      </NoPromotions>
+      <LearnMore Text="Lisateave kampaaniate ja pakkumiste kohta" />
+    </Promotions>
+  </Loyalty>
+</Language>

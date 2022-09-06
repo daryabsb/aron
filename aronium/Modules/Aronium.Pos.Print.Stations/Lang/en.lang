@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <Print>
+    <Stations Text="Print stations">
+      <New Text="Add station" />
+      <Edit Text="Edit station" />
+      <NoItems Text="No print stations">
+        <Add Text="Add print station" />
+      </NoItems>
+      <PrintStation>
+        <Id Text="ID" />
+        <Name Text="Name" />
+      </PrintStation>
+      <Delete>
+        <Title Text="Delete print station" />
+        <Confirmation Text="Are you sure you wish to delete &quot;{0}&quot;?" />
+      </Delete>
+      <Saved>
+        <Created Text="Print station created successfully" />
+        <Updated Text="Print station updated successfully" />
+      </Saved>
+      <Product>
+        <Info Text="You can add print stations here. Products and groups that have print station assigned will print on dedicated print station printer." />
+        <Add Text="Assign print station">
+          <Tooltip Text="Assing another print station" />
+        </Add>
+        <Remove>
+          <Tooltip Text="Remove print station" />
+        </Remove>
+        <NoItems>
+          <Info Text="No print stations found.\nYou need to create print stations before you can assign them to a product or group." />
+        </NoItems>
+        <Error>
+          <Duplicates Text="Duplicate print stations detected" />
+        </Error>
+      </Product>
+      <Settings Text="Print stations">
+        <Info Text="Use options below to configure printers for print stations." />
+        <PrintStation Text="Print station" />
+        <Printer Text="Printer" />
+        <AddConfiguration Text="Add print configuration" />
+        <RemoveConfiguration Text="Remove print configuration" />
+      </Settings>
+      <License>
+        <Expiring Text="License for &quot;Print stations&quot; module will expire in {0} day(s).\n\nPlease purchase a license to ensure continued access after {1}">
+          <Title Text="License will expire soon"/>
+        </Expiring>
+        <GracePeriod Text="License for &quot;Print stations&quot; module expired and it will stop working after {0}\nPlease purchase a license to ensure continued access.">
+          <LicenseAlreadyPurchased Text="If you have already purchased a license, you can ignore this message until we receive the payment and your license is updated." />
+          <Hide Text="Hide this message for 30 days" />
+        </GracePeriod>
+        <Expired Text="License for &quot;Print stations&quot; expired and the module will be disabled until a license is purchased.">
+          <Title Text="License expired!"/>
+          <Renew Text="Please renew your license at"/>
+          <Hide Text="Don&apos;t show this message again"/>
+        </Expired>
+        <Error>
+          <Notification Text="Please purchase a license to enable print stations functionality.">
+            <Expired Text="License expired." />
+            <Missing Text="License missing." />
+          </Notification>
+        </Error>
+      </License>
+    </Stations>
+  </Print>
+</Language>

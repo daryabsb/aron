@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Logo Text="Moje logo">
+    <Add Text="Přidat logo" />
+    <Remove Text="Odstranit logo" />
+    <Empty Text="Nebylo vybráno žádné logo. Klikněte na tlačítko &quot;Přidat logo&quot; a vyberte své logo." />
+    <License>
+      <Expiring Text="Licence pro modul „Moje logo“ vyprší za {0} dnů.&#xA;&#xA;Zakupte si prosím licenci, abyste zajistili, že se vaše logo zobrazí po {1}">
+        <Title Text="Licence brzy vyprší" />
+      </Expiring>
+    </License>
+  </Logo>
+</Language>

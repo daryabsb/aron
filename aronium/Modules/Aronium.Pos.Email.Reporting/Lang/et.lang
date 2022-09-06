@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <Settings>
+    <Email>
+      <Disabled Text="E-posti saatmiseks on vaja e-posti konfiguratsiooni. Veenduge, et teie e-posti seaded on õigesti konfigureeritud." />
+      <Reporting Text="Aruandlus">
+        <Recepient Text="Saaja(d)">
+          <Info Text="Eraldage mitu e-posti aadressi komadega" />
+        </Recepient>
+        <Subject Text="Teema" />
+        <Message Text="Teade" />
+        <XReport Text="X aruanne" />
+        <ZReport Text="Z aruanne (päeva lõpetamine)" />
+        <Reports Text="Aruandlus">
+          <Report1 Text="Aruanne #1" />
+          <Report2 Text="Aruanne #2" />
+          <Format Text="Formaat">
+            <Pdf Text="PDF" />
+            <Excel Text="Excel" />
+          </Format>
+          <Selection Text="Aruande valik">
+            <Add Text="Lisa aruanne" />
+            <Remove Text="Eemalda aruanne" />
+          </Selection>
+        </Reports>
+        <Scheduled Text="Ajastatud aruanded">
+          <SendPeriodically Text="Saada e-kiri perioodiliselt" />
+          <Interval Text="Saatmise intervall">
+            <Minutes Text="minutit" />
+          </Interval>
+          <BusinessHours Text="Tööaeg" />
+          <SendEmpty Text="Saada, kui aruanne on tühi">
+            <Info Text="Saada aruanne ka siis, kui müüki pole toimunud" />
+          </SendEmpty>
+        </Scheduled>
+        <Test Text="Saada test e-kiri">
+          <Info Text="Konfiguratsioon tuleb salvestada enne test e-kirja saatmist" />
+          <Incomplete Text="E-posti aadress pole seadistatud. Kontrollige seadistusi ja proovige uuesti." />
+          <Error Text="Viga test e-kirja saatmisel. Kontrollige seadistusi ja proovige uuesti.&#xA;Süsteemisõnum: {0}" />
+        </Test>
+      </Reporting>
+    </Email>
+  </Settings>
+  <Email>
+    <Reporting>
+      <Message>
+        <Body>
+          <Total Text="Teie müük summas {0}: {1}" />
+          <NumberOfSales Text="Müügitehingute arv: {0}" />
+          <PaymentTypes Text="Maksetüübid:" />
+          <Users Text="Kasutajad:" />
+          <NumberOfRefunds Text="Tagasimaksete arv: {0}" />
+          <RefundsTotal Text="Tagasimaksete summa: {0}" />
+        </Body>
+        <ReportType>
+          <XReport Text="Müügiaruanded" />
+          <ZReport Text="Päeva lõpetamise aruanne" />
+        </ReportType>
+      </Message>
+      <License>
+        <Expiring Text="&quot;E-posti aruandluse&quot; mooduli litsents aegub {0} päeva pärast.&#xA;&#xA;Ostke litsents, et tagada jätkuv juurdepääs pärast {1}">
+          <Title Text="Litsents aegub peagi" />
+        </Expiring>
+        <GracePeriod Text="Mooduli &quot;E-posti aruandlus&quot; litsents aegus ja see lakkab töötamast peale {0}&#xA;Jätkuva juurdepääsu tagamiseks ostke litsents.">
+          <LicenseAlreadyPurchased Text="Kui olete litsentsi juba ostnud, võite seda teadet eirata, kuni oleme makse laekumise kontrollinud ja teie litsentsi värskendatakse." />
+          <Hide Text="Peida see sõnum 30 päevaks" />
+        </GracePeriod>
+        <Expired Text="&quot;E-posti aruandluse&quot; litsents aegus ja moodul on keelatud kuni litsentsi ostmiseni.">
+          <Title Text="Litsents aegunud!" />
+          <Renew Text="Palun uuendage oma litsentsi aadressil" />
+          <Hide Text="Ära seda sõnumit enam näita" />
+        </Expired>
+        <Error>
+          <Notification Text="Ostke meiliaruandluse funktsiooni lubamiseks litsents.">
+            <Expired Text="Litsents aegunud." />
+            <Missing Text="Litsents puudub." />
+          </Notification>
+        </Error>
+      </License>
+      <SendingInProgress Text="Raportite saatmine... Palun oota..." />
+    </Reporting>
+  </Email>
+</Language>

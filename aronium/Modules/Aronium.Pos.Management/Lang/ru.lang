@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ru" name="Russian">
+  <Management Text="Администрирование">
+    <NoItems Text="Нет доступных функций администрирования для пользователя {0}.\nВойдите через пользователя, у которого есть доступ хотя бы к одному модулю администрирования." />
+    <Dashboard Text="Сводка">
+      <NoData Text="нет данных для отображения" />
+      <MonthlySales Text="Продажи по месяцам">
+        <Description Text="Данные о продажах, сгруппированные по месяцам" />
+        <Month Text="Месяц" />
+        <Legend Text="Легенда" />
+        <CurrentYear Text="Текущий год" />
+        <TotalSales Text="Сумма продаж">
+          <TopMonth Text="Самый прибыльный месяц:" />
+        </TotalSales>
+        <Year Text="Год">
+          <Previous Text="Предыдущий год" />
+          <Next Text="Следующий год" />
+        </Year>
+      </MonthlySales>
+      <HourlySales Text="Продажи по часам">
+        <Description Text="Данныео продажах сгруппированы по часам" />
+        <Hour Text="Час" />
+        <Options>
+          <Amount Text="Деньги" />
+          <Count Text="Количество" />
+        </Options>
+      </HourlySales>
+      <TopProducts Text="Топ товаров">
+        <Product Text="Товары" />
+        <Total Text="Итог" />
+      </TopProducts>
+      <TopProductGroups Text="Топ групп товаров">
+        <Description Text="Топ продаваемых групп товаров в выбранный период" />
+        <Group Text="Группы товаров" />
+      </TopProductGroups>
+      <TopCustomers Text="Топ Клиентов">
+        <Description Text="Ведущие клиенты в выбранный период (топ-5)" />
+      </TopCustomers>
+      <PeriodicReports Text="Отчеты по вериодам">
+        <SelectPeriod Text="Выберите период для отчета" />
+      </PeriodicReports>
+    </Dashboard>
+    <Products Text="Товары">
+      <Loading Text="Загрузка товаров..." />
+      <LearnMore Text="Узнать больше о товарах" />
+      <Taxes Text="Налоговые ставки">
+        <LearnMore Text="Узнать больше о налоговых ставках" />
+        <New Text="Новая налоговая ставка" />
+        <Switch Text="Изменить налог">
+          <OldTax Text="Старая ставка" />
+          <NewTax Text="Новая ставка" />
+          <Tooltip Text="Изменить налог для всех товаров" />
+          <Info Text="Используйте эту форму для замены налогов для всех продуктов.\n\nВыберите старый налог, который вы хотите заменить новым налогом, и нажмите кнопку «Заменить» ниже." />
+          <Replace Text="Переместить" />
+          <Error Text="Произошла ошибка во время замены налога.\nОшибка: {0}" />
+          <Success Text="Налоги успешно перемещены!" />
+        </Switch>
+        <Edit>
+          <Title Text="Редактировать налог &quot;{0}&quot;" />
+        </Edit>
+        <Delete>
+          <Title Text="Удалить налоговую ставку" />
+          <Confirmation Text="Вы уверены, что хотите удалить налоговую ставку &quot;{0}&quot;?" />
+          <Error Text="Произошла ошибка во время удаления налоговой ставка.\nУбедитесь, что ставка нигде не используется и повторите попытку." />
+        </Delete>
+        <Tax>
+          <ReadOnly Text="Выбранная налоговая ставка существует в документах и не может быть изменена" />
+          <Code Text="Код" />
+          <Name Text="Название" />
+          <Rate Text="Ставка" />
+          <Fixed Text="Денежная" />
+          <TaxOnTotal Text="Налог в сумме" />
+          <Enabled Text="Активен" />
+        </Tax>
+        <Onboarding>
+          <Title Text="Налоговые ставки" />
+          <Info Text="Введите налоговые ставки, используемые для товаров, если таковые имеются.\nВ системе должна быть хотя бы одна налоговая ставка." />
+          <AddMore Text="Сохранить и добавить">
+            <Error Text="Произошла ошибка при добавлении налоговой ставка. Проверьте данные и попытайтесь еще раз" />
+            <Name Text="Название (например, «Нет налога»)" />
+          </AddMore>
+          <Existing Text="Существующие налоговые ставки">
+            <NoItems Text="Налоговые ставки не определены. Добавьте, по крайней мере, одну налоговую ставку, чтобы иметь возможность добавлять новые продукты.">
+              <AddDefault Text="Добавить стандартную ставку." />
+            </NoItems>
+          </Existing>
+        </Onboarding>
+        <NoTaxes Text="Нет налога">
+          <Add Text="Добавить новый налог" />
+        </NoTaxes>
+      </Taxes>
+      <New Text="Новый товар">
+        <Product Text="Добавить новый товар" />
+        <Or Text="или" />
+        <Group Text="новую группу товаров" />
+      </New>
+      <Delete Text="Удалить товар" />
+      <Edit Text="Редактировать товар" />
+      <Search Text="Поиск товаров">
+        <Result Text="Результат" />
+        <Empty Text="Нет результата" />
+      </Search>
+      <Groups Text="Группы товаров">
+        <Root Text="Товары" />
+        <Empty Text="Выбранная группа не содержит в себе товаров">
+          <Info Text="Добавить товары в выбранную группу" />
+        </Empty>
+      </Groups>
+      <Group>
+        <New Text="Новая группа" />
+        <Edit Text="Редактировать группу">
+          <Title Text="редактировать группу &quot;{0}&quot;" />
+          <Error>
+            <InvalidParentGroup Text="Неверная родительская группа" />
+          </Error>
+        </Edit>
+        <Name Text="Название" />
+        <Color Text="Цвет" />
+        <Delete Text="Удалить группу">
+          <Title Text="Удалить группу товаров" />
+          <Confirmation Text="Вы уверены, что хотите удалить группу товаров &quot;{0}&quot;?" />
+          <Error Text="Произошла ошибка во время удалении группы.\nОшибка: {0}">
+            <DataViolation Text="Выбранная группа не может быть удалена.\n\nУбедитесь, что дочерний продукт не существует в документах, акциях или продажах и повторите попытку." />
+          </Error>
+        </Delete>
+        <Saved Text="Группа успешно сохранена" />
+        <Image Text="Изображение">
+          <Browse Text="Обзор">
+            <Info Text="Выберите изображение группы с данного ПК" />
+          </Browse>
+          <Clear Text="Очистить">
+            <Info Text="Убрать изображение группы" />
+          </Clear>
+        </Image>
+      </Group>
+      <Product>
+        <Edit Text="Редактировать товар &quot;{0}&quot;" />
+        <Details Text="Информация о товаре" />
+        <Name Text="Название" />
+        <Code Text="Код" />
+        <Barcode Text="Штрих-код">
+          <Generate Text="Сгенерировать штрих-код" />
+        </Barcode>
+        <MeasurementUnit Text="Единица измерения" />
+        <Taxes Text="Налог">
+          <Add Text="Добавить налоговую ставку">
+            <Tooltip Text="Добавить налоговую ставку" />
+          </Add>
+          <Remove>
+            <Tooltip Text="Удалить налоговую ставку" />
+          </Remove>
+          <NoTaxes>
+            <Info Text="Налоги не обнаужены.\nДобавьте налоги и после примените их для товара" />
+          </NoTaxes>
+        </Taxes>
+        <SalePrice Text="Цена" />
+        <IsTaxIncluded Text="Цена с учетом налога" />
+        <Group Text="Группа" />
+        <IsEnabled Text="Активный" />
+        <IsService Text="Сервисный (бесконечный)" />
+        <IsDiscountAllowed Text="Разрешена скидка" />
+        <IsPriceChangeAllowed Text="Изменение цены" />
+        <IsUsingDefaultQuantity Text="Обычное кол-во" />
+        <Description Text="Описание" />
+        <Prices Text="Цена и налог" />
+        <Cost Text="Стоимость" />
+        <Markup Text="Наценка" />
+        <ImageAndColor Text="Изображение и цвет">
+          <Image Text="Изображение">
+            <Browse Text="Обзор">
+              <Info Text="Выберите изображение товара на компьютере" />
+            </Browse>
+            <Clear Text="Очистить">
+              <Info Text="Удалить изображение товара" />
+            </Clear>
+          </Image>
+          <Color Text="Цвет" />
+        </ImageAndColor>
+        <Comments Text="Комментарии">
+          <Info Text="Комментарии будут напечатаны на кухонный чек." />
+          <Note Text="Введить заметку..." />
+          <Add Text="Добавить заметку" />
+          <Error>
+            <ExistingComment Text="Заметка уже существует" />
+          </Error>
+        </Comments>
+        <DateCreated Text="Создано" />
+        <DateUpdated Text="Обновлено" />
+        <Saved>
+          <Created Text="Товар успешно создан" />
+          <Updated Text="Товар успешно изменен" />
+        </Saved>
+        <Delete Text="Удаление товара">
+          <Confirmation Text="Вы уверены, что хотите удалить товар &quot;{0}&quot;?" />
+          <Error Text="Произошла ошибка во время удаления товара.\nОшибка: {0}" />
+          <DataViolation Text="Невозможно удалить товар.\nУбедитесь, что он отсутствует в документах и попытайтесь снова." />
+        </Delete>
+        <Error>
+          <Code Text="Товар с данным кодом уже существует (&quot;{0}&quot;).\nВведите уникальный код товара и повторите попытку." />
+          <Barcode Text="Товар с данным штрих-кодом уже существует (&quot;{0}&quot;).\nВведите уникальный штрих-код товара и повторите попытку." />
+          <Taxes Text="Duplicate taxes found. Tax name (&quot;{0}&quot;).\nPlease select valid taxes and try again." />
+        </Error>
+        <SalePriceBeforeTax Text="Цена до налога" />
+      </Product>
+      <Export Text="Экспорт">
+        <NoServices Text="Нет доступных сервисов экспорта." />
+        <Success Text="Данные успешно экспортированы." />
+        <Error Text="Ошибка. Повторите попытку." />
+        <Select Text="Выберите тип экспорта" />
+      </Export>
+      <Onboarding>
+        <Import Text="Импорт товаров из CSV">
+          <SelectFile Text="Выберите файл">
+            <Description Text="Выберите CSV файл содержайщий ваши товары." />
+          </SelectFile>
+          <Validate Text="Проверить">
+            <Description Text="Проверить CSV на товары." />
+            <Error Text="Ошибка проверки CSV файла. Проверьте данные и попытайтесь снова." />
+            <Success Text="Товары готовы для импорта. Кол-во товаров: {0}" />
+          </Validate>
+          <ImportProducts Text="Импорт">
+            <Description Text="Нажмите для импорта товаров из выборанного CSV файла." />
+          </ImportProducts>
+          <NoItems Text="Отсутствуют товары для импорта" />
+          <Completed Text="Товары успешно импортированы!">
+            <Result>
+              <Created Text="Созданные товары:" />
+              <Updated Text="Обновленные товары:" />
+              <DocumentNumber Text="Созданные документы:" />
+            </Result>
+            <Restart Text="Перезапустить импорт" />
+          </Completed>
+          <Importing Text="Импорт товаров... Пожалуйста подождите..." />
+        </Import>
+      </Onboarding>
+      <Count Text="Количество товаров:" />
+      <ChangeGroup Text="Товар &quot;{0}&quot; перемещен в &quot;{1}&quot;" />
+      <Guide>
+        <Title Text="Открыть товары" />
+        <Content Text="Нажмите здесь, чтобы открыть раздел с товарами и добавьте немного товаров в ваш магазин" />
+        <Add>
+          <Title Text="Добавить товар" />
+          <Content Text="Нажмите &quot;Новый товар&quot; для добавления товаров" />
+          <Name>
+            <Title Text="Название товара" />
+            <Content Text="Введите название товара и информацию о нем" />
+          </Name>
+          <Prices>
+            <Title Text="Цена товара" />
+            <Content Text="Нажмите здесь для установки цены товара" />
+            <SalePrice>
+              <Title Text="Цена продажи" />
+              <Content Text="Установите цену продажи продукта, чтобы он отображался на экране продаж" />
+            </SalePrice>
+          </Prices>
+          <Save>
+            <Title Text="Сохранить изменения" />
+            <Content Text="Нажмите &quot;Сохранить&quot; для сохранения изменений и добавления товара" />
+          </Save>
+        </Add>
+      </Guide>
+      <Settings Text="Товары">
+        <Title Text="Настройки товаров" />
+        <PriceIncludesTax Text="Цена включает налог">
+          <Tooltip Text="Если выбрано, то у новых товаров налог будет включен в цену." />
+        </PriceIncludesTax>
+        <DefaultTax Text="Стандартная налоговая ставка">
+          <NoTaxes Text="Налоги не найдены. Добавьте налоговые ставки в разделе администрирования." />
+        </DefaultTax>
+        <MarkupOption Text="Расценка на основе цены">
+          <Tooltip Text="Если выбрано, изменение цены будет обновлять наценку вместо цены продажи" />
+        </MarkupOption>
+      </Settings>
+      <Import Text="Импорт">
+        <LearnMore Text="Узнать больше об импорте CSV" />
+        <Basic Text="Основное">
+          <Description Text="Вы можете использовать базовый импорт, следуя нашему руководству по созданию файла CSV в">
+            <Link Text="нашем центре поддержки" />
+            <Formatting Text="Если вы используете подготовленный файл CSV, убедитесь, что вы прочитали">
+              <Link Text="инструкцию по форматированию CSV файлов" />
+            </Formatting>
+            <Exported Text="Кроме того, этот базовый импорт можно использовать для импорта ранее экспортированных продуктов с использованием функции экспорта Aronium." />
+          </Description>
+        </Basic>
+        <Csv Text="Дополнительно">
+          <Description Text="Используйте расширенный импорт для загрузки продуктов, используя собственный CSV-файл или CSV, экспортированный из другого приложения.\nВы можете больше узнать о продвинутом импорте в">
+            <Link Text="нашем центре поддержки" />
+          </Description>
+          <SelectFile Text="Выбрать файл" />
+          <Fields>
+            <Name Text="Название" />
+            <ProductGroup Text="Группа товаров" />
+            <SKU Text="Код(SKU)" />
+            <Barcode Text="Штри-код" />
+            <MeasurementUnit Text="Единица измерения" />
+            <Cost Text="Стоимость" />
+            <Markup Text="Наценка" />
+            <Price Text="Цена" />
+            <Tax Text="Налог" />
+            <IsTaxInclusivePrice Text="Цена с учетом налогов" />
+            <IsPriceChangeAllowed Text="Изменение цены" />
+            <IsUsingDefaultQuantity Text="Обычное кол-во" />
+            <IsService Text="Сервисный (бесконечный)" />
+            <IsEnabled Text="Активный" />
+            <Description Text="Описание" />
+            <Quantity Text="Количество" />
+            <Clear Text="Очистить значение" />
+          </Fields>
+          <RequiredField Text="Указывает обязательные поля" />
+          <Import Text="Импорт" />
+          <Preview Text="Превью">
+            <ProductsCount Text="Кол-во импортируемых товаров:" />
+          </Preview>
+          <Error>
+            <RequiredFields Text="Обязательные поля пустые. Заполните обязательные поля перед импортом." />
+            <InvalidContent Text="Ошибка анализа CSV файла. Проверьте данные файла и повторите попытку.\nОшибка: {0}" />
+            <InvalidField Text="Неверная запись для поля «{0}». Пожалуйста, дважды проверьте содержимое файла и повторите попытку." />
+            <FileNotSelected Text="CSV файл не выбран. Выберите файл для продолжения." />
+            <DuplicateSKU Text="Найдены дупликаты товарных кодов. Название товара: &quot;{0}&quot;. Код: &quot;{1}&quot;" />
+            <DuplicateName Text="Найдены дупликаты названий. Название товара: &quot;{0}&quot;." />
+          </Error>
+          <Duplicates Text="Что делать при обнаружении дупликатов?">
+            <Skip Text="Пропустить дупликаты" />
+            <Merge Text="Заменить дупликаты" />
+          </Duplicates>
+        </Csv>
+        <Xml Text="XML">
+          <Description Text="Используйте импорт Xml для загрузки продуктов, экспортированных из другого экземпляра Aronium.\nИмпорт Xml сохранит все свойства, включая  изображения и иерархию продуктов." />
+          <SelectFile Text="Выберите файл" />
+          <Import Text="Импорт" />
+        </Xml>
+      </Import>
+      <PriceTags Text="Ценники">
+        <Loading Text="Загрузка шаблона ценников... Подождите..." />
+        <Layout Text="Раскладка">
+          <Columns Text="Колонки" />
+          <RowHeight Text="Высота строки" />
+        </Layout>
+        <Display Text="Отображение">
+          <Barcode Text="Штрих-код">
+            <Type Text="Тип штрих-кода" />
+          </Barcode>
+          <Code Text="Код (SKU)" />
+          <PriceIncludesTax Text="Цена с цчетом налога" />
+        </Display>
+        <Products Text="Товары">
+          <All Text="Все товары" />
+          <Product Text="Товар" />
+          <NumberOfCopies Text="Кол-во копий" />
+        </Products>
+      </PriceTags>
+    </Products>
+    <Customers Text="Клиенты и поставщики">
+      <Search Text="Поиск клиентов и поставщиков" />
+      <LearnMore Text="Узнать больше о клиентах и поставщиках" />
+      <New Text="Новый клиент / поставщик" />
+      <Delete Text="Удалить">
+        <Confirmation Text="Вы уверены, что хотите удалить &quot;{0}&quot;?" />
+        <Error Text="Ошибка удаления клиента. Клиент не может быть удален.\nОшибка: {0}" />
+      </Delete>
+      <Customer>
+        <Edit Text="Редактировать &quot;{0}&quot;" />
+        <General Text="Основное">
+          <Title Text="Основная информация" />
+          <Code Text="Код" />
+          <Name Text="Имя" />
+          <Address Text="Адрес" />
+          <PostalCode Text="Индекс" />
+          <City Text="Город" />
+          <Country Text="Страна" />
+          <TaxNumber Text="Налоговый номер" />
+          <RabatePercent Text="Скидка" />
+          <Email Text="E-mail" />
+          <PhoneNumber Text="Номер телефона" />
+          <IsEnabled Text="Действующий" />
+          <IsCustomer Text="Клиент" />
+          <IsSupplier Text="Поставщик" />
+        </General>
+        <Loyalty>
+          <Discounts Text="Скидки">
+            <Title Text="Установить персональные скидки для товаров или группы товаров" />
+            <Info Text="Установить скидку для выбранного товара" />
+            <NoItems Text="Нет скидок" />
+            <Existing Text="Скидка для &quot;{0}&quot; уже существует." />
+            <Clear Text="очистить все скидки" />
+          </Discounts>
+          <Cards Text="Карты лояльности">
+            <Title Text="Ввести карту лояльности клиента" />
+            <CardNumber Text="Номер карты" />
+            <Add Text="Добавить карту" />
+            <Duplicate Text="Карта лояльности уже существует" />
+          </Cards>
+        </Loyalty>
+        <Saved>
+          <Created Text="Новый клиент успешно создан." />
+          <Updated Text="Клиент успешно изменен." />
+        </Saved>
+        <Existing Text="Существующий клиент">
+          <Warning Text="Аналогичный клиент уже существует: «{0}».\nПовторяющиеся поля: {1}.\n\nВы хотите сохранить клиента в любом случае?" />
+        </Existing>
+        <PaymentTerms Text="Условия оплаты">
+          <DueDatePeriod Text="Срок действия">
+            <Info Text="Используте сроки оплаты, чтобы установить кол-во дней, за которые клиент должен оплатить все не оплаченные заказы." />
+            <Days Text="дни" />
+          </DueDatePeriod>
+        </PaymentTerms>
+        <Default>
+          <Warning Text="Это клиент по умолчанию используемых во всех неименных заказах.\n\nМы настоятельно рекомендуем не изменять данного клиента." />
+        </Default>
+      </Customer>
+      <Guide>
+        <Title Text="Клиенты и поставщики" />
+        <Content Text="Нажмите здесь для открытия раздела клиентов и поставщиков" />
+        <Add>
+          <Title Text="Добавьте клиента или поставщика" />
+          <Content Text="Нажмите здесь, чтобы добавить нового клиента или поставщика" />
+          <Name>
+            <Title Text="Введите имя" />
+            <Content Text="Введите имя клиента или поставщика" />
+          </Name>
+          <Save>
+            <Title Text="Сохраните изменения" />
+            <Content Text="После того, как вы ввели все данные, нажмите кнопку «Сохранить», чтобы сохранить изменения." />
+          </Save>
+        </Add>
+      </Guide>
+      <Import Text="Импорт">
+        <Title Text="Импорт клиентов" />
+        <Description Text="Используйте импорт клиентов для загрузки списка клиентов, используя собственный CSV-файл или CSV, экспортированный из другого приложения.\nВы можете больше узнать о том, как импортировать клиентов в">
+          <Link Text="нашем центре поддержки" />
+        </Description>
+        <Fields>
+          <Name Text="Имя" />
+          <Code Text="Код" />
+          <TaxNumber Text="Налоговый номер" />
+          <Address Text="Адрес" />
+          <ZIP Text="Индекс" />
+          <City Text="Город" />
+          <Country Text="Страна" />
+          <Email Text="E-mail" />
+          <Phone Text="Номер телефона" />
+          <IsEnabled Text="Активный" />
+          <IsCustomer Text="Клиент" />
+          <Clear Text="Очистить значение" />
+        </Fields>
+        <Import Text="Импорт" />
+        <Preview Text="Превью">
+          <CustomersCount Text="Кол-во клиентов для импорта:" />
+        </Preview>
+        <RequiredField Text="Указывает обязательные поля" />
+        <Importing Text="Импор клиентов... Пожалуйста подождите..." />
+        <Error>
+          <RequiredFields Text="Обязательные поля пустые. Заполните обязательные поля перед импортом." />
+          <InvalidContent Text="Ошибка анализа CSV файла. Проверьте данные файла и повторите попытку.\nОшибка: {0}" />
+          <InvalidField Text="Неверная запись для поля «{0}». Пожалуйста, дважды проверьте содержимое файла и повторите попытку." />
+          <FileNotSelected Text="CSV файл не выбран. Выберите файл для продолжения." />
+          <DuplicateName Text="Обнаружено дублирующееся имя клиента. Имя клиента: «{0}»." />
+        </Error>
+        <Completed Text="Список клиентов успешно импортирован!" />
+      </Import>
+      <Export Text="Экспорт">
+        <Completed Text="Список клиентов успешно экспортирован!\nНазвание файла: &quot;{0}&quot;" />
+      </Export>
+    </Customers>
+    <PaymentTypes Text="Типы оплаты">
+      <LearnMore Text="Узнать больше о типах оплаты" />
+      <New Text="Новый тип оплаты" />
+      <Edit Text="Редактировать тип оплаты &quot;{0}&quot;" />
+      <Delete Text="Удалить тип оплаты">
+        <Confirmation Text="Вы уверены, что хотите удалить тип оплаты &quot;{0}&quot;?" />
+        <Error Text="Произошла ошибка во время удаления типа оплаты. Выбранный тип оплаты не может быть удален.\nОшибка: {0}" />
+        <DataViolation Text="Не удалось удалить выбранный тип оплаты. Убедитесь, что тип платежа не используется в документах и повторите попытку." />
+      </Delete>
+      <PaymentType>
+        <Name Text="Название" />
+        <Code Text="Код" />
+        <IsCustomerRequired Text="Только для клиентов" />
+        <IsFiscal Text="Печать чека" />
+        <IsChangeAllowed Text="Присутствует сдача" />
+        <Ordinal Text="Позиция" />
+        <IsEnabled Text="Активный" />
+        <IsQuickPayment Text="Быстрая оплата" />
+        <OpenCashDrawer Text="Открыть кассовый ящик" />
+        <ShortcutKey Text="Горячая клавиша" />
+        <MarkAsPaid Text="Отметить транзакцию" />
+        <Saved>
+          <Created Text="Тип оплаты успешно создан." />
+          <Updated Text="Тип оплаты успешно изменен." />
+        </Saved>
+        <Error Text="Ошибка">
+          <ExistingShortcutKey Text="Указанная горячая клавиша уже назначен для типа оплаты «{0}».\nГорячие клавиши должны быть уникальными.\nУкажите другую комбинацию клавиш и повторите попытку.">
+            <Title Text="Обнаружена повторяющаяся комбинация клавиш" />
+          </ExistingShortcutKey>
+        </Error>
+      </PaymentType>
+      <Onboarding>
+        <Title Text="Типы оплаты" />
+        <Info Text="Введите типы оплаты вашего магазина" />
+        <AddMore Text="Сохранить и добавить еще">
+          <Error Text="При добавлении нового типа платежа произошла ошибка.\nПроверьте свой ввод и повторите попытку." />
+        </AddMore>
+        <Existing Text="Существующий метод оплаты" />
+      </Onboarding>
+    </PaymentTypes>
+    <Documents Text="Документы">
+      <View Text="Просмотр документов" />
+      <Search Text="Поиск документов">
+        <Customer Text="Клиент">
+          <All Text="Все клиенты" />
+        </Customer>
+        <Product Text="Товар">
+          <All Text="Все товары" />
+        </Product>
+        <Period Text="Период">
+          <Tip Text="Нажмите, чтобы выбрать период поиска." />
+        </Period>
+        <DocumentType Text="Тип документа">
+          <All Text="Все типы документов" />
+        </DocumentType>
+        <User Text="Пользователь">
+          <All Text="Все пользователи" />
+        </User>
+        <PaidStatus Text="Статус оплаты">
+          <None Text="Все транзакции" />
+          <Paid Text="Оплачен" />
+          <Unpaid Text="Не оплачен" />
+        </PaidStatus>
+        <DocumentNumber Text="Документ №" />
+        <ReferenceDocumentNumber Text="Внешний документ" />
+        <CashRegister Text="Касса">
+          <All Text="Все кассы" />
+        </CashRegister>
+        <Clear Text="Очистить все фильтры" />
+      </Search>
+      <Document>
+        <Save>
+          <Saved Text="Документ успешно сохранен" />
+          <Error Text="Прозиошла ошибка во время сохранения документа. Изменения не сохранены.\nОшибка: {0}">
+            <InvalidPayments Text="Недопустимая сумма платежа">
+              <Info Text="Сумма платежей должна быть равна сумме в документе. Пожалуйста, исправьте платежи и повторите попытку.\n\nИтог документа: {0}. Сумма платежа: {1}." />
+            </InvalidPayments>
+          </Error>
+        </Save>
+        <UnsavedChanges Text="Несохраненные изменения">
+          <Confirmation Text="Документ «{0}» содержит несохраненные изменения.\n\nВы хотите сохранить документ перед закрытием?" />
+        </UnsavedChanges>
+        <StockDate Text="Выберите дату инвенторизации">
+          <Description Text="Введите дату, когда инвенторизация была зарегистрирована в этом документе" />
+          <Invalid Text="Неверная дата инвенторизации">
+            <Description Text="Выбранное действие запрещено.\n\nОбнаружен документ инвенторизации. Документ «{0}» создан  {1}.\n\nПроверьте дату документа инвенторизации и повторите попытку." />
+            <Message Text="Выбранная дата инвенторизации запрещена.\nДокумент инвенторизации {0} создан {1}" />
+            <InvalidTime Text="Время инвенторизации не может быть в будующем" />
+          </Invalid>
+        </StockDate>
+        <Note Text="Заметка" />
+        <InternalNote Text="Внутреняя заметка" />
+        <PaidStatus>
+          <Changed Text="Статус платежа успешно изменен" />
+        </PaidStatus>
+        <Items>
+          <CostPrice>
+            <Settings>
+              <AutoUpdate Text="Автоматическое обновление стоимости при покупке" />
+            </Settings>
+            <Update Text="Обновить себестоимость">
+              <Info Text="Стоимость предметов изменилась. Выберите элементы, для которых вы хотите изменить себестоимость." />
+              <Confirmation Text="Вы хотите обновить себестоимость выбранных товаров?" />
+              <Success Text="Себестоимость успешно обновлена" />
+            </Update>
+          </CostPrice>
+          <Missing Text="Выбранный товар не существует." />
+        </Items>
+        <Payments>
+          <AutomaticallyModified Text="Платежи и существующая сумма были обновлены для соответствия итогу" />
+          <MarkPaid Text="Все кредитные платежи были оплачены. Вы хотите промаркировать документы как оплаченные?">
+            <Title Text="Оновить статус документа" />
+          </MarkPaid>
+          <Status Text="Статус">
+            <Paid Text="Оплачен" />
+            <Unpaid Text="Не оплачен" />
+          </Status>
+        </Payments>
+      </Document>
+      <New>
+        <SelectDocumentType Text="Выберите тип документа" />
+      </New>
+      <NoDocument Text="Запрошенный документ не существует." />
+      <Inventory>
+        <Date Text="Выберите дату инвенторизации">
+          <Description Text="Введите дату, когда документ инвенторизации был создан." />
+        </Date>
+        <Document>
+          <Item>
+            <Expected Text="Ожидалось" />
+            <Counted Text="Посчитано" />
+            <ChangeQuantity Text="Изменить кол-во" />
+          </Item>
+          <ExistingItem Text="Выбранный товар уже был добавлен в документ." />
+          <Service Text="Попытка добавить сервисный товар в документ инвенторизации">
+            <Info Text="Выбранный товар &quot;{0}&quot; является сервисным. Вы уверены, что хотите добавить его в документ инвенторизации?" />
+          </Service>
+          <AddGroup Text="Добавить группу товаров в документ">
+            <Confirmation Text="Вы уверены, что хотите добавить все товары из группы &quot;{0}&quot;  в документ инвенторизации?" />
+          </AddGroup>
+        </Document>
+      </Inventory>
+      <Guide>
+        <Title Text="Откройте документы" />
+        <Content Text="Нажмите здесь, чтобы открыть раздел с документами и добавить ваш первый документ закупки" />
+        <Add>
+          <Title Text="Создать документ" />
+          <Content Text="Нажмите здесь, чтобы создать документ закупки и добавить товары на склад" />
+          <Customer>
+            <Title Text="Выберите клиента" />
+            <Content Text="Выберите клиента для данного документа" />
+          </Customer>
+          <Supplier>
+            <Title Text="Выберите поставщика" />
+            <Content Text="Выберите поставщика для данного документа" />
+          </Supplier>
+          <Product>
+            <Title Text="Выберите товар" />
+            <Content Text="Дважды нажмите на желаемый товар для добавления его в документ" />
+          </Product>
+          <Item>
+            <Quantity>
+              <Title Text="Введите кол-во" />
+              <Content Text="Введите приобретенное количество. Это количество будет отправлено на склад" />
+            </Quantity>
+            <Price>
+              <Title Text="Цена" />
+              <Content Text="Ввыедите цену товара" />
+            </Price>
+            <Save>
+              <Title Text="Сохранить изменения" />
+              <Content Text="Нажмите &quot;Сохранить&quot; для сохранения изменений и добавить этот товар в документ" />
+            </Save>
+          </Item>
+          <Save>
+            <Title Text="Сохранить документ" />
+            <Content Text="Нажмите &quot;Сохранить&quot; для сохранения документа" />
+          </Save>
+        </Add>
+      </Guide>
+    </Documents>
+    <Countries Text="Страны">
+      <New Text="Новая страна" />
+      <Delete>
+        <Title Text="Удалить страну" />
+        <Confirmation Text="Вы уверены, что хотите удалить страну &quot;{0}&quot;?" />
+      </Delete>
+      <Country>
+        <Edit Text="Редактирование страны &quot;{0}&quot;" />
+        <Name Text="Название" />
+        <Code Text="Код" />
+        <Saved>
+          <Created Text="Страна успешно создана" />
+          <Updated Text="Страна успешно отредактирована" />
+        </Saved>
+      </Country>
+    </Countries>
+    <Company Text="Моя организация">
+      <LearnMore Text="Узнать больше о информации организации" />
+      <Details Text="Информация об организации">
+        <Title Text="Информация организации" />
+        <Logo Text="Логотип">
+          <Add Text="Обзор" />
+          <Remove Text="Удалить" />
+        </Logo>
+        <BankAccount Text="Банковские реквизиты">
+          <Number Text="Номер счета" />
+          <BankDetails Text="Дополнительно" />
+        </BankAccount>
+      </Details>
+      <Saved Text="Информация об организации успешно сохранена" />
+      <Onboarding>
+        <Title Text="Информация об организации" />
+        <Info Text="Ввыедите ваши данные об организации. Данные об организации используются в чеках и накладных" />
+      </Onboarding>
+      <Reset Text="Очистить базу данных">
+        <AdminPassword Text="Введите пароль администратора" />
+        <Backup>
+          <Info Text="Резервное копирование базы данных будет выполнено до сброса.\nВы можете изменить место для резервного копирования по умолчанию, используя поля ниже." />
+          <Path Text="Путь резервного копирования">
+            <Select Text="Выберите путь, где будет сохранена резервная копия базы данных." />
+          </Path>
+          <Completed Text="Резервная копия базы данных успешно создана" />
+        </Backup>
+        <PerformReset Text="Очистить базу данных">
+          <Confirmation Text="Вы уверены, что желаете очистить базу данных и удалить все данные?">
+            <Title Text="Идет очистка базы данных" />
+          </Confirmation>
+        </PerformReset>
+        <Completed Text="Очистка базы данных успешно завершена. Aronium будет перезагружен." />
+      </Reset>
+    </Company>
+    <Guide>
+      <Title Text="Администрирование" />
+      <Content Text="Нажмите здесь, для открытия раздела администрирования и добавления товаров и клиентов" />
+    </Guide>
+    <Authorization>
+      <Title Text="Введите пароль для входа в раздел администрирования" />
+    </Authorization>
+  </Management>
+</Language>

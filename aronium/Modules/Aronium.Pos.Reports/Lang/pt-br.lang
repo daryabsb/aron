@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="pt-br" name="Português do Brasil">
+  <Reports Text="Relatórios">
+    <Filter Text="Filtro">
+      <User Text="Usuário">
+        <All Text="Todos" />
+      </User>
+      <Customer Text="Clientes &amp; fornecedores">
+        <All Text="Todos" />
+      </Customer>
+      <Product Text="Produtos">
+        <All Text="Todos" />
+      </Product>
+      <CashRegister Text="Caixa registradora">
+        <All Text="Todas" />
+      </CashRegister>
+      <Period>
+        <Tip Text="Clique para alterar o período do relatório" />
+      </Period>
+      <NotAvailable Text="Não aplicável para o relatório selecionado" />
+    </Filter>
+    <Report>
+      <Select Text="Selecione o relatório">
+        <Title Text="Selecione o relatório para visualizar ou imprimir" />
+      </Select>
+      <Show Text="Exibir relatório" />
+      <NotFound Text="Falta o modelo de relatório." />
+    </Report>
+    <Sales Text="Vendas">
+      <Products Text="Produtos" />
+      <ProductGroups Text="Grupos de produtos" />
+      <PaymentTypes Text="Tipos de pagamento" />
+      <PaymentTypesUsers Text="Tipos de pagamento por usuários" />
+      <PaymentTypesCustomers Text="Tipos de pagamento por clientes" />
+      <TaxRates Text="Taxas de impostos" />
+      <Customers Text="Clientes" />
+      <Users Text="Usuários" />
+      <Refunds Text="Devoluções" />
+      <InvoiceList Text="Lista de faturas" />
+      <Profit Text="Lucro &amp; margem" />
+      <Daily Text="Vendas diárias" />
+      <Unpaid Text="Vendas não pagas" />
+      <StartingCash Text="Aberturas de caixa" />
+      <Discounts Text="Descontos concedidos" />
+      <ItemDiscounts Text="Descontos de itens" />
+      <StockMovement Text="Movimento de estoque" />
+    </Sales>
+    <Purchase Text="Compras">
+      <Suppliers Text="Fornecedores" />
+      <Products Text="Produtos" />
+      <Unpaid Text="Compra não paga" />
+      <Discounts Text="Descontos de compra" />
+      <ItemDiscounts Text="Descontos em itens comprados" />
+      <PurchaseInvoiceList Text="Lista de faturas de compra" />
+    </Purchase>
+    <LossAndDamage Text="Perda e dano">
+      <Products Text="Produtos" />
+    </LossAndDamage>
+  </Reports>
+</Language>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ar" name="Arabic">
+  <Stock Text="مخزون">
+    <Items>
+      <Item>
+        <Product>
+          <Code Text="رمز" />
+          <Id Text="رقم" />
+          <Name Text="اسم" />
+          <MeasurementUnit Text="وحدة القياس" />
+        </Product>
+        <Quantity Text="کمیة" />
+        <NegativeQuantity Text="كمية المخزون السلبية" />
+        <TotalCostBeforeTax Text="تكلفه" />
+        <TotalCost Text="التكلفة شامل الضرایب" />
+        <TotalBeforeTax Text="قيمة" />
+        <TotalAfterTax Text="القيمة شامل الضريبة" />
+      </Item>
+      <Filter>
+        <NegativeQuantity Text="كمية سلبية">
+          <Info Text="عرض المنتجات بكميات سالبة فقط" />
+        </NegativeQuantity>
+        <NonZeroQuantity Text="كمية غير صفرية">
+          <Info Text="عرض المنتجات بكميات بغیر صفر فقط" />
+        </NonZeroQuantity>
+        <ZeroQuantity Text="كمية صفر">
+          <Info Text="عرض المنتجات بكميات صفر فقط" />
+        </ZeroQuantity>
+      </Filter>
+      <Summary>
+        <NegativeCount Text="مجموع المنتجات مع كمية سلبية في المخزون" />
+        <ZeroCount Text="مجموع المنتجات مع كمية صفر في المخزون" />
+        <PositiveCount Text="مجموع المنتجات مع كمية غیر صفر في المخزون" />
+        <TotalBeforeTax Text="المجموع : " />
+        <TotalIncludingTax Text="مجموع شامل الضريبة" />
+        <SellPrice Text="سعر البيع" />
+        <CostPrice Text="سعر التكلفة">
+          <TotalCostBeforeTax Text="التكلفة الإجمالية : " />
+          <TotalCostAfterTax Text="الاجمالی التكلفة تشمل الضرایب : " />
+        </CostPrice>
+      </Summary>
+    </Items>
+    <Reset Text="اعادة حساب كميات المخزون">
+      <Completed Text="اكتملت عملية احتساب المخزون بنجاح۔" />
+    </Reset>
+    <History Text="تاریخ المخزون">
+      <Start Text="البدایة" />
+      <End Text="النھایة" />
+      <Document Text="وثيقة">
+        <DocumentType Text="نوع الوثيقة" />
+        <Customer Text="عمیل" />
+        <Date Text="تاریخ" />
+        <StockDate Text="تاريخ المخزون" />
+      </Document>
+      <ChangeQuantity Text="کمیة" />
+      <InStock Text="في المخزن" />
+      <MeasurementUnit Text="وحدة القياس" />
+    </History>
+    <Print>
+      <Report Text="تقرير الجرد" />
+    </Print>
+    <ProductDetails>
+      <OnHand Text="كمية في اليد" />
+    </ProductDetails>
+    <Control>
+      <Settings>
+        <PreventNegativeQuantities Text="منع المخزون السلبي" />
+      </Settings>
+      <NegativeQuantity Text="بیع كمية صفر المخزون">
+        <Confirmation Text="الكمية غير متوفرة للبیع. هل تريد كمية سلبية؟\n\n\n{0} : الكمية في متناول اليد\n{1} : الكمية المطلوبة\n\nهل انت متاكد من تريد اضافة هذا المنتج الى البيع الحالي؟" />
+        <Title Text="كمية المخزون المفقودة" />
+        <PermissionDenied Text="ليس لديك امتيازات كافية لبيع المنتج فی كمية صفر فی المخزون. يرجى الاتصال مع المدیر النظام۔" />
+        <Authorization>
+          <Title Text="يتم تمكين مراقبة المخزون۔\nادخل رقم السری للاستمرر" />
+        </Authorization>
+        <AllowMultiple>
+          <NotAllowed Text="لا يسمح بالتكرار المتكرر مع تمكين التحكم في المخزون۔" />
+        </AllowMultiple>
+      </NegativeQuantity>
+    </Control>
+    <QuickInventory Text="جرد سريعة">
+      <Description Text="تغيير كميات المخزون للمنتجات المحدد" />
+      <Title Text="تحديث كمية المخزون" />
+      <Subtitle Text="تعيين كميات المخزون للمنتج المحدد۔\nسيتم انشاء وثيقة المخزون العد تلقائيا۔" />
+      <Success Text="كمية المخزون تغيرت بنجاح.\n{0} : تم انشاء الوثيقة" />
+    </QuickInventory>
+    <LearnMore Text="معرفة المزيد عن المخزون والجرد" />
+  </Stock>
+</Language>

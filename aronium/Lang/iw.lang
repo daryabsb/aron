@@ -1,0 +1,1424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="iw" name="Hebrew" rtl="true">
+  <Buttons>
+    <Yes Text="כן" />
+    <Ok Text="אוקיי" />
+    <No Text="לא" />
+    <Cancel Text="ביטול" />
+    <Save Text="שמירה" />
+    <Close Text="סגור" />
+    <Add Text="הוסף" />
+    <New Text="חדש" />
+    <Edit Text="ערוך" />
+    <Cut Text="גזור" />
+    <Copy Text="העתק" />
+    <Paste Text="הדבק" />
+    <Delete Text="מחק" />
+    <Refresh Text="רענן" />
+    <Login Text="התחבר" />
+    <Logout Text="התנתק" />
+    <Print Text="הדפס" />
+    <SavePdf Text="שמור כPDF" />
+    <Excel Text="Excel" />
+    <Hide Text="הסתר" />
+    <FirstPage Text="העמוד הראשון" />
+    <LastPage Text="העמוד האחרון" />
+    <NextPage Text="העמוד הבא" />
+    <PreviousPage Text="העמוד הקודם" />
+    <Continue Text="המשך" />
+    <Clear Text="נקה" />
+    <Exit Text="יציאה" />
+    <Search Text="חיפוש" />
+    <Ignore Text="דחה" />
+    <Retry Text="נסה שוב " />
+    <DeleteAll Text="מחק הכל" />
+    <Skip Text="דלג" />
+    <Restart Text="הפעל מחדש" />
+    <SaveAndClose Text="שמור וסגור" />
+    <Help Text="עזרה" />
+    <Back Text="חזור" />
+    <LearnMore Text="למד עוד" />
+    <Done Text="בוצע" />
+    <Send Text="שלח" />
+    <WhatsThis Text="מה זה?" />
+    <Maximize Text="מירבי" />
+    <Restore Text="שחזר" />
+    <Browse Text="דפדף" />
+  </Buttons>
+  <Bootstrap>
+    <Initializing Text="מאתחל יישום..." />
+    <Load>
+      <Components Text="טוען רכיבי מערכת..." />
+      <Modules Text="טועול מודולי מערכת..." />
+      <Products Text="טוען מוצרים...">
+        <Error Text="שגיאה בטעינת מוצרים">
+          <Info Text="ייתכן שמוצרים מסוימים אינם זכאים למכירה. בדוק\י מוצרים שנכשלו ונסה\י שוב." />
+          <DuplicateBarcode Text="ברקוד כפול &quot;{0}&quot;" />
+          <DuplicateCode Text="קוד כפול &quot;{0}&quot;" />
+          <Copy Text="הועתק לוח העריכה" />
+        </Error>
+      </Products>
+      <CashRegister Text="טוען מידע קופה" />
+      <ScanTypes Text="מחפש סוגים..." />
+    </Load>
+    <Connect Text="מתחבר למסד נתונים...">
+      <NoDataProvider Text="מודול חיבור מסד נתונים אינו זמין.\nאנא צור קשר עם מנהל המערכת שלך." />
+    </Connect>
+    <Error Text="אירעה שגיאה במהלך ניסיון להפעיל את היישום. אנא צור קשר עם מנהל המערכת." />
+    <Completed Text="מתחיל יישום" />
+    <BackupDatabase Text="מוודא גרסת מסד נתונים..." />
+    <Migrations Text="בודק את מסד הנתונים...">
+      <Failed Text="העברת מסד הנתונים נכשלה!" />
+    </Migrations>
+    <RestartRequired Text="הפעלה מחדש של יישום נדרשת כדי שהשינויים ייכנסו לתוקף.\nלחץ\י על הכפתור למטה כדי להפעיל מחדש את היישום." />
+    <ValidateLicense Text="מוודא רשיון..." />
+    <Onboarding Text="מוודא מצב חפיפה..." />
+    <CustomerDisplay Text="מאתחל מסך תצוגת לקוח..." />
+    <PrinterStatus Text="בודק מצב מדפסת..." />
+    <VerifyVersion Text="מאמת גרסת יישום ..." />
+  </Bootstrap>
+  <Onboarding>
+    <Welcome Text="ברוך\ה הבא\ה">
+      <Info Text="בואו נגדיר את החנות שלך ואת נתוני היישום הבסיסיים.\nתהליך ההגדרה ייקח מספר דקות בלבד.\n" />
+      <Start Text="התחלה" />
+    </Welcome>
+    <Back Text="חזור" />
+    <Skip Text="דלג" />
+    <Hide Text="הסתר" />
+    <Next Text="דלג" />
+    <Continue Text="שמור והמשך" />
+    <PriceDisplay Text="תצוגת מחיר">
+      <Info Text="בחר\י אם המחירים מוצגים ומודפסים לפני או אחרי חישוב מס" />
+      <BeforeTax Text="לפני חישוב מס">
+        <Description Text="המחירים יוצגו ויודפסו בקבלה ללא מס כלול" />
+      </BeforeTax>
+      <AfterTax Text="לאחר חישוב מס">
+        <Description Text="המחירים יוצגו ויודפסו בקבלה עם מס כלול" />
+      </AfterTax>
+      <DiscountApplyRule>
+        <Info Text="הנחות יוחלו לפני חישוב המס לאחר מס על בסיס בחירה זו. ניתן לשנות את כללי ההנחה ב&quot;הגדרות&quot; בכל עת." />
+      </DiscountApplyRule>
+    </PriceDisplay>
+    <Layout Text="בחר\י פריסה">
+      <LearnMore Text="למידע נוסף על פריסות וסביבת עבודה" />
+      <Standard Text="רגיל">
+        <Description Text="השתמש\י בפריסה זו אם את\ה משתמש בברקודים או אם מחוברת מקלדת פיזית למחשב שלך." />
+      </Standard>
+      <TouchScreen Text="ויזואלי (מותאם מסך מגע)">
+        <Description Text="השתמש\י בפריסה זו אם את\ה תרצה\י לראות את המוצרים בקבוצה על גבי המסך הראשי" />
+      </TouchScreen>
+      <EnableVirtualKeyboard Text="אפשר מקלדת וירטואלית על גבי המסך" />
+    </Layout>
+    <Registration Text="רישום">
+      <Info Text="אנא הכנס\י את כתובת הדוא&quot;ל שלך, כדי שנוכל לספק לך תמיכה אישית יותר.">
+        <Email Text="דוא&quot;ל זה יוגדר כחשבון מנהל ברירת מחדל וניתן להשתמש בו כדי לאפס סיסמה. את\ה יכול\ה לשנות את כתובת הדוא&quot;ל הזו בכל עת." />
+      </Info>
+      <Email Text="הדוא''ל שלך">
+        <Privacy Text="הדוא&quot;ל שלך נשמר בסודיות מוחלטת. אנו נשתמש בדוא&quot;ל שלך כדי לספק תמיכה אישית יותר ולשלוח לך עדכונים אחרונים, רק אם תרצה\י.\nאנחנו גם שונאים &quot;ספאם&quot;." />
+      </Email>
+    </Registration>
+    <UserProfile>
+      <Title Text="בוא נקבע את החשבון האישי שלך" />
+      <Info Text="אנא הכנס\י את שמך ואת פרטי הכניסה שלך המשמשים לגישה למנהל." />
+      <LearnMore Text="למידע נוסף על משתמשים ואישורי ברירת מחדל" />
+      <FirstName Text="שם פרטי" />
+      <LastName Text="שם משפחה" />
+      <Email Text="דוא''ל">
+        <Info Text="דוא&quot;ל זה ישמש כדוא&quot;ל לשחזור עבור חשבונך.\nודא\י שהזנת כתובת דוא&quot;ל חוקית כדי שתוכל\י לאפס את הסיסמה שלך באמצעות הדוא&quot;ל." />
+      </Email>
+      <Password Text="סיסמה">
+        <Errors>
+          <Empty Text="הסיסמה אינה עומדת בקריטריונים הנדרשים. יש להגדיר את הסיסמה באורך 4 תווים לפחות" />
+          <ConfirmationError Text="אישור סיסמה אינו תואם. אנא הכנס את אותה סיסמה בדיוק" />
+        </Errors>
+      </Password>
+      <ConfirmPassword Text="סיסמה בשנית" />
+    </UserProfile>
+    <Completed Text="ההגדרה הושלמה">
+      <Info Text="מזל טוב! הגדרת את כל מה שנדרש להתחלה...\nבשלב הבא, פתח\ה את &quot;ניהול&quot; כדי להוסיף כמה מוצרים על מנת להתחיל למכור ולהכיר את המערכת." />
+      <Finish Text="סגור והמשך" />
+    </Completed>
+  </Onboarding>
+  <BusinessDay>
+    <Close>
+      <Authorization>
+        <Title Text="אנא הכנס\י סיסמה לסגירת יום העסקים" />
+      </Authorization>
+    </Close>
+    <Select Text="בחר\י ימי עבודה ">
+      <EnableSelection Text="(לחץ\י על התאריך לבחירת ימי העסקים)" />
+    </Select>
+  </BusinessDay>
+  <Application>
+    <Close Text="יציאה מהיישום">
+      <Info Text="את\ה בטוח\ה לצאת שאת\ה רוצה לצאת מהיישום ?" />
+      <ShutDown Text="יציאה מהיישום" />
+      <Restart Text="הפעל מחדש את היישום" />
+      <TurnOffComputer Text="כיבוי המחשב" />
+    </Close>
+    <FullScreen Text="מסך מלא" />
+    <Exit Text="יציאה מהיישום" />
+    <Menu Text="תפריט" />
+    <RestartRequired Text="נדרש הפעלה מחדש ליישום">
+      <Info Text="הפעלה מחדש של היישום נדרשת כדי שינויים ייכנסו לתוקף. האם ברצונך להפעיל מחדש את היישום עכשיו?" />
+    </RestartRequired>
+    <ReloadProducts Text="טען מוצרים שוב">
+      <Info Text="מוצרים השתנו. האם לטעון מחדש מוצרים עכשיו?" />
+    </ReloadProducts>
+  </Application>
+  <Period Text="פרק זמן">
+    <Start Text="התחלה" />
+    <End Text="סיום" />
+    <Preset Text="תקופה מוגדרת מראש">
+      <Today Text="היום" />
+      <Yesterday Text="אתמול" />
+      <ThisWeek Text="השבוע הזה" />
+      <LastWeek Text="השבוע שהיה" />
+      <ThisMonth Text="החודש הזה " />
+      <LastMonth Text="החודש הזה " />
+      <ThisYear Text="השנה" />
+      <LastYear Text="שנה שעברה" />
+    </Preset>
+  </Period>
+  <Login Text="התחבר">
+    <Password Text="סיסמה">
+      <Forgot Text="שכחת סיסמה?" />
+    </Password>
+    <Error Text="ההתחברות נכשלה. נא לבדוק ולנסות שוב" />
+    <Authentication Text="כניסת משתמש">
+      <Failed Text="המשתמש לא קיים - נא לבדוק שהסיסמה נכונה ונסה\י שוב" />
+    </Authentication>
+    <Reset Text="איפוס סיסמה">
+      <LearnMore Text="מידע נוסף בנושא איפוס סיסמה" />
+      <Email Text="הזן\י את כתובת הדוא&quot;ל">
+        <Info Text="הזן\י את כתובת הדוא&quot;ל המשויכת למשתמש שאליו ברצונך לאפס סיסמה.\nאנו נשלח אליך קוד אימות לדוא&quot;ל שתוזן למטה." />
+        <Required Text="דוא''ל נדרש" />
+        <EmailAddress Text="כתובת דוא''ל">
+          <Tooltip Text="הזן את כתובת הדוא&quot;ל שלך" />
+        </EmailAddress>
+        <ExistingCode Text="קיבלתי את הקוד. קח אותי לשלב הבא..." />
+      </Email>
+      <Code Text="אימות קוד">
+        <Info Text="בדוק את הדוא&quot;ל שלך - שלחנו אליך קוד הרשאה שאתה צריך להזין בתיבה למטה.\nאם לא קיבלת דוא&quot;ל עם קוד הרשאה, בדוק את תיקיית הספאם שלך או נסה לשלוח דוא&quot;ל שוב." />
+        <Email Text="קוד ההרשאה נשלח אל {0}." />
+        <AuthorizationCode Text="קוד אימות">
+          <Tooltip Text="הזן\י כאן את קוד האימות" />
+        </AuthorizationCode>
+        <Verify Text="אמת קוד" />
+      </Code>
+      <Password Text="בחר סיסמה חדשה">
+        <Info Text="הזן\י סיסמה ואישות סיסמה חדשה עבור חשבונך המקומי.\nשדות סיסמה חדשים ושדות אישור סיסמה חדשים חייבים להתאים.\n\nלאחר שתסיים\י, לחץ\י על כפתור &quot;אישור&quot; כדי לאפס את הסיסמה שלך." />
+        <NewPassword Text="סיסמה חדשה" />
+        <NewPasswordConfirmation Text="אישור סיסמה" />
+        <InUse Text="הסיסמה שצוינה כבר הוזנה. אנא הזן\י סיסמה אחרת ונסה\י שוב." />
+        <User Text="משתמש: {0}" />
+        <SetPassword Text="הגדר\י את הסיסמה החדשה" />
+        <Success Text="הסיסמה השתנתה בהצלחה !" />
+      </Password>
+      <Error>
+        <Expired Text="תוקף קוד ההרשאה שלך פג.\nבקש\י קוד הרשאה חדש." />
+        <InvalidCode Text="קוד אינו תקין. אנא הזן\י קוד חוקי ונסה\י שוב." />
+        <NoSuchUser Text="משתמש עם דוא&quot;ל שצוין &quot;{0}&quot; אינו קיים.\nנא להזין דוא&quot;ל חוקי ונסה\י שוב." />
+        <InvalidEmailAddress Text="כתובת הדוא&quot;ל אינה תקינה. אנא הזן כתובת דוא&quot;ל חוקית ונסה שוב." />
+        <LimitReached Text="הגעת למגבלת בקשת האיפוס.\nניתן לנסות שוב בעוד 24 שעות." />
+        <GeneralError Text="אירעה שגיאה במהלך ניסיון לשלוח בקשת איפוס סיסמה.\nנא לנסות שוב מאוחר יותר." />
+      </Error>
+    </Reset>
+  </Login>
+  <Order>
+    <List Text="פתח רשימת הזמנות">
+      <Select Text="בחר\י הזמנה" />
+    </List>
+    <New Text="מכירה חדשה" />
+    <Estimate Text="נעילה">
+      <Authorization>
+        <Title Text="אנא הכנס\י סיסמה לנעילת המכירה" />
+      </Authorization>
+      <Created Text="ההזמנה ננעלה בהצלחה" />
+      <Clear Text="שחרר את המכירה הזו">
+        <Authorization>
+          <Title Text="נא להכניס סיסמה כדי לבטל את נעילת המכירה" />
+        </Authorization>
+        <Success Text="המכירה שוחררה" />
+      </Clear>
+      <Locked Text="מכירה נעולה">
+        <Info Text="לא ניתן לערוך מכירה נעולה" />
+      </Locked>
+      <Issued Text="המכירה הזו נעולה כבר.\nלא ניתן לערוך מכירה נעולה" />
+      <NoItems Text="אין פריטים לנעילה" />
+    </Estimate>
+    <Transfer Text="העברה">
+      <Authorization>
+        <Title Text="נא להזין סיסמה כדי לגשת לאפשרות ההעברה" />
+      </Authorization>
+      <All Text="העבר את כל ההזמנות">
+        <Confirmation Text="העברת כל ההזמנות למשתמש אחר אינה ניתנת לשינוי!\n\nהאם אתה בטוח שברצונך להעביר את כל ההזמנות שלך אל- {0}?" />
+        <Success Text="כל ההזמנות הועברו בהצלחה." />
+        <Error Text="אירעה שגיאה בעת העברת הזמנות למשתמש שנבחר.\nבבקשה נסה\י שוב." />
+      </All>
+      <Orders Text="פתח הזמנות" />
+      <OrderNumber Text="מספר הזמנה">
+        <Select Text="בחר הזמנה" />
+      </OrderNumber>
+      <Quantity Text="בחר כמות להעברה" />
+      <User Text="משתמש">
+        <Current Text="ההזמנה כבר משוייכת למשתמש שנבחר" />
+      </User>
+      <Rounds Text="העבר הכל">
+        <Summary Text="סדר פריטים" />
+        <Selection Text="בחר טבלה להעברה" />
+      </Rounds>
+      <Items Text="סדר פריטים">
+        <Selected Text="פריטים שנבחרו להעברה">
+          <NoItems Text="בחר\י פריטים להעברה" />
+        </Selected>
+        <All Text="העבר הכל" />
+        <Back Text="הסר הכל" />
+        <InvalidQuantity Text="העברת פריט שנבחר אסורה">
+          <Info Text="הכמות הכוללת של הפריטים שנבחרו פחותה מהכמות שנבחרה להעברה.\nנא לבדוק את כמות ההעברה, הפריטים שבוטלו ונסה\י שוב." />
+        </InvalidQuantity>
+        <BundledQuantity Text="שינוי כמויות אינה מותרת">
+          <Info Text="הפריט שייך לקבוצה. לא ניתן לשנות את הכמות על פריטי הקבוצה." />
+        </BundledQuantity>
+      </Items>
+      <CurrentOrder Text="מעביר לאותה הזמנה">
+        <Confirmation Text="את\ה מעביר\ה פריטים לאותה הזמנה. לא יתבצעו שינויים.\nהאם את\ה בטוח\ה שאת\ה רוצה להמשיך?" />
+      </CurrentOrder>
+      <Failed Text="שגיאה בהעברת פריטים">
+        <Info Text="אירעה שגיאה במהלך ניסיון להעביר פריטים. נא לנסות שוב" />
+      </Failed>
+      <Completed Text="ההעברה בוצעה בהצלחה" />
+      <NoItems Text="אין פריטים להעברה" />
+      <Discount>
+        <Warning Text="הנחה קבועה">
+          <Info Text="להזמנה הנוכחית נקבעה הנחת עגלה קבועה. העברת פריטים מהזמנה זו תנקה את הנחת העגלה.\n\nהאם להמשיך?" />
+        </Warning>
+      </Discount>
+    </Transfer>
+    <Void Text="בטל הזמנה">
+      <Authorization>
+        <Title Text="נא להזין סיסמה לביטול ההזמנה" />
+      </Authorization>
+      <Confirm Text="ביטול הזמנה">
+        <Info Text="האם לנקות את ההזמנה ?" />
+      </Confirm>
+      <Completed Text="ההזמנה בוטלה בהצלחה" />
+      <NoItems Text="אין פריטים לביטול" />
+    </Void>
+    <Rounds>
+      <Repeat Text="חזור שוב על הפעולה">
+        <NoItems Text="אין פריטים בהזמנה.\nניתן לבצע רק אם יש פריטים לחזרה" />
+        <NoQuantities Text="בפעולה החוזרה הנבחרת # {0} אין פריטים עם כמויות מספיקות לחזרה" />
+        <Bundle Text="הפריט שייך לקבוצה">
+          <Info Text="אין לבצע פעולות חוזרות על פריטים מקובצים." />
+        </Bundle>
+      </Repeat>
+      <New Text="פעולה חוזרת">
+        <NoItems Text="אין פריטים בהזמנתך ליצירת פעולה חוזרת מחדש.\nהוסף\י פריטים להזמנה ונסה שוב." />
+        <NoUnsavedItems Text="כל הפריטים בהזמנה נשמרו. פעולה חוזרת התחילה." />
+      </New>
+      <SelectAll Text="בחר הכל" />
+      <SelectNone Text="התעלה מהכל" />
+      <Total Text="סה''כ:" />
+      <NoItems Text="לא נבחרו פריטים" />
+    </Rounds>
+    <Comment Text="הערה">
+      <Add Text="בחר\י פריט קיים או כתוב\י את ההערה שלך לפריט &quot;{0}&quot;" />
+      <Insert Text="כתוב\י כאן..." />
+      <Change Text="הוסף\י הערה">
+        <Forbidden Text="עריכת אסורה עבור פריט שנבחר ">
+          <Info Text="הפריט &quot;{0}&quot; מוזמן ואושר.\nעריכת פריט מאושר אסורה." />
+        </Forbidden>
+        <NoItem Text="לא נבחרו פריטים.\nבחר\י פריט אליו תרצה להוסיף תגובה ונסה\י שוב." />
+      </Change>
+    </Comment>
+    <Subtotal Text="סיכום ביניים" />
+    <Tax Text="מס" />
+    <Total Text="סה''כ" />
+    <Checkout Text="תשלום" />
+    <Save Text="שמור מכירה" />
+    <Refund Text="זיכוי">
+      <Authorization Text="נדרשת סיסמה עבור זיכוי מכירה" />
+      <Title Text="זיכוי פריטים" />
+      <CartDiscountApplied Text="הוחלה הנחה לעגלה">
+        <Info Text="הנחה לעגלה הוחלה ומחושבת בסך הכל.\nאם נעשה שימוש בהחזר חלקי, הנחת העגלה תחושב על פריטים שהוחזרו." />
+      </CartDiscountApplied>
+      <Total Text="סכום החזר כספי כולל" />
+      <ReceiptNumber Text="מספר קבלה" />
+      <PaymentType Text="החזר בסוג תשלום" />
+      <Description Text="הזן\י את מספר הקבלה וסוג התשלום כדי לאשר את ההחזר" />
+      <SelectAll Text="בחר \ הסר בחירה מהכל" />
+      <Print>
+        <PrinterNotFound Text="מדפסת זיכויים לא נבחרה" />
+      </Print>
+      <MultyplePaymentTypes Text="המסמך שנבחר מכיל מספר סוגי תשלומים. בחר\י באפשרות למטה להעתקת סוגי התשלומים להחזר זה.">
+        <PartialRefund Text="השימוש בסוגי תשלום מרובים ממסמך מכירות מקורי אינו זמין להחזר חלקי." />
+        <Copy Text="העתק סוגי תשלום מהמסמך המקורי" />
+      </MultyplePaymentTypes>
+    </Refund>
+    <Items>
+      <Name Text="שם מוצר" />
+      <Quantity Text="כמות">
+        <Change Text="שינוי כמות">
+          <Info Text="הזן\י את הכמות הרצויה" />
+          <Item Text="פריט &quot;{0}&quot;" />
+          <Forbidden Text="לא ניתן לערוך כמויות לפריט זה">
+            <Info Text="הפריט &quot;{0}&quot; אושר.\nעריכת פריט מאושר אסורה." />
+          </Forbidden>
+          <Product Text="מוצר &quot;{0}&quot;\nכמות ברירת מחדל: {1:#,#.000}" />
+          <Bundled Text="לא ניתן לשנות כמות">
+            <Info Text="אסור לשנות את הכמויות בפריטים המצורפים." />
+          </Bundled>
+        </Change>
+        <Invalid Text="כמות לא חוקית. הזן\י כמות חוקית ונסה שוב." />
+      </Quantity>
+      <Price Text="מחיר">
+        <Change Text="שינוי מחיר">
+          <Product Text="מוצר &quot;{0}&quot;\nמחיר: {1:#,#.00}" />
+        </Change>
+      </Price>
+      <Total Text="סכום" />
+      <Empty Text="אין פריטים">
+        <Info Text="הוספת פריטים לקבלה ע''י ברקוד, קוד מוצר או חיפוש בלחיצה על F3" />
+      </Empty>
+      <Start Text="התחל" />
+      <Page Text="דף" />
+      <Add>
+        <Error Text="שגיאה בהוספת פריט. נתוני פריט לא חוקיים.\nבדוק\י את מחיר הפריט וכמותו ונסה\י שוב." />
+      </Add>
+      <Void>
+        <NoItems Text="פריט לביטול &quot;{0}&quot; אינו מותר. כמות לא מספקת." />
+        <Bundle Text="הפריט שייך לקבוצה. מחיקת פריט זה תסיר את כל הפריטים באותה קבוצה.\n\nהאם אתה בטוח שברצונך להסיר את כל הפריטים בקבוצה זו?">
+          <Title Text="מחיקת קבוצת פריטים" />
+        </Bundle>
+      </Void>
+    </Items>
+    <Print>
+      <User Text="משתמש: {0}" />
+      <Time Text="זמן: {0}" />
+      <Number Text="מספר הזמנה: {0}" />
+      <Table Text="שולחן: {0}" />
+      <Estimate Text="הערכה">
+        <Discount Text="הנחה" />
+        <Total Text="סה''כ:" />
+        <Footer Text="זו לא קבלה.\nאנא המתן לקבלה הסופית." />
+      </Estimate>
+      <Kitchen>
+        <TableAndRound Text="שולחן: {0}. סיבוב {1}" />
+        <NumberAndRound Text="הזמנה: {0}. סיבוב: {1}" />
+      </Kitchen>
+      <Dialog>
+        <Title Text="איך להעביר ללקוח את הקלה ?" />
+        <Change Text="עודף" />
+        <Receipt Text="הדפסת קבלה" />
+        <Invoice Text="הדפסת חשבונית" />
+        <Email Text="שליחת מייל">
+          <Recipient Text="קבלה לאימייל">
+            <Title Text="הזן\י את פרטי הודעת הדוא&quot;ל ולחץ\י על כפתור &quot;שלח&quot; כדי להמשיך" />
+            <EmailAddress Text="כתובת הנמען">
+              <Description Text="הזן את כתובת הדוא&quot;ל של הלקוח" />
+              <AddCustomer Text="הוספת לקוח" />
+            </EmailAddress>
+            <Subject Text="נושא">
+              <Description Text="הזן\י נושא" />
+              <Default Text="{0} קבלה " />
+            </Subject>
+            <Message Text="הודעה">
+              <Description Text="כתיבת הודעה ללקוח" />
+              <Default Text="לקוח יקר,\n\nמצא את הקבלה המצורפת.\n\nתאריך קבלה: {0}\nסה&quot;כ: {1}" />
+            </Message>
+            <CopySelf Text="שלח אליי העתק" />
+            <Error>
+              <EmailFormat Text="כתובת הדוא&quot;ל אינה תקינה.\nנא לבדוק את כתובת הדוא&quot;ל ונסה\י שוב." />
+            </Error>
+          </Recipient>
+          <Sending Text="שולח מייל... נא להמתין..." />
+          <Sent Text="הקבלה נשלח אל {0}" />
+        </Email>
+        <Hide Text="אל תציג שוב" />
+      </Dialog>
+    </Print>
+    <Products>
+      <Search Text="חיפוש">
+        <Name Text="שם מוצר">
+          <Tooltip Text="חיפוש מוצר עפ''י שם" />
+          <NotFound Text="אין תוצאות עבור &quot;{0}&quot;">
+            <Info Text="אנא בדוק\י את פרמטרי החיפוש שלך ונסה שוב" />
+          </NotFound>
+        </Name>
+        <Barcode Text="ברקוד">
+          <Tooltip Text="חפש מוצר לפי ברקוד" />
+          <NotFound Text="ברקוד לא נמצא" />
+        </Barcode>
+        <Code Text="קוד מוצר">
+          <Tooltip Text="חיפוש מוצר עפ''י קוד" />
+          <NotFound Text="הקוד אינו נמצא" />
+        </Code>
+        <NoItems Text="לא נבחר מוצר">
+          <Info Text="חפש במוצר לפי שם או קוד כדי להמשיך" />
+        </NoItems>
+        <Selection>
+          <Price Text="מחיר" />
+          <Description Text="הסבר" />
+        </Selection>
+        <NoResults Text="אין תוצאות" />
+      </Search>
+      <NoProducts Text="אין מוצרים זמינים">
+        <Info Text="בבקשה, הוסף\י מוצרים או קבע מחיר מכירה לקיימים כדי להמשיך" />
+      </NoProducts>
+    </Products>
+    <Lock Text="נעל" />
+    <Unlock Text="שחרר" />
+    <Item>
+      <Void>
+        <Authorization>
+          <Title Text="אנא הכנס\י סיסמה לביטול הפריט שנבחר" />
+        </Authorization>
+      </Void>
+      <ChangePrice>
+        <Minimum Text="ערך מינימלי: {0}" />
+      </ChangePrice>
+    </Item>
+    <QuickPayment Text="תשלום מהיר">
+      <Confirmation Text="בחרת &quot;{0}&quot; כסוג תשלום למכירה הנוכחית.\n\nהאם ברצונך להמשיך להשתמש בסוג התשלום שנבחר?" />
+    </QuickPayment>
+    <Discount Text="הנחה">
+      <Authorization Text="אנא הכנס\י סיסמה כדי להחיל הנחות" />
+      <Cart>
+        <Invalid Text="הנחה לעגלה לא חוקית">
+          <GreaterThenTotal Text="הסכום הכולל עם הנחות לא יכול להיות גדול יותר\nמסה''כ לתשלום" />
+        </Invalid>
+        <Cleared Text="הנחת העגלה אופסה">
+          <Info Text="מזוהה סך לא חוקי והנחה הוסרה מהזמנה.\n\nאנא בדוק\י את הפריטים שלך והחל שוב הנחה תקפה לפני שתמשיך לתשלום." />
+        </Cleared>
+      </Cart>
+      <Item>
+        <NotSelected Text="הפריט לא נבחר.\nכדי להחיל הנחה על פריט בודד, בחר\י פריט אחד מרשימת המכירות לפני פתיחת דו-שיח זה" />
+        <Invalid Text="הנחת פריט לא חוקית">
+          <GreaterThenTotal Text="סכום ההנחה לא יכול להיות גבוה ממחיר סה''כ הפריט" />
+        </Invalid>
+      </Item>
+    </Discount>
+  </Order>
+  <Closing Text="סיום יום">
+    <Users Text="עסקאות פתוחות">
+      <User>
+        <Total Text="סה''כ:" />
+      </User>
+      <Summary Text="עסקאות פתוחות" />
+      <NoReports Text="אין עסקאות פתוחות" />
+    </Users>
+    <Option Text="בחר אפשרות לפדיון">
+      <NotSelected Text="לא נבחרה אפשרות">
+        <Info Text="בחר\י אחד מהאפשרויות מעלה כדי להמשיך" />
+      </NotSelected>
+    </Option>
+    <User Text="הסרת מזומן">
+      <Completed Text="{0} מזומן הוסר בהצלחה." />
+    </User>
+    <Shift Text="הסרת מזומן מכל המשתמשים">
+      <Closed Text="הסרת מזומן מכל המשתמשים הסתיים בהצלחה" />
+    </Shift>
+    <BusinessDay Text="סגור קופה">
+      <Income Text="סה''כ יומי" />
+      <Closed Text="הקופה נסגרה בהצלחה" />
+      <Report Text="דוח" />
+      <CashIn Text="מזומן קיים" />
+      <CashOut Text="פדיון" />
+    </BusinessDay>
+    <Error>
+      <OpenOrders Text="הזמנות פתוחות">
+        <Users Text="יש עדיין משתמש\ים עם הזמנות פתוחות!\nעליך לסגור קודם את ההזמנות ואז לסגור את היום" />
+      </OpenOrders>
+    </Error>
+    <Print>
+      <User>
+        <Report>
+          <Total Text="סכום כללי" />
+          <User Text="משתמש">
+            <ClosedBy Text="קיבל" />
+          </User>
+          <Header Text="מזומן של המשתמש" />
+        </Report>
+      </User>
+      <DayClose>
+        <Report>
+          <Header Text="סגירת יום" />
+          <User>
+            <Total Text="סה''כ" />
+          </User>
+          <Summary Text="סיכום" />
+          <Total Text="סה''כ" />
+        </Report>
+      </DayClose>
+    </Print>
+    <History Text="היסטוריה">
+      <Info Text="השתמש\י ברשימה שלהלן כדי לבחור ולהדפיס עותק של כל דו&quot;ח Z שנוצר בעבר." />
+      <List>
+        <Reports Text="דוחות" />
+        <Number Text="מספר" />
+        <Date Text="תאריך" />
+      </List>
+      <Print Text="הדפס דוחות נבחרים">
+        <Unsupported Text="האפשרות לא נתמכת" />
+      </Print>
+    </History>
+  </Closing>
+  <User Text="משתמש">
+    <Profile Text="מידע משתמש">
+      <Info Text="פרופיל" />
+      <Edit Text="שינוי פרופיל או סיסמה" />
+      <Data>
+        <FirstName Text="שם פרטי" />
+        <LastName Text="שם משפחה" />
+        <Email Text="דוא''ל" />
+        <Password Text="סיסמה">
+          <Change Text="שינוי סיסמה">
+            <Password Text="סיסמה" />
+            <Confirm Text="אישור סיסמה" />
+            <ConfirmationFailed Text="השדה סיסמה ואישור הסיסמה אינם תואמים.\nבדוק\י את הסיסמה ונסה שוב." />
+            <InvalidPassword Text="הסיסמה כבר בשימוש. אנא השתמש בסיסמה אחרת." />
+          </Change>
+        </Password>
+        <Saved Text="הפרופיל השתנה בהצלחה" />
+      </Data>
+      <ShiftReport Text="דוח משתמש">
+        <Report Text="דוח משתמש">
+          <NoData Text="אין עסקאות פתוחות" />
+          <Total Text="סה''כ" />
+        </Report>
+        <ClockOut Text="פדיון" />
+      </ShiftReport>
+    </Profile>
+  </User>
+  <Security>
+    <Authorize Text="אימות משתמש" />
+    <Level Text="רמת הרשאה">
+      <Change Text="שנה רמת גישה לפעולה שנבחרה">
+        <AccessDenied Text="אין לך הרשאות מספיקות לשנות את רמת הגישה עבור פעולה זו.\n\nהמשתמש יכול להתאים את רמת הגישה ברמת הגישה הדרושה לביצוע הפעולה שנבחרה." />
+      </Change>
+    </Level>
+    <AccessDenied Text="הגישה נדחתה">
+      <Info Text="אין לך הרשאות מספיקות לפעולה שנבחרה." />
+    </AccessDenied>
+    <Key>
+      <Management Text="ניהול">
+        <Description Text="שולט בגישה לקטע הניהול" />
+      </Management>
+      <Settings Text="הגדרות">
+        <Description Text="שולט בגישה להגדרות" />
+      </Settings>
+      <VoidOrder Text="מחק הזמנה">
+        <Description Text="קובע אם מותר למשתמש לבטל את ההזמנה השלמה" />
+      </VoidOrder>
+      <VoidItem Text="מחק פריט">
+        <Description Text="קובע אם מותר למשתמש לבטל פריט בודד הזמנה פתוחה" />
+      </VoidItem>
+      <LockSale Text="נעל מכירה" />
+      <UnlockSale Text="שחרר נעילה" />
+      <SplitOrder Text="פצל הזמנה">
+        <Description Text="מאפשר למשתמש להעביר הזמנה מלאה או חלקית ממשתמש או שולחן אחר\ת (מספר הזמנה)" />
+      </SplitOrder>
+      <Discount Text="החל הנחה" />
+      <DeleteDocument Text="מחק מסמך" />
+      <ClosingDay Text="סיום יום">
+        <Description Text="שולט בגישה לסגירת יום" />
+      </ClosingDay>
+      <Refund Text="זיכוי">
+        <Description Text="מאפשר למשתמש להחזיר מכירה שנעשתה בעבר.\nפעולה זו תיצור מסמך &quot;החזר כספי&quot; חדש ויחזיר אוטומטית כמויות למלאי." />
+      </Refund>
+      <OpenOrders Text="צפה בכל ההזמנות הפתוחות">
+        <Description Text="קובע אם המשתמש רשאי לראות את כל ההזמנות הפתוחות.\nאפשרות זו זמינה כאשר תכניות &quot;רצפה&quot; מופעלות." />
+      </OpenOrders>
+      <SalesHistory Text="צפה בהיסטורית מכירות">
+        <Receipt Text="הדפסה חוזרת לקבלה">
+          <Description Text="קובע אם המשתמש רשאי להדפיס קבלה מהיסטוריית המכירות." />
+        </Receipt>
+      </SalesHistory>
+      <StartingCash Text="החל מזומנים">
+        <Description Text="שולט בגישה לסעיף מזומנים התחלתי" />
+      </StartingCash>
+      <UserProfile Text="פרופיל משתמש" />
+    </Key>
+  </Security>
+  <Payment>
+    <Details>
+      <Summary Text="פריטים" />
+      <Actions Text="פעולות">
+        <ShowItems Text="הצג פריטים" />
+      </Actions>
+      <Discount Text="הנחה">
+        <Options Text="אפשרות הנחה">
+          <DisallowedItems Text="ישנם פריטים שלא ניתן להקצות ישירות להנחה." />
+        </Options>
+        <Type>
+          <Percent Text="החל הנחה באחוזים" />
+          <Fixed Text="החל הנחה לפי סכום" />
+        </Type>
+        <Target>
+          <Item Text="הנחה לפריט">
+            <NotSelected Text="לא נבחר פריט\nנא לבחור פריט ורק לאחר מכן להחיל הנחה עבורו" />
+            <NotAllowed Text="אסור לספק הנחה לפריטים שבוטלו" />
+            <Info Text="החל הנחה על &quot;{0}&quot;" />
+          </Item>
+          <Cart Text="הנחה לעגלה">
+            <Info Text="החל הנחה לעגלה" />
+          </Cart>
+        </Target>
+        <Total Text="סה''כ" />
+        <Subtotal Text="סיכום ביניים:" />
+        <TotalDiscount Text="סה''כ הנחה:" />
+        <Clear Text="נקה הנחות">
+          <Completed Text="כל ההנחות הוסרו" />
+        </Clear>
+      </Discount>
+      <Split Text="הקפה">
+        <Rounds Text="בחר הקפה לתשלום">
+          <RoundNumber Text="הקפה:" />
+          <RoundTotal Text="שולם:" />
+          <SelectAll Text="בחר הכל" />
+          <SelectNone Text="הסתר הכל" />
+        </Rounds>
+      </Split>
+      <Customer Text="לקוח" />
+      <Total Text="סה''כ:" />
+      <TotalWithoutDiscount Text="סה&quot;כ ללא הנחה:" />
+      <Money Text="תשלום">
+        <Paid Text="שולם:">
+          <Hint>
+            <TypeAmount Text="הזן\י סכום ששולם" />
+            <TapToChange Text="הקש\י כאן בכדי להזין סכום ששולם" />
+          </Hint>
+        </Paid>
+        <Change Text="עודף:" />
+        <Balance Text="מאזן:" />
+      </Money>
+      <PaymentTypes Text="סוג תשלום:">
+        <Other Text="פיצול תשלום" />
+        <Invalid Text="סוג התשלום אינו מאושר">
+          <Fiscal Text="סוג התשלום שנבחר מכיל שילוב לא חוקי של סוג תשלום כספי ואי-כספי.\n\nאסור לשלב סוגי תשלומים פיזיים ולא פיזיים." />
+        </Invalid>
+      </PaymentTypes>
+      <NoItems Text="אין פריטים" />
+    </Details>
+    <NoPaymentSelected Text="סוג התשלום לא נבחר" />
+    <Add Text="הוסף סוג תשלום">
+      <Info Text="בחר\י בסוגי התשלום והסכומים הדרושים למכירה הנוכחית" />
+      <Amount Text="סכום לתשלום &quot;{0}&quot;" />
+    </Add>
+    <Selected Text="בחר\י סוג תשלום" />
+    <Customer>
+      <Required Text="נדרש צימוד לקוח">
+        <Info Text="סוג התשלום &quot;{0}&quot; מחייב לבחור את הלקוח. אנא בחר\י לקוח להמשיך." />
+      </Required>
+    </Customer>
+    <PaymentTypes>
+      <Validation>
+        <Change>
+          <Missing Text="סכום שגוי">
+            <Info Text="סוג תשלום זה אינו מאפשר שינוי. הזן\י סכום נכון או בחר\י סוג תשלום אחר." />
+          </Missing>
+        </Change>
+      </Validation>
+    </PaymentTypes>
+  </Payment>
+  <Customer>
+    <Search Text="חיפוש לקוח">
+      <Name Text="שם" />
+      <PIN Text="מספר מס" />
+      <LoyaltyCard Text="כרטיס מועדון" />
+      <Email Text="דוא''ל" />
+      <PhoneNumber Text="מספר טלפון" />
+    </Search>
+    <Selection Text="לקוח שנבחר">
+      <Details>
+        <PIN Text="מספר מס:" />
+        <Address Text="כתובת:" />
+        <Email Text="דוא''ל:" />
+        <PhoneNumber Text="מספר טלפון:" />
+      </Details>
+      <None Text="לא נבחר לקוח">
+        <Info Text="בחר\י לקוח מהרשימה" />
+      </None>
+      <Clear Text="נקה לקוחות שנבחרו">
+        <Completed Text="הוסרו הלקוחות שנבחרו" />
+      </Clear>
+    </Selection>
+    <New Text="לקוח חדש">
+      <Add Text="הוסף לקוח חדש" />
+      <Name Text="שם" />
+      <TaxNumber Text="מספר מס" />
+      <Address Text="כתובת" />
+      <City Text="עיר" />
+      <PostalCode Text="מיקוד" />
+      <Country Text="מדינה" />
+      <PhoneNumber Text="מספר טלפון" />
+      <Email Text="דוא''ל" />
+    </New>
+  </Customer>
+  <Navigation>
+    <Back>
+      <NotAllowed Text="האפשרות שנבחרה אינה אפשרית" />
+    </Back>
+  </Navigation>
+  <FloorPlans>
+    <Options Text="אפשרויות">
+      <Design Text="תכנון רצפה\הגדרת שולחן">
+        <FloorPlan>
+          <Add Text="הוספת &quot;רצפה&quot; חדשה" />
+          <Delete Text="&quot;רצפה&quot; הוסרה" />
+          <Rename Text="שינוי שם &quot;רצפה&quot;" />
+          <Name Text="שם" />
+        </FloorPlan>
+        <Table>
+          <Add Text="הוסף שולחן" />
+          <Delete Text="הסר שולחנות שנבחרו" />
+          <Name Text="שם" />
+          <Height Text="גובה" />
+          <Width Text="רוחב" />
+          <Size Text="גודל" />
+        </Table>
+      </Design>
+      <View>
+        <Orders Text="הצג הזמנות">
+          <Title Text="פתח הזמנות" />
+          <Order>
+            <Number Text="מספר הזמנה" />
+            <Total Text="סה''כ" />
+          </Order>
+          <NoOrders Text="אין הזמנות פתוחות. צור\י הזמנה חדשה באמצעות תוכנית &quot;רצפה&quot;." />
+        </Orders>
+        <FloorPlans Text="הצג &quot;רצפה&quot;" />
+      </View>
+    </Options>
+    <Save>
+      <Success Text="השינויים נשמרו בהצלחה." />
+      <Error Text="אירעה שגיאה במהלך השמירה\nהנתונים לא נשמרים.\nהודעת מערכת: {0}">
+        <Duplicates Text="נמצאו שמות שולחן כפולים.\n\n{0}\n\nשמות השולחן חייבים להיות ייחודיים. אנא תקן\י שמות טבלאות ונסה שוב.">
+          <Title Text="נמצאו כפילויות" />
+        </Duplicates>
+      </Error>
+    </Save>
+  </FloorPlans>
+  <Settings Text="הגדרות">
+    <Basic Text="הגדרות בסיסיות">
+      <Language Text="שפה" />
+      <Style Text="סגנון יישום">
+        <ColorScheme Text="ערכת צבעים" />
+      </Style>
+      <Layout Text="פריסה">
+        <TouchScreen Text="ויזואלי (מסך מגע)" />
+        <Keyboard Text="רגיל (מקלדת)" />
+      </Layout>
+      <VirtualKeyboard Text="אפשר מקלדת וירטואלית" />
+      <ProductSearch>
+        <Barcode Text="ברקוד" />
+        <Code Text="קוד" />
+        <Name Text="שם" />
+      </ProductSearch>
+      <ColorScheme>
+        <Dark Text="כהה" />
+        <Light Text="בהיר" />
+      </ColorScheme>
+      <NotificationPosition>
+        <Top Text="עליון" />
+        <Bottom Text="תחתון" />
+      </NotificationPosition>
+      <Notifications Text="הודעה">
+        <ShowClose Text="הצג כפתור סגירה" />
+        <ClickToClose Text="לחץ לסגירה" />
+        <SlideIn Text="כניסה מהצד" />
+        <Duration Text="זמן הודעה בשניות" />
+        <Position Text="מיקום" />
+      </Notifications>
+      <StartingCash Text="הצגת מזומנים בעת התחלת היישום" />
+      <BusinessDay Text="יום עסקים">
+        <SelecBusinessDay Text="בחר יום עסקים עם התחלת היישום" />
+      </BusinessDay>
+      <ButtonBar Text="בר תחתון">
+        <Info Text="בחר פעולות שיופיעו בסרגל הכפתורים העליון">
+          <VisualLayoutOnly Text="זמין עבור פריסה &quot;חזותית&quot; (מסך מגע) בלבד" />
+        </Info>
+        <IsCommentVisible Text="הערה" />
+        <IsDiscountVisible Text="הנחה" />
+        <IsNewSaleVisible Text="מכירה חדשה" />
+        <IsRefundVisible Text="זיכוי" />
+        <IsSearchVisible Text="חיפוש" />
+        <IsTransferVisible Text="העבר" />
+      </ButtonBar>
+      <WritingDirection Text="כיוון כתיבה">
+        <LeftToRight Text="משמאל לימין" />
+        <RightToLeft Text="מימין לשמאל" />
+      </WritingDirection>
+    </Basic>
+    <Order Text="הזמנה ותשלום">
+      <Standard Text="פעולות בסיסיות">
+        <AutoOrderNumber Text="השתמש ב&quot;רצפה&quot;" />
+        <PlaySound Text="צלילים" />
+        <ProductGrid Text="מספר עמודות \ שורות" />
+      </Standard>
+      <Users Text="משתמש">
+        <SingleUser Text="משתמש יחיד" />
+      </Users>
+      <Products Text="פריטים">
+        <DefaultQuantity Text="כמות פריטים ברירת מחדל" />
+        <DefaultSearch Text="ברירת מחדל לחיפוש">
+          <Options Text="הצג אפשרויות חיפוש" />
+        </DefaultSearch>
+        <DefaultDiscountType Text="סוג הנחה ברירת מחדל">
+          <Percent Text="אחוזים" />
+          <Fixed Text="מחיר" />
+        </DefaultDiscountType>
+        <RowPerItem Text="הפרד פריט לעמודה" />
+      </Products>
+      <Payment Text="תשלום">
+        <ShowSummary Text="הצג פריטים במסך תשלום" />
+        <FixedRows Text="מספר עמודות לסוגי תשלום" />
+        <IsSingleItemDiscountAllowed Text="אפשר הנחה לפריט" />
+        <QuickPaymentConfirmation Text="אישור קיצור דרך להנחה " />
+        <ShowPrintReceiptDialog Text="הצג מסך אפשרות שליחת קבלה" />
+        <DefaultDueDate Text="תאריך יעד ברירת מחדל">
+          <Days Text="ימים" />
+        </DefaultDueDate>
+        <MergeItemsOnPayment Text="אחד פריטים בקבלה" />
+      </Payment>
+      <Advanced>
+        <Show Text="הצגת אפשרויות מתקדמות" />
+        <Hide Text="הסתרת אפשרויות מתקתמות" />
+        <ResetOrderNumber Text="אפס מספרי הזמנות" />
+      </Advanced>
+    </Order>
+    <Products Text="הגדרות פריטים">
+      <TaxInclusivePrice Text="הצג והדפס פריטים עם מס כלול">
+        <Tooltip Text="אם נבחר, הפריטים יוצגו במכירות ויודפסו על גבי קבלה עם מחיר כולל מס." />
+      </TaxInclusivePrice>
+      <DiscountApplyRule Text="כלל החלת הנחה">
+        <BeforeTax Text="לפני מס" />
+        <AfterTax Text="אחרי חישוב מס" />
+      </DiscountApplyRule>
+    </Products>
+    <Print Text="אפשרויות הדפסה">
+      <PrinterSelection Text="בחירת מדפסת">
+        <Tour>
+          <Title Text="כוון הגדרות מדפסת" />
+          <Content Text="לחץ\י על כפתור &quot;הגדרות מדפסת&quot;\nכדי להגדיר ולהתאים אישית את המדפסת שלך" />
+        </Tour>
+      </PrinterSelection>
+      <Printers>
+        <KitchenTicket Text="הגדרת מטבח">
+          <Operation Text="הדפס פתקית מטבח" />
+        </KitchenTicket>
+        <Service Text="שירות מדפסת">
+          <Operation Text="הדפס הודעות שירות" />
+        </Service>
+        <Estimate Text="מדפסת מכירה נעולה">
+          <Operation Text="הדפסת מכירה נעולה" />
+        </Estimate>
+        <OrderSummary Text="הדפס הזמנה" />
+      </Printers>
+      <PrinterOptions Text="הגדרות מדפסות">
+        <Tooltip Text="כוון הגדרות מדפסות" />
+        <PrinterType Text="סוג מדפסת">
+          <A4 Text="A4" />
+          <EscPos Text="ESC/POS" />
+          <POS58 Text="POS 58" />
+          <POS58Rtl Text="POS 58 RTL" />
+          <POS80 Text="POS 80" />
+          <POS80Rtl Text="POS 80 RTL" />
+        </PrinterType>
+        <NumberOfCopies Text="מספר העתקים" />
+        <PaperWidth Text="כמות תווים לשורה אחת " />
+        <Header Text="חלק עליון" />
+        <Footer Text="חלק תחתון" />
+        <FeedLines Text="קווי הזנה" />
+        <CutPaper Text="מדפסת חיתוך" />
+        <PrintBitmap Text="הדפסת רקע" />
+        <RichFormatting Text="עיצוב טקסט עשיר" />
+        <Alignment>
+          <Left Text="יישור לשמאל" />
+          <Center Text="יישור למרכז" />
+        </Alignment>
+        <Revert Text="חזור לשינויים">
+          <Completed Text="הוחלו הגדרות ששמרו בעבר" />
+        </Revert>
+        <PrintTestPage Text="הדפס עמוד נסיון" />
+        <Advanced Text="מתקדם">
+          <CodePage Text="קוד עמוד" />
+          <CharacterSet Text="סט תווים">
+            <None Text="ללא (מדפסת ברירת מחדל)" />
+            <USA Text="ארה''ב" />
+            <France Text="צרפת" />
+            <Germany Text="גרמניה" />
+            <UK Text="אנגליה" />
+            <DenmarkI Text="דנמרק" />
+            <Sweden Text="שוודיה" />
+            <Italy Text="איטליה" />
+            <SpainI Text="ספרד" />
+            <Japan Text="יפן" />
+            <Norway Text="נרווגיה" />
+            <DenmarkII Text="דנמרק 2" />
+            <SpainII Text="ספרד 2" />
+            <LatinAmerica Text="אמריקה לטינית" />
+            <Korea Text="קוריאה" />
+            <SloveniaCroatia Text="סלובניה / קרואטיה" />
+            <China Text="סין" />
+            <Vietnam Text="ויאטנם" />
+            <Arabia Text="ערב הסעודית" />
+          </CharacterSet>
+        </Advanced>
+        <Unavailable Text="אפשרויות נוספות אינן זמינות לסוג המדפסת שנבחר.\nכדי לראות אפשרויות מדפסת נוספות, בחר\י סוג מדפסת אחר.">
+          <Info Text="למידע נוסף על בחירת סוג המדפסת והגדרת מדפסת קבלה." />
+        </Unavailable>
+        <Margin Text="שוליים (במילימטרים)">
+          <Top Text="עליון" />
+          <Right Text="ימין" />
+          <Bottom Text="תחתון" />
+          <Left Text="שמאל" />
+        </Margin>
+        <PrintBarcode Text="הדפס ברקוד" />
+        <BasicSettings Text="הגדרות בסיסיות" />
+      </PrinterOptions>
+    </Print>
+    <AddOns Text="מודולים רשומים">
+      <Modules Text="מודולים" />
+      <Plugins Text="פלאג-אין" />
+    </AddOns>
+    <WeighingScale Text="הגדרות ברקוד">
+      <VariableMeasureBarcode Text="משקל">
+        <Enabled Text="אפשר משקל" />
+        <Prefix Text="שתי ספרות / קידומת ראשונות" />
+        <ProductCodeLength Text="מספר הספרות עבור קוד המוצר" />
+        <DecimalPlaces Text="מספר המקומות העשרוניים" />
+        <TrimZeros Text="הסר אפסים מקוד המוצר (אפס חיתוך)" />
+        <IsUsingPriceBarcode Text="מחיר עפ''י משקל ולא לפי כמות">
+          <Info Text="מאזני שקילה מסוימים מדפיסים את המחיר הכולל במקום שנמדד את הכמות. אם אפשרות זו מופעלת, הכמות תתבסס על מחיר המוצר והסכום הכולל מהמשקל." />
+        </IsUsingPriceBarcode>
+      </VariableMeasureBarcode>
+    </WeighingScale>
+    <Email Text="הגדרות דוא''ל">
+      <General>
+        <Host Text="Host" />
+        <Port Text="Port" />
+        <EmailAddress Text="כתובת דוא&quot;ל" />
+        <DisplayName Text="שם תצוגה" />
+        <Password Text="סיסמה" />
+        <SSL Text="SSL enabled" />
+        <Defaults Text="ערכי ברירת המחדל של הודעת דוא&quot;ל">
+          <Subject Text="נושא" />
+          <Message Text="הודעה" />
+          <Description Text="אם תחליט\י להשאיר שדות אלה ריקים, ישמש הנושא וההודעה המיוצרים אוטומטית ללקוח. אתה יכול לשנות אותם לפני שליחת ההודעה." />
+        </Defaults>
+      </General>
+    </Email>
+    <About Text="אודות">
+      <HelpCenter Text="פתח את מרכז העזרה">
+        <Info Text="עבור אל help.aronium.com לפתיחת בקשת תמיכה." />
+      </HelpCenter>
+      <ApplicationDirectory Text="מדריך נתוני יישומים">
+        <Info Text="מיקום בו מאוחסנים הגדרות יישום, קבצי יומן ופריטים אחרים הקשורים ליישום." />
+        <Open Text="פתח את ספריית נתוני היישומים" />
+      </ApplicationDirectory>
+      <Database Text="מסד נתונים">
+        <Open Text="פתיחת מיקום מסד נתונים" />
+        <Backup Text="גיבוי מסד נתונים">
+          <Success Text="הגיבוי הושלם בהצלחה">
+            <Path Text="נתיב: {0}" />
+            <UnableToCopy Text="גיבוי נוצר במיקום ברירת המחדל. לא ניתן להעתיק קובץ גיבוי לספרייה שנבחרה." />
+          </Success>
+          <Error Text="שגיאה ביצירת גיבוי בסיס נתונים.\nלפרטים נוספים, ראה יומנים." />
+        </Backup>
+      </Database>
+      <Update>
+        <AutoUpdate Text="עדכונים אוטומטיים" />
+        <SendUsageData Text="עזור לנו לשפר על ידי שליחת נתוני שימוש אנונימיים" />
+        <Check Text="בדוק עדכונים">
+          <Checking Text="בודק עדכונים ... אנא המתן ..." />
+          <Downloading Text="מוריד עדכון ... אנא המתן ..." />
+          <UpToDate Text="Aronium מעודכן." />
+          <Available Text="גרסה חדשה זמינה">
+            <Run Text="לחץ כאן להתקנה כעת." />
+          </Available>
+          <Error>
+            <NoConnection Text="לא יכול להתחבר לשרת.\nאנא בדוק את חיבור האינטרנט שלך ונסה שוב." />
+          </Error>
+        </Check>
+        <Ready Text="עדכון זמין">
+          <Install Text="לחץ\י כאן לעדכון כעת" />
+          <Description Text="גרסה חדשה מוכנה להתקנה.\nלמידע נוסף בקר בדף הערות העדכון על ידי לחיצה על &quot;מה חדש?&quot; כפתור למטה.">
+            <Install Text="לחץ\י על כפתור &quot;התקן&quot; כדי להתקין את העדכונים האחרונים." />
+          </Description>
+          <Versions>
+            <Current Text="הגרסה הנוכחית:" />
+            <New Text="גרסה חדשה:" />
+          </Versions>
+          <Ignore Text="בטל את העדכון" />
+          <ReleaseNotes Text="מה חדש?" />
+          <Postpone Text="לא עכשיו" />
+          <Run Text="התקן" />
+        </Ready>
+      </Update>
+      <Account Text="חשבון">
+        <Email Text="הקלד את הדוא''ל שלך" />
+        <Change Text="שינוי" />
+      </Account>
+    </About>
+    <Authorization>
+      <Title Text="אנא הכנס\י סיסמה כדי לגשת להגדרות היישום" />
+    </Authorization>
+    <Database Text="מסד נתונים">
+      <AutoBackup Text="גיבוי אוטומטי">
+        <Enabled Text="אפשר גיבוי אוטומטי" />
+        <BackupOnStart Text="גבה מסד נתונים בכניסה ליישום" />
+        <BackupOnClose Text="גבה מסד נתונים ביציאה מהיישום" />
+        <DirectoryPath Text="מיקום גיבוי">
+          <Choose Text="בחירת מיקום לגיבוי" />
+          <Info Text="בחר את מיקום הגיבוי שלך. קבצי גיבוי אוטומטיים יישמרו בספרייה שנבחרה." />
+        </DirectoryPath>
+        <RemoveOldFiles Text="הסר גיבויים ישנים">
+          <DaysToKeep Text="ימים למחיקת גיבויים ישנים" />
+        </RemoveOldFiles>
+      </AutoBackup>
+    </Database>
+    <RestartRequired Text="יש להפעיל מחדש את היישום כדי שינויים אלו ייכנסו לתוקף.">
+      <Title Text="נדרש הפעלה מחדש" />
+    </RestartRequired>
+  </Settings>
+  <Document>
+    <Create>
+      <Error Text="אירעה שגיאה ביצירת המסמך.\nבבקשה נסה\י שוב." />
+    </Create>
+  </Document>
+  <Invoices Text="צפה בהיסטוריית מכירות">
+    <Title Text="היסטוריית מכירות" />
+    <Documents Text="מסמכים">
+      <Customer Text="לקוח">
+        <Change Text="שנה לקוח">
+          <Success Text="שינוי לקוח בוצע בהצלחה" />
+        </Change>
+      </Customer>
+      <CashRegister>
+        <All Text="כל רישומי הקופה" />
+        <Select Text="בחר קופה" />
+      </CashRegister>
+      <Print Text="הדפס">
+        <CashReceipt Text="קבלה">
+          <PrinterNotFound Text="מדפסת השירות לא נבחרה או מושבתת. בדוק\י את הגדרות המדפסת ונסה\י שוב." />
+          <Address Text="כתובת" />
+          <VatNumber Text="מספר מס" />
+          <Date Text="תאריך" />
+          <ReceiptNumber Text="מספר קבלה" />
+          <Customer Text="לקוח" />
+          <Total Text="סה''כ" />
+          <Tax Text="מס" />
+          <TotalAmount Text="סה''כ" />
+          <FiscalReceiptNumber Text="מספר קבלה פיזית" />
+          <Signature Text="חתימה" />
+          <Stamp Text="נ.ב" />
+          <Authorization>
+            <Title Text="נא להזין סיסמה לצורך הדפסת קבלה" />
+          </Authorization>
+        </CashReceipt>
+        <Pdf Text="PDF שמור ">
+          <Success Text="מסמך &quot;{0}&quot; נשמר" />
+        </Pdf>
+        <Error Text="שגיאה בהדפסת מסמך">
+          <NoService Text="שירות ההדפסה אינו רשום" />
+        </Error>
+        <Refund Text="זיכוי" />
+        <Preview Text="תצוגה לפני הדפסה" />
+      </Print>
+      <Delete Text="מחק">
+        <Confirmation>
+          <Title Text="מחק מסמך" />
+          <Message Text="האם למחוק את &quot;{0}&quot; ?" />
+        </Confirmation>
+        <Unauthorized Text="אין לך הרשאה למחיקת מסמכים" />
+      </Delete>
+      <List Text="מסמכים">
+        <Document>
+          <Number Text="מספר" />
+          <DocumentType Text="סוג מסמך" />
+          <Warehouse Text="מחסן" />
+          <Customer Text="לקוח">
+            <Refresh Text="רענן רשומת לקוחות">
+              <Complete Text="הלקוחות נטענו מחדש" />
+            </Refresh>
+          </Customer>
+          <Vendor Text="ספק">
+            <Refresh Text="רענן את רשימת הספקים">
+              <Complete Text="הספקים נטענו מחדש" />
+            </Refresh>
+          </Vendor>
+          <ExternalDocument Text="מסמך חיצוני" />
+          <Date Text="תאריך" />
+          <DueDate Text="תאריך להגשה" />
+          <StockDate Text="תאריך מלאי" />
+          <DateCreated Text="נוצר" />
+          <DateUpdated Text="עודכן" />
+          <CashRegister Text="נקודת מכירה" />
+          <OrderNumber Text="מספר הזמנה" />
+          <User Text="משתמש" />
+          <PaymentType Text="סוג תשלום" />
+          <Discount Text="הנחה" />
+          <Paid Text="שולם" />
+          <Unpaid Text="לא שולם" />
+          <Total Text="סה''כ">
+            <Summary>
+              <Subtotal Text="סיכום ביניים:" />
+              <TotalBeforeTax Text="סה''כ לפני חישוב מס:" />
+              <Tax Text="מס:" />
+              <Total Text="סה''כ:" />
+              <Discount Text="הנחה:">
+                <DiscountApplyRule Text="החלת הנחה לפני או אחרי מס.\nבחירה זו תשמש לפריטים והנחות לעגלות.">
+                  <BeforeTax Text="החל הנחה לפני מס" />
+                  <AfterTax Text="החל הנחה לאחר מס" />
+                </DiscountApplyRule>
+                <DiscountType Text="בחר סוג הנחה">
+                  <Percent Text="אחוז הנחה" />
+                  <Fixed Text="כמות ההנחה" />
+                </DiscountType>
+              </Discount>
+            </Summary>
+          </Total>
+          <Payments Text="תשלומים">
+            <Add Text="הוסף תשלום" />
+            <PaymentType Text="סוג תשלום" />
+            <Amount Text="סך" />
+            <Date Text="תאריך" />
+            <NewPayment Text="תשלום חדש" />
+            <Delete Text="מחק תשלום">
+              <Confirmation Text="האם את\ה בטוח\ה שברצונך למחוק את התשלום &quot;{0}&quot;?" />
+            </Delete>
+            <Totals>
+              <PaymentsTotal Text="סה''כ תשלומים:" />
+              <DocumentTotal Text="סה''כ מסמכים:" />
+            </Totals>
+          </Payments>
+          <Items Text="פריטי מסמך">
+            <Item>
+              <ProductCode Text="קוד" />
+              <Product Text="שם" />
+              <MeasurementUnit Text="יחידת מידה" />
+              <Quantity Text="כמות" />
+              <PriceNoTax Text="מחיר לפני מס" />
+              <Price Text="מחיר" />
+              <Tax Text="מס">
+                <Add Text="הוסף מיסים">
+                  <Tooltip Text="הוסף מס לפריט זה" />
+                </Add>
+                <Remove>
+                  <Tooltip Text="הסר מס מהפריט הזה" />
+                </Remove>
+              </Tax>
+              <Discount Text="הנחה">
+                <DiscountType Text="בחר סוג הנחה">
+                  <Percent Text="אחוז הנחה" />
+                  <Fixed Text="סך הנחה" />
+                </DiscountType>
+                <DiscountApplyRule>
+                  <BeforeTax Text="לפני חישוב מס" />
+                  <AfterTax Text="לאחר חישוב מס" />
+                </DiscountApplyRule>
+              </Discount>
+              <TotalBeforeTax Text="סה''כ לפני מס" />
+              <Total Text="סה''כ" />
+              <TotalBeforeDiscount Text="סה''כ לפני הנחה" />
+              <Error>
+                <Taxes Text="נמצאו מיסים כפולים. שם מס (&quot;{0}&quot;).\nבחר\י מיסים תקפים ונסה שוב." />
+              </Error>
+            </Item>
+            <Delete Text="מחק את פריט המסמך">
+              <Confirmation Text="האם את\ה בטוח\ה שברצונך למחוק את &quot;{0}&quot;?" />
+            </Delete>
+          </Items>
+          <Print>
+            <UnsavedChanges Text="המסמך מכיל שינויים שלא נשמרו. האם ברצונך לשמור את השינויים לפני ההדפסה?">
+              <Title Text="שינויים שלא נשמרו" />
+            </UnsavedChanges>
+          </Print>
+        </Document>
+      </List>
+      <Count Text="ספירת מסמכים:" />
+      <Total Text="סכום כללי:" />
+      <AllUsers Text="הצג את כל המשתמשים" />
+      <BulkActions Text="פעולות בתפזורת">
+        <Delete Text="מחק מסמכים שנבחרו">
+          <Confirmation>
+            <Title Text="מחק מסמכים שנבחרו" />
+            <Message Text="האם למחוק את המסמכים שבחרת?" />
+          </Confirmation>
+          <Message Text="מוחק מסמכים נא להמתין..." />
+        </Delete>
+        <UpdatePaidStatus>
+          <Message Text="מעדכן מצב תשלום נא להמתין..." />
+        </UpdatePaidStatus>
+      </BulkActions>
+    </Documents>
+    <Authorization>
+      <Title Text="נא להזין סיסמה לצפייה בהיסטוריית מכירות" />
+    </Authorization>
+  </Invoices>
+  <Feedback Text="משוב ">
+    <Title Text="עזור לנו לשפר את Aronium" />
+    <Description Text="תודה שהקדשת מזמנך לספק הצעה.\nהמשוב שלך עוזר לנו לשפר את יישום Aronium.">
+      <Contact Text="אל תהסס לפנות אלינו בכל עת ב" />
+    </Description>
+    <Message>
+      <Name Text="שם" />
+      <Email Text="כתובת דוא&quot;ל" />
+      <Subject Text="נושא" />
+      <Message Text="הודעה" />
+      <Rating Text="דירוג כללי" />
+    </Message>
+    <Send Text="שלח משוב " />
+    <Confirmation>
+      <Title Text="תודה לך!" />
+      <Message Text="המשוב שלך נשלח. אנו נשתמש בו כדי לשפר את Aronium." />
+    </Confirmation>
+  </Feedback>
+  <Guide>
+    <Menu>
+      <Title Text="פתח\י את התפריט הראשי" />
+      <Content Text="הקש\י כאן לפתיחת גישה לניהול המערכת" />
+    </Menu>
+    <Layout>
+      <SearchBox Text="חפש מוצרים לפי שם, ברקוד או קוד.">
+        <Title Text="חיפוש פריטים" />
+      </SearchBox>
+    </Layout>
+    <Dismiss>
+      <Title Text="דחה את הסיור המודרך" />
+      <Confirmation Text="האם לדחות את הסיור המודרך?" />
+    </Dismiss>
+  </Guide>
+  <Layout>
+    <Visual>
+      <Item>
+        <Edit Text="ערוך מראה חזותי">
+          <Color Text="צבע" />
+          <Image Text="תמונה">
+            <Select Text="בחר תמונה" />
+            <Clear Text="מחק תמונה" />
+          </Image>
+        </Edit>
+      </Item>
+    </Visual>
+  </Layout>
+  <OpenOrders Text="הצג מכירות פתוחות">
+    <Total Text="סכום כללי" />
+    <NoOrders Text="אין מכירות פתוחות" />
+    <Authorization>
+      <Title Text="אנא הכנס סיסמה כדי לגשת למכירות פתוחות" />
+    </Authorization>
+  </OpenOrders>
+  <StartingCash Text="כניסה\יציאת מזומנים">
+    <Type>
+      <CashIn Text="הוסף מזומן" />
+      <CashOut Text="הסר מזומן" />
+    </Type>
+    <Amount Text="כמות">
+      <Reason Text="פירוט">
+        <Tooltip Text="הזן\י את הסיבה להוספה או הסרה של מזומנים ..." />
+      </Reason>
+    </Amount>
+    <Hide Text="אל תציג שוב" />
+    <Entries Text="מזומן התווסף">
+      <NoDescription Text="&lt;אין פירוט&gt;" />
+      <NoEntries Text="אין רישום" />
+    </Entries>
+    <Saved Text="מזומני פתיחה נשמרו בהצלחה" />
+  </StartingCash>
+  <Account>
+    <FirstName Text="שם פרטי" />
+    <LastName Text="שם משפחה" />
+    <Email Text="דוא''ל" />
+    <Password Text="סיסמה">
+      <Confirmation Text="אישור סיסמה">
+        <Error Text="סיסמה ואישור סיסמה חייבות להיות תואמות" />
+      </Confirmation>
+    </Password>
+    <License>
+      <Info Text="מידע רשיון">
+        <Data Text="תאריך רשיון">
+          <LicensedTo Text="רשיון עבור" />
+          <Email Text="דוא&quot;ל" />
+          <StoreId Text="מספר חנות" />
+          <Id Text="מספר רשיון" />
+        </Data>
+        <Products Text="פריטים">
+          <Id Text="מספר" />
+          <Name Text="שם" />
+          <ValidUntil Text="בתוקף עד" />
+          <LicenseType Text="סוג רשיון" />
+        </Products>
+        <NoLicense Text="אין רישיון המשויך למערכת זו">
+          <Info Text="בקר\י באתר www.aronium.com למידע נוסף על תכונות פרימיום" />
+        </NoLicense>
+        <Refresh Text="רענן רשיון">
+          <Success Text="רשיון ירד בהצלחה" />
+        </Refresh>
+        <Copy Text="העתק רשיון לקובץ" />
+      </Info>
+      <Login Text="התחבר לחשבונך">
+        <NotRegistered Text="לא רשום\ה?">
+          <SignUp Text="הירשם\י עכשיו!" />
+        </NotRegistered>
+        <SignIn Text="התחבר\י" />
+      </Login>
+      <Register Text="רשום חשבון חדש">
+        <AlreadyRegistered Text="כבר יש לך חשבון?">
+          <SignIn Text="היכנס\י עכשיו!" />
+        </AlreadyRegistered>
+        <CreateAccount Text="צור חשבון" />
+        <Store Text="צור חנות">
+          <Details Text="בוא\י נקים את החנות שלך,\nנתוני החברה שלך יעודכנו והרישיון ייווצר אוטומטית.">
+            <CompanyName Text="שם חברה" />
+            <Address Text="כתובת" />
+            <ZipCode Text="מיקוד" />
+            <TaxNumber Text="מספר מס" />
+            <City Text="עיר" />
+            <Country Text="ארץ" />
+          </Details>
+          <Create Text="צור חנות וייצר רישיון" />
+        </Store>
+        <Success Text="חשבון נוצר בהצלחה" />
+      </Register>
+      <Load Text="טען רישיון מהקובץ" />
+      <InvalidLicense Text="רישיון לא חוקי או חסר">
+        <Info Text="לפריט אחד או יותר חסר רישיון תקף.">
+          <SignInOrLoadFromFile Text="אנא התחבר\י לחשבונך כדי לחדש את הרישיון שלך או לטעון את הרישיון הקיים מהקובץ." />
+        </Info>
+      </InvalidLicense>
+    </License>
+    <Error>
+      <ExistingAccount Text="משתמש עם כתובת דוא&quot;ל שצוינה כבר קיים." />
+      <Unauthorized Text="שם משתמש או סיסמא אינם נכונים. אנא בדוק\י את האישורים שלך ונסה שוב." />
+    </Error>
+  </Account>
+  <Validations>
+    <Info Text="ראה פרטים נוספים וכיצד ניתן לטפל בנושא זה בכתובת">
+      <Community Text="הקהילה שלנו" />
+      <Or Text="או" />
+      <ContactSupport Text="צרו קשר עם התמיכה שלנו" />
+    </Info>
+    <Cancel Text="סגור את היישום" />
+    <Confirm Text="אני מבין\ה, המשך עם התחלת היישום" />
+    <Print>
+      <Warning>
+        <CustomTemplates Text="שמנו לב שאת\ה משתמש\ת בתבניות קבלה או חשבונית בהתאמה אישית. עקב\י אחר שינויים במבנה מסד הנתונים במהדורה זו, יתכן ותבניות אלה אינן עובדות יותר.\nתוכל\י להשתמש בתבניות ברירת מחדל, כך שהפעולות היומיומיות שלך לא ייחסמו.\n\nאם את\ה עדיין רוצה להשתמש בתבניות ישנות, עליך להפסיק את הפעלת האפליקציה כעת ולחזור לגירסה הישנה.">
+          <Title Text="אזהרה! הדפסה מותאמת אישית כנראה לא תפעל!" />
+        </CustomTemplates>
+      </Warning>
+    </Print>
+    <Refund>
+      <Invalid Text="ההחזר אינו תקף" />
+    </Refund>
+  </Validations>
+  <Print>
+    <Error Text="אירעה שגיאת הדפסה">
+      <CustomTemplate Text="זוהתה שגיאה בתבנית המותאמת אישית!\nאנא צור\י קשר עם התמיכה של Aronium כדי לפתור בעיות פוטנציאליות בתבנית ההדפסה המותאמת אישית שלך.">
+        <Continue Text="האם ברצונך להמשיך להדפיס באמצעות תבנית ברירת מחדל?" />
+      </CustomTemplate>
+    </Error>
+  </Print>
+</Language>

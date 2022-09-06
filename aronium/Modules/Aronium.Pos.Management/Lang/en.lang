@@ -1,0 +1,786 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <Management Text="Management">
+    <NoItems Text="There are no management modules available for user {0}.\nPlease log in with a user that has access to at least one management module to continue." />
+    <Dashboard Text="Dashboard">
+      <NoData Text="No data to display" />
+      <MonthlySales Text="Monthly Sales">
+        <Description Text="Sales data grouped by month" />
+        <Month Text="Month" />
+        <Legend Text="Legend" />
+        <CurrentYear Text="Current year" />
+        <TotalSales Text="Total Sales">
+          <TopMonth Text="Top performing month:" />
+        </TotalSales>
+        <Year Text="Year">
+          <Previous Text="Previous year" />
+          <Next Text="Next year" />
+        </Year>
+      </MonthlySales>
+      <HourlySales Text="Hourly Sales">
+        <Description Text="Sales data grouped by hours" />
+        <Hour Text="Hour" />
+        <Options>
+          <Amount Text="Amount" />
+          <Count Text="Count" />
+        </Options>
+      </HourlySales>
+      <TopProducts Text="Top Products">
+        <Product Text="Product" />
+        <Total Text="Total" />
+      </TopProducts>
+      <TopProductGroups Text="Top Product Groups">
+        <Description Text="Top selling product groups in selected period" />
+        <Group Text="Product group" />
+      </TopProductGroups>
+      <TopCustomers Text="Top Customers">
+        <Description Text="Lead customers in selected period (top 5)" />
+      </TopCustomers>
+      <PeriodicReports Text="Periodic Reports">
+        <SelectPeriod Text="Select reporting period" />
+      </PeriodicReports>
+    </Dashboard>
+    <Products Text="Products">
+      <Loading Text="Loading products..." />
+      <LearnMore Text="Learn more about products" />
+      <Taxes Text="Tax rates">
+        <LearnMore Text="Learn more about tax rates"/>
+        <New Text="New tax rate" />
+        <Switch Text="Switch taxes">
+          <OldTax Text="Old tax" />
+          <NewTax Text="New tax" />
+          <Tooltip Text="Replace tax for all products" />
+          <Info Text="Use this form to replace taxes for all products.\n\nSelect old tax you wish to replace with new tax and click &quot;Replace&quot; button below." />
+          <Replace Text="Replace" />
+          <Error Text="Error occurred while trying to replace taxes.\nSystem message: {0}" />
+          <Success Text="Taxes replaced successfully!" />
+        </Switch>
+        <Edit>
+          <Title Text="Edit tax &quot;{0}&quot;" />
+        </Edit>
+        <Delete>
+          <Title Text="Delete tax rate" />
+          <Confirmation Text="Are you sure you want to delete tax rate &quot;{0}&quot;?" />
+          <Error Text="Error occured while trying to delete tax rate. Make sure tax rate is not in use and try again." />
+        </Delete>
+        <Tax>
+          <ReadOnly Text="Selected tax exists in documents and cannot be modified" />
+          <Code Text="Code" />
+          <Name Text="Name" />
+          <Rate Text="Rate" />
+          <Fixed Text="Fixed" />
+          <TaxOnTotal Text="Tax on total" />
+          <Enabled Text="Enabled" />
+        </Tax>
+        <Onboarding>
+          <Title Text="Tax rates" />
+          <Info Text="Enter tax rates used for products definitions, if any.\nThere must be at least one tax rate in the system." />
+          <AddMore Text="Save &amp; add more">
+            <Error Text="Error occured while adding new tax rate. Check your data and try again" />
+            <Name Text="Tax name (e.g. &quot;No tax&quot;)" />
+          </AddMore>
+          <Existing Text="Existing tax rates">
+            <NoItems Text="No tax rates defined. Add at least one tax rate to be able to add new products.">
+              <AddDefault Text="Add default tax rate" />
+            </NoItems>
+          </Existing>
+        </Onboarding>
+        <NoTaxes Text="No taxes">
+          <Add Text="Add new tax" />
+        </NoTaxes>
+      </Taxes>
+      <New Text="New product">
+        <Product Text="Add new product" />
+        <Or Text="or" />
+        <Group Text="new product group" />
+      </New>
+      <Delete Text="Delete product" />
+      <Edit Text="Edit product" />
+      <Search Text="Search products">
+        <Result Text="Result" />
+        <Empty Text="No results" />
+      </Search>
+      <Groups Text="Product groups">
+        <Root Text="Products" />
+        <Empty Text="Selected group contains no products">
+          <Info Text="Add product to selected group" />
+        </Empty>
+      </Groups>
+      <Group>
+        <Details Text="Details" />
+        <New Text="New group" />
+        <Edit Text="Edit group">
+          <Title Text="Edit group &quot;{0}&quot;" />
+          <Error>
+            <InvalidParentGroup Text="Invalid parent group" />
+          </Error>
+        </Edit>
+        <Name Text="Name" />
+        <Color Text="Color" />
+        <Image Text="Image">
+          <Browse Text="Browse">
+            <Info Text="Select product group image from your computer" />
+          </Browse>
+          <Clear Text="Clear">
+            <Info Text="Remove product group image" />
+          </Clear>
+        </Image>
+        <Delete Text="Delete group">
+          <Title Text="Delete product group" />
+          <Confirmation Text="Are you sure you want to delete group &quot;{0}&quot;?" />
+          <Error Text="Error occurred while trying to delete the group.\nSystem Message: {0}">
+            <DataViolation Text="Selected group can not be deleted.\n\nMake sure child product do not exists in documents, promotions or any sales and try again." />
+          </Error>
+        </Delete>
+        <Saved Text="The group successfully saved" />
+      </Group>
+      <Product>
+        <Edit Text="Edit product &quot;{0}&quot;" />
+        <Details Text="Details" />
+        <Name Text="Name" />
+        <Code Text="Code" />
+        <Barcode Text="Barcode">
+          <Generate Text="Generate barcode" />
+        </Barcode>
+        <MeasurementUnit Text="Unit of measurement" />
+        <Taxes Text="Taxes">
+          <Add Text="Add tax to product">
+            <Tooltip Text="Add tax rate to product" />
+          </Add>
+          <Remove>
+            <Tooltip Text="Remove this tax rate" />
+          </Remove>
+          <NoTaxes>
+            <Info Text="No taxes found.\nAdd taxes so you can assign one to a product" />
+          </NoTaxes>
+        </Taxes>
+        <SalePriceBeforeTax Text="Sale price before tax" />
+        <SalePrice Text="Sale price" />
+        <IsTaxIncluded Text="Price includes tax" />
+        <Group Text="Group" />
+        <IsEnabled Text="Active" />
+        <IsService Text="Service (not using stock)" />
+        <IsDiscountAllowed Text="Discount allowed" />
+        <IsPriceChangeAllowed Text="Price change allowed" />
+        <IsUsingDefaultQuantity Text="Default quantity" />
+        <AgeRestriction Text="Age restriction">
+          <Tooltip Text="Minimum age required to buy this product" />
+          <Years Text="year(s)" />
+          <Validation>
+            <Message Text="This product is an age restricted product.\nPlease confirm that the customer is permitted to purchase the item.">
+              <Title Text="Age restricted product" />
+              <BornBefore Text="Born on or before:" />
+            </Message>
+            <Confirm Text="Confirm" />
+          </Validation>
+        </AgeRestriction>
+        <Description Text="Description" />
+        <Prices Text="Price &amp; tax" />
+        <Cost Text="Cost">
+          <BeforeTax Text="(before tax)" />
+          <Disabled Text="Why can't I enter the cost price?" />
+        </Cost>
+        <Markup Text="Markup" />
+        <ImageAndColor Text="Image &amp; color">
+          <Image Text="Image">
+            <Browse Text="Browse">
+              <Info Text="Select product image from your computer" />
+            </Browse>
+            <Clear Text="Clear">
+              <Info Text="Remove product image" />
+            </Clear>
+          </Image>
+          <Color Text="Color" />
+        </ImageAndColor>
+        <Comments Text="Comments">
+          <Info Text="Comments will be printed on kitchen tickets." />
+          <Note Text="Enter comment..." />
+          <Add Text="Add" />
+          <Error>
+            <ExistingComment Text="Note already exists" />
+          </Error>
+        </Comments>
+        <DateCreated Text="Created" />
+        <DateUpdated Text="Updated" />
+        <Saved>
+          <Created Text="Product created successfully" />
+          <Updated Text="Product updated successfully" />
+        </Saved>
+        <Delete Text="Deleting product">
+          <Confirmation Text="Are you sure you want to delete the product &quot;{0}&quot;?" />
+          <Error Text="Error occurred while trying to delete product.\nSystem Message: {0}" />
+          <DataViolation Text="Unable to delete product.\nMake sure product does not exists in documents and try again." />
+        </Delete>
+        <Error>
+          <Invalid Text="Unable to save product as input is not valid. Plesae check for error messages and try again." />
+          <Code Text="Product with specified code already exists (&quot;{0}&quot;).\nEnter unique product code and try again." />
+          <Barcode Text="Product with specified barcode already exists (&quot;{0}&quot;).\nEnter unique barcodes and try again." />
+          <Taxes Text="Duplicate taxes found. Tax name (&quot;{0}&quot;).\nPlease select valid taxes and try again." />
+        </Error>
+      </Product>
+      <Export Text="Export">
+        <NoServices Text="No export services available." />
+        <Success Text="Export completed successfully." />
+        <Error Text="Error occured. Please try again." />
+        <Select Text="Select export type" />
+      </Export>
+      <Onboarding>
+        <Import Text="Import products from CSV file">
+          <SelectFile Text="Select file">
+            <Description Text="Select CSV file containing your products." />
+          </SelectFile>
+          <Validate Text="Validate">
+            <Description Text="Validate CSV content and products for import." />
+            <Error Text="Error validating CSV file. Check your data and try again." />
+            <Success Text="Products are ready for import. Product count: {0}" />
+          </Validate>
+          <ImportProducts Text="Import">
+            <Description Text="Click to import products from selected CSV file." />
+          </ImportProducts>
+          <NoItems Text="Nothing to import" />
+          <Completed Text="Import completed successfully!">
+            <Result>
+              <Created Text="Created items:" />
+              <Updated Text="Updated items:" />
+              <DocumentNumber Text="Document created:" />
+            </Result>
+            <Restart Text="Restart import" />
+          </Completed>
+          <Importing Text="Importing products... Please wait..." />
+        </Import>
+      </Onboarding>
+      <Count Text="Products count:" />
+      <ChangeGroup Text="Product &quot;{0}&quot; moved to &quot;{1}&quot;" />
+      <Guide>
+        <Title Text="Open products" />
+        <Content Text="Click here to open products section and add some products to your store" />
+        <Add>
+          <Title Text="Adding a product" />
+          <Content Text="Click &quot;New product&quot; button to start adding new products" />
+          <Name>
+            <Title Text="Product name" />
+            <Content Text="Add product name and product details used for sale" />
+          </Name>
+          <Prices>
+            <Title Text="Product price" />
+            <Content Text="Click here to set product price" />
+            <SalePrice>
+              <Title Text="Sales price" />
+              <Content Text="Set product sales price so it appears in sales screen" />
+            </SalePrice>
+          </Prices>
+          <Save>
+            <Title Text="Save changes" />
+            <Content Text="Click &quot;Save&quot; button to save your changes and add new product" />
+          </Save>
+        </Add>
+      </Guide>
+      <Settings Text="Products">
+        <Title Text="Product defaults"/>
+        <PriceIncludesTax Text="Price includes tax">
+          <Tooltip Text="If selected, new products will have price with tax checked by default" />
+        </PriceIncludesTax>
+        <DefaultTax Text="Default tax rate">
+          <NoTaxes Text="Taxes not found. Please add tax rates in management section." />
+        </DefaultTax>
+        <MarkupOption Text="Cost price based markup">
+          <Tooltip Text="If selected, changing cost price will update markup instead of sell price" />
+        </MarkupOption>
+      </Settings>
+      <Import Text="Import">
+        <LearnMore Text="Learn more about CSV import" />
+        <Basic Text="Basic">
+          <Description Text="You can use basic import by following our guide for creating CSV file at">
+            <Link Text="our support center" />
+            <Formatting Text="If you are using prepared CSV file, please make sure you read the">
+              <Link Text="formatting CSV file tutorial" />
+            </Formatting>
+            <Exported Text="Also, you can use this basic import to import products previously exported using Aronium export functionality." />
+          </Description>
+        </Basic>
+        <Csv Text="CSV">
+          <Description Text="Use CSV import to load products using custom CSV file or a CSV exported from other application.\nYou can read more about importing products using CSV files on">
+            <Link Text="our support center" />
+          </Description>
+          <SelectFile Text="Select file" />
+          <Fields>
+            <Name Text="Name" />
+            <ProductGroup Text="Product group" />
+            <SKU Text="SKU" />
+            <Barcode Text="Barcode" />
+            <MeasurementUnit Text="Measurement unit" />
+            <Cost Text="Cost" />
+            <Markup Text="Markup" />
+            <Price Text="Price" />
+            <Tax Text="Tax" />
+            <IsTaxInclusivePrice Text="Tax inclusive price" />
+            <IsPriceChangeAllowed Text="Price change allowed" />
+            <IsUsingDefaultQuantity Text="Using default quantity" />
+            <IsService Text="Service (not using stock)" />
+            <IsEnabled Text="Enabled" />
+            <Description Text="Description" />
+            <Quantity Text="Quantity" />
+            <Clear Text="Clear value" />
+          </Fields>
+          <Duplicates Text="What happens if duplicates are found?">
+            <Skip Text="Skip duplicates" />
+            <Merge Text="Merge duplicates" />
+          </Duplicates>
+          <Document Text="Create document from specified quantity">
+            <Purchase Text="Purchase" />
+            <InventoryCount Text="Inventory count" />
+          </Document>
+          <RequiredField Text="Indicates required field" />
+          <Import Text="Import" />
+          <Preview Text="Preview">
+            <ProductsCount Text="Number of products to import:" />
+          </Preview>
+          <Error>
+            <RequiredFields Text="Required fields are missing. Please, select all required fields before import." />
+            <InvalidContent Text="Error parsing CSV file. Please check your content and try again.\nError message: {0}" />
+            <InvalidField Text="Invalid entry for field &quot;{0}&quot;. Please, double check file contents and try again." />
+            <FileNotSelected Text="CSV file is not selected. Please select file to continue." />
+            <DuplicateSKU Text="Duplicate product codes detected. Product name: &quot;{0}&quot;. Duplicated code: &quot;{1}&quot;" />
+            <DuplicateName Text="Duplicate product name detected. Product name: &quot;{0}&quot;." />
+          </Error>
+        </Csv>
+        <Xml Text="XML">
+          <Description Text="Use Xml import to load products exported from another Aronium instance.\nXml import will preserve all properties, including images and products hierarchy." />
+          <SelectFile Text="Select file" />
+          <Import Text="Import" />
+        </Xml>
+      </Import>
+      <PriceTags Text="Price tags">
+        <Loading Text="Loading price tags template... Please wait..." />
+        <Layout Text="Layout">
+          <PaperSize Text="Paper size">
+            <Custom Text="Custom" />
+          </PaperSize>
+          <PageWidth Text="Page width" />
+          <PageHeight Text="Page height" />
+          <LabelWidth Text="Label width" />
+          <LabelHeight Text="Label height" />
+          <Columns Text="Columns" />
+          <RowSpacing Text="Row spacing" />
+          <ColumnSpacing Text="Column spacing" />
+          <RollPaper Text="Print on roll paper (unlimited height)" />
+        </Layout>
+        <Display Text="Display">
+          <Barcode Text="Barcode">
+            <Type Text="Barcode type" />
+            <Height Text="Barcode height" />
+          </Barcode>
+          <Code Text="Code (SKU)" />
+          <PriceIncludesTax Text="Tax inclusive price" />
+          <Borders Text="Borders" />
+          <Product Text="Product name">
+            <FontSize Text="Product name size" />
+          </Product>
+          <Price Text="Price">
+            <FontSize Text="Price size" />
+          </Price>
+        </Display>
+        <Products Text="Products">
+          <NoSelection Text="No products selected\nAll products will be printed" />
+          <NumberOfCopies Text="Number of copies" />
+        </Products>
+      </PriceTags>
+      <Sort Text="Sorting">
+        <Top Text="Top" />
+        <Bottom Text="Bottom" />
+        <Reset Text="Reset">
+          <Confirmation Text="This will clear custom sorting and will reset all products and groups to a default rank.\n\nDo you wish to continue?">
+            <Title Text="Reset products and groups sort order" />
+          </Confirmation>
+        </Reset>
+        <Menu>
+          <Top Text="Move to top" />
+          <Bottom Text="Move to bottom" />
+          <Reset Text="Reset products and groups" />
+          <SortProducts Text="Sort products" />
+          <SortGroups Text="Sort groups" />
+        </Menu>
+        <NoItems Text="Selected group has no items to sort" />
+        <Success Text="Products successfully sorted" />
+        <Progress Text="Sorting products... Please wait..." />
+        <UnsavedChanges Text="There are unsaved changes that will be lost if you continue.\n\nAre you sure you wish to continue and lose unsaved changes?">
+          <Title Text="Unsaved changes" />
+        </UnsavedChanges>
+      </Sort>
+    </Products>
+    <Customers Text="Customers &amp; suppliers">
+      <Search Text="Search customers &amp; suppliers" />
+      <LearnMore Text="Learn more about customers and suppliers" />
+      <New Text="New customer / supplier" />
+      <Delete Text="Delete">
+        <Confirmation Text="Are you sure you want to delete &quot;{0}&quot;?" />
+        <Error Text="Error deleting customer. The customer could not be deleted.\nSystem Message: {0}" />
+      </Delete>
+      <Customer>
+        <Edit Text="Edit &quot;{0}&quot;" />
+        <General Text="General">
+          <Title Text="General info" />
+          <Code Text="Code" />
+          <Name Text="Name" />
+          <Address Text="Address" />
+          <PostalCode Text="ZIP code" />
+          <City Text="City" />
+          <Country Text="Country" />
+          <TaxNumber Text="Tax number" />
+          <RabatePercent Text="Discount" />
+          <Email Text="Email" />
+          <PhoneNumber Text="Phone number" />
+          <IsEnabled Text="Active" />
+          <IsCustomer Text="Customer" />
+          <IsSupplier Text="Supplier" />
+        </General>
+        <Loyalty>
+          <Discounts Text="Discounts">
+            <Title Text="Set customer discounts for products or product groups" />
+            <Info Text="Set discount for selected item" />
+            <NoItems Text="No discounts" />
+            <Existing Text="Discount for &quot;{0}&quot; already exists." />
+            <Clear Text="Clear all discounts" />
+          </Discounts>
+          <Cards Text="Loyalty cards">
+            <Title Text="Enter customer loyalty cards" />
+            <CardNumber Text="Card number" />
+            <Add Text="Add card" />
+            <Duplicate Text="Loyalty card already exists">
+              <Warning Text="Loyalty card &quot;{0}&quot; is already assigned to {1}. Loyalty cards must be unique.\n\nPlease use another card for this customer and try again." />
+            </Duplicate>
+          </Cards>
+        </Loyalty>
+        <Saved>
+          <Created Text="New customer successfully created." />
+          <Updated Text="Customer successfully changed." />
+        </Saved>
+        <Existing Text="Existing customer">
+          <Warning Text="Similar customer already exists: {0}.\nDuplicate fields: {1}.\n\nDo you want to save the customer anyway?" />
+        </Existing>
+        <PaymentTerms Text="Payment terms">
+          <DueDatePeriod Text="Due date period">
+            <Info Text="Use due date period to set number of days before transaction must be paid for each unpaid sale assigned to this customer" />
+            <Days Text="days" />
+          </DueDatePeriod>
+        </PaymentTerms>
+        <Default>
+          <Warning Text="This is default customer used for all sales where customer is not explicitly assigned.\n\nWe strongly suggest you do not modify this customer." />
+        </Default>
+      </Customer>
+      <Guide>
+        <Title Text="Customers and suppliers" />
+        <Content Text="Click here to open customers and suppliers section" />
+        <Add>
+          <Title Text="Add customer or supplier" />
+          <Content Text="Click here to create new customer or supplier" />
+          <Name>
+            <Title Text="Enter name" />
+            <Content Text="Enter customer or supplier name" />
+          </Name>
+          <Save>
+            <Title Text="Save changes" />
+            <Content Text="Once you have entered all the details, click &quot;Save&quot; button to save changes" />
+          </Save>
+        </Add>
+      </Guide>
+      <Import Text="Import">
+        <Title Text="Import customers" />
+        <Description Text="Use customers import to upload list of customers using your custom CSV file or a CSV exported from other application.\nYou can read more about customers import at">
+          <Link Text="our support center" />
+        </Description>
+        <Fields>
+          <Name Text="Name" />
+          <Code Text="Code" />
+          <TaxNumber Text="Tax number" />
+          <Address Text="Address" />
+          <ZIP Text="ZIP" />
+          <City Text="City" />
+          <Country Text="Country" />
+          <Email Text="Email" />
+          <Phone Text="Phone" />
+          <IsEnabled Text="Enabled" />
+          <IsCustomer Text="Customer" />
+          <Clear Text="Clear value" />
+        </Fields>
+        <Import Text="Import" />
+        <Preview Text="Preview">
+          <CustomersCount Text="Number of customers to import: " />
+        </Preview>
+        <RequiredField Text="Indicates required field" />
+        <Importing Text="Importing customers... Please wait..." />
+        <Error>
+          <RequiredFields Text="Required fields are missing. Please, select all required fields before import." />
+          <InvalidContent Text="Error parsing CSV file. Please check your content and try again.\nError message: {0}" />
+          <InvalidField Text="Invalid entry for field &quot;{0}&quot;. Please, double check file contents and try again." />
+          <FileNotSelected Text="CSV file is not selected. Please select file to continue." />
+          <DuplicateName Text="Duplicate customer name detected. Customer name: &quot;{0}&quot;." />
+        </Error>
+        <Completed Text="Customers imported succesfully!" />
+      </Import>
+      <Export Text="Export">
+        <Completed Text="Customers exported succesfully!\nFile name: &quot;{0}&quot;" />
+      </Export>
+    </Customers>
+    <PaymentTypes Text="Payment types">
+      <LearnMore Text="Learn more about payment types" />
+      <New Text="New payment type" />
+      <Edit Text="Edit payment type &quot;{0}&quot;" />
+      <Delete Text="Delete payment type">
+        <Confirmation Text="Are you sure you want to delete &quot;{0}&quot;?" />
+        <Error Text="Error deleting payment type. Selected payment type cannot be deleted.\nSystem Message: {0}" />
+        <DataViolation Text="Unable to delete selected payment type. Make sure payment type is not used in documents and try again." />
+      </Delete>
+      <PaymentType>
+        <Name Text="Name" />
+        <Code Text="Code" />
+        <IsCustomerRequired Text="Customer required" />
+        <IsFiscal Text="Print receipt" />
+        <IsChangeAllowed Text="Change allowed" />
+        <Ordinal Text="Position" />
+        <IsEnabled Text="Enabled" />
+        <IsQuickPayment Text="Quick payment" />
+        <OpenCashDrawer Text="Open cash drawer" />
+        <ShortcutKey Text="Shortcut key" />
+        <MarkAsPaid Text="Mark transaction as paid" />
+        <Saved>
+          <Created Text="Payment type successfully created." />
+          <Updated Text="Payment type successfully changed." />
+        </Saved>
+        <Error Text="Error">
+          <ExistingShortcutKey Text="Specified shorcut key is already assigned to payment type &quot;{0}&quot;.\nShortcut keys must be unique.\n\nPlease specify different shortcut key and try again.">
+            <Title Text="Duplicate shortcut key detected" />
+          </ExistingShortcutKey>
+        </Error>
+      </PaymentType>
+      <Onboarding>
+        <Title Text="Payment types" />
+        <Info Text="Enter payment types used for sale in your store." />
+        <AddMore Text="Save &amp; add more">
+          <Error Text="Error occured while adding new payment type.\nCheck your input and try again" />
+        </AddMore>
+        <Existing Text="Existing payment types" />
+      </Onboarding>
+    </PaymentTypes>
+    <Documents Text="Documents">
+      <View Text="View documents" />
+      <Search Text="Search documents">
+        <Customer Text="Customer">
+          <All Text="All customers" />
+        </Customer>
+        <Product Text="Product">
+          <All Text="All products" />
+        </Product>
+        <Period Text="Period">
+          <Tip Text="Click to select search period" />
+        </Period>
+        <DocumentType Text="Document type">
+          <All Text="All document types" />
+        </DocumentType>
+        <User Text="User">
+          <All Text="All users" />
+        </User>
+        <PaidStatus Text="Paid status">
+          <None Text="All transactions" />
+          <Paid Text="Paid" />
+          <Unpaid Text="Unpaid" />
+        </PaidStatus>
+        <DocumentNumber Text="Document number" />
+        <ReferenceDocumentNumber Text="External document" />
+        <CashRegister Text="Cash register">
+          <All Text="All cash registers" />
+        </CashRegister>
+        <Clear Text="Clear all filters" />
+      </Search>
+      <Document>
+        <Save>
+          <Saved Text="Document successfully saved" />
+          <Error Text="Error saving the document. The changes are not saved.\nSystem Message: {0}">
+            <InvalidPayments Text="Invalid payment amount">
+              <Info Text="Payments amount must be equal to document total. Please, fix document payments and try again.\n\nDocument total: {0}. Payments amount: {1}." />
+            </InvalidPayments>
+          </Error>
+        </Save>
+        <UnsavedChanges Text="Unsaved changes">
+          <Confirmation Text="Document &quot;{0}&quot; contains unsaved changes.\n\nDo you want to save the document before closing?" />
+        </UnsavedChanges>
+        <StockDate Text="Select stock change date">
+          <Description Text="Enter the date when stock change has been registered by this document" />
+          <Invalid Text="Invalid stock date">
+            <Description Text="Selected action is not allowed.\n\nExisting inventory count found. Document &quot;{0}&quot; created on {1}.\n\nCheck document stock date and try again." />
+            <Message Text="Selected stock date is not allowed.\nInventory count {0} created on {1}" />
+            <InvalidTime Text="Inventory time can't be in the future" />
+          </Invalid>
+        </StockDate>
+        <Note Text="Note" />
+        <InternalNote Text="Internal note" />
+        <PaidStatus>
+          <Changed Text="Paid status successfully changed" />
+        </PaidStatus>
+        <Items>
+          <CostPrice>
+            <Settings>
+              <AutoUpdate Text="Automatically update cost price on purchase" />
+            </Settings>
+            <Update Text="Update cost price">
+              <Info Text="Items cost changed. Select items you wish to change the cost price for." />
+              <Confirmation Text="Do you wish to update cost price for selected items?" />
+              <Success Text="Cost prices updated successfully" />
+            </Update>
+          </CostPrice>
+          <Missing Text="Selected product does not exists." />
+        </Items>
+        <Payments>
+          <AutomaticallyModified Text="Payments and existing amounts are updated to match payments total" />
+          <MarkPaid Text="All credit payments are now paid. Do you want to mark document as paid?">
+            <Title Text="Update document status" />
+          </MarkPaid>
+          <Status Text="Status">
+            <Paid Text="Paid" />
+            <Unpaid Text="Unpaid" />
+          </Status>
+        </Payments>
+      </Document>
+      <New>
+        <SelectDocumentType Text="Select document type" />
+      </New>
+      <NoDocument Text="Requested document does not exists." />
+      <Inventory>
+        <Date Text="Select inventory date">
+          <Description Text="Enter the date when inventory list was created." />
+        </Date>
+        <Document>
+          <Item>
+            <Expected Text="Expected" />
+            <Counted Text="Counted" />
+            <ChangeQuantity Text="Change quantity" />
+          </Item>
+          <ExistingItem Text="Selected item is already added to this document." />
+          <Service Text="Attempting to add service to inventory count">
+            <Info Text="Selected item &quot;{0}&quot; is marked as a service. Are you sure you want to add service to inventory count?" />
+          </Service>
+          <AddGroup Text="Add group items to document">
+            <Confirmation Text="Are you sure you want to add all products from &quot;{0}&quot; group to inventory count?" />
+          </AddGroup>
+        </Document>
+      </Inventory>
+      <Guide>
+        <Title Text="Open documents" />
+        <Content Text="Click here to open documents section and add your first purchase" />
+        <Add>
+          <Title Text="Create document" />
+          <Content Text="Click here to create new purchase and put items on stock" />
+          <Customer>
+            <Title Text="Select  customer" />
+            <Content Text="Select customer for this document" />
+          </Customer>
+          <Supplier>
+            <Title Text="Select supplier" />
+            <Content Text="Select supplier for this document" />
+          </Supplier>
+          <Product>
+            <Title Text="Select product" />
+            <Content Text="Double click a product you wish to add to document" />
+          </Product>
+          <Item>
+            <Quantity>
+              <Title Text="Enter quantity" />
+              <Content Text="Enter purchased quantity. This quantity will be put on stock" />
+            </Quantity>
+            <Price>
+              <Title Text="Price" />
+              <Content Text="Enter item price" />
+            </Price>
+            <Save>
+              <Title Text="Save changes" />
+              <Content Text="Click &quot;Save&quot; button to save changes and add this item to document" />
+            </Save>
+          </Item>
+          <Save>
+            <Title Text="Save document" />
+            <Content Text="Click &quot;Save&quot; button to save document" />
+          </Save>
+        </Add>
+      </Guide>
+    </Documents>
+    <Countries Text="Countries">
+      <New Text="New country" />
+      <Delete>
+        <Title Text="Delete country" />
+        <Confirmation Text="Are you sure you want to delete country &quot;{0}&quot;?" />
+      </Delete>
+      <Country>
+        <Edit Text="Edit Country &quot;{0}&quot;" />
+        <Name Text="Name" />
+        <Code Text="Code" />
+        <Saved>
+          <Created Text="Country successfully created" />
+          <Updated Text="Country successfully edited" />
+        </Saved>
+      </Country>
+    </Countries>
+    <Company Text="My company">
+      <LearnMore Text="Learn more about company details" />
+      <Details Text="My company data">
+        <Title Text="Company data" />
+        <Logo Text="Logo">
+          <Add Text="Browse" />
+          <Remove Text="Clear" />
+        </Logo>
+        <BankAccount Text="Bank account">
+          <Number Text="Bank acc. number" />
+          <BankDetails Text="Bank details" />
+        </BankAccount>
+      </Details>
+      <Saved Text="Company data successfully saved" />
+      <Onboarding>
+        <Title Text="Company details" />
+        <Info Text="Enter your company details. Company details are used for receipts and invoices" />
+      </Onboarding>
+      <Reset Text="Reset database">
+        <Info Text="This is destructive operation. Please make sure to read instructions before you proceed." />
+        <Selection Text="Select entities to reset">
+          <Description Text="Selected entities will be deleted from database" />
+          <Items>
+            <Documents Text="Documents" />
+            <Products Text="Products" />
+            <Customers Text="Customers" />
+            <Promotions Text="Promotions" />
+            <Counters Text="Counters" />
+            <CashInOut Text="Cash in / out" />
+            <Taxes Text="Taxes" />
+            <OpenOrders Text="Open orders" />
+          </Items>
+        </Selection>
+        <AdminPassword Text="Enter administrator password" />
+        <Backup>
+          <Description Text="Location where database backup will be saved" />
+          <Info Text="Database backup will be performed before the reset. You can change default backup destination below." />
+          <Path Text="Backup database path">
+            <Select Text="Select destination where database backup will be saved before reset is performed." />
+          </Path>
+          <Completed Text="Database backup completed" />
+        </Backup>
+        <Confirmation Text="Confirmation">
+          <Description Text="Authorize and perform reset on selected entities" />
+        </Confirmation>
+        <PerformReset Text="Reset database">
+          <Confirmation Text="Are you sure you wish to reset the database and clear selected data?">
+            <Title Text="Database reset in progress" />
+          </Confirmation>
+          <Error>
+            <NoSelection Text="Please select at least one entity to reset." />
+          </Error>
+        </PerformReset>
+        <Completed Text="Database reset completed successfully. Aronium will now restart." />
+      </Reset>
+    </Company>
+    <Guide>
+      <Title Text="Management" />
+      <Content Text="Click here to open management section and add products and customers" />
+    </Guide>
+    <Authorization>
+      <Title Text="Please enter password to access management section" />
+    </Authorization>
+  </Management>
+</Language>

@@ -1,0 +1,1537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="nl" name="Nederlands">
+  <Buttons>
+    <Yes Text="Ja" />
+    <Ok Text="OK" />
+    <No Text="Neen" />
+    <Cancel Text="Annuleren" />
+    <Save Text="Opslaan" />
+    <Close Text="Sluiten" />
+    <Add Text="Toevoegen" />
+    <New Text="Nieuw" />
+    <Edit Text="Bewerken" />
+    <Cut Text="Knippen" />
+    <Copy Text="Copy" />
+    <Paste Text="Invoegen" />
+    <Delete Text="Verwijderen" />
+    <Refresh Text="Verversen" />
+    <Login Text="Aanmelden" />
+    <Logout Text="Afmelden" />
+    <Print Text="Afdrukken" />
+    <SavePdf Text="Bewaar als PDF" />
+    <Hide Text="Verberg" />
+    <FirstPage Text="Eerste pagina" />
+    <LastPage Text="Laatste Pagina" />
+    <NextPage Text="Volgende Pagina" />
+    <PreviousPage Text="Vorige Pagina" />
+    <Continue Text="Doorgaan" />
+    <Clear Text="Wis" />
+    <Exit Text="Einde" />
+    <Search Text="Zoeken" />
+    <Ignore Text="Negeer" />
+    <Retry Text="Herhaal" />
+    <DeleteAll Text="Alles verwijderen" />
+    <Skip Text="Overslaan" />
+    <Restart Text="Herstart" />
+    <SaveAndClose Text="Bewaar &amp; Afsluiten" />
+    <Help Text="Help" />
+    <Back Text="Terug" />
+    <LearnMore Text="Meer uitleg" />
+    <Done Text="Gereed" />
+    <Send Text="Verzenden" />
+    <WhatsThis Text="Wat is dit?" />
+    <Pdf Text="PDF" />
+    <Excel Text="Excel" />
+    <Maximize Text="Maximaliseer" />
+    <Restore Text="Herstel" />
+    <Browse Text="Browse" />
+    <PrintPreview Text="Afdrukvoorbeeld" />
+  </Buttons>
+  <Bootstrap>
+    <Initializing Text="Applicatie initialiseren..." />
+    <Load>
+      <Components Text="Toepassingscomponenten laden..." />
+      <Modules Text="Modules laden en initialiseren..." />
+      <Products Text="Producten laden...">
+        <Error Text="Fout bij laden van producten.">
+          <Info Text="Sommige producten komen mogelijk niet in aanmerking voor verkoop. Controleer mislukte producten en probeer het opnieuw." />
+          <DuplicateBarcode Text="Dubbele barcode &quot;{0}&quot;" />
+          <DuplicateCode Text="Dubbele code &quot;{0}&quot;" />
+          <Copy Text="Kopieer naar klembord" />
+        </Error>
+      </Products>
+      <CashRegister Text="Kassa gegevens laden ..." />
+      <ScanTypes Text="Scan soorten..." />
+    </Load>
+    <Connect Text="Verbinden met database ...">
+      <NoDataProvider Text="Verbinding met de database is niet beschikbaar.\nNeem contact op met uw beheerder of dealer." />
+    </Connect>
+    <Error Text="Er is een fout opgetreden bij het starten van de toepassing. Neem contact op met de systeembeheerder." />
+    <Completed Text="Toepassing starten" />
+    <BackupDatabase Text="Database-versie valideren ..." />
+    <Migrations Text="De database controleren ...">
+      <Failed Text="Database migratie mislukt!" />
+    </Migrations>
+    <RestartRequired Text="Het opnieuw opstarten van de toepassing is vereist om wijzigingen door te voeren.\nKlik op de onderstaande knop om de toepassing opnieuw te starten." />
+    <ValidateLicense Text="Licentie valideren..." />
+    <Onboarding Text="Controleer onboarding status..." />
+    <CustomerDisplay Text="Klantendisplay initialiseren..." />
+    <PrinterStatus Text="Controleren van printerstatus..." />
+    <VerifyVersion Text="Appicatieversie controleren..." />
+  </Bootstrap>
+  <Onboarding>
+    <Welcome Text="Welkom">
+      <Info Text="Laten we uw winkel en basisapplicatiegegevens instellen.\nDit proces duurt maar een paar minuten." />
+      <Start Text="START" />
+    </Welcome>
+    <Back Text="Terug" />
+    <Skip Text="Overslaan" />
+    <Hide Text="Niet meer tonen" />
+    <Next Text="Sla over" />
+    <Continue Text="Bewaar &amp; Ga verder" />
+    <Layout Text="Kies Layout">
+      <LearnMore Text="Meer informatie over lay-outs en werkruimte" />
+      <Standard Text="Standaard">
+        <Description Text="Gebruik deze lay-out als u streepjescodes gebruikt of als u een fysiek toetsenbord op uw computer hebt aangesloten." />
+      </Standard>
+      <TouchScreen Text="TouchScreen">
+        <Description Text="Gebruik deze lay-out als u uw producten en groepen visueel wilt weergeven op het verkoopscherm." />
+      </TouchScreen>
+      <EnableVirtualKeyboard Text="Schakel virtueel toetsenbord in" />
+    </Layout>
+    <Registration Text="Registratie">
+      <Info Text="Voer alstublief uw e-mailadres in, zodat wij meer aangepaste ondersteuning voor u kunnen bieden.">
+        <Email Text="Deze e-mail wordt ingesteld op de standaardbeheerdersaccount en kan worden gebruikt om het wachtwoord opnieuw in te stellen. U kunt dit e-mailadres op elk gewenst moment wijzigen." />
+      </Info>
+      <Email Text="Uw e-mailadres">
+        <Privacy Text="Uw e-mail wordt strikt vertrouwelijk gehouden. We zullen uw e-mail gebruiken om meer persoonlijke ondersteuning te bieden en om u de laatste updates te sturen, alleen als u dat wenst.\nWe haten ook 'spam'." />
+      </Email>
+    </Registration>
+    <UserProfile>
+      <Title Text="Laten we uw persoonlijke account instellen" />
+      <Info Text="Voer uw naam en inloggegevens in die worden gebruikt voor beheerderstoegang." />
+      <LearnMore Text="Meer informatie over gebruikers en standaardreferenties" />
+      <FirstName Text="Voornaam" />
+      <LastName Text="Familienaam" />
+      <Email Text="Email">
+        <Info Text="Deze e-mail wordt gebruikt als herstel e-mailadres voor uw account.\nZorg ervoor dat je een geldig e-mailadres hebt ingevoerd, zodat je je wachtwoord per e-mail kunt resetten." />
+      </Email>
+      <Password Text="Wachtwoord">
+        <Errors>
+          <Empty Text="Wachtwoord voldoet niet aan de vereiste criteria. Wachtwoord moet worden ingesteld en minimaal 4 tekens lang zijn" />
+          <ConfirmationError Text="Wachtwoordbevestiging komt niet overeen. Voer dezelfde waarden in de velden voor wachtwoord- en wachtwoordbevestiging." />
+        </Errors>
+      </Password>
+      <ConfirmPassword Text="Bevestig wachtwoord" />
+    </UserProfile>
+    <Completed Text="Bewerking voltooid">
+      <Info Text="Hartelijk gefeliciteerd! Je bent klaar.\nOpen vervolgens de sectie &quot;Beheer&quot; om een aantal producten toe te voegen en te beginnen met verkopen." />
+      <Finish Text="Sluiten en doorgaan" />
+    </Completed>
+    <PriceDisplay Text="Prijsweergave">
+      <Info Text="Kies of prijzen moeten weergegeven en afgedrukt worden voor of na BTW." />
+      <BeforeTax Text="Voor BTW">
+        <Description Text="Prijzen zullen weergegeven en afgedrukt worden exclusief BTW" />
+      </BeforeTax>
+      <AfterTax Text="Inclusief BTW">
+        <Description Text="Prijzen zullen weergegeven en afgedrukt worden inclusief BTW" />
+      </AfterTax>
+      <DiscountApplyRule>
+        <Info Text="Kortingen zullen toegepast worden op het bedrag inclusief of exclusief BTW afhankelijk van deze selectie. Je kan de kortingsregels altijd aanpassen in de instellingen." />
+      </DiscountApplyRule>
+    </PriceDisplay>
+  </Onboarding>
+  <BusinessDay>
+    <Close>
+      <Authorization>
+        <Title Text="Voer een wachtwoord in om de werkdag af te sluiten" />
+      </Authorization>
+    </Close>
+    <Select Text="Selecteer werkdag">
+      <EnableSelection Text="(Klik op de datum om de werkdag te wijzigen)" />
+    </Select>
+  </BusinessDay>
+  <Application>
+    <Close Text="Sluit applicatie af">
+      <Info Text="Weet u zeker dat u de applicatie wilt afsluiten?" />
+      <ShutDown Text="Sluit applicatie af" />
+      <Restart Text="Start de applicatie opnieuw" />
+      <TurnOffComputer Text="Schakel de PC uit" />
+    </Close>
+    <FullScreen Text="Volledig scherm" />
+    <Exit Text="Sluit applicatie af" />
+    <Menu Text="Menu" />
+    <RestartRequired Text="Opnieuw opstarten vereist">
+      <Info Text="Het opnieuw opstarten van de toepassing is vereist om wijzigingen door te voeren. Wilt u de toepassing nu opnieuw starten?" />
+    </RestartRequired>
+    <ReloadProducts Text="Herlaad producten">
+      <Info Text="Producten zijn veranderd. Wilt u producten nu opnieuw inladen?" />
+    </ReloadProducts>
+  </Application>
+  <Period Text="Periode">
+    <Start Text="Start" />
+    <End Text="Einde" />
+    <Preset Text="Voorgedefinieerde periode">
+      <Today Text="Vandaag" />
+      <Yesterday Text="Gisteren" />
+      <ThisWeek Text="Deze week" />
+      <LastWeek Text="Vorige week" />
+      <ThisMonth Text="Deze maand" />
+      <LastMonth Text="Vorige maand" />
+      <ThisYear Text="Dit jaar" />
+      <LastYear Text="Vorig jaar" />
+    </Preset>
+  </Period>
+  <Login Text="Aanmelding">
+    <Password Text="Wachtwoord">
+      <Forgot Text="Wachtwoord vergeten?" />
+    </Password>
+    <Error Text="Aanmelden mislukt. Controleer uw wachtwoord en probeer het opnieuw." />
+    <Authentication Text="Aanmelding gebruiker">
+      <Failed Text="Gebruiker niet gevonden. Controleer uw wachtwoord en probeer het opnieuw." />
+    </Authentication>
+    <Reset Text="Wachtwoord opnieuw instellen">
+      <LearnMore Text="Meer informatie over het opnieuw instellen van uw wachtwoord" />
+      <Email Text="Vul email adres in">
+        <Info Text="Voer het e-mailadres in dat is gekoppeld aan de gebruiker waarvoor u het wachtwoord opnieuw wilt instellen.\nWe sturen u een verificatiecode naar de e-mail die u hieronder invoert." />
+        <Required Text="E-mail is verplicht" />
+        <EmailAddress Text="E-mailadres">
+          <Tooltip Text="Vul je e-mailadres in" />
+        </EmailAddress>
+        <ExistingCode Text="Ik heb de code. Breng me naar de volgende stap." />
+      </Email>
+      <Code Text="Code verifiëren">
+        <Info Text="Controleer je e-mail - we hebben je een autorisatiecode gestuurd die je moet invoeren in het onderstaande vak.\nAls u geen e-mail met autorisatiecode hebt ontvangen, controleer dan uw spammap of probeer opnieuw een e-mail te verzenden." />
+        <Email Text="Autorisatiecode wordt verzonden naar {0}." />
+        <AuthorizationCode Text="Authorisatie Code">
+          <Tooltip Text="Voer hier de autorisatiecode in ..." />
+        </AuthorizationCode>
+        <Verify Text="Code verifiëren" />
+      </Code>
+      <Password Text="Voer een nieuw wachtwoord in">
+        <Info Text="Voer een nieuw wachtwoord en wachtwoordbevestiging in voor uw lokale account.\nNieuw wachtwoord en nieuwe wachtwoordbevestigingsvelden moeten overeenkomen.\n\nAls u klaar bent, klikt u op de knop &quot;OK&quot; om uw wachtwoord opnieuw in te stellen." />
+        <NewPassword Text="Nieuw paswoord" />
+        <NewPasswordConfirmation Text="Bevestig nieuw wachtwoord" />
+        <InUse Text="Het opgegeven wachtwoord is al in gebruik. Voer een ander wachtwoord in en probeer het opnieuw." />
+        <User Text="Gebruiker: {0}" />
+        <SetPassword Text="Stel u nieuw wachtwoord in" />
+        <Success Text="wachtwoord succesvol veranderd" />
+      </Password>
+      <Error>
+        <Expired Text="Uw autorisatiecode is verlopen.\nVraag een nieuwe autorisatiecode aan." />
+        <InvalidCode Text="Ongeldige code. Voer een geldige code in en probeer het opnieuw." />
+        <NoSuchUser Text="Gebruiker met opgegeven e-mailadres &quot;{0}&quot; bestaat niet.\nVoer een geldig e-mailadres in en probeer het opnieuw." />
+        <InvalidEmailAddress Text="E-mailadres is niet geldig. Voer een geldig e-mailadres in en probeer het opnieuw." />
+        <LimitReached Text="U hebt de verzoeklimiet voor opnieuw instellen van het wachtwoord bereikt.\nJe kunt het over 24 uur opnieuw proberen." />
+        <GeneralError Text="Er is een fout opgetreden bij het verzenden van een verzoek voor het opnieuw instellen van het wachtwoord.\nProbeer het later opnieuw." />
+      </Error>
+    </Reset>
+  </Login>
+  <Order>
+    <List Text="Open de lijst met bestellingen">
+      <Select Text="Selecteer bestelling" />
+    </List>
+    <New Text="Nieuwe verkoop" />
+    <Estimate Text="Vergrendelen">
+      <Authorization>
+        <Title Text="Voer een wachtwoord in om de verkoop te vergrendelen" />
+      </Authorization>
+      <Created Text="Bestelling succesvol afgesloten" />
+      <Clear Text="Ontgrendel deze verkoop">
+        <Authorization>
+          <Title Text="Voer een wachtwoord in om de verkoop te ontgrendelen" />
+        </Authorization>
+        <Success Text="Verkoop is ontgrendeld." />
+      </Clear>
+      <Locked Text="Verkoop vergrendeld">
+        <Info Text="Het bewerken van een vergrendelde verkoop is niet toegestaan." />
+      </Locked>
+      <Issued Text="Deze verkoop is al vergrendeld.\nHet bewerken van een vergrendelde verkoop is niet toegestaan." />
+      <NoItems Text="Geen items om te vergrendelen." />
+    </Estimate>
+    <Transfer Text="Overdracht">
+      <Authorization>
+        <Title Text="Voer een wachtwoord in voor toegang tot de overdrachtoptie" />
+      </Authorization>
+      <All Text="Overdracht van alle bestellingen">
+        <Confirmation Text="Het overdragen van alle bestellingen naar een andere gebruiker is onomkeerbaar!\n\nWeet je zeker dat je al je bestellingen wilt overbrengen naar {0}?" />
+        <Success Text="Alle bestellingen met succes overgedragen." />
+        <Error Text="Er is een fout opgetreden bij het overzetten van bestellingen naar de geselecteerde gebruiker.\nProbeer het opnieuw." />
+      </All>
+      <Orders Text="Openstaande bestellingen" />
+      <OrderNumber Text="Bestellingsnummer">
+        <Select Text="Selecteer bestelling" />
+      </OrderNumber>
+      <Quantity Text="Selecteer hoeveelheden om over te zetten" />
+      <User Text="Gebruiker">
+        <Current Text="Geselecteerde gebruiker is al de houder van de bestelling." />
+      </User>
+      <Rounds Text="Overbrengen rondes">
+        <Summary Text="Bestellingsitems" />
+        <Selection Text="Selecteer rondes om over te zetten" />
+      </Rounds>
+      <Items Text="Bestelling items">
+        <Selected Text="Geselecteerde items voor overdracht">
+          <NoItems Text="Selecteer items voor overdracht" />
+        </Selected>
+        <All Text="Alles overbrengen" />
+        <Back Text="Alles verwijderen" />
+        <InvalidQuantity Text="Overdracht van geselecteerd item is niet toegestaan">
+          <Info Text="De totale hoeveelheid geselecteerde artikelen is kleiner dan de hoeveelheid die is geselecteerd voor overdracht.\nControleer de overdrachthoeveelheid, de ongeldige artikelen en probeer het opnieuw." />
+        </InvalidQuantity>
+        <BundledQuantity Text="Wijziging van hoeveelheid is niet toegelaten">
+          <Info Text="Item hoort bij een groep. Wijzigen van hoeveelheid bij groepsitems is niet toegelaten." />
+        </BundledQuantity>
+      </Items>
+      <CurrentOrder Text="Overdracht naar dezelfde bestelling">
+        <Confirmation Text="U hebt ervoor gekozen om artikelen naar dezelfde bestelling over te zetten.\nWeet u zeker dat u artikelen naar dezelfde bestelling wilt overbrengen?" />
+      </CurrentOrder>
+      <Failed Text="Fout bij het overzetten van items">
+        <Info Text="Er is een fout opgetreden bij het overzetten van items. Probeer het opnieuw." />
+      </Failed>
+      <Completed Text="Overdracht succesvol voltooid" />
+      <NoItems Text="Geen items om over te zetten" />
+      <Discount>
+        <Warning Text="Vaste korting">
+          <Info Text="Het huidig order heet een vaste korting. Overzetten van artikelen vanuit dit order zal de vaste korting wissen\n\nWilt u doorgaan?" />
+        </Warning>
+      </Discount>
+    </Transfer>
+    <Void Text="Annuleer bestelling">
+      <Authorization>
+        <Title Text="Voer een wachtwoord in om deze bestelling te annuleren" />
+      </Authorization>
+      <Confirm Text="Annuleer bestelling">
+        <Info Text="Weet je zeker dat je deze bestelling wilt annuleren?" />
+      </Confirm>
+      <Completed Text="Bestelling Geannuleerd" />
+      <NoItems Text="Geen items om te annuleren" />
+    </Void>
+    <Rounds>
+      <Repeat Text="Herhaal ronde">
+        <NoItems Text="Geen items op bestelling.\nHerhaal ronde kan alleen worden gedaan als de ronde bestaat." />
+        <NoQuantities Text="Op de geselecteerde ronde #{0} zijn er geen items met voldoende hoeveelheden om te herhalen" />
+        <Bundle Text="Artikelen behoren tot een groep">
+          <Info Text="Herhaaloptie is niet beschikbaar voor gegroepeerde artikelen." />
+        </Bundle>
+      </Repeat>
+      <New Text="Nieuwe ronde">
+        <NoItems Text="Er zijn geen items in uw bestelling om een nieuwe ronde te maken.\nVoeg items toe aan de bestelling en probeer het opnieuw." />
+        <NoUnsavedItems Text="Alle items in volgorde opgeslagen. Nieuwe ronde gestart." />
+      </New>
+      <SelectAll Text="Selecteer alles" />
+      <SelectNone Text="Alles afwijzen" />
+      <Total Text="Totaal:" />
+      <NoItems Text="Geen geselecteerde items" />
+    </Rounds>
+    <Comment Text="Commentaar">
+      <Add Text="Selecteer bestaand of schrijf uw commentaar voor item &quot;{0}&quot;" />
+      <Insert Text="Schrijf hier commentaar ..." />
+      <Change Text="Wijzig commentaar">
+        <Forbidden Text="Het bewerken van het geselecteerde item is niet toegestaan">
+          <Info Text="Artikel &quot;{0}&quot; wordt besteld en bevestigd\nHet bewerken van een bevestigd item is niet toegestaan." />
+        </Forbidden>
+        <NoItem Text="Geen items geselecteerd.\nSelecteer een item waaraan u een opmerking wilt toevoegen en probeer het opnieuw." />
+      </Change>
+    </Comment>
+    <Subtotal Text="Subtotaal" />
+    <Tax Text="BTW" />
+    <Total Text="TOTAAL" />
+    <Checkout Text="Betaling" />
+    <Save Text="Verkoop opslaan" />
+    <Refund Text="Terugbetaling">
+      <Authorization Text="Wachtwoord vereist voor terugbetaling" />
+      <Title Text="Terugbetaling artikelen" />
+      <Total Text="TOTAAL TERUGGAVE BEDRAG" />
+      <ReceiptNumber Text="Nummer ontvangstbewijs" />
+      <PaymentType Text="Terugbetalingsmethode" />
+      <Description Text="Voer het ontvangstnummer en het betalingstype in om de terugbetaling te bevestigen" />
+      <Print>
+        <PrinterNotFound Text="Teruggaveprinter niet geselecteerd." />
+      </Print>
+      <MultyplePaymentTypes Text="Geselecteerd document bevat meerdere betaalwijzen. Selecteer onderstaande optie om betalingswijzen naar deze terugbetaling te kopiëren.">
+        <Copy Text="Betalingstypen kopiëren van origineel document" />
+        <PartialRefund Text="Het gebruik van origineel meerdere terugbetalingstypes is niet beschikbaar voor gedeeltelijke terugbetalingen." />
+      </MultyplePaymentTypes>
+      <CartDiscountApplied Text="Globale korting toegepast*">
+        <Info Text="Globale korting is toegepast en berekend op het totaal.\nBij een gedeeltelijke terugbetaling zal de korting herberekend worden op de terugbetaalde items." />
+      </CartDiscountApplied>
+      <SelectAll Text="(de)selecteer alles" />
+    </Refund>
+    <Items>
+      <Name Text="Productnaam" />
+      <Quantity Text="Aantal">
+        <Change Text="Verander hoeveelheid">
+          <Info Text="Voer het aantal in voor het volgende artikel" />
+          <Item Text="Artikel &quot;{0}&quot;" />
+          <Forbidden Text="Hoeveelheid veranderen is niet toegestaan">
+            <Info Text="Item &quot;{0}&quot; is bevestigd.\nHet bewerken van een bevestigd item is niet toegestaan." />
+          </Forbidden>
+          <Product Text="Product &quot;{0}&quot;\nStandaardhoeveelheid: {1:#,#.000}" />
+          <Bundled Text="Veranderen van hoeveelheid is niet toegelaten">
+            <Info Text="Het veranderen van een hoeveelheid bij gecombineerde items is niet toegelaten." />
+          </Bundled>
+        </Change>
+        <Invalid Text="Ongeldige hoeveelheid. Voer geldige hoeveelheid in en probeer het opnieuw." />
+      </Quantity>
+      <Price Text="Prijs">
+        <Change Text="Verander prijs">
+          <Product Text="Artikel &quot;{0}&quot;\nPrijs: {1:#,#.00}" />
+        </Change>
+      </Price>
+      <Total Text="Bedrag" />
+      <Empty Text="Geen Artikelen">
+        <Info Text="Voeg producten toe aan de bon met barcode, code of zoekactie door op F3 te drukken" />
+      </Empty>
+      <Start Text="Start" />
+      <Page Text="Pagina" />
+      <Add>
+        <Error Text="Fout bij toevoegen van item. Ongeldige artikelgegevens.\nControleer de artikelprijs en hoeveelheid en probeer het opnieuw." />
+      </Add>
+      <Void>
+        <NoItems Text="Het annuleren van artikel &quot;{0}&quot; is niet toegestaan. Onvoldoende hoeveelheid." />
+        <Bundle Text="Artikelen behoren tot een groep. Het verwijderen van dit artikel zal aale items in dezelfde groep ook verwijderen.\n\nBent u zeker dat u aale artikelen in de groep wil verwijderen?">
+          <Title Text="Artikelgroep wordt verwijderd" />
+        </Bundle>
+      </Void>
+    </Items>
+    <Print>
+      <User Text="Gebruiker: {0}" />
+      <Time Text="Tijd: {0}" />
+      <Number Text="Bestelnummer: {0}" />
+      <Estimate Text="RAMING">
+        <Discount Text="Korting" />
+        <Total Text="TOTAAL:" />
+        <Footer Text="Dit is geen kwitantie.\nWacht alstublieft op de afrekening." />
+      </Estimate>
+      <Kitchen>
+        <NumberAndRound Text="Bestellinig: {0}. Ronde: {1}" />
+        <TableAndRound Text="Tafel: {0}. Ronde: {1}" />
+      </Kitchen>
+      <Dialog>
+        <Title Text="Hoe wil de klant zijn afrekening ontvangen?" />
+        <Change Text="Wisselgeld" />
+        <Receipt Text="Afdrukken bon" />
+        <Invoice Text="Factuur afdrukken" />
+        <Email Text="Verstuur e-mail">
+          <Recipient Text="Email adres ontvanger">
+            <Title Text="Voer e-mailberichtdetails in en klik op de knop &quot;Verzenden&quot; om door te gaan" />
+            <EmailAddress Text="Adres ontvanger">
+              <Description Text="Voer het e-mailadres van de klant in" />
+              <AddCustomer Text="Voeg klant toe" />
+            </EmailAddress>
+            <Subject Text="Onderwerp">
+              <Description Text="Voer onderwerpregel in" />
+              <Default Text="Ontvangen {0}" />
+            </Subject>
+            <Message Text="Bericht">
+              <Description Text="Voer een bericht in voor de klant" />
+              <Default Text="Geachte klant,\n\nHierbij de ontvangstbevestiging.\n\nOntvangstdatum: {0}\nTotaal: {1}" />
+            </Message>
+            <CopySelf Text="Stuur een kopie naar mezelf" />
+            <Error>
+              <EmailFormat Text="Dit is geen geldig email adres.\nControleer het e-mailadres en probeer het opnieuw." />
+            </Error>
+            <Bcc Text="Bcc">
+              <Description Text="Voeg een BCC ontvanger toe" />
+            </Bcc>
+          </Recipient>
+          <Sending Text="E-mail verzenden ... Even geduld ..." />
+          <Sent Text="Bon verzonden naar {0}" />
+        </Email>
+        <Hide Text="Laat dit niet meer zien" />
+      </Dialog>
+      <Table Text="Tafel: {0}" />
+    </Print>
+    <Products>
+      <Search Text="Zoeken">
+        <Name Text="Productnaam">
+          <Tooltip Text="Zoek product op naam" />
+          <NotFound Text="Geen resultaten voor &quot;{0}&quot;">
+            <Info Text="Controleer je zoekparameters en probeer het opnieuw" />
+          </NotFound>
+        </Name>
+        <Barcode Text="Barcode">
+          <Tooltip Text="Zoek product op barcode" />
+          <NotFound Text="Barcode niet gevonden" />
+        </Barcode>
+        <Code Text="Productcode">
+          <Tooltip Text="Product zoeken op code" />
+          <NotFound Text="Code niet gevonden" />
+        </Code>
+        <NoItems Text="Geen product geselecteerd">
+          <Info Text="Zoek product op naam of code om door te gaan" />
+        </NoItems>
+        <Selection>
+          <Price Text="Prijs" />
+          <Description Text="Omschrijving" />
+        </Selection>
+        <NoResults Text="Geen resultaten" />
+      </Search>
+      <NoProducts Text="Geen producten beschikbaar">
+        <Info Text="Voeg producten toe of stel de verkoopprijs voor een bestaand product in om door te gaan" />
+      </NoProducts>
+    </Products>
+    <Lock Text="Vergrendelen" />
+    <Unlock Text="Ontgrendelen" />
+    <Item>
+      <Void>
+        <Authorization>
+          <Title Text="Voer een wachtwoord in om het geselecteerde item te annuleren" />
+        </Authorization>
+      </Void>
+      <ChangePrice>
+        <Minimum Text="Minimum bedrag: {0}" />
+      </ChangePrice>
+    </Item>
+    <QuickPayment Text="Snelle betaling">
+      <Confirmation Text="U hebt &quot;{0}&quot; geselecteerd als betaalwijze voor de huidige verkoop.\n\nWilt u de geselecteerde betalingswijze blijven gebruiken?" />
+    </QuickPayment>
+    <Discount Text="Korting">
+      <Authorization Text="Voer een wachtwoord in om kortingen toe te passen" />
+      <Cart>
+        <Invalid Text="Ongeldige winkelwagen korting">
+          <GreaterThenTotal Text="Totaal met kortingen kan niet groter zijn\ndan totaal bestelling." />
+        </Invalid>
+        <Cleared Text="Korting winkelwagen gewist!">
+          <Info Text="Een ongeldig totaal is gedetecteerd en de korting is verwijderd van het order.\n\nControleer aub uw artikelen en pas een geldige korting toe vooraleer je verder gaat met de betaling." />
+        </Cleared>
+      </Cart>
+      <Item>
+        <NotSelected Text="Item is niet geselecteerd.\nAls u korting wilt toepassen op één artikel, selecteert u een item uit de verkooplijst voordat u dit dialoogvenster opent" />
+        <Invalid Text="Ongeldige artikelkorting">
+          <GreaterThenTotal Text="Vast bedrag kan niet groter zijn dan artikel totaal" />
+        </Invalid>
+        <Cleared Text="Artikelkorting gewist">
+          <Info Text="Ongeldig artikeltotaal is gedetecteerd en voorgaande kortingen werden verwijderd.\n\nControleer of er kortingen moeten worden toegepast vooraleer u verder gaat met afrekeken." />
+        </Cleared>
+      </Item>
+    </Discount>
+  </Order>
+  <Closing Text="Dagafsluiting">
+    <Users Text="Open transactielijst">
+      <User>
+        <Total Text="TOTAAL:" />
+      </User>
+      <Summary Text="Open transacties" />
+      <NoReports Text="Geen openstaande transacties" />
+    </Users>
+    <Option Text="Selecteer een afrekenoptie">
+      <NotSelected Text="Uitbetalingsoptie niet geselecteerd">
+        <Info Text="Kies een van de opties hierboven om door te gaan" />
+      </NotSelected>
+    </Option>
+    <User Text="Afrekening">
+      <Completed Text="{0} succesvol afgerekend." />
+    </User>
+    <Shift Text="Alle gebruikers afrekenen">
+      <Closed Text="Alle gebruikers zijn met succes afgerekend" />
+    </Shift>
+    <BusinessDay Text="Sluit kassa">
+      <Income Text="Dagtotaal" />
+      <Closed Text="Kassa succesvol afgesloten" />
+      <Report Text="RAPPORT" />
+      <CashIn Text="Contant geld" />
+      <CashOut Text="Contant uit kas" />
+    </BusinessDay>
+    <Error>
+      <OpenOrders Text="Openstaande bestellingen">
+        <Users Text="Er zijn gebruikers met openstaande bestellingen!\nU moet alle bestellingen sluiten voor een dag afsluiting." />
+      </OpenOrders>
+    </Error>
+    <Print>
+      <User>
+        <Report>
+          <Total Text="TOTAALBEDRAG" />
+          <User Text="Gebruiker">
+            <ClosedBy Text="Ontvangen" />
+          </User>
+          <Header Text="GEBRUIKER CONTANT GELD" />
+        </Report>
+      </User>
+      <DayClose>
+        <Report>
+          <Header Text="DAGAFSLUITING" />
+          <User>
+            <Total Text="TOTAAL" />
+          </User>
+          <Summary Text="SAMENVATTING" />
+          <Total Text="TOTAAL" />
+        </Report>
+      </DayClose>
+    </Print>
+    <History Text="Historiek">
+      <Info Text="Gebruik onderstaande lijst als selectie voor het afdrukken van een kopie van een Z rapport." />
+      <List>
+        <Reports Text="Rapporten" />
+        <Number Text="Aantal" />
+        <Date Text="Datum" />
+      </List>
+      <Print Text="Geselecteerd rapport afdrukken">
+        <Unsupported Text="Gevraagde bewerking wordt niet ondersteund" />
+      </Print>
+    </History>
+  </Closing>
+  <User Text="Gebruiker">
+    <Profile Text="Informatie gebruiker">
+      <Info Text="Profiel" />
+      <Edit Text="Profiel of wachtwoord wijzigen" />
+      <Data>
+        <FirstName Text="Voornaam" />
+        <LastName Text="Familienaam" />
+        <Email Text="Email" />
+        <Password Text="Wachtwoord">
+          <Change Text="Verander wachtwoord">
+            <Password Text="Wachtwoord" />
+            <Confirm Text="Bevestig wachtwoord" />
+            <ConfirmationFailed Text="Het veld voor het wachtwoord en wachtwoord bevestigen komen niet overeen.\nControleer het wachtwoord en probeer het opnieuw." />
+            <InvalidPassword Text="Wachtwoord is al in gebruik. Gebruik een ander wachtwoord." />
+          </Change>
+        </Password>
+        <Saved Text="Profiel is succesvol gewijzigd" />
+      </Data>
+      <ShiftReport Text="Gebruikersrapport">
+        <Report Text="Gebruikersrapport">
+          <NoData Text="Geen openstaande transacties" />
+          <Total Text="TOTAAL" />
+        </Report>
+        <ClockOut Text="Afrekenen" />
+      </ShiftReport>
+    </Profile>
+  </User>
+  <Security>
+    <Authorize Text="Gebruikersverificatie" />
+    <Level Text="Toegangsniveau">
+      <Change Text="Verander toegangsniveau voor geselecteerde actie">
+        <AccessDenied Text="U hebt onvoldoende rechten om het toegangsniveau voor deze bewerking te wijzigen.\n\nHet toegangsniveau kan worden aangepast door een gebruiker met een toegangsniveau dat nodig is om de geselecteerde bewerking uit te voeren." />
+      </Change>
+    </Level>
+    <AccessDenied Text="Toegang geweigerd">
+      <Info Text="U hebt onvoldoende rechten voor de geselecteerde bewerking." />
+    </AccessDenied>
+    <Key>
+      <Management Text="Beheer">
+        <Description Text="Controleert de toegang tot de beheersfuncties" />
+      </Management>
+      <Settings Text="Instellingen">
+        <Description Text="Controleert de toegang tot de instellingen" />
+      </Settings>
+      <VoidOrder Text="Annuleer bestelling">
+        <Description Text="Bepaalt of het een gebruiker is toegestaan om een volledig order te annuleren." />
+      </VoidOrder>
+      <VoidItem Text="Annuleer item">
+        <Description Text="Bepaalt of het een gebruiker is toegestaan om een individueel item in een order te annuleren" />
+      </VoidItem>
+      <LockSale Text="Verkoop vergrendelen" />
+      <UnlockSale Text="Ontgrendel verkoop" />
+      <SplitOrder Text="Order splitsen">
+        <Description Text="Bepaalt of het een gebruiker is toegestaan om (een deel van) een order te transfereren naar een andere gebruiker of tafel (op basis van ordernummer)" />
+      </SplitOrder>
+      <Discount Text="Korting toepassen" />
+      <DeleteDocument Text="Document verwijderen" />
+      <ClosingDay Text="Dag afsluiting">
+        <Description Text="Bepaalt de toegang tot de dagafsluiting sectie" />
+      </ClosingDay>
+      <Refund Text="Terugbetaling">
+        <Description Text="Bepaalt of een gebruiker een afgelsoten verkoop kan annuleren.\nDit creeert een nieuw terugbetalingsdocument en voegt automatisch de hoeveelheden terug toe aan de stock." />
+      </Refund>
+      <OpenOrders Text="Bekijk alle openstaande bestellingen">
+        <Description Text="Bepaalt of het een gebruiker is toegestaan om alle open orders te zien\nDeze optie is enkel beschikbaar als plattegronden beschikbaar zijn." />
+      </OpenOrders>
+      <SalesHistory Text="Verkoopgeschiedenis bekijken">
+        <Receipt Text="Ticket opnieuw afdrukken">
+          <Description Text="Bepaalt of het een gebruiker is toegestaan om een ticket uit de verkoopsgeschiedenis opnieuw af te drukken." />
+        </Receipt>
+      </SalesHistory>
+      <StartingCash Text="Startbedrag cash">
+        <Description Text="Bepaalt of een gebruiker toegang heeft tot de start cash sectie" />
+      </StartingCash>
+      <UserProfile Text="Gebrukersprofiel" />
+    </Key>
+  </Security>
+  <Payment>
+    <Details>
+      <Summary Text="Artikelen" />
+      <Actions Text="Acties">
+        <ShowItems Text="Toon artikelen" />
+      </Actions>
+      <Discount Text="Korting">
+        <Options Text="Korting opties">
+          <DisallowedItems Text="Er zijn items die niet direct aan een korting kunnen worden toegewezen." />
+        </Options>
+        <Type>
+          <Percent Text="Kortingspercentage toepassen" />
+          <Fixed Text="Korting toepassen als vast bedrag" />
+        </Type>
+        <Target>
+          <Item Text="Artikel korting">
+            <NotSelected Text="Geen artikel geselecteerd.\nSelecteer een artikel aan de linkerkant om een korting toe te passen." />
+            <NotAllowed Text="Korting is niet toegestaan voor geannuleerde artikelen" />
+            <Info Text="Korting toepassen op &quot;{0}&quot;" />
+          </Item>
+          <Cart Text="Winkelwagen korting">
+            <Info Text="Winkelwagen korting toepassen" />
+          </Cart>
+        </Target>
+        <Total Text="Totaal:" />
+        <Subtotal Text="Subtotaal:" />
+        <TotalDiscount Text="Totale korting:" />
+        <Clear Text="Kortingen verwijderen">
+          <Completed Text="Alle kortingen verwijderd" />
+        </Clear>
+      </Discount>
+      <Split Text="Rondes">
+        <Rounds Text="Selecteer ronde voor betaling">
+          <RoundNumber Text="Ronde:" />
+          <RoundTotal Text="Bedrag:" />
+          <SelectAll Text="Alles selecteren" />
+          <SelectNone Text="Alles afwijzen" />
+        </Rounds>
+      </Split>
+      <Customer Text="Klant" />
+      <Total Text="Totaal:" />
+      <TotalWithoutDiscount Text="Totaal zonder korting:" />
+      <Money Text="Betaling">
+        <Paid Text="Betaald:">
+          <Hint>
+            <TypeAmount Text="Geef betaald bedrag in" />
+            <TapToChange Text="Tik hier om het betaalde bedrag in te voeren" />
+          </Hint>
+        </Paid>
+        <Change Text="Wisselgeld:" />
+        <Balance Text="Balans:" />
+      </Money>
+      <PaymentTypes Text="Betalingswijze">
+        <Other Text="Splits betalingen" />
+        <Invalid Text="Betalingswijze niet toegestaan">
+          <Fiscal Text="De geselecteerde betaaltwijze bevat een ongeldige combinatie van fiscaal en niet-fiscaal betaaltype.\n\nHet is niet toegestaan om fiscale en niet-fiscale betalingswijzen te combineren." />
+        </Invalid>
+      </PaymentTypes>
+      <NoItems Text="Geen Artikelen" />
+    </Details>
+    <NoPaymentSelected Text="Betalingswijze niet geselecteerd" />
+    <Add Text="Voeg betaaltype toe">
+      <Info Text="Kies de betaalwijzen en bedragen die vereist zijn voor de huidige verkoop" />
+      <Amount Text="Bedrag voor betaling &quot;{0}&quot;" />
+    </Add>
+    <Selected Text="Geselecteerd betalingswijze" />
+    <Customer>
+      <Required Text="Klant vereist">
+        <Info Text="Betalingswijze &quot;{0}&quot; vereist dat de klant wordt geselecteerd. Selecteer een klant om door te gaan." />
+      </Required>
+    </Customer>
+    <PaymentTypes>
+      <Validation>
+        <Change>
+          <Missing Text="Onjuist bedrag">
+            <Info Text="Deze betaalwijze staat geen verandering toe. Voer het juiste bedrag in of selecteer een andere betalingsmethode." />
+          </Missing>
+        </Change>
+      </Validation>
+    </PaymentTypes>
+  </Payment>
+  <Customer>
+    <Search Text="Klant zoeken">
+      <Name Text="Naam" />
+      <PIN Text="BTW nummer" />
+      <LoyaltyCard Text="Klantenkaart" />
+      <Email Text="Email" />
+      <PhoneNumber Text="Telefoonnummer" />
+    </Search>
+    <Selection Text="Geselecteerde klant">
+      <Details>
+        <PIN Text="BTW nummer:" />
+        <Address Text="Adres:" />
+        <Email Text="Email:" />
+        <PhoneNumber Text="Telefoonnummer:" />
+      </Details>
+      <None Text="Klant niet geselecteerd">
+        <Info Text="Selecteer klant in de lijst" />
+      </None>
+      <Clear Text="Wis geselecteerde klant">
+        <Completed Text="Geselecteerde klant verwijderd" />
+      </Clear>
+    </Selection>
+    <New Text="Nieuwe klant">
+      <Add Text="Nieuwe klant toevoegen">
+        <Error Text="Er is een fout opgetreden bij de poging om een nieuwe klant toe te voegen.\nSysteembericht: {0}" />
+      </Add>
+      <Name Text="Naam" />
+      <TaxNumber Text="BTW nummer" />
+      <Address Text="Adres" />
+      <City Text="Stad" />
+      <PostalCode Text="Postcode" />
+      <Country Text="Land" />
+      <PhoneNumber Text="Telefoon nummer" />
+      <Email Text="Email" />
+      <Code Text="Code" />
+      <Validation Text="Ongeldige waarde voor dit veld">
+        <Length Text="Inhoud &quot;{0}&quot; is te lang. Mximaal toegelaten aantal karakters is {1}.\n\nGeef een geldige waarde in en probeer opnieuw." />
+      </Validation>
+    </New>
+  </Customer>
+  <Navigation>
+    <Back>
+      <NotAllowed Text="Geselecteerde operatie is niet toegestaan." />
+    </Back>
+  </Navigation>
+  <FloorPlans>
+    <Options Text="Opties">
+      <Design Text="Plattegrond / Tafelindeling">
+        <FloorPlan>
+          <Add Text="Voeg een nieuwe plattegrond toe" />
+          <Delete Text="Verwijder plattegrond" />
+          <Rename Text="Naam plattegrond wijzigen" />
+          <Name Text="Naam" />
+        </FloorPlan>
+        <Table>
+          <Add Text="Tafel toevoegen" />
+          <Delete Text="Verwijder geselecteerde tafel" />
+          <Name Text="Naam" />
+          <Height Text="Hoogte" />
+          <Width Text="Breedte" />
+          <Size Text="AFMETINGEN" />
+        </Table>
+        <Grid>
+          <Show Text="Toon indeling" />
+          <SnapToGrid Text="Klik vast op raster" />
+          <Size Text="Rastergrootte" />
+        </Grid>
+      </Design>
+      <View>
+        <Orders Text="Toon bestellingen">
+          <Title Text="Openstaande bestellingen" />
+          <Order>
+            <Number Text="Ontvangstnummer" />
+            <Total Text="Totaal" />
+          </Order>
+          <NoOrders Text="Er zijn geen openstaande bestellingen. Maak een nieuwe order met behulp van plattegrond." />
+        </Orders>
+        <FloorPlans Text="Toon plattegronden" />
+      </View>
+      <NoSelection Text="Ga verder zonder selectie" />
+    </Options>
+    <Save>
+      <Success Text="Wijzigingen zijn succesvol opgeslagen." />
+      <Error Text="Fout opgetreden tijdens het opslaan\nGegevens worden niet bewaard.\nSysteembericht: {0}">
+        <Duplicates Text="Dubbele tafelnamen gevonden.\n\n{0}\n\nTafelnamen moeten uniek zijn. Verbeter de tafelnamen en probeer het opnieuw.">
+          <Title Text="Duplicaten gevonden" />
+        </Duplicates>
+      </Error>
+    </Save>
+    <Table>
+      <Unavailable Text="Tafel &quot;{0}&quot; wordt bediend door {1}. Als u verdergaat maakt u een apart order aan voor dezelfde tafel.">
+        <Title Text="Tafel reeds ingenomen" />
+      </Unavailable>
+    </Table>
+  </FloorPlans>
+  <Settings Text="Instellingen">
+    <Basic Text="Basis instellingen">
+      <Language Text="Taal" />
+      <Style Text="Toepassing stijl">
+        <ColorScheme Text="Kleurenschema" />
+      </Style>
+      <Layout Text="lay-out">
+        <TouchScreen Text="TouchScreen" />
+        <Keyboard Text="Standaard" />
+      </Layout>
+      <VirtualKeyboard Text="Schakel virtueel toetsenbord in" />
+      <ProductSearch>
+        <Barcode Text="Barcode" />
+        <Code Text="Code" />
+        <Name Text="Naam" />
+      </ProductSearch>
+      <ColorScheme>
+        <Dark Text="Donker" />
+        <Light Text="Licht" />
+      </ColorScheme>
+      <NotificationPosition>
+        <Top Text="Top" />
+        <Bottom Text="Onderaan" />
+      </NotificationPosition>
+      <Notifications Text="Berichten">
+        <ShowClose Text="Toon &quot;Sluiten&quot; knop" />
+        <ClickToClose Text="Klik om te sluiten" />
+        <SlideIn Text="Inschuiven" />
+        <Duration Text="Berichtduur (sec.)" />
+        <Position Text="Positie" />
+      </Notifications>
+      <StartingCash Text="Toon contant bij het starten van de applicatie" />
+      <BusinessDay Text="Werkdag">
+        <SelecBusinessDay Text="Selecteer de werkdag bij het starten van de applicatie" />
+      </BusinessDay>
+      <Zoom Text="Zoomfactor" />
+      <ButtonBar Text="Knoppenbalk">
+        <Info Text="Selecteer de acties die verschijnen in de knoppenbalk">
+          <VisualLayoutOnly Text="Enkel van toepassing op de &quot;Visual&quot; layout." />
+        </Info>
+        <IsCommentVisible Text="Commentaar" />
+        <IsDiscountVisible Text="Korting" />
+        <IsNewSaleVisible Text="Nieuwe verkoop" />
+        <IsRefundVisible Text="Terugbetaling" />
+        <IsSearchVisible Text="Zoeken" />
+        <IsTransferVisible Text="Transfer" />
+      </ButtonBar>
+    </Basic>
+    <Order Text="Bestelling en betaling">
+      <Standard Text="Basisbewerkingen">
+        <AutoOrderNumber Text="Gebruik plattegronden" />
+        <PlaySound Text="Geluid">
+          <SoundSettings>
+            <Navigation Text="Navigatiegeluid" />
+            <ItemAdded Text="Item toevoegen geluid" />
+            <ItemNotFound Text="Item niet gevonden geluid" />
+            <Show Text="Toon geluidsopties" />
+            <Hide Text="Verberg geluidsopties" />
+          </SoundSettings>
+        </PlaySound>
+        <ProductGrid Text="Aantal rijen / kolommen" />
+      </Standard>
+      <Users Text="Gebruikers">
+        <SingleUser Text="Eén gebruiker" />
+      </Users>
+      <Products Text="Artikelen">
+        <DefaultQuantity Text="Standaard hoeveelheid" />
+        <DefaultSearch Text="Standaard zoekopdracht">
+          <Options Text="Toon zoekopties" />
+        </DefaultSearch>
+        <DefaultDiscountType Text="Standaard kortingssoort">
+          <Percent Text="Percentage" />
+          <Fixed Text="Vast" />
+        </DefaultDiscountType>
+        <RowPerItem Text="Aparte rij voor elk item" />
+      </Products>
+      <Payment Text="Betaling">
+        <ShowSummary Text="Toon items op betalingsformulier" />
+        <FixedRows Text="Beperkt rijnummer voor betalingswijzen" />
+        <IsSingleItemDiscountAllowed Text="Korting op één artikel toegestaan" />
+        <QuickPaymentConfirmation Text="Sneltoetsen betalingsbevestiging" />
+        <ShowPrintReceiptDialog Text="Geef het afdrukvenster voor de kwitantie weer" />
+        <DefaultDueDate Text="Standaard vervaldatum">
+          <Days Text="dagen" />
+        </DefaultDueDate>
+        <MergeItemsOnPayment Text="Items samenvoegen op de bon" />
+      </Payment>
+      <Advanced>
+        <Show Text="Toon geavanceerde instellingen" />
+        <Hide Text="Verberg geavanceerde instellingen" />
+        <ResetOrderNumber Text="Reset volgnummer orders bij dagafsluiting" />
+        <ShowAllOccupiedTables Text="Toon bezette tafels in plattegrond" />
+      </Advanced>
+    </Order>
+    <Print Text="Afdruk opties">
+      <PrinterSelection Text="Printer selectie">
+        <Tour>
+          <Title Text="Pas de printerinstellingen aan" />
+          <Content Text="Klik op de knop &quot;Printerinstellingen&quot;\nom uw printer in te stellen en aan te passen" />
+        </Tour>
+      </PrinterSelection>
+      <Printers>
+        <KitchenTicket Text="Keuken printer">
+          <Operation Text="Print keukenticket" />
+        </KitchenTicket>
+        <Service Text="Service printer">
+          <Operation Text="Print service berichten" />
+        </Service>
+        <Estimate Text="Gesloten verkoopprinter">
+          <Operation Text="Print gesloten verkoop" />
+        </Estimate>
+        <OrderSummary Text="Printopdracht" />
+      </Printers>
+      <PrinterOptions Text="Printer instellingen">
+        <Tooltip Text="Pas de printerinstellingen aan" />
+        <PrinterType Text="Printer type">
+          <A4 Text="A4" />
+          <EscPos Text="ESC/POS" />
+          <POS58 Text="POS 58" />
+          <POS58Rtl Text="POS 58 RTL" />
+          <POS80 Text="POS 80" />
+          <POS80Rtl Text="POS 80 RTL" />
+        </PrinterType>
+        <NumberOfCopies Text="Aantal kopieën" />
+        <PaperWidth Text="Tekens per regel" />
+        <Header Text="Header" />
+        <Footer Text="Footer" />
+        <FeedLines Text="Feed lines" />
+        <CutPaper Text="Papier afsnijden" />
+        <PrintBitmap Text="Print bitmap" />
+        <RichFormatting Text="Rich formatting" />
+        <Alignment>
+          <Left Text="Links uitlijnen" />
+          <Center Text="Centreren" />
+        </Alignment>
+        <Revert Text="Wijzigingen ongedaan maken">
+          <Completed Text="Eerder opgeslagen instellingen toegepast" />
+        </Revert>
+        <Advanced Text="Gevorderd">
+          <CodePage Text="Code pagina" />
+          <CharacterSet Text="Karakterset">
+            <None Text="Geen (standaard printer)" />
+            <USA Text="Verenigde Staten van Amerika" />
+            <France Text="Frankrijk" />
+            <Germany Text="Duitsland" />
+            <UK Text="Verenigd Koningkrijk" />
+            <DenmarkI Text="Denemarken I" />
+            <Sweden Text="Zweden" />
+            <Italy Text="Italië" />
+            <SpainI Text="Spanje I" />
+            <Japan Text="Japan" />
+            <Norway Text="Noorwegen" />
+            <DenmarkII Text="Noorwegen" />
+            <SpainII Text="Spanje II" />
+            <LatinAmerica Text="Latijns Amerika" />
+            <Korea Text="Korea" />
+            <SloveniaCroatia Text="Slovenië / Kroatië" />
+            <China Text="China" />
+            <Vietnam Text="Vietnam" />
+            <Arabia Text="Arabië" />
+          </CharacterSet>
+        </Advanced>
+        <Unavailable Text="Aanvullende opties zijn niet beschikbaar voor het geselecteerde printertype.\nSelecteer een ander printertype om extra printeropties te bekijken.">
+          <Info Text="Meer informatie over het selecteren van het printertype en het instellen van de bonprinter." />
+        </Unavailable>
+        <Margin Text="Marges (in millimeters)">
+          <Top Text="Boven" />
+          <Right Text="Rechts" />
+          <Bottom Text="Onder" />
+          <Left Text="Links" />
+        </Margin>
+        <PrintTestPage Text="Druk een testpagina" />
+        <PrintBarcode Text="Druk barcode af" />
+        <Font Text="Lettertype instellingen">
+          <Family Text="Fontsoort" />
+          <SizePercent Text="Fontgrootte" />
+          <Reset Text="Reset fontsoort naar standaard en setl fontgrootte in op 100%" />
+        </Font>
+      </PrinterOptions>
+      <Templates Text="Print template">
+        <Font Text="Lettertype">
+          <Info Text="Het geselecteerde lettertype wordt gebruikt in rekeningen,rapoorten en andere afdruktemplates. Indien niets geselecteerd wordt het default lettertype gebruikt." />
+        </Font>
+        <Invoice Text="Instellingen factuur">
+          <Title Text="Titel" />
+          <Columns Text="Selectie kolommen">
+            <TaxColumn Text="BTW kolom" />
+            <DiscountColumn Text="Korting kolom" />
+          </Columns>
+          <CustomerDetails Text="Klantdetails">
+            <TaxNumber Text="BTW nummer" />
+            <PhoneNumber Text="Telefoonnummer" />
+            <Email Text="Email" />
+          </CustomerDetails>
+          <Other Text="Andere instellingen" />
+          <Footer Text="Footer" />
+        </Invoice>
+      </Templates>
+    </Print>
+    <AddOns Text="Geregistreerde modules">
+      <Modules Text="Modules" />
+      <Plugins Text="Plugins" />
+    </AddOns>
+    <WeighingScale Text="Weegschaal instellingen">
+      <VariableMeasureBarcode Text="Weegschalen barcode">
+        <Enabled Text="Weegschalen barcode inschakelen" />
+        <Prefix Text="Eerste twee cijfers / prefix" />
+        <ProductCodeLength Text="Aantal cijfers voor productcode" />
+        <DecimalPlaces Text="Aantal decimalen" />
+        <TrimZeros Text="Nullen uit productcode verwijderen (voorloopnullen bijknippen)" />
+        <IsUsingPriceBarcode Text="Weegschaal drukt prijs af ipv hoeveelheid">
+          <Info Text="Sommige weegschalen drukken een totale prijs af ipv een gemeten hoeveelheid. Als deze optie is geselecteerd wordt de hoeveelheid berekend adhv de productprijs en het toaal bedrag van de weegschaal." />
+        </IsUsingPriceBarcode>
+      </VariableMeasureBarcode>
+    </WeighingScale>
+    <Email Text="Email instellingen">
+      <General>
+        <Host Text="Host" />
+        <Port Text="Poort" />
+        <EmailAddress Text="Email adres" />
+        <DisplayName Text="Weergavenaam" />
+        <Password Text="Wachtwoord" />
+        <SSL Text="SSL ingeschakeld" />
+        <Defaults Text="Standaard e-mailberichtwaarden">
+          <Subject Text="Onderwerp" />
+          <Message Text="Bericht" />
+          <Description Text="Als u besluit deze velden leeg te laten, wordt een automatisch gegenereerd onderwerp en bericht voor de klant gebruikt. U kunt deze wijzigen voordat het bericht wordt verzonden." />
+          <Bcc Text="Bcc ontvangers" />
+        </Defaults>
+        <Username Text="Gebruikersnaam" />
+      </General>
+    </Email>
+    <About Text="Over">
+      <HelpCenter Text="Open helpcentrum">
+        <Info Text="Ga naar help.aronium.com om een ondersteuningsaanvraag te openen." />
+      </HelpCenter>
+      <ApplicationDirectory Text="Applicatiegegevensmap">
+        <Info Text="Locatie waar applicatie-instellingen, logbestanden en andere toepassingsgerelateerde items worden opgeslagen." />
+        <Open Text="Open de map met toepassingsgegevens" />
+      </ApplicationDirectory>
+      <Database Text="Database">
+        <Open Text="Open de databaselocatie" />
+        <Backup Text="Back-up database">
+          <Success Text="Back-up database is succesvol voltooid.">
+            <Path Text="Folder: {0}" />
+            <UnableToCopy Text="Backup is aangemaakt op de standaard locatie. Onmogelijk om de backup op de geselecteerde folder te plaatsen." />
+          </Success>
+          <Error Text="Fout opgetreden bij het maken van een database backup.\nZie de logs voor verdere informatie." />
+        </Backup>
+      </Database>
+      <Update>
+        <AutoUpdate Text="Auto update" />
+        <SendUsageData Text="Help ons te verbeteren door anonieme gebruiksgegevens te verzenden" />
+        <Check Text="Controleer op updates">
+          <Checking Text="Controleren op updates ... Even geduld ..." />
+          <Downloading Text="Update downloaden ... Even geduld ..." />
+          <UpToDate Text="Aronium is up-to-date." />
+          <Available Text="Nieuwe versie is beschikbaar.">
+            <Run Text="Klik hier om nu te installeren." />
+          </Available>
+          <Error>
+            <NoConnection Text="Kan geen verbinding maken met de server.\nControleer uw internetverbinding en probeer het opnieuw." />
+          </Error>
+        </Check>
+        <Ready Text="Update is beschikbaar">
+          <Install Text="Klik hier om een nieuwe versie te installeren" />
+          <Description Text="Nieuwe versie is klaar om te worden geïnstalleerd.\nGa voor meer informatie naar de pagina met release-opmerkingen door te klikken op 'Wat is er nieuw?' knop hieronder.">
+            <Install Text="Klik op de knop &quot;Installeren&quot; om de nieuwste updates te installeren." />
+          </Description>
+          <Versions>
+            <Current Text="Huidige versie:" />
+            <New Text="Nieuwe versie:" />
+          </Versions>
+          <Ignore Text="Negeer deze update" />
+          <ReleaseNotes Text="Wat is er nieuw?" />
+          <Postpone Text="Niet nu" />
+          <Run Text="Installeren" />
+        </Ready>
+      </Update>
+      <Account Text="Account">
+        <Email Text="Vul je e-mailadres in" />
+        <Change Text="Wijzig" />
+      </Account>
+      <TermsOfUse Text="Gebruiksvoorwaarden">
+        <Info Text="Lees onze gebruiksvoorwaarden online" />
+      </TermsOfUse>
+    </About>
+    <Authorization>
+      <Title Text="Voer een wachtwoord in om toegang te krijgen tot de applicatie-instellingen" />
+    </Authorization>
+    <Products Text="Productinstellingen">
+      <TaxInclusivePrice Text="Toon items en druk ze af inclusief BTW">
+        <Tooltip Text="Indien geselecteerd zullen items getoond en afgedrukt worden inclusief BTW" />
+      </TaxInclusivePrice>
+      <DiscountApplyRule Text="Regel voor toepassing korting">
+        <BeforeTax Text="Voor BTW" />
+        <AfterTax Text="na BTW" />
+      </DiscountApplyRule>
+      <AllowNegativePrices Text="Negatieve prijs toestaan">
+        <Tooltip Text="Indien geslecteerd wordt ene negatieve verkoopsprijs toegestaan" />
+      </AllowNegativePrices>
+    </Products>
+    <Database Text="Databank">
+      <AutoBackup Text="Automatische backup">
+        <Enabled Text="Maak automatische backup mogelijk" />
+        <BackupOnStart Text="Backup database bij start applicatie" />
+        <BackupOnClose Text="Backup database bij afsluiten applicatie" />
+        <DirectoryPath Text="Backup locatie">
+          <Choose Text="Kies locatie voor backupbestand" />
+          <Info Text="Selecteer de folder voor de backups. Automatische backups worden op deze locatie opgeslagen." />
+        </DirectoryPath>
+        <RemoveOldFiles Text="Verwijder oudere backups">
+          <DaysToKeep Text="Aantal dagen om backups bij te houden" />
+        </RemoveOldFiles>
+      </AutoBackup>
+    </Database>
+    <RestartRequired Text="Aronium moet herstart worden om deze instellingen te activeren.">
+      <Title Text="Herstart noodzakelijk" />
+    </RestartRequired>
+  </Settings>
+  <Document>
+    <Create>
+      <Error Text="Er is een fout opgetreden bij het maken van het document.\nProbeer het opnieuw." />
+    </Create>
+    <Category>
+      <Expenses Text="Uitgaven">
+        <Purchase Text="Aankopen" />
+        <StockReturn Text="Teruggave stock" />
+      </Expenses>
+      <Inventory Text="Inventaris">
+        <InventoryCount Text="Inventaris telling" />
+      </Inventory>
+      <Loss Text="Verlies">
+        <LossAndDamage Text="Verlies en beschadigd" />
+      </Loss>
+      <Sales Text="Verkopen">
+        <Sales Text="Verkopen" />
+        <Refund Text="Terugbetalingen" />
+        <Proforma Text="Proforma" />
+      </Sales>
+    </Category>
+  </Document>
+  <Invoices Text="Verkoopgeschiedenis bekijken">
+    <Title Text="Verkoopgeschiedenis" />
+    <Documents Text="Documenten">
+      <Customer Text="Klant">
+        <Change Text="Verander klant">
+          <Success Text="Klant is succesvol gewijzigd." />
+        </Change>
+      </Customer>
+      <Print Text="Afdrukken">
+        <CashReceipt Text="Bon">
+          <PrinterNotFound Text="Serviceprinter is niet geselecteerd of uitgeschakeld. Controleer de printerinstellingen en probeer het opnieuw." />
+          <Address Text="Adres" />
+          <VatNumber Text="BTW nummer" />
+          <Date Text="Datum" />
+          <ReceiptNumber Text="Bon nummer" />
+          <Customer Text="Klant" />
+          <Total Text="Totaal" />
+          <Tax Text="BTW" />
+          <TotalAmount Text="TOTAAL" />
+          <FiscalReceiptNumber Text="Fiscaal bonnummer" />
+          <Signature Text="Handtekening" />
+          <Stamp Text="P.S." />
+          <Authorization>
+            <Title Text="Geef wachtwoord in om ticket af te drukken" />
+          </Authorization>
+        </CashReceipt>
+        <Pdf Text="Opslaan als PDF">
+          <Success Text="Document &quot;{0}&quot; opgeslagen" />
+        </Pdf>
+        <Error Text="Fout bij het afdrukken van het document">
+          <NoService Text="Afdrukservice niet geregistreerd" />
+        </Error>
+        <Refund Text="Terugbetaling" />
+        <Preview Text="Afdrukvoorbeeld" />
+      </Print>
+      <Delete Text="Verwijder">
+        <Confirmation>
+          <Title Text="Document verwijderen" />
+          <Message Text="Weet u zeker dat u document &quot;{0}&quot; wilt verwijderen?" />
+        </Confirmation>
+        <Unauthorized Text="U bent niet gemachtigd om documenten te verwijderen." />
+        <Error Text="Er is een fout opgetreden bij poging tot verwijderen van het document. Gelieve omnieuw te proberen" />
+      </Delete>
+      <List Text="Documenten">
+        <Document>
+          <Number Text="Nummer" />
+          <DocumentType Text="Type document" />
+          <Warehouse Text="Magazijn" />
+          <Customer Text="Klant">
+            <Refresh Text="Vernieuw klantenlijst">
+              <Complete Text="Klanten herladen" />
+            </Refresh>
+          </Customer>
+          <Vendor Text="Verkoper">
+            <Refresh Text="Lijst met leveranciers vernieuwen">
+              <Complete Text="Leveranciers herladen" />
+            </Refresh>
+          </Vendor>
+          <ExternalDocument Text="Extern document" />
+          <Date Text="Datum" />
+          <DueDate Text=" Uiterste datum" />
+          <StockDate Text="Voorraad datum" />
+          <DateCreated Text="Gemaakt" />
+          <DateUpdated Text="Bijgewerkt" />
+          <CashRegister Text="POS" />
+          <OrderNumber Text="Bestelnummer" />
+          <User Text="Gebruiker" />
+          <PaymentType Text="Betalingswijze" />
+          <Discount Text="Korting" />
+          <Paid Text="Betaald" />
+          <Unpaid Text="Onbetaald" />
+          <Total Text="Totaal">
+            <Summary>
+              <TotalBeforeTax Text="Totaal ex. BTW:" />
+              <Tax Text="BTW:" />
+              <Total Text="Totaal:" />
+              <Discount Text="Korting:">
+                <DiscountType Text="Kortingstype:">
+                  <Percent Text="Kortingspercentage" />
+                  <Fixed Text="Kortingsbedrag" />
+                </DiscountType>
+                <DiscountApplyRule Text="Pas korting toe voor of na BTW.\nDeze selectie zal gebruikt worden voor artikelen en globale kortingen,">
+                  <BeforeTax Text="Korting toepassen op bedrag exclusief BTW" />
+                  <AfterTax Text="Korting toepassen op bedrag inclusief BTW" />
+                </DiscountApplyRule>
+              </Discount>
+              <Subtotal Text="Subtotaal:" />
+            </Summary>
+          </Total>
+          <Payments Text="Betalingen">
+            <Add Text="Voeg betalingen toe" />
+            <PaymentType Text="Betalingswijze" />
+            <Amount Text="Bedrag" />
+            <Date Text="Datum" />
+            <NewPayment Text="Nieuwe betaling" />
+            <Delete Text="Wis betaling">
+              <Confirmation Text="Weet u zeker dat u de betaling &quot;{0}&quot; wilt verwijderen?" />
+            </Delete>
+            <Totals>
+              <PaymentsTotal Text="Totaal betalingen:" />
+              <DocumentTotal Text="Documenttotaal:" />
+            </Totals>
+          </Payments>
+          <Items Text="Documentitems">
+            <Item>
+              <ProductCode Text="Code" />
+              <Product Text="Naam" />
+              <MeasurementUnit Text="Maateenheid" />
+              <Quantity Text="Aantal stuks" />
+              <PriceNoTax Text="Prijs ex. BTW" />
+              <Price Text="Prijs" />
+              <Tax Text="BTW %">
+                <Add Text="BTW toevoegen">
+                  <Tooltip Text="BTW toevoegen aan dit item" />
+                </Add>
+                <Remove>
+                  <Tooltip Text="Haal BTW uit dit artikel" />
+                </Remove>
+              </Tax>
+              <Discount Text="Korting">
+                <DiscountType Text="Selecteer kortingstype">
+                  <Percent Text="Kortingspercentage" />
+                  <Fixed Text="Kortingsbedrag" />
+                </DiscountType>
+                <DiscountApplyRule>
+                  <BeforeTax Text="exclusief BTW" />
+                  <AfterTax Text="inclusief BTW" />
+                </DiscountApplyRule>
+              </Discount>
+              <TotalBeforeTax Text="Totaal ex. BTW" />
+              <Total Text="Totaal" />
+              <TotalBeforeDiscount Text="Totaal zonder korting" />
+              <Error>
+                <Taxes Text="Dubbel BTW tarief gevonden. BTW tarif (&quot;{0}&quot;).\nSelecteer een geldig BTW tarief en probeer opnieuw." />
+              </Error>
+            </Item>
+            <Delete Text="Verwijder documentitem">
+              <Confirmation Text="Weet u zeker dat u &quot;{0}&quot; wilt verwijderen?" />
+            </Delete>
+          </Items>
+          <Print>
+            <UnsavedChanges Text="Document bevat niet-opgeslagen wijzigingen. Wilt u de wijzigingen opslaan voordat ze worden afgedrukt?">
+              <Title Text="Niet-opgeslagen wijzigingen" />
+            </UnsavedChanges>
+          </Print>
+        </Document>
+      </List>
+      <Count Text="Aantal documenten:" />
+      <Total Text="Totaalbedrag:" />
+      <AllUsers Text="Toon alle gebruikers" />
+      <CashRegister>
+        <All Text="Alle kassa's" />
+        <Select Text="Selecteer kassa" />
+      </CashRegister>
+      <BulkActions Text="Globale bewerkingen">
+        <Delete Text="Verwijder geselecteerde documenten">
+          <Confirmation>
+            <Title Text="Verwijder geselecteerde documenten" />
+            <Message Text="Bent u zeker dat u de geselecteerde documenten wil verwijderen?" />
+          </Confirmation>
+          <Message Text="Documenten worden verwijderd... Even geduld..." />
+        </Delete>
+        <UpdatePaidStatus>
+          <Message Text="Updaten betalingsstatus... Even geduld..." />
+        </UpdatePaidStatus>
+      </BulkActions>
+    </Documents>
+    <Authorization>
+      <Title Text="Voer een wachtwoord in om toegang te krijgen tot de verkoopgeschiedenis" />
+    </Authorization>
+  </Invoices>
+  <CashRegister>
+    <Select Text="Selecteer kassa" />
+  </CashRegister>
+  <Feedback Text="Feedback">
+    <Title Text="Help ons Aronium te verbeteren" />
+    <Description Text="Bedankt dat je de tijd hebt genomen om een suggestie te geven.\nUw feedback helpt ons de Aronium-applicatie beter te maken.">
+      <Contact Text="U kunt altijd contact met ons opnemen via" />
+    </Description>
+    <Message>
+      <Name Text="Uw naam" />
+      <Email Text="Email adres" />
+      <Subject Text="Onderwerp" />
+      <Message Text="Bericht" />
+      <Rating Text="Algemene beoordeling" />
+    </Message>
+    <Send Text="Feedback verzenden" />
+    <Confirmation>
+      <Title Text="Dank u!" />
+      <Message Text="Je feedback wordt verzonden. We zullen het gebruiken om Aronium beter te maken." />
+    </Confirmation>
+  </Feedback>
+  <Guide>
+    <Menu>
+      <Title Text="Open het hoofdmenu" />
+      <Content Text="Klik hier om het hoofdmenu en het gedeelte voor toegangsbeheer te openen" />
+    </Menu>
+    <Layout>
+      <SearchBox Text="Zoek producten op naam, streepjescode of code.">
+        <Title Text="Product zoeken" />
+      </SearchBox>
+    </Layout>
+    <Dismiss>
+      <Title Text="De rondleiding afwijzen" />
+      <Confirmation Text="Weet je zeker dat je deze tips wilt verbergen?" />
+    </Dismiss>
+  </Guide>
+  <Layout>
+    <Visual>
+      <Item>
+        <Edit Text="Bewerk visueel uiterlijk">
+          <Color Text="Kleur" />
+          <Image Text="Beeld">
+            <Select Text="Selecteer afbeelding" />
+            <Clear Text="Wis afbeelding" />
+          </Image>
+        </Edit>
+      </Item>
+    </Visual>
+  </Layout>
+  <OpenOrders Text="Bekijk open verkopen">
+    <Total Text="TOTAALBEDRAG" />
+    <NoOrders Text="Geen open verkopen" />
+    <Authorization>
+      <Title Text="Voer een wachtwoord in om toegang te krijgen tot open verkopen" />
+    </Authorization>
+  </OpenOrders>
+  <StartingCash Text="Contant in / uit">
+    <Type>
+      <CashIn Text="Geld toevoegen" />
+      <CashOut Text="Contant geld verwijderen" />
+    </Type>
+    <Amount Text="Bedrag">
+      <Reason Text="Beschrijving">
+        <Tooltip Text="Voer de reden in voor het toevoegen of verwijderen van contant geld ..." />
+      </Reason>
+    </Amount>
+    <Hide Text="Laat dit niet meer zien" />
+    <Entries Text="Cash posten">
+      <NoDescription Text="&lt;Geen beschrijving&gt;" />
+      <NoEntries Text="Geen records" />
+    </Entries>
+    <Saved Text="Startbedarg cash succesvol opgeslagen" />
+  </StartingCash>
+  <Account>
+    <FirstName Text="Voornaam" />
+    <LastName Text="Achternaam" />
+    <Email Text="Email" />
+    <Password Text="Wachtwoord">
+      <Confirmation Text="Bevestiging wachtwoord">
+        <Error Text="Wachtwoorden komen niet overeen" />
+      </Confirmation>
+    </Password>
+    <License>
+      <Info Text="Licentie">
+        <Data Text="Datum licentie">
+          <LicensedTo Text="Licentie verleend aan" />
+          <Email Text="Email" />
+          <StoreId Text="ID verkoopspunt" />
+          <Id Text="Licentie ID" />
+        </Data>
+        <Products Text="Producten">
+          <Id Text="Id" />
+          <Name Text="Naam" />
+          <ValidUntil Text="Geldig tot" />
+          <LicenseType Text="Licentietype" />
+        </Products>
+        <NoLicense>
+          <Info Text="Bezoek www.aronium.com om meer te weten te komen over premium opties" />
+        </NoLicense>
+        <Refresh Text="Vernieuw licentie">
+          <Success Text="Licentie succesvol gedownloaded" />
+        </Refresh>
+        <Copy Text="Kopieer licentie naar bestand" />
+        <Load Text="Laad licentie vanuit bestand" />
+        <UnlicensedProducts Text="Niet gelicensieerde producten" />
+      </Info>
+      <Login Text="Log in in uw account">
+        <NotRegistered Text="Niet geregistreerd?">
+          <SignUp Text="Registreer nu!" />
+        </NotRegistered>
+        <SignIn Text="Aanmelden" />
+      </Login>
+      <Register Text="Registreer nieuw account">
+        <AlreadyRegistered Text="Reeds geregistreerd?">
+          <SignIn Text="Meld nu aan!" />
+        </AlreadyRegistered>
+        <CreateAccount Text="Maak acount aan" />
+        <Store Text="Maak een verkoopspunt aan">
+          <Details Text="Nemen even tijd om uw verkoopspunt op te zetten.\nUw bedrijfsgegevens zullen geupdated worden en uw licentie wordt automatisch gegenereerd.">
+            <CompanyName Text="Bedrijfsnaam" />
+            <Address Text="Adres" />
+            <ZipCode Text="Postcode" />
+            <TaxNumber Text="BTWnummer" />
+            <City Text="Woonplaats" />
+            <Country Text="Land" />
+          </Details>
+          <Create Text="Maak verkoopspunt aan en genererr licentie" />
+        </Store>
+        <Success Text="Account succesvol gecreeerd" />
+      </Register>
+      <SelectStore Text="Selecteer verkoopspunt">
+        <Info Text="Selecteer verkoopspunt waarvoor u de licentie wil laden uit onderstaande lijst.">
+          <Register Text="Een maal u een verkoopspunt heeft geselecteerd zal u gevraagd worden om eventuele niet gelisensieerde producten te registreren voor dit verkoopspunt." />
+        </Info>
+        <NoStores Text="Geen verkoopspunt gevonden">
+          <Info Text="Het lijkt erop dat er geen verkoopspunten verbonden zijn met account &quot;{0}&quot;. Om een licentie te activeren dient u een verkoopspunt ermee te verbinden." />
+          <Reload Text="Gelieve eerst een verkoopspunt aan te maken, en klik dan op verversen om verder te gaan." />
+          <Add Text="Open My Aronium om uw eerste verkoopspunt aan te maken" />
+        </NoStores>
+        <Successfull Text="U bent succesvol aangemeld">
+          <Info Text="Als er een licentie voor dit verkoopspunt bestaat zal het automatisch worden gedownloaded." />
+        </Successfull>
+      </SelectStore>
+      <StartTrial Text="Start test">
+        <Info Text="Selecteer onderstaande opties om testversies voor niet-gelicensieerde producten te starten." />
+        <SelectedStore Text="Geselecteerd verkoopspunt:">
+          <Change Text="Gebruik een ander verkoopspunt" />
+        </SelectedStore>
+        <Now Text="Start testversie nu" />
+      </StartTrial>
+      <Load Text="Laad licentie vanuit bestand">
+        <Successful Text="Licentie succesvol geladen" />
+      </Load>
+      <InvalidLicense Text="Ongeldige of ontbrekende licentie">
+        <Info Text="Eén of meerdere producten ontbreken een geldige licentie">
+          <SignInOrLoadFromFile Text="Gelieve aan te melden in uw account om een geldige licentie te downloeden, of laad de bestaande licentie uit een bestand." />
+          <FollowInstructions Text="Volg de instructies hieronder om verder te gaan." />
+        </Info>
+        <Hide Text="Toon dit niet meer voor deze producten" />
+      </InvalidLicense>
+    </License>
+    <Switch Text="Log in met ene andere accoount" />
+    <SignOut Text="Log uit">
+      <Successful Text="U bent succesvol afgemeld" />
+    </SignOut>
+    <Error>
+      <ExistingAccount Text="Er bestaat reeds een gebruiker met dit emailadres" />
+      <Unauthorized Text="Verkeerde gebruikersnaam of wachtwoord. Controleer uw ingave en probeer opnieuw." />
+    </Error>
+  </Account>
+  <Validations>
+    <Info Text="Bekijk meer details en hoe dit probleem kan opgelost worden op ">
+      <Community Text="onze community" />
+      <Or Text="of" />
+      <ContactSupport Text="contacteer onze support" />
+    </Info>
+    <Cancel Text="Sluit programma af" />
+    <Confirm Text="I begrijp dit, ga verder met het starten van het programma" />
+    <Print>
+      <Warning>
+        <CustomTemplates Text="We hebben vastgesteld dat u aangepaste tickets of facturen gebruikt. Door wijzigingen in de database in deze release zullen deze templates niet meer werken.\nU kan de default templates gebruiken, zodat uw dagelijkse werking niet onderbroken wordt.\n\nAls u uw oude templates toch wil verder gebruiken, stop dan het programma nu, en keer terug naar de oude versie.">
+          <Title Text="OPGELET: EIGEN PRINT TEMPLATES KUNNEN MOGELIJKS NIET MEER WERKEN!" />
+        </CustomTemplates>
+      </Warning>
+    </Print>
+    <Refund>
+      <Invalid Text="Terugbetalig is niet geldig" />
+    </Refund>
+  </Validations>
+  <Print>
+    <Error Text="Er is een fout opgetreden bij het afdrukken">
+      <CustomTemplate Text="Er is een fout opgetreden in uw eigen template!\nGelieve Aronium support te contacteren teneinde mogelijke issues met uw persoonlijke template op te lossen.">
+        <Continue Text="Wil u verder gaan met afdrukken via de default template?" />
+      </CustomTemplate>
+    </Error>
+  </Print>
+</Language>

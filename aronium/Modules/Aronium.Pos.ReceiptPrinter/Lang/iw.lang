@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="iw" name="Hebrew">
+  <ReceiptPrinter Text="מדפסת קבלות">
+    <PrintReceipt Text="הדפס קבלה" />
+    <Receipt>
+      <PrinterNotFound Text="מדפסת הקבלה לא נבחרה או מושבתת. בדוק\י את הגדרות המדפסת ונסה\י שוב." />
+      <PaymentTypes>
+        <PrintDisabled Text="קבלת ההדפסה מושבתת עבור סוגי התשלומים שנבחרו.\nאנא, אפשר\י הדפסת קבלה עבור סוגי תשלומים שנבחרו לפני הדפסת קבלה." />
+      </PaymentTypes>
+      <Company>
+        <TaxNumber Text="מספר מס." />
+      </Company>
+      <Customer Text="לקוח">
+        <Address Text="כתובת" />
+        <TaxNumber Text="מספר מס." />
+        <Code Text="קוד" />
+        <PhoneNumber Text="טלפון" />
+        <Email Text="דוא''ל" />
+      </Customer>
+      <Number Text="מספר קבלה." />
+      <RefundNumber Text="מספר זיכוי." />
+      <OrderNumber Text="מספר הזמנה." />
+      <ItemsCount Text="ספירת פריטים" />
+      <Subtotal Text="סיכום ביניים" />
+      <Tax Text="מס" />
+      <Discount Text="הנחת עגלה" />
+      <Total Text="סה''כ" />
+      <PaidAmount Text="שולם" />
+      <AmountDue Text="נותר" />
+      <DueDate Text="תאריך יעד" />
+      <User Text="משתמש" />
+      <Change Text="עודף" />
+      <Customize Text="קבלה מותאמת">
+        <UseSystemCurrency Text="השתמש בתבנית מטבע של המערכת">
+          <Info Text="סמל המטבע שלך מוגדר כ- {0}. השתמש\י בלוח הבקרה של Windows כדי לשנות את סמל המטבע.">
+            <OpenRegionalSettings Text="פתח את הגדרות אזור המדינה שלך" />
+          </Info>
+        </UseSystemCurrency>
+        <NumberOfDecimalPlaces Text="נקודה עשרונית" />
+        <PrintTaxes Text="הדפס סכומי מס" />
+        <PrintItemsCount Text="הדפס ספירת כמות פריטים" />
+        <PrintOrderNumber Text="הדפס מספר הזמנה" />
+        <ShortReceiptNumber Text="מספר קבלה קצר" />
+        <PrintTaxName Text="הדפס שם מס" />
+        <Counter Text="מספור קבלה">
+          <Edit Text="לחץ\י כדי לערוך את מונה מספר הקבלה" />
+        </Counter>
+        <Localize Text="מקם\י טקסט קבלה">
+          <Info Text="השתמש\י בטופס זה כדי לתרגם או לשנות את התוויות המודפסות על הקבלות." />
+          <Company>
+            <TaxNumber Text="מספר עוסק" />
+          </Company>
+          <CustomerDetails Text="פרטי לקוח">
+            <Info Text="בחר\י כיצד מודפסים פרטי הלקוח בקבלה. אם אינך מעוניין להדפיס תווית כלשהי בקבלה, בטל\י את סימון האפשרות שלהלן.\nסעיף זה מתייחס לתוויות בלבד ולא לפרטי לקוחות בפועל המודפסים עם הקבלה." />
+          </CustomerDetails>
+          <Customer Text="לקוח">
+            <Address Text="כתובת" />
+            <TaxNumber Text="מספר מס" />
+            <Code Text="קוד" />
+            <PhoneNumber Text="מספר טלפון" />
+            <Email Text="דוא''ל" />
+          </Customer>
+          <ReceiptNumber Text="מספר קבלה" />
+          <RefundNumber Text="מספר זיכוי" />
+          <OrderNumber Text="מספר הזמנה" />
+          <ItemsCount Text="ספירת פריטים" />
+          <Discount Text="הנחה" />
+          <Subtotal Text="סיכום ביניים" />
+          <Tax Text="גובה מס" />
+          <Total Text="סה''כ" />
+          <PaidAmount Text="שולם" />
+          <AmountDue Text="נותר לתשלום" />
+          <DueDate Text="תאריך יעד" />
+          <User Text="משתמש" />
+          <Change Text="עודף" />
+        </Localize>
+        <CustomerDetails Text="פרטי לקוח">
+          <Info Text="בחר\י אילו פרטי לקוח יודפסו בקבלה" />
+          <Name Text="שם" />
+          <Code Text="קוד" />
+          <TaxNumber Text="מספר מס" />
+          <Address Text="כתובת" />
+          <PhoneNumber Text="מספר טלפון" />
+          <Email Text="דוא''ל" />
+        </CustomerDetails>
+      </Customize>
+    </Receipt>
+    <DailyReport>
+      <ZReport Text="דוח Z" />
+      <XReport Text="דוח X" />
+      <CashRegister Text="קופה #:" />
+      <Date Text="תאריך:" />
+      <Time Text="זמן:" />
+      <ReportNumber Text="דוח #:" />
+      <FromDocument Text="ממסמך:" />
+      <ToDocument Text="למסמך:" />
+      <CashIn Text="מזומנים ב:" />
+      <CashOut Text="לפדות את:" />
+      <UserSales Text="מכירות של משתמשים:" />
+      <PaymentTypes Text="סוגי מכרזים:">
+        <Total Text="סך כל המכרזים:" />
+      </PaymentTypes>
+      <Refunds Text="החזרות:">
+        <Total Text="סה''כ החזרות:" />
+      </Refunds>
+      <TaxCollected Text="מס שנאסף:" />
+      <TaxableTotal Text="סה&quot;כ חייבים במס:" />
+      <Tax Text="מס:" />
+      <Total Text="סה''כ:" />
+      <TotalBalance Text="מאזן כללי:" />
+      <Items Text="דוח פריטים">
+        <ReportNumber Text="דוח #:" />
+        <Products Text="פריטים" />
+        <Groups Text="קבוצת מוצרים" />
+        <Count Text="ספירת פריטים" />
+      </Items>
+      <DiscountsGranted Text="הנחות שניתנו:" />
+    </DailyReport>
+    <CashDrawer Text="מגירת מזומן">
+      <OpenCashDrawer Text="פתח מגירת מזומן">
+        <AuthorizationRequired Text="מגירת מזומנים דורשת הרשאה.\nאנא הכנס\י את הסיסמה הדרושה לפתיחת מגירת המזומנים." />
+      </OpenCashDrawer>
+      <Command Text="פקודת מגירת מזומנים">
+        <LearnMore Text="מה זה ?" />
+      </Command>
+      <Error>
+        <CommandNotSet Text="פקודה לפתיחת מגירה לא הוגדרה.\nנא להגדיר  להמשך." />
+        <PrinterNotSet Text="מדפסת הקבלה לא הוגדרה.\nאנא הגדר\י את מדפסת הקבלה כדי להמשיך." />
+      </Error>
+      <Test Text="בדוק מגירה">
+        <InvalidCommand Text="אנא הכנס פקודת מגירת מזומנים תקינה לבדיקה." />
+      </Test>
+    </CashDrawer>
+  </ReceiptPrinter>
+  <FiscalPrinter>
+    <Check Text="טוען מדפסת קבלה ...">
+      <Status Text="בדיקת מצב מדפסת ..." />
+    </Check>
+    <CloseFiscalDay Text="הדפסת דוחות סגירה">
+      <Info Text="בחר\י דוחות להדפסה. וודא\י שהמדפסת שלך זמינה ותקינה" />
+      <DailyReport Text="הדפס דוח Z">
+        <InProgress Text="מדפיס דוח Z נא להמתין..." />
+      </DailyReport>
+      <SubReport Text="הדפס דוח X">
+        <InProgress Text="מדפיס דוח X נא להמתין..." />
+      </SubReport>
+      <ItemsReport Text="הדפס דוח פריטים">
+        <InProgress Text="מדפיס דוח פריטים ... אנא המתן ..." />
+      </ItemsReport>
+      <PrinterDisabled Text="המדפסת מושבתת או לא נבחרה. דוחות לא יודפסו כנראה." />
+    </CloseFiscalDay>
+  </FiscalPrinter>
+</Language>

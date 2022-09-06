@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="iw" name="Hebrew">
+  <Stock Text="מלאי">
+    <Items>
+      <Item>
+        <Product>
+          <Id Text="מספר" />
+          <Code Text="קוד" />
+          <Name Text="שם" />
+          <MeasurementUnit Text="יחידת מדידה" />
+        </Product>
+        <Quantity Text="כמות" />
+        <NegativeQuantity Text="כמות מלאי שלילית" />
+        <TotalCostBeforeTax Text="עלות" />
+        <TotalCost Text="עלות כולל מס" />
+        <TotalBeforeTax Text="ערך" />
+        <TotalAfterTax Text="ערך כולל מס" />
+      </Item>
+      <Filter>
+        <NegativeQuantity Text="כמות שלילית">
+          <Info Text="הצג מוצרים עם כמות שלילית בלבד" />
+        </NegativeQuantity>
+        <NonZeroQuantity Text="כמות שאינה אפס">
+          <Info Text="הצג מוצרים ללא כמות אפס בלבד" />
+        </NonZeroQuantity>
+        <ZeroQuantity Text="כמות אפס">
+          <Info Text="הצג מוצרים עם כמות אפס בלבד" />
+        </ZeroQuantity>
+      </Filter>
+      <Summary>
+        <NegativeCount Text="סך כל הפריטים עם הכמות השלילית במלאי" />
+        <ZeroCount Text="סך כל הפריטים עם כמות אפס במלאי" />
+        <PositiveCount Text="סה&quot;כ פריטים עם כמות חיובית במלאי" />
+        <TotalBeforeTax Text="סה''כ:" />
+        <TotalIncludingTax Text="סה''כ כולל מס:" />
+        <SellPrice Text="מחיר מכירה" />
+        <CostPrice Text="מחיר עלות">
+          <TotalCostBeforeTax Text="מחיר כללי:" />
+          <TotalCostAfterTax Text="עלות כוללת מס:" />
+        </CostPrice>
+      </Summary>
+    </Items>
+    <Reset Text="חישוב כמויות מלאי מחדש">
+      <Completed Text="חישוב מלאי הושלם בהצלחה." />
+    </Reset>
+    <History Text="היסטוריית מלאי">
+      <Start Text="התחלה" />
+      <End Text="סיום" />
+      <Document Text="מסמך">
+        <DocumentType Text="סוג מסמך" />
+        <Customer Text="לקוח" />
+        <Date Text="תאריך" />
+        <StockDate Text="תאריך מלאי" />
+      </Document>
+      <ChangeQuantity Text="כמות" />
+      <InStock Text="מלאי נכנס" />
+      <MeasurementUnit Text="יחידת מדידה" />
+    </History>
+    <Print>
+      <Report Text="דו&quot;ח ספירת מלאי" />
+    </Print>
+    <ProductDetails>
+      <OnHand Text="כמות בהישג יד" />
+    </ProductDetails>
+    <Control>
+      <Settings>
+        <PreventNegativeQuantities Text="למנוע מלאי שלילי" />
+      </Settings>
+      <NegativeQuantity Text="אפס מכירה במלאי">
+        <Confirmation Text="אין לך כמות מספקת למכירה כדי למכור פריט זה. מכירת פריט זה עלולה לגרום לכמות שלילית במלאי.\n\nכמות בהישג יד: {0}\nהכמות הנדרשת: {1}\n\nהאם אתה בטוח שברצונך להוסיף פריט זה למכירה הנוכחית?" />
+        <Title Text="חסר במלאי" />
+        <PermissionDenied Text="אין לך הרשאות למכור פריטים בכמות אפס. אנא התייעץ עם מנהל המערכת." />
+        <Authorization>
+          <Title Text="בקרת מלאי מופעלת.\nאנא ספק\י סיסמא למכירת פריט כמות מלאי כדי להמשיך" />
+        </Authorization>
+        <AllowMultiple>
+          <NotAllowed Text="אסור לבצע פעולה חוזרת כאשר בקרת המלאי מופעלת." />
+        </AllowMultiple>
+        <Security>
+          <Description Text="קובע אם משתמש מסוגל למכור פריטים בכמות שלילית" />
+        </Security>
+      </NegativeQuantity>
+    </Control>
+    <QuickInventory Text="מלאי מהיר">
+      <Description Text="שנה כמויות מלאי עבור הפריט שנבחר" />
+      <Title Text="עדכן כמות מלאי" />
+      <Subtitle Text="הגדר כמויות מלאי למוצר שנבחר.\nמסמך ספירת מלאי ייווצר אוטומטית." />
+      <Success Text="כמות המלאי השתנתה בהצלחה.\nנוצר המסמך {0}." />
+      <Unauthorized Text="אין לך הרשאות להשתמש במלאי מהיר." />
+    </QuickInventory>
+    <LearnMore Text="למידע נוסף על מלאי וסחורה" />
+    <SearchResults Text="תוצאות חיפוש" />
+    <ShowCostPrices Text="צפה במחיר עלות">
+      <Description Text="קובע אם מחירי העלות מוצגים בתצוגת מלאי." />
+    </ShowCostPrices>
+  </Stock>
+</Language>

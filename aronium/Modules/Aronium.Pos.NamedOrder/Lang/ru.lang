@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <FloorPlans>
+    <Options>
+      <View>
+        <Orders>
+          <Order>
+            <Number Text="Заказ / Имя гостя" />
+          </Order>
+        </Orders>
+      </View>
+    </Options>
+  </FloorPlans>
+  <Order>
+    <Name Text="Имя заказа">
+      <Title Text="Имя заказа или имя гостя" />
+      <Info Text="Введите имя заказа или имя гостя" />
+      <Validation>
+        <Duplicate Text="Заказ с таким именем уже существуют. Введите другое имя заказа." />
+        <Empty Text="Имя заказа не может быть пустым для существующего заказа." />
+        <Required Text="Имя заказа не может быть пустым." />
+      </Validation>
+      <Settings>
+        <Enabled Text="Включить присвоение имени заказа" />
+        <Required Text="Обязательное именование заказа" />
+        <RequestOrderName Text="Устанавливать имя заказа автоматически" />
+      </Settings>
+    </Name>
+  </Order>
+</Language>

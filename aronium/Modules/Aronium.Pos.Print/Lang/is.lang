@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="is" name="Icelandic">
+  <Print>
+    <Labels>
+      <Documents>
+        <InventoryCount Text="Vöru Talning">
+          <Counted Text="Talið" />
+          <CountedValue Text="Talið Virði" />
+          <CreatedBy Text="Gert Af" />
+          <DiffMinus Text="Diff -" />
+          <DiffPlus Text="Diff +" />
+          <Expected Text="Áætlað" />
+          <Time Text="Tími" />
+          <NegativeAmount Text="Upphæð -" />
+          <PositiveAmount Text="Upphæð +" />
+        </InventoryCount>
+        <Invoice Text="Reikningur">
+          <AmountDue Text="Upphæð til Greiðslu" />
+          <BankAccountNumber Text="Bankanúmer-HB-Reikningur" />
+          <BankDetails Text="Kennitala" />
+          <BillTo Text="Reikningur Til" />
+          <InvoiceNumber Text="Reikningur." />
+          <Item Text="Vara" />
+          <ItemsCount Text="Fjöldi Vara" />
+          <PaidAmount Text="Greidd Upphæð" />
+          <PaymentMethod Text="Greiðslumáti" />
+          <PaymentStatus Text="Greiðslu Staða">
+            <Paid Text="Greitt" />
+            <Unpaid Text="Ó Greitt" />
+          </PaymentStatus>
+        </Invoice>
+        <LossAndDamage Text="Tapað og Skemmt" />
+        <ProformaInvoice Text="Proforma" />
+        <Purchase Text="Varningur Kvittun" />
+        <Refund Text="Endurgreiðsla">
+          <ReceiptNumber Text="Kvittun Númer" />
+          <RefundNumber Text="Endurgreiðsla." />
+        </Refund>
+        <StockReturn Text="Vörum Skilað" />
+      </Documents>
+      <General>
+        <CashRegister Text="Kassi" />
+        <Code Text="Kóði" />
+        <Company Text="Fyrirtæki">
+          <Address Text="Heimilisfang" />
+        </Company>
+        <Cost Text="Kostnaður" />
+        <Customer Text="Viðskiptavinur" />
+        <Date Text="Dags" />
+        <Description Text="Upplýsingar" />
+        <Discount Text="Afsláttur" />
+        <DiscountGranted Text="Afsláttur búinn til" />
+        <Document Text="Skjöl" />
+        <DocumentNumber Text="Skjöl númer" />
+        <DueDate Text="Gjalddagi" />
+        <Email Text="Netfang" />
+        <ExternalDocument Text="Ytra Skjal" />
+        <Margin Text="Framlegð" />
+        <Name Text="Nafn" />
+        <Numbering Text="#" />
+        <Page Text="Síða" />
+        <Period Text="Tímabil" />
+        <Phone Text="Sími" />
+        <Product Text="Vara" />
+        <ProductGroup Text="Vöru Flokkur" />
+        <ProductName Text="Vöru Nafn" />
+        <Products Text="Vörur" />
+        <Profit Text="Hagnaður" />
+        <PurchaseNumber Text="Kaup Númer" />
+        <TaxNumber Text="Skattur." />
+        <Qty Text="Magn." />
+        <Quantity Text="Magn" />
+        <Subtotal Text="Samtalls" />
+        <Supplier Text="Birgji" />
+        <Tax Text="Skattur" />
+        <TaxName Text="Skattur Nafn" />
+        <Total Text="Samtalls" />
+        <TotalAfterDiscount Text="Samtalls Eftir Afslátt." />
+        <TotalBeforeDiscount Text="Samtalls Fyrir Afslátt." />
+        <TotalBeforeTax Text="Samtalls Fyrir Skatt." />
+        <TotalDiscount Text="Samtalls Afsláttur" />
+        <TotalPaid Text="Samtalls Borgað" />
+        <TotalUnpaid Text="samtalls Ó Borgað" />
+        <UnitOfMeasurement Text="UOM" />
+        <UnitPrice Text="Einingar Verð" />
+        <User Text="Notandi" />
+      </General>
+      <Reports>
+        <DailySales Text="Daglegar Sölur" />
+        <DiscountsGranted Text="Afsláttur Búinn Til">
+          <BeforeTax Text="(fyrir skatt)" />
+          <AfterTax Text="(eftir skatt)" />
+          <NumberOfDiscounts Text="Fjöldi pantanna með Afslætti" />
+          <TotalDiscounted Text="Samtalls Afsláttur" />
+        </DiscountsGranted>
+        <InventoryCount Text="Skýrsla birgðatalningar" />
+        <Invoices Text="Reikningar" />
+        <ItemsDiscounts Text="Vörur Afsláttur" />
+        <LossAndDamageByProduct Text="Tapað og Skemmt eftir Vörum" />
+        <PaymentTypesByCustomer Text="Greiðslumáti eftir Viðskiptavinum" />
+        <PaymentTypesByUser Text="Greiðslumáti eftir Notendum" />
+        <ProfitAndMargin Text="Hagnaður" />
+        <PurcahsedItemsDiscounts Text="Keyptar Vörur Afsláttur" />
+        <PurchaseByProduct Text="Keypt eftir Vörum" />
+        <PurchaseBySupplier Text="Kaup eftir Birgja" />
+        <PurchaseDiscounts Text="Keyptur Afsláttur" />
+        <PurchaseInvoices Text="Keyptur Reikningur" />
+        <Refunds Text="Endurgreiðslur" />
+        <SalesByCustomer Text="Sala eftir Viðskiptarvin" />
+        <SalesByPaymentType Text="Sala eftir greiðslugerðum" />
+        <SalesByProduct Text="Sala eftir Vörum" />
+        <SalesByProductGroups Text="Sala eftir Vöru Flokkum" />
+        <SalesByUser Text="Sala eftir Notendum" />
+        <StartingCashEntries Text="Byrja á Peninga færslum">
+          <ZReport Text="Z Skýrsla" />
+          <Open Text="Opna" />
+        </StartingCashEntries>
+        <Stock Text="Birgðar Skýrsla">
+          <CostIncludingTax Text="Kostnaður innifalinn skattur" />
+          <History Text="Birgðar Saga">
+            <CustomerOrSupplier Text="Viðskiptarvinur / Birgji" />
+            <DocumentNumber Text="Skjal. númer" />
+            <DocumentType Text="Skjal. tegund" />
+            <QuantityOnHand Text="Magn. Á Hendi" />
+            <StockDate Text="BirgðarDagur" />
+          </History>
+        </Stock>
+        <StockMovement Text="Birgðar Færsla">
+          <AverageNumberOfSalesPerItem Text="Meðalfjöldi sölu á hlut" />
+          <FastMoving Text="Fer Hratt" />
+          <SlowMoving Text="Fer Hægt" />
+          <NonMoving Text="Engin Hreyfing" />
+          <NumberOfSales Text="Núm. af sölu" />
+          <TotalNumberOfSales Text="Heildar Númer af sölu" />
+        </StockMovement>
+        <Taxes Text="Skattur" />
+        <UnpaidPurchases Text="Ó Greiddar Sölur" />
+        <UnpaidSales Text="Ó Greiddar Sölur" />
+      </Reports>
+    </Labels>
+  </Print>
+</Language>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Print>
+    <Labels>
+      <Documents>
+        <Invoice Text="فاتورة">
+          <AmountDue Text="المبلغ المستحق" />
+          <BankAccountNumber Text="رقم الحساب البنكى" />
+          <BankDetails Text="تفاصيل البنك" />
+          <BillTo Text="فاتورة الى" />
+          <InvoiceNumber Text="رقم الفاتورة" />
+          <Item Text="الصنف" />
+          <PaidAmount Text="المبلغ المدفوع" />
+          <PaymentMethod Text="طريقة الدفع" />
+          <PaymentStatus Text="حالة الدفع">
+            <Paid Text="مدفوع" />
+            <Unpaid Text="غير مدفوع" />
+          </PaymentStatus>
+        </Invoice>
+      </Documents>
+      <General>
+        <Code Text="رمز" />
+        <Numbering Text="الرقم" />
+        <Quantity Text="الكمية" />
+        <Date Text="التاريخ" />
+        <DueDate Text="تاريخ الاستحقاق" />
+        <TaxNumber Text="الرقم الضريبى" />
+        <Phone Text="رقم التليفون" />
+        <Email Text="البريد الالكترونى" />
+        <Total Text="الاجمالى" />
+        <Discount Text="خصم" />
+        <Tax Text="الضريبة" />
+        <UnitPrice Text="سعر الوحدة" />
+        <Qty Text="الكمية" />
+        <TotalBeforeTax Text="أجمالى قبل الضريبة" />
+        <Subtotal Text="المجموع الفرعي" />
+      </General>
+    </Labels>
+  </Print>
+</Language>

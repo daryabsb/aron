@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Print>
+    <Labels>
+      <Documents>
+        <Invoice Text="Factura">
+          <BillTo Text="Facturat catre" />
+          <InvoiceNumber Text="Factura nr." />
+          <Item Text="Elemente" />
+          <ItemsCount Text="Nr.elemente" />
+          <PaymentMethod Text="Modalitate de plata" />
+        </Invoice>
+        <InventoryCount Text="Inventar">
+          <Time Text="Timp" />
+          <CreatedBy Text="Creat de" />
+          <Expected Text="Scriptic" />
+          <Counted Text="Faptic" />
+          <DiffPlus Text="Dif. +" />
+          <DiffMinus Text="Dif. -" />
+          <CountedValue Text="Numaratoarea" />
+          <PositiveAmount Text="Valoare +" />
+          <NegativeAmount Text="Valoare -" />
+        </InventoryCount>
+        <Purchase Text="Receptie" />
+      </Documents>
+      <General>
+        <Total Text="Total" />
+        <Quantity Text="Cantitatea" />
+        <UnitPrice Text="Pret unitar" />
+        <Tax Text="TVA" />
+        <Discount Text="Reducere" />
+        <Subtotal Text="Subtotal" />
+        <Date Text="Data" />
+        <DueDate Text="Data scadenta" />
+        <Numbering Text="Nr." />
+        <DocumentNumber Text="Numar document" />
+        <Product Text="Produs" />
+        <UnitOfMeasurement Text="U/M" />
+        <ProductName Text="Nume produs" />
+        <Supplier Text="Furnizor" />
+        <Company Text="Compania">
+          <Address Text="Adresa" />
+        </Company>
+        <ExternalDocument Text="Numarul documentului extern" />
+        <Period Text="Perioada" />
+        <Customer Text="Clientul" />
+        <User Text="Utilizatorul" />
+        <Cost Text="Pret de intrare" />
+        <Profit Text="Profit" />
+        <Margin Text="Adaos" />
+        <Code Text="Cod" />
+        <TotalBeforeTax Text="Total fara TVA" />
+      </General>
+      <Reports>
+        <InventoryCount Text="Raport de inventar" />
+        <ProfitAndMargin Text="Profit" />
+        <PurchaseByProduct Text="Cumparaturi dupa produse" />
+        <PurchaseBySupplier Text="Cumparaturi dupa distribuitor" />
+        <UnpaidPurchases Text="Cumparaturi neplatite" />
+        <SalesByCustomer Text="Vanzari dupa clienti" />
+        <DailySales Text="Vanzari zilnice" />
+        <Invoices Text="Facturi" />
+        <SalesByPaymentType Text="Vanzari dupa modalitati de plata" />
+        <PaymentTypesByCustomer Text="Modalitati de plata dupa clienti" />
+        <PaymentTypesByUser Text="Modalitati de plata dupa utilizatori" />
+        <SalesByProduct Text="Vanzari dupa produse" />
+        <Refunds Text="Retururi" />
+        <Taxes Text="TVA" />
+        <UnpaidSales Text="Vanzari neplatite" />
+        <SalesByUser Text="Vanzari dupa utilizatori" />
+      </Reports>
+    </Labels>
+  </Print>
+</Language>

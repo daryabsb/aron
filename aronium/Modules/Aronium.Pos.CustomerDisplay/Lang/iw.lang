@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="iw" name="Hebrew">
+  <CustomerDisplay>
+    <Total Text="כללי:" />
+    <Change Text="עודף:" />
+    <Paid Text="שולם:" />
+    <WelcomeMessage Text="ברוך\ה הבא\ה!" />
+    <Settings Text="תצוגת לקוח">
+      <Enabled Text="אפשר" />
+      <Port Text="COM port" />
+      <CharactersPerLine Text="מספר תווים" />
+      <WelcomeMessage Text="הודעת פתיחה">
+        <TopLine Text="קצה עלון" />
+        <BottomLine Text="קצה תחתון" />
+      </WelcomeMessage>
+      <Test Text="בדוק תצוגה" />
+    </Settings>
+  </CustomerDisplay>
+</Language>

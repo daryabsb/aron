@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="iw" name="Hebrew">
+  <Loyalty Text="נאמנות">
+    <Promotions Text="מבצעים וקידומים">
+      <New Text="הוסף קידום">
+        <Title Text="קידום חדש" />
+      </New>
+      <Edit>
+        <Title Text="ערוך קידום &quot;{0}&quot;" />
+      </Edit>
+      <Delete Text="מחק קידום">
+        <Confirmation Text="האם למחוק את הקידום &quot;{0}&quot;?" />
+        <Error Text="איראה שגיאה בנסיון למחוק את הקידום" />
+      </Delete>
+      <View>
+        <Enabled Text="אפשר" />
+        <Name Text="שם" />
+        <DaysOfWeek Text="יום עבודה" />
+        <StartDate Text="תאריך התחלה" />
+        <StartTime Text="שעת התחלה" />
+        <EndDate Text="תאריך סיום" />
+        <EndTime Text="שעת סיום" />
+      </View>
+      <Promotion>
+        <Empty Text="לא הוספו פריטים לקידום." />
+        <Name Text="שם קידום" />
+        <Active Text="פעיל" />
+        <DaysOfWeek>
+          <All Text="כל הימים">
+            <ShortName Text="הכל" />
+          </All>
+          <Monday Text="שני">
+            <ShortName Text="ב'" />
+          </Monday>
+          <Tuesday Text="שלישי">
+            <ShortName Text="ג'" />
+          </Tuesday>
+          <Wednesday Text="רביעי">
+            <ShortName Text="ד'" />
+          </Wednesday>
+          <Thursday Text="חמישי">
+            <ShortName Text="ה'" />
+          </Thursday>
+          <Friday Text="שישי">
+            <ShortName Text="ו'" />
+          </Friday>
+          <Saturday Text="שבת">
+            <ShortName Text="שבת" />
+          </Saturday>
+          <Sunday Text="ראשון">
+            <ShortName Text="א'" />
+          </Sunday>
+        </DaysOfWeek>
+        <Duration>
+          <Start Text="התחלה" />
+          <End Text="סיום" />
+        </Duration>
+        <Item>
+          <PriceType>
+            <Discount Text="הנחה" />
+            <FixedPrice Text="מחיר קבוע" />
+          </PriceType>
+          <Condition Text="תנאים">
+            <Title Text="כמות מוגבלת" />
+            <ApplyToAll Text="החל על הכל" />
+            <Quantity>
+              <Description Text="קבע את הכמות לקידום זה" />
+            </Quantity>
+            <LimitToNext Text="החל על הבא">
+              <Description Text="הזן את מגבלת הכמות כדי להחיל ברגע שתגיע לכמות הנדרשת לקידום זה" />
+            </LimitToNext>
+            <CopyToAll Text="העתק תנאי לכל הפריטים">
+              <Completed Text="ערכי תנאים הועתקו לפריטי קידום" />
+            </CopyToAll>
+          </Condition>
+          <InvalidValue Text="ערך לא חוקי" />
+          <Errors>
+            <Existing Text="הפריט &quot;{0}&quot; כבר קיים בקידום זה." />
+          </Errors>
+        </Item>
+        <Saved Text="הקידום נשמר בהצלחה." />
+        <InvalidItems Text="לא ניתן לשמור קידום. פריטים מסוימים מכילים שגיאה. אנא בדוק\י את הנתונים שלך ונסה\י שוב." />
+      </Promotion>
+      <NoPromotions Text="אין מבצעים">
+        <Add Text="צור\י קידום חדש" />
+      </NoPromotions>
+      <LearnMore Text="למידע נוסף על מבצעים וhappy hour" />
+    </Promotions>
+  </Loyalty>
+</Language>

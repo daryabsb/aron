@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Notes Text="Poznámky">
+    <Add Text="Přidat poznámky" />
+    <Document>
+      <Number Text="Číslo dokumentu:" />
+      <Customer Text="Zákazník:" />
+      <Total Text="Celkem:" />
+    </Document>
+    <Note Text="Veřejné poznámky">
+      <Description Text="Vložit veřejnou poznámku" />
+    </Note>
+    <InternalNote Text="Interní poznámka">
+      <Description Text="Vložit interní poznámku" />
+    </InternalNote>
+    <Saved Text="Poznámka úspěšně uložena" />
+  </Notes>
+</Language>

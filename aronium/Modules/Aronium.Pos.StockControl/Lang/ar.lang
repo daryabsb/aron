@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ar" name="Arabic">
+  <StockControl>
+    <Product>
+      <Title Text="مراقبة المخزون" />
+      <Supplier Text="المورد">
+        <None Text="(لا أحد)" />
+        <Clear Text="مسح" />
+      </Supplier>
+      <ReorderPoint Text="نقطة إعادة الطلب" />
+      <PreferredQuantity Text="الكمية المفضلة" />
+      <LowStockWarning Text="تحذير انخفاض المخزون">
+        <WarningQuantity Text="كمية تحذير المخزون المنخفض" />
+      </LowStockWarning>
+      <Reset Text="إعادة تعيين إلى الافتراضي" />
+      <Info Text="قم بتعيين قواعد كمية المخزون المنخفضة التي يمكن استخدامها كنقطة إعادة طلب المخزون." />
+    </Product>
+    <Notification>
+      <Message Text="وصلت بعض المنتجات إلى نقطة إعادة الطلب.\nضع في اعتبارك شراء المنتجات التالية: {0}.">
+        <Title Text="المنتجات تصل إلى كمية مخزون منخفضة" />
+      </Message>
+    </Notification>
+    <Reports>
+      <Group Text="مراقبة المخزون" />
+      <ReorderProductList Text="قائمة المنتجات المراد طلبها">
+        <OrderQuantity Text="كمية الطلب" />
+      </ReorderProductList>
+      <LowStockWarning Text="تحذير انخفاض المخزون">
+        <QuantityOnHand Text="الكمية المتاحة" />
+        <PreferredQuantity Text="الكمية المفضلة" />
+        <WarningQuantity Text="الكمية التحذيرية" />
+        <ReorderPoint Text="نقطة إعادة الطلب" />
+      </LowStockWarning>
+    </Reports>
+  </StockControl>
+</Language>

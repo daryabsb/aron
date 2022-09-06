@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Management Text="Management">
+    <NoItems Text="Pro uživatele {0} nejsou k dispozici žádné moduly pro správu.&#xA;Chcete-li pokračovat, přihlaste se pomocí uživatele, který má přístup alespoň k jednomu modulu správy." />
+    <Dashboard Text="Řídicí panel">
+      <NoData Text="Žádná data k zobrazení" />
+      <MonthlySales Text="Měsíční prodeje">
+        <Description Text="Údaje o prodeji seskupené podle měsíce" />
+        <Month Text="Měsíc" />
+        <Legend Text="Legenda" />
+        <CurrentYear Text="Aktuální rok" />
+        <TotalSales Text="Celkem prodeje">
+          <TopMonth Text="Nejvýkonnější měsíc:" />
+        </TotalSales>
+        <Year Text="Rok">
+          <Previous Text="Předchozí rok" />
+          <Next Text="Další rok" />
+        </Year>
+      </MonthlySales>
+      <HourlySales Text="Hodinové prodeje">
+        <Description Text="Údaje o prodeji seskupené podle hodin" />
+        <Hour Text="Hodiny" />
+        <Options>
+          <Amount Text="Částka" />
+          <Count Text="Počet" />
+        </Options>
+      </HourlySales>
+      <TopProducts Text="Top produkty">
+        <Product Text="Produkty" />
+        <Total Text="Celkem" />
+      </TopProducts>
+      <TopProductGroups Text="Nejlepší skupiny produktů">
+        <Description Text="Nejprodávanější skupiny produktů ve vybraném období" />
+        <Group Text="Skupina produktů" />
+      </TopProductGroups>
+      <TopCustomers Text="Nejlepší zákazníci">
+        <Description Text="Přiveďte zákazníky ve vybraném období (5 nejlepších)" />
+      </TopCustomers>
+      <PeriodicReports Text="Pravidelné zprávy">
+        <SelectPeriod Text="Vyberte období přehledu" />
+      </PeriodicReports>
+    </Dashboard>
+    <Products Text="Produkty">
+      <Loading Text="Načítání produktů..." />
+      <LearnMore Text="Zjistěte více o produktech" />
+      <Taxes Text="Daňová sazba">
+        <LearnMore Text="Zjistěte více o daňových sazbách" />
+        <New Text="Nová sazba daně" />
+        <Switch Text="Přepnout daně">
+          <OldTax Text="Stará daň" />
+          <NewTax Text="Nová daň" />
+          <Tooltip Text="Nahradit daň pro všechny produkty" />
+          <Info Text="Použijte tento formulář k nahrazení daní pro všechny produkty.&#xA;&#xA;Vyberte starou daň, kterou chcete nahradit novou daní, a klikněte na tlačítko „Nahradit“ níže." />
+          <Replace Text="Nahradit" />
+          <Error Text="Při pokusu o nahrazení daní došlo k chybě.&#xA;Systémová zpráva: {0}" />
+          <Success Text="Daně úspěšně nahrazeny!" />
+        </Switch>
+        <Edit>
+          <Title Text="Upravit daň „{0}“" />
+        </Edit>
+        <Delete>
+          <Title Text="Smazat daňovou sazbu" />
+          <Confirmation Text="Opravdu chcete smazat daňovou sazbu „{0}“?" />
+          <Error Text="Při pokusu o smazání daňové sazby došlo k chybě. Ujistěte se, že daňová sazba není používána, a zkuste to znovu." />
+        </Delete>
+        <Tax>
+          <ReadOnly Text="Vybraná daň existuje v dokumentech a nelze ji upravit" />
+          <Code Text="Kód" />
+          <Name Text="Název" />
+          <Rate Text="Hodnotit" />
+          <Fixed Text="Pevný" />
+          <TaxOnTotal Text="Daň celkem" />
+          <Enabled Text="Povoleno" />
+        </Tax>
+        <Onboarding>
+          <Title Text="Daňová sazba" />
+          <Info Text="Zadejte daňové sazby používané pro definice produktů, pokud existují.&#xA;V systému musí být alespoň jedna daňová sazba." />
+          <AddMore Text="Uložit a přidat další">
+            <Error Text="Při přidávání nové daňové sazby došlo k chybě. Zkontrolujte svá data a zkuste to znovu" />
+            <Name Text="Název daně (např. „No tax“)" />
+          </AddMore>
+          <Existing Text="Stávající daňové sazby">
+            <NoItems Text="Nejsou definovány žádné daňové sazby. Přidejte alespoň jednu daňovou sazbu, abyste mohli přidávat nové produkty.">
+              <AddDefault Text="Přidejte výchozí sazbu daně" />
+            </NoItems>
+          </Existing>
+        </Onboarding>
+        <NoTaxes Text="Žádné daně">
+          <Add Text="Přidat novou daň" />
+        </NoTaxes>
+      </Taxes>
+      <New Text="Nový produkt">
+        <Product Text="Přidat nový produkt" />
+        <Or Text="nebo" />
+        <Group Text="Nová skupina produktů" />
+      </New>
+      <Delete Text="Smazat produkt" />
+      <Edit Text="Upravit produkt" />
+      <Search Text="Hledat produkty">
+        <Result Text="Výsledek" />
+        <Empty Text="Žádné výsledky" />
+      </Search>
+      <Groups Text="Skupiny produktů">
+        <Root Text="Produkty" />
+        <Empty Text="Vybraná skupina neobsahuje žádné produkty">
+          <Info Text="Přidat produkt do vybrané skupiny" />
+        </Empty>
+      </Groups>
+      <Group>
+        <Details Text="Podrobnosti" />
+        <New Text="Nová skupina" />
+        <Edit Text="Upravit skupinu">
+          <Title Text="Upravit skupinu „{0}“" />
+          <Error>
+            <InvalidParentGroup Text="Neplatná nadřazená skupina" />
+          </Error>
+        </Edit>
+        <Name Text="Název" />
+        <Color Text="Barva" />
+        <Image Text="Obrázek">
+          <Browse Text="Procházet">
+            <Info Text="Vyberte obrázek skupiny produktů z počítače" />
+          </Browse>
+          <Clear Text="Smazat">
+            <Info Text="Odebrat obrázek skupiny produktů" />
+          </Clear>
+        </Image>
+        <Delete Text="Smazat skupinu">
+          <Title Text="Smazat skupinu produktů" />
+          <Confirmation Text="Opravdu chcete smazat skupinu „{0}“?" />
+          <Error Text="Při pokusu o smazání skupiny došlo k chybě.&#xA;Systémová zpráva: {0}">
+            <DataViolation Text="Vybranou skupinu nelze smazat.&#xA;&#xA;Ujistěte se, že dětský produkt neexistuje v dokumentech, propagačních akcích nebo prodejích a zkuste to znovu." />
+          </Error>
+        </Delete>
+        <Saved Text="Skupina byla úspěšně uložena" />
+      </Group>
+      <Product>
+        <Edit Text="Upravit produkt „{0}“" />
+        <Details Text="Podrobnosti" />
+        <Name Text="Název" />
+        <Code Text="Kód" />
+        <Barcode Text="Čárový kód">
+          <Generate Text="Vygenerovat čárový kód" />
+        </Barcode>
+        <MeasurementUnit Text="Měrná jednotka" />
+        <Taxes Text="Daně">
+          <Add Text="Přidejte daň k produktu">
+            <Tooltip Text="Přidejte daňovou sazbu k produktu" />
+          </Add>
+          <Remove>
+            <Tooltip Text="Odstraňte tuto daňovou sazbu" />
+          </Remove>
+          <NoTaxes>
+            <Info Text="Nebyly nalezeny žádné daně.&#xA;Přidejte daně, abyste je mohli přiřadit k produktu" />
+          </NoTaxes>
+        </Taxes>
+        <SalePriceBeforeTax Text="Prodejní cena před zdaněním" />
+        <SalePrice Text="Prodejní cena" />
+        <IsTaxIncluded Text="Cena zahrnuje daň" />
+        <Group Text="Skupina" />
+        <IsEnabled Text="Aktivní" />
+        <IsService Text="Služba (nevyužívá zásoby)" />
+        <IsDiscountAllowed Text="Sleva povolena" />
+        <IsPriceChangeAllowed Text="Změna ceny povolena" />
+        <IsUsingDefaultQuantity Text="Výchozí množství" />
+        <AgeRestriction Text="Věkové omezení">
+          <Tooltip Text="Pro zakoupení tohoto produktu je vyžadován minimální věk" />
+          <Years Text="rok(y)" />
+          <Validation>
+            <Message Text="Tento produkt je věkově omezený.&#xA;Potvrďte prosím, že zákazník má oprávnění k nákupu položky.">
+              <Title Text="Výrobek s věkovým omezením" />
+              <BornBefore Text="Narozen dne nebo dříve:" />
+            </Message>
+            <Confirm Text="Potvrdit" />
+          </Validation>
+        </AgeRestriction>
+        <Description Text="Popis" />
+        <Prices Text="Cena a daň" />
+        <Cost Text="Náklady">
+          <BeforeTax Text="(před zdaněním)" />
+          <Disabled Text="Proč nemohu zadat nákupní cenu?" />
+        </Cost>
+        <Markup Text="Přirážka">
+          <Warning Text="Při použití ceny včetně daně jsou prodejní cena a přirážka nesprávné.&#xA;Chcete-li správně vypočítat prodejní cenu na základě přirážky, použijte cenu před zdaněním." />
+        </Markup>
+        <ImageAndColor Text="Obrázek a barva">
+          <Image Text="Obrázek">
+            <Browse Text="Procházet">
+              <Info Text="Vyberte obrázek produktu z počítače" />
+            </Browse>
+            <Clear Text="Symazat">
+              <Info Text="Odebrat obrázek produktu" />
+            </Clear>
+          </Image>
+          <Color Text="Barva" />
+        </ImageAndColor>
+        <Comments Text="Komentáře">
+          <Info Text="Komentáře budou vytištěny na lístcích do kuchyně." />
+          <Note Text="Zadejte komentář..." />
+          <Add Text="Přidat" />
+          <Error>
+            <ExistingComment Text="Poznámka již existuje" />
+          </Error>
+        </Comments>
+        <DateCreated Text="Vytvořeno" />
+        <DateUpdated Text="Aktualizováno" />
+        <Saved>
+          <Created Text="Produkt byl úspěšně vytvořen" />
+          <Updated Text="Produkt byl úspěšně aktualizován" />
+        </Saved>
+        <Delete Text="Mazání produktu">
+          <Confirmation Text="Opravdu chcete smazat produkt „{0}“?" />
+          <Error Text="Při pokusu o smazání produktu došlo k chybě.&#xA;Systémová zpráva: {0}" />
+          <DataViolation Text="Produkt nelze smazat.&#xA;Ujistěte se, že produkt v dokumentech neexistuje, a zkuste to znovu." />
+        </Delete>
+        <Error>
+          <Invalid Text="Produkt nelze uložit jako vstup není platný. Zkontrolujte prosím chybové zprávy a zkuste to znovu." />
+          <Code Text="Produkt se zadaným kódem již existuje („{0}“).&#xA;Zadejte jedinečný kód produktu a zkuste to znovu." />
+          <Barcode Text="Produkt se zadaným čárovým kódem již existuje („{0}“).&#xA;Zadejte jedinečné čárové kódy a zkuste to znovu." />
+          <Taxes Text="Byly nalezeny duplicitní daně. Daňový název (&quot;{0}&quot;).&#xA;Vyberte prosím platné daně a zkuste to znovu." />
+        </Error>
+      </Product>
+      <Export Text="Export">
+        <NoServices Text="Nejsou k dispozici žádné exportní služby." />
+        <Success Text="Export byl úspěšně dokončen." />
+        <Error Text="Vyskytla se chyba. Prosím zkuste to znovu." />
+        <Select Text="Vyberte typ exportu" />
+      </Export>
+      <Onboarding>
+        <Import Text="Importujte produkty ze souboru CSV">
+          <SelectFile Text="Zvolte soubor">
+            <Description Text="Vyberte soubor CSV obsahující vaše produkty." />
+          </SelectFile>
+          <Validate Text="Ověřit">
+            <Description Text="Ověřte obsah CSV a produkty pro import." />
+            <Error Text="Chyba při ověřování souboru CSV. Zkontrolujte svá data a zkuste to znovu." />
+            <Success Text="Produkty jsou připraveny k importu. Počet produktů: {0}" />
+          </Validate>
+          <ImportProducts Text="Import">
+            <Description Text="Kliknutím importujete produkty z vybraného souboru CSV." />
+          </ImportProducts>
+          <NoItems Text="Nic k importu" />
+          <Completed Text="Import byl úspěšně dokončen!">
+            <Result>
+              <Created Text="Vytvořené položky:" />
+              <Updated Text="Aktualizované položky:" />
+              <DocumentNumber Text="Dokument vytvořen:" />
+            </Result>
+            <Restart Text="Restartujte import" />
+          </Completed>
+          <Importing Text="Import produktů... Čekejte prosím..." />
+        </Import>
+      </Onboarding>
+      <Count Text="Počet produktů:" />
+      <ChangeGroup Text="Produkt „{0}“ byl přesunut do „{1}“" />
+      <Guide>
+        <Title Text="Otevřené produkty" />
+        <Content Text="Kliknutím sem otevřete sekci produktů a přidejte některé produkty do svého obchodu" />
+        <Add>
+          <Title Text="Přidání produktu" />
+          <Content Text="Kliknutím na tlačítko &quot;Nový produkt&quot; začněte přidávat nové produkty" />
+          <Name>
+            <Title Text="Název produktu" />
+            <Content Text="Přidejte název produktu a podrobnosti o produktu používaném k prodeji" />
+          </Name>
+          <Prices>
+            <Title Text="Cena produktu" />
+            <Content Text="Klikněte zde k nastavení ceny produktu" />
+            <SalePrice>
+              <Title Text="Prodejní ceny" />
+              <Content Text="Nastavte prodejní cenu produktu tak, aby se objevila na obrazovce prodeje" />
+            </SalePrice>
+          </Prices>
+          <Save>
+            <Title Text="Uložit změny" />
+            <Content Text="Kliknutím na tlačítko &quot;Uložit&quot; uložíte změny a přidáte nový produkt" />
+          </Save>
+        </Add>
+      </Guide>
+      <Settings Text="Produkty">
+        <Title Text="Výchozí nastavení produktu" />
+        <PriceIncludesTax Text="Cena zahrnuje daň">
+          <Tooltip Text="Pokud je vybrána, u nových produktů bude ve výchozím nastavení zaškrtnuta cena s daní" />
+        </PriceIncludesTax>
+        <DefaultTax Text="Výchozí sazba daně">
+          <NoTaxes Text="Daně nebyly nalezeny. Přidejte daňové sazby v sekci správy." />
+        </DefaultTax>
+        <MarkupOption Text="Přirážka založená na nákupní ceně">
+          <Tooltip Text="Pokud je tato možnost vybrána, změna nákupní ceny aktualizuje přirážku namísto prodejní ceny" />
+        </MarkupOption>
+      </Settings>
+      <Import Text="Import">
+        <LearnMore Text="Další informace o importu CSV" />
+        <Basic Text="Základní">
+          <Description Text="Základní import můžete použít podle našeho průvodce vytvořením souboru CSV na adrese">
+            <Link Text="naše centrum podpory" />
+            <Formatting Text="Pokud používáte připravený soubor CSV, přečtěte si prosím">
+              <Link Text="výukový program formátování souboru CSV" />
+            </Formatting>
+            <Exported Text="Tento základní import můžete také použít k importu produktů dříve exportovaných pomocí funkce exportu Aronium." />
+          </Description>
+        </Basic>
+        <Csv Text="CSV">
+          <Description Text="Použijte import CSV k načtení produktů pomocí vlastního souboru CSV nebo CSV exportovaného z jiné aplikace.&#xA;Další informace o importu produktů pomocí souborů CSV si můžete přečíst na">
+            <Link Text="naše centrum podpory" />
+          </Description>
+          <SelectFile Text="Zvolte soubor" />
+          <Fields>
+            <Name Text="Název" />
+            <ProductGroup Text="Skupina produktů" />
+            <SKU Text="SKU" />
+            <Barcode Text="Čárový kód" />
+            <MeasurementUnit Text="Měrná jednotka" />
+            <Cost Text="Náklady" />
+            <Markup Text="Přirážka" />
+            <Price Text="Cena" />
+            <Tax Text="Daň" />
+            <IsTaxInclusivePrice Text="Cena včetně daně" />
+            <IsPriceChangeAllowed Text="Změna ceny povolena" />
+            <IsUsingDefaultQuantity Text="Použití výchozího množství" />
+            <IsService Text="Služba (nevyužívá zásoby)" />
+            <IsEnabled Text="Povoleno" />
+            <Description Text="Popis" />
+            <Quantity Text="Množství" />
+            <Clear Text="Smazat hodnotu" />
+          </Fields>
+          <Duplicates Text="Co se stane, když se najdou duplikáty?">
+            <Skip Text="Přeskočit duplikáty" />
+            <Merge Text="Sloučit duplikáty" />
+          </Duplicates>
+          <RequiredField Text="Označuje povinné pole" />
+          <Import Text="Import" />
+          <Preview Text="Náhled">
+            <ProductsCount Text="Počet produktů k dovozu:" />
+          </Preview>
+          <Error>
+            <RequiredFields Text="Chybí povinná pole. Před importem prosím vyberte všechna povinná pole." />
+            <InvalidContent Text="Chyba při analýze souboru CSV. Zkontrolujte prosím svůj obsah a zkuste to znovu.&#xA;Chybová zpráva: {0}" />
+            <InvalidField Text="Neplatná položka pro pole „{0}“. Zkontrolujte prosím obsah souboru a zkuste to znovu." />
+            <FileNotSelected Text="Soubor CSV není vybrán. Pokračujte výběrem souboru." />
+            <DuplicateSKU Text="Byly zjištěny duplicitní kódy produktů. Název produktu: „{0}“. Duplicitní kód: &quot;{1}&quot;" />
+            <DuplicateName Text="Byl zjištěn duplicitní název produktu. Název produktu: „{0}“." />
+          </Error>
+          <Document Text="Vytvořte dokument ze specifického množství">
+            <Purchase Text="Nákup" />
+            <InventoryCount Text="Počet zásob" />
+          </Document>
+        </Csv>
+        <Xml Text="XML">
+          <Description Text="Pomocí importu Xml načtěte produkty exportované z jiné instance Aronium.&#xA;Import Xml zachová všechny vlastnosti, včetně obrázků a hierarchie produktů." />
+          <SelectFile Text="Zvolte soubor" />
+          <Import Text="Import" />
+        </Xml>
+      </Import>
+      <PriceTags Text="Cenovky">
+        <Loading Text="Načítání šablony cenovek... Čekejte prosím..." />
+        <Layout Text="Rozložení">
+          <PaperSize Text="Velikost papíru">
+            <Custom Text="Vlastní" />
+          </PaperSize>
+          <PageWidth Text="Šířka stránky" />
+          <PageHeight Text="Výška stránky" />
+          <LabelWidth Text="Šířka štítku" />
+          <LabelHeight Text="Výška štítku" />
+          <Columns Text="Sloupce" />
+          <RowSpacing Text="Rozteč řádků" />
+          <ColumnSpacing Text="Rozteč sloupců" />
+          <RollPaper Text="Tisk na rolový papír (neomezená výška)" />
+        </Layout>
+        <Display Text="Zobrazit">
+          <Barcode Text="Čárový kód">
+            <Type Text="Typ čárového kódu" />
+            <Height Text="Výška čárového kódu" />
+          </Barcode>
+          <Code Text="Kód (SKU)" />
+          <PriceIncludesTax Text="Cena včetně daně" />
+          <Borders Text="Okraje" />
+          <Product Text="Název produktu">
+            <FontSize Text="Název produktu velikost" />
+          </Product>
+          <Price Text="Cena">
+            <FontSize Text="Velikost ceny" />
+          </Price>
+        </Display>
+        <Products Text="Produkty">
+          <NoSelection Text="Nejsou vybrány žádné produkty&#xA;Všechny produkty budou vytištěny" />
+          <NumberOfCopies Text="Počet kopií" />
+        </Products>
+      </PriceTags>
+      <Sort Text="Řazení">
+        <Top Text="Nahoře" />
+        <Bottom Text="Dole" />
+        <Reset Text="Reset">
+          <Confirmation Text="Tímto se vymaže vlastní řazení a obnoví se výchozí hodnocení všech produktů a skupin.&#xA;&#xA;Přejete si pokračovat?">
+            <Title Text="Resetovat pořadí řazení produktů a skupin" />
+          </Confirmation>
+        </Reset>
+        <Menu>
+          <Top Text="Přesunout nahoru" />
+          <Bottom Text="Přesunout dolu" />
+          <Reset Text="Resetovat produkty a skupiny" />
+          <SortProducts Text="Seřadit produkty" />
+          <SortGroups Text="Seřadit skupiny" />
+        </Menu>
+        <NoItems Text="Vybraná skupina nemá žádné položky k seřazení" />
+        <Success Text="Produkty úspěšně seřazeni" />
+        <Progress Text="Řadím produkty... Prosím vyčkejte..." />
+        <UnsavedChanges Text="Existují neuložené změny, které budou ztraceny, pokud budete pokračovat.&#xA;&#xA;Opravdu chcete pokračovat a ztratit neuložené změny?">
+          <Title Text="Neuložené změny" />
+        </UnsavedChanges>
+      </Sort>
+    </Products>
+    <Customers Text="Zákazníci a dodavatelé">
+      <Search Text="Hledejte zákazníky a dodavatele" />
+      <LearnMore Text="Zjistěte více o zákaznících a dodavatelích" />
+      <New Text="Nový zákazník / dodavatel" />
+      <Delete Text="Vymazat">
+        <Confirmation Text="Opravdu chcete smazat „{0}“?" />
+        <Error Text="Chyba při mazání zákazníka. Zákazníka se nepodařilo smazat.&#xA;Systémová zpráva: {0}" />
+      </Delete>
+      <Customer>
+        <Edit Text="Upravit „{0}“" />
+        <General Text="Obecné">
+          <Title Text="Obecné informace" />
+          <Code Text="Kód" />
+          <Name Text="Název" />
+          <Address Text="Adresa" />
+          <PostalCode Text="Poštovní směrovací číslo" />
+          <City Text="Město" />
+          <Country Text="Stát" />
+          <TaxNumber Text="Daňové identifikační číslo" />
+          <RabatePercent Text="Sleva" />
+          <Email Text="Email" />
+          <PhoneNumber Text="Telefonní číslo" />
+          <IsEnabled Text="Aktivovat" />
+          <IsCustomer Text="Zákazník" />
+          <IsSupplier Text="Dodavatel" />
+        </General>
+        <Loyalty>
+          <Discounts Text="Slevy">
+            <Title Text="Nastavte zákaznické slevy pro produkty nebo skupiny produktů" />
+            <Info Text="Nastavit slevu na vybranou položku" />
+            <NoItems Text="Žádné slevy" />
+            <Existing Text="Sleva pro „{0}“ již existuje." />
+            <Clear Text="Vymažte všechny slevy" />
+          </Discounts>
+          <Cards Text="Věrnostní karty">
+            <Title Text="Zadejte zákaznické věrnostní karty" />
+            <CardNumber Text="Číslo karty" />
+            <Add Text="Přidat kartu" />
+            <Duplicate Text="Věrnostní karta již existuje">
+              <Warning Text="Věrnostní karta „{0}“ je již přiřazena uživateli {1}. Věrnostní karty musí být jedinečné.&#xA;&#xA;Použijte pro tohoto zákazníka jinou kartu a zkuste to znovu." />
+            </Duplicate>
+          </Cards>
+        </Loyalty>
+        <Saved>
+          <Created Text="Nový zákazník byl úspěšně vytvořen." />
+          <Updated Text="Zákazník byl úspěšně změněn." />
+        </Saved>
+        <Existing Text="Stávající zákazník">
+          <Warning Text="Podobný zákazník již existuje: {0}.&#xA;Duplicitní pole: {1}.&#xA;&#xA;Chcete přesto zachránit zákazníka?" />
+        </Existing>
+        <PaymentTerms Text="Platební podmínky">
+          <DueDatePeriod Text="Termín splatnosti">
+            <Info Text="Použijte období splatnosti k nastavení počtu dní, než musí být transakce uhrazena za každý nezaplacený prodej přiřazený tomuto zákazníkovi" />
+            <Days Text="dny" />
+          </DueDatePeriod>
+        </PaymentTerms>
+        <Default>
+          <Warning Text="Toto je výchozí zákazník používaný pro všechny prodeje, kde zákazník není explicitně přiřazen.&#xA;&#xA;Důrazně doporučujeme, abyste tohoto zákazníka neupravovali." />
+        </Default>
+      </Customer>
+      <Guide>
+        <Title Text="Zákazníci a dodavatelé" />
+        <Content Text="Kliknutím sem otevřete sekci zákazníků a dodavatelů" />
+        <Add>
+          <Title Text="Přidejte zákazníka nebo dodavatele" />
+          <Content Text="Kliknutím sem vytvoříte nového zákazníka nebo dodavatele" />
+          <Name>
+            <Title Text="Napište jméno" />
+            <Content Text="Zadejte jméno zákazníka nebo dodavatele" />
+          </Name>
+          <Save>
+            <Title Text="Uložit změny" />
+            <Content Text="Po zadání všech údajů uložte změny kliknutím na tlačítko „Uložit“." />
+          </Save>
+        </Add>
+      </Guide>
+      <Import Text="Import">
+        <Title Text="Importovat zákazníky" />
+        <Description Text="Pomocí importu zákazníků nahrajte seznam zákazníků pomocí vlastního souboru CSV nebo CSV exportovaného z jiné aplikace.&#xA;Více o importu zákazníků si můžete přečíst na">
+          <Link Text="naše centrum podpory" />
+        </Description>
+        <Fields>
+          <Name Text="Název" />
+          <Code Text="Kód" />
+          <TaxNumber Text="Daňové identifikační číslo" />
+          <Address Text="Adresa" />
+          <ZIP Text="Poštovní směrovací číslo" />
+          <City Text="Město" />
+          <Country Text="Stát" />
+          <Email Text="Email" />
+          <Phone Text="Telefonní číslo" />
+          <IsEnabled Text="Povoleno" />
+          <IsCustomer Text="Zákazník" />
+          <Clear Text="Vyčistit hodnotu" />
+        </Fields>
+        <Import Text="Import" />
+        <Preview Text="Náhled">
+          <CustomersCount Text="Počet zákazníků k importu:" />
+        </Preview>
+        <RequiredField Text="Označuje povinné pole" />
+        <Importing Text="Import zákazníků... Čekejte prosím..." />
+        <Error>
+          <RequiredFields Text="Chybí povinná pole. Před importem prosím vyberte všechna povinná pole." />
+          <InvalidContent Text="Chyba při analýze souboru CSV. Zkontrolujte prosím svůj obsah a zkuste to znovu.&#xA;Chybová zpráva: {0}" />
+          <InvalidField Text="Neplatná položka pro pole „{0}“. Zkontrolujte prosím obsah souboru a zkuste to znovu." />
+          <FileNotSelected Text="Soubor CSV není vybrán. Pokračujte výběrem souboru." />
+          <DuplicateName Text="Bylo zjištěno duplicitní jméno zákazníka. Jméno zákazníka: „{0}“." />
+        </Error>
+        <Completed Text="Zákazníci úspěšně importovali!" />
+      </Import>
+      <Export Text="Export">
+        <Completed Text="Zákazníci úspěšně exportovali!&#xA;Název souboru: &quot;{0}&quot;" />
+      </Export>
+    </Customers>
+    <PaymentTypes Text="Typy plateb">
+      <LearnMore Text="Další informace o typech plateb" />
+      <New Text="Nový typ platby" />
+      <Edit Text="Upravit typ platby „{0}“" />
+      <Delete Text="Smazat typ platby">
+        <Confirmation Text="Opravdu chcete smazat „{0}“?" />
+        <Error Text="Při mazání typu platby došlo k chybě. Vybraný typ platby nelze smazat.&#xA;Systémová zpráva: {0}" />
+        <DataViolation Text="Vybraný typ platby nelze smazat. Ujistěte se, že v dokumentech není použit typ platby, a zkuste to znovu." />
+      </Delete>
+      <PaymentType>
+        <Name Text="Název" />
+        <Code Text="Kód" />
+        <IsCustomerRequired Text="Zákazník vyžadován" />
+        <IsFiscal Text="Vytisknout účtenku" />
+        <IsChangeAllowed Text="Změna povolena" />
+        <Ordinal Text="Pozice" />
+        <IsEnabled Text="Povoleno" />
+        <IsQuickPayment Text="Rychlá platba" />
+        <OpenCashDrawer Text="Otevřít pokladní zásuvku" />
+        <ShortcutKey Text="Klávesová zkratka" />
+        <MarkAsPaid Text="Označte transakci jako zaplacenou" />
+        <Saved>
+          <Created Text="Typ platby byl úspěšně vytvořen." />
+          <Updated Text="Typ platby byl úspěšně změněn." />
+        </Saved>
+        <Error Text="Chyba">
+          <ExistingShortcutKey Text="Zadaná klávesová zkratka je již přiřazena k typu platby „{0}“.&#xA;Klávesové zkratky musí být jedinečné.&#xA;Zadejte prosím jinou klávesovou zkratku a zkuste to znovu.">
+            <Title Text="Byla zjištěna duplicitní klávesová zkratka" />
+          </ExistingShortcutKey>
+        </Error>
+      </PaymentType>
+      <Onboarding>
+        <Title Text="Typy plateb" />
+        <Info Text="Zadejte typy plateb používané pro prodej ve vašem obchodě." />
+        <AddMore Text="Uložit a přidat další">
+          <Error Text="Při přidávání nového typu platby došlo k chybě.&#xA;Zkontrolujte svůj vstup a zkuste to znovu" />
+        </AddMore>
+        <Existing Text="Existující typy plateb" />
+      </Onboarding>
+    </PaymentTypes>
+    <Documents Text="Dokumenty">
+      <View Text="Zobrazit dokumenty" />
+      <Search Text="Prohledávejte dokumenty">
+        <Customer Text="Zákazník">
+          <All Text="Všichni zákazníci" />
+        </Customer>
+        <Product Text="Produkty">
+          <All Text="Všechny produkty" />
+        </Product>
+        <Period Text="Období">
+          <Tip Text="Kliknutím vyberte období vyhledávání" />
+        </Period>
+        <DocumentType Text="Typ dokumentu">
+          <All Text="Všechny typy dokumentů" />
+        </DocumentType>
+        <User Text="Uživatel">
+          <All Text="Všichni uživatelé" />
+        </User>
+        <PaidStatus Text="Zaplacený stav">
+          <None Text="Všechny transakce" />
+          <Paid Text="Zaplaceno" />
+          <Unpaid Text="Nezaplaceno" />
+        </PaidStatus>
+        <DocumentNumber Text="Číslo dokumentu" />
+        <ReferenceDocumentNumber Text="Externí dokument" />
+        <CashRegister Text="Pokladna">
+          <All Text="Všechny pokladny" />
+        </CashRegister>
+        <Clear Text="Vymazat všechny filtry" />
+      </Search>
+      <Document>
+        <Save>
+          <Saved Text="Dokument byl úspěšně uložen" />
+          <Error Text="Při ukládání dokumentu došlo k chybě. Změny se neuloží.&#xA;Systémová zpráva: {0}">
+            <InvalidPayments Text="Neplatná částka platby">
+              <Info Text="Částka plateb se musí rovnat celkové hodnotě dokladu. Opravte platby dokumentů a zkuste to znovu.&#xA;&#xA;Celkový počet dokumentů: {0}. Částka plateb: {1}." />
+            </InvalidPayments>
+          </Error>
+        </Save>
+        <UnsavedChanges Text="Neuložené změny">
+          <Confirmation Text="Dokument „{0}“ obsahuje neuložené změny.&#xA;&#xA;Chcete dokument před zavřením uložit?" />
+        </UnsavedChanges>
+        <StockDate Text="Vyberte datum změny skladu">
+          <Description Text="Zadejte datum, kdy byla změna zásob registrována tímto dokladem" />
+          <Invalid Text="Neplatné datum naskladnění">
+            <Message Text="Vybrané datum naskladnění není povoleno.&#xA;Počet inventáře {0} vytvořen dne {1}" />
+            <Description Text="Vybraná akce není povolena.&#xA;&#xA;Byl nalezen počet stávajících zásob. Dokument „{0}“ vytvořen dne {1}.&#xA;&#xA;Zkontrolujte datum skladu dokumentu a zkuste to znovu." />
+            <InvalidTime Text="Doba inventury nemůže být v budoucnosti" />
+          </Invalid>
+        </StockDate>
+        <Note Text="Poznámka" />
+        <InternalNote Text="Interní poznámka" />
+        <PaidStatus>
+          <Changed Text="Stav platby byl úspěšně změněn" />
+        </PaidStatus>
+        <Items>
+          <CostPrice>
+            <Settings>
+              <AutoUpdate Text="Automaticky aktualizovat cenu při nákupu" />
+            </Settings>
+            <Update Text="Aktualizovat nákupní cenu">
+              <Confirmation Text="Přejete si aktualizovat nákupní cenu u vybraných položek?" />
+              <Info Text="Cena položek se změnila. Vyberte položky, u kterých chcete změnit nákupní cenu." />
+              <Success Text="Nákupní ceny byly úspěšně aktualizovány" />
+            </Update>
+          </CostPrice>
+          <Missing Text="Vybraný produkt neexistuje." />
+        </Items>
+        <Payments>
+          <AutomaticallyModified Text="Platby a stávající částky jsou aktualizovány tak, aby odpovídaly celkovému počtu plateb" />
+          <MarkPaid Text="Všechny kreditní platby jsou nyní zaplaceny. Chcete dokument označit jako zaplacený?">
+            <Title Text="Aktualizujte stav dokumentu" />
+          </MarkPaid>
+          <Status Text="Status">
+            <Paid Text="Zaplaceno" />
+            <Unpaid Text="Nezaplaceno" />
+          </Status>
+        </Payments>
+      </Document>
+      <New>
+        <SelectDocumentType Text="Vyberte typ dokumentu" />
+      </New>
+      <NoDocument Text="Požadovaný dokument neexistuje." />
+      <Inventory>
+        <Date Text="Vyberte datum inventury">
+          <Description Text="Zadejte datum vytvoření inventárního seznamu." />
+        </Date>
+        <Document>
+          <Item>
+            <Expected Text="Očekávaný" />
+            <Counted Text="Počítáno" />
+            <ChangeQuantity Text="Změňte množství" />
+          </Item>
+          <ExistingItem Text="Vybraná položka je již k tomuto dokumentu přidána." />
+          <Service Text="Pokus o přidání služby do počtu zásob">
+            <Info Text="Vybraná položka „{0}“ je označena jako služba. Opravdu chcete přidat službu k počtu zásob?" />
+          </Service>
+          <AddGroup Text="Přidejte do dokumentu položky skupiny">
+            <Confirmation Text="Opravdu chcete do inventáře přidat všechny produkty ze skupiny „{0}“?" />
+          </AddGroup>
+        </Document>
+      </Inventory>
+      <Guide>
+        <Title Text="Otevřete dokumenty" />
+        <Content Text="Kliknutím sem otevřete sekci dokumentů a přidejte svůj první nákup" />
+        <Add>
+          <Title Text="Vytvořit dokument" />
+          <Content Text="Klikněte zde pro vytvoření nového nákupu a uložení zboží na sklad" />
+          <Customer>
+            <Title Text="Vyberte zákazníka" />
+            <Content Text="Vyberte zákaznika pro tento dokument" />
+          </Customer>
+          <Supplier>
+            <Title Text="Vyberte dodavatele" />
+            <Content Text="Vyberte dodavatele pro tento dokument" />
+          </Supplier>
+          <Product>
+            <Title Text="Vyberte produkt" />
+            <Content Text="Dvakrát klikněte na produkt, který chcete přidat do dokumentu" />
+          </Product>
+          <Item>
+            <Quantity>
+              <Title Text="Zadejte množství" />
+              <Content Text="Zadejte zakoupené množství. Toto množství bude naskladněno" />
+            </Quantity>
+            <Price>
+              <Title Text="Cena" />
+              <Content Text="Zadejte cenu položky" />
+            </Price>
+            <Save>
+              <Title Text="Uložit změny" />
+              <Content Text="Kliknutím na tlačítko &quot;Uložit&quot; uložíte změny a přidáte tuto položku do dokumentu" />
+            </Save>
+          </Item>
+          <Save>
+            <Title Text="Uložit dokument" />
+            <Content Text="Kliknutím na tlačítko &quot;Uložit&quot; dokument uložíte" />
+          </Save>
+        </Add>
+      </Guide>
+    </Documents>
+    <Countries Text="Země">
+      <New Text="Nová země" />
+      <Delete>
+        <Title Text="Smazat zemi" />
+        <Confirmation Text="Opravdu chcete smazat zemi „{0}“?" />
+      </Delete>
+      <Country>
+        <Edit Text="Upravit zemi „{0}“" />
+        <Name Text="Název" />
+        <Code Text="Kód" />
+        <Saved>
+          <Created Text="Země byla úspěšně vytvořena" />
+          <Updated Text="Země úspěšně upravena" />
+        </Saved>
+      </Country>
+    </Countries>
+    <Company Text="Moje společnost">
+      <LearnMore Text="Zjistěte více o podrobnostech společnosti" />
+      <Details Text="Moje firemní údaje">
+        <Title Text="Firemní údaje" />
+        <Logo Text="Logo">
+          <Add Text="Procházet" />
+          <Remove Text="Smazat" />
+        </Logo>
+        <BankAccount Text="Bankovní účet">
+          <Number Text="Číslo bankovního účtu" />
+          <BankDetails Text="Bankovní detaily" />
+        </BankAccount>
+      </Details>
+      <Saved Text="Firemní údaje byly úspěšně uloženy" />
+      <Onboarding>
+        <Title Text="Podrobnosti o společnosti" />
+        <Info Text="Zadejte podrobnosti o vaší společnosti. Údaje o společnosti se používají pro účtenky a faktury" />
+      </Onboarding>
+      <Reset Text="Resetovat databázi">
+        <Info Text="Toto je destruktivní operace. Než budete pokračovat, přečtěte si prosím pokyny." />
+        <Selection Text="Vyberte entity, které chcete resetovat">
+          <Description Text="Vybrané entity budou smazány z databáze" />
+          <Items>
+            <Documents Text="Dokumenty" />
+            <Products Text="Produkty" />
+            <Customers Text="Zákazníci" />
+            <Promotions Text="Akce" />
+            <Counters Text="Počítadla" />
+            <CashInOut Text="Vklad / Výběr hotovosti" />
+            <Taxes Text="Daně" />
+            <OpenOrders Text="Otevřené objednávky" />
+          </Items>
+        </Selection>
+        <AdminPassword Text="Zadejte heslo správce" />
+        <Backup>
+          <Description Text="Místo, kam bude záloha databáze uložena" />
+          <Info Text="Před resetem bude provedena záloha databáze. Níže můžete změnit výchozí umístění zálohy." />
+          <Path Text="Cesta k záložní databázi">
+            <Select Text="Vyberte umístění, kam se uloží záloha databáze před provedením resetu." />
+          </Path>
+          <Completed Text="Zálohování databáze dokončeno" />
+        </Backup>
+        <Confirmation Text="Potvrzení">
+          <Description Text="Autorizujte a proveďte reset na vybraných entitách" />
+        </Confirmation>
+        <PerformReset Text="Resetovat databázi">
+          <Confirmation Text="Opravdu si přejete resetovat databázi a vymazat vybraná data?">
+            <Title Text="Probíhá reset databáze" />
+          </Confirmation>
+          <Error>
+            <NoSelection Text="Vyberte prosím alespoň jednu entitu, kterou chcete resetovat." />
+          </Error>
+        </PerformReset>
+        <Completed Text="Reset databáze byl úspěšně dokončen. Aronium se nyní restartuje." />
+      </Reset>
+    </Company>
+    <Guide>
+      <Title Text="Management" />
+      <Content Text="Kliknutím sem otevřete sekci správy a přidejte produkty a zákazníky" />
+    </Guide>
+    <Authorization>
+      <Title Text="Zadejte heslo pro přístup do sekce správy" />
+    </Authorization>
+  </Management>
+</Language>

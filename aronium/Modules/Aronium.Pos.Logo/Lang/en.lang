@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <Logo Text="My logo">
+    <Add Text="Add logo" />
+    <Remove Text="Remove logo" />
+    <Empty Text="No logo has been selected. Click &quot;Add logo&quot; button to select your logo." />
+    <License>
+      <Expiring Text="License for &quot;My logo&quot; module will expire in {0} day(s).\n\nPlease purchase a license to ensure your logo is displayed after {1}">
+        <Title Text="License will expire soon"/>
+      </Expiring>
+    </License>
+    </Logo>
+</Language>

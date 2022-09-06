@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="es" name="Español">
+  <Users Text="Gebruikers en beveiliging">
+    <View Text="Gebruikers">
+      <Disabled Text="Toon inactieve gebruikers" />
+    </View>
+    <New Text="Gebruiker toevoegen" />
+    <ResetPassword Text="Wachtwoord opnieuw instellen">
+      <Success Text="Wachtwoord succesvol gewijzigd" />
+    </ResetPassword>
+    <LearnMore Text="Meer informatie over gebruikersbeheer" />
+    <User>
+      <FirstName Text="Voornaam" />
+      <LastName Text="Familie naam" />
+      <Password Text="Wachtwoord" />
+      <PasswordConfirmation Text="Wachtwoord bevestigen" />
+      <AccessLevel Text="Toegangsniveau" />
+      <IsEnabled Text="Actief" />
+      <Error>
+        <PasswordConfirmationMatch Text="Wachtwoord en wachtwoord bevestiging  moet overeenkomen." />
+        <InvalidPassword Text="Gebruiker met hetzelfde wachtwoord bestaat al.\nVoer een uniek wachtwoord in en probeer het opnieuw." />
+        <Disable>
+          <OpenOrders Text="Het uitschakelen van de gebruiker voorkomt dat hij de open verkoop sluit.\nSluit alle geopende bestellingen die eigendom zijn van deze gebruiker voordat u hem uitschakelt.">
+            <Title Text="Kan gebruiker met open verkoop niet uitschakelen" />
+          </OpenOrders>
+        </Disable>
+        <DuplicateEmail Text="Dit e-mailadres is al in gebruik.\nGebruik een ander e-mailadres." />
+      </Error>
+      <Saved Text="Gebruikersgegevens zijn succesvol gewijzigd." />
+      <Email Text="Email" />
+    </User>
+    <Delete Text="Verwijder gebruiker">
+      <Confirmation Text="Weet u zeker dat u &quot;{0}&quot; wilt verwijderen?" />
+      <Error>
+        <CurrentUser Text="Je kunt jezelf niet verwijderen!" />
+        <DataViolation Text="Kan gebruiker niet verwijderen.\nGebruiker bevat documenten of andere gerelateerde items." />
+      </Error>
+    </Delete>
+    <Security Text="Beveiliging">
+      <Title Text="Stel het toegangsniveau in voor vooraf gedefinieerde bewerkingen" />
+      <Description Text="Selecteer toegangsniveau voor elke actie om de vereiste gebruikersrechten in te stellen." />
+      <LearnMore Text="Meer informatie over toegangsniveaus en beveiliging" />
+      <MaximumAccessLevelWarning Text="Toegangsniveau ingesteld boven de hoogste waarde die aan elke gebruiker is toegewezen." />
+      <Save>
+        <Success Text="Beveiligingsniveaus succesvol opgeslagen" />
+        <AccessLevelViolation Text="Schending van het toegangsniveau">
+          <Info Text="Toegangsniveaus kunnen worden ingesteld op een maximale waarde die aan elke gebruiker is toegewezen. Anders hebt u mogelijk geen toegang tot de sectie met beperkte rechten.\nCorrigeer per ongeluk gewijzigde items en probeer het opnieuw." />
+        </AccessLevelViolation>
+      </Save>
+    </Security>
+  </Users>
+</Language>

@@ -1,0 +1,1 @@
+ALTER TABLE PosPrinterSelectionSettings ADD COLUMN PrintBarcode INTEGER (1) NOT NULL DEFAULT 1;

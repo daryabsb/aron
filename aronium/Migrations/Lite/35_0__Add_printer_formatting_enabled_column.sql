@@ -1,0 +1,1 @@
+ALTER TABLE PosPrinterSettings ADD COLUMN IsFormattingEnabled INT(1) NOT NULL DEFAULT 1;

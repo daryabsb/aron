@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <StockControl>
+    <Product>
+      <Title Text="Control de stock" />
+      <Supplier Text="Proveedor">
+        <None Text="(Ninguno)" />
+        <Clear Text="Limpiar" />
+      </Supplier>
+      <ReorderPoint Text="Punto de pedido" />
+      <PreferredQuantity Text="Cantidad preferida" />
+      <LowStockWarning Text="Advertencia de stock bajo">
+        <WarningQuantity Text="Cantidad de stock bajo" />
+      </LowStockWarning>
+      <Reset Text="Restablecer predeterminados" />
+      <Info Text="Establezca reglas de cantidad de existencias bajas que se puedan utilizar como punto de pedido de existencias." />
+    </Product>
+    <Notification>
+      <Message Text="Algunos productos han llegado a su punto de pedido.\nConsidere comprar los siguientes artículos: {0}.">
+        <Title Text="Los productos están llegando a una cantidad baja de existencias" />
+      </Message>
+    </Notification>
+    <Reports>
+      <Group Text="Control de stock" />
+      <ReorderProductList Text="Pedir lista de productos">
+        <OrderQuantity Text="Cantidad." />
+      </ReorderProductList>
+      <LowStockWarning Text="Aviso de stock bajo">
+        <QuantityOnHand Text="Cantidad disponible" />
+        <PreferredQuantity Text="Cantidad preferida" />
+        <WarningQuantity Text="Cantidad de advertencia" />
+        <ReorderPoint Text="Punto de pedido" />
+      </LowStockWarning>
+    </Reports>
+  </StockControl>
+</Language>

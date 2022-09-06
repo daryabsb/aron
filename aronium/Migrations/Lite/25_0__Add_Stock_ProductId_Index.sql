@@ -1,0 +1,1 @@
+CREATE INDEX IX_Stock_ProductId ON Stock (ProductId)

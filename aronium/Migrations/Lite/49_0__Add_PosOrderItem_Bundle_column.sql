@@ -1,0 +1,1 @@
+ALTER TABLE PosOrderItem ADD COLUMN Bundle TEXT;

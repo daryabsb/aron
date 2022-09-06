@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <FloorPlans>
+    <Options>
+      <View>
+        <Orders>
+          <Order>
+            <Number Text="Objednávka / Jméno zákazníka" />
+          </Order>
+        </Orders>
+      </View>
+    </Options>
+  </FloorPlans>
+  <Order>
+    <Name Text="Název objednávky">
+      <Title Text="Objednávka nebo jméno zákazníka" />
+      <Info Text="Zadejte název nebo číslo objednávky" />
+      <Validation>
+        <Duplicate Text="Objednávka se stejným názvem již existuje. Chcete-li pokračovat, zadejte jiné jméno." />
+        <Empty Text="Název nebo číslo objednávky u stávajících objednávek nesmí být prázdné." />
+        <Required Text="ázev nebo číslo objednávky nesmí být prázdné." />
+      </Validation>
+      <Settings>
+        <Enabled Text="Povolit vlastní název objednávky" />
+        <Required Text="Název objednávky je povinný" />
+        <RequestOrderName Text="Automaticky požadovat název objednávky" />
+      </Settings>
+    </Name>
+  </Order>
+</Language>

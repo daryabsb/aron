@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <Print>
+    <Labels>
+      <Documents>
+        <InventoryCount Text="Inventory count">
+          <Counted Text="Counted"/>
+          <CountedValue Text="Counted value"/>
+          <CreatedBy Text="Created by"/>
+          <DiffMinus Text="Diff -"/>
+          <DiffPlus Text="Diff +"/>
+          <Expected Text="Expected"/>
+          <Time Text="Time"/>
+          <NegativeAmount Text="Amount -"/>
+          <PositiveAmount Text="Amount +"/>
+        </InventoryCount>
+        <Invoice Text="Invoice">
+          <AmountDue Text="Amount due"/>
+          <BankAccountNumber Text="Bank acc. number"/>
+          <BankDetails Text="Bank details"/>
+          <BillTo Text="Bill to"/>
+          <InvoiceNumber Text="Invoice No."/>
+          <Item Text="Item"/>
+          <ItemsCount Text="Items count"/>
+          <PaidAmount Text="Paid amount"/>
+          <PaymentMethod Text="Payment method"/>
+          <PaymentStatus Text="Payment status">
+            <Paid Text="Paid"/>
+            <Unpaid Text="Unpaid"/>
+          </PaymentStatus>
+        </Invoice>
+        <LossAndDamage Text="Loss and damage"/>
+        <ProformaInvoice Text="Proforma"/>
+        <Purchase Text="Goods receipt" />
+        <Refund Text="Refund">
+          <ReceiptNumber Text="Receipt number"/>
+          <RefundNumber Text="Refund No."/>
+        </Refund>
+        <StockReturn Text="Goods return"/>
+      </Documents>
+      <General>
+        <CashRegister Text="Cash register"/>
+        <Code Text="Code"/>
+        <Company Text="Company">
+          <Address Text="Address"/>
+        </Company>
+        <Cost Text="Cost"/>
+        <Customer Text="Customer"/>
+        <Date Text="Date"/>
+        <Description Text="Description"/>
+        <Discount Text="Discount"/>
+        <DiscountGranted Text="Discount granted"/>
+        <Document Text="Document"/>
+        <DocumentNumber Text="Document number"/>
+        <DueDate Text="Due date"/>
+        <Email Text="Email" />
+        <ExternalDocument Text="External document"/>
+        <Margin Text="Margin"/>
+        <Name Text="Name"/>
+        <Numbering Text="#"/>
+        <Page Text="Page"/>
+        <Period Text="Period"/>
+        <Phone Text="Phone" />
+        <Product Text="Product"/>
+        <ProductGroup Text="Product group"/>
+        <ProductName Text="Product name"/>
+        <Products Text="Products"/>
+        <Profit Text="Profit"/>
+        <PurchaseNumber Text="Purchase number"/>
+        <TaxNumber Text="Tax No." />
+        <Qty Text="Qty."/>
+        <Quantity Text="Quantity"/>
+        <Subtotal Text="Subtotal"/>
+        <Supplier Text="Supplier"/>
+        <Tax Text="Tax"/>
+        <TaxName Text="Tax name"/>
+        <Total Text="Total"/>
+        <TotalAfterDiscount Text="Total after disc."/>
+        <TotalBeforeDiscount Text="Total before disc."/>
+        <TotalBeforeTax Text="Total before tax"/>
+        <TotalDiscount Text="Total discount"/>
+        <TotalPaid Text="Total paid"/>
+        <TotalUnpaid Text="Total unpaid"/>
+        <UnitOfMeasurement Text="UOM"/>
+        <UnitPrice Text="Unit price"/>
+        <User Text="User"/>
+      </General>
+      <Reports>
+        <DailySales Text="Daily sales"/>
+        <DiscountsGranted Text="Discounts granted">
+          <BeforeTax Text="(before tax)"/>
+          <AfterTax Text="(after tax)"/>
+          <NumberOfDiscounts Text="Number of orders discounted"/>
+          <TotalDiscounted Text="Total discounted"/>
+        </DiscountsGranted>
+        <InventoryCount Text="Inventory count report"/>
+        <Invoices Text="Invoices"/>
+        <ItemsDiscounts Text="Items discounts"/>
+        <LossAndDamageByProduct Text="Loss and damage by product"/>
+        <PaymentTypesByCustomer Text="Payment types by customers"/>
+        <PaymentTypesByUser Text="Payment types by users"/>
+        <ProfitAndMargin Text="Profit"/>
+        <PurcahsedItemsDiscounts Text="Purchased items discounts"/>
+        <PurchaseByProduct Text="Purchase by product"/>
+        <PurchaseBySupplier Text="Purchase by supplier"/>
+        <PurchaseDiscounts Text="Purchase discounts"/>
+        <PurchaseInvoices Text="Purchase invoices"/>
+        <Refunds Text="Refunds"/>
+        <SalesByCustomer Text="Sales by customer"/>
+        <SalesByPaymentType Text="Sales by payment types"/>
+        <SalesByProduct Text="Sales by product"/>
+        <SalesByProductGroups Text="Sales by product groups"/>
+        <SalesByUser Text="Sales by users"/>
+        <StartingCashEntries Text="Starting cash entries">
+          <ZReport Text="Z report" />
+          <Open Text="Open" />
+        </StartingCashEntries>
+        <Stock Text="Stock report">
+          <CostPrice Text="Cost price" />
+          <CostBeforeTax Text="Cost bef. tax" />
+          <CostIncludingTax Text="Cost incl. tax"/>
+          <History Text="Stock history">
+            <CustomerOrSupplier Text="Customer / Supplier"/>
+            <DocumentNumber Text="Doc. number"/>
+            <DocumentType Text="Doc. type"/>
+            <QuantityOnHand Text="Qty. on hand"/>
+            <StockDate Text="Stock date"/>
+            <CostPrice Text="Cost price"/>
+          </History>
+        </Stock>
+        <StockMovement Text="Stock movement">
+          <AverageNumberOfSalesPerItem Text="Average number of sales per item"/>
+          <FastMoving Text="Fast moving"/>
+          <SlowMoving Text="Slow moving"/>
+          <NonMoving Text="Non moving"/>
+          <NumberOfSales Text="Num. of sales"/>
+          <TotalNumberOfSales Text="Total number of sales"/>
+        </StockMovement>
+        <Taxes Text="TAX"/>
+        <UnpaidPurchases Text="Unpaid purchase"/>
+        <UnpaidSales Text="Unpaid sales"/>
+        <HourlySales Text="Hourly sales">
+          <Hours Text="Hours" />
+          <TotalSales Text="Total sales" />
+          <SalesCount Text="Sales count" />
+          <AverageSale Text="Average sale" />
+          <Chart>
+            <Total Text="Sales total" />
+            <Count Text="Number of sales" />
+          </Chart>
+        </HourlySales>
+        <HourlySalesByGroups Text="Hourly sales by product groups" />
+      </Reports>
+    </Labels>
+  </Print>
+</Language>

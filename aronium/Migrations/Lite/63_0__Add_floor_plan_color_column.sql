@@ -1,0 +1,1 @@
+ALTER TABLE FloorPlan ADD COLUMN Color TEXT NOT NULL DEFAULT 'Transparent';

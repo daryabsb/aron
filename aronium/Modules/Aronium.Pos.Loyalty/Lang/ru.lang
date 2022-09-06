@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ru" name="Russian">
+  <Loyalty Text="Лояльность">
+    <Promotions Text="Предложения и Акции">
+      <New Text="Новая акция">
+        <Title Text="Новая акция" />
+      </New>
+      <Edit>
+        <Title Text="Редактировать акцию &quot;{0}&quot;" />
+      </Edit>
+      <Delete Text="Удалить акцию">
+        <Confirmation Text="Вы уверены, что хотите удалить акцию &quot;{0}&quot;?" />
+        <Error Text="Произошла ошибка во время удаления акции." />
+      </Delete>
+      <View>
+        <Enabled Text="Включено" />
+        <Name Text="Название" />
+        <DaysOfWeek Text="Дни недели" />
+        <StartDate Text="Дата начала" />
+        <StartTime Text="Время начала" />
+        <EndDate Text="Дата завершения" />
+        <EndTime Text="Время завершения" />
+      </View>
+      <Promotion>
+        <Empty Text="Список товаров акции пуст." />
+        <Name Text="Название акции" />
+        <Active Text="Действующая" />
+        <DaysOfWeek>
+          <All Text="Все дни">
+            <ShortName Text="Все" />
+          </All>
+          <Monday Text="Понедельник">
+            <ShortName Text="Пн" />
+          </Monday>
+          <Tuesday Text="Вторник">
+            <ShortName Text="Вт" />
+          </Tuesday>
+          <Wednesday Text="Среда">
+            <ShortName Text="Ср" />
+          </Wednesday>
+          <Thursday Text="Четверг">
+            <ShortName Text="Чт" />
+          </Thursday>
+          <Friday Text="Пятница">
+            <ShortName Text="Пт" />
+          </Friday>
+          <Saturday Text="Суббота">
+            <ShortName Text="Сб" />
+          </Saturday>
+          <Sunday Text="Воскресенье">
+            <ShortName Text="Вс" />
+          </Sunday>
+        </DaysOfWeek>
+        <Duration>
+          <Start Text="Начало" />
+          <End Text="Конец" />
+        </Duration>
+        <Item>
+          <PriceType>
+            <Discount Text="Скидка" />
+            <FixedPrice Text="Фиксированная цена" />
+          </PriceType>
+          <Condition Text="Условие">
+            <Title Text="Количественное условие" />
+            <ApplyToAll Text="Ко всем следующим" />
+            <Quantity>
+              <Description Text="После преодоления данного кол-ва, скидка будет применяться к данному товару без ограничений на кол-во" />
+            </Quantity>
+            <LimitToNext Text="Для каждой">
+              <Description Text="После преодоления данного кол-ва, скидка будет применяться только к последующим N товарам" />
+            </LimitToNext>
+            <CopyToAll Text="Копировать условие для всех товаров">
+              <Completed Text="Условие количества скопировано для всмех товаров" />
+            </CopyToAll>
+          </Condition>
+          <InvalidValue Text="Неверное кол-во" />
+          <Errors>
+            <Existing Text="Товар &quot;{0}&quot; уже существует в акции." />
+          </Errors>
+        </Item>
+        <Saved Text="Акция успешно сохранена." />
+        <InvalidItems Text="Невозможно сохранить акцию, т.к. в ней содержатся ошибки. Проверьте параметры и повторите попытку снова." />
+      </Promotion>
+      <NoPromotions Text="Нет акций">
+        <Add Text="Создать новую акцию" />
+      </NoPromotions>
+      <LearnMore Text="Узнать больше об акциях и &quot;Счастливых часах&quot;" />
+    </Promotions>
+  </Loyalty>
+</Language>

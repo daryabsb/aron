@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <FloorPlans>
+    <Options>
+      <View>
+        <Orders>
+          <Order>
+            <Number Text="ناوی داواکاری / کڕیار" />
+          </Order>
+        </Orders>
+      </View>
+    </Options>
+  </FloorPlans>
+  <Order>
+    <Name Text="ناوی داواکاری">
+      <Title Text="ناوی داواکاری یان کڕیار" />
+      <Info Text="ناو یان ژمارەی داواکاری بنووسە" />
+      <Validation>
+        <Duplicate Text="داواکاری بە هەمان ناو بوونی هەیە.تکایە ناوێکی جیاواز بنووسە بۆ بەردەوامبوون" />
+        <Empty Text="ناو یان ژمارەی داواکاری نابێت بەتاڵبێت بۆ ئەو داواکاریانەی بوونیان هەیە" />
+        <Required Text="ناو یان ژمارەی داواکاری نابێت بەتاڵبێت" />
+      </Validation>
+      <Settings>
+        <Enabled Text="کارپێکردنی ناوی تایبەت بۆ داواکاری" />
+        <Required Text="ناوی داواکاری پێویستە" />
+        <RequestOrderName Text="ناوی داواکاری بە ئۆتۆماتیکی داوابکە" />
+      </Settings>
+    </Name>
+  </Order>
+</Language>

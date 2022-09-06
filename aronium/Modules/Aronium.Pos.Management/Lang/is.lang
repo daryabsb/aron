@@ -1,0 +1,758 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="is" name="Icelandic">
+  <Management Text="Stjórnborð">
+    <Dashboard Text="Tölffræði">
+      <NoData Text="Engin Gögn til að sýna" />
+      <MonthlySales Text="Mánaðalegar Sölur">
+        <Description Text="Sala flokkuð eftir Mánuði" />
+        <Month Text="Mánuður" />
+        <Legend Text="Goðsögn" />
+        <CurrentYear Text="Núverandi Ár" />
+        <TotalSales Text="Heildar Sala">
+          <TopMonth Text="Besta Frammistaða Mánaðar:" />
+        </TotalSales>
+        <Year Text="Ár">
+          <Previous Text="Fyrra Ár" />
+          <Next Text="Næsta Ár" />
+        </Year>
+      </MonthlySales>
+      <HourlySales Text="Tíma Sölur">
+        <Description Text="Sala röðuð eftir Klukkutímum" />
+        <Hour Text="Klukkutími" />
+        <Options>
+          <Amount Text="Upphæð" />
+          <Count Text="Sölur" />
+        </Options>
+      </HourlySales>
+      <TopProducts Text="Mest Seldar Vörur">
+        <Product Text="Vara" />
+        <Total Text="Samtalls" />
+      </TopProducts>
+      <TopProductGroups Text="Mest Seldir Vöruflokkar">
+        <Description Text="Best Seldar Vörur í þessum Flokkum" />
+        <Group Text="Vöru Flokkur" />
+      </TopProductGroups>
+      <TopCustomers Text="Bestu Viðskiptavinir">
+        <Description Text="Bestu Viðskiptavinir á Tilteknu Tímabili (Topp 5)" />
+      </TopCustomers>
+      <PeriodicReports Text="Reglubundnar Skýrslur">
+        <SelectPeriod Text="Veldu Tímabið Skýrslu" />
+      </PeriodicReports>
+    </Dashboard>
+    <Products Text="Vörur">
+      <Loading Text="Sækji Vörur..." />
+      <LearnMore Text="Læra Meira um Vörur" />
+      <Taxes Text="Skatta Hlutfall">
+        <LearnMore Text="Læra Meira um Skatt" />
+        <New Text="Nýr Skatt Hlutfall" />
+        <Edit>
+          <Title Text="Breyta Skatt &quot;{0}&quot;" />
+        </Edit>
+        <Delete>
+          <Title Text="Eyða Skatt" />
+          <Confirmation Text="Ertu Viss um að þú viljir eyða Skatt &quot;{0}&quot;?" />
+          <Error Text="Villa við að Eyða Skatt. Vertu viss um að þessi Virðisauki sé ekki í Notkun." />
+        </Delete>
+        <Tax>
+          <Code Text="Kóði" />
+          <Name Text="Nafn" />
+          <Rate Text="Prósentur" />
+          <ReadOnly Text="Valinn Skattur er til í Skjölum er er ekki hægt að breyta" />
+          <Fixed Text="Fatur" />
+          <TaxOnTotal Text="Skattur Samtalls" />
+          <Enabled Text="Virkt" />
+        </Tax>
+        <Onboarding>
+          <Title Text="Skatt Hlutfall" />
+          <Info Text="Sláðu inn Skatt til að nota á Vörur.\nÞað verður í minnsta lagi að vera einn Skatt í Kerfinu." />
+          <AddMore Text="Vista &amp; Bæta við Feyrrum">
+            <Error Text="Villa við að Bæta VIð Nýjum Skatt. Reyndu Aftur" />
+            <Name Text="Nafn á Skatt (Dæmi &quot;Enginn Virðisauki&quot;)" />
+          </AddMore>
+          <Existing Text="Núverandi Skatt Hlutfall">
+            <NoItems Text="Enginn Skatt Hlutfall fanns. Verður að vera einn Skatt Hæutfall til að geta bætt við Nýrri Vöru.">
+              <AddDefault Text="Setja Sem Aðal Skatt Hlutfall" />
+            </NoItems>
+          </Existing>
+        </Onboarding>
+        <Switch Text="Skipta um Skatt">
+          <OldTax Text="Eldri Skattur" />
+          <NewTax Text="Nýr Skattur" />
+          <Tooltip Text="Skipta Skatt á Allar Vörur" />
+          <Info Text="Notaðu þetta eyðublað til að skipta um skatta fyrir allar vörur.\n\nVeldu gamla skatta sem þú vilt skipta út fyrir nýjan skatt og smelltu á „Skipta út“ hnappinn hér að neðan." />
+          <Replace Text="Skita Út" />
+          <Error Text="Villa kom upp þegar reynt var að skipta um skatta.\nKerfisskilaboð: {0}" />
+          <Success Text="Skatti var Skipt Út!" />
+        </Switch>
+        <NoTaxes Text="Ekkert Skatt Hlutfall">
+          <Add Text="Nýtt Skatt Hlutfall" />
+        </NoTaxes>
+      </Taxes>
+      <New Text="Ný Vara">
+        <Product Text="Bæta VIð Nýrri Vöru" />
+        <Or Text="or" />
+        <Group Text="Nýr Vöruflokkur" />
+      </New>
+      <Delete Text="Eyða Vöru" />
+      <Edit Text="Breyta Vöru" />
+      <Search Text="Leita Að Vöru">
+        <Result Text="Niðurstöður" />
+        <Empty Text="Engin NIðurstaða" />
+      </Search>
+      <Groups Text="Vöruflokkur">
+        <Root Text="Vara" />
+        <Empty Text="Valinn Vöruflokkur Inniheldur Engar Vörur">
+          <Info Text="Bæta Vöru við í valinn Vöruflokk" />
+        </Empty>
+      </Groups>
+      <Group>
+        <New Text="Nýr Vöruflokkur" />
+        <Edit Text="Breyta Vöru Flokki">
+          <Title Text="Breya Vöruflokki &quot;{0}&quot;" />
+          <Error>
+            <InvalidParentGroup Text="Rangur Undir Vöruflokkur" />
+          </Error>
+        </Edit>
+        <Name Text="Nafn" />
+        <Color Text="Litur" />
+        <Delete Text="Eyða Vöruflokki">
+          <Title Text="Eyða Vöruflokki" />
+          <Confirmation Text="Ertu Viss um að þú viljir Eyða Vöruflokki &quot;{0}&quot;?" />
+          <Error Text="Villa við að Eyða Vöru Flokki.\nSystem Message: {0}">
+            <DataViolation Text="Valinn Vöruflokkur gat ekki verið Eytt.\n\nVertu viss um að enginn Undir Vöruflokkur sé til í Skjölum, Reyndu Aftur." />
+          </Error>
+        </Delete>
+        <Saved Text="Vöruflokkur Vistaður" />
+        <Details Text="Upplýsingar" />
+        <Image Text="Mynd">
+          <Browse Text="Sækja">
+            <Info Text="Veldu Vöru Hóp Mynd frá Tölvu" />
+          </Browse>
+          <Clear Text="Hreinsa">
+            <Info Text="Eyða Vöru Hóp Mynd" />
+          </Clear>
+        </Image>
+      </Group>
+      <Product>
+        <Edit Text="Breyta Vöru &quot;{0}&quot;" />
+        <Details Text="Upplýsingar Vöru" />
+        <Name Text="Nafn" />
+        <Code Text="Vörunúmer" />
+        <Barcode Text="Strikamerki">
+          <Generate Text="Búa Til Strikamerki" />
+        </Barcode>
+        <MeasurementUnit Text="Mælikvarði" />
+        <Taxes Text="Skattur">
+          <Add Text="Bæta Við Skatt á Vöru">
+            <Tooltip Text="Bæta Við Skatta Hlutfall á Vöru" />
+          </Add>
+          <Remove>
+            <Tooltip Text="Eyða þessu Skatt Hlutfalli" />
+          </Remove>
+          <NoTaxes>
+            <Info Text="Engit Skattar Fundust.\nBættu við Skatti svo þú getir bætt við æa eina Vöru" />
+          </NoTaxes>
+        </Taxes>
+        <SalePrice Text="Verð Í Sölu" />
+        <IsTaxIncluded Text="Sölu Verð Eftir Skatt" />
+        <Group Text="Vöruflokkur" />
+        <IsEnabled Text="Virk Vara" />
+        <IsService Text="Þjónusta (Notar Ekki Birgðir)" />
+        <IsDiscountAllowed Text="Afsláttur Leifður" />
+        <IsPriceChangeAllowed Text="Verðbreytingar Leifðar" />
+        <IsUsingDefaultQuantity Text="Sjálfgefið Magn" />
+        <Description Text="Upplýsingar" />
+        <Prices Text="Verð &amp; VSK" />
+        <Cost Text="Kostnaður" />
+        <Markup Text="Markmið" />
+        <ImageAndColor Text="Mynd &amp; Litur">
+          <Image Text="Mynd">
+            <Browse Text="Sækja">
+              <Info Text="Veldu Mynd af Vöru" />
+            </Browse>
+            <Clear Text="Hreinsa">
+              <Info Text="Eyða Vöru Mynd" />
+            </Clear>
+          </Image>
+          <Color Text="Litur" />
+        </ImageAndColor>
+        <DateCreated Text="Búið Til" />
+        <DateUpdated Text="Uppfært" />
+        <Saved>
+          <Created Text="Vara Var Búin Til" />
+          <Updated Text="Vöru Var Breytt" />
+        </Saved>
+        <Delete Text="Eyði Vöru">
+          <Confirmation Text="Ertu Viss um að þú viljir Eyða Vöru &quot;{0}&quot;?" />
+          <Error Text="Villa við að Eyða Vöru.\nKerfis Skilaboð: {0}" />
+          <DataViolation Text="Næ ekki að Eyða Vöru.\nVertu Viss um að hún sé ekki til í Skjölum." />
+        </Delete>
+        <Error>
+          <Code Text="Vara með þessu Vörunúmeri er þegar til (&quot;{0}&quot;).\Sláðu inn annað Vörunúmer eða Reyndu Aftur." />
+          <Barcode Text="Vara með þessu Strikamerki er þegar til (&quot;{0}&quot;).\nSkannaðu eða sláðu inn annað Strikamerki og Reyndu Aftur." />
+          <Invalid Text="Gat ekki Vistað Vöru þar sem að er ekki gilt. Vinsamegast athugaðu Villu Skilaboð og reyndu Aftur." />
+          <Taxes Text="Margfaldur Skattur fannt. Skattur með nafni (&quot;{0}&quot;).\nVinsamlegast veldu réttan Skatt og reyndu aftur." />
+        </Error>
+        <SalePriceBeforeTax Text="Sölu Verð Fyrir Skatt" />
+        <AgeRestriction Text="Aldurs Flokkað">
+          <Tooltip Text="Minnst Aldur til að kaupa þessa Vöru" />
+          <Years Text="Ár(a)" />
+          <Validation>
+            <Message Text="Þessi Vara er með Aldur Flokkun.\nVinsamlegast Staðfestu að Viðskiptavinur hafi tilskylin leyfi til að versla þessa Vöru.">
+              <Title Text="Aldurs Flokkuð Vara" />
+              <BornBefore Text="Fædd þann eða fyrir:" />
+            </Message>
+            <Confirm Text="Staðfesta" />
+          </Validation>
+        </AgeRestriction>
+        <Comments Text="Athugasemd">
+          <Info Text="Athugasemd mun verða Prentað á Eldhús Miða." />
+          <Note Text="Sláðu Inn Athugasemd..." />
+          <Add Text="Sláðu Inn Athugasemd" />
+          <Error>
+            <ExistingComment Text="Athugaemd er þegar til" />
+          </Error>
+        </Comments>
+      </Product>
+      <Export Text="Flytja Út">
+        <NoServices Text="Engin Útflutningaþjónusta Virk." />
+        <Success Text="Útflutningi Lokið." />
+        <Error Text="Villa. Reyndu Aftur." />
+        <Select Text="Veldu Tegund Útflutnings" />
+      </Export>
+      <Onboarding>
+        <Import Text="Flytja Inn Vörur í CSV Skrá">
+          <SelectFile Text="Veldu Skrá">
+            <Description Text="Veldu CSV sem inniheldur Vörurnar Þínar." />
+          </SelectFile>
+          <Validate Text="Staðfesta">
+            <Description Text="Staðfestu CSV Innihald og Byrjaðu að Flytja Inn." />
+            <Error Text="Villa við að Staðfesta CSV Skrá. Athugaðu Gögnin og Reyndu Aftur." />
+            <Success Text="Vörur Tilbúnar Til Innflutnings. Vörur Taldar: {0}" />
+          </Validate>
+          <ImportProducts Text="Flytja Inn">
+            <Description Text="Veldu til að Flytja inn Vörur frá valdri CSV Skrá." />
+          </ImportProducts>
+          <NoItems Text="Ekkert Til Að Flytja Inn" />
+          <Completed Text="Innflutningur Tókst!">
+            <Result>
+              <Created Text="Búnar Til Vörur:" />
+              <Updated Text="Uppfærðar Vörur:" />
+              <DocumentNumber Text="Búin Til Skjöl:" />
+            </Result>
+            <Restart Text="Endurræsa Innflutning" />
+          </Completed>
+          <Importing Text="Flyt Inn Vörur... Augna Blik..." />
+        </Import>
+      </Onboarding>
+      <Count Text="Fjöldi Vara:" />
+      <ChangeGroup Text="Vörur &quot;{0}&quot; Færðar Í &quot;{1}&quot;" />
+      <Guide>
+        <Title Text="Opna Vörur" />
+        <Content Text="Smelltu Hér til að opna Vörur og Bæta Við" />
+        <Add>
+          <Title Text="Bæti Við Vöru" />
+          <Content Text="Smelltu Á &quot;Ný Vara&quot; Takkann til að til að Bæta Við Nýrri Vöru" />
+          <Name>
+            <Title Text="Nafn Vöru" />
+            <Content Text="Settu inn Nafn á Vöru" />
+          </Name>
+          <Prices>
+            <Title Text="Verð Vöru" />
+            <Content Text="Verð á Vöru" />
+            <SalePrice>
+              <Title Text="Sölu Verð" />
+              <Content Text="Sölu Verð á Vöru" />
+            </SalePrice>
+          </Prices>
+          <Save>
+            <Title Text="Vista Breytingar" />
+            <Content Text="Smelltu Á &quot;Vista&quot; Takkann til að Breyta eða Bæta Við Vöru" />
+          </Save>
+        </Add>
+      </Guide>
+      <Settings Text="Vörur">
+        <Title Text="Vörur Aðal" />
+        <PriceIncludesTax Text="Verð Inniheldur Skatt">
+          <Tooltip Text="Ef valið mun Skatturinn koma inn í Verðið á Vöru" />
+        </PriceIncludesTax>
+        <DefaultTax Text="Sjálgefinn Skattur">
+          <NoTaxes Text="Skattur Fannst Ekki. Vinsamlegast Bættu við Skatta Hlutfalli eða breyttu." />
+        </DefaultTax>
+        <MarkupOption Text="Kostnaður bigður á Markmiður">
+          <Tooltip Text="Ef valið mun Kostaður verða uppfærður í Markmiðum í stað Sölu Verðs" />
+        </MarkupOption>
+      </Settings>
+      <Import Text="Flytja Inn">
+        <LearnMore Text="Læra Meira Um CSV Innflutning" />
+        <Basic Text="Einfallt">
+          <Description Text="Þú getur notað Einfalda leið til að Flytja Inn Vörur með CSV Skrá og getur lesið þig til um það á">
+            <Link Text="Aðstoðinni Okkar" />
+            <Formatting Text="Ef þú ert með Tilbúna CSV Skrá, Vertu viss um að hafa lesið">
+              <Link Text="Skráargerð CSV Skráar Aðstoð" />
+            </Formatting>
+            <Exported Text="Þú getur einnig nota Einfaldann Innfutning til að Flytja Inn Vorursem voru teknar úr Aronium Útlutningi." />
+          </Description>
+        </Basic>
+        <Csv Text="Ítarlegri">
+          <Description Text="Að nota Ítarlegri Innflutning krefst meiri Vinnu til að Flytja Inn CSV skrá eða CSV Útflutning frá öðru Forriti.\nÞú getur fengið Aðstoð á">
+            <Link Text="Aðstoðinni Okkar" />
+          </Description>
+          <SelectFile Text="Veldu Skrá" />
+          <Fields>
+            <Name Text="Nafn" />
+            <ProductGroup Text="Vöru Flokkur" />
+            <SKU Text="SKU" />
+            <Barcode Text="Strikamerki" />
+            <MeasurementUnit Text="Mæli Kvarði" />
+            <Cost Text="Kostar" />
+            <Markup Text="Markup" />
+            <Price Text="Price" />
+            <Tax Text="VSK" />
+            <IsTaxInclusivePrice Text="Verð Inniheldur Virðisauka" />
+            <IsPriceChangeAllowed Text="Verðbreytingar Leifðar" />
+            <IsUsingDefaultQuantity Text="Nota Hefðbundið Magn" />
+            <IsService Text="Þjónusta (Notar Ekki Birgðir)" />
+            <IsEnabled Text="Virk Vara" />
+            <Description Text="Upplýsingar" />
+            <Quantity Text="Magn" />
+            <Clear Text="Hreinsa" />
+          </Fields>
+          <RequiredField Text="Er Skylda" />
+          <Import Text="Flytja Inn" />
+          <Preview Text="Prufa">
+            <ProductsCount Text="Fjöldi Vara Til Innflutnings:" />
+          </Preview>
+          <Error>
+            <RequiredFields Text="Vantar í Skyldu Ramma. Vinsamlegast veldu alla Skylduramma áður en Innflutningur Hefst." />
+            <InvalidContent Text="Villa við að Lesa CSV Skrá. Athugaðu Innihald og Reyndu Aftur.\nVillu Skilaboð: {0}" />
+            <InvalidField Text="Rangt Fyrir &quot;{0}&quot;. Farðu Betur Yfir og Reyndu Svo Aftur." />
+            <FileNotSelected Text="CSV Skrá ekki Valin. Veldu Skrá til að Halda Áfram." />
+            <DuplicateSKU Text="Tvöfallt product codes Fannst. Product name: &quot;{0}&quot;. Tvöfallt code: &quot;{1}&quot;" />
+            <DuplicateName Text="Tvöfallt product name Fannst. Product name: &quot;{0}&quot;." />
+          </Error>
+          <Duplicates Text="Hvað skeður eft Afrit finnst?">
+            <Skip Text="Sleppa Afriti" />
+            <Merge Text="Sameina Afrit" />
+          </Duplicates>
+        </Csv>
+        <Xml Text="XML">
+          <Description Text="Notaðu Xml innflutning til að hlaða vörur sem fluttar eru út frá annarri Aronium dæmi.\nXml innflutningur mun varðveita alla eiginleika, þ.mt myndir og vörustigveldi." />
+          <SelectFile Text="Veldu Skrá" />
+          <Import Text="Flytja Inn" />
+        </Xml>
+      </Import>
+      <PriceTags Text="Strikamerki">
+        <Loading Text="Hleð Strikamerjum... Augna Blik..." />
+        <Layout Text="Útlit">
+          <Columns Text="Dálkar" />
+          <RowHeight Text="Hæð Raðar" />
+          <PaperSize Text="Pappírs Stærð">
+            <Custom Text="Sérvalið" />
+          </PaperSize>
+          <PageWidth Text="Pappírs Lengd" />
+          <PageHeight Text="Papírs Hæð" />
+          <LabelWidth Text="Merki Lengd" />
+          <LabelHeight Text="Merki Hæð" />
+          <RowSpacing Text="Raðir Bil" />
+          <ColumnSpacing Text="Dálka Bil" />
+          <RollPaper Text="Prenta á Rúllu Pappír (Ótakmörkuð Hæð)" />
+        </Layout>
+        <Display Text="Sýna">
+          <Barcode Text="Strikamerki">
+            <Type Text="Tegund Strikamerkis" />
+            <Height Text="Strikamerki Hæð" />
+          </Barcode>
+          <Code Text="Vörunúmer" />
+          <PriceIncludesTax Text="Skatt innifalið verð" />
+          <Borders Text="Borði" />
+          <Product Text="Vöru Nafn">
+            <FontSize Text="Vöru Nafn Stærð" />
+          </Product>
+          <Price Text="Verð">
+            <FontSize Text="Verð Stærð" />
+          </Price>
+        </Display>
+        <Products Text="Vörur">
+          <All Text="Allar Vörur" />
+          <Product Text="Vörur" />
+          <NumberOfCopies Text="Fjöldi Afrita" />
+          <NoSelection Text="Engin Vara Valin\nAllar vörur verða Prentaðar" />
+        </Products>
+      </PriceTags>
+    </Products>
+    <Customers Text="Viðskiptavinir &amp; Birgjar">
+      <Search Text="Leta Að Viðskiptarvini &amp; Birgjum" />
+      <LearnMore Text="Læra Meira um Viðskiptavini og Birgja" />
+      <New Text="Nýr VIðskiptavinur / Birgji" />
+      <Delete Text="Eyða">
+        <Confirmation Text="Ertu Viss um að þú viljir Eyða &quot;{0}&quot;?" />
+        <Error Text="Villa Við að Eyða Viðskiptavini. Gat ekki Eytt Viðskiptarvini.\nKerfis Skilaboð: {0}" />
+      </Delete>
+      <Customer>
+        <Edit Text="Breyta &quot;{0}&quot;" />
+        <General Text="Hefðbundnar">
+          <Title Text="Hefðbundnar Upplýsingar" />
+          <Code Text="Kóði" />
+          <Name Text="Nafn" />
+          <Address Text="Heimilisfang" />
+          <PostalCode Text="Póstnúmer" />
+          <City Text="Borg" />
+          <Country Text="Land" />
+          <TaxNumber Text="Kennitala" />
+          <RabatePercent Text="Afsláttur" />
+          <Email Text="Tölvupóstur" />
+          <PhoneNumber Text="Símanúmer" />
+          <IsEnabled Text="Virkur" />
+          <IsCustomer Text="Viðskiptavinur" />
+          <IsSupplier Text="Birgji" />
+        </General>
+        <Loyalty>
+          <Discounts Text="Afsláttur">
+            <Title Text="Gefðu Viðskiptarvini Afslátt á Vöru eða Vöruflokka" />
+            <Info Text="Settu Afslátt fyrir valda Vöru" />
+            <NoItems Text="Enginn Afsláttur" />
+            <Existing Text="Afsláttur Fyrir &quot;{0}&quot; Er Þegar Til." />
+            <Clear Text="Hreinsa Alla Afsætti" />
+          </Discounts>
+          <Cards Text="Vildar Kort">
+            <Title Text="Sláðu Inn Viðskiptavinar Vildarkort" />
+            <CardNumber Text="Korta Númer" />
+            <Add Text="Bæta Við Númer Korts" />
+            <Duplicate Text="Vildar Korts er þegar Til" />
+          </Cards>
+        </Loyalty>
+        <Saved>
+          <Created Text="Ný Viðskiptarvinur Búinn Til." />
+          <Updated Text="Viðskiptarvini Breytt." />
+        </Saved>
+        <Existing Text="Viðskiptavinur Þegar Til">
+          <Warning Text="Svipaður Viðskiptarvinur er þegar til: &quot;{0}&quot;.\nTöfallt Innslegið: {1}.\n\nVilltu Sammt Vista Viðskiptarvin?" />
+        </Existing>
+        <PaymentTerms Text="Greiðslu Skyldur">
+          <DueDatePeriod Text="Gjalddagi Reiknings">
+            <Info Text="Þetta er til að setja hversu margir dagar eiga að líða þanga til að Ógreiddur Reikningur á að verða Greiddur." />
+            <Days Text="Daga" />
+          </DueDatePeriod>
+        </PaymentTerms>
+        <Default>
+          <Warning Text="Þetta er sjálfgefinn viðskiptavinur sem notaður er fyrir alla sölu þar sem viðskiptavini er ekki sérstaklega úthlutað.\n\nVið mælum eindregið með að þú breytir ekki þessum viðskiptavini." />
+        </Default>
+      </Customer>
+      <Guide>
+        <Title Text="Viðskiptavinir og Birgjar" />
+        <Content Text="Smelltu hér til að opna Viðskiptavini og Birgja" />
+        <Add>
+          <Title Text="Bæta við Viðskiptarvini eða Birgja" />
+          <Content Text="Smelltu hér til að Búa TIl Nýjann Viðskiptavin eða Birgja" />
+          <Name>
+            <Title Text="Sláðu Inn Nafn" />
+            <Content Text="Sláðu inn Nafn fyrir Viðskiptarvin eða Birgja" />
+          </Name>
+          <Save>
+            <Title Text="Vista Breytingar" />
+            <Content Text="Þegar þú ert búinn að slá inn Upplýsingar, Smelltu á &quot;Vista&quot; Takkann til að Vista Breytingar" />
+          </Save>
+        </Add>
+      </Guide>
+      <Import Text="Fljytja Inn">
+        <Title Text="Flytja Inn Viðskiptarvin" />
+        <Description Text="Bættu við Nýjum Viðskiptarvinum eða Birgjum með því að Flytja inn með CSV Skrá eða CSV Útflutningi frá öðru Forriti.\nÞú getur lesið þig til um þetta á">
+          <Link Text="Aðstoðinni Okkar" />
+        </Description>
+        <Fields>
+          <Name Text="Nafn" />
+          <Code Text="Kóði" />
+          <TaxNumber Text="VSK Númer" />
+          <Address Text="Heimilisfang" />
+          <ZIP Text="Póstnúmer" />
+          <City Text="Borg" />
+          <Country Text="Land" />
+          <Email Text="Tölvupóstur" />
+          <Phone Text="Sími" />
+          <IsEnabled Text="Virkur" />
+          <IsCustomer Text="Viðskiptavinur" />
+          <Clear Text="Hreinsa" />
+        </Fields>
+        <Import Text="Flytja Inn" />
+        <Preview Text="Prufa">
+          <CustomersCount Text="Fjöldi Viðskiptavina til að Flytja Inn: " />
+        </Preview>
+        <RequiredField Text="Er Skylda" />
+        <Importing Text="Flyt Inn Viðskiptavini... Augna Blik..." />
+        <Error>
+          <RequiredFields Text="Þarft að filla í Skylda Ramma. Reyndu Aftur." />
+          <InvalidContent Text="Villa í CSV Skrá. Athugaðu Skránna og Reyndu Aftur.\nVillu Skilaboð: {0}" />
+          <InvalidField Text="Rangt Innihald á Ramma &quot;{0}&quot;. Athugaðu Innihaldið og Reyndu aftur." />
+          <FileNotSelected Text="CSV Skrá er ekki valin. Veldu Skrá og Reyndu Aftur." />
+          <DuplicateName Text="Tvöfall Nafn VIðskiptarvins. Nafn Viðskiptarvins: &quot;{0}&quot;." />
+        </Error>
+        <Completed Text="Viðskiptavinir Hafa Verið Fluttir Inn!" />
+      </Import>
+      <Export Text="Flytja Út">
+        <Completed Text="Viðskiptavinir Hafa Verið Fluttir 'ut!\nNafn Skráar: &quot;{0}&quot;" />
+      </Export>
+    </Customers>
+    <PaymentTypes Text="Greiðslu Tegund">
+      <LearnMore Text="Lærðu Meira um Greiðslu Tegundir" />
+      <New Text="Ný Greiðslu Tegund" />
+      <Edit Text="Breyta Greiðslu Tegund &quot;{0}&quot;" />
+      <Delete Text="Eyða Greiðslu Tegund">
+        <Confirmation Text="Ertu Viss Um að þú viljir Eyða &quot;{0}&quot;?" />
+        <Error Text="Villa við að Eyða Greiðslu Tegund. Valin Greiðslu Tegund gat ekki verið Eytt.\nKerfis Skilaboð: {0}" />
+        <DataViolation Text="Villa við að Eyða Greiðslu Tegund. Vertu viss um að hún sé ekki til í Skjölum." />
+      </Delete>
+      <PaymentType>
+        <Name Text="Nafn" />
+        <Code Text="Kóði" />
+        <IsCustomerRequired Text="Þarfnast Viðskiptarvins" />
+        <IsFiscal Text="Prenta Kvittun" />
+        <IsChangeAllowed Text="Breytingar Leifðar" />
+        <Ordinal Text="Uppröðun" />
+        <IsEnabled Text="Vikja" />
+        <IsQuickPayment Text="Flýti Greiðsla" />
+        <OpenCashDrawer Text="Opna Peninga Skúffu" />
+        <ShortcutKey Text="Flýti Leiðir" />
+        <MarkAsPaid Text="Merkja Færslu Sem Borgað" />
+        <Saved>
+          <Created Text="Greiðslu Tegund hefur verið Búin Til." />
+          <Updated Text="Greiðslu Tegun hefur verið Breytt." />
+        </Saved>
+        <Error Text="Villa">
+          <ExistingShortcutKey Text="Flýti Leið er þegar Til &quot;{0}&quot;.\nFlýtileið Verður ða vera Sérstök.\n\nReyndu Aðra Flýti Leið.">
+            <Title Text="Tvöföld Flýti Leið" />
+          </ExistingShortcutKey>
+        </Error>
+      </PaymentType>
+      <Onboarding>
+        <Title Text="Greiðslu Tegundir" />
+        <Info Text="Veldu Greiðslu Tegund sem er notið við Sölu í Verslun Þinni." />
+        <AddMore Text="Vista &amp; Bæta Meira Við">
+          <Error Text="Villa við að Bæta VIð Greiðslu Tegund.\nReyndu Aftur" />
+        </AddMore>
+        <Existing Text="Núverandi Greiðslu Tegundi" />
+      </Onboarding>
+    </PaymentTypes>
+    <Documents Text="Skjöl">
+      <View Text="Skoða Skjöl" />
+      <Search Text="Leita Að Skjali">
+        <Customer Text="Viðskiptavinir">
+          <All Text="Allir Viðskiptavinir" />
+        </Customer>
+        <Product Text="Vörur">
+          <All Text="Allar Vörur" />
+        </Product>
+        <Period Text="Tímabil">
+          <Tip Text="Smelltu til að velja Tímabil" />
+        </Period>
+        <DocumentType Text="Tegund Skjals">
+          <All Text="Allar Skjala Tegundir" />
+        </DocumentType>
+        <User Text="Notandi">
+          <All Text="Allir Notendur" />
+        </User>
+        <PaidStatus Text="Staða Greiðslu">
+          <None Text="Allar Greiðslur" />
+          <Paid Text="Borgað" />
+          <Unpaid Text="Ekki Borgað" />
+        </PaidStatus>
+        <DocumentNumber Text="Númer Skjals" />
+        <ReferenceDocumentNumber Text="Ytri Skjal" />
+        <Clear Text="Hreinsa Leitar Skylirði" />
+        <CashRegister Text="Kassa Kerfi">
+          <All Text="Öll Kassa Kerfi" />
+        </CashRegister>
+      </Search>
+      <Document>
+        <Save>
+          <Saved Text="Skjalið Var Vistað" />
+          <Error Text="Villa VIð AÐ Vista Skjal. Breytingar Voru Ekki Vistaðar.\nKerfis Skilaboð: {0}">
+            <InvalidPayments Text="Röng Greiðslu Upphæð">
+              <Info Text="Greiðsla verður að Samræma Greiðslu Skjals. Lagaðu og Reyndu Aftur.\n\nFjöldi Skjala: {0}. Greiðslu Upphæð: {1}." />
+            </InvalidPayments>
+          </Error>
+        </Save>
+        <UnsavedChanges Text="Óvistaðar Breytingar">
+          <Confirmation Text="Skjalið &quot;{0}&quot; inniheldur Óvistaðar Breytingar.\n\nVilltu Vista Skjalið Áður en þú Lokar?" />
+        </UnsavedChanges>
+        <StockDate Text="Veldu Birgja Dagsetningu Breytingar">
+          <Description Text="Veldu Dagsetningu þar sem BirgjiBreytir var Skráður í Skjalið" />
+          <Invalid Text="Rangur Birja Dagsetning">
+            <Description Text="Valin Aðgerð er ekki leifð.\n\nNúverandi birgðatölur fundust í Skjali &quot;{0}&quot; Gert Þann {1}.\n\nAthugaðu Skjala Birgðir og Reyndu AFtur." />
+            <Message Text="Valin Birgðar Dagsetning er ekki Leifð.\nBirgðar Talning {0} Gert Þann {1}" />
+            <InvalidTime Text="Birgji má ekki vera í Frammtíðinni" />
+          </Invalid>
+        </StockDate>
+        <Note Text="Eftirlit" />
+        <InternalNote Text="Innra Eftirlit" />
+        <PaidStatus>
+          <Changed Text="Greiðslu Stöðu Var Breytt" />
+        </PaidStatus>
+        <Items>
+          <CostPrice>
+            <Settings>
+              <AutoUpdate Text="Uppfærðu sjálfkrafa kostnaðarverð við kaup" />
+            </Settings>
+            <Update Text="Uppfæra kostnaðar verð">
+              <Info Text="Atriðakostnaði breytt. Veldu hluti sem þú vilt breyta kostnaðarverði fyrir." />
+              <Confirmation Text="Viltu uppfæra kostnaðarverð fyrir valda hluti?" />
+              <Success Text="Kostnaðar verð var uppfært" />
+            </Update>
+          </CostPrice>
+          <Missing Text="Valin Vara er ekki til." />
+        </Items>
+        <Payments>
+          <AutomaticallyModified Text="Greiðslur og fyrirliggjandi upphæðir eru uppfærðar til að passa við heildargreiðslur" />
+          <MarkPaid Text="Nú eru allar lánagreiðslur greiddar. Viltu merkja skjal sem greitt?">
+            <Title Text="Uppfæra Skjala Stöðu" />
+          </MarkPaid>
+          <Status Text="Staða">
+            <Paid Text="Greitt" />
+            <Unpaid Text="Ó Greitt" />
+          </Status>
+        </Payments>
+      </Document>
+      <New>
+        <SelectDocumentType Text="Veldu Tegund Skjals" />
+      </New>
+      <NoDocument Text="Umbeðið Skjal Er Ekki Til." />
+      <Inventory>
+        <Date Text="Veldu Dagsetningu Birgja">
+          <Description Text="Veldu Dagsetningu sem Birgji var gerður." />
+        </Date>
+        <Document>
+          <Item>
+            <Expected Text="Væntanlegt" />
+            <Counted Text="Talið" />
+            <ChangeQuantity Text="Breyta Magni" />
+          </Item>
+          <ExistingItem Text="Viðeigandi Atriði er þegar Bætt Við í Skjali." />
+          <Service Text="Reynt að bæta þjónustu við Birgðatölu">
+            <Info Text="Valið Atriði &quot;{0}&quot; Er Merkt Sem Þjónusta. Ertu viss um að þú viljir bæta þjónustu við Birgðatölur?" />
+          </Service>
+          <AddGroup Text="Bæta Hóp Birja í Skjal">
+            <Confirmation Text="Ertu viss um að þú viljir bæta öllum Vörum frá &quot;{0}&quot; í Hóp til Vörutalningar?" />
+          </AddGroup>
+        </Document>
+      </Inventory>
+      <Guide>
+        <Title Text="Opin Skjöl" />
+        <Content Text="Smelltu hér til að opna Skjal Möguleikann og bæta við þinni fyrstu Sölu" />
+        <Add>
+          <Title Text="Nýtt Skjal" />
+          <Content Text="Smelltu Hér til að búa til Nýja Sölu eða til að setja Hluti á Sölu" />
+          <Customer>
+            <Title Text="Veldu Viðskiptarvin" />
+            <Content Text="Veldu Viðskiptarvin Fyrir Skjalið" />
+          </Customer>
+          <Supplier>
+            <Title Text="Veldu Birgja" />
+            <Content Text="Veldu Birgja Fyrir Skjalið" />
+          </Supplier>
+          <Product>
+            <Title Text="Veldu Vöru" />
+            <Content Text="Smelltu á Vöru til að bæta við í Skjalið" />
+          </Product>
+          <Item>
+            <Quantity>
+              <Title Text="Sláðu Inn Magn" />
+              <Content Text="Sláðu inn Keypt Magn. Þetta mun verða sett í Birgðir" />
+            </Quantity>
+            <Price>
+              <Title Text="Verð" />
+              <Content Text="Sláðu Inn Verð Á Vöru" />
+            </Price>
+            <Save>
+              <Title Text="Vista Breytingar" />
+              <Content Text="Smelltu Á &quot;Vista&quot; Takkann til að Vista Breytingar og Bæta Vöru við í Skjalið" />
+            </Save>
+          </Item>
+          <Save>
+            <Title Text="Vista Skjal" />
+            <Content Text="Smelltu Á &quot;Vista&quot; Takkann til að Vista Skjalið" />
+          </Save>
+        </Add>
+      </Guide>
+    </Documents>
+    <Countries Text="Lönd">
+      <New Text="Nýtt Land" />
+      <Delete>
+        <Title Text="Eyða Landi" />
+        <Confirmation Text="Ertu Viss um að þú viljir Eyða Landi &quot;{0}&quot;?" />
+      </Delete>
+      <Country>
+        <Edit Text="Breyta Landi &quot;{0}&quot;" />
+        <Name Text="Nafn" />
+        <Code Text="Kóði" />
+        <Saved>
+          <Created Text="Land Var Búið Til" />
+          <Updated Text="Landi Var Breytt" />
+        </Saved>
+      </Country>
+    </Countries>
+    <Company Text="Mitt Fyrirtæki">
+      <LearnMore Text="Lærðu Meira umm Fyrirtæki" />
+      <Details Text="Mitt Fyrirtæki Gögn">
+        <Title Text="Fyrirtækis Gögn" />
+        <Logo Text="Lógó">
+          <Add Text="Sækja" />
+          <Remove Text="Hreinsa" />
+        </Logo>
+        <BankAccount Text="Banka Upplýsingar">
+          <Number Text="Bankanúmer-HB-Reikningur" />
+          <BankDetails Text="Kennitala/Upplýsingar" />
+        </BankAccount>
+      </Details>
+      <Saved Text="Upplýsingar Fyrirtækis Vistaðar" />
+      <Onboarding>
+        <Title Text="Upplýsingar Fyrirtækis" />
+        <Info Text="Sláðu inn Upplýsingar um Fyrirtækið Þitt. Þetta mun Sjást á Kvittunum og Reikningum" />
+      </Onboarding>
+      <Reset Text="Endurstilla Gagnagrunn">
+        <AdminPassword Text="Sláðu inn Stjórnanda Lykilorð" />
+        <Backup>
+          <Info Text="Afrit Gagnagrunns mun fara framm áður en er Endurstillt.\nÞú getur Breytt hvert Afrit Gagnagrunns á að fara hér að neðan." />
+          <Path Text="Staðsetninbg Gagnagrunns">
+            <Select Text="Veldu stað sem Afritið á að fara í áður en allt verður Endurstillt." />
+          </Path>
+          <Completed Text="Gagnagrunns Afritun Lokið" />
+          <Description Text="Staðsetning ar sem Gagnagrunnur Afrit verður Vistað" />
+        </Backup>
+        <PerformReset Text="Endurstilla Gagnagrunn">
+          <Confirmation Text="Ertu Viss um að þú viljir Endurstilla Gagnagrunn og hreinsar þar að leiðandi allt?">
+            <Title Text="Endurstilling Gagnagrunns í Gangi" />
+          </Confirmation>
+          <Error>
+            <NoSelection Text="Veldu að minnst eitt atriði til að endurstilla" />
+          </Error>
+        </PerformReset>
+        <Completed Text="Endurstillingu Lokið. Aronium Mun nú Endurræsa Sig." />
+        <Info Text="Þetta er eyðileggjandi aðgerð. Vinsamlegast vertu viss um að lesa leiðbeiningar áður en þú heldur áfram." />
+        <Selection Text="Veldu aðila til að endurstilla">
+          <Description Text="Valdum aðilum verður eytt úr gagnagrunninum" />
+          <Items>
+            <Documents Text="Skjöl" />
+            <Products Text="Vörur" />
+            <Customers Text="Viðskiptavinir" />
+            <Promotions Text="Tilboð" />
+            <Counters Text="Kassar" />
+            <CashInOut Text="Borgað Inn / Út" />
+            <Taxes Text="Skattar" />
+            <OpenOrders Text="Opnar Pantannir" />
+          </Items>
+        </Selection>
+        <Confirmation Text="Staðfesting">
+          <Description Text="Heimila og framkvæma endurstillingu á völdum aðilum" />
+        </Confirmation>
+      </Reset>
+    </Company>
+    <Guide>
+      <Title Text="Stjórnborð" />
+      <Content Text="Smelltu Hér til að komast í Stjórnborðið" />
+    </Guide>
+    <Authorization>
+      <Title Text="Sláðu inn Lykilorð til að komast í Stjórnboðið" />
+    </Authorization>
+    <NoItems Text="Það er ekkert Stjórnborð tiltækt fyrir Notanda {0}.\nVinsamlegast Innskráðu þig með öðrum Notanda sem hefyr næg réttindi." />
+  </Management>
+</Language>

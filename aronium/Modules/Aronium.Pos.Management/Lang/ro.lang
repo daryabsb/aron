@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ro" name="Romanian">
+  <Management Text="Administrare">
+    <Dashboard Text="Tablou de bord">
+      <NoData Text="Nu sunt date de afisat" />
+      <MonthlySales Text="Vanzari lunare">
+        <Description Text="Datele vanzarilor grupate pe luni" />
+        <Month Text="Luna" />
+        <Legend Text="Legenda" />
+        <CurrentYear Text="Anul curent" />
+        <TotalSales Text="Total vanzari">
+          <TopMonth Text="Cea mai performanta luna:" />
+        </TotalSales>
+        <Year Text="An">
+          <Previous Text="Anul anterior" />
+          <Next Text="Anul urmator" />
+        </Year>
+      </MonthlySales>
+      <HourlySales Text="Vanzari pe ore">
+        <Description Text="Date de vanzari grupate pe ore" />
+        <Hour Text="Ora" />
+        <Options>
+          <Amount Text="Valoare" />
+          <Count Text="Numaratoare" />
+        </Options>
+      </HourlySales>
+      <TopProducts Text="Top produse">
+        <Product Text="Produs" />
+        <Total Text="Total" />
+      </TopProducts>
+      <TopProductGroups Text="Top grupe de produs">
+        <Description Text="Top vanzari pe grupe de produse in perioada selectata" />
+        <Group Text="Grupa de produs" />
+      </TopProductGroups>
+      <TopCustomers Text="Top Clienti">
+        <Description Text="Clientii ce conduc in perioada selectata (Top 5)" />
+      </TopCustomers>
+      <PeriodicReports Text="Rapoarte Periodice">
+        <SelectPeriod Text="Selecteaza perioada pentru raport" />
+      </PeriodicReports>
+    </Dashboard>
+    <Products Text="Produse">
+      <Loading Text="Incarca produsele..." />
+      <LearnMore Text="Invata mai multe despre produse" />
+      <Taxes Text="Procente TVA">
+        <LearnMore Text="Invata mai multe despre procentele TVA" />
+        <New Text="Procent TVA nou" />
+        <Edit>
+          <Title Text="Editeaza TVA &quot;{0}&quot;" />
+        </Edit>
+        <Delete>
+          <Title Text="Sterge procentul TVA" />
+          <Confirmation Text="Esti sigur ca vrei sa stergi procentul TVA &quot;{0}&quot;?" />
+          <Error Text="A aparut o eroare la incercarea de a sterge procentul TVA. Asigura-te ca procentul TVA nu e utilizat si incearca din nou." />
+        </Delete>
+        <Tax>
+          <Code Text="Cod" />
+          <Name Text="Nume" />
+          <Rate Text="Procente" />
+        </Tax>
+        <Onboarding>
+          <Title Text="Valori TVA" />
+          <Info Text="Introdu TVA-ul  folosit pentru definirea produselor, daca exista.\nIn acest caz trebuie sa fie definit cel putin un TVA." />
+          <AddMore Text="Salveaza &amp; adauga mai multe">
+            <Error Text="A aparut o eroare la adaugarea unui nou TVA. Verifica datele si incearca din nou." />
+            <Name Text="Nume taxa (ex. &quot;TVA19&quot;)" />
+          </AddMore>
+          <Existing Text="Taxa existenta">
+            <NoItems Text="Nu e definit nici un TVA. Adauga cel putin un TVA pentru a putea adauga produse noi.">
+              <AddDefault Text="Adauga TVA implicit" />
+            </NoItems>
+          </Existing>
+        </Onboarding>
+      </Taxes>
+      <New Text="Produs nou">
+        <Product Text="Adauga un produs nou" />
+        <Or Text="sau" />
+        <Group Text="grupa de produse noua" />
+      </New>
+      <Delete Text="Sterge produsul" />
+      <Edit Text="Editeaza produsul" />
+      <Search Text="Cauta produse">
+        <Result Text="Rezultat" />
+        <Empty Text="Nici un rezultat" />
+      </Search>
+      <Groups Text="Grupe de produse">
+        <Root Text="Produse" />
+        <Empty Text="Grupul selectat nu contine produse">
+          <Info Text="Adauga produs in grupul selectat" />
+        </Empty>
+      </Groups>
+      <Group>
+        <New Text="Grup nou" />
+        <Edit Text="Editeaza grupul">
+          <Title Text="Editeaza grupul &quot;{0}&quot;" />
+          <Error>
+            <InvalidParentGroup Text="Grup principal invalid" />
+          </Error>
+        </Edit>
+        <Name Text="Nume" />
+        <Color Text="Culoare" />
+        <Delete Text="Sterge grupul">
+          <Title Text="Sterge grupul de produse" />
+          <Confirmation Text="Esti sigur ca vrei sa stergi grupul &quot;{0}&quot;?" />
+          <Error Text="A aparut o eroare la incercarea de a sterge grupul.\nMesaj de sistem: {0}">
+            <DataViolation Text="Grupul selectat nu poate fi sters.\n\nVerifica sa nu existe produse din grup in documente, promotii sau vanzari si incearca din nou." />
+          </Error>
+        </Delete>
+        <Saved Text="Grupul a fost salvat cu succes" />
+      </Group>
+      <Product>
+        <Edit Text="Editeaza produsul &quot;{0}&quot;" />
+        <Details Text="Detaliile produsului" />
+        <Name Text="Nume" />
+        <Code Text="Cod" />
+        <Barcode Text="Cod de bare" />
+        <MeasurementUnit Text="U/M" />
+        <Taxes Text="TVA" />
+        <SalePrice Text="Pret de vanzare" />
+        <IsTaxIncluded Text="Pret cu TVA" />
+        <Group Text="Grupul" />
+        <IsEnabled Text="Activ" />
+        <IsService Text="Serviciu (nu e stocat)" />
+        <IsDiscountAllowed Text="Reducere permisa" />
+        <IsPriceChangeAllowed Text="Modificare de pret permisa" />
+        <IsUsingDefaultQuantity Text="Cantitate implicita" />
+        <Description Text="Descriere" />
+        <Prices Text="Pret &amp; TVA" />
+        <Cost Text="Cost" />
+        <Markup Text="Adaos" />
+        <ImageAndColor Text="Imagine &amp; culoare">
+          <Image Text="Imagine">
+            <Browse Text="Rasfoire">
+              <Info Text="Selecteaza imaginea pentru produs din computer" />
+            </Browse>
+            <Clear Text="Sterge">
+              <Info Text="Sterge imaginea produsului" />
+            </Clear>
+          </Image>
+          <Color Text="Culoare" />
+        </ImageAndColor>
+        <DateCreated Text="Creat" />
+        <DateUpdated Text="Actualizat" />
+        <Saved>
+          <Created Text="Produsul a fost creat cu succes" />
+          <Updated Text="Produsul a fost modificat cu succes" />
+        </Saved>
+        <Delete Text="Stergere produs">
+          <Confirmation Text="Esti sigur ca vrei sa stergi produsul &quot;{0}&quot;?" />
+          <Error Text="A aparut o eroare la stergerea produsului.\nMesaj de Sistem: {0}" />
+          <DataViolation Text="Nu pot sa sterg produsul.\nAsigura-te ca produsul nu exista in documente si incearca din nou." />
+        </Delete>
+        <Error>
+          <Code Text="Produsul cu codul specificat exista (&quot;{0}&quot;).\nIntrodu un cod unic pentru produs si incearca din nou." />
+          <Barcode Text="Produsul cu codul de bare specificat exista (&quot;{0}&quot;.\nIntrodu un cod de bare unic si incearca din nou." />
+        </Error>
+      </Product>
+      <Import Text="Import">
+        <LearnMore Text="Invata mai multe despre CSV import" />
+      </Import>
+      <Export Text="Export">
+        <NoServices Text="Nu e disponibil serviciul de export." />
+        <Success Text="Exportul a fost efectuat cu succes ..." />
+        <Error Text="A aparut o eroare. Te rog incearca din nou." />
+        <Select Text="Selecteaza tipul de export" />
+      </Export>
+      <Onboarding>
+        <Import Text="Importa produse din fisierul CSV">
+          <SelectFile Text="Selecteaza fisierul">
+            <Description Text="Selecteaza fisierul CSV care contine produsele." />
+          </SelectFile>
+          <Validate Text="Valideaza">
+            <Description Text="Valideaza continutul CSV si produsele pentru import." />
+            <Error Text="Eroare la validarea fisierului CSV. Verifica datele si incearca din nou." />
+            <Success Text="Produsele sunt gata pentru import. Numar produse: {0}" />
+          </Validate>
+          <ImportProducts Text="Import">
+            <Description Text="Apasa pentru a importa produsele din fisierul CSV selectat." />
+          </ImportProducts>
+          <NoItems Text="Nimic de importat" />
+          <Completed Text="Importul a fost efectuat cu succes!">
+            <Result>
+              <Created Text="Elemente create:" />
+              <Updated Text="Elemente actualizate:" />
+              <DocumentNumber Text="Documente create:" />
+            </Result>
+            <Restart Text="Restart import" />
+          </Completed>
+          <Importing Text="Se importa produsele ... Te rog asteapta ..." />
+        </Import>
+      </Onboarding>
+      <Count Text="Numar produse:" />
+      <ChangeGroup Text="Produsul &quot;{0}&quot; mutat la&quot;{1}&quot;" />
+      <Guide>
+        <Title Text="Deschide produsele" />
+        <Content Text="Apasa aici pentru a deschide sectiunea cu produse si adauga produsea in magazin." />
+        <Add>
+          <Title Text="Adaugare de produs" />
+          <Content Text="Apasa butonul &quot;Produs nou&quot; pentru a adauga produse" />
+          <Name>
+            <Title Text="Nume produs" />
+            <Content Text="Adauga numele si detaliile produsului folosit pentru vanzare" />
+          </Name>
+          <Prices>
+            <Title Text="Pret produs" />
+            <Content Text="Apasa aici pentru a seta pretul produsului" />
+            <SalePrice>
+              <Title Text="Pret de vanzare" />
+              <Content Text="Seteaza pretul de vanzare al produsului  astfel sa apara in ecranul de vanzare" />
+            </SalePrice>
+          </Prices>
+          <Save>
+            <Title Text="Salveaza modificarile" />
+            <Content Text="Apasa butonul &quot;Salveaza&quot; pentru a salva modificarile si a adauga produs nou" />
+          </Save>
+        </Add>
+      </Guide>
+      <Settings Text="Produse">
+        <Title Text="Setarile produselor" />
+        <PriceIncludesTax Text="Pretul include TVA">
+          <Tooltip Text="Daca e selectat, un produs nou va avea implicit pretul cu TVA inclus " />
+        </PriceIncludesTax>
+        <DefaultTax Text="TVA implicit" />
+        <MarkupOption Text="Adaos la pretul de intrare">
+          <Tooltip Text="Daca e selectat, modificand pretul de achizitie se va modifica adaos-ul, nu pretul de vanzare" />
+        </MarkupOption>
+      </Settings>
+      <Import>
+        <Basic Text="De baza">
+          <Description Text="Poti utiliza importul de baza urmarind ghidul nostru despre cum se creaza fisierul CSV la">
+            <Link Text="centrul nostru pentru suport" />
+            <Formatting Text="Daca utilizezi fisier pregatit CSV, te rog sa citesti ">
+              <Link Text="exemple despre cum se formateaza fisierul CSV" />
+            </Formatting>
+            <Exported Text="Deasemenea poti sa folosesti acest tip de import de baza pentru a importa produse exportate din Aronium folosind functia de export." />
+          </Description>
+        </Basic>
+        <Csv Text="Avansat">
+          <Description Text="Utilizeaza importul avansat pentru a incarca produse folosind fisierul CSV personal sau fisierul CSV exportat din alta aplicatie.">
+            <Link Text="centrul nostru de suport" />
+          </Description>
+          <SelectFile Text="Selecteaza fisierul" />
+          <Fields>
+            <Name Text="Nume" />
+            <ProductGroup Text="Grup de produse" />
+            <SKU Text="Cod de produs" />
+            <Barcode Text="Cod de bare" />
+            <MeasurementUnit Text="U/M" />
+            <Cost Text="Cost" />
+            <Markup Text="Adaos" />
+            <Price Text="Pret" />
+            <Tax Text="TVA" />
+            <IsTaxInclusivePrice Text="Pret cu TVA" />
+            <IsPriceChangeAllowed Text="Modificarea pretului permisa" />
+            <IsUsingDefaultQuantity Text="Utilizarea cantitatii implicite" />
+            <IsService Text="Serviciu (nu este stocat)" />
+            <IsEnabled Text="Activat" />
+            <Description Text="Descriere" />
+            <Quantity Text="Cantitate" />
+            <Clear Text="Sterge valoarea" />
+          </Fields>
+          <RequiredField Text="Indica campurile obligatorii" />
+          <Import Text="Import" />
+          <Preview Text="Previzualizare">
+            <ProductsCount Text="Numarul de produse de importat:" />
+          </Preview>
+          <Error>
+            <RequiredFields Text="Campuri necesare sunt lipsa. Re rog selecteaza toate campurile necesare inainte de import." />
+            <InvalidContent Text="Eroare la analiza fisierului CSV. Te rog verifica continutul si incearca din nou." />
+            <InvalidField Text="Valoare invalida pentru campul &quot;{0}&quot;. Te rog verifica continutul fisierului si incearca din nou." />
+            <FileNotSelected Text="Fisierul CSV nu e selectat. Te rog selecteaza fisierul pentru a continua." />
+            <DuplicateSKU Text="S-a gasit un cod de produs duplicat. Nume produs: &quot;{0}&quot; . Cod duplicat: &quot;{1}&quot;" />
+            <DuplicateName Text="S-a gasit un nume de produs duplicat. Nume de produs: &quot;{0}&quot;." />
+          </Error>
+        </Csv>
+      </Import>
+      <PriceTags Text="Etichete cu pret">
+        <Loading Text="Se incarca macheta cu etichete cu pret ... Te rog asteapta ..." />
+        <Layout Text="Formatul">
+          <Columns Text="Coloane" />
+          <RowHeight Text="Inaltimea randurilor" />
+        </Layout>
+        <Display Text="Afisare">
+          <Barcode Text="Cod de bare">
+            <Type Text="Tipul codului de bare" />
+          </Barcode>
+          <Code Text="Cod (SKU)" />
+        </Display>
+      </PriceTags>
+    </Products>
+    <Customers Text="Clienti &amp; Distribuitori">
+      <Search Text="Cauta clienti &amp; distribuitori" />
+      <New Text="Client / distribuitor nou" />
+      <Delete Text="Sterge">
+        <Confirmation Text="Esti sigur ca vrei sa stergi &quot;{0}&quot;?" />
+        <Error Text="Eroare la stergerea clientului. Clientul nu poate fi sters.\nMesaj de sistem: &quot;{0}&quot;" />
+      </Delete>
+      <Customer>
+        <Edit Text="Editare &quot;{0}&quot;" />
+        <General Text="General">
+          <Title Text="Informatii generale" />
+          <Code Text="Cod" />
+          <Name Text="Nume" />
+          <Address Text="Adresa" />
+          <PostalCode Text="Cod postal" />
+          <City Text="Oras" />
+          <Country Text="Tara" />
+          <TaxNumber Text="Cod fiscal" />
+          <RabatePercent Text="Reducere" />
+          <Email Text="Email" />
+          <PhoneNumber Text="Numar de telefon" />
+          <IsEnabled Text="Activ" />
+          <IsCustomer Text="Client" />
+          <IsSupplier Text="Distribuitor" />
+        </General>
+        <Loyalty>
+          <Discounts Text="Reduceri">
+            <Title Text="Seteaza reducerea de client pentru produse sau grupe de produse" />
+            <Info Text="Seteaza reducerea pentru elementul selectat" />
+            <NoItems Text="Fara reducere" />
+            <Existing Text="Reducerea pentru &quot;{0}&quot; deja exista." />
+            <Clear Text="Sterge toate reducerile" />
+          </Discounts>
+          <Cards Text="Card de loialitate">
+            <Title Text="Introdu cardul de loialitate al clientului" />
+            <CardNumber Text="Numar card" />
+            <Add Text="Adauga cardul" />
+            <Duplicate Text="Cardul de loialitate exista deja" />
+          </Cards>
+        </Loyalty>
+        <Saved>
+          <Created Text="Client nou creat cu succes." />
+          <Updated Text="Clientul a fost modificat cu succes." />
+        </Saved>
+        <Existing Text="Client existent">
+          <Warning Text="Un client identic deja exista: &quot;{0}&quot;.\nCamp duplicat: {1}.\n\nVrei sa salvezi clientul oricum?" />
+        </Existing>
+      </Customer>
+      <Guide>
+        <Title Text="Clienti si distribuitori" />
+        <Content Text="Apasa aici pentru a deschide sectiune de clienti si distribuitori" />
+        <Add>
+          <Title Text="Adauga client sau distribuitor" />
+          <Content Text="Apasa aici pentru a crea un client sau distribuitor nou" />
+          <Name>
+            <Title Text="Introdu numele" />
+            <Content Text="Introdu numele clientului sau distribuitorului" />
+          </Name>
+          <Save>
+            <Title Text="Salveaza modificarile" />
+            <Content Text="Odata ce ai introdus toate detaliile, apasa butonul &quot;salveaza&quot; pentru a salva modificarile" />
+          </Save>
+        </Add>
+      </Guide>
+    </Customers>
+    <PaymentTypes Text="Modalitati de plata">
+      <LearnMore Text="Invata mai multe despre modalitatile de plata" />
+      <New Text="Modalitate noua de plata" />
+      <Edit Text="Modifica modalitatea de plata &quot;{0}&quot;" />
+      <Delete Text="Sterge modalitatea de plata">
+        <Confirmation Text="Esti sigur ca vrei sa stergi &quot;{0}&quot;?" />
+        <Error Text="Eroare la stergerea tipului de plata. Tipul de plata nu poate fi sters.\nMesaj de sistem: {0}" />
+        <DataViolation Text="Nu pot sa sterg tipul de plata. Asigura-te ca modul de plata nu e folosit in documente si incearca din nou." />
+      </Delete>
+      <PaymentType>
+        <Name Text="Nume" />
+        <Code Text="Cod" />
+        <IsCustomerRequired Text="Clientul e necesar" />
+        <IsFiscal Text="Tipareste bonul" />
+        <IsChangeAllowed Text="Modificarea e permisa" />
+        <Ordinal Text="Pozitia" />
+        <IsEnabled Text="Activat" />
+        <IsQuickPayment Text="Plata rapida" />
+        <OpenCashDrawer Text="Deschide sertarul de bani" />
+        <ShortcutKey Text="Tasta acces rapid" />
+        <Saved>
+          <Created Text="Modalitate de plata creata cu succes." />
+          <Updated Text="Modalitate de plata modificata cu succes." />
+        </Saved>
+        <Error Text="Eroare">
+          <ExistingShortcutKey Text="Tasta de acces rapid aleasa e deja alocata modalitatii de plata &quot;{0}&quot;.\nTasta de acces rapid trebuie sa fie unica.\n\nTe rog alege o tasta de acces rapid diferita si incearca din nou.">
+            <Title Text="Tasta de acces rapid duplicata a fost detectata." />
+          </ExistingShortcutKey>
+        </Error>
+        <MarkAsPaid Text="Marcheaza tranzactia ca platita" />
+      </PaymentType>
+      <Onboarding>
+        <Title Text="Modalitate de plata" />
+        <Info Text="Introdu modalitati de plata pentru utilizare in magazin." />
+        <AddMore Text="Salveaza &amp; adauga mai multe">
+          <Error Text="A aparut o eroare la adaugarea unei modalitati de plata noua.\nVerifica ce ai introdus si incearca din nou." />
+        </AddMore>
+        <Existing Text="Moduri de plata existente" />
+      </Onboarding>
+    </PaymentTypes>
+    <Documents Text="Documente">
+      <View Text="Vizualizare documente" />
+      <Search Text="Cautare documente">
+        <Customer Text="Client">
+          <All Text="Toti clientii" />
+        </Customer>
+        <Product Text="Produs">
+          <All Text="Toate produsele" />
+        </Product>
+        <Period Text="Perioada">
+          <Tip Text="Apasa pentru a selecta perioada de cautare" />
+        </Period>
+        <DocumentType Text="Tipul documentului">
+          <All Text="Toate tipurile de documente" />
+        </DocumentType>
+        <User Text="Utilizator">
+          <All Text="Toti utilizatorii" />
+        </User>
+        <DocumentNumber Text="Numarul documentului" />
+        <ReferenceDocumentNumber Text="Document extern" />
+        <Clear Text="Sterge toate filtrele" />
+        <PaidStatus Text="Starea platilor">
+          <None Text="Toate tranzactiile" />
+          <Paid Text="Platit" />
+          <Unpaid Text="Neplatit" />
+        </PaidStatus>
+      </Search>
+      <Document>
+        <Save>
+          <Saved Text="Documentul salvat cu succes" />
+          <Error Text="A aparut o eroare la salvarea documentului. Modificarile nu au fost salvate.\nMesaj de sistem: {0}" />
+        </Save>
+        <UnsavedChanges Text="Modificarile nesalvate">
+          <Confirmation Text="Documentul &quot;{0}&quot; contine modificari nesalvate.\n\nVrei sa salvezi documentul inainte de a fi inchis?" />
+        </UnsavedChanges>
+        <StockDate Text="Selecteaza data de modificare a stocului">
+          <Description Text="Introdu data cand modificarea de stoc a fost inregistrata cu acest document" />
+          <Invalid Text="Data stocului e invalida">
+            <Description Text="Actiunea selectata nu e permisa.\n\nS-a gasit un document de inventar. Documentul &quot;{0}&quot; creat in {1}.\n\nVerifica data documentului  stoc si incearca din nou." />
+            <Message Text="Data stocului selectata nu e permisa.\nDocument inventar {0} creat in {1}" />
+            <InvalidTime Text="Data si ora inventarului nu poate fi in viitor" />
+          </Invalid>
+        </StockDate>
+        <Note Text="Nota" />
+        <InternalNote Text="Nota interna" />
+      </Document>
+      <New>
+        <SelectDocumentType Text="Selecteaza tipul documentului" />
+      </New>
+      <NoDocument Text="Documentul solicitat nu exista." />
+      <Inventory>
+        <Date Text="Selecteaza data inventarului">
+          <Description Text="Introdu data cand lista de inventar a fost creata." />
+        </Date>
+        <Document>
+          <Item>
+            <Expected Text="De asteptat" />
+            <Counted Text="Numarat" />
+            <ChangeQuantity Text="Schimba cantitatea" />
+          </Item>
+          <ExistingItem Text="Elementul selectat e deja adaugat in acest document." />
+          <Service Text="Incercarea de a adauga serviciu in documentul inventar">
+            <Info Text="Elementul selectat &quot;{0}&quot; e marcat ca fiind serviciu. Esti sigur ca vrei sa adaugi un serviciu la documentul inventar?" />
+          </Service>
+          <AddGroup Text="Adauga grupul de elemente la acest document">
+            <Confirmation Text="Esti sigur ca vrei sa adaugi toate produsele din &quot;{0}&quot; grup la documentul inventar?" />
+          </AddGroup>
+        </Document>
+      </Inventory>
+      <Guide>
+        <Title Text="Deschide documente" />
+        <Content Text="Apasa aici pentru a deschide sectiunea documente si adauga prima vanzare" />
+        <Add>
+          <Title Text="Creaza document" />
+          <Content Text="Apasa aici pentru a crea o cumparare noua si adauga elemente in stoc " />
+          <Customer>
+            <Title Text="Selecteaza clientul" />
+            <Content Text="Selecteaza un client pentru acest document" />
+          </Customer>
+          <Supplier>
+            <Title Text="Selecteaza distribuitorul" />
+            <Content Text="Selecteaza distribuitorul pentru acest document" />
+          </Supplier>
+          <Product>
+            <Title Text="Selecteaza produsul" />
+            <Content Text="Apasa dublu-clic pe produsul pe care vrei sa-l adaugi in document" />
+          </Product>
+          <Item>
+            <Quantity>
+              <Title Text="Introdu cantitatea" />
+              <Content Text="Introdu cantitatea cumparata. Aceasta cantitate va fi adaugata in stoc." />
+            </Quantity>
+            <Price>
+              <Title Text="Pret" />
+              <Content Text="Introdu pretul elementului" />
+            </Price>
+            <Save>
+              <Title Text="Salveaza modificarile" />
+              <Content Text="Apasa butonul &quot;Salveaza&quot; pentru a salva modificarile si a adauga acest element in document" />
+            </Save>
+          </Item>
+          <Save>
+            <Title Text="Salveaza documentul" />
+            <Content Text="Apasa butonul &quot;Salveaza&quot; pentru a salva documentul" />
+          </Save>
+        </Add>
+      </Guide>
+    </Documents>
+    <Countries Text="Tari">
+      <New Text="Tara noua" />
+      <Delete>
+        <Title Text="Sterge tara" />
+        <Confirmation Text="Esti sigur ca vrei sa stergi tara &quot;{0}&quot;?" />
+      </Delete>
+      <Country>
+        <Edit Text="Editeaza Tara &quot;{0}&quot;" />
+        <Name Text="Nume" />
+        <Code Text="Cod" />
+        <Saved>
+          <Created Text="Tara a fost creata cu succes" />
+          <Updated Text="Tara a fost editata cu succes" />
+        </Saved>
+      </Country>
+    </Countries>
+    <Company Text="Compania mea">
+      <LearnMore Text="Invata mai multe despre detaliile companiei" />
+      <Details Text="Datele companiei mele">
+        <Title Text="Datele companiei" />
+        <Logo Text="Logo">
+          <Add Text="Rasfoire" />
+          <Remove Text="Sterge" />
+        </Logo>
+      </Details>
+      <Saved Text="Datele companiei au fost salvate cu succes" />
+      <Onboarding>
+        <Title Text="Detaliile companiei" />
+        <Info Text="Introdu detaliile companiei tale. Detaliile companiei sunt utilizate pentru bonuri si facturi" />
+      </Onboarding>
+      <Reset Text="Resetarea bazei de date">
+        <AdminPassword Text="Introdu parola de administrator" />
+        <Backup>
+          <Info Text="Inainte de resetarea bazei de date trebuie sa faci o salvare de siguranta.\nPoti sa schimbi locul de salvare utilizand campul de mai jos." />
+          <Path Text="Calea salvarii de siguranta a bazei de date">
+            <Select Text="Selecteaza locul unde va fi salvata baza de date inainte de resetarea acesteia." />
+          </Path>
+          <Completed Text="Salvarea de siguranta a bazei de date a fost realizata." />
+        </Backup>
+        <PerformReset Text="Resetarea bazei de date">
+          <Confirmation Text="Esti sigur ca vrei sa resetezi baza de date  si sa stergi toate datele ???">
+            <Title Text="Resetarea bazei de date este in curs ..." />
+          </Confirmation>
+        </PerformReset>
+        <Completed Text="Resetarea bazei de date a fost realizate cu succes. Aronium va reporni." />
+      </Reset>
+    </Company>
+    <Guide>
+      <Title Text="Administrare" />
+      <Content Text="Apasa aici pentru a deschide sectiunea de administrare si a adauga produse si clienti" />
+    </Guide>
+    <Authorization>
+      <Title Text="Te rog introdu parola pentru a accesa sectiunea de administrare" />
+    </Authorization>
+  </Management>
+</Language>

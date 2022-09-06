@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="is" name="Icelandic">
+  <CustomerDisplay>
+    <Total Text="Samtalls:" />
+    <Change Text="Til Baka:" />
+    <Paid Text="Peningar:" />
+    <WelcomeMessage Text="VELKOMIN!" />
+    <Settings Text="Skjár Viðskiptavina">
+      <Enabled Text="Vikja" />
+      <Port Text="COM port">
+        <Settings>
+          <BaudRate Text="Bætar á sekúndu" />
+          <DataBits Text="Gögn á Sekúndu" />
+          <StopBits Text="Stop bætar" />
+          <Parity Text="Jafnrétti" />
+          <FlowControl Text="Renni stjórnun" />
+          <Show Text="Sýna porta stillingar" />
+          <Hide Text="Fela porta stillingar" />
+          <ResetToDefaults Text="Fara aftur í uprunnalegt" />
+        </Settings>
+      </Port>
+      <CharactersPerLine Text="Stafa Fjöldi" />
+      <WelcomeMessage Text="Velkomin Skilaboð">
+        <TopLine Text="Efrsta Lína" />
+        <BottomLine Text="Neðsta Lína" />
+      </WelcomeMessage>
+      <Test Text="Prufa Skjá" />
+    </Settings>
+    <Error>
+      <InvalidPortSettings Text="Villa við að frumstilla Skjár Viðskiptavina.\nAthugaðu hafnarstillingar." />
+    </Error>
+  </CustomerDisplay>
+</Language>

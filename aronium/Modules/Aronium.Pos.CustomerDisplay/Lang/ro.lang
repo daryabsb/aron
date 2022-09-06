@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <CustomerDisplay>
+    <Total Text="TOTAL:" />
+    <WelcomeMessage Text="BINE ATI VENIT!" />
+    <Settings Text="Afisaj client">
+      <Enabled Text="Activat" />
+      <Port Text="portul COM" />
+      <CharactersPerLine Text="Numar de caractere" />
+      <WelcomeMessage Text="Mesaj de bun venit">
+        <TopLine Text="Linia de sus" />
+        <BottomLine Text="Linia de jos" />
+      </WelcomeMessage>
+      <Test Text="Testare afisaj" />
+    </Settings>
+  </CustomerDisplay>
+</Language>

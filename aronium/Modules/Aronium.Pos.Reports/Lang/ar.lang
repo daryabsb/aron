@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language code="ar" name="Arabic">
+  <Reports Text="التقارير">
+    <Purchase Text="المشتريات">
+      <Unpaid Text="مشتريات غير مدفوعة" />
+      <Products Text="الاصناف" />
+      <Suppliers Text="الموردين" />
+    </Purchase>
+    <Sales Text="المبیعات">
+      <StartingCash Text="الخزينة" />
+      <Unpaid Text="مبيعات غير مدفوعة" />
+      <Daily Text="المبيعات اليومية" />
+      <Profit Text="هامش الربح" />
+      <InvoiceList Text="فواتير العملاء" />
+      <Refunds Text="المسترجعات" />
+      <Users Text="المستخدمين" />
+      <Customers Text="العملاء" />
+      <TaxRates Text="الضرائب" />
+      <PaymentTypesCustomers Text="أنواع الدفع من قبل العملاء" />
+      <PaymentTypesUsers Text="أنواع الدفع من قبل المستخدمین" />
+      <PaymentTypes Text="أنواع الدفع" />
+      <ProductGroups Text="التصنيفات الرئيسية" />
+      <Products Text="الاصناف" />
+    </Sales>
+    <Report>
+      <NotFound Text="تقرير قالب مفقود۔" />
+      <Show Text="عرض" />
+      <Select Text="التقارير">
+        <Title Text="حدد التقرير للعرض أو الطباعة" />
+      </Select>
+    </Report>
+    <Filter Text="تصفية">
+      <NotAvailable Text="لا ينطبق على التقرير المحدد" />
+      <Period>
+        <Tip Text="اضغط هنا لتغيير فترة التقرير" />
+      </Period>
+      <Product Text="الاصناف">
+        <All Text="جميع الاصناف" />
+      </Product>
+      <Customer Text="العملاء والموردين">
+        <All Text="جميع العملاء والموردين" />
+      </Customer>
+      <User Text="المستخدمين">
+        <All Text="جميع المستخدمین" />
+      </User>
+    </Filter>
+  </Reports>
+</Language>

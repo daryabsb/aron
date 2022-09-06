@@ -6,9 +6,9 @@ from django.contrib.auth.models import PermissionsMixin
 
 
 from .modules import (
-    calculateAge, 
+    calculateAge,
     # save_pdf_pages_attachment,
-    profile_image_file_path, 
+    upload_image_file_path,
     # pdf_page_count
 )
 # Create your models here.
@@ -43,7 +43,7 @@ class User(PermissionsMixin, AbstractBaseUser):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     image = models.ImageField(null=True, blank=True,
-                              upload_to=profile_image_file_path)
+                              upload_to=upload_image_file_path)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
@@ -54,16 +54,19 @@ class User(PermissionsMixin, AbstractBaseUser):
 
     USERNAME_FIELD = 'email'
 
+
 class ProductGroup(models.Model):
     name = models.CharField(max_length=100)
-    parent_group = models.ForeignKey("self", null=True, blank=True, on_delete=models.SET_NULL)
+    parent_group = models.ForeignKey(
+        "self", null=True, blank=True, on_delete=models.SET_NULL)
     color = models.CharField(max_length=50, default='Transparent')
     image = models.ImageField(null=True, blank=True,
-                              upload_to=profile_image_file_path)
+                              upload_to=upload_image_file_path)
     rank = models.SmallIntegerField(default=0)
 
     def __str__(self):
         return self.name
+
 
 '''
 [Id] INT IDENTITY ( 1, 1 )  NOT NULL, 
@@ -74,18 +77,21 @@ class ProductGroup(models.Model):
 	[Rank] INT DEFAULT '((0))' NOT NULL,
 	PRIMARY KEY ( [Id] ) )
 '''
-    
+
 
 class Product(models.Model):
     name = models.CharField(max_length=100)
     product_group = models.ForeignKey('ProductGroup', on_delete=models.CASCADE)
-    code = models.CharField(max_length=100, null=True,blank=True)
-    description = models.CharField(max_length=300, null=True,blank=True)
-    plu = models.IntegerField(null=True,blank=True)
-    measurement_unit = models.CharField(max_length=10, null=True,blank=True)
+    code = models.CharField(max_length=100, null=True, blank=True)
+    description = models.CharField(max_length=300, null=True, blank=True)
+    plu = models.IntegerField(null=True, blank=True)
+    measurement_unit = models.CharField(max_length=10, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True,
+                              upload_to=upload_image_file_path)
 
     def __str__(self):
         return self.name
+
 
 '''
     [Name] NVARCHAR( 100 ) NOT NULL, 

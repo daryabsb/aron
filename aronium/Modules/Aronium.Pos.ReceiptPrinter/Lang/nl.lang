@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language name="English" code="en">
+  <ReceiptPrinter Text="Bonprinter">
+    <PrintReceipt Text="Print bon" />
+    <Receipt>
+      <PrinterNotFound Text="Bonprinter is niet geselecteerd of uitgeschakeld. Controleer de printerinstellingen en probeer het opnieuw." />
+      <PaymentTypes>
+        <PrintDisabled Text="Ontvangstbewijs is uitgeschakeld voor geselecteerde betaalwijzen.\nSchakel ontvangst van afdrukken voor geselecteerde betalingssoorten in voordat u een bon afdrukt." />
+      </PaymentTypes>
+      <Company>
+        <TaxNumber Text="BTW Nr." />
+      </Company>
+      <Customer Text="Klant">
+        <Address Text="Adres" />
+        <TaxNumber Text="BTW Nr." />
+        <Code Text="Code" />
+        <PhoneNumber Text="Telefoonnr" />
+        <Email Text="Email" />
+      </Customer>
+      <Number Text="Ticket nr." />
+      <RefundNumber Text="Terugbetaling nr." />
+      <OrderNumber Text="Bestelnr." />
+      <ItemsCount Text="Aantal items" />
+      <Subtotal Text="Subtotaal" />
+      <Tax Text="BTW" />
+      <Discount Text="Winkelwagen korting" />
+      <Total Text="TOTAAL" />
+      <PaidAmount Text="Betaald bedrag" />
+      <AmountDue Text="Te betalen bedrag" />
+      <DueDate Text="Vervaldatum" />
+      <User Text="Gebruiker" />
+      <Change Text="Terug" />
+      <Customize Text="Ontvangst aanpassen">
+        <UseSystemCurrency Text="Gebruik de systeem valuta notatie">
+          <Info Text="Uw valuta is ingesteld op &quot;{0}&quot;. Gebruik het Windows Configuratiescherm om uw muntinstelliingen te wijzigen.">
+            <OpenRegionalSettings Text="Open locale instellingen" />
+          </Info>
+        </UseSystemCurrency>
+        <NumberOfDecimalPlaces Text="Cijfers na de komma" />
+        <PrintTaxes Text="BTW-totalen afdrukken" />
+        <PrintItemsCount Text="Aantal items afdrukken">
+          <PrintItemsQuantity Text="Totaal aantal items afdrukken" />
+        </PrintItemsCount>
+        <ShortReceiptNumber Text="Kort ticketnummer" />
+        <Counter Text="Bon teller">
+          <Edit Text="Klik om de ticketnummer teller te bewerken" />
+        </Counter>
+        <Localize Text="Lokaliseer ticket tekst">
+          <Company>
+            <TaxNumber Text="BTW nummer bedrijf" />
+          </Company>
+          <Customer Text="Klant">
+            <Address Text="Klant adres" />
+            <TaxNumber Text="BTW nummer van de klant" />
+            <Code Text="Code" />
+            <PhoneNumber Text="Telefoonnummer" />
+            <Email Text="Email" />
+          </Customer>
+          <ReceiptNumber Text="Ticket nummer" />
+          <RefundNumber Text="Teruggave nummer" />
+          <OrderNumber Text="Bestellingsnummer" />
+          <ItemsCount Text="Aantal Artikelen" />
+          <Discount Text="Korting" />
+          <Subtotal Text="Subtotaal" />
+          <Tax Text="BTW tarief" />
+          <Total Text="Totaal" />
+          <PaidAmount Text="Betaald bedrag" />
+          <AmountDue Text="Te betalen bedrag" />
+          <DueDate Text="Vervaldatum" />
+          <User Text="Gebruiker" />
+          <Change Text="Wisselgeld" />
+          <Info Text="Gebruik dit formulier om de afgedrukt labels op tickets aan te passen." />
+          <CustomerDetails Text="Klantdetails">
+            <Info Text="Bepaal hoe de klantendetails worden afgedrukt op het ticket.  Indien u sommige labels niet wenst af te drukken, deselecteer dan de optie(s) hieronder.\nDeze sectie slaat enkel op de de labels zelf, niet op de eigenlijke klantdetails welke op het ticket worden afgedrukt." />
+          </CustomerDetails>
+        </Localize>
+        <PrintMeasurementUnit Text="Maateenheid afdrukken" />
+        <PrintOrderNumber Text="Ordernummer afdrukken" />
+        <PrintTaxName Text="BTW omschrijving afdrukken" />
+        <CustomerDetails Text="Klantdetails">
+          <Info Text="Selecteer welke klantgegevens moeten afgedrukt worden op het ticket" />
+          <Name Text="Naam" />
+          <Code Text="Code" />
+          <TaxNumber Text="BTWnummer" />
+          <Address Text="Adres" />
+          <PhoneNumber Text="Telefoonnummer" />
+          <Email Text="Email" />
+        </CustomerDetails>
+      </Customize>
+    </Receipt>
+    <DailyReport>
+      <ZReport Text="Z RAPPORT" />
+      <XReport Text="X RAPPORT" />
+      <Date Text="Datum:" />
+      <Time Text="Tijd:" />
+      <ReportNumber Text="Rapport #:" />
+      <FromDocument Text="Van document:" />
+      <ToDocument Text="Naar document:" />
+      <CashIn Text="Cash In:" />
+      <CashOut Text="Cash Uit:" />
+      <UserSales Text="Verkoop gebruikers:" />
+      <PaymentTypes Text="Betaalwijzen:">
+        <Total Text="Totaal ontvangsten:" />
+      </PaymentTypes>
+      <Refunds Text="Teruggaven:">
+        <Total Text="Totaal terugbetalingen:" />
+      </Refunds>
+      <TaxCollected Text="BTW bedrag:" />
+      <TaxableTotal Text="Totaal (ex BTW):" />
+      <Tax Text="BTW bedrag:" />
+      <Total Text="Totaal:" />
+      <TotalBalance Text="Eindbalans:" />
+      <Items Text="ITEMS RAPPORT">
+        <ReportNumber Text="Rapport #:" />
+        <Products Text="PRODUCTEN" />
+        <Groups Text="PRODUCTGROEPEN" />
+        <Count Text="Aantal items" />
+      </Items>
+      <CashRegister Text="POS #:" />
+      <DiscountsGranted Text="Toegestane kortingen:" />
+    </DailyReport>
+    <CashDrawer Text="Kassalade">
+      <OpenCashDrawer Text="Open de geldlade">
+        <AuthorizationRequired Text="Open kassa-lade vereist autorisatie.\nVoer het wachtwoord in dat vereist is om de kassa-lade te openen." />
+      </OpenCashDrawer>
+      <Command Text="Opdracht geldlade">
+        <LearnMore Text="Wat is dit?" />
+      </Command>
+      <Error>
+        <CommandNotSet Text="Opdracht van geldlade niet ingesteld.\nStel de opdracht kassalade in om door te gaan." />
+        <PrinterNotSet Text="Bonprinter niet ingesteld.\nConfigureer de bonprinter om door te gaan." />
+      </Error>
+      <Test Text="Test kassalade">
+        <InvalidCommand Text="Gelieve een geldig kassacommando in te geven om te testen." />
+      </Test>
+    </CashDrawer>
+  </ReceiptPrinter>
+  <FiscalPrinter>
+    <Check Text="Bon-printer laden ...">
+      <Status Text="Printer status check" />
+    </Check>
+    <CloseFiscalDay Text="Sluitingsrapporten afdrukken">
+      <Info Text="Selecteer rapporten om af te drukken. Zorg ervoor dat uw printer beschikbaar en operationeel is." />
+      <DailyReport Text="Z-rapport afdrukken">
+        <InProgress Text="Z-rapport afdrukken ... Even geduld ..." />
+      </DailyReport>
+      <SubReport Text="X-rapport afdrukken">
+        <InProgress Text="X-rapport afdrukken ... Een ogenblik geduld ..." />
+      </SubReport>
+      <ItemsReport Text="Print items rapport">
+        <InProgress Text="Rapport afdrukken artikelen ... Even geduld ..." />
+      </ItemsReport>
+      <PrinterDisabled Text="Printer is uitgeschakeld of niet geselecteerd. Rapporten worden mogelijk niet afgedrukt." />
+    </CloseFiscalDay>
+  </FiscalPrinter>
+</Language>

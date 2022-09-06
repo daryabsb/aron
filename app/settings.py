@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-@5%vpf-fymosehko))db&xc093+l=*riqxm_0zq+ric+(cuoz!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = ['*']
 
 
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
 
     'core',
 ]
+
 
 AUTH_USER_MODEL = 'core.User'
 
@@ -122,7 +124,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+LOGIN_URL = '/login'
+LOGIN_REDIRECT_URL = "/"
+
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+
+]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+# STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

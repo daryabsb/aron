@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="es" name="Español">
+  <CustomerDisplay>
+    <Total Text="Total:" />
+    <Change Text="Cambio:" />
+    <Paid Text="Pagado:" />
+    <WelcomeMessage Text="¡BIENVENIDO!" />
+    <Settings Text="Visor cliente">
+      <Enabled Text="Activado" />
+      <Port Text="Puerto COM">
+        <Settings>
+          <BaudRate Text="Bits por segundo" />
+          <DataBits Text="Bits de datos" />
+          <StopBits Text="Bits de parada" />
+          <Parity Text="Paridad" />
+          <FlowControl Text="Control de flujo" />
+          <Show Text="Mostrar la configuración del puerto" />
+          <Hide Text="Ocultar la configuración del puerto" />
+          <ResetToDefaults Text="Restore defaults" />
+        </Settings>
+      </Port>
+      <CharactersPerLine Text="Número de caracteres" />
+      <WelcomeMessage Text="Mensage de bienvenida">
+        <TopLine Text="Línea de arriba" />
+        <BottomLine Text="Línea de abajo" />
+      </WelcomeMessage>
+      <Test Text="Vista de test" />
+    </Settings>
+    <Error>
+      <InvalidPortSettings Text="Error al inicializar la pantalla del cliente.\nCompruebe la configuración del puerto." />
+    </Error>
+  </CustomerDisplay>
+</Language>

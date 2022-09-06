@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <MovingAveragePrice>
+    <Recalculate Text="Libisev keskmine hind">
+      <Title Text="Libisev keskmine hind" />
+      <Info Text="Valige tooted või tooterühmad, mille libisevat keskmist hinda soovite ümber arvutada. Arvutatakse libisev keskmine hind ja uuendatakse kõik dokumendid valitud perioodil.&#xA;See toiming võib võtta veidi aega, olenevalt toodete arvust ja valitud ajavahemikust." />
+      <Selection>
+        <ProductGroups Text="Tooterühmad" />
+        <Products Text="Tooted" />
+        <NoItems Text="Ühtegi toodet pole valitud" />
+      </Selection>
+      <SelectedPeriod Text="Valitud periood" />
+      <PeriodStart Text="Perioodi algus" />
+      <PeriodEnd Text="Perioodi lõpp" />
+      <Start Text="Alusta" />
+      <Stop Text="Lõpeta" />
+      <Product Text="Toode: {0}" />
+      <OverallProgress Text="Üldine edenemine" />
+      <Complete Text="Libisev keskmine hind edukalt ümber arvutatud." />
+      <Disabled Text="Libisev keskmine hind on keelatud. Lubage libisev keskmine hind, et alustada omahindade automaatset jälgimist.">
+        <Enable Text="Libiseva keskmise hinna lubamiseks klõpsake siin" />
+      </Disabled>
+    </Recalculate>
+    <Settings>
+      <Title Text="Libisev keskmine hind" />
+      <Enabled Text="Luba libisev keskmine hind" />
+    </Settings>
+  </MovingAveragePrice>
+</Language>

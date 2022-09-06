@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="tr" name="Türkçe">
+  <Users Text="Kullanıcılar ve Güvenlik">
+    <View Text="Kullanıcılar">
+      <Disabled Text="Etkin olmayan kullanıcıları göster"></Disabled>
+    </View>
+    <New Text="Kullanıcı ekle"></New>
+    <ResetPassword Text="Şifreyi sıfırla">
+      <Success Text="Şifre başarıyla değiştirildi"></Success>
+    </ResetPassword>
+    <LearnMore Text="Kullanıcı yönetimi hakkında daha fazla bilgi"></LearnMore>
+    <User>
+      <FirstName Text="Ad"></FirstName>
+      <LastName Text="Soyadı"></LastName>
+      <Email Text="Email"></Email>
+      <Password Text="Şifre"></Password>
+      <PasswordConfirmation Text="Şifreyi onayla"></PasswordConfirmation>
+      <AccessLevel Text="Erişim seviyesi"></AccessLevel>
+      <IsEnabled Text="Aktif"></IsEnabled>
+      <Error>
+        <PasswordConfirmationMatch Text="Şifre ve şifre onayı eşleşmelidir."></PasswordConfirmationMatch>
+        <InvalidPassword Text="Aynı şifreye sahip kullanıcı zaten mevcut. \nLütfen benzersiz bir şifre girin ve tekrar deneyin."></InvalidPassword>
+        <Disable>
+          <OpenOrders Text="Kullanıcıyı devre dışı bırakmak, açık satışları kapatmasını engelleyecektir.\nLütfen bu kullanıcı tarafından sahip olunan tüm açık siparişleri kapatmadan önce kapatın.">
+            <Title Text="Açık satışlı kullanıcı devre dışı bırakılamaz"></Title>
+          </OpenOrders>
+        </Disable>
+        <DuplicateEmail Text="Bu e-posta zaten alınmış.\nLütfen farklı e-posta adresi kullanın."></DuplicateEmail>
+      </Error>
+      <Saved Text="Kullanıcı detayları başarıyla değiştirildi."></Saved>
+    </User>
+    <Delete Text="Kullanıcıyı sil">
+      <Confirmation Text="&quot;{0}&quot; ifadesini silmek istediğinizden emin misiniz?"></Confirmation>
+      <Error>
+        <CurrentUser Text="Kendini silemezsin!"></CurrentUser>
+        <DataViolation Text="Kullanıcı silinemiyor.\nKullanıcı belgeleri veya diğer ilgili öğeleri içerir."></DataViolation>
+      </Error>
+    </Delete>
+    <Security Text="Güvenlik">
+      <Title Text="Önceden tanımlanmış isimler için erişim seviyesi ayarla"></Title>
+      <Description Text="Gerekli kullanıcı izinlerini ayarlamak için her eylem için erişim seviyesini seçin."></Description>
+      <LearnMore Text="Erişim seviyeleri ve güvenlik hakkında daha fazla bilgi edinin"></LearnMore>
+      <MaximumAccessLevelWarning Text="Herhangi bir kullanıcıya atanan en yüksek değerin üzerinde ayarlanan erişim seviyesi."></MaximumAccessLevelWarning>
+      <Save>
+        <Success Text="Güvenlik seviyeleri başarıyla kaydedildi"></Success>
+        <AccessLevelViolation Text="Erişim seviyesi ihlali">
+          <Info Text="Erişim seviyeleri herhangi bir kullanıcıya atanan maksimum değere ayarlanabilir. Aksi halde, kısıtlı bölüme erişemeyebilirsiniz.\nLütfen öğeleri yanlışlıkla ayarlayın ve tekrar deneyiniz."></Info>
+        </AccessLevelViolation>
+      </Save>
+      <Group>
+        <General Text="Genel"></General>
+        <Sales Text="Satışlar"></Sales>
+      </Group>
+    </Security>
+  </Users>
+</Language>

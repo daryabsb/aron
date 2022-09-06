@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ru" name="Russian">
+  <Reports Text="Отчеты">
+    <Filter Text="Фильтер">
+      <User Text="Пользователь">
+        <All Text="Все пользователи" />
+      </User>
+      <Customer Text="Клиенты и поставщики">
+        <All Text="Все клиенты и поставщики" />
+      </Customer>
+      <Product Text="Товар">
+        <All Text="Все товары" />
+      </Product>
+      <CashRegister Text="Касса">
+        <All Text="Все кассы" />
+      </CashRegister>
+      <Period>
+        <Tip Text="Нажмите для смены периода отчетов" />
+      </Period>
+      <NotAvailable Text="Не применимо для выбранного отчета" />
+    </Filter>
+    <Report>
+      <Select Text="Выберите отчет">
+        <Title Text="Выберите отчет для просмотра или печати" />
+      </Select>
+      <Show Text="Показать отчет" />
+      <NotFound Text="Шаблон отчета отсутствует." />
+    </Report>
+    <Sales Text="Продажи">
+      <Products Text="Товары" />
+      <ProductGroups Text="Группы товаров" />
+      <PaymentTypes Text="Типы оплаты" />
+      <PaymentTypesUsers Text="Типы оплаты по пользователям" />
+      <PaymentTypesCustomers Text="Типы оплаты по клиентам" />
+      <TaxRates Text="Налоговые ставки" />
+      <Customers Text="Клиенты" />
+      <Users Text="Пользователи" />
+      <Refunds Text="Возвраты" />
+      <InvoiceList Text="Список счетов" />
+      <Profit Text="Рентабельность" />
+      <Daily Text="Дневные продажи" />
+      <Unpaid Text="Неоплаченые заказы" />
+      <StartingCash Text="Внесение/изъятие при старте" />
+      <Discounts Text="Скидки" />
+      <ItemDiscounts Text="Скидки на товары" />
+      <StockMovement Text="Изменения складского запаса" />
+    </Sales>
+    <Purchase Text="Закупки">
+      <Suppliers Text="Поставщики" />
+      <Products Text="Товары" />
+      <Unpaid Text="Неоплаченные закупки" />
+      <Discounts Text="Скидки на закупки" />
+      <ItemDiscounts Text="Скидка на закупленные товары" />
+      <PurchaseInvoiceList Text="Список счетов закупки" />
+    </Purchase>
+    <LossAndDamage Text="Потери и повреждения">
+      <Products Text="Товары" />
+    </LossAndDamage>
+  </Reports>
+</Language>

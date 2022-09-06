@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="is" name="Icelandic">
+  <Users Text="Notendur &amp; Öryggi">
+    <View Text="Notendur">
+      <Disabled Text="Sýna Óvirka Notendur" />
+    </View>
+    <New Text="Nýr Notandi" />
+    <ResetPassword Text="Breyta Lykilorði">
+      <Success Text="Lykilorði Var Breytt" />
+    </ResetPassword>
+    <LearnMore Text="Læra Meira um Notanda Stjórnun" />
+    <User>
+      <FirstName Text="Fyrra Nafn" />
+      <LastName Text="Seinna Nafn" />
+      <Email Text="Tölvupóstur" />
+      <Password Text="Lykilorð" />
+      <PasswordConfirmation Text="Staðfesta Lykilorð" />
+      <AccessLevel Text="Aðgangs Heimild" />
+      <IsEnabled Text="Virkur" />
+      <Error>
+        <PasswordConfirmationMatch Text="Lykilorð og Staðfesta Lykilorð Verða að Passa." />
+        <InvalidPassword Text="Notandi með Þessu Lykilorði er þegar til.\nVinsamlegast Reyndu annað Lykilorð." />
+        <Disable>
+          <OpenOrders Text="Að Óvirkja Notanda kemur í veg fyrir að hann geti Læst Opnum Sölum.\nLokaðu eða hættu við allar sölur á þessum notanda og Reyndu Aftur.">
+            <Title Text="Næ ekki að Óvirkja Notanda Með Opnar Sölur" />
+          </OpenOrders>
+        </Disable>
+        <DuplicateEmail Text="Þessi Tölvupóstur er í Notkun.\nReyndu Annan Tölvupóst." />
+      </Error>
+      <Saved Text="Upplýsingum Um Notanda Var BReytt." />
+    </User>
+    <Delete Text="Eyða Notanda">
+      <Confirmation Text="Ertu Viss um að þú viljir Eyða Notanda &quot;{0}&quot;?" />
+      <Error>
+        <CurrentUser Text="Þú getur ekki eytt Sjálfum Þér!" />
+        <DataViolation Text="Næ ekki að Eyða Notanda.\nNotandi Inniheldur Skjöl eða önnur gögn." />
+      </Error>
+    </Delete>
+    <Security Text="Öryggi">
+      <Title Text="Settu Aðgang Heimild fyrir Hverja Aðgerð" />
+      <Description Text="Að setja upp Aðgangs Heimild gerir þér kleift að Stjórna í Hvað Notendur Þínir komast í án leifis." />
+      <LearnMore Text="Læra Meira Um Aðgangs Heimild og Öryggi" />
+      <MaximumAccessLevelWarning Text="Aðgang Heimild sett yfir hæsta gildi til Úthlutaðra Notanda." />
+      <Save>
+        <Success Text="Öryggis Heimild Var Vistuð" />
+        <AccessLevelViolation Text="Brot Á Aðgangs Heimild">
+          <Info Text="Þú getur ekki sett Hærri Aðgangs Heimild en Notandi er með. Annars geturðu ekki valið neitt sjálfur.\nReyndu Aftur." />
+        </AccessLevelViolation>
+      </Save>
+      <Group>
+        <General Text="Almennt" />
+        <Sales Text="Sala" />
+      </Group>
+    </Security>
+  </Users>
+</Language>

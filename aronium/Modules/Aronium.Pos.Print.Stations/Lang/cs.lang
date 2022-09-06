@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Print>
+    <Stations Text="Tiskárny">
+      <New Text="Přidat tiskárnu" />
+      <Edit Text="Upravit tiskárnu" />
+      <NoItems Text="Žádná tiskárna">
+        <Add Text="Přidat tiskárnu" />
+      </NoItems>
+      <PrintStation>
+        <Id Text="ID" />
+        <Name Text="Název" />
+      </PrintStation>
+      <Delete>
+        <Title Text="Odstranit tiskárnu" />
+        <Confirmation Text="Opravdu si přeješ odstranit &quot;{0}&quot;?" />
+      </Delete>
+      <Saved>
+        <Created Text="Tiskárna byla úspěšně přidána" />
+        <Updated Text="Tiskárna byla úspěšně upravena" />
+      </Saved>
+      <Product>
+        <Info Text="Zde můžete přidat tiskárny. Produkty a skupiny, které mají přiřazenou tiskárnu, budou tisknout na vyhrazené tiskárně." />
+        <Add Text="Přiřadit tiskárnu">
+          <Tooltip Text="Přiřadit další tiskárnu" />
+        </Add>
+        <Remove>
+          <Tooltip Text="Odstranit tiskárnu" />
+        </Remove>
+        <NoItems>
+          <Info Text="Nebyla nalezena žádná tiskárna.\nMusíš přidat tiskárnu předtím, než ji budeš moci přiřadit." />
+        </NoItems>
+        <Error>
+          <Duplicates Text="Byla detekována duplicitní tiskárna" />
+        </Error>
+      </Product>
+      <Settings Text="Tiskárny">
+        <Info Text="Použij nastavení níže ke konfiguraci tiskáren." />
+        <PrintStation Text="Tiskárny" />
+        <Printer Text="Tiskárna" />
+        <AddConfiguration Text="Přidat tiskové nastavení" />
+        <RemoveConfiguration Text="Odstranit tiskové nastavení\n" />
+      </Settings>
+      <License>
+        <Expiring Text="Licence pro modul &quot;Tiskáren&quot; vyprší za {0} dnů.\n\nZakupte si prosím licenci, abyste si zajistili nepřetržitý přístup i po {1}">
+          <Title Text="Licence brzy vyprší" />
+        </Expiring>
+        <GracePeriod Text="Licence pro modul &quot;Tiskárny&quot; vypršela a modul přestane fungovat po {0}\nPro zajištění trvalého přístupu si prosím zakupte licenci.">
+          <LicenseAlreadyPurchased Text="Pokud jste si již zakoupili licenci, můžete tuto zprávu ignorovat, dokud neobdržíme platbu a vaše licence nebude aktualizována." />
+          <Hide Text="Skrýt tuto zprávu po dobu 30 dnů" />
+        </GracePeriod>
+        <Expired Text="Licence pro &quot;Tiskárny&quot; vypršela a modul bude deaktivován, dokud nebude licence zakoupena.">
+          <Title Text="Licence vypršela!" />
+          <Renew Text="Obnovte si prosím licenci na" />
+          <Hide Text="Tuto zprávu již nezobrazovat " />
+        </Expired>
+        <Error>
+          <Notification Text="Pro aktivaci funkci tiskárny si prosím zakupte licenci.">
+            <Expired Text="Licence vypršela" />
+            <Missing Text="Chybí licence." />
+          </Notification>
+        </Error>
+      </License>
+    </Stations>
+  </Print>
+</Language>

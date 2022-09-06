@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <Stock Text="Stock">
+    <Items>
+      <Item>
+        <Product>
+          <Id Text="Id" />
+          <Code Text="Code" />
+          <Name Text="Name" />
+          <MeasurementUnit Text="Unit of measure" />
+          <CostPrice Text="Cost price" />
+        </Product>
+        <Quantity Text="Quantity" />
+        <NegativeQuantity Text="Negative stock quantity" />
+        <TotalCostBeforeTax Text="Cost" />
+        <TotalCost Text="Cost incl. tax" />
+        <TotalBeforeTax Text="Value" />
+        <TotalAfterTax Text="Value incl. tax" />
+      </Item>
+      <Filter>
+        <NegativeQuantity Text="Negative quantity">
+          <Info Text="Show products with negative quantity only" />
+        </NegativeQuantity>
+        <NonZeroQuantity Text="Non zero quantity">
+          <Info Text="Show products with non zero quantity only" />
+        </NonZeroQuantity>
+        <ZeroQuantity Text="Zero quantity">
+          <Info Text="Show products with zero quantity only" />
+        </ZeroQuantity>
+      </Filter>
+      <Summary>
+        <NegativeCount Text="Total items with negative quantity on stock" />
+        <ZeroCount Text="Total items with zero quantity on stock" />
+        <PositiveCount Text="Total items with positive quantity on stock" />
+        <TotalBeforeTax Text="Total:" />
+        <TotalIncludingTax Text="Total inc. tax:" />
+        <SellPrice Text="Sale price" />
+        <CostPrice Text="Cost price">
+          <TotalCostBeforeTax Text="Total cost:" />
+          <TotalCostAfterTax Text="Total cost inc. tax:" />
+        </CostPrice>
+      </Summary>
+    </Items>
+    <Reset Text="Recalculate stock quantities">
+      <Completed Text="Stock calculation completed successfully." />
+    </Reset>
+    <History Text="Stock history">
+      <Start Text="Start" />
+      <End Text="End" />
+      <Document Text="Document">
+        <DocumentType Text="Document type" />
+        <Customer Text="Customer" />
+        <Date Text="Date" />
+        <StockDate Text="Stock date" />
+      </Document>
+      <ChangeQuantity Text="Quantity" />
+      <InStock Text="In stock" />
+      <MeasurementUnit Text="Unit of measure" />
+      <CostPrice Text="Cost price" />
+    </History>
+    <Print>
+      <Report Text="Inventory count report" />
+    </Print>
+    <ProductDetails>
+      <OnHand Text="Quantity on hand" />
+    </ProductDetails>
+    <Control>
+      <Settings>
+        <PreventNegativeQuantities Text="Prevent negative inventory" />
+      </Settings>
+      <NegativeQuantity Text="Zero stock quantity sale">
+        <Confirmation Text="You don't have sufficient quantity on hand to sell this item. Selling this item may result in negative quantity on stock.\n\nQuantity on hand: {0}\nQuantity required: {1}\n\nAre you sure you want to add this item to current sale?" />
+        <Title Text="Stock quantity missing" />
+        <PermissionDenied Text="You do not have enough privileges to sell zero quantity items. Please consult administator." />
+        <Authorization>
+          <Title Text="Stock control is enabled.\nPlease, provide password for selling zero stock quantity item to continue" />
+        </Authorization>
+        <AllowMultiple>
+          <NotAllowed Text="Repeat round is not allowed with stock control enabled." />
+        </AllowMultiple>
+        <Security>
+          <Description Text="Controls whether a user is able to sell items with negative quantity" />
+        </Security>
+      </NegativeQuantity>
+    </Control>
+    <QuickInventory Text="Quick inventory">
+      <Description Text="Change stock quantities for selected item" />
+      <Title Text="Update stock quantity" />
+      <Subtitle Text="Set stock quantities for selected product.\nInventory count document will be created automatically." />
+      <Success Text="Stock quantity changed successfully.\nDocument {0} created." />
+      <Unauthorized Text="You do not have permissions to use quick inventory." />
+    </QuickInventory>
+    <LearnMore Text="Learn more about stock and inventory" />
+    <SearchResults Text="Search result" />
+    <ShowCostPrices Text="View cost prices">
+      <Description Text="Controls if cost prices are displayed in stock view." />
+    </ShowCostPrices>
+  </Stock>
+</Language>

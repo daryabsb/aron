@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="tr" name="Türkçe">
+  <Stock Text="Stok">
+    <Items>
+      <Item>
+        <Product>
+          <Id Text="ID"></Id>
+          <Code Text="Kod"></Code>
+          <Name Text="Ad"></Name>
+          <MeasurementUnit Text="Ölçü Birimi"></MeasurementUnit>
+        </Product>
+        <Quantity Text="Miktar"></Quantity>
+        <NegativeQuantity Text="Negatif stok miktarı"></NegativeQuantity>
+        <TotalCostBeforeTax Text="Maliyet"></TotalCostBeforeTax>
+        <TotalCost Text="Vergi Dahil Maliyet"></TotalCost>
+        <TotalBeforeTax Text="Değer"></TotalBeforeTax>
+        <TotalAfterTax Text="Vergi dahil değer"></TotalAfterTax>
+      </Item>
+      <Filter>
+        <NegativeQuantity Text="Negatif miktar">
+          <Info Text="Yalnızca negatif miktarlarda ürünler göster"></Info>
+        </NegativeQuantity>
+        <NonZeroQuantity Text="Miktar sıfır olamaz">
+          <Info Text="Miktarı sıfır olamayacak ürünleri göster"></Info>
+        </NonZeroQuantity>
+        <ZeroQuantity Text="Sıfır miktar">
+          <Info Text="Sadece sıfır miktarına sahip ürünleri göster"></Info>
+        </ZeroQuantity>
+      </Filter>
+      <Summary>
+        <NegativeCount Text="Stoktaki negatif miktar ile toplam ürün"></NegativeCount>
+        <ZeroCount Text="Stoktaki sıfır miktarlı toplam ürün"></ZeroCount>
+        <PositiveCount Text="Stoktaki pozitif miktar ile toplam ürün"></PositiveCount>
+        <TotalBeforeTax Text="Toplam:"></TotalBeforeTax>
+        <TotalIncludingTax Text="Vergi dahil toplam:"></TotalIncludingTax>
+        <SellPrice Text="Satış fiyatı"></SellPrice>
+        <CostPrice Text="Maliyet fiyatı">
+          <TotalCostBeforeTax Text="Toplam maliyet:"></TotalCostBeforeTax>
+          <TotalCostAfterTax Text="Vergi dahil toplam maliyet"></TotalCostAfterTax>
+        </CostPrice>
+      </Summary>
+    </Items>
+    <Reset Text="Stok miktarlarını yeniden hesaplayın">
+      <Completed Text="Stok hesaplama başarıyla tamamlandı."></Completed>
+    </Reset>
+    <History Text="Stok geçmişi">
+      <Start Text="Başlangıç"></Start>
+      <End Text="Bitiş"></End>
+      <Document Text="Belge">
+        <DocumentType Text="Belge türü"></DocumentType>
+        <Customer Text="Müşteri"></Customer>
+        <Date Text="Tarih"></Date>
+        <StockDate Text="Stoklama tarihi"></StockDate>
+      </Document>
+      <ChangeQuantity Text="Miktar"></ChangeQuantity>
+      <InStock Text="Stokta"></InStock>
+      <MeasurementUnit Text="Ölçü birimi"></MeasurementUnit>
+    </History>
+    <Print>
+      <Report Text="Envanter sayımı raporu"></Report>
+    </Print>
+    <ProductDetails>
+      <OnHand Text="Eldeki miktar"></OnHand>
+    </ProductDetails>
+    <Control>
+      <Settings>
+        <PreventNegativeQuantities Text="Negatif envanteri önle"></PreventNegativeQuantities>
+      </Settings>
+      <NegativeQuantity Text="Sıfır stok miktarı satışı">
+        <Confirmation Text="Bu ürünü satmak için elinizde yeterli miktar yok. Bu öğeyi satmanız, stokta negatif miktarla sonuçlanabilir. \nEldeki miktar: {0}\nGerekli miktar: {1}\nBu öğeyi geçerli satışa eklemek istediğinizden emin misiniz?"></Confirmation>
+        <Title Text="Stok miktarı eksik"></Title>
+        <PermissionDenied Text="Sıfır olamayan miktarda ürün satmak için yetkiniz yok. Lütfen yöneticiye danışın."></PermissionDenied>
+        <Authorization>
+          <Title Text="Stok kontrolü etkinleştirildi.\nLütfen sıfır stok miktarı ürün satışı için şifre sağlayın."></Title>
+        </Authorization>
+        <AllowMultiple>
+          <NotAllowed Text="Stok kontrolü etkinken tekrar turuna izin verilmiyor."></NotAllowed>
+        </AllowMultiple>
+        <Security>
+          <Description Text="Bir kullanıcının negatif miktarla ürün satıp satmadığını kontrol eder"></Description>
+        </Security>
+      </NegativeQuantity>
+    </Control>
+    <QuickInventory Text="Hızlı envanter">
+      <Description Text="Seçilen ürün için stok miktarlarını değiştir"></Description>
+      <Title Text="Stok miktarını güncelle"></Title>
+      <Subtitle Text="Seçilen ürün için stok miktarlarını ayarla. \nEnvanter sayımı belgesi otomatik olarak oluşturulacak."></Subtitle>
+      <Success Text="Stok miktarı başarıyla değiştirildi. \nDocument {0} oluşturuldu."></Success>
+      <Unauthorized Text="Hızlı envanteri kullanma izniniz yok." />
+    </QuickInventory>
+    <LearnMore Text="Stok ve envanter hakkında daha fazla bilgi edinin"></LearnMore>
+    <SearchResults Text="Arama sonucu"></SearchResults>
+    <ShowCostPrices Text="Maliyet Fiyatlarını Gör">
+      <Description Text="Stok görünümünde maliyet fiyatlarının görüntülenip görüntülenmediğini kontrol eder." />
+    </ShowCostPrices>
+  </Stock>
+</Language>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="pt-br" name="Português do Brasil">
+  <Stock Text="Estoque">
+    <Items>
+      <Item>
+        <Product>
+          <Id Text="Id" />
+          <Code Text="Código" />
+          <Name Text="Nome" />
+          <MeasurementUnit Text="Unidade de medida" />
+          <CostPrice Text="Preço de custo" />
+        </Product>
+        <Quantity Text="Quantidade" />
+        <NegativeQuantity Text="Quantidade de estoque negativa" />
+        <TotalCostBeforeTax Text="Custo" />
+        <TotalCost Text="Custo incl. imposto" />
+        <TotalBeforeTax Text="Total" />
+        <TotalAfterTax Text="Total incl. imposto" />
+      </Item>
+      <Filter>
+        <NegativeQuantity Text="Quantidade negativa">
+          <Info Text="Mostrar apenas produtos com quantidade negativa" />
+        </NegativeQuantity>
+        <NonZeroQuantity Text="Quantidade diferente de zero">
+          <Info Text="Mostrar apenas produtos com quantidade diferente de zero" />
+        </NonZeroQuantity>
+        <ZeroQuantity Text="Quantidade zero">
+          <Info Text="Mostrar apenas produtos com quantidade zero" />
+        </ZeroQuantity>
+      </Filter>
+      <Summary>
+        <NegativeCount Text="Total de itens com quantidade negativa em estoque" />
+        <ZeroCount Text="Total de itens com quantidade zero em estoque" />
+        <PositiveCount Text="Total de itens com quantidade positiva em estoque" />
+        <TotalBeforeTax Text="Total:" />
+        <TotalIncludingTax Text="Total incl. impostos:" />
+        <SellPrice Text="Preço de venda" />
+        <CostPrice Text="Preço de custo">
+          <TotalCostBeforeTax Text="Custo total:" />
+          <TotalCostAfterTax Text="Custo total incl. imposto:" />
+        </CostPrice>
+      </Summary>
+    </Items>
+    <Reset Text="Recalcular quantidade de estoque">
+      <Completed Text="Cálculo de estoque concluído com sucesso." />
+    </Reset>
+    <History Text="Histórico do estoque">
+      <Start Text="Início" />
+      <End Text="Fim" />
+      <Document Text="Documento">
+        <DocumentType Text="Tipo de documento" />
+        <Customer Text="Cliente" />
+        <Date Text="Data" />
+        <StockDate Text="Data de estoque" />
+      </Document>
+      <ChangeQuantity Text="Quantidade" />
+      <InStock Text="Em estoque" />
+      <MeasurementUnit Text="Unit of measure" />
+      <CostPrice Text="Preço de custo" />
+    </History>
+    <Print>
+      <Report Text="Relatório de contagem de estoque" />
+    </Print>
+    <ProductDetails>
+      <OnHand Text="Quantidade disponível" />
+    </ProductDetails>
+    <Control>
+      <Settings>
+        <PreventNegativeQuantities Text="Impedir estoque negativo" />
+      </Settings>
+      <NegativeQuantity Text="Venda de quantidade de estoque zero">
+        <Confirmation Text="Você não tem quantidade suficiente em estoque para vender este item. Vender este item pode resultar em uma quantidade negativa em estoque.\n\nQuantidade disponível: {0}\nQuantidade necessária: {1}\n\nTem certeza de que deseja adicionar este item à venda atual?" />
+        <Title Text="Quantidade em estoque faltando" />
+        <PermissionDenied Text="Você não tem privilégios suficientes para vender itens de quantidade zero. Consulte o administrador." />
+        <Authorization>
+          <Title Text="O controle de estoque está habilitado.\nPor favor, forneça a senha para a venda de item com quantidade de estoque zero para continuar" />
+        </Authorization>
+        <AllowMultiple>
+          <NotAllowed Text="A repetição da rodada não é permitida com o controle de estoque habilitado." />
+        </AllowMultiple>
+        <Security>
+          <Description Text="Controla se um usuário pode vender itens com quantidade negativa" />
+        </Security>
+      </NegativeQuantity>
+    </Control>
+    <QuickInventory Text="Inventário rápido">
+      <Description Text="Alterar as quantidades em estoque para o item selecionado" />
+      <Title Text="Atualizar quantidade de estoque" />
+      <Subtitle Text="Defina as quantidades em estoque para o produto selecionado.\nO documento de contagem de estoque será criado automaticamente." />
+      <Success Text="Quantidade de estoque alterada com sucesso.\nDocumento {0} criado." />
+      <Unauthorized Text="Você não tem permissão para usar o inventário rápido." />
+    </QuickInventory>
+    <LearnMore Text="Saiba mais sobre estoque e inventário" />
+    <SearchResults Text="Resultado da pesquisa" />
+    <ShowCostPrices Text="Ver preços de custo">
+      <Description Text="Controla se os preços de custo são exibidos na visualização de estoque." />
+    </ShowCostPrices>
+  </Stock>
+</Language>

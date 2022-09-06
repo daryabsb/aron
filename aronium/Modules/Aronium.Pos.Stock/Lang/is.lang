@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="is" name="Icelandic">
+  <Stock Text="Lager">
+    <Items>
+      <Item>
+        <Product>
+          <Id Text="Id" />
+          <Code Text="Vörunúmer" />
+          <Name Text="Nafn" />
+          <MeasurementUnit Text="Mælieining" />
+        </Product>
+        <Quantity Text="Magn" />
+        <NegativeQuantity Text="Neikvætt Birgðar Magn" />
+        <TotalCostBeforeTax Text="Kostnaður" />
+        <TotalCost Text="Kostnaður Með VSK" />
+        <TotalBeforeTax Text="Verð" />
+        <TotalAfterTax Text="Verð Með VSK" />
+      </Item>
+      <Filter>
+        <NegativeQuantity Text="Neikvætt Birgðar Magn">
+          <Info Text="Sýnir Neikvætt Birgðar Magn" />
+        </NegativeQuantity>
+        <NonZeroQuantity Text="Ekki Ekkert Til">
+          <Info Text="Sýnir að ekki ekkert sé til af þessari Vöru" />
+        </NonZeroQuantity>
+        <ZeroQuantity Text="Ekkert Til">
+          <Info Text="Sýnir að Ekkert Sé Til af þessari Vöru" />
+        </ZeroQuantity>
+      </Filter>
+      <Summary>
+        <NegativeCount Text="Heildar Fjöldi Vara í -" />
+        <ZeroCount Text="Heildar Vörur sem ekki eru til" />
+        <PositiveCount Text="Heildar Fjöldi Vara Sem Eru Til" />
+        <TotalBeforeTax Text="Samtalls:" />
+        <TotalIncludingTax Text="Samtalls Með VSK:" />
+        <SellPrice Text="Sölu Verð" />
+        <CostPrice Text="Kostnaðar Verð">
+          <TotalCostBeforeTax Text="Heildar Kostnaður:" />
+          <TotalCostAfterTax Text="Heildar Kostnaður Með VSK:" />
+        </CostPrice>
+      </Summary>
+    </Items>
+    <Reset Text="Endurreikna Lagers Magn">
+      <Completed Text="Útreikningi Lagers Lokið." />
+    </Reset>
+    <History Text="Lagers Skýrsla">
+      <Start Text="Byrjar" />
+      <End Text="Endar" />
+      <Document Text="Skjal">
+        <DocumentType Text="Tegund Skjals" />
+        <Customer Text="Viðskiptavinur" />
+        <Date Text="Dagsetning" />
+        <StockDate Text="Dagsetning Lagers" />
+      </Document>
+      <ChangeQuantity Text="Magn" />
+      <InStock Text="Til Á Lager" />
+      <MeasurementUnit Text="Mælikvarði" />
+    </History>
+    <Print>
+      <Report Text="Skráar Talningar Skýrsla" />
+    </Print>
+    <ProductDetails>
+      <OnHand Text="Magn Á Lager" />
+    </ProductDetails>
+    <Control>
+      <Settings>
+        <PreventNegativeQuantities Text="Hindra Neikvæðar Skrár" />
+      </Settings>
+      <NegativeQuantity Text="Ekki Til Á Lager Magn Sölur">
+        <Confirmation Text="Þú hefur ekki nægilegt magn til handar til að selja þetta atriði. Selja þetta atriði getur leitt til neikvæðs magns á lager.\n\nMagn Á Lager: {0}\nMagn Sem Þarfnast: {1}\n\nErtu viss um að þú viljir Bæta þessu Við í Sölunna?" />
+        <Title Text="Lagers Magn Vantar" />
+        <PermissionDenied Text="Þú hefur ekki Heimild til að selja það sem er ekki til. Hafðu samband við Stjórnanda." />
+        <Authorization>
+          <Title Text="Lagers Stjórnun Er Virk.\nVinsamlegast sláðu inn Lykilorð fyrir Sölu Ekki Til Á Lager Magn Vöru Til Að Halda Áfram" />
+        </Authorization>
+        <AllowMultiple>
+          <NotAllowed Text="Endurtekning er ekki leifileg þegar Lagers Stjórnun Er Virk." />
+        </AllowMultiple>
+        <Security>
+          <Description Text="Stjórnar hvort notandi sé fær um að selja hluti með neikvæðu magni" />
+        </Security>
+      </NegativeQuantity>
+    </Control>
+    <QuickInventory Text="Bæta Við Magni">
+      <Description Text="Gerðu Snögg Breytingu á Magni á Lager" />
+      <Title Text="Uppfæra Magn Á Lager" />
+      <Subtitle Text="Settu inn magn sem er Til Á Lager.\nSkráar Teljari mun verður Gerður Sjálfkrafa." />
+      <Success Text="Magn Á Lager Uppfært.\nSkjal {0} Búið Til." />
+      <Unauthorized Text="Þú hefur ekki Leifi til að nota Snögg Reikning." />
+    </QuickInventory>
+    <LearnMore Text="Lærðu Meira um Lager og Birgðir" />
+    <SearchResults Text="Leitar Niðurstöður" />
+    <ShowCostPrices Text="Skoða Kostnaðar Verð">
+      <Description Text="Stjórnaðu ef kostanaðar verð er sýnnt í Skýslu Skoðun." />
+    </ShowCostPrices>
+  </Stock>
+</Language>

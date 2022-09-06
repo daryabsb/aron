@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ar" name="Arabic">
+  <Loyalty Text="ولاء">
+    <Promotions Text="العروض و الاجراء">
+      <New Text="اضافة عروض">
+        <Title Text="جدید عروض" />
+      </New>
+      <LearnMore Text="تعرف على المزيد العروض و ساعة التخفيضات" />
+      <NoPromotions Text="مافی العروض">
+        <Add Text="اضافة عرض جدید" />
+      </NoPromotions>
+      <Delete Text="حذف العرض">
+        <Error Text="حصل خطا اثناء محاولة حذف العرض" />
+        <Confirmation Text="هل انت متاكد من انك تريد حذف العرض &quot;{0}&quot; ؟" />
+      </Delete>
+      <View>
+        <Enabled Text="تفعيل" />
+        <Name Text="اسم" />
+        <DaysOfWeek Text="ايام الاسبوع" />
+        <StartDate Text="تاريخ البدء" />
+        <StartTime Text="وقت البدء" />
+        <EndDate Text="تاريخ الانتهاء" />
+      </View>
+      <Promotion>
+        <Empty Text="لا یوجد منتجات فی العرض۔" />
+        <Name Text="اسم العرض" />
+        <Active Text="نشيط" />
+        <InvalidItems Text="خطا فی حفظ العرض۔ بعض اامنتجات تحتوي على خطا۔ الرجاء، تحقق من البيانات الخاص بك وحاول مرة اخرى۔" />
+        <Saved Text="تم حفظ العرض بنجاح." />
+        <Item>
+          <Errors>
+            <Existing Text="المنتج &quot;{0}&quot; موجود بالفعل في هذا العرض۔" />
+          </Errors>
+          <InvalidValue Text="قيمة غير صالحة" />
+          <Condition Text="الشرط">
+            <CopyToAll Text="نسخ الشرط لجميع المنتجات">
+              <Completed Text="قيم الشروط التي تم نسخها لجميع عناصر العرض۔" />
+            </CopyToAll>
+            <LimitToNext Text="تنطبق على التالي">
+              <Description Text="ادخل الحد الكمية لتطبيق بمجرد الوصول الى الكمية المطلوبة لهذا العرض" />
+            </LimitToNext>
+            <Quantity>
+              <Description Text="ادخل الكمية المطلوبة لهذا العرض" />
+            </Quantity>
+            <ApplyToAll Text="تنطبق على الکل" />
+            <Title Text="شرط الكمية" />
+          </Condition>
+          <PriceType>
+            <FixedPrice Text="سعر ثابت" />
+            <Discount Text="خصم" />
+          </PriceType>
+        </Item>
+        <Duration>
+          <End Text="النهاية" />
+          <Start Text="البداية" />
+        </Duration>
+        <DaysOfWeek>
+          <All Text="كل الايام">
+            <ShortName Text="الكل" />
+          </All>
+          <Monday Text="الاثنين">
+            <ShortName Text="الإثنين" />
+          </Monday>
+          <Tuesday Text="الثلاثاء">
+            <ShortName Text="الثلاثاء" />
+          </Tuesday>
+          <Wednesday Text="الاربعاء">
+            <ShortName Text="الاربعاء" />
+          </Wednesday>
+          <Thursday Text="الخميس">
+            <ShortName Text="الخميس" />
+          </Thursday>
+          <Friday Text="الجمعة">
+            <ShortName Text="الجمعة" />
+          </Friday>
+          <Saturday Text="السبت">
+            <ShortName Text="السبت" />
+          </Saturday>
+          <Sunday Text="الاحد">
+            <ShortName Text="الاحد" />
+          </Sunday>
+        </DaysOfWeek>
+      </Promotion>
+    </Promotions>
+  </Loyalty>
+</Language>
