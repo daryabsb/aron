@@ -23,6 +23,7 @@ from core.views import IndexTemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include('core.api.urls')),
     path('login/', LoginView.as_view(
         authentication_form=CustomLoginForm
     ), name="login"),

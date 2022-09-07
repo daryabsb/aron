@@ -1,17 +1,17 @@
 <template>
   <div>
     <a
+      ref="btnDropdownRef"
       class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
       href="#pablo"
-      ref="btnDropdownRef"
-      v-on:click="toggleDropdown($event)"
+      @click="toggleDropdown($event)"
     >
       Demo Pages
     </a>
     <div
       ref="popoverDropdownRef"
       class="bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
-      v-bind:class="{
+      :class="{
         hidden: !dropdownPopoverShow,
         block: dropdownPopoverShow,
       }"

@@ -1,10 +1,10 @@
 <template>
   <div>
     <a
+      ref="btnDropdownRef"
       class="text-blueGray-500 block"
       href="#pablo"
-      ref="btnDropdownRef"
-      v-on:click="toggleDropdown($event)"
+      @click="toggleDropdown($event)"
     >
       <div class="items-center flex">
         <span
@@ -21,7 +21,7 @@
     <div
       ref="popoverDropdownRef"
       class="bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
-      v-bind:class="{
+      :class="{
         hidden: !dropdownPopoverShow,
         block: dropdownPopoverShow,
       }"
@@ -48,8 +48,9 @@
       <a
         href="javascript:void(0);"
         class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+        @click="logout"
       >
-        Seprated link
+        Logout
       </a>
     </div>
   </div>
@@ -65,7 +66,13 @@ export default {
     return {
       dropdownPopoverShow: false,
       image: image,
+      storage: undefined,
     };
+  },
+  onMounted() {
+    console.log("session",sessionStorage);
+    console.log("session");
+    this.storage = localStorage();
   },
   methods: {
     toggleDropdown: function (event) {
@@ -78,6 +85,10 @@ export default {
           placement: "bottom-start",
         });
       }
+    },
+    logout() {
+      console.log(this.storage);
+      this.localStorage.remove()
     },
   },
 };

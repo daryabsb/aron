@@ -17,15 +17,15 @@
         <button
           class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
           type="button"
-          v-on:click="setNavbarOpen"
+          @click="setNavbarOpen"
         >
           <i class="text-white fas fa-bars"></i>
         </button>
       </div>
       <div
+        id="example-navbar-warning"
         class="lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none"
         :class="[navbarOpen ? 'block rounded shadow-lg' : 'hidden']"
-        id="example-navbar-warning"
       >
         <ul class="flex flex-col lg:flex-row list-none mr-auto">
           <li class="flex items-center">
@@ -99,6 +99,9 @@
 <script>
 import PagesDropdown from "@/components/Dropdowns/PagesDropdown.vue";
 export default {
+  components: {
+    PagesDropdown,
+  },
   data() {
     return {
       navbarOpen: false,
@@ -108,9 +111,6 @@ export default {
     setNavbarOpen: function () {
       this.navbarOpen = !this.navbarOpen;
     },
-  },
-  components: {
-    PagesDropdown,
   },
 };
 </script>

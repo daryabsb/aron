@@ -1,17 +1,17 @@
 <template>
   <div>
     <a
+      ref="btnDropdownRef"
       class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
       href="#pablo"
-      ref="btnDropdownRef"
-      v-on:click="toggleDropdown($event)"
+      @click="toggleDropdown($event)"
     >
       Demo Pages
     </a>
     <div
       ref="popoverDropdownRef"
       class="bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
-      v-bind:class="{
+      :class="{
         hidden: !dropdownPopoverShow,
         block: dropdownPopoverShow,
       }"
@@ -22,25 +22,25 @@
         Admin Layout
       </span>
       <router-link
-        to="/admin/dashboard"
+        to="/dash/dashboard"
         class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
       >
         Dashboard
       </router-link>
       <router-link
-        to="/admin/settings"
+        to="/dash/settings"
         class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
       >
         Settings
       </router-link>
       <router-link
-        to="/admin/tables"
+        to="/dash/tables"
         class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
       >
         Tables
       </router-link>
       <router-link
-        to="/admin/maps"
+        to="/dash/maps"
         class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
       >
         Maps
