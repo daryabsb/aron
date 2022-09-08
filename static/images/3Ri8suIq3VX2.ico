@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Just a moment...</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/challenges.css" rel="stylesheet">
+    <meta http-equiv="refresh" content="35">
+
+</head>
+<body class="no-js">
+    <div class="main-wrapper" role="main">
+    <div class="main-content">
+        <h1 class="zone-name-title h1">
+            <img class="heading-favicon" src="favicon.ico" onerror="this.onerror=null;this.parentNode.removeChild(this)">
+            demos.creative-tim.com
+        </h1>
+        <h2 class="h2" id="challenge-running">
+            Checking if the site connection is secure
+        </h2>
+        <noscript>
+            <div id="challenge-error-title">
+                <div class="h2">
+                    <span class="icon-wrapper">
+                        <div class="heading-icon warning-icon"></div>
+                    </span>
+                    <span id="challenge-error-text">
+                        Enable JavaScript and cookies to continue
+                    </span>
+                </div>
+            </div>
+        </noscript>
+        <div id="trk_jschal_js" style="display:none;background-image:url(&#x27;images/transparent_1.gif&#x27;)"></div>
+        <div id="challenge-body-text" class="core-msg spacer">
+            demos.creative-tim.com needs to review the security of your connection before proceeding.
+        </div>
+        <form id="challenge-form" action="/favicon.ico?__cf_chl_f_tk=gtVFEgmsDSvxN0DhlKR5Z8Moidj6zU30MveBo2UwF54-1662637154-0-gaNycGzNCP0" method="POST" enctype="application/x-www-form-urlencoded">
+            <input type="hidden" name="md" value="xKBTfLfUaiwEovRQC2dSq0eiiYsjMOmh_lvK1G1JA3M-1662637154-0-AQHYvl0zG9cQbzKeVBsQFcBZUi7PK39a_ONj9RBh7sLUjlfomJ8ZE9GgxgdaInXlMDj-mq5Jcs_IkdAeuxwUz_ju9908_Q6DjuNHxyzc9uKWNi2iDwlEQSCoesNuKdP42S6Ks0YOVxqZrFsJtZxZ72HmcEGg2J6_k4Nj1MQsvrLbpbBEKBgudYsHTd5r9g38Y6mNpJ6Fw1spXY9QAJpP2BTGgj-FuFa5wNtEUHYbYJ9dzHj6lh6G8xkScBt8UkswxgffZ7caT61hjqgxqHFy8iCBorV9DdsuL40CA3Vg0TOdUxgpcS9O_5-whrwdjLVfVPkH5HTfSClM3AqBcHJYSSps1kZa1UVoge30kgllsCQG-gVXrT0n3IVn7sIN29d0EkU-05lbHUEJmv1plr1FdaZnzXiPYTFhOCHA6lPS1zePFlUVGq6Fc4ydx1o337zc4WUMd9-q00YqnnKBKBI41gIi6NDBAqslkaconRTlsRie0SbyGq_9mOQbBK9PJZ2p3jGRjGMvUNTWUa-EmyzPGrlBDRFWmg8M8VyfhHiV5thJz4ddjjHi5kt2ZvMMKRZMx1ZGbicidvjRDCqvs16G20g3GYxgLql8_oTEPxy1-S54d3oNG0TB2G6UTB-_61kNdVsf9UoF3fJ2QzGRipCKnK4">
+            <input type="hidden" name="r" value="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">
+        </form>
+    </div>
+</div>
+<script>
+    (function(){
+        window._cf_chl_opt={
+            cvId: '2',
+            cType: 'non-interactive',
+            cNounce: '85754',
+            cRay: '747767048d4bb7af',
+            cHash: '735cda75c7b966a',
+            cUPMDTk: "\/favicon.ico?__cf_chl_tk=gtVFEgmsDSvxN0DhlKR5Z8Moidj6zU30MveBo2UwF54-1662637154-0-gaNycGzNCP0",
+            cFPWv: 'b',
+            cTTimeMs: '1000',
+            cTplV: 4,
+            cTplB: 'cf',
+            cRq: {
+                ru: 'aHR0cHM6Ly9kZW1vcy5jcmVhdGl2ZS10aW0uY29tL2Zhdmljb24uaWNv',
+                ra: '',
+                rm: 'R0VU',
+                d: 'i+PNl3QsLuDP2Ty0jMrwQKLKIvvsqV9lrE5ocdC4YT3f+WJs6buYbadPG7NyjQvrB6mfqyfMWIHMHy5hLiNgEGcJ5+EHsrpzD6ebHKF96aWXlzYbjjnV0XrgU50uXcwSFoFD50ZwGSrxaeSw/TUg8hSCfVyftl8Nxm/4HJPs0G2jUduZUp4OF/eQNjZo4i3Gd1HVeCRiu+FDFfazLYe1gQoHhh2gx5Sz1+FxhAdIW5Dh0URLEAzhwSYwWJqUuf8MH28EXfjbNZj65J7ut//bhfMv+zOP3T4dILjkfLLz69ZWj5xab5FW+lKpzzK4r9rOQ/SVhQh+5NXUgITjfGum5VbvSqkzJoK96osnmVdzLMLKmYsiDK51b/S1O7TGf2sQIyf4efw2uQNTfbUnCAf4o/5MJti9lZkrqPV5x8Z7zh+5vQvZExmcmOHKAfMivcUseCk9IrJykPnYywfdA4jZOlj5RbO2AKJdIKGDouWZ9NRVjZHvrma1t0G7F+L6bNaUS49If6pcNzbTfMyakdHtnCZvq2TObohGmBu+YEAUof2uindB8k4NCwmiaRgGFw/ELf0O5tAyzrnuYrDL3QBtwA==',
+                t: 'MTY2MjYzNzE1NC4wMzgwMDA=',
+                m: 'eX5FT0YptjTlY4AapogQYXVVDkZ9Ijp6hw1KfU0upzk=',
+                i1: 'KYxlR2No5j/6gVpimCbSTQ==',
+                i2: 'EtOrPr6/hR7OKLhd5XbRkw==',
+                zh: 'M8fDwGVhiILhLcEC/m5ypseHYoi/HwahNtLOrOm2ygk=',
+                uh: 'DV4j3Tmrbi5Rs1q3ahwVS6SgbPbI7np5884QO1u1Cgg=',
+                hh: 'lCfjkDt9wtzOElBDPtrzSB5Z+sF/RAcy1UjD4oSQBvE=',
+            }
+        };
+        var trkjs = document.createElement('img');
+        trkjs.setAttribute('src', '/cdn-cgi/images/trace/jsch/js/transparent.gif?ray=747767048d4bb7af');
+        trkjs.setAttribute('style', 'display: none');
+        document.body.appendChild(trkjs);
+        var cpo = document.createElement('script');
+        cpo.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/jsch/v1?ray=747767048d4bb7af';
+        window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;
+        window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, -window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;
+        if (window.history && window.history.replaceState) {
+            var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;
+            history.replaceState(null, null, "\/favicon.ico?__cf_chl_rt_tk=gtVFEgmsDSvxN0DhlKR5Z8Moidj6zU30MveBo2UwF54-1662637154-0-gaNycGzNCP0" + window._cf_chl_opt.cOgUHash);
+            cpo.onload = function() {
+                history.replaceState(null, null, ogU);
+            };
+        }
+        document.getElementsByTagName('head')[0].appendChild(cpo);
+    }());
+</script>
+
+    <div class="footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="clearfix diagnostic-wrapper">
+                <div class="ray-id">Ray ID: <code>747767048d4bb7af</code></div>
+            </div>
+            <div class="text-center">Performance &amp; security by <a rel="noopener noreferrer" href="https://www.cloudflare.com?utm_source=challenge&utm_campaign=j" target="_blank">Cloudflare</a></div>
+        </div>
+    </div>
+</body>
+</html>

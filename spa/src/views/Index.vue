@@ -777,6 +777,7 @@
   </div>
 </template>
 <script>
+// import axios from "axios";
 import IndexNavbar from "@/components/Navbars/IndexNavbar.vue";
 import FooterComponent from "@/components/Footers/Footer.vue";
 
@@ -814,10 +815,8 @@ export default {
       landing,
     };
   },
-  onCreated() {
-    console.log("session", sessionStorage);
-    console.log("session");
-    this.storage = localStorage();
+  onMounted() {
+    console.log("mounted");
   },
 };
 </script>

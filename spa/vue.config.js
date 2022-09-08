@@ -6,7 +6,7 @@ module.exports = {
   publicPath:
     process.env.NODE_ENV === "production"
       ? "/static/dist/"
-      : "http://127.0.0.1:8081",
+      : process.env.PUBLIC_PATH,
   outputDir: "../static/dist",
   indexPath: "../../templates/index.html",
   pages: {
@@ -17,7 +17,7 @@ module.exports = {
   },
   devServer: {
     devMiddleware: {
-      publicPath: "http://127.0.0.1:8081",
+      publicPath: process.env.PUBLIC_PATH,
       writeToDisk: (filePath) => filePath.endsWith("index.html"),
     },
     hot: true,

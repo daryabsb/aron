@@ -83,7 +83,7 @@
           <li class="items-center">
             <router-link
               v-slot="{ href, navigate, isActive }"
-              to="/admin/dashboard"
+              to="/dash/dashboard"
             >
               <a
                 :href="href"
@@ -107,7 +107,7 @@
           <li class="items-center">
             <router-link
               v-slot="{ href, navigate, isActive }"
-              to="/admin/settings"
+              to="/dash/settings"
             >
               <a
                 :href="href"
@@ -131,7 +131,7 @@
           <li class="items-center">
             <router-link
               v-slot="{ href, navigate, isActive }"
-              to="/admin/tables"
+              to="/dash/tables"
             >
               <a
                 :href="href"
@@ -153,7 +153,7 @@
           </li>
 
           <li class="items-center">
-            <router-link v-slot="{ href, navigate, isActive }" to="/admin/maps">
+            <router-link v-slot="{ href, navigate, isActive }" to="/dash/maps">
               <a
                 :href="href"
                 class="text-xs uppercase py-3 font-bold block"

@@ -80,12 +80,13 @@
           </li>
 
           <li class="flex items-center">
-            <button
+            <user-dropdown></user-dropdown>
+            <!-- <button
               class="bg-emerald-500 text-white active:bg-emerald-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
               type="button"
             >
               <i class="fas fa-arrow-alt-circle-down"></i> Download
-            </button>
+            </button> -->
           </li>
         </ul>
       </div>
@@ -94,22 +95,29 @@
 </template>
 
 <script>
+import axios from "axios";
 import IndexDropdown from "@/components/Dropdowns/IndexDropdown.vue";
+import UserDropdown from "@/components/Dropdowns/UserDropdown.vue";
 
 export default {
   components: {
     IndexDropdown,
+    UserDropdown,
   },
   data() {
     return {
       navbarOpen: false,
+      user:{}
     };
   },
-  computed: {
-    user() {
-
-      return this.$store.user;
+  created() {
+      this.$store.dispatch('fetchUser');
     },
+  async onMounted() {
+    console.log("indexNavbar");
+    const response = await axios.get('http://127.0.0.1:8000/api/user/me/')
+    console.log(response.data);
+    this.user = response.data
   },
   methods: {
     setNavbarOpen: function () {

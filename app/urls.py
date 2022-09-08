@@ -18,8 +18,8 @@ from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.views import LoginView
-from core.forms import CustomLoginForm
-from core.views import IndexTemplateView
+from core.forms import CustomLoginForm, CustomRegistrationForm
+from core.views import IndexTemplateView, logout_view, signup
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,7 +27,9 @@ urlpatterns = [
     path('login/', LoginView.as_view(
         authentication_form=CustomLoginForm
     ), name="login"),
-    path("accounts/", include("django.contrib.auth.urls")),
+    path('signup/', signup, name="signup"),
+    path('logout/', logout_view),
+    # path("accounts/", include("django.contrib.auth.urls")),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
