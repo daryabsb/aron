@@ -13,6 +13,12 @@ from .modules import (
 )
 # Create your models here.
 
+BIT_CHOICES = [
+    ('0', 0),
+    ('1', 1),
+    ('null', None),
+]
+
 
 class UserManager(BaseUserManager):
 
@@ -72,18 +78,7 @@ class ProductGroup(models.Model):
 
 class Product(models.Model):
 
-    BIT_CHOICES = [
-        ('0', 0),
-        ('1', 1),
-        ('null', None),
-]
-    YEAR_IN_SCHOOL_CHOICES = [
-    ('0', 0),
-    ('1', 'Sophomore'),
-    ('null', 'Junior'),
-    ('SR', 'Senior'),
-    ('GR', 'Graduate'),
-]
+ 
 
     user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='products')
     name = models.CharField(max_length=100)
@@ -144,14 +139,58 @@ class Warehouse(models.Model):
     user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='warehouses')
     name = models.CharField(max_length=100)
 
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
     def __str__(self):
         return self.name
 
 
-'''
-CREATE TABLE [dbo].[Warehouse] ( 
-	[Id] INT IDENTITY ( 1, 1 )  NOT NULL, 
-	[Name] NVARCHAR( 100 ) NOT NULL,
-	PRIMARY KEY ( [Id] ) )
-'''
+class Stock(models.Model):
+    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='stocks')
+    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='stocks')
+    warehouse = models.ForeignKey('Warehouse', on_delete=models.CASCADE, related_name='stocks')
 
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.product} @ {self.warehouse}'
+
+
+class Tax(models.Model):
+    name = models.CharField(max_length=30)
+    rate = models.DecimalField(max_digits=18,decimal_places=4,default=0)
+    code = models.CharField(max_length=10, null=True,blank=True)
+    is_fixed = models.CharField(max_length=10, choices=BIT_CHOICES, default="0")
+    is_tax_on_total = models.CharField(max_length=10, choices=BIT_CHOICES, default="0")
+    is_enabled = models.CharField(max_length=10, choices=BIT_CHOICES, default="0")
+    amount = models.FloatField(default=0)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.name} @ {self.rate}'
+
+class ProductTax(models.Model):
+    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='productTaxes')
+    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='productTaxes')
+    tax = models.ForeignKey('Tax', on_delete=models.CASCADE, related_name='productTaxes')
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['product', 'tax'], name='unique_product_taxes')
+        ]
+
+    def __str__(self):
+        return f'{self.product.name} @ {self.tax.name}'
+
+'''
+		[ProductId] INT NOT NULL, 
+	[TaxId] INT NOT NULL,
+	PRIMARY KEY ( [ProductId], [TaxId] ) )
+'''
