@@ -38,7 +38,7 @@
               <i
                 class="text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2"
               />
-              Docs {{user}}
+              Docs
             </a>
           </li>
         </ul>
@@ -95,7 +95,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import IndexDropdown from "@/components/Dropdowns/IndexDropdown.vue";
 import UserDropdown from "@/components/Dropdowns/UserDropdown.vue";
 
@@ -107,23 +106,15 @@ export default {
   data() {
     return {
       navbarOpen: false,
-      user:{}
     };
   },
   created() {
-      this.$store.dispatch('fetchUser');
-    },
-  async onMounted() {
-    console.log("indexNavbar");
-    const response = await axios.get('http://127.0.0.1:8000/api/user/me/')
-    console.log(response.data);
-    this.user = response.data
+    this.$store.dispatch("fetchUser");
   },
   methods: {
     setNavbarOpen: function () {
       this.navbarOpen = !this.navbarOpen;
     },
   },
-  
 };
 </script>

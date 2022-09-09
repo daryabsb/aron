@@ -22,13 +22,16 @@ from core.forms import CustomLoginForm, CustomRegistrationForm
 from core.views import IndexTemplateView, logout_view, signup
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('core.api.urls')),
     path('login/', LoginView.as_view(
         authentication_form=CustomLoginForm
     ), name="login"),
     path('signup/', signup, name="signup"),
     path('logout/', logout_view),
+    path('admin/', admin.site.urls),
+    # path('api/', include('core.api.urls')),
+    path('api/user/', include('user.api.urls')),
+    path('api/product/', include('products.urls')),
+    
     # path("accounts/", include("django.contrib.auth.urls")),
 ]
 

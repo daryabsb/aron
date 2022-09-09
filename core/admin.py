@@ -3,7 +3,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext as _
 
 from .models import (
-    User, ProductGroup,Product,
+    Barcode, ProductComment, User, ProductGroup,Product, Warehouse,
     )
 
 class UserAdmin(BaseUserAdmin):
@@ -16,7 +16,8 @@ class UserAdmin(BaseUserAdmin):
             _('Permissions'),
             {'fields': ('is_active', 'is_staff', 'is_superuser')}
         ),
-        (_('Important Dates'), {'fields': ('last_login',)})
+        (_('Important Dates'), {'fields': ('last_login',)}),
+        (_('Image Update'), {'fields': ('image',)})
     )
     add_fieldsets = (
         ('None', {
@@ -28,3 +29,6 @@ class UserAdmin(BaseUserAdmin):
 admin.site.register(User, UserAdmin)
 admin.site.register(ProductGroup)
 admin.site.register(Product)
+admin.site.register(Barcode)
+admin.site.register(ProductComment)
+admin.site.register(Warehouse)

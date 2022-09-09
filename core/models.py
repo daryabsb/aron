@@ -57,6 +57,7 @@ class User(PermissionsMixin, AbstractBaseUser):
 
 
 class ProductGroup(models.Model):
+    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='productGroups')
     name = models.CharField(max_length=100)
     parent_group = models.ForeignKey(
         "self", null=True, blank=True, on_delete=models.SET_NULL)
@@ -69,51 +70,88 @@ class ProductGroup(models.Model):
         return self.name
 
 
-'''
-[Id] INT IDENTITY ( 1, 1 )  NOT NULL, 
-	[Name] NVARCHAR( 100 ) NOT NULL, 
-	[ParentGroupId] INT NULL, 
-	[Color] VARCHAR( 50 ) DEFAULT 'Transparent' NOT NULL, 
-	[Image] IMAGE NULL, 
-	[Rank] INT DEFAULT '((0))' NOT NULL,
-	PRIMARY KEY ( [Id] ) )
-'''
-
-
 class Product(models.Model):
+
+    BIT_CHOICES = [
+        ('0', 0),
+        ('1', 1),
+        ('null', None),
+]
+    YEAR_IN_SCHOOL_CHOICES = [
+    ('0', 0),
+    ('1', 'Sophomore'),
+    ('null', 'Junior'),
+    ('SR', 'Senior'),
+    ('GR', 'Graduate'),
+]
+
+    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='products')
     name = models.CharField(max_length=100)
     product_group = models.ForeignKey('ProductGroup', on_delete=models.CASCADE)
     code = models.CharField(max_length=100, null=True, blank=True)
     description = models.CharField(max_length=300, null=True, blank=True)
     plu = models.IntegerField(null=True, blank=True)
     measurement_unit = models.CharField(max_length=10, null=True, blank=True)
+    price = models.FloatField(default=0)
+    is_tax_inclusive_price = models.CharField(max_length=10, choices=BIT_CHOICES, default="0")
+    is_price_change_allowed = models.CharField(max_length=10, choices=BIT_CHOICES, default="0")
+    is_service = models.CharField(max_length=10, choices=BIT_CHOICES, default="0")
+    is_using_default_quantity = models.CharField(max_length=10, choices=BIT_CHOICES, default="1")
+    cost = models.FloatField(default=0,null=True,blank=True)
+    margin = models.DecimalField(max_digits=18,decimal_places=3,default=0)
     image = models.ImageField(null=True, blank=True,
                               upload_to=upload_image_file_path)
+    color = models.CharField(max_length=50, default='Transparent')
+    is_enabled = models.CharField(max_length=10, choices=BIT_CHOICES, default="1")
+
+    age_restriction = models.SmallIntegerField(null=True,blank=True)
+    last_purchase_price = models.FloatField(default=0)
+    rank = models.SmallIntegerField(default=0)
+
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+
+    def __str__(self):
+        return f'{self.name} - {self.price} /{self.product_group}'
+
+
+class Barcode(models.Model):
+    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='barcodes')
+    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='barcodes')
+    value = models.CharField(max_length=250)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'({self.product.name}) - {self.value}'
+
+
+class ProductComment(models.Model):
+    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='comments')
+    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='comments')
+    value = models.CharField(max_length=300)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return f'{self.product} - {self.created}'
+
+class Warehouse(models.Model):
+    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='warehouses')
+    name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
 
 
 '''
-    [Name] NVARCHAR( 100 ) NOT NULL, 
-	[ProductGroupId] INT NULL, 
-	[Code] VARCHAR( 100 ) NULL, 
-	[Description] NVARCHAR( 300 ) NULL, 
-	[PLU] INT NULL, 
-	[MeasurementUnit] NVARCHAR( 10 ) NULL, 
-	[Price] FLOAT DEFAULT '((0))' NOT NULL, 
-	[IsTaxInclusivePrice] BIT DEFAULT '((1))' NOT NULL, 
-	[IsPriceChangeAllowed] BIT DEFAULT '((0))' NOT NULL, 
-	[IsService] BIT DEFAULT '((0))' NOT NULL, 
-	[IsUsingDefaultQuantity] BIT DEFAULT '((1))' NOT NULL, 
-	[Cost] FLOAT DEFAULT '((0))' NOT NULL, 
-	[Margin] DECIMAL( 18, 4 ) DEFAULT '((0))' NOT NULL, 
-	[Image] IMAGE NULL, 
-	[Color] VARCHAR( 50 ) DEFAULT 'Transparent' NOT NULL, 
-	[IsEnabled] BIT DEFAULT '((1))' NOT NULL, 
-	[DateCreated] DATETIME NOT NULL, 
-	[DateUpdated] DATETIME NOT NULL, 
-	[AgeRestriction] INT NULL, 
-	[LastPurchasePrice] FLOAT DEFAULT '((0))' NOT NULL, 
-	[Rank] INT DEFAULT '((0))' NOT NULL,
+CREATE TABLE [dbo].[Warehouse] ( 
+	[Id] INT IDENTITY ( 1, 1 )  NOT NULL, 
+	[Name] NVARCHAR( 100 ) NOT NULL,
+	PRIMARY KEY ( [Id] ) )
 '''
+

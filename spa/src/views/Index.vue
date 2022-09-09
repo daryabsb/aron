@@ -778,6 +778,7 @@
 </template>
 <script>
 // import axios from "axios";
+
 import IndexNavbar from "@/components/Navbars/IndexNavbar.vue";
 import FooterComponent from "@/components/Footers/Footer.vue";
 
@@ -800,7 +801,8 @@ export default {
     FooterComponent,
     Sidebar,
   },
-  data() {
+
+  setup() {
     return {
       patternVue,
       componentBtn,
@@ -814,9 +816,6 @@ export default {
       profile,
       landing,
     };
-  },
-  onMounted() {
-    console.log("mounted");
   },
 };
 </script>
