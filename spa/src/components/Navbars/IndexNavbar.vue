@@ -108,9 +108,6 @@ export default {
       navbarOpen: false,
     };
   },
-  created() {
-    this.$store.dispatch("fetchUser");
-  },
   methods: {
     setNavbarOpen: function () {
       this.navbarOpen = !this.navbarOpen;

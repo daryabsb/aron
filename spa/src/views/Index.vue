@@ -777,7 +777,10 @@
   </div>
 </template>
 <script>
-// import axios from "axios";
+import { onMounted } from "vue";
+
+import { useFetchUserDispatch } from "@/store/composables";
+import useGetUser from "@/composables/useGetUser";
 
 import IndexNavbar from "@/components/Navbars/IndexNavbar.vue";
 import FooterComponent from "@/components/Footers/Footer.vue";
@@ -803,6 +806,10 @@ export default {
   },
 
   setup() {
+    onMounted(useFetchUserDispatch);
+
+    const user = useGetUser();
+
     return {
       patternVue,
       componentBtn,
@@ -815,6 +822,7 @@ export default {
       login,
       profile,
       landing,
+      user,
     };
   },
 };

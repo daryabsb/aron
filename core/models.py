@@ -1,12 +1,12 @@
-from re import T
-from unicodedata import name
+# from re import T
+# from unicodedata import name
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 
 
 from .modules import (
-    calculateAge,
+    # calculateAge,
     # save_pdf_pages_attachment,
     upload_image_file_path,
     # pdf_page_count
@@ -62,8 +62,72 @@ class User(PermissionsMixin, AbstractBaseUser):
     USERNAME_FIELD = 'email'
 
 
+class Country(models.Model):
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='country')
+    name = models.CharField(max_length=100, unique=True)
+    code = models.CharField(max_length=4)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+
+
+class Currency(models.Model):
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='currencies')
+    name = models.CharField(max_length=100, unique=True)
+    code = models.CharField(max_length=4)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.code}: {self.name}'
+
+
+'''
+COMPANY RELATED
+'''
+
+
+class Company(models.Model):
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='companies')
+    name = models.CharField(max_length=100, unique=True)
+    address = models.CharField(max_length=300, null=True, blank=True)
+    postal_code = models.CharField(max_length=50, null=True, blank=True)
+    city = models.CharField(max_length=50, null=True, blank=True)
+    country = models.ForeignKey(
+        'Country', default=1, on_delete=models.CASCADE,
+        related_name='companies'
+    )
+    tax_number = models.CharField(max_length=100, null=True, blank=True)
+    email = models.EmailField(max_length=255, unique=True)
+    phone = models.CharField(max_length=100, null=True, blank=True)
+    logo = models.ImageField(null=True, blank=True,
+                             upload_to=upload_image_file_path)
+    bank_account_number = models.CharField(
+        max_length=300, null=True, blank=True)
+    bank_details = models.CharField(max_length=300, null=True, blank=True)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.name} - {self.country}'
+
+
+'''
+PRODUCT RELATED
+'''
+
+
 class ProductGroup(models.Model):
-    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='productGroups')
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='productGroups')
     name = models.CharField(max_length=100)
     parent_group = models.ForeignKey(
         "self", null=True, blank=True, on_delete=models.SET_NULL)
@@ -77,10 +141,8 @@ class ProductGroup(models.Model):
 
 
 class Product(models.Model):
-
- 
-
-    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='products')
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='products')
     name = models.CharField(max_length=100)
     product_group = models.ForeignKey('ProductGroup', on_delete=models.CASCADE)
     code = models.CharField(max_length=100, null=True, blank=True)
@@ -88,33 +150,40 @@ class Product(models.Model):
     plu = models.IntegerField(null=True, blank=True)
     measurement_unit = models.CharField(max_length=10, null=True, blank=True)
     price = models.FloatField(default=0)
-    is_tax_inclusive_price = models.CharField(max_length=10, choices=BIT_CHOICES, default="0")
-    is_price_change_allowed = models.CharField(max_length=10, choices=BIT_CHOICES, default="0")
-    is_service = models.CharField(max_length=10, choices=BIT_CHOICES, default="0")
-    is_using_default_quantity = models.CharField(max_length=10, choices=BIT_CHOICES, default="1")
-    cost = models.FloatField(default=0,null=True,blank=True)
-    margin = models.DecimalField(max_digits=18,decimal_places=3,default=0)
+    is_tax_inclusive_price = models.CharField(
+        max_length=10, choices=BIT_CHOICES, default="0")
+    currency = models.ForeignKey(
+        'Currency', on_delete=models.CASCADE, related_name='products')
+    is_price_change_allowed = models.CharField(
+        max_length=10, choices=BIT_CHOICES, default="0")
+    is_service = models.CharField(
+        max_length=10, choices=BIT_CHOICES, default="0")
+    is_using_default_quantity = models.CharField(
+        max_length=10, choices=BIT_CHOICES, default="1")
+    cost = models.FloatField(default=0, null=True, blank=True)
+    margin = models.DecimalField(max_digits=18, decimal_places=3, default=0)
     image = models.ImageField(null=True, blank=True,
                               upload_to=upload_image_file_path)
     color = models.CharField(max_length=50, default='Transparent')
-    is_enabled = models.CharField(max_length=10, choices=BIT_CHOICES, default="1")
+    is_enabled = models.CharField(
+        max_length=10, choices=BIT_CHOICES, default="1")
 
-    age_restriction = models.SmallIntegerField(null=True,blank=True)
+    age_restriction = models.SmallIntegerField(null=True, blank=True)
     last_purchase_price = models.FloatField(default=0)
     rank = models.SmallIntegerField(default=0)
 
-
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-
 
     def __str__(self):
         return f'{self.name} - {self.price} /{self.product_group}'
 
 
 class Barcode(models.Model):
-    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='barcodes')
-    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='barcodes')
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='barcodes')
+    product = models.ForeignKey(
+        'Product', on_delete=models.CASCADE, related_name='barcodes')
     value = models.CharField(max_length=250)
 
     created = models.DateTimeField(auto_now_add=True)
@@ -125,18 +194,22 @@ class Barcode(models.Model):
 
 
 class ProductComment(models.Model):
-    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='comments')
-    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='comments')
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='comments')
+    product = models.ForeignKey(
+        'Product', on_delete=models.CASCADE, related_name='comments')
     value = models.CharField(max_length=300)
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    
+
     def __str__(self):
         return f'{self.product} - {self.created}'
 
+
 class Warehouse(models.Model):
-    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='warehouses')
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='warehouses')
     name = models.CharField(max_length=100)
 
     created = models.DateTimeField(auto_now_add=True)
@@ -147,9 +220,12 @@ class Warehouse(models.Model):
 
 
 class Stock(models.Model):
-    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='stocks')
-    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='stocks')
-    warehouse = models.ForeignKey('Warehouse', on_delete=models.CASCADE, related_name='stocks')
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='stocks')
+    product = models.ForeignKey(
+        'Product', on_delete=models.CASCADE, related_name='stocks')
+    warehouse = models.ForeignKey(
+        'Warehouse', on_delete=models.CASCADE, related_name='stocks')
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -160,11 +236,14 @@ class Stock(models.Model):
 
 class Tax(models.Model):
     name = models.CharField(max_length=30)
-    rate = models.DecimalField(max_digits=18,decimal_places=4,default=0)
-    code = models.CharField(max_length=10, null=True,blank=True)
-    is_fixed = models.CharField(max_length=10, choices=BIT_CHOICES, default="0")
-    is_tax_on_total = models.CharField(max_length=10, choices=BIT_CHOICES, default="0")
-    is_enabled = models.CharField(max_length=10, choices=BIT_CHOICES, default="0")
+    rate = models.DecimalField(max_digits=18, decimal_places=4, default=0)
+    code = models.CharField(max_length=10, null=True, blank=True)
+    is_fixed = models.CharField(
+        max_length=10, choices=BIT_CHOICES, default="0")
+    is_tax_on_total = models.CharField(
+        max_length=10, choices=BIT_CHOICES, default="0")
+    is_enabled = models.CharField(
+        max_length=10, choices=BIT_CHOICES, default="0")
     amount = models.FloatField(default=0)
 
     created = models.DateTimeField(auto_now_add=True)
@@ -173,24 +252,82 @@ class Tax(models.Model):
     def __str__(self):
         return f'{self.name} @ {self.rate}'
 
+
 class ProductTax(models.Model):
-    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='productTaxes')
-    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='productTaxes')
-    tax = models.ForeignKey('Tax', on_delete=models.CASCADE, related_name='productTaxes')
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='productTaxes')
+    product = models.ForeignKey(
+        'Product', on_delete=models.CASCADE, related_name='productTaxes')
+    tax = models.ForeignKey(
+        'Tax', on_delete=models.CASCADE, related_name='productTaxes')
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=['product', 'tax'], name='unique_product_taxes')
+            models.UniqueConstraint(
+                fields=['product', 'tax'], name='unique_product_taxes')
         ]
 
     def __str__(self):
         return f'{self.product.name} @ {self.tax.name}'
 
+
 '''
-		[ProductId] INT NOT NULL, 
-	[TaxId] INT NOT NULL,
-	PRIMARY KEY ( [ProductId], [TaxId] ) )
+CUSTOMER RELATED
 '''
+
+
+class Customer(models.Model):
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='customers')
+    code = models.CharField(max_length=30, null=True, blank=True)
+    name = models.CharField(max_length=100, unique=True)
+    address = models.CharField(max_length=300, null=True, blank=True)
+    postal_code = models.CharField(max_length=50, null=True, blank=True)
+    city = models.CharField(max_length=50, null=True, blank=True)
+    country = models.ForeignKey(
+        'Country', default=1, on_delete=models.CASCADE,
+        related_name='customers'
+    )
+    tax_number = models.CharField(max_length=100, null=True, blank=True)
+    email = models.EmailField(max_length=255, unique=True)
+    phone = models.CharField(max_length=100, null=True, blank=True)
+    is_enabled = models.CharField(
+        max_length=10, choices=BIT_CHOICES, default="1")
+    is_customer = models.CharField(
+        max_length=10, choices=BIT_CHOICES, default="1")
+    is_supplier = models.CharField(
+        max_length=10, choices=BIT_CHOICES, default="1")
+    due_date_period = models.SmallIntegerField(default=0)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.name} @ {self.city}'
+
+
+class CustomerDiscount(models.Model):
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='customer_discounts')
+    customer = models.ForeignKey(
+        'Customer', on_delete=models.CASCADE, related_name='discounts')
+    type = models.SmallIntegerField(default=0)
+    uid = models.SmallIntegerField(default=0)
+    value = models.FloatField(default=0)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['customer', 'type', 'uid'],
+                name='unique_customer_discounts'
+            )
+        ]
+
+    def __str__(self):
+        return f'{self.customer.name} - {self.type} | {self.uid}'

@@ -3,8 +3,9 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext as _
 
 from .models import (
-    Barcode, ProductComment, ProductTax, Stock, Tax, User, ProductGroup,Product, Warehouse,
-    )
+    Barcode, Company, Country, Currency, Customer, CustomerDiscount, ProductComment, ProductTax, Stock, Tax, User, ProductGroup, Product, Warehouse,
+)
+
 
 class UserAdmin(BaseUserAdmin):
     ordering = ['id']
@@ -26,7 +27,11 @@ class UserAdmin(BaseUserAdmin):
         }),
     )
 
+
 admin.site.register(User, UserAdmin)
+admin.site.register(Country)
+admin.site.register(Currency)
+admin.site.register(Company)
 admin.site.register(ProductGroup)
 admin.site.register(Product)
 admin.site.register(Barcode)
@@ -35,3 +40,5 @@ admin.site.register(Warehouse)
 admin.site.register(Stock)
 admin.site.register(Tax)
 admin.site.register(ProductTax)
+admin.site.register(Customer)
+admin.site.register(CustomerDiscount)

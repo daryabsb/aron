@@ -7,6 +7,7 @@
             class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"
           >
             <img
+              v-if="user && user.image"
               alt="..."
               class="w-full rounded-full align-middle border-none shadow-lg"
               :src="user.image"
@@ -34,12 +35,7 @@
           >
             Another action
           </a>
-          <a
-            href="javascript:void(0);"
-            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-          >
-            Something else here
-          </a>
+
           <div class="h-0 my-2 border border-solid border-blueGray-100" />
           <a
             href="http://127.0.0.1:8000/logout/"
@@ -60,27 +56,18 @@
 </template>
 
 <script>
-import { reactive } from "vue";
-import { useStore } from "vuex";
-import Popper from "vue3-popper";
+import useGetUser from "@/composables/useGetUser";
+
+// import Popper from "vue3-popper";
 
 // import image from "@/assets/img/team-1-800x800.jpg";
 
 export default {
   components: {
-    Popper,
+    // Popper,
   },
   setup() {
-    const store = useStore();
-
-    // onMounted(user());
-
-    // let dropdownPopoverShow = false;
-    // const popoverDropdownRef = ref(null);
-    // const btnDropdownRef = ref(null);
-    // let popperComp = ref(false);
-
-    const user = reactive(store.getters.GET_USER);
+    const user = useGetUser();
 
     return {
       user,

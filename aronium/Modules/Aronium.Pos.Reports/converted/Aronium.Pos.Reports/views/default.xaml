@@ -1,0 +1,289 @@
+<UserControl x:Class="Aronium.Pos.Reports.Views.Default"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:pos="http://aronium.com/pos/common"
+             xmlns:vm="clr-namespace:Aronium.Pos.Reports.ViewModels"
+             xmlns:aron="http://aronium.com/wpf">
+  <FrameworkElement.DataContext>
+    <vm:ReportsViewModel/>
+  </FrameworkElement.DataContext>
+  <FrameworkElement.Resources>
+    <Style x:Key="TabItemHeaderTextStyle" TargetType="{x:Type TextBlock}"
+           BasedOn="{StaticResource {x:Type TextBlock}}">
+      <Setter Property="TextBlock.Foreground" Value="{StaticResource Foreground}"/>
+      <Style.Triggers>
+        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=IsSelected}"
+                     Value="True">
+          <Setter Property="TextBlock.Foreground" Value="{StaticResource ForegroundSelected}"/>
+        </DataTrigger>
+      </Style.Triggers>
+    </Style>
+    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    <InvertBooleanToVisibilityConverter x:Key="InvertBooleanToVisibilityConverter"/>
+  </FrameworkElement.Resources>
+  <Grid Margin="5,5,5,0">
+    <ClosableTabControl FrameworkElement.Name="tabControlReports" UIElement.SnapsToDevicePixels="true">
+      <ClosableTabItem CanClose="false">
+        <ClosableTabItem.Title>
+          <TranslationExtension Key="Reports.Report.Select"/>
+        </ClosableTabItem.Title>
+        <HeaderedContentControl.Header>
+          <StackPanel Orientation="Horizontal">
+            <Path Data="{StaticResource IconMagnifier}" Height="10" Margin="0,1,5,0" Stretch="Uniform"
+                  Fill="{Binding ElementName=tbHeader, Path=Foreground}"/>
+            <TextBlock Name="tbHeader" Style="{StaticResource TabItemHeaderTextStyle}" VerticalAlignment="Center">
+              <TextBlock.Text>
+                <TranslationExtension Key="Reports.Report.Select"/>
+              </TextBlock.Text>
+            </TextBlock>
+          </StackPanel>
+        </HeaderedContentControl.Header>
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="300" MinWidth="300"/>
+          </Grid.ColumnDefinitions>
+          <TextBlock Margin="0,5,0,0" Style="{StaticResource Title}">
+            <TextBlock.Text>
+              <TranslationExtension Key="Reports.Report.Select.Title"/>
+            </TextBlock.Text>
+          </TextBlock>
+          <ListBox Name="lbReports" Grid.Row="1" ScrollViewer.CanContentScroll="false" BorderThickness="0"
+                   Background="{StaticResource BackgroundBrush}" SelectedItem="{Binding SelectedItem}"
+                   ItemsSource="{Binding Reports}">
+            <ItemsControl.ItemContainerStyle>
+              <Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource {x:Type ListBoxItem}}">
+              </Style>
+            </ItemsControl.ItemContainerStyle>
+            <ItemsControl.GroupStyle>
+              <GroupStyle>
+                <GroupStyle.HeaderTemplate>
+                  <DataTemplate>
+                    <Grid>
+                      <TextSeparator Control.FontSize="18" FrameworkElement.Margin="0,5,0,10"
+                                     Control.Foreground="{StaticResource Foreground}" ContentControl.Content="{Binding Name}"/>
+                      <TextBlock VerticalAlignment="Center" HorizontalAlignment="Right"
+                                 Background="{StaticResource BackgroundBrush}" Margin="10 0 10 2" Padding="10 0"
+                                 Visibility="{Binding Path=Items[0].IsInFavoritesGroup, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Hyperlink Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.ClearFavorites}">
+                          <Run>
+                            <Run.Text>
+                              <TranslationExtension Key="Reports.Favorites.Clear"/>
+                            </Run.Text>
+                          </Run>
+                        </Hyperlink>
+                      </TextBlock>
+                    </Grid>
+                  </DataTemplate>
+                </GroupStyle.HeaderTemplate>
+              </GroupStyle>
+            </ItemsControl.GroupStyle>
+            <ItemsControl.ItemTemplate>
+              <DataTemplate>
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                  </Grid.ColumnDefinitions>
+                  <Path Data="{StaticResource IconReport}" Stretch="Uniform" Height="16" Margin="0,3,5,3"
+                        Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}, Path=Foreground}"/>
+                  <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="{Binding Report.Name}"/>
+                  <Button Name="btnFavorite" Style="{StaticResource FlatButtonStyle}" Grid.Column="2" Margin="10 0 7 0"
+                          VerticalAlignment="Center"
+                          Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.ToggleFavorite}"
+                          CommandParameter="{Binding}">
+                    <FrameworkElement.ToolTip>
+                      <TranslationExtension Key="Reports.Favorites.Add"/>
+                    </FrameworkElement.ToolTip>
+                    <Path x:Name="iconFavorite" Data="{StaticResource RatingStar}" Stretch="Uniform" Margin="2"
+                          Visibility="Collapsed" Height="12" StrokeThickness="2" Stroke="DarkGoldenrod"/>
+                  </Button>
+                </Grid>
+                <DataTemplate.Triggers>
+                  <DataTrigger Value="True" Binding="{Binding IsFavorite}">
+                    <Setter TargetName="iconFavorite" Property="UIElement.Visibility" Value="Visible"/>
+                    <Setter TargetName="iconFavorite" Property="Shape.Fill" Value="DarkGoldenrod"/>
+                    <Setter TargetName="btnFavorite" Property="FrameworkElement.ToolTip">
+                      <Setter.Value>
+                        <TranslationExtension Key="Reports.Favorites.Remove"/>
+                      </Setter.Value>
+                    </Setter>
+                  </DataTrigger>
+                  <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                      <Condition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsMouseOver}" Value="True"/>
+                      <Condition Binding="{Binding IsFavorite}" Value="False"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter TargetName="iconFavorite" Property="UIElement.Visibility" Value="Visible"/>
+                  </MultiDataTrigger>
+                </DataTemplate.Triggers>
+              </DataTemplate>
+            </ItemsControl.ItemTemplate>
+          </ListBox>
+          <GridSplitter ResizeBehavior="PreviousAndNext" Grid.RowSpan="2" ResizeDirection="Columns" Grid.Column="1"/>
+          <Border BorderBrush="{StaticResource BorderBrush}" Grid.Column="2" Grid.RowSpan="2"
+                  BorderThickness="1,0,0,0">
+            <StackPanel Margin="5,0" UseLayoutRounding="false">
+              <FrameworkElement.Resources>
+                <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}">
+                  <Setter Property="FrameworkElement.MinWidth" Value="200"/>
+                  <Setter Property="FrameworkElement.HorizontalAlignment" Value="Stretch"/>
+                  <Setter Property="FrameworkElement.Margin" Value="0,2,0,5"/>
+                  <Setter Property="Control.Background" Value="Transparent"/>
+                </Style>
+                <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+                  <Setter Property="FrameworkElement.MinWidth" Value="200"/>
+                  <Setter Property="FrameworkElement.Height" Value="30"/>
+                  <Setter Property="FrameworkElement.HorizontalAlignment" Value="Stretch"/>
+                  <Setter Property="FrameworkElement.Margin" Value="0,2,0,5"/>
+                  <Setter Property="Control.Background" Value="Transparent"/>
+                </Style>
+                <Style TargetType="{x:Type Label}">
+                  <Setter Property="Control.Padding" Value="0"/>
+                  <Setter Property="Control.Foreground" Value="{StaticResource Foreground}"/>
+                </Style>
+              </FrameworkElement.Resources>
+              <TextBlock Margin="0,5" Style="{StaticResource Title}">
+                <TextBlock.Text>
+                  <TranslationExtension Key="Reports.Filter"/>
+                </TextBlock.Text>
+              </TextBlock>
+              <Label IsEnabled="{Binding SelectedItem.CanFilterCustomers}">
+                <ContentControl.Content>
+                  <TranslationExtension Key="Reports.Filter.Customer"/>
+                </ContentControl.Content>
+              </Label>
+              <ComboBox VirtualizingStackPanel.IsVirtualizing="true" VirtualizingStackPanel.VirtualizationMode="Recycling"
+                        ItemsSource="{Binding Customers}" SelectedItem="{Binding SelectedCustomer}"
+                        IsEnabled="{Binding SelectedItem.CanFilterCustomers}"/>
+              <Label IsEnabled="{Binding SelectedItem.CanFilterUsers}">
+                <ContentControl.Content>
+                  <TranslationExtension Key="Reports.Filter.User"/>
+                </ContentControl.Content>
+              </Label>
+              <ComboBox ItemsSource="{Binding Users}" SelectedItem="{Binding SelectedUser}"
+                        IsEnabled="{Binding SelectedItem.CanFilterUsers}"/>
+              <Label IsEnabled="{Binding SelectedItem.CanFilterCashRegisters}">
+                <ContentControl.Content>
+                  <TranslationExtension Key="Reports.Filter.CashRegister"/>
+                </ContentControl.Content>
+              </Label>
+              <ComboBox ItemsSource="{Binding CashRegisters}" SelectedItem="{Binding SelectedCashRegister}"
+                        IsEnabled="{Binding SelectedItem.CanFilterCashRegisters}"/>
+              <Label IsEnabled="{Binding SelectedItem.CanFilterProducts}">
+                <ContentControl.Content>
+                  <TranslationExtension Key="Reports.Filter.Product"/>
+                </ContentControl.Content>
+              </Label>
+              <ComboBox DisplayMemberPath="Name" VirtualizingStackPanel.IsVirtualizing="true"
+                        VirtualizingStackPanel.VirtualizationMode="Recycling" ItemsSource="{Binding Products}"
+                        SelectedItem="{Binding SelectedProduct}" IsEnabled="{Binding SelectedItem.CanFilterProducts}"/>
+              <Label IsEnabled="{Binding SelectedItem.CanFilterProducts}">
+                <ContentControl.Content>
+                  <TranslationExtension Key="Reports.Filter.ProductGroup"/>
+                </ContentControl.Content>
+              </Label>
+              <ComboBox DisplayMemberPath="Path" VirtualizingStackPanel.IsVirtualizing="true"
+                        VirtualizingStackPanel.VirtualizationMode="Recycling" ItemsSource="{Binding ProductGroups}"
+                        SelectedItem="{Binding SelectedProductGroup}" IsEnabled="{Binding SelectedItem.CanFilterProducts}"/>
+              <CheckBox IsChecked="{Binding IncludeSubgroups}" IsEnabled="{Binding SelectedItem.CanFilterProducts}">
+                <ContentControl.Content>
+                  <TranslationExtension Key="Reports.Filter.ProductGroup.IncludeSubgroups"/>
+                </ContentControl.Content>
+              </CheckBox>
+              <Button Padding="10,0" Height="42" Margin="0 10" HorizontalContentAlignment="Stretch"
+                      BorderBrush="{StaticResource BorderBrush}" IsEnabled="{Binding SelectedItem.CanFilterPeriod}"
+                      Command="{Binding SelectPeriod}">
+                <FrameworkElement.ToolTip>
+                  <TranslationExtension Key="Reports.Filter.Period.Tip"/>
+                </FrameworkElement.ToolTip>
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                  </Grid.ColumnDefinitions>
+                  <Path Data="{StaticResource IconCalendar}" Margin="0,0,10,0" Stretch="Uniform" Height="20"
+                        VerticalAlignment="Center"
+                        Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type Button}}, Path=Foreground}"/>
+                  <TextBlock Grid.Column="1" Margin="0,0,20,0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                             Text="{Binding Period, Mode=OneWay}"/>
+                </Grid>
+              </Button>
+              <Separator/>
+              <UniformGrid Columns="2" Margin="0,10">
+                <Button Style="{StaticResource ConfirmButtonStyle}" Margin="0,0,2,2" Command="PrintPreview">
+                  <Grid>
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="Auto"/>
+                      <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Path Data="{StaticResource IconMagnifier}" Height="16" Stretch="Uniform"
+                          Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type Button}}, Path=Foreground}"/>
+                    <TextBlock Margin="5,0,0,0" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" Grid.Column="1">
+                      <TextBlock.Text>
+                        <TranslationExtension Key="Reports.Report.Show"/>
+                      </TextBlock.Text>
+                    </TextBlock>
+                  </Grid>
+                </Button>
+                <Button Style="{StaticResource ConfirmButtonStyle}" Margin="2,0,0,2" Command="Print">
+                  <Grid>
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="Auto"/>
+                      <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Path Data="{StaticResource IconPrinter}" Height="16" Stretch="Uniform"
+                          Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type Button}}, Path=Foreground}"/>
+                    <TextBlock Margin="5,0,0,0" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" Grid.Column="1">
+                      <TextBlock.Text>
+                        <TranslationExtension Key="Buttons.Print"/>
+                      </TextBlock.Text>
+                    </TextBlock>
+                  </Grid>
+                </Button>
+                <Button Style="{StaticResource ConfirmButtonStyle}" Margin="0,2,2,0" Command="{Binding SaveExcel}">
+                  <Grid>
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="Auto"/>
+                      <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Path Data="{StaticResource IconExcel}" Height="16" Stretch="Uniform"
+                          Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type Button}}, Path=Foreground}"/>
+                    <TextBlock Margin="5,0,0,0" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" Grid.Column="1">
+                      <TextBlock.Text>
+                        <TranslationExtension Key="Buttons.Excel"/>
+                      </TextBlock.Text>
+                    </TextBlock>
+                  </Grid>
+                </Button>
+                <Button Style="{StaticResource ConfirmButtonStyle}" Margin="2,2,0,0" Command="{Binding SavePdf}">
+                  <Grid>
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="Auto"/>
+                      <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Path Data="{StaticResource IconPdf}" Height="16" Stretch="Uniform"
+                          Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type Button}}, Path=Foreground}"/>
+                    <TextBlock Margin="5,0,0,0" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" Grid.Column="1">
+                      <TextBlock.Text>
+                        <TranslationExtension Key="Buttons.Pdf"/>
+                      </TextBlock.Text>
+                    </TextBlock>
+                  </Grid>
+                </Button>
+              </UniformGrid>
+            </StackPanel>
+          </Border>
+        </Grid>
+      </ClosableTabItem>
+    </ClosableTabControl>
+  </Grid>
+</UserControl>
