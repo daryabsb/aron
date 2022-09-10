@@ -1,5 +1,3 @@
-# from re import T
-# from unicodedata import name
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
@@ -46,7 +44,7 @@ class UserManager(BaseUserManager):
 class User(PermissionsMixin, AbstractBaseUser):
     # Custom user model supports email instead of username
     email = models.EmailField(max_length=255, unique=True)
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, null=True, blank=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     image = models.ImageField(null=True, blank=True,
@@ -62,9 +60,22 @@ class User(PermissionsMixin, AbstractBaseUser):
     USERNAME_FIELD = 'email'
 
 
-class Country(models.Model):
+class Counter(models.Model):
     user = models.ForeignKey(
         'User', on_delete=models.CASCADE, related_name='country')
+    name = models.CharField(max_length=30)
+    value = models.SmallIntegerField()
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+
+
+class Country(models.Model):
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='countries')
     name = models.CharField(max_length=100, unique=True)
     code = models.CharField(max_length=4)
 
@@ -117,7 +128,53 @@ class Company(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f'{self.name} - {self.country}'
+        return f'{self.name} - {self.country.name}'
+
+
+class FiscalItem(models.Model):
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='fiscals')
+    plu = models.IntegerField(null=True, blank=True)
+    name = models.CharField(max_length=100)
+    vat = models.CharField(max_length=50)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.name} - {self.plu}'
+
+
+class FloorPlan(models.Model):
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='floor_plans')
+    name = models.CharField(max_length=100)
+    color = models.CharField(max_length=50, default='Transparent')
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+
+
+class FloorPlanTable(models.Model):
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='floor_plan_tables')
+    name = models.CharField(max_length=100)
+    floor_plan = models.ForeignKey(
+        'FloorPlan', on_delete=models.CASCADE, related_name='tables')
+    position_x = models.FloatField(default=0)
+    position_y = models.FloatField(default=0)
+    width = models.FloatField(default=0)
+    height = models.FloatField(default=0)
+    is_round = models.SmallIntegerField(default=0)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.name} @ {self.floor_plan.name}'
 
 
 '''
@@ -135,6 +192,9 @@ class ProductGroup(models.Model):
     image = models.ImageField(null=True, blank=True,
                               upload_to=upload_image_file_path)
     rank = models.SmallIntegerField(default=0)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
@@ -331,3 +391,20 @@ class CustomerDiscount(models.Model):
 
     def __str__(self):
         return f'{self.customer.name} - {self.type} | {self.uid}'
+
+
+class LoyaltyCard(models.Model):
+    user = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='customer_loyalty_cards')
+    customer = models.ForeignKey(
+        'Customer', on_delete=models.CASCADE, related_name='customer_loyalty_cards')
+    number = models.CharField(max_length=100)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    # class Meta:
+    #     indexes = [models.Index(fields=['customer']),]
+
+    def __str__(self):
+        return f'{self.customer.name} - {self.number}'
