@@ -4,8 +4,10 @@ from django.utils.translation import gettext as _
 
 from .models import (
     Barcode, Company, Country, Currency, Customer,
-    CustomerDiscount, FiscalItem, FloorPlan, FloorPlanTable,
-    LoyaltyCard, ProductComment, ProductTax, Stock, Tax, User,
+    CustomerDiscount, Document, DocumentCategory, DocumentItem,
+    DocumentItemTax, DocumentType, FiscalItem, FloorPlan,
+    FloorPlanTable, LoyaltyCard, Migration, Payment, PaymentType, PosOrder, PosOrderItem, PosPrinterSelection, PosPrinterSelectionSettings,
+    ProductComment, ProductTax, Stock, Tax, User,
     ProductGroup, Product, Warehouse, Counter
 )
 
@@ -50,3 +52,14 @@ admin.site.register(ProductTax)
 admin.site.register(Customer)
 admin.site.register(CustomerDiscount)
 admin.site.register(LoyaltyCard)
+admin.site.register(DocumentCategory)
+admin.site.register(DocumentType)
+admin.site.register(Document)
+admin.site.register(DocumentItem)
+admin.site.register(DocumentItemTax)
+admin.site.register(Migration)
+admin.site.register(PaymentType)
+admin.site.register(PosOrder)
+admin.site.register(PosOrderItem)
+admin.site.register(PosPrinterSelection)
+admin.site.register(PosPrinterSelectionSettings)
