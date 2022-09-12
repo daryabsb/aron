@@ -112,6 +112,84 @@ class Company(models.Model):
 
 
 """
+CUSTOMER RELATED
+"""
+
+
+class Customer(models.Model):
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="customers")
+    code = models.CharField(max_length=30, null=True, blank=True)
+    name = models.CharField(max_length=100, unique=True)
+    address = models.CharField(max_length=300, null=True, blank=True)
+    postal_code = models.CharField(max_length=50, null=True, blank=True)
+    city = models.CharField(max_length=50, null=True, blank=True)
+    country = models.ForeignKey(
+        "Country", default=1, on_delete=models.CASCADE, related_name="customers"
+    )
+    tax_number = models.CharField(max_length=100, null=True, blank=True)
+    email = models.EmailField(max_length=255, unique=True)
+    phone = models.CharField(max_length=100, null=True, blank=True)
+    is_enabled = models.CharField(
+        max_length=10, choices=BIT_CHOICES, default="1")
+    is_customer = models.CharField(
+        max_length=10, choices=BIT_CHOICES, default="1")
+    is_supplier = models.CharField(
+        max_length=10, choices=BIT_CHOICES, default="1")
+    due_date_period = models.SmallIntegerField(default=0)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.name} @ {self.city}"
+
+
+class CustomerDiscount(models.Model):
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="customer_discounts"
+    )
+    customer = models.ForeignKey(
+        "Customer", on_delete=models.CASCADE, related_name="discounts"
+    )
+    type = models.SmallIntegerField(default=0)
+    uid = models.SmallIntegerField(default=0)
+    value = models.FloatField(default=0)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["customer", "type", "uid"], name="unique_customer_discounts"
+            )
+        ]
+
+    def __str__(self):
+        return f"{self.customer.name} - {self.type} | {self.uid}"
+
+
+class LoyaltyCard(models.Model):
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="customer_loyalty_cards"
+    )
+    customer = models.ForeignKey(
+        "Customer", on_delete=models.CASCADE, related_name="customer_loyalty_cards"
+    )
+    number = models.CharField(max_length=100)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    # class Meta:
+    #     indexes = [models.Index(fields=['customer']),]
+
+    def __str__(self):
+        return f"{self.customer.name} - {self.number}"
+
+
+"""
 ALL ABOUT DOCUMENTS (INVOICES AND STUFF)
 """
 
@@ -434,11 +512,11 @@ class PosPrinterSelection(models.Model):
 
 class PosPrinterSelectionSettings(models.Model):
     user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="pos_printer_settings"
+        "User", on_delete=models.CASCADE, related_name="pos_printer_selection_settings"
     )
     pos_printer_selection = models.ForeignKey(
         "PosPrinterSelection", on_delete=models.CASCADE,
-        null=True, related_name="settings"
+        null=True, related_name="pos_printer_selection_settings"
     )
     paper_width = models.SmallIntegerField(default=32)
     header = models.CharField(max_length=100)
@@ -472,6 +550,82 @@ class PosPrinterSelectionSettings(models.Model):
 
     def __str__(self):
         return f"Settings for: {self.pos_printer_selection.printer_name}"
+
+
+class PosPrinterSettings(models.Model):
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="pos_printer_settings"
+    )
+    printer_name = models.CharField(max_length=100, unique=True)
+    paper_width = models.SmallIntegerField(default=32)
+    header = models.CharField(max_length=100)
+    footer = models.CharField(max_length=100)
+    feed_lines = models.SmallIntegerField(default=0)
+    cut_paper = models.SmallIntegerField(default=1)
+    print_bitmap = models.SmallIntegerField(default=0)
+    open_cash_drawer = models.SmallIntegerField(default=1)
+    cash_drawer_command = models.CharField(max_length=100)
+    header_alignment = models.SmallIntegerField(default=0)
+    footer_alignment = models.SmallIntegerField(default=0)
+    is_formatting_enabled = models.BooleanField(default=False)
+    printer_type = models.SmallIntegerField(default=0)
+    number_of_copies = models.SmallIntegerField(default=1)
+    code_page = models.SmallIntegerField(default=-1)
+    character_set = models.SmallIntegerField(default=-1)
+    margin = models.SmallIntegerField(default=0)
+    left_margin = models.FloatField(default=1)
+    top_margin = models.FloatField(default=0)
+    right_margin = models.FloatField(default=0)
+    bottom_margin = models.FloatField(default=0)
+    print_barcode = models.SmallIntegerField(default=1)
+    font_name = models.CharField(max_length=100)
+    font_size_percent = models.FloatField(default=100.0)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name_plural = "PosPrinterSettings"
+        constraints = [
+            models.UniqueConstraint(
+                fields=["id", "printer_name"], name="unique_printer_name"
+            )
+        ]
+
+    def __str__(self):
+        return f"Settings for: {self.pos_printer_selection.printer_name}"
+
+
+class PrintStation(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
+class PrintStationPosPrinterSelection(models.Model):
+    print_station = models.ForeignKey("PrintStation", on_delete=models.CASCADE)
+    pos_printer_selection = models.ForeignKey(
+        "PosPrinterSelection", on_delete=models.CASCADE)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["print_station", "pos_printer_selection"],
+                name="unique_printer_pos_printer_selection"
+            )
+        ]
+
+    def __str__(self):
+        return f'{self.print_station.name} - {self.pos_printer_selection}'
+
+
+class ProductGroupPrintStation(models.Model):
+    pass
+
+
+class ProductPrintStation(models.Model):
+    pass
 
 
 """
@@ -605,6 +759,28 @@ class Stock(models.Model):
         return f"{self.product} @ {self.warehouse}"
 
 
+class StockControl(models.Model):
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="stock_controls")
+    product = models.ForeignKey(
+        "Product", on_delete=models.CASCADE, related_name="stock_controls"
+    )
+    customer = models.ForeignKey(
+        "Customer", on_delete=models.SET_NULL, null=True,
+        related_name="stock_controls"
+    )
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["print_station"],)
+            name = "unique_printer_pos_printer_selection"
+        ]
+
+    def __str__(self):
+        return f'{self.print_station.name} - {self.pos_printer_selection}'
+
+
 class Tax(models.Model):
     name = models.CharField(max_length=30)
     rate = models.DecimalField(max_digits=18, decimal_places=4, default=0)
@@ -649,50 +825,38 @@ class ProductTax(models.Model):
         return f"{self.product.name} @ {self.tax.name}"
 
 
-"""
-CUSTOMER RELATED
-"""
+'''
+PROMOTION RELATED
+'''
 
 
-class Customer(models.Model):
+class Promotion(models.Model):
+    pass
+
+
+class PromotionItem(models.Model):
+    pass
+
+
+class SecurityKey(models.Model):
     user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="customers")
-    code = models.CharField(max_length=30, null=True, blank=True)
-    name = models.CharField(max_length=100, unique=True)
-    address = models.CharField(max_length=300, null=True, blank=True)
-    postal_code = models.CharField(max_length=50, null=True, blank=True)
-    city = models.CharField(max_length=50, null=True, blank=True)
-    country = models.ForeignKey(
-        "Country", default=1, on_delete=models.CASCADE, related_name="customers"
+        "User", on_delete=models.CASCADE, related_name="security_keys"
     )
-    tax_number = models.CharField(max_length=100, null=True, blank=True)
-    email = models.EmailField(max_length=255, unique=True)
-    phone = models.CharField(max_length=100, null=True, blank=True)
-    is_enabled = models.CharField(
-        max_length=10, choices=BIT_CHOICES, default="1")
-    is_customer = models.CharField(
-        max_length=10, choices=BIT_CHOICES, default="1")
-    is_supplier = models.CharField(
-        max_length=10, choices=BIT_CHOICES, default="1")
-    due_date_period = models.SmallIntegerField(default=0)
-
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
+    name = models.CharField(max_length=100, primary_key=True)
+    level = models.SmallIntegerField(default=1)
 
     def __str__(self):
-        return f"{self.name} @ {self.city}"
+        return f'{self.name}: Level {self.level}'
 
 
-class CustomerDiscount(models.Model):
+class StartingCash(models.Model):
     user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="customer_discounts"
+        "User", on_delete=models.CASCADE, related_name="starting_cashes"
     )
-    customer = models.ForeignKey(
-        "Customer", on_delete=models.CASCADE, related_name="discounts"
-    )
-    type = models.SmallIntegerField(default=0)
-    uid = models.SmallIntegerField(default=0)
-    value = models.FloatField(default=0)
+    amount = models.FloatField(default=0)
+    description = models.TextField(null=True, blank=True)
+    starting_cash_type = models.SmallIntegerField(default=0)
+    z_report_number = models.SmallIntegerField(default=0)
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -700,28 +864,9 @@ class CustomerDiscount(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=["customer", "type", "uid"], name="unique_customer_discounts"
+                fields=["id"], name="unique_id"
             )
         ]
 
     def __str__(self):
-        return f"{self.customer.name} - {self.type} | {self.uid}"
-
-
-class LoyaltyCard(models.Model):
-    user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="customer_loyalty_cards"
-    )
-    customer = models.ForeignKey(
-        "Customer", on_delete=models.CASCADE, related_name="customer_loyalty_cards"
-    )
-    number = models.CharField(max_length=100)
-
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
-
-    # class Meta:
-    #     indexes = [models.Index(fields=['customer']),]
-
-    def __str__(self):
-        return f"{self.customer.name} - {self.number}"
+        return f"{self.amount} On {self.created}"
