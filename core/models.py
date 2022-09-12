@@ -1,4 +1,5 @@
 from django.db import models
+import uuid
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 
@@ -8,6 +9,7 @@ from .modules import (
     # calculateAge,
     # save_pdf_pages_attachment,
     upload_image_file_path,
+    upload_file_file_path,
     # pdf_page_count
 )
 
@@ -37,6 +39,21 @@ class User(PermissionsMixin, AbstractBaseUser):
     objects = UserManager()
 
     USERNAME_FIELD = "email"
+
+
+class ApplicationProperty(models.Model):
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE,
+        related_name="application_properties"
+    )
+    name = models.CharField(max_length=50)
+    value = models.SmallIntegerField()
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Counter(models.Model):
@@ -329,7 +346,8 @@ class DocumentItemTax(models.Model):
 class Migration(models.Model):
     version = models.CharField(max_length=100)
     description = models.TextField(null=True, blank=True)
-    file_name = models.CharField(max_length=250)
+    file_name = models.FileField(null=True, blank=True,
+                                 upload_to=upload_image_file_path)
     module = models.CharField(max_length=250)
 
     created = models.DateTimeField(auto_now_add=True)
@@ -351,7 +369,7 @@ class PaymentType(models.Model):
     name = models.CharField(max_length=100)
     code = models.CharField(max_length=100, null=True, blank=True)
     is_customer_required = models.BooleanField(default=False)
-    is_fiscal = models.BooleanField(default=True)
+    is_fiscal = models.BooleanField(default=False)
     is_slip_required = models.BooleanField(default=False)
     is_change_allowed = models.BooleanField(default=True)
     ordinal = models.BooleanField(default=False)
@@ -627,11 +645,55 @@ class PrintStationPosPrinterSelection(models.Model):
 
 
 class ProductGroupPrintStation(models.Model):
-    pass
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE,
+        related_name="productGroupPrintStations"
+    )
+    product_group = models.ForeignKey(
+        "ProductGroup", on_delete=models.CASCADE,
+        related_name='productGroupPrintStations'
+    )
+    print_station = models.ForeignKey(
+        "PrintStation", on_delete=models.CASCADE,
+        related_name='productGroupPrintStations'
+    )
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=("product_group", "print_station"),
+                name='pg_print_station'
+            )
+        ]
+
+    def __str__(self):
+        return f'{self.product_group.name} - {self.print_station.name}'
 
 
 class ProductPrintStation(models.Model):
-    pass
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE,
+        related_name="productPrintStations"
+    )
+    product = models.ForeignKey(
+        "Product", on_delete=models.CASCADE,
+        related_name='productPrintStations'
+    )
+    print_station = models.ForeignKey(
+        "PrintStation", on_delete=models.CASCADE,
+        related_name='productPrintStations'
+    )
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=("product", "print_station"),
+                name='product_print_station'
+            )
+        ]
+
+    def __str__(self):
+        return f'{self.product.name} - {self.print_station.name}'
 
 
 """
@@ -664,36 +726,30 @@ class ProductGroup(models.Model):
 
 class Product(models.Model):
     user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="products")
+        "User", on_delete=models.CASCADE, related_name="products"
+    )
     name = models.CharField(max_length=100)
-    product_group = models.ForeignKey("ProductGroup", on_delete=models.CASCADE)
+    product_group = models.ForeignKey(
+        "ProductGroup", on_delete=models.CASCADE, related_name="products"
+    )
     code = models.CharField(max_length=100, null=True, blank=True)
     description = models.CharField(max_length=300, null=True, blank=True)
     plu = models.IntegerField(null=True, blank=True)
     measurement_unit = models.CharField(max_length=10, null=True, blank=True)
     price = models.FloatField(default=0)
-    is_tax_inclusive_price = models.CharField(
-        max_length=10, choices=BIT_CHOICES, default="0"
-    )
+    is_tax_inclusive_price = models.BooleanField(default=False)
     currency = models.ForeignKey(
         "Currency", on_delete=models.CASCADE, related_name="products"
     )
-    is_price_change_allowed = models.CharField(
-        max_length=10, choices=BIT_CHOICES, default="0"
-    )
-    is_service = models.CharField(
-        max_length=10, choices=BIT_CHOICES, default="0")
-    is_using_default_quantity = models.CharField(
-        max_length=10, choices=BIT_CHOICES, default="1"
-    )
+    is_price_change_allowed = models.BooleanField(default=False)
+    is_service = models.BooleanField(default=False)
+    is_using_default_quantity = models.BooleanField(default=True)
     cost = models.FloatField(default=0, null=True, blank=True)
     margin = models.DecimalField(max_digits=18, decimal_places=3, default=0)
     image = models.ImageField(null=True, blank=True,
                               upload_to=upload_image_file_path)
     color = models.CharField(max_length=50, default="Transparent")
-    is_enabled = models.CharField(
-        max_length=10, choices=BIT_CHOICES, default="1")
-
+    is_enabled = models.BooleanField(default=True)
     age_restriction = models.SmallIntegerField(null=True, blank=True)
     last_purchase_price = models.FloatField(default=0)
     rank = models.SmallIntegerField(default=0)
@@ -784,7 +840,7 @@ class StockControl(models.Model):
         indexes = [
             models.Index(
                 fields=["product"], name="stock_control_product_index"
-                )
+            )
         ]
 
     def __str__(self):
@@ -792,15 +848,15 @@ class StockControl(models.Model):
 
 
 class Tax(models.Model):
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="taxes"
+    )
     name = models.CharField(max_length=30)
     rate = models.DecimalField(max_digits=18, decimal_places=4, default=0)
     code = models.CharField(max_length=10, null=True, blank=True)
-    is_fixed = models.CharField(
-        max_length=10, choices=BIT_CHOICES, default="0")
-    is_tax_on_total = models.CharField(
-        max_length=10, choices=BIT_CHOICES, default="0")
-    is_enabled = models.CharField(
-        max_length=10, choices=BIT_CHOICES, default="0")
+    is_fixed = models.BooleanField(default=False)
+    is_tax_on_total = models.BooleanField(default=False)
+    is_enabled = models.BooleanField(default=False)
     amount = models.FloatField(default=0)
 
     created = models.DateTimeField(auto_now_add=True)
@@ -841,11 +897,43 @@ PROMOTION RELATED
 
 
 class Promotion(models.Model):
-    pass
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="promotions"
+    )
+    name = models.CharField(max_length=30)
+
+    start_date = models.DateTimeField(auto_now_add=True)
+    start_time = models.DateTimeField(auto_now_add=True)
+    end_date = models.DateTimeField()
+    end_time = models.DateTimeField()
+    days_of_week = models.SmallIntegerField()
+    is_enabled = models.BooleanField(default=False)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'From {self.start_date} to {self.end_date}'
 
 
 class PromotionItem(models.Model):
-    pass
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="promotion_items"
+    )
+    promotion = models.ForeignKey(
+        "Promotion", on_delete=models.CASCADE, related_name="promotion_items"
+    )
+    uid = models.IntegerField(default=uuid.uuid4)
+    discount_type = models.SmallIntegerField(default=0)
+    price_type = models.SmallIntegerField(default=0)
+    value = models.FloatField(default=0)
+    is_conditional = models.BooleanField(default=False)
+    quantity = models.FloatField(default=1)
+    condition_type = models.SmallIntegerField(default=0)
+    quantity_limit = models.SmallIntegerField(default=0)
+
+    def __str__(self):
+        return f'{Promotion.name}: {self.uid}'
 
 
 class SecurityKey(models.Model):
@@ -880,3 +968,19 @@ class StartingCash(models.Model):
 
     def __str__(self):
         return f"{self.amount} On {self.created}"
+
+
+class ZReport(models.Model):
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="reports"
+    )
+    number = models.SmallIntegerField()
+    from_document = models.ForeignKey(
+        "Document", on_delete=models.CASCADE, related_name="from_documents"
+    )
+    to_document = models.ForeignKey(
+        "Document", on_delete=models.CASCADE, related_name="to_documents"
+    )
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
