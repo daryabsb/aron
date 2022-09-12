@@ -6,8 +6,9 @@ from .models import (
     Barcode, Company, Country, Currency, Customer,
     CustomerDiscount, Document, DocumentCategory, DocumentItem,
     DocumentItemTax, DocumentType, FiscalItem, FloorPlan,
-    FloorPlanTable, LoyaltyCard, Migration, Payment, PaymentType, PosOrder, PosOrderItem, PosPrinterSelection, PosPrinterSelectionSettings,
-    ProductComment, ProductTax, Stock, Tax, User,
+    FloorPlanTable, LoyaltyCard, Migration, Payment, PaymentType, PosOrder,
+    PosOrderItem, PosPrinterSelection, PosPrinterSelectionSettings,
+    ProductComment, ProductTax, Stock, StockControl, Tax, User,
     ProductGroup, Product, Warehouse, Counter
 )
 
@@ -47,6 +48,7 @@ admin.site.register(Barcode)
 admin.site.register(ProductComment)
 admin.site.register(Warehouse)
 admin.site.register(Stock)
+admin.site.register(StockControl)
 admin.site.register(Tax)
 admin.site.register(ProductTax)
 admin.site.register(Customer)
@@ -58,6 +60,7 @@ admin.site.register(Document)
 admin.site.register(DocumentItem)
 admin.site.register(DocumentItemTax)
 admin.site.register(Migration)
+admin.site.register(Payment)
 admin.site.register(PaymentType)
 admin.site.register(PosOrder)
 admin.site.register(PosOrderItem)

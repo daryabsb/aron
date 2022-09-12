@@ -125,17 +125,15 @@ class Customer(models.Model):
     postal_code = models.CharField(max_length=50, null=True, blank=True)
     city = models.CharField(max_length=50, null=True, blank=True)
     country = models.ForeignKey(
-        "Country", default=1, on_delete=models.CASCADE, related_name="customers"
+        "Country", default=1, on_delete=models.CASCADE,
+        related_name="customers"
     )
     tax_number = models.CharField(max_length=100, null=True, blank=True)
     email = models.EmailField(max_length=255, unique=True)
     phone = models.CharField(max_length=100, null=True, blank=True)
-    is_enabled = models.CharField(
-        max_length=10, choices=BIT_CHOICES, default="1")
-    is_customer = models.CharField(
-        max_length=10, choices=BIT_CHOICES, default="1")
-    is_supplier = models.CharField(
-        max_length=10, choices=BIT_CHOICES, default="1")
+    is_enabled = models.BooleanField(default=True)
+    is_customer = models.BooleanField(default=True)
+    is_supplier = models.BooleanField(default=False)
     due_date_period = models.SmallIntegerField(default=0)
 
     created = models.DateTimeField(auto_now_add=True)
@@ -162,7 +160,8 @@ class CustomerDiscount(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=["customer", "type", "uid"], name="unique_customer_discounts"
+                fields=["customer", "type", "uid"],
+                name="unique_customer_discounts"
             )
         ]
 
@@ -175,7 +174,8 @@ class LoyaltyCard(models.Model):
         "User", on_delete=models.CASCADE, related_name="customer_loyalty_cards"
     )
     customer = models.ForeignKey(
-        "Customer", on_delete=models.CASCADE, related_name="customer_loyalty_cards"
+        "Customer", on_delete=models.CASCADE,
+        related_name="customer_loyalty_cards"
     )
     number = models.CharField(max_length=100)
 
@@ -221,7 +221,8 @@ class DocumentType(models.Model):
         related_name="document_types",
     )
     warehouse = models.ForeignKey(
-        "Warehouse", on_delete=models.SET_NULL, null=True, related_name="document_types"
+        "Warehouse", on_delete=models.SET_NULL, null=True,
+        related_name="document_types"
     )
     stock_direction = models.SmallIntegerField(default=0)
     editor_type = models.SmallIntegerField(default=0)
@@ -241,18 +242,20 @@ class Document(models.Model):
         "User", on_delete=models.CASCADE, related_name="documents")
     number = models.CharField(max_length=30, unique=True)
     customer = models.ForeignKey(
-        "Customer", on_delete=models.DO_NOTHING, null=True, related_name="documents"
+        "Customer", on_delete=models.DO_NOTHING, null=True,
+        related_name="documents"
     )
     order_number = models.CharField(max_length=30, unique=True)
     date = models.DateTimeField(auto_now_add=True)
     stock_date = models.DateTimeField(auto_now_add=True)
     total = models.FloatField(default=0)
-    is_clocked_out = models.SmallIntegerField(default=0)
+    is_clocked_out = models.BooleanField(default=False)
     document_type = models.ForeignKey(
         "DocumentType", on_delete=models.DO_NOTHING, related_name="documents"
     )
     warehouse = models.ForeignKey(
-        "Warehouse", null=True, on_delete=models.DO_NOTHING, related_name="documents"
+        "Warehouse", null=True, on_delete=models.DO_NOTHING,
+        related_name="documents"
     )
     reference_document_number = models.CharField(max_length=100, unique=True)
     internal_note = models.TextField(null=True, blank=True)
@@ -260,7 +263,7 @@ class Document(models.Model):
     due_date = models.DateTimeField(auto_now_add=True)
     discount = models.SmallIntegerField(default=0)
     discount_type = models.SmallIntegerField(default=0)
-    paid_status = models.SmallIntegerField(default=0)
+    paid_status = models.BooleanField(default=False)
     discount_apply_rule = models.SmallIntegerField(default=0)
 
     created = models.DateTimeField(auto_now_add=True)
@@ -275,7 +278,8 @@ class DocumentItem(models.Model):
         "User", on_delete=models.CASCADE, related_name="document_items"
     )
     document = models.ForeignKey(
-        "Document", on_delete=models.CASCADE, null=True, related_name="document_items"
+        "Document", on_delete=models.CASCADE, null=True,
+        related_name="document_items"
     )
     product = models.ForeignKey(
         "Product", on_delete=models.DO_NOTHING, related_name="document_items"
@@ -319,7 +323,7 @@ class DocumentItemTax(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"DocumentItem ID:{self.document_item.id}= Amount ({self.amount})"
+        return f"DocItem ID:{self.document_item.id}= Amount ({self.amount})"
 
 
 class Migration(models.Model):
@@ -462,7 +466,8 @@ class PosOrderItem(models.Model):
         "User", on_delete=models.CASCADE, related_name="order_items"
     )
     order = models.ForeignKey(
-        "PosOrder", on_delete=models.CASCADE, null=True, related_name="order_items"
+        "PosOrder", on_delete=models.CASCADE, null=True,
+        related_name="order_items"
     )
     product = models.ForeignKey(
         "Product", on_delete=models.DO_NOTHING, related_name="order_items"
@@ -512,7 +517,8 @@ class PosPrinterSelection(models.Model):
 
 class PosPrinterSelectionSettings(models.Model):
     user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="pos_printer_selection_settings"
+        "User", on_delete=models.CASCADE,
+        related_name="pos_printer_selection_settings"
     )
     pos_printer_selection = models.ForeignKey(
         "PosPrinterSelection", on_delete=models.CASCADE,
@@ -769,12 +775,16 @@ class StockControl(models.Model):
         "Customer", on_delete=models.SET_NULL, null=True,
         related_name="stock_controls"
     )
+    recorder_poing = models.FloatField(default=0)
+    preferred_quantity = models.SmallIntegerField(default=1)
+    is_low_stock_warning_enabled = models.BooleanField(default=True)
+    low_stock_warning_quantity = models.SmallIntegerField(default=1)
 
     class Meta:
-        constraints = [
-            models.UniqueConstraint(
-                fields=["print_station"],)
-            name = "unique_printer_pos_printer_selection"
+        indexes = [
+            models.Index(
+                fields=["product"], name="stock_control_product_index"
+                )
         ]
 
     def __str__(self):
