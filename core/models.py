@@ -3,7 +3,7 @@ import uuid
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 
-from .managers import UserManager
+from .managers import OrderManager, UserManager
 
 from .modules import (
     # calculateAge,
@@ -475,8 +475,10 @@ class PosOrder(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
+    objects = OrderManager()
+
     def __str__(self):
-        return f"{self.language}: {self.name}"
+        return f"{self.number}: {self.total}"
 
 
 class PosOrderItem(models.Model):
@@ -485,7 +487,7 @@ class PosOrderItem(models.Model):
     )
     order = models.ForeignKey(
         "PosOrder", on_delete=models.CASCADE, null=True,
-        related_name="order_items"
+        related_name="items"
     )
     product = models.ForeignKey(
         "Product", on_delete=models.DO_NOTHING, related_name="order_items"
@@ -505,7 +507,7 @@ class PosOrderItem(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.product.name}: {self.quantity} | total= {self.total}"
+        return f"Order#:{self.order.id}: {self.quantity}"
 
 
 '''

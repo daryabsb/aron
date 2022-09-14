@@ -13,15 +13,15 @@
             <div class="container mx-auto items-center flex flex-wrap">
               <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
                 <div class="pt-32 sm:pt-0">
-                  <h2 class="font-semibold text-4xl text-blueGray-600">
+                  <h2 class="font-semibold text-4xl text-slate-600">
                     Vue Notus - A beautiful extension for Tailwind CSS.
                   </h2>
-                  <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+                  <p class="mt-4 text-lg leading-relaxed text-slate-500">
                     Vue Notus is Free and Open Source. It does not change any of
                     the CSS from
                     <a
                       href="https://tailwindcss.com/?ref=creativetim"
-                      class="text-blueGray-600"
+                      class="text-slate-600"
                       target="_blank"
                     >
                       Tailwind CSS.
@@ -39,7 +39,7 @@
                     </a>
                     <a
                       href="https://github.com/creativetimofficial/vue-notus?ref=vn-index"
-                      class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                      class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                       target="_blank"
                     >
                       Github Star
@@ -56,7 +56,7 @@
             />
           </section>
 
-          <section class="mt-48 md:mt-40 pb-40 relative bg-blueGray-100">
+          <section class="mt-48 md:mt-40 pb-40 relative bg-slate-100">
             <div
               class="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
               style="transform: translateZ(0);"
@@ -71,7 +71,7 @@
                 y="0"
               >
                 <polygon
-                  class="text-blueGray-100 fill-current"
+                  class="text-slate-100 fill-current"
                   points="2560 0 2560 100 0 100"
                 ></polygon>
               </svg>
@@ -120,14 +120,14 @@
                       <div class="relative flex flex-col mt-4">
                         <div class="px-4 py-5 flex-auto">
                           <div
-                            class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
+                            class="text-slate-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
                           >
                             <i class="fas fa-sitemap"></i>
                           </div>
                           <h6 class="text-xl mb-1 font-semibold">
                             CSS Components
                           </h6>
-                          <p class="mb-4 text-blueGray-500">
+                          <p class="mb-4 text-slate-500">
                             Vue Notus comes with a huge number of Fully Coded
                             CSS components.
                           </p>
@@ -136,14 +136,14 @@
                       <div class="relative flex flex-col min-w-0">
                         <div class="px-4 py-5 flex-auto">
                           <div
-                            class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
+                            class="text-slate-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
                           >
                             <i class="fas fa-drafting-compass"></i>
                           </div>
                           <h6 class="text-xl mb-1 font-semibold">
                             JavaScript Components
                           </h6>
-                          <p class="mb-4 text-blueGray-500">
+                          <p class="mb-4 text-slate-500">
                             We also feature many dynamic components for React,
                             NextJS, Vue and Angular.
                           </p>
@@ -154,12 +154,12 @@
                       <div class="relative flex flex-col min-w-0 mt-4">
                         <div class="px-4 py-5 flex-auto">
                           <div
-                            class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
+                            class="text-slate-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
                           >
                             <i class="fas fa-newspaper"></i>
                           </div>
                           <h6 class="text-xl mb-1 font-semibold">Pages</h6>
-                          <p class="mb-4 text-blueGray-500">
+                          <p class="mb-4 text-slate-500">
                             This extension also comes with 3 sample pages. They
                             are fully coded so you can start working instantly.
                           </p>
@@ -168,14 +168,14 @@
                       <div class="relative flex flex-col min-w-0">
                         <div class="px-4 py-5 flex-auto">
                           <div
-                            class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
+                            class="text-slate-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
                           >
                             <i class="fas fa-file-alt"></i>
                           </div>
                           <h6 class="text-xl mb-1 font-semibold">
                             Documentation
                           </h6>
-                          <p class="mb-4 text-blueGray-500">
+                          <p class="mb-4 text-slate-500">
                             Built by developers for developers. You will love
                             how easy is to to work with Vue Notus.
                           </p>
@@ -193,7 +193,7 @@
                   class="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48"
                 >
                   <div
-                    class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
+                    class="text-slate-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
                   >
                     <i class="fas fa-sitemap text-xl"></i>
                   </div>
@@ -201,7 +201,7 @@
                     CSS Components
                   </h3>
                   <p
-                    class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600"
+                    class="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-600"
                   >
                     Every element that you need in a product comes built in as a
                     component. All components fit perfectly with each other and
@@ -209,42 +209,42 @@
                   </p>
                   <div class="block pb-6">
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Buttons
                     </span>
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Inputs
                     </span>
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Labels
                     </span>
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Menus
                     </span>
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Navbars
                     </span>
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Pagination
                     </span>
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Progressbars
                     </span>
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Typography
                     </span>
@@ -252,7 +252,7 @@
                   <a
                     href="https://www.creative-tim.com/learning-lab/tailwind/vue/alerts/notus?ref=vn-index"
                     target="_blank"
-                    class="font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150"
+                    class="font-bold text-slate-700 hover:text-slate-500 ease-linear transition-all duration-150"
                   >
                     View All
                     <i
@@ -325,7 +325,7 @@
                         target="_blank"
                       >
                         <div
-                          class="bg-lightBlue-500 shadow-lg rounded-lg text-center p-8 mt-8"
+                          class="bg-sky-500 shadow-lg rounded-lg text-center p-8 mt-8"
                         >
                           <img
                             alt="..."
@@ -342,7 +342,7 @@
                         target="_blank"
                       >
                         <div
-                          class="bg-blueGray-700 shadow-lg rounded-lg text-center p-8 mt-8"
+                          class="bg-slate-700 shadow-lg rounded-lg text-center p-8 mt-8"
                         >
                           <img
                             alt="..."
@@ -415,7 +415,7 @@
                   class="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48"
                 >
                   <div
-                    class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
+                    class="text-slate-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
                   >
                     <i class="fas fa-drafting-compass text-xl"></i>
                   </div>
@@ -423,56 +423,56 @@
                     Javascript Components
                   </h3>
                   <p
-                    class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600"
+                    class="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-600"
                   >
                     In order to create a great User Experience some components
                     require JavaScript. In this way you can manipulate the
                     elements on the page and give more options to your users.
                   </p>
                   <p
-                    class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600"
+                    class="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-600"
                   >
                     We created a set of Components that are dynamic and come to
                     help you.
                   </p>
                   <div class="block pb-6">
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Alerts
                     </span>
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Dropdowns
                     </span>
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Menus
                     </span>
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Modals
                     </span>
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Navbars
                     </span>
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Popovers
                     </span>
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Tabs
                     </span>
                     <span
-                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2"
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-white uppercase last:mr-0 mr-2 mt-2"
                     >
                       Tooltips
                     </span>
@@ -480,7 +480,7 @@
                   <a
                     href="https://www.creative-tim.com/learning-lab/tailwind/vue/alerts/notus?ref=vn-index"
                     target="_blank"
-                    class="font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150"
+                    class="font-bold text-slate-700 hover:text-slate-500 ease-linear transition-all duration-150"
                   >
                     View all
                     <i
@@ -496,14 +496,14 @@
                 <div class="w-full md:w-5/12 ml-auto px-12 md:px-4">
                   <div class="md:pr-12">
                     <div
-                      class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
+                      class="text-slate-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
                     >
                       <i class="fas fa-file-alt text-xl"></i>
                     </div>
                     <h3 class="text-3xl font-semibold">
                       Complex Documentation
                     </h3>
-                    <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+                    <p class="mt-4 text-lg leading-relaxed text-slate-500">
                       This extension comes a lot of fully coded examples that
                       help you get started faster. You can adjust the colors and
                       also the programming language. You can change the text and
@@ -514,13 +514,13 @@
                         <div class="flex items-center">
                           <div>
                             <span
-                              class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3"
+                              class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-slate-50 mr-3"
                             >
                               <i class="fas fa-fingerprint"></i>
                             </span>
                           </div>
                           <div>
-                            <h4 class="text-blueGray-500">
+                            <h4 class="text-slate-500">
                               Built by Developers for Developers
                             </h4>
                           </div>
@@ -530,13 +530,13 @@
                         <div class="flex items-center">
                           <div>
                             <span
-                              class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3"
+                              class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-slate-50 mr-3"
                             >
                               <i class="fab fa-html5"></i>
                             </span>
                           </div>
                           <div>
-                            <h4 class="text-blueGray-500">
+                            <h4 class="text-slate-500">
                               Carefully crafted code for Components
                             </h4>
                           </div>
@@ -546,13 +546,13 @@
                         <div class="flex items-center">
                           <div>
                             <span
-                              class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3"
+                              class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-slate-500 bg-slate-50 mr-3"
                             >
                               <i class="far fa-paper-plane"></i>
                             </span>
                           </div>
                           <div>
-                            <h4 class="text-blueGray-500">
+                            <h4 class="text-slate-500">
                               Dynamic Javascript Components
                             </h4>
                           </div>
@@ -579,7 +579,7 @@
             <div class="justify-center text-center flex flex-wrap mt-24">
               <div class="w-full md:w-6/12 px-12 md:px-4">
                 <h2 class="font-semibold text-4xl">Beautiful Example Pages</h2>
-                <p class="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
+                <p class="text-lg leading-relaxed mt-4 mb-4 text-slate-500">
                   Vue Notus is a completly new product built using our past
                   experience in web templates. Take the examples we made for you
                   and start playing with them.
@@ -588,7 +588,7 @@
             </div>
           </section>
 
-          <section class="block relative z-1 bg-blueGray-600">
+          <section class="block relative z-1 bg-slate-600">
             <div class="container mx-auto">
               <div class="justify-center flex flex-wrap">
                 <div class="w-full lg:w-12/12 px-4 -mt-24">
@@ -649,14 +649,14 @@
             </div>
           </section>
 
-          <section class="py-20 bg-blueGray-600 overflow-hidden">
+          <section class="py-20 bg-slate-600 overflow-hidden">
             <div class="container mx-auto pb-64">
               <div class="flex flex-wrap justify-center">
                 <div
                   class="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64"
                 >
                   <div
-                    class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
+                    class="text-slate-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
                   >
                     <i class="fas fa-code-branch text-xl"></i>
                   </div>
@@ -666,12 +666,12 @@
                     Open Source
                   </h3>
                   <p
-                    class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-400"
+                    class="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-400"
                   >
                     Since
                     <a
                       href="https://tailwindcss.com/?ref=creativetim"
-                      class="text-blueGray-300"
+                      class="text-slate-300"
                       target="_blank"
                     >
                       Tailwind CSS
@@ -681,7 +681,7 @@
                     design and also test the quality of the code!
                   </p>
                   <p
-                    class="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-400"
+                    class="text-lg font-light leading-relaxed mt-0 mb-4 text-slate-400"
                   >
                     Get it free on Github and please help us spread the news
                     with a Star!
@@ -689,7 +689,7 @@
                   <a
                     href="https://github.com/creativetimofficial/vue-notus?ref=vn-index"
                     target="_blank"
-                    class="github-star mt-4 inline-block text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                    class="github-star mt-4 inline-block text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                   >
                     Github Star
                   </a>
@@ -699,14 +699,14 @@
                   class="w-full md:w-4/12 px-4 mr-auto ml-auto mt-32 relative"
                 >
                   <i
-                    class="fab fa-github text-blueGray-700 text-55 absolute -top-150-px -right-100 left-auto opacity-80"
+                    class="fab fa-github text-slate-700 text-55 absolute -top-150-px -right-100 left-auto opacity-80"
                   ></i>
                 </div>
               </div>
             </div>
           </section>
 
-          <section class="pb-16 bg-blueGray-200 relative pt-32">
+          <section class="pb-16 bg-slate-200 relative pt-32">
             <div
               class="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
               style="transform: translateZ(0);"
@@ -721,7 +721,7 @@
                 y="0"
               >
                 <polygon
-                  class="text-blueGray-200 fill-current"
+                  class="text-slate-200 fill-current"
                   points="2560 0 2560 100 0 100"
                 ></polygon>
               </svg>
@@ -740,9 +740,7 @@
                   <h3 class="font-semibold text-3xl">
                     Do you love this Starter Kit?
                   </h3>
-                  <p
-                    class="text-blueGray-500 text-lg leading-relaxed mt-4 mb-4"
-                  >
+                  <p class="text-slate-500 text-lg leading-relaxed mt-4 mb-4">
                     Cause if you do, it can be yours now. Hit the buttons below
                     to navigate to get the Free version for your next project.
                     Build a new web app or give an old project a new look!
@@ -758,7 +756,7 @@
                     <a
                       href="https://github.com/creativetimofficial/vue-notus?ref=vn-index"
                       target="_blank"
-                      class="github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                      class="github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                     >
                       <i class="fab fa-github text-lg mr-1"></i>
                       <span>Help With a Star</span>

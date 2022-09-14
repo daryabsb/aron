@@ -2,14 +2,14 @@ from django.urls import path, include
 from rest_framework import routers
 
 
-from .views import BarcodeViewset, ProductViewset
+from .views import PosOrderItemViewset, PosOrderViewset
 
 router = routers.DefaultRouter()
 
-router.register('all', ProductViewset)
-router.register('barcodes', BarcodeViewset)
+router.register('all', PosOrderViewset)
+router.register('items', PosOrderItemViewset)
 
-app_name = 'product'
+app_name = 'orders'
 
 
 urlpatterns = [

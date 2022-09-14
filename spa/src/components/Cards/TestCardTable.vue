@@ -8,7 +8,7 @@
         <div class="relative w-full px-4 max-w-full flex-grow flex-1">
           <h3
             class="font-semibold text-lg"
-            :class="[color === 'light' ? 'text-blueGray-700' : 'text-white']"
+            :class="[color === 'light' ? 'text-slate-700' : 'text-white']"
           >
             Card Tables
           </h3>
@@ -24,7 +24,7 @@
               class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
               :class="[
                 color === 'light'
-                  ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                  ? 'bg-slate-50 text-slate-500 border-slate-100'
                   : 'bg-emerald-800 text-emerald-300 border-emerald-700',
               ]"
             >
@@ -34,7 +34,7 @@
               class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
               :class="[
                 color === 'light'
-                  ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                  ? 'bg-slate-50 text-slate-500 border-slate-100'
                   : 'bg-emerald-800 text-emerald-300 border-emerald-700',
               ]"
             >
@@ -44,7 +44,7 @@
               class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
               :class="[
                 color === 'light'
-                  ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                  ? 'bg-slate-50 text-slate-500 border-slate-100'
                   : 'bg-emerald-800 text-emerald-300 border-emerald-700',
               ]"
             >
@@ -54,7 +54,7 @@
               class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
               :class="[
                 color === 'light'
-                  ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                  ? 'bg-slate-50 text-slate-500 border-slate-100'
                   : 'bg-emerald-800 text-emerald-300 border-emerald-700',
               ]"
             >
@@ -64,7 +64,7 @@
               class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
               :class="[
                 color === 'light'
-                  ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                  ? 'bg-slate-50 text-slate-500 border-slate-100'
                   : 'bg-emerald-800 text-emerald-300 border-emerald-700',
               ]"
             >
@@ -74,7 +74,7 @@
               class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
               :class="[
                 color === 'light'
-                  ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                  ? 'bg-slate-50 text-slate-500 border-slate-100'
                   : 'bg-emerald-800 text-emerald-300 border-emerald-700',
               ]"
             ></th>
@@ -92,9 +92,7 @@
               />
               <span
                 class="ml-3 font-bold"
-                :class="[
-                  color === 'light' ? 'text-blueGray-600' : 'text-white',
-                ]"
+                :class="[color === 'light' ? 'text-slate-600' : 'text-white']"
               >
                 Argon Design System
               </span>
@@ -116,22 +114,22 @@
                 <img
                   :src="team1"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow"
                 />
                 <img
                   :src="team2"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team3"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team4"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
               </div>
             </td>
@@ -169,9 +167,7 @@
               />
               <span
                 class="ml-3 font-bold"
-                :class="[
-                  color === 'light' ? 'text-blueGray-600' : 'text-white',
-                ]"
+                :class="[color === 'light' ? 'text-slate-600' : 'text-white']"
               >
                 Angular Now UI Kit PRO
               </span>
@@ -194,22 +190,22 @@
                 <img
                   :src="team1"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow"
                 />
                 <img
                   :src="team2"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team3"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team4"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
               </div>
             </td>
@@ -247,9 +243,7 @@
               />
               <span
                 class="ml-3 font-bold"
-                :class="[
-                  color === 'light' ? 'text-blueGray-600' : 'text-white',
-                ]"
+                :class="[color === 'light' ? 'text-slate-600' : 'text-white']"
               >
                 Black Dashboard Sketch
               </span>
@@ -271,22 +265,22 @@
                 <img
                   :src="team1"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow"
                 />
                 <img
                   :src="team2"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team3"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team4"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
               </div>
             </td>
@@ -324,9 +318,7 @@
               />
               <span
                 class="ml-3 font-bold"
-                :class="[
-                  color === 'light' ? 'text-blueGray-600' : 'text-white',
-                ]"
+                :class="[color === 'light' ? 'text-slate-600' : 'text-white']"
               >
                 React Material Dashboard
               </span>
@@ -348,22 +340,22 @@
                 <img
                   :src="team1"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow"
                 />
                 <img
                   :src="team2"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team3"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team4"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
               </div>
             </td>
@@ -390,7 +382,7 @@
               <table-dropdown />
             </td>
           </tr>
-                    <tr>
+          <tr>
             <th
               class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
             >
@@ -401,9 +393,7 @@
               />
               <span
                 class="ml-3 font-bold"
-                :class="[
-                  color === 'light' ? 'text-blueGray-600' : 'text-white',
-                ]"
+                :class="[color === 'light' ? 'text-slate-600' : 'text-white']"
               >
                 Argon Design System
               </span>
@@ -425,22 +415,22 @@
                 <img
                   :src="team1"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow"
                 />
                 <img
                   :src="team2"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team3"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team4"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
               </div>
             </td>
@@ -478,9 +468,7 @@
               />
               <span
                 class="ml-3 font-bold"
-                :class="[
-                  color === 'light' ? 'text-blueGray-600' : 'text-white',
-                ]"
+                :class="[color === 'light' ? 'text-slate-600' : 'text-white']"
               >
                 Angular Now UI Kit PRO
               </span>
@@ -503,22 +491,22 @@
                 <img
                   :src="team1"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow"
                 />
                 <img
                   :src="team2"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team3"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team4"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
               </div>
             </td>
@@ -556,9 +544,7 @@
               />
               <span
                 class="ml-3 font-bold"
-                :class="[
-                  color === 'light' ? 'text-blueGray-600' : 'text-white',
-                ]"
+                :class="[color === 'light' ? 'text-slate-600' : 'text-white']"
               >
                 Black Dashboard Sketch
               </span>
@@ -580,22 +566,22 @@
                 <img
                   :src="team1"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow"
                 />
                 <img
                   :src="team2"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team3"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team4"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
               </div>
             </td>
@@ -633,9 +619,7 @@
               />
               <span
                 class="ml-3 font-bold"
-                :class="[
-                  color === 'light' ? 'text-blueGray-600' : 'text-white',
-                ]"
+                :class="[color === 'light' ? 'text-slate-600' : 'text-white']"
               >
                 React Material Dashboard
               </span>
@@ -657,22 +641,22 @@
                 <img
                   :src="team1"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow"
                 />
                 <img
                   :src="team2"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team3"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team4"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
               </div>
             </td>
@@ -710,9 +694,7 @@
               />
               <span
                 class="ml-3 font-bold"
-                :class="[
-                  color === 'light' ? 'text-blueGray-600' : 'text-white',
-                ]"
+                :class="[color === 'light' ? 'text-slate-600' : 'text-white']"
               >
                 React Material Dashboard
               </span>
@@ -735,22 +717,22 @@
                 <img
                   :src="team1"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow"
                 />
                 <img
                   :src="team2"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team3"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
                 <img
                   :src="team4"
                   alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
+                  class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4"
                 />
               </div>
             </td>

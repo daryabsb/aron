@@ -1,9 +1,7 @@
 <template>
-  <nav
-    class="md:bg-pink-700 sm:hidden border border-solid border-pink-700 top-0 fixed z-50 w-full p-3 shadow"
-  >
+  <nav class="sm:hidden border border-solid top-0 fixed z-50 w-full p-3 shadow">
     <div
-      class="px-4 pl-12 mr-auto flex flex-nowrap items-center justify-between"
+      class="py-3 bg-pink-700 px-4 pl-12 mr-auto flex flex-nowrap items-center justify-between"
     >
       <div class="mx-12">
         <router-link to="/">
@@ -12,10 +10,10 @@
       </div>
 
       <a
-        class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
+        class="hover:text-slate-500 text-slate-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
         href="https://www.creative-tim.com/learning-lab/tailwind/vue/overview/notus?ref=vn-index-navbar"
       >
-        <i class="text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2" />
+        <i class="text-slate-400 far fa-file-alt text-lg leading-lg mr-2" />
         Docs
       </a>
 

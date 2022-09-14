@@ -11,7 +11,9 @@ module.exports = {
   //     "prettier",
   // ],
 
-  parserOptions: {},
+  parserOptions: {
+    parser: "@typescript-eslint/parser",
+  },
 
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : 0,
@@ -49,5 +51,12 @@ module.exports = {
     },
   ],
 
-  extends: ["plugin:vue/vue3-recommended", "eslint:recommended", "prettier"],
+  // extends: ["plugin:vue/vue3-recommended", "eslint:recommended", "prettier"],
+
+  extends: [
+    "plugin:vue/vue3-recommended",
+    "eslint:recommended",
+    "prettier",
+    "@vue/typescript",
+  ],
 };

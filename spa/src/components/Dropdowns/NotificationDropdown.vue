@@ -2,7 +2,7 @@
   <div>
     <a
       ref="btnDropdownRef"
-      class="text-blueGray-500 block py-1 px-3"
+      class="text-slate-500 block py-1 px-3"
       @click="toggleDropdown($event)"
     >
       <i class="fas fa-bell"></i>
@@ -17,26 +17,26 @@
     >
       <a
         href="javascript:void(0);"
-        class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+        class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
       >
         Action
       </a>
       <a
         href="javascript:void(0);"
-        class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+        class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
       >
         Another action
       </a>
       <a
         href="javascript:void(0);"
-        class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+        class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
       >
         Something else here
       </a>
-      <div class="h-0 my-2 border border-solid border-blueGray-100" />
+      <div class="h-0 my-2 border border-solid border-slate-100" />
       <a
         href="javascript:void(0);"
-        class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+        class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
       >
         Seprated link
       </a>

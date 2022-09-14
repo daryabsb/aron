@@ -1,10 +1,10 @@
 <template>
   <div>
     <Popper arrow>
-      <a class="text-blueGray-500 block" href="#pablo">
+      <a class="text-slate-500 block" href="#pablo">
         <div class="items-center flex">
           <span
-            class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"
+            class="w-12 h-12 text-sm text-white bg-slate-200 inline-flex items-center justify-center rounded-full"
           >
             <img
               v-if="user && user.image"
@@ -25,26 +25,26 @@
           }" -->
           <a
             href="javascript:void(0);"
-            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
           >
             Action
           </a>
           <a
             href="javascript:void(0);"
-            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
           >
             Another action
           </a>
 
-          <div class="h-0 my-2 border border-solid border-blueGray-100" />
+          <div class="h-0 my-2 border border-solid border-slate-100" />
           <a
             href="http://127.0.0.1:8000/logout/"
-            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
           >
             Logout
           </a>
           <a
-            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
             @click="close"
             >Close</a
           >

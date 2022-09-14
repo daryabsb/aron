@@ -11,7 +11,7 @@ module.exports = {
   indexPath: "../../templates/index.html",
   pages: {
     index: {
-      entry: "src/main.js",
+      entry: "src/main.ts",
       title: "ARON - POS",
     },
   },
