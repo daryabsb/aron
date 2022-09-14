@@ -24,7 +24,7 @@ export default createStore({
   actions: {
     [FETCH_USER]: async (context) => {
       const user = await getUser();
-      console.log(user);
+      // console.log(user);
       context.commit(COMMIT_USER, user);
     },
   },
