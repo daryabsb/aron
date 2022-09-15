@@ -1,7 +1,7 @@
 <template>
-  <nav class="sm:hidden border border-solid top-0 fixed z-50 w-full p-3 shadow">
+  <nav class="bg-pink-500 text-white sm:hidden border border-solid top-0 fixed z-50 w-full p-3 shadow">
     <div
-      class="py-3 bg-pink-700 px-4 pl-12 mr-auto flex flex-nowrap items-center justify-between"
+      class="py-6 px-4 pl-12 mr-auto flex flex-nowrap items-center justify-between"
     >
       <div class="mx-12">
         <router-link to="/">

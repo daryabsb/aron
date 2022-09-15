@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex flex-wrap mt-24">
+    <div class="flex flex-wrap mt-48">
       <div
         class="w-full xl:w-8/12 mb-2 xl:h-screen md:overflow-hidden p-2 ml-24 bg-slate-800"
       >
@@ -19,11 +19,16 @@
   </div>
 </template>
 <script>
+import {onMounted} from "vue"
+import {useFetchProductsDispatch} from "@/store/composables"
 import CardTable from "@/components/Cards/CardTable.vue";
 export default {
   name: "DashboardPage",
   components: {
     CardTable,
   },
+  setup() {
+    onMounted(useFetchProductsDispatch)
+  }
 };
 </script>

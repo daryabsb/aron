@@ -1,12 +1,17 @@
 // import { computed } from "vue";
 import { useStore } from "vuex";
 
-import { FETCH_USER } from "@/store/constants";
+import { FETCH_USER, FETCH_PRODUCTS } from "@/store/constants";
 
 /* ACTIONS */
 export const useFetchUserDispatch = () => {
   const store = useStore();
   store.dispatch(FETCH_USER);
+};
+
+export const useFetchProductsDispatch = () => {
+  const store = useStore();
+  store.dispatch(FETCH_PRODUCTS);
 };
 
 export const products = [
