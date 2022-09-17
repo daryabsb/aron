@@ -145,11 +145,10 @@
                 {{ item.product.name }}
               </span>
             </th>
-            {{item.product}}
             <td
               class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
             >
-              {{ item.price }} IQD
+              {{ item.product.price }} IQD
             </td>
             <td
               class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
@@ -197,7 +196,7 @@
   </div>
 </template>
 <script>
-import {ref} from "vue"
+import {reactive} from "vue"
 import useGetProducts from "@/composables/useGetProducts";
 import TableDropdown from "@/components/Dropdowns/TableDropdown.vue";
 
@@ -216,7 +215,7 @@ export default {
   },
   setup() {
 const products = useGetProducts();
-const orderItems = ref([]);
+const orderItems = reactive([]);
 const quantity = 1;
 const productsPopper = ['Darya','Sakar','Zane','Nare']
 const isDiscount = false;
