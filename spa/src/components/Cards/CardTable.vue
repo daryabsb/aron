@@ -1,7 +1,7 @@
 <template>
   <div
     class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded"
-    :class="[color === 'light' ? 'bg-white' : 'bg-emerald-900 text-white']"
+    :class="[color === 'light' ? 'bg-white' : 'bg-slate-900 text-white']"
   >
     <div class="rounded-t mb-0 px-4 py-3 border-0">
       <div class="flex flex-wrap items-center">
@@ -56,12 +56,14 @@
                   />
                   <template #content="{close}">
                     <ul class="w-full bg-white">
-                      <li 
-                      v-for="product in products" 
-                      :key="product.id"
-                      class="cursor-pointer font-normal leading-normal p-2 mr-3 pr-auto w-full text-md text-slate-600 list-none"
-                      @click="addProductToOrder(product)"
-                      ><span @click="close">{{product.name}} </span></li>
+                      <li
+                        v-for="product in products"
+                        :key="product.id"
+                        class="cursor-pointer font-normal leading-normal p-2 mr-3 pr-auto w-full text-md text-slate-600 list-none"
+                        @click="addProductToOrder(product)"
+                      >
+                        <span @click="close">{{ product.name }} </span>
+                      </li>
                     </ul>
                   </template>
                 </Popper>
@@ -107,7 +109,7 @@
             >
               Quantity
             </th>
-            
+
             <th
               class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
               :class="[
@@ -153,18 +155,21 @@
             <td
               class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
             >
-            <!-- Small Input -->
-<div class="relative flex w-full flex-wrap items-stretch mb-3">
-  <span class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-2 py-1">
-    <i class="fas fa-weight-scale"></i>
-  </span>
-  <input 
-  v-model="quantity" 
-  type="number" 
-  class="px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:shadow-outline w-full pl-10"/>
-</div>
+              <!-- Small Input -->
+              <div class="relative flex w-full flex-wrap items-stretch mb-3">
+                <span
+                  class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-2 py-1"
+                >
+                  <i class="fas fa-weight-scale"></i>
+                </span>
+                <input
+                  v-model="quantity"
+                  type="number"
+                  class="px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:shadow-outline w-full pl-10"
+                />
+              </div>
             </td>
-        
+
             <td
               class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
             >
@@ -189,14 +194,12 @@
             </td>
           </tr>
         </tbody>
-   
-      
       </table>
     </div>
   </div>
 </template>
 <script>
-import {reactive} from "vue"
+import { reactive } from "vue";
 import useGetProducts from "@/composables/useGetProducts";
 import TableDropdown from "@/components/Dropdowns/TableDropdown.vue";
 
@@ -214,35 +217,34 @@ export default {
     },
   },
   setup() {
-const products = useGetProducts();
-const orderItems = reactive([]);
-const quantity = 1;
-const productsPopper = ['Darya','Sakar','Zane','Nare']
-const isDiscount = false;
-const discount = 0;
-const discountType = 0;
-const isDiscountType = false;
+    const products = useGetProducts();
+    const orderItems = reactive([]);
+    const quantity = 1;
+    const productsPopper = ["Darya", "Sakar", "Zane", "Nare"];
+    const isDiscount = false;
+    const discount = 0;
+    const discountType = 0;
+    const isDiscountType = false;
 
-const addProductToOrder = (product)=>{
-  const orderItem = {
-    product: product,
-    quantity:quantity,
-    discount: isDiscount ? discount : 0,
-    discount_type: isDiscountType ? discountType : 0,
-    comment: "",
-  }
-orderItems.push(orderItem)
-  console.log(orderItems);
-  
-  };
+    const addProductToOrder = (product) => {
+      const orderItem = {
+        product: product,
+        quantity: quantity,
+        discount: isDiscount ? discount : 0,
+        discount_type: isDiscountType ? discountType : 0,
+        comment: "",
+      };
+      orderItems.push(orderItem);
+      console.log(orderItems);
+    };
 
-return {
+    return {
       products,
       orderItems,
       quantity,
       productsPopper,
       addProductToOrder,
     };
-  }
+  },
 };
 </script>

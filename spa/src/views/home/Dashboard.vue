@@ -1,8 +1,10 @@
 <template>
   <div>
-    <div class="flex flex-wrap mt-48">
+    <div
+      class="flex justify-center items-top flex-grow h-screen bg-slate-800 mt-48"
+    >
       <div
-        class="w-full xl:w-8/12 mb-2 xl:h-screen md:overflow-hidden p-2 ml-24 bg-slate-800"
+        class="w-full xl:w-8/12 mb-2 xl:h-screen md:overflow-hidden p-2 ml-24"
       >
         <card-table></card-table>
       </div>
@@ -19,8 +21,8 @@
   </div>
 </template>
 <script>
-import {onMounted} from "vue"
-import {useFetchProductsDispatch} from "@/store/composables"
+import { onMounted } from "vue";
+import { useFetchProductsDispatch } from "@/store/composables";
 import CardTable from "@/components/Cards/CardTable.vue";
 export default {
   name: "DashboardPage",
@@ -28,7 +30,7 @@ export default {
     CardTable,
   },
   setup() {
-    onMounted(useFetchProductsDispatch)
-  }
+    onMounted(useFetchProductsDispatch);
+  },
 };
 </script>

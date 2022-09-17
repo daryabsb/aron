@@ -19,6 +19,7 @@ import Dashboard from "@/views/home/Dashboard.vue";
 // import Landing from "@/views/Landing.vue";
 // import Profile from "@/views/Profile.vue";
 import HomeLayout from "@/layouts/HomeLayout.vue";
+import PosLayout from "@/layouts/PosLayout.vue";
 
 const routes = [
   {
@@ -67,10 +68,10 @@ const routes = [
   //   path: "/profile",
   //   component: Profile,
   // },
-  // {
-  //   path: "/",
-  //   component: Index,
-  // },
+  {
+    path: "/pos",
+    component: PosLayout,
+  },
   { path: "/:pathMatch(.*)*", redirect: "/" },
 ];
 
