@@ -23,12 +23,12 @@ import PosLayout from "@/layouts/PosLayout.vue";
 
 const routes = [
   {
-    path: "/",
-    redirect: "/home/dashboard",
-    component: HomeLayout,
+    path: "/pos",
+    redirect: "/pos/dashboard",
+    component: PosLayout,
     children: [
       {
-        path: "/home/dashboard",
+        path: "/pos/dashboard",
         component: Dashboard,
       },
       //     {
@@ -68,21 +68,6 @@ const routes = [
   //   path: "/profile",
   //   component: Profile,
   // },
-  {
-    path: "/pos",
-    component: PosLayout,
-  },
-  {
-    path: "/pos",
-    redirect: "/pos/dashboard",
-    component: PosLayout,
-    children: [
-      {
-        path: "/home/dashboard",
-        component: Dashboard,
-      },
-    ],
-  },
   { path: "/:pathMatch(.*)*", redirect: "/" },
 ];
 
