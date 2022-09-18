@@ -1,7 +1,4 @@
-
-
 async function loadDatabase() {
-  console.log('idb',idb);
   const db = await idb.openDB("tailwind_store", 1, {
     upgrade(db, oldVersion, newVersion, transaction) {
       db.createObjectStore("products", {
@@ -31,7 +28,7 @@ function initApp() {
     time: null,
     firstTime: localStorage.getItem("first_time") === null,
     activeMenu: 'pos',
-    loadingSampleData: true,
+    loadingSampleData: false,
     moneys: [2000, 5000, 10000, 20000, 50000, 100000],
     products: [],
     keyword: "",
@@ -50,7 +47,6 @@ function initApp() {
       console.log("products loaded", this.products);
     },
     async startWithSampleData() {
-      console.log("sample Data");
       const response = await fetch("data/sample.json");
       const data = await response.json();
       this.products = data.products;

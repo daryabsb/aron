@@ -9,33 +9,21 @@
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="E:\api\aron\spa\src\assets\styles\tailwind.css"
-    />
-    <link rel="stylesheet" href="/styles/tailwind.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <script src="https://unpkg.com/browse/idb@7.0.2/build/index.js"></script>
+    <!-- <script src="https://unpkg.com/idb/build/iife/index-min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js"></script>
     <script src="js/script.js"></script>
   </head>
-  <body class="bg-blue-gray-50" x-data="initApp()" x-init="initDatabase()">
-    <nav class="mt-3 mx-4">
-      <div class="bg-cyan-500 text-white py-24">
-        This is a navbar
-      </div>
-    </nav>
+  <body class="bg-blue-gray-50" x-data="initApp()">
     <!-- noprint-area -->
     <div
       class="hide-print flex flex-row h-screen antialiased text-blue-gray-800"
     >
-      <!-- TOP BAR -->
-
-      <!-- END TOP BAR -->
       <!-- left sidebar -->
       <div class="flex flex-row w-auto flex-shrink-0 pl-4 pr-2 py-4">
         <div
-          class="flex flex-col items-center py-4 flex-shrink-0 w-20 bg-cyan-500"
+          class="flex flex-col items-center py-4 flex-shrink-0 w-20 bg-cyan-500 rounded-3xl"
         >
           <a
             href="#"

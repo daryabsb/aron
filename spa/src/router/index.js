@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from "vue-router";
 // import Auth from "@/layouts/Auth.vue";
 
 // views for Admin layout
-import Dashboard from "@/views/home/Dashboard.vue";
+import Dashboard from "@/views/pos/Dashboard.vue";
 // import Settings from "@/views/admin/Settings.vue";
 // import Tables from "@/views/admin/Tables.vue";
 // import Maps from "@/views/admin/Maps.vue";
@@ -71,6 +71,17 @@ const routes = [
   {
     path: "/pos",
     component: PosLayout,
+  },
+  {
+    path: "/pos",
+    redirect: "/pos/dashboard",
+    component: PosLayout,
+    children: [
+      {
+        path: "/home/dashboard",
+        component: Dashboard,
+      },
+    ],
   },
   { path: "/:pathMatch(.*)*", redirect: "/" },
 ];
