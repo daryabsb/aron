@@ -6,6 +6,8 @@ import {
   COMMIT_USER,
   FETCH_PRODUCTS,
   COMMIT_PRODUCTS,
+  ADD_TO_CART,
+  COMMIT_TO_CART,
 } from "@/store/constants";
 
 const actions = {
@@ -18,6 +20,9 @@ const actions = {
     const products = await getProducts();
     // console.log(user);
     context.commit(COMMIT_PRODUCTS, products);
+  },
+  [ADD_TO_CART](context, payload) {
+    context.commit(COMMIT_TO_CART, payload);
   },
 };
 export default actions;

@@ -6,3 +6,20 @@ export const GET_USER = "GET_USER";
 export const COMMIT_USER = "COMMIT_USER";
 export const COMMIT_PRODUCTS = "COMMIT_PRODUCTS";
 export const GET_PRODUCTS = "GET_PRODUCTS";
+
+// POS
+export const ADD_TO_CART = "ADD_TO_CART";
+export const FIND_CART_INDEX = "FIND_CART_INDEX";
+export const BEEP = "BEEP";
+export const ADD_QUANTITY = "ADD_QUANTITY";
+export const ADD_CASH = "ADD_CASH";
+export const UPDATE_CHANGE = "UPDATE_CHANGE";
+export const GET_CHANGE = "GET_CHANGE";
+export const GET_CASH = "GET_CASH";
+export const GET_TOTAL_PRICE = "GET_TOTAL_PRICE";
+export const UPDATE_CASH = "UPDATE_CASH";
+export const CLEAR = "CLEAR";
+export const SUBMIT = "SUBMIT";
+export const UPDATE_KEYWORD = "UPDATE_KEYWORD";
+export const SUBMITABLE = "SUBMITABLE";
+export const COMMIT_TO_CART = "COMMIT_TO_CART";
