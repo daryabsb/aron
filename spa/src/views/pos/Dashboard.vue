@@ -10,7 +10,7 @@ let activeMenu = "pos";
 let loadingSampleData = false;
 let firstTime = true;
 
-let moneys = [2000, 5000, 10000, 20000, 50000, 100000];
+let moneys = reactive([2000, 5000, 10000, 20000, 50000, 100000]);
 let products = reactive([]);
 let keyword = ref("");
 let cart = [];
@@ -210,7 +210,7 @@ const printAndProceed = () => {
           <!-- v-if="filteredProducts().value.length === 0" -->
 
           <div
-            v-if="filteredProducts().length === 0"
+            v-if="filteredProducts().value.length === 0"
             class="select-none bg-blue-gray-100 rounded-3xl flex flex-wrap content-center justify-center h-full opacity-25"
           >
             {{ filteredProducts()[0] }}
