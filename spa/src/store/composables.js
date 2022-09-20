@@ -1,15 +1,12 @@
 /* eslint-disable no-delete-var */
-// import { computed } from "vue";
+import { computed } from "vue";
 import { useStore } from "vuex";
 
-import {
-  FETCH_USER,
-  FETCH_PRODUCTS,
-  ADD_TO_CART,
-  FIND_CART_INDEX,
-} from "@/store/constants";
+import { FETCH_USER, FETCH_PRODUCTS, GET_CART_INDEX } from "@/store/constants";
 // import store from ".";
+
 const store = useStore();
+console.log("useStore", useStore());
 /* ACTIONS */
 export const useFetchUserDispatch = () => {
   const store = useStore();
@@ -38,19 +35,21 @@ export const numberFormat = (number) => {
 export const priceFormat = (number) => {
   return number ? `Rp. ${numberFormat(number)}` : `Rp. 0`;
 };
-export const addCash = (amount) => store.commit.ADD_CASH(amount);
+// export const addCash = (amount) => store.commit.ADD_CASH(amount);
+export const findCartIndex = (product) => {
+  const store = useStore();
+  return store.getters.GET_CART_INDEX(product);
+};
 export const addToCart = (product) => {
   const store = useStore();
   store.dispatch.ADD_TO_CART(product);
 };
-export const clear = () => store.commit.CLEAR;
-export const addQty = (quantity) => store.commit.ADD_QUANTITY(quantity);
-export const updateChange = () => store.commit.UPDATE_CHANGE;
-export const updateCash = (value) => store.commit.UPDATE_CASH(value);
-export const findCartIndex = (product) => {
-  const store = useStore();
-  store.commit(FIND_CART_INDEX, product);
-};
+
+// export const clear = () => store.commit.CLEAR;
+// export const addQty = (quantity) => store.commit.ADD_QUANTITY(quantity);
+export const updateChange = computed(() => store.commit.UPDATE_CHANGE);
+// export const updateCash = (value) => store.commit.UPDATE_CASH(value);
+
 export const submitable = () => {
   const store = useStore();
   return store.getters.SUBMITABLE;
@@ -66,5 +65,5 @@ export const playSound = (src) => {
   // sound.onended = () => delete sound;
 };
 
-export const getTotalPrice = () => store.commit.GET_TOTAL_PRICE;
+// export const getTotalPrice = () => store.commit.GET_TOTAL_PRICE;
 export const beep = () => playSound("sound/beep-29.mp3");

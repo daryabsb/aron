@@ -8,6 +8,7 @@ export const COMMIT_PRODUCTS = "COMMIT_PRODUCTS";
 export const GET_PRODUCTS = "GET_PRODUCTS";
 
 // POS
+export const GET_CART = "GET_CART";
 export const ADD_TO_CART = "ADD_TO_CART";
 export const FIND_CART_INDEX = "FIND_CART_INDEX";
 export const BEEP = "BEEP";
@@ -21,5 +22,9 @@ export const UPDATE_CASH = "UPDATE_CASH";
 export const CLEAR = "CLEAR";
 export const SUBMIT = "SUBMIT";
 export const UPDATE_KEYWORD = "UPDATE_KEYWORD";
+export const GET_KEYWORD = "GET_KEYWORD";
 export const SUBMITABLE = "SUBMITABLE";
 export const COMMIT_TO_CART = "COMMIT_TO_CART";
+export const COMMIT_FIND_INDEX = "COMMIT_FIND_INDEX";
+export const GET_CART_INDEX = "GET_CART_INDEX";
+export const ADD_KEYWORD = "ADD_KEYWORD";

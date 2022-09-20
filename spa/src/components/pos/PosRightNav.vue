@@ -1,55 +1,11 @@
 <script setup>
-import { ref, computed } from "vue";
-const moneys = [];
-let cart = [];
-const getItemsCount = ref(0);
-const priceFormat = (price) => Number(price);
-
-let cash = 0;
-let receiptNo = null;
-let receiptDate = null;
-let change = 0;
-let total = 0;
-
-const addQty = (item, number) => item.quantity + number;
-const addCash = (money) => console.log(money);
-const submit = (e) => console.log(e);
-
-const getTotalPrice = () => {
-  return computed(
-    cart.reduce((total, item) => total + item.qty * item.price, 0)
-  );
-};
-
-const playSound = (src) => {
-  const sound = new Audio(src);
-  sound.src = src;
-  sound.play();
-  // sound.onended = () => delete sound;
-};
-
-const updateChange = () => computed((change = cash - getTotalPrice()));
-
-const numberFormat = (number) => {
-  return (number || "")
-    .toString()
-    .replace(/^0|\./g, "")
-    .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
-};
-
-const beep = () => computed(playSound("sound/beep-29.mp3"));
-
-const clearSound = () => computed(playSound("sound/button-21.mp3"));
-
-const clear = () => {
-  cash = 0;
-  cart = [];
-  receiptNo = null;
-  receiptDate = null;
-  updateChange();
-  this.clearSound();
-};
-const submitable = () => computed(change >= 0 && cart.length > 0);
+import { computed } from "vue";
+import { useStore } from "vuex";
+import { UPDATE_CHANGE } from "@/store/constants";
+import { priceFormat, getItemsCount } from "@/store/composables";
+console.log("getItemsCount", getItemsCount());
+const store = useStore();
+const cart = store.getters.GET_CART;
 </script>
 
 <template>
@@ -58,6 +14,7 @@ const submitable = () => computed(change >= 0 && cart.length > 0);
     class="w-6/12 flex flex-col bg-blue-gray-50 h-full bg-white pr-4 pl-2 py-4"
   >
     <div class="bg-white rounded-3xl flex flex-col h-full shadow">
+      {{ cart }}
       <!-- empty cart -->
       <div
         v-if="cart.length === 0"
@@ -83,13 +40,14 @@ const submitable = () => computed(change >= 0 && cart.length > 0);
       </div>
 
       <!-- cart items -->
-      <div v-if="cart.length > 0" class="flex-1 flex flex-col overflow-auto">
+      <!-- v-if="cart.length > 0" -->
+      <div class="flex-1 flex flex-col overflow-auto">
         <div class="h-16 text-center flex justify-center">
           <div class="pl-8 text-left text-lg py-4 relative">
             <!-- cart icon -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 inline-block"
+              class="h-8 inline-block"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -104,9 +62,7 @@ const submitable = () => computed(change >= 0 && cart.length > 0);
             <div
               v-if="getItemsCount() > 0"
               class="text-center absolute bg-cyan-500 text-white w-5 h-5 text-xs p-0 leading-5 rounded-full -right-2 top-3"
-            >
-              {{ getItemsCount() }}
-            </div>
+            ></div>
           </div>
           <div class="flex-grow px-8 text-right text-lg py-4 relative">
             <!-- trash button -->
@@ -116,7 +72,7 @@ const submitable = () => computed(change >= 0 && cart.length > 0);
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 inline-block"
+                class="h-8 w-8"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -131,12 +87,13 @@ const submitable = () => computed(change >= 0 && cart.length > 0);
             </button>
           </div>
         </div>
-
+        {{ cart }}DARYA
         <div class="flex-1 w-full px-4 overflow-auto">
-          <template v-for="item in cart" :key="item.id">
+          <div v-for="item in cart.value" :key="item.id">
             <div
               class="select-none mb-3 bg-blue-gray-50 rounded-lg w-full text-blue-gray-700 py-2 px-2 flex justify-center"
             >
+              CART ITEM ADDED{{ cart }}
               <img
                 :src="item.image"
                 alt=""
@@ -149,12 +106,12 @@ const submitable = () => computed(change >= 0 && cart.length > 0);
               <div class="py-1">
                 <div class="w-28 grid grid-cols-3 gap-2 ml-2">
                   <button
-                    class="rounded-lg text-center py-1 text-white bg-blue-gray-600 hover:bg-blue-gray-700 focus:outline-none"
                     @click="addQty(item, -1)"
+                    class="rounded-lg text-center py-1 text-white bg-blue-gray-600 hover:bg-blue-gray-700 focus:outline-none"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-3 inline-block"
+                      class="h-8 w-8 inline-block"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -173,12 +130,12 @@ const submitable = () => computed(change >= 0 && cart.length > 0);
                     class="bg-white rounded-lg text-center shadow focus:outline-none focus:shadow-lg text-sm"
                   />
                   <button
-                    class="rounded-lg text-center py-1 text-white bg-blue-gray-600 hover:bg-blue-gray-700 focus:outline-none"
                     @click="addQty(item, 1)"
+                    class="rounded-lg text-center py-1 text-white bg-blue-gray-600 hover:bg-blue-gray-700 focus:outline-none"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-3 inline-block"
+                      class="h-8 w-6 inline-block"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -194,7 +151,7 @@ const submitable = () => computed(change >= 0 && cart.length > 0);
                 </div>
               </div>
             </div>
-          </template>
+          </div>
         </div>
       </div>
       <!-- end of cart items -->
@@ -203,9 +160,10 @@ const submitable = () => computed(change >= 0 && cart.length > 0);
       <div class="select-none h-auto w-full text-center pt-3 pb-4 px-4">
         <div class="flex mb-3 text-lg font-semibold text-blue-gray-700">
           <div>TOTAL</div>
-          <!-- <div class="text-right w-full">
-              {{ priceFormat(getTotalPrice()) }}
-            </div> -->
+          {{ cart.value }}DARYA
+          <div class="text-right w-full">
+            {{ priceFormat(getTotalPrice()) }}
+          </div>
         </div>
         <div
           class="mb-3 text-blue-gray-700 px-3 pt-2 pb-3 rounded-lg bg-blue-gray-50"
@@ -214,27 +172,28 @@ const submitable = () => computed(change >= 0 && cart.length > 0);
             <div class="flex-grow text-left">CASH</div>
             <div class="flex text-right">
               <div class="mr-2">Rp</div>
-              <!-- <input
-                  :value="numberFormat(cash)"
-                  type="text"
-                  class="w-28 text-right bg-white shadow rounded-lg focus:bg-white focus:shadow-lg px-2 focus:outline-none"
-                  @keyup="updateCash($event.target.value)"
-                /> -->
+              <input
+                :value="cash"
+                @keyup="updateCash($event.target.value)"
+                type="text"
+                class="w-28 text-right bg-white shadow rounded-lg focus:bg-white focus:shadow-lg px-2 focus:outline-none"
+              />
             </div>
           </div>
           <hr class="my-2" />
           <div class="grid grid-cols-3 gap-2 mt-2">
-            <!--   <template v-for="money in moneys" :key="money">
-                <button
-                  class="bg-white rounded-lg shadow hover:shadow-lg focus:outline-none inline-block px-2 py-1 text-sm"
-                  @click="addCash(money)"
-                >
-                  +<span>{{ numberFormat(money) }}</span>
-                </button>
-              </template> -->
+            <div v-for="money in moneys" :key="money">
+              <button
+                @click="addCash(money)"
+                class="bg-white rounded-lg shadow hover:shadow-lg focus:outline-none inline-block px-2 py-1 text-sm"
+              >
+                +<span>
+                  {{ money }}
+                </span>
+              </button>
+            </div>
           </div>
         </div>
-
         <div
           v-if="change > 0"
           class="flex mb-3 text-lg font-semibold bg-cyan-50 text-blue-gray-700 rounded-lg py-2 px-3"
@@ -258,7 +217,7 @@ const submitable = () => computed(change >= 0 && cart.length > 0);
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 inline-block"
+            class="h-8 w-8 inline-block"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

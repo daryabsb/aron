@@ -5,6 +5,7 @@ import {
   updateChange,
   findCartIndex,
 } from "@/store/composables";
+
 import {
   COMMIT_USER,
   COMMIT_PRODUCTS,
@@ -18,6 +19,7 @@ import {
   SUBMIT,
   UPDATE_KEYWORD,
   COMMIT_TO_CART,
+  GET_CART_INDEX,
 } from "@/store/constants";
 
 const mutations = {
@@ -33,11 +35,11 @@ const mutations = {
   [GET_TOTAL_PRICE](state) {
     state.cart.reduce((total, item) => total + item.qty * item.price, 0);
   },
-  [FIND_CART_INDEX](state, product) {
-    return state.cart.findIndex((p) => p.id === product.id);
-  },
-  [COMMIT_TO_CART](state, product) {
-    const index = findCartIndex(product);
+  [FIND_CART_INDEX](state, product) {},
+  [COMMIT_TO_CART](state, payload) {
+    const { product, getters } = payload;
+    const index = getters.GET_CART_INDEX(product);
+    console.log("index", index);
     if (index === -1) {
       state.cart.push({
         id: product.id,
@@ -50,8 +52,8 @@ const mutations = {
     } else {
       state.cart[index].qty += 1;
     }
-    beep();
-    updateChange();
+    // beep();
+    // updateChange();
   },
   [UPDATE_CHANGE](state) {
     state.change = state.cash - getTotalPrice();

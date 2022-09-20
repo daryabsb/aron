@@ -8,6 +8,10 @@ import {
   COMMIT_PRODUCTS,
   ADD_TO_CART,
   COMMIT_TO_CART,
+  FIND_CART_INDEX,
+  COMMIT_FIND_INDEX,
+  UPDATE_KEYWORD,
+  ADD_KEYWORD,
 } from "@/store/constants";
 
 const actions = {
@@ -22,7 +26,14 @@ const actions = {
     context.commit(COMMIT_PRODUCTS, products);
   },
   [ADD_TO_CART](context, payload) {
-    context.commit(COMMIT_TO_CART, payload);
+    const payloadToCommit = {
+      getters: context.getters,
+      product: payload,
+    };
+    context.commit(COMMIT_TO_CART, payloadToCommit);
+  },
+  [ADD_KEYWORD](context, keyword) {
+    context.commit(UPDATE_KEYWORD, keyword);
   },
 };
 export default actions;
