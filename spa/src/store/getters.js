@@ -7,6 +7,8 @@ import {
   SUBMITABLE,
   GET_CART_INDEX,
   GET_KEYWORD,
+  GET_TOTAL_PRICE,
+  GET_ITEMS_COUNT,
 } from "@/store/constants";
 
 const getters = {
@@ -19,11 +21,14 @@ const getters = {
   [GET_CART](state) {
     return state.cart;
   },
-  getItemsCount() {
-    return this.cart.reduce((count, item) => count + item.qty, 0);
+  [GET_ITEMS_COUNT](state) {
+    return state.cart.reduce((count, item) => count + item.qty, 0);
   },
-  getTotalPrice() {
-    return this.cart.reduce((total, item) => total + item.qty * item.price, 0);
+  [GET_TOTAL_PRICE](state) {
+    console.log(
+      state.cart.reduce((total, item) => total + item.qty * item.price, 0)
+    );
+    return state.cart.reduce((total, item) => total + item.qty * item.price, 0);
   },
   [SUBMITABLE](state) {
     return state.change >= 0 && state.cart.length > 0;
@@ -32,7 +37,7 @@ const getters = {
     return state.change;
   },
   [GET_CASH](state) {
-    return state.GET_CASH;
+    return state.cash;
   },
   [GET_CART_INDEX]: (state) => (product) =>
     state.cart.findIndex((p) => p.id === product.id),

@@ -28,3 +28,4 @@ export const COMMIT_TO_CART = "COMMIT_TO_CART";
 export const COMMIT_FIND_INDEX = "COMMIT_FIND_INDEX";
 export const GET_CART_INDEX = "GET_CART_INDEX";
 export const ADD_KEYWORD = "ADD_KEYWORD";
+export const GET_ITEMS_COUNT = "GET_ITEMS_COUNT";

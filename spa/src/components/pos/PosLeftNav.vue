@@ -2,17 +2,19 @@
   <!-- left sidebar -->
   <div class="flex flex-row w-auto flex-shrink-0 pl-4 pr-2 py-4">
     <div
-      class="flex flex-col items-center py-4 flex-shrink-0 w-20 bg-cyan-500 rounded-3xl"
+      class="flex flex-col items-center px-1 py-2 flex-shrink-0 w-20 bg-pink-500 rounded-lg"
     >
       <a
         href="#"
-        class="flex items-center justify-center h-12 w-12 bg-cyan-50 text-cyan-700 rounded-full"
+        class="flex items-center justify-center h-10 w-10 bg-pink-50 text-pink-700 rounded-full"
       >
+        <img src="/media/img/logo-white.svg" alt="logo" />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="123.3"
           height="123.233"
           viewBox="0 0 32.623 32.605"
+          class="w-10 h-10"
         >
           <path
             d="M15.612 0c-.36.003-.705.01-1.03.021C8.657.223 5.742 1.123 3.4 3.472.714 6.166-.145 9.758.019 17.607c.137 6.52.965 9.271 3.542 11.768 1.31 1.269 2.658 2 4.73 2.57.846.232 2.73.547 3.56.596.36.021 2.336.048 4.392.06 3.162.018 4.031-.016 5.63-.221 3.915-.504 6.43-1.778 8.234-4.173 1.806-2.396 2.514-5.731 2.516-11.846.001-4.407-.42-7.59-1.278-9.643-1.463-3.501-4.183-5.53-8.394-6.258-1.634-.283-4.823-.475-7.339-.46z"
@@ -48,13 +50,13 @@
             <span
               class="flex items-center justify-center h-12 w-12 rounded-2xl"
               :class="{
-                'hover:bg-cyan-400 text-cyan-100': activeMenu !== 'pos',
-                'bg-cyan-300 shadow-lg text-white': activeMenu === 'pos',
+                'hover:bg-pink-400 text-pink-100': activeMenu !== 'pos',
+                'bg-pink-300 shadow-lg text-white': activeMenu === 'pos',
               }"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
+                class="h-10 w-10"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -72,11 +74,11 @@
         <li>
           <a href="#" class="flex items-center">
             <span
-              class="flex items-center justify-center text-cyan-100 hover:bg-cyan-400 h-12 w-12 rounded-2xl"
+              class="flex items-center justify-center text-pink-100 hover:bg-pink-400 h-12 w-12 rounded-2xl"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
+                class="h-10 w-10"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -94,11 +96,11 @@
         <li>
           <a href="#" class="flex items-center">
             <span
-              class="flex items-center justify-center text-cyan-100 hover:bg-cyan-400 h-12 w-12 rounded-2xl"
+              class="flex items-center justify-center text-pink-100 hover:bg-pink-400 h-12 w-12 rounded-2xl"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
+                class="h-10 w-10"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -116,10 +118,10 @@
         <li>
           <a href="#" class="flex items-center">
             <span
-              class="flex items-center justify-center text-cyan-100 hover:bg-cyan-400 h-12 w-12 rounded-2xl"
+              class="flex items-center justify-center text-pink-100 hover:bg-pink-400 h-12 w-12 rounded-2xl"
             >
               <svg
-                class="w-6 h-6"
+                class="h-10 w-10"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -145,11 +147,11 @@
       <a
         href="https://github.com/emsifa/tailwind-pos"
         target="_blank"
-        class="mt-auto flex items-center justify-center text-cyan-200 hover:text-cyan-100 h-10 w-10 focus:outline-none"
+        class="fixed bottom-0 mb-6 flex items-center justify-center text-pink-200 hover:text-cyan-100 h-10 w-10 focus:outline-none"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-8 w-8"
+          class="h-10 w-10"
           viewBox="0 0 20 20"
           fill="currentColor"
         >

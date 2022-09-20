@@ -11,7 +11,9 @@ import {
   FIND_CART_INDEX,
   COMMIT_FIND_INDEX,
   UPDATE_KEYWORD,
+  UPDATE_CASH,
   ADD_KEYWORD,
+  ADD_CASH,
 } from "@/store/constants";
 
 const actions = {
@@ -34,6 +36,11 @@ const actions = {
   },
   [ADD_KEYWORD](context, keyword) {
     context.commit(UPDATE_KEYWORD, keyword);
+  },
+  [UPDATE_CASH](context, amount) {
+    console.log("amount-actions", amount);
+
+    context.commit(ADD_CASH, amount);
   },
 };
 export default actions;

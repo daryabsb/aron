@@ -1,20 +1,27 @@
 /* eslint-disable no-delete-var */
 import { computed } from "vue";
-import { useStore } from "vuex";
+// import { store } from "vuex";
 
-import { FETCH_USER, FETCH_PRODUCTS, GET_CART_INDEX } from "@/store/constants";
-// import store from ".";
+import {
+  FETCH_USER,
+  FETCH_PRODUCTS,
+  GET_CART_INDEX,
+  ADD_CASH,
+  CLEAR,
+  ADD_QUANTITY,
+  UPDATE_CHANGE,
+  UPDATE_CASH,
+} from "@/store/constants";
+import store from "@/store";
 
-const store = useStore();
-console.log("useStore", useStore());
 /* ACTIONS */
 export const useFetchUserDispatch = () => {
-  const store = useStore();
+  // const store = useStore();
   store.dispatch(FETCH_USER);
 };
 
 export const useFetchProductsDispatch = () => {
-  const store = useStore();
+  // const store = useStore();
   store.dispatch(FETCH_PRODUCTS);
 };
 
@@ -30,40 +37,91 @@ export const numberFormat = (number) => {
   return (number || "")
     .toString()
     .replace(/^0|\./g, "")
-    .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+    .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 };
 export const priceFormat = (number) => {
-  return number ? `Rp. ${numberFormat(number)}` : `Rp. 0`;
+  return computed(() => (number ? ` ${numberFormat(number)} IQD` : ` 0 IQD`));
 };
-// export const addCash = (amount) => store.commit.ADD_CASH(amount);
+export const addCash = (amount) => {
+  // const store = useStore();
+  console.log("amount-composables", amount);
+
+  return store.commit(ADD_CASH, amount);
+};
+export const useCash = computed(() => store.getters.GET_CASH);
+export const useChange = computed(() => store.getters.GET_CHANGE);
+export const useCart = computed(() => store.getters.GET_CART);
 export const findCartIndex = (product) => {
-  const store = useStore();
+  // const store = useStore();
   return store.getters.GET_CART_INDEX(product);
 };
 export const addToCart = (product) => {
-  const store = useStore();
+  // const store = useStore();
   store.dispatch.ADD_TO_CART(product);
 };
+export const getTotalPrice = () => {
+  // const store = useStore();
+  return computed(() => store.getters.GET_TOTAL_PRICE);
+};
+export const getItemsCount = () => {
+  return computed(() => store.getters.GET_ITEMS_COUNT);
+};
+export const clear = () => {
+  // const store = useStore();
+  return store.commit(CLEAR);
+};
+export const addQty = (item, quantity) => {
+  // const store = useStore();
+  const payload = {};
+  const index = useCart.value.findIndex((i) => i.productId === item.productId);
 
-// export const clear = () => store.commit.CLEAR;
-// export const addQty = (quantity) => store.commit.ADD_QUANTITY(quantity);
-export const updateChange = computed(() => store.commit.UPDATE_CHANGE);
-// export const updateCash = (value) => store.commit.UPDATE_CASH(value);
+  if (index === -1) {
+    return;
+  }
+  payload.index = index;
+  payload.quantity = quantity;
+
+  console.log(payload);
+
+  store.commit(ADD_QUANTITY, payload);
+  updateChange();
+
+  // console.log("useCart.value[index]", useCart.value[index]);
+
+  // const afterAdd = item.qty + quantity;
+  // if (useCart.value[index] === 0) {
+  //   ("==================================");
+  //   useCart.value.splice(index, 1);
+  //   clearSound();
+  // } else {
+  //   useCart.value[index].qty = afterAdd;
+  //   beep();
+  // }
+  // updateChange();
+};
+export const updateChange = () => {
+  // const store = useStore();
+  return store.commit(UPDATE_CHANGE);
+};
+export const updateCash = (value) => store.commit.UPDATE_CASH(value);
 
 export const submitable = () => {
-  const store = useStore();
+  // const store = useStore();
   return store.getters.SUBMITABLE;
 };
 
 export const clearSound = () => {
-  playSound("@/assets/sound/sound/button-21.mp3");
+  playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
 };
 export const playSound = (src) => {
-  const sound = new Audio();
-  sound.src = src;
-  sound.play();
+  if (src) {
+    const sound = new Audio(src);
+    console.log(sound);
+    sound.play();
+  }
+  // sound.src = src;
   // sound.onended = () => delete sound;
 };
 
-// export const getTotalPrice = () => store.commit.GET_TOTAL_PRICE;
-export const beep = () => playSound("sound/beep-29.mp3");
+export const beep = () =>
+  playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");

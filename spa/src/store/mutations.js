@@ -56,26 +56,38 @@ const mutations = {
     // updateChange();
   },
   [UPDATE_CHANGE](state) {
-    state.change = state.cash - getTotalPrice();
+    console.log("change called");
+
+    state.change = state.cash - getTotalPrice().value;
+    console.log("change mutations", state.change);
   },
-  [ADD_QUANTITY](state, { item, qty }) {
-    const index = state.cart.findIndex((i) => i.id === item.id);
+  [GET_TOTAL_PRICE](state) {
+    state.cart.reduce((total, item) => total + item.qty * item.price, 0);
+  },
+  [ADD_QUANTITY](state, payload) {
+    console.log("ADD_QUANTITY", payload.item);
+    const { index, quantity } = payload;
+    console.log(payload);
+    // const index = state.cart.findIndex((i) => i.id === payload.item.id);
     if (index === -1) {
       return;
     }
-    const afterAdd = item.qty + qty;
-    if (afterAdd === 0) {
+    const afterAddItem = state.cart[index].qty + quantity;
+    if (afterAddItem === 0) {
       state.cart.splice(index, 1);
       clearSound();
     } else {
-      state.cart[index].qty = afterAdd;
+      state.cart[index].qty = afterAddItem;
       beep();
     }
     getTotalPrice();
   },
 
   [ADD_CASH](state, amount) {
-    state.cash = (state.cash || 0) + amount;
+    console.log("amount-mutations", amount);
+    console.log("cash before-mutations", state.cash);
+    state.cash += amount || 0;
+    console.log("cash after-mutations", state.cash);
 
     updateChange();
     beep();

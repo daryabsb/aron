@@ -26,11 +26,11 @@ const addToCart = (product) => store.dispatch(ADD_TO_CART, product);
   <div class="flex flex-col bg-blue-gray-50 h-full w-full py-4">
     <div class="flex px-2 flex-row relative">
       <div
-        class="absolute left-5 top-3 px-2 py-2 rounded rounded-full bg-cyan-500 text-white"
+        class="absolute left-3 top-3 m-2 p-2 rounded-full bg-cyan-500 text-white"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-8 w-8"
+          class="h-5 w-5"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -45,8 +45,8 @@ const addToCart = (product) => store.dispatch(ADD_TO_CART, product);
       </div>
       <input
         type="text"
-        class="bg-white rounded-3xl shadow text-lg full w-full h-16 py-4 pl-16 transition-shadow focus:shadow-2xl focus:outline-none"
-        placeholder="Cari menu ..."
+        class="bg-white rounded-lg border-none shadow text-lg w-full h-12 pl-16 focus:outline-cyan-500 focus:shadow-lg"
+        placeholder="Barcode, Name, Picture, anything at all ..."
         @keyup="updateKeyword"
         v-model="keyword"
       />
