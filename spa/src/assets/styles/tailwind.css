@@ -1391,6 +1391,9 @@ select {
 .rounded-lg {
   border-radius: 0.5rem;
 }
+.rounded-3xl {
+  border-radius: 1.5rem /* 24px */;
+}
 .rounded-full {
   border-radius: 9999px;
 }
@@ -2280,6 +2283,9 @@ select {
 .p-5 {
   padding: 1.25rem;
 }
+.p-6 {
+  padding: 1.5rem /* 24px */;
+}
 .p-8 {
   padding: 2rem;
 }
@@ -3044,6 +3050,15 @@ select {
 }
 .w-1\/2 {
   width: 50%;
+}
+.w-1\/12 {
+  width: 8.333333%;
+}
+.w-2\/12 {
+  width: 16.666667%;
+}
+.w-3\/12 {
+  width: 25%;
 }
 .w-6\/12 {
   width: 50%;

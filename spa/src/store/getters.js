@@ -9,6 +9,8 @@ import {
   GET_KEYWORD,
   GET_TOTAL_PRICE,
   GET_ITEMS_COUNT,
+  GET_IS_SHOW_MODAL_RECEIPT,
+  GET_RECEIPT_NUMBER,
 } from "@/store/constants";
 
 const getters = {
@@ -43,6 +45,12 @@ const getters = {
     state.cart.findIndex((p) => p.id === product.id),
   [GET_KEYWORD](state) {
     return state.keyword;
+  },
+  [GET_IS_SHOW_MODAL_RECEIPT](state) {
+    return state.isShowModalReceipt;
+  },
+  [GET_RECEIPT_NUMBER](state) {
+    return state.receiptNo;
   },
 };
 

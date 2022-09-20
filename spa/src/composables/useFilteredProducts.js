@@ -1,3 +1,4 @@
+import { computed } from "vue";
 import { useStore } from "vuex";
 const filteredProducts = () => {
   const store = useStore();

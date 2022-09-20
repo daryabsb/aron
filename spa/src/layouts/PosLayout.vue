@@ -117,11 +117,11 @@
 
       <!-- modal receipt -->
       <div
-        v-if="isShowModalReceipt"
+        v-show="isShowModalReceipt"
         class="fixed w-full h-screen left-0 top-0 z-10 flex flex-wrap justify-center content-center p-24"
       >
         <div
-          v-if="isShowModalReceipt"
+          v-show="isShowModalReceipt"
           class="fixed glass w-full h-screen left-0 top-0 z-0"
           x-transition:enter="transition ease-out duration-100"
           x-transition:enter-start="opacity-0"
@@ -132,7 +132,7 @@
           @click="closeModalReceipt()"
         ></div>
         <div
-          v-if="isShowModalReceipt"
+          v-show="isShowModalReceipt"
           class="w-96 rounded-3xl bg-white shadow-xl overflow-hidden z-10"
           x-transition:enter="transition ease-out duration-100"
           x-transition:enter-start="opacity-0 transform scale-90"
@@ -146,13 +146,14 @@
             class="text-left w-full text-sm p-6 overflow-auto"
           >
             <div class="text-center">
+              <!-- src="img/receipt-logo.png" -->
               <img
-                src="img/receipt-logo.png"
-                alt="Tailwind POS"
+                src="http://127.0.0.1:8000/media/img/logo.svg"
+                alt="ARON POS"
                 class="mb-3 w-8 h-8 inline-block"
               />
-              <h2 class="text-xl font-semibold">TAILWIND POS</h2>
-              <p>CABANG KONOHA SELATAN</p>
+              <h2 class="text-xl font-semibold">ARON MARKET</h2>
+              <p>PASHA CITY - RAPARRIN - SLEMANI</p>
             </div>
             <div class="flex mt-4 text-xs">
               <div class="flex-grow">
@@ -172,7 +173,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <div v-for="(item, index) in cart" :key="index">
+                  <template v-for="(item, index) in cart" :key="index">
                     <tr>
                       <td class="py-2 text-center">{{ index + 1 }}</td>
                       <td class="py-2 text-left">
@@ -185,7 +186,7 @@
                         {{ priceFormat(item.qty * item.price) }}
                       </td>
                     </tr>
-                  </div>
+                  </template>
                 </tbody>
               </table>
             </div>
@@ -193,7 +194,7 @@
             <div>
               <div class="flex font-semibold">
                 <div class="flex-grow">TOTAL</div>
-                <div>{{ priceFormat(getTotalPrice()) }}</div>
+                <div>{{ priceFormat(getTotalPrice().value) }}</div>
               </div>
               <div class="flex text-xs font-semibold">
                 <div class="flex-grow">PAY AMOUNT</div>
@@ -208,7 +209,7 @@
           </div>
           <div class="p-4 w-full">
             <button
-              class="bg-cyan-500 text-white text-lg px-4 py-3 rounded-2xl w-full focus:outline-none"
+              class="bg-pink-500 text-white text-lg px-4 py-3 rounded-2xl w-full focus:outline-none"
               @click="printAndProceed()"
             >
               PROCEED
@@ -232,7 +233,17 @@ import StoreMenu from "@/components/pos/StoreMenu.vue";
 import { ref, computed, onMounted } from "vue";
 import { useFetchProductsDispatch } from "@/store/composables";
 
-import { clear } from "@/store/composables";
+import {
+  useCash,
+  useChange,
+  useCart,
+  clear,
+  isShowModalReceipt,
+  priceFormat,
+  getTotalPrice,
+  closeModalReceipt,
+  receiptNo,
+} from "@/store/composables";
 export default {
   components: {
     StoreMenu,
@@ -242,26 +253,27 @@ export default {
   setup() {
     let time = ref(null);
     let activeMenu = "pos";
-    let firstTime = true;
+    let firstTime = false;
 
-    let isShowModalReceipt = false;
-    let receiptNo = null;
+    // GETTERS from COMPOSABLES
+    const cart = useCart;
+    const cash = useCash;
+    const change = useChange;
+
     let receiptDate = ref(null);
 
     onMounted(useFetchProductsDispatch);
-
-    const closeModalReceipt = () => computed((isShowModalReceipt = false));
 
     const printAndProceed = () => {
       const receiptContent = document.getElementById("receipt-content");
       const titleBefore = document.title;
       const printArea = document.getElementById("print-area");
-
+      console.log(receiptNo);
       printArea.innerHTML = receiptContent.innerHTML;
       document.title = receiptNo;
 
       window.print();
-      isShowModalReceipt = false;
+      isShowModalReceipt();
 
       printArea.innerHTML = "";
       document.title = titleBefore;
@@ -271,6 +283,9 @@ export default {
       clear();
     };
     return {
+      cart,
+      change,
+      cash,
       clear,
       time,
       activeMenu,
@@ -280,6 +295,8 @@ export default {
       receiptDate,
       closeModalReceipt,
       printAndProceed,
+      priceFormat,
+      getTotalPrice,
     };
   },
 };

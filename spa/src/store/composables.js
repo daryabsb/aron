@@ -5,12 +5,13 @@ import { computed } from "vue";
 import {
   FETCH_USER,
   FETCH_PRODUCTS,
-  GET_CART_INDEX,
+  ADD_KEYWORD,
+  SUBMIT_ORDER,
   ADD_CASH,
   CLEAR,
   ADD_QUANTITY,
   UPDATE_CHANGE,
-  UPDATE_CASH,
+  GET_IS_SHOW_MODAL_RECEIPT,
 } from "@/store/constants";
 import store from "@/store";
 
@@ -48,9 +49,14 @@ export const addCash = (amount) => {
 
   return store.commit(ADD_CASH, amount);
 };
+export const updateKeyword = (keyword) => store.dispatch(ADD_KEYWORD, keyword);
 export const useCash = computed(() => store.getters.GET_CASH);
 export const useChange = computed(() => store.getters.GET_CHANGE);
 export const useCart = computed(() => store.getters.GET_CART);
+export const receiptNo = computed(() => store.getters.GET_RECEIPT_NUMBER);
+export const isShowModalReceipt = computed(
+  () => store.getters.GET_IS_SHOW_MODAL_RECEIPT
+);
 export const findCartIndex = (product) => {
   // const store = useStore();
   return store.getters.GET_CART_INDEX(product);
@@ -70,6 +76,7 @@ export const clear = () => {
   // const store = useStore();
   return store.commit(CLEAR);
 };
+export const closeModalReceipt = () => store.commit.CLOSE_MODAL_RECEIPT;
 export const addQty = (item, quantity) => {
   // const store = useStore();
   const payload = {};
@@ -78,7 +85,7 @@ export const addQty = (item, quantity) => {
   if (index === -1) {
     return;
   }
-  payload.index = index;
+  payload.item = item;
   payload.quantity = quantity;
 
   console.log(payload);
@@ -125,3 +132,7 @@ export const playSound = (src) => {
 
 export const beep = () =>
   playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
+
+// export const submit = (e) => store.dispatch.SUBMIT_ORDER(e);
+export const submit = (event) => store.dispatch(SUBMIT_ORDER, event);
+// export const submit = (e) => console.log(e);

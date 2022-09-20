@@ -12,12 +12,13 @@ import {
   updateChange,
   addQty,
   getTotalPrice,
+  submit,
 } from "@/store/composables";
 export default {
   setup() {
     const store = useStore();
     const moneys = store.state.moneys;
-    console.log("useCash", useCash.value);
+    // console.log("useCash", useCash.value);
 
     // GETTERS from COMPOSABLES
     const cart = useCart;
@@ -45,6 +46,7 @@ export default {
       priceFormat,
       updateChange,
       selectItem,
+      submit,
     };
   },
 };
@@ -282,7 +284,7 @@ export default {
             'bg-blue-gray-200': !submitable(),
           }"
           :disabled="!submitable()"
-          @click="submit()"
+          @click="submit($event)"
         >
           SUBMIT
         </button>

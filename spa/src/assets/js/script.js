@@ -27,7 +27,7 @@ function initApp() {
     db: null,
     time: null,
     firstTime: localStorage.getItem("first_time") === null,
-    activeMenu: 'pos',
+    activeMenu: "pos",
     loadingSampleData: false,
     moneys: [2000, 5000, 10000, 20000, 50000, 100000],
     products: [],
@@ -35,7 +35,7 @@ function initApp() {
     cart: [],
     cash: 0,
     change: 0,
-    isShowModalReceipt: false,
+    isShowModalReceipt: true,
     receiptNo: null,
     receiptDate: null,
     async initDatabase() {
@@ -106,7 +106,7 @@ function initApp() {
       }
       this.updateChange();
     },
-    addCash(amount) {      
+    addCash(amount) {
       this.cash = (this.cash || 0) + amount;
       this.updateChange();
       this.beep();
@@ -140,7 +140,10 @@ function initApp() {
       this.isShowModalReceipt = false;
     },
     dateFormat(date) {
-      const formatter = new Intl.DateTimeFormat('id', { dateStyle: 'short', timeStyle: 'short'});
+      const formatter = new Intl.DateTimeFormat("id", {
+        dateStyle: "short",
+        timeStyle: "short",
+      });
       return formatter.format(date);
     },
     numberFormat(number) {
@@ -170,12 +173,12 @@ function initApp() {
       const sound = new Audio();
       sound.src = src;
       sound.play();
-      sound.onended = () => delete(sound);
+      sound.onended = () => delete sound;
     },
     printAndProceed() {
-      const receiptContent = document.getElementById('receipt-content');
+      const receiptContent = document.getElementById("receipt-content");
       const titleBefore = document.title;
-      const printArea = document.getElementById('print-area');
+      const printArea = document.getElementById("print-area");
 
       printArea.innerHTML = receiptContent.innerHTML;
       document.title = this.receiptNo;
@@ -183,13 +186,13 @@ function initApp() {
       window.print();
       this.isShowModalReceipt = false;
 
-      printArea.innerHTML = '';
+      printArea.innerHTML = "";
       document.title = titleBefore;
 
       // TODO save sale data to database
 
       this.clear();
-    }
+    },
   };
 
   return app;

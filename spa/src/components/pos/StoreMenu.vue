@@ -1,32 +1,35 @@
-<script setup>
-import { ref, computed } from "vue";
+<script>
+import { ref } from "vue";
 import { useStore } from "vuex";
-import {
-  ADD_TO_CART,
-  GET_KEYWORD,
-  UPDATE_CHANGE,
-  UPDATE_KEYWORD,
-  ADD_KEYWORD,
-} from "@/store/constants";
-import { priceFormat } from "@/store/composables";
-
-const store = useStore();
-
-const updateChange = () => store.commit(UPDATE_CHANGE);
-const updateKeyword = () => store.dispatch(ADD_KEYWORD, keyword);
 import useFilteredProducts from "@/composables/useFilteredProducts";
+import { ADD_TO_CART, ADD_KEYWORD } from "@/store/constants";
+import { updateKeyword, priceFormat } from "@/store/composables";
+export default {
+  setup() {
+    const store = useStore();
+    // const updateChange = () => store.commit(UPDATE_CHANGE);
 
-// const keyword = computed(() => store.getters.GET_KEYWORD);
-const keyword = ref("");
-// console.log("keyword", keyword);
-const addToCart = (product) => store.dispatch(ADD_TO_CART, product);
+    // const keyword = computed(() => store.getters.GET_KEYWORD);
+    const keyword = ref("");
+    // console.log("keyword", keyword);
+    const addToCart = (product) => store.dispatch(ADD_TO_CART, product);
+
+    return {
+      addToCart,
+      updateKeyword,
+      useFilteredProducts,
+      keyword,
+      priceFormat,
+    };
+  },
+};
 </script>
 <template>
   <!-- store menu -->
   <div class="flex flex-col bg-blue-gray-50 h-full w-full py-4">
     <div class="flex px-2 flex-row relative">
       <div
-        class="absolute left-3 top-3 m-2 p-2 rounded-full bg-cyan-500 text-white"
+        class="absolute left-3 top-3 m-2 p-2 rounded-full bg-pink-500 text-white"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -44,18 +47,18 @@ const addToCart = (product) => store.dispatch(ADD_TO_CART, product);
         </svg>
       </div>
       <input
-        type="text"
-        class="bg-white rounded-lg border-none shadow text-lg w-full h-12 pl-16 focus:outline-cyan-500 focus:shadow-lg"
-        placeholder="Barcode, Name, Picture, anything at all ..."
-        @keyup="updateKeyword"
         v-model="keyword"
+        type="text"
+        class="bg-white rounded-lg border-none shadow text-lg w-full h-12 pl-16 focus:outline-pink-500 focus:shadow-lg"
+        placeholder="Barcode, Name, Picture, anything at all ..."
+        @keyup="updateKeyword(keyword)"
       />
     </div>
     <div class="h-full overflow-hidden mt-4">
       <div class="h-full overflow-y-auto px-2">
         <div
-          class="select-none bg-blue-gray-100 rounded-3xl flex flex-wrap content-center justify-center h-full opacity-25"
           v-if="useFilteredProducts().length === 0"
+          class="select-none bg-blue-gray-100 rounded-3xl flex flex-wrap content-center justify-center h-full opacity-25"
         >
           <div class="w-full text-center">
             <svg
@@ -80,8 +83,8 @@ const addToCart = (product) => store.dispatch(ADD_TO_CART, product);
           </div>
         </div>
         <div
-          class="select-none bg-blue-gray-100 rounded-3xl flex flex-wrap content-center justify-center h-full opacity-25"
           v-if="useFilteredProducts().length === 0 && keyword.length > 0"
+          class="select-none bg-blue-gray-100 rounded-3xl flex flex-wrap content-center justify-center h-full opacity-25"
         >
           <div class="w-full text-center">
             <svg

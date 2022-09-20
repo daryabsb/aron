@@ -3,13 +3,12 @@ import {
   clearSound,
   getTotalPrice,
   updateChange,
-  findCartIndex,
 } from "@/store/composables";
-
+import moment from "moment";
 import {
   COMMIT_USER,
   COMMIT_PRODUCTS,
-  FIND_CART_INDEX,
+  // FIND_CART_INDEX,
   ADD_QUANTITY,
   ADD_CASH,
   UPDATE_CHANGE,
@@ -19,7 +18,7 @@ import {
   SUBMIT,
   UPDATE_KEYWORD,
   COMMIT_TO_CART,
-  GET_CART_INDEX,
+  CLOSE_MODAL_RECEIPT,
 } from "@/store/constants";
 
 const mutations = {
@@ -35,7 +34,7 @@ const mutations = {
   [GET_TOTAL_PRICE](state) {
     state.cart.reduce((total, item) => total + item.qty * item.price, 0);
   },
-  [FIND_CART_INDEX](state, product) {},
+  // [FIND_CART_INDEX](state, product) {},
   [COMMIT_TO_CART](state, payload) {
     const { product, getters } = payload;
     const index = getters.GET_CART_INDEX(product);
@@ -52,8 +51,8 @@ const mutations = {
     } else {
       state.cart[index].qty += 1;
     }
-    // beep();
-    // updateChange();
+    beep();
+    updateChange();
   },
   [UPDATE_CHANGE](state) {
     console.log("change called");
@@ -66,9 +65,9 @@ const mutations = {
   },
   [ADD_QUANTITY](state, payload) {
     console.log("ADD_QUANTITY", payload.item);
-    const { index, quantity } = payload;
+    const { item, quantity } = payload;
     console.log(payload);
-    // const index = state.cart.findIndex((i) => i.id === payload.item.id);
+    const index = state.cart.findIndex((i) => i.id === item.id);
     if (index === -1) {
       return;
     }
@@ -105,11 +104,14 @@ const mutations = {
     updateChange();
     clearSound();
   },
-  [SUBMIT]() {
+  [CLOSE_MODAL_RECEIPT](state) {
+    state.isShowModalReceipt = false;
+  },
+  [SUBMIT](state) {
     const time = new Date();
-    this.isShowModalReceipt = true;
-    this.receiptNo = `TWPOS-KS-${Math.round(time.getTime() / 1000)}`;
-    this.receiptDate = this.dateFormat(time);
+    state.isShowModalReceipt = true;
+    state.receiptNo = `ARONPOS-KS-${Math.round(time.getTime() / 1000)}`;
+    state.receiptDate = moment(time);
   },
 };
 export default mutations;

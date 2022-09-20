@@ -8,8 +8,8 @@ import {
   COMMIT_PRODUCTS,
   ADD_TO_CART,
   COMMIT_TO_CART,
-  FIND_CART_INDEX,
-  COMMIT_FIND_INDEX,
+  SUBMIT_ORDER,
+  SUBMIT,
   UPDATE_KEYWORD,
   UPDATE_CASH,
   ADD_KEYWORD,
@@ -41,6 +41,10 @@ const actions = {
     console.log("amount-actions", amount);
 
     context.commit(ADD_CASH, amount);
+  },
+  [SUBMIT_ORDER](context, payload) {
+    console.log(payload);
+    context.commit(SUBMIT);
   },
 };
 export default actions;

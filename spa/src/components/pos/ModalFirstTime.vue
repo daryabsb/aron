@@ -43,8 +43,8 @@
       </div>
       <div class="text-left">
         <button
-          @click="startWithSampleData()"
           class="text-left w-full mb-3 rounded-xl bg-blue-gray-500 text-white focus:outline-none hover:bg-cyan-400 px-4 py-4"
+          @click="startWithSampleData()"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -63,8 +63,8 @@
           LOAD SAMPLE DATA
         </button>
         <button
-          @click="startBlank()"
           class="text-left w-full rounded-xl bg-blue-gray-500 text-white focus:outline-none hover:bg-teal-400 px-4 py-4"
+          @click="startBlank()"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
