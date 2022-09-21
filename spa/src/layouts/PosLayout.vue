@@ -120,14 +120,7 @@
     </div>
     <!-- end of noprint-area -->
 
-    <div id="print-area" class="print-area">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quisquam
-        ratione quae esse eos perspiciatis, recusandae soluta voluptatem sint
-        molestiae aspernatur ad culpa odio unde accusantium quibusdam earum
-        maiores dolor.
-      </p>
-    </div>
+    <div id="print-area" class="print-area"></div>
   </div>
 
   <!-- PAGE START OVER END -->
