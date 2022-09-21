@@ -33,6 +33,7 @@ module.exports = {
           "Tables",
           "Login",
           "Register",
+          "Popper",
           "Dashboard",
         ],
       },

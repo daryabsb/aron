@@ -38,12 +38,12 @@ const actions = {
     context.commit(UPDATE_KEYWORD, keyword);
   },
   [UPDATE_CASH](context, amount) {
-    console.log("amount-actions", amount);
+    // console.log("amount-actions", amount);
 
     context.commit(ADD_CASH, amount);
   },
   [SUBMIT_ORDER](context, payload) {
-    console.log(payload);
+    // console.log(payload);
     context.commit(SUBMIT);
   },
 };

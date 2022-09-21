@@ -11,7 +11,7 @@ import {
   CLEAR,
   ADD_QUANTITY,
   UPDATE_CHANGE,
-  GET_IS_SHOW_MODAL_RECEIPT,
+  CLOSE_MODAL_RECEIPT,
 } from "@/store/constants";
 import store from "@/store";
 
@@ -45,7 +45,7 @@ export const priceFormat = (number) => {
 };
 export const addCash = (amount) => {
   // const store = useStore();
-  console.log("amount-composables", amount);
+  // console.log("amount-composables", amount);
 
   return store.commit(ADD_CASH, amount);
 };
@@ -54,6 +54,7 @@ export const useCash = computed(() => store.getters.GET_CASH);
 export const useChange = computed(() => store.getters.GET_CHANGE);
 export const useCart = computed(() => store.getters.GET_CART);
 export const receiptNo = computed(() => store.getters.GET_RECEIPT_NUMBER);
+export const receiptDate = computed(() => store.getters.GET_RECEIPT_DATE);
 export const isShowModalReceipt = computed(
   () => store.getters.GET_IS_SHOW_MODAL_RECEIPT
 );
@@ -76,7 +77,10 @@ export const clear = () => {
   // const store = useStore();
   return store.commit(CLEAR);
 };
-export const closeModalReceipt = () => store.commit.CLOSE_MODAL_RECEIPT;
+export const closeModalReceipt = () => {
+  store.commit(CLOSE_MODAL_RECEIPT);
+};
+
 export const addQty = (item, quantity) => {
   // const store = useStore();
   const payload = {};
@@ -88,7 +92,7 @@ export const addQty = (item, quantity) => {
   payload.item = item;
   payload.quantity = quantity;
 
-  console.log(payload);
+  // console.log(payload);
 
   store.commit(ADD_QUANTITY, payload);
   updateChange();
@@ -123,7 +127,7 @@ export const clearSound = () => {
 export const playSound = (src) => {
   if (src) {
     const sound = new Audio(src);
-    console.log(sound);
+    // console.log(sound);
     sound.play();
   }
   // sound.src = src;
@@ -134,5 +138,5 @@ export const beep = () =>
   playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
 
 // export const submit = (e) => store.dispatch.SUBMIT_ORDER(e);
-export const submit = (event) => store.dispatch(SUBMIT_ORDER, event);
+export const submit = () => store.dispatch(SUBMIT_ORDER);
 // export const submit = (e) => console.log(e);

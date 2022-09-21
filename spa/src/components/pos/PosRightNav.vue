@@ -18,7 +18,6 @@ export default {
   setup() {
     const store = useStore();
     const moneys = store.state.moneys;
-    // console.log("useCash", useCash.value);
 
     // GETTERS from COMPOSABLES
     const cart = useCart;

@@ -11,6 +11,7 @@ import {
   GET_ITEMS_COUNT,
   GET_IS_SHOW_MODAL_RECEIPT,
   GET_RECEIPT_NUMBER,
+  GET_RECEIPT_DATE,
 } from "@/store/constants";
 
 const getters = {
@@ -27,9 +28,6 @@ const getters = {
     return state.cart.reduce((count, item) => count + item.qty, 0);
   },
   [GET_TOTAL_PRICE](state) {
-    console.log(
-      state.cart.reduce((total, item) => total + item.qty * item.price, 0)
-    );
     return state.cart.reduce((total, item) => total + item.qty * item.price, 0);
   },
   [SUBMITABLE](state) {
@@ -51,6 +49,9 @@ const getters = {
   },
   [GET_RECEIPT_NUMBER](state) {
     return state.receiptNo;
+  },
+  [GET_RECEIPT_DATE](state) {
+    return state.receiptDate;
   },
 };
 
