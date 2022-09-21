@@ -234,8 +234,8 @@ export default {
         discount_type: isDiscountType ? discountType : 0,
         comment: "",
       };
-      orderItems.push(orderItem);
-      console.log(orderItems);
+      orderItems.value.push(orderItem);
+      console.log(orderItems.value);
     };
 
     return {

@@ -5,8 +5,9 @@ import useFilteredProducts from "@/composables/useFilteredProducts";
 import { ADD_TO_CART, ADD_KEYWORD } from "@/store/constants";
 import { updateKeyword, priceFormat } from "@/store/composables";
 import ProductsGroupTabs from "@/components/pos/ProductsGroupTabs.vue";
+import PinkTabs from "@/components/pos/PinkTabs.vue"
 export default {
-  components: { ProductsGroupTabs },
+  components: { ProductsGroupTabs,PinkTabs },
   setup() {
     const store = useStore();
     // const updateChange = () => store.commit(UPDATE_CHANGE);
@@ -59,8 +60,8 @@ export default {
     <div class="h-full overflow-hidden mt-4">
       <div class="h-full overflow-y-auto px-2">
         <!-- CATEGORY TABS START -->
-        <products-group-tabs></products-group-tabs>
-
+        <!-- <products-group-tabs></products-group-tabs> -->
+        <pink-tabs></pink-tabs>
         <!-- CATEGORY TABS END -->
         <div
           v-if="useFilteredProducts().length === 0"
