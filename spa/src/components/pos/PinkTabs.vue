@@ -25,7 +25,11 @@
         class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded"
       >
         <div class="px-4 py-5 flex-auto">
-          <slot :productGroups="productGroups" :openTab="openTab"></slot>
+          <slot
+            :productGroups="productGroups"
+            :tabProducts="tabProducts"
+            :openTab="openTab"
+          ></slot>
         </div>
       </div>
     </div>
@@ -33,28 +37,53 @@
 </template>
 
 <script>
-import { reactive, ref } from "vue";
+import { reactive, ref, onMounted } from "vue";
+import axios from "axios";
 export default {
   name: "pink-tabs",
   setup() {
-    let openTab = ref(1);
+    let openTab = ref(0);
+    let tabProducts = reactive([]);
 
-    const categories = [
-      { id: 1, name: "Groceries" },
-      { id: 2, name: "Stationaries" },
-      { id: 3, name: "Kitchen" },
-      { id: 4, name: "Homes" },
-    ];
+    let productGroups = [];
+    const getProductGroups = async () => {
+      try {
+        const response = await axios.get(
+          "http://127.0.0.1:8000/api/product/groups/"
+        );
+        for (let product of response.data) {
+          // categories.push({id:0,name"All Pro})
+          productGroups.push(product);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-    const productGroups = reactive([
-      { id: 0, name: "All Products" },
-      ...categories,
-    ]);
+    onMounted(getProductGroups);
 
-    const toggleTabs = (tabNumber) => (openTab.value = tabNumber);
+    productGroups.unshift({ id: 0, name: "All Products" });
+
+    const toggleTabs = async (tabNumber) => {
+      openTab.value = tabNumber;
+      let url;
+      if (tabNumber === 0) {
+        url = "http://127.0.0.1:8000/api/product/all/";
+      } else {
+        url = `http://127.0.0.1:8000/api/product/all/?group=${tabNumber}`;
+      }
+      try {
+        const response = await axios.get(url);
+        tabProducts.value = response.data;
+        console.log("tabProducts",tabProducts.value);
+      } catch (error) {
+        console.log(error);
+      }
+    };
     return {
       openTab,
       toggleTabs,
+      tabProducts,
       productGroups,
     };
   },

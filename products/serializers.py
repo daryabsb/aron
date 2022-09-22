@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from core.models import Barcode, Product
+from core.models import Barcode, Product, ProductGroup
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -17,3 +17,8 @@ class BarcodeSerializer(serializers.ModelSerializer):
         read_only_Fields = ('id')
 
 
+class ProductsGroupSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = ProductGroup
+        fields = '__all__'

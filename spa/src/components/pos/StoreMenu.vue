@@ -14,19 +14,14 @@ export default {
   components: { SearchInput, ProductsGroupTabs, PinkTabs, StoreProductWidget },
   setup() {
     const store = useStore();
-    // const updateChange = () => store.commit(UPDATE_CHANGE);
 
-    // const keyword = computed(() => store.getters.GET_KEYWORD);
     const keyword = ref("");
-    const openTab = ref(1);
-    // console.log("keyword", keyword);
 
     return {
       addToCart,
       updateKeyword,
       useFilteredProducts,
       keyword,
-      openTab,
       priceFormat,
     };
   },
@@ -41,23 +36,18 @@ export default {
       <div class="h-full overflow-y-auto px-2">
         <!-- CATEGORY TABS START -->
         <!-- <products-group-tabs></products-group-tabs> -->
-        <pink-tabs v-slot="{ productGroups, openTab }">
+        <pink-tabs v-slot="{ productGroups, tabProducts, openTab }">
           <div class="tab-content tab-space">
             <div
-              v-for="tabContent in productGroups"
-              :key="tabContent.id"
+              v-for="content in productGroups"
+              :key="content.id"
               :class="{
-                hidden: openTab !== tabContent.id,
-                block: openTab === tabContent.id,
+                hidden: openTab !== content.id,
+                block: openTab === content.id,
               }"
             >
-              {{ openTab }}
-              <p>
-                <br />
-                <br />
-                Dramatically visualize customer directed convergence without
-                revolutionary ROI.
-              </p>
+            {{tabProducts[0]}}
+              <store-product-widget v-for="product in tabProducts" :key="product.id" :product="product"></store-product-widget>
             </div>
           </div>
         </pink-tabs>
