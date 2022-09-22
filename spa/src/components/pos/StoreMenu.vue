@@ -2,26 +2,31 @@
 import { ref } from "vue";
 import { useStore } from "vuex";
 import useFilteredProducts from "@/composables/useFilteredProducts";
-import { ADD_TO_CART, ADD_KEYWORD } from "@/store/constants";
-import { updateKeyword, priceFormat } from "@/store/composables";
+import { updateKeyword, priceFormat, addToCart } from "@/store/composables";
+
+/* COMPONENTS */
 import ProductsGroupTabs from "@/components/pos/ProductsGroupTabs.vue";
-import PinkTabs from "@/components/pos/PinkTabs.vue"
+import PinkTabs from "@/components/pos/PinkTabs.vue";
+import StoreProductWidget from "@/components/pos/products/StoreProductWidget.vue";
+import SearchInput from "@/components/shared/SearchInput.vue";
+
 export default {
-  components: { ProductsGroupTabs,PinkTabs },
+  components: { SearchInput, ProductsGroupTabs, PinkTabs, StoreProductWidget },
   setup() {
     const store = useStore();
     // const updateChange = () => store.commit(UPDATE_CHANGE);
 
     // const keyword = computed(() => store.getters.GET_KEYWORD);
     const keyword = ref("");
+    const openTab = ref(1);
     // console.log("keyword", keyword);
-    const addToCart = (product) => store.dispatch(ADD_TO_CART, product);
 
     return {
       addToCart,
       updateKeyword,
       useFilteredProducts,
       keyword,
+      openTab,
       priceFormat,
     };
   },
@@ -30,38 +35,32 @@ export default {
 <template>
   <!-- store menu -->
   <div class="flex flex-col bg-blue-gray-50 h-full w-full py-4">
-    <div class="flex px-2 flex-row relative">
-      <div
-        class="absolute left-3 top-3 m-2 p-2 rounded-full bg-pink-500 text-white"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-          />
-        </svg>
-      </div>
-      <input
-        v-model="keyword"
-        type="text"
-        class="bg-white rounded-lg border-none shadow text-lg w-full h-12 pl-16 focus:outline-pink-500 focus:shadow-lg"
-        placeholder="Barcode, Name, Picture, anything at all ..."
-        @keyup="updateKeyword(keyword)"
-      />
-    </div>
+    <!-- SEARCH INPUT IN STORE -->
+    <search-input></search-input>
     <div class="h-full overflow-hidden mt-4">
       <div class="h-full overflow-y-auto px-2">
         <!-- CATEGORY TABS START -->
         <!-- <products-group-tabs></products-group-tabs> -->
-        <pink-tabs></pink-tabs>
+        <pink-tabs v-slot="{ productGroups, openTab }">
+          <div class="tab-content tab-space">
+            <div
+              v-for="tabContent in productGroups"
+              :key="tabContent.id"
+              :class="{
+                hidden: openTab !== tabContent.id,
+                block: openTab === tabContent.id,
+              }"
+            >
+              {{ openTab }}
+              <p>
+                <br />
+                <br />
+                Dramatically visualize customer directed convergence without
+                revolutionary ROI.
+              </p>
+            </div>
+          </div>
+        </pink-tabs>
         <!-- CATEGORY TABS END -->
         <div
           v-if="useFilteredProducts().length === 0"
@@ -117,22 +116,9 @@ export default {
           </div>
         </div>
         <div class="grid grid-cols-4 gap-4 pb-3">
-          <div v-for="product in useFilteredProducts()" :key="product.id">
-            <div
-              role="button"
-              class="select-none cursor-pointer transition-shadow overflow-hidden rounded-2xl bg-white shadow hover:shadow-lg"
-              title="Cucumber"
-              @click="addToCart(product)"
-            >
-              <img :src="product.image" :alt="product.name" />
-              <div class="flex pb-3 px-3 text-sm -mt-3">
-                <p class="flex-grow truncate mr-1">{{ product.name }}</p>
-                <p class="nowrap font-semibold">
-                  {{ priceFormat(product.price) }}
-                </p>
-              </div>
-            </div>
-          </div>
+          <template v-for="product in useFilteredProducts()" :key="product.id">
+            <store-product-widget :item="product" />
+          </template>
         </div>
       </div>
     </div>

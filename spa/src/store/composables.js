@@ -12,6 +12,7 @@ import {
   ADD_QUANTITY,
   UPDATE_CHANGE,
   CLOSE_MODAL_RECEIPT,
+  ADD_TO_CART,
 } from "@/store/constants";
 import store from "@/store";
 
@@ -58,11 +59,13 @@ export const receiptDate = computed(() => store.getters.GET_RECEIPT_DATE);
 export const isShowModalReceipt = computed(
   () => store.getters.GET_IS_SHOW_MODAL_RECEIPT
 );
+
+export const addToCart = (product) => store.dispatch(ADD_TO_CART, product);
 export const findCartIndex = (product) => {
   // const store = useStore();
   return store.getters.GET_CART_INDEX(product);
 };
-export const addToCart = (product) => {
+export const addToCarts = (product) => {
   // const store = useStore();
   store.dispatch.ADD_TO_CART(product);
 };
