@@ -5,6 +5,7 @@ import { computed } from "vue";
 import {
   FETCH_USER,
   FETCH_PRODUCTS,
+  FETCH_PRODUCT_GROUPS,
   ADD_KEYWORD,
   SUBMIT_ORDER,
   ADD_CASH,
@@ -13,6 +14,7 @@ import {
   UPDATE_CHANGE,
   CLOSE_MODAL_RECEIPT,
   ADD_TO_CART,
+  COMMIT_TAB_PRODUCTS,
 } from "@/store/constants";
 import store from "@/store";
 
@@ -25,6 +27,16 @@ export const useFetchUserDispatch = () => {
 export const useFetchProductsDispatch = () => {
   // const store = useStore();
   store.dispatch(FETCH_PRODUCTS);
+};
+
+export const useFetchProductGroupsDispatch = () => {
+  // const store = useStore();
+  console.log("CALLED");
+  store.dispatch(FETCH_PRODUCT_GROUPS);
+};
+
+export const filteredTabProductsByGroupId = (groupID) => {
+  store.commit(COMMIT_TAB_PRODUCTS, groupID);
 };
 
 // POS Composable
@@ -56,6 +68,12 @@ export const useChange = computed(() => store.getters.GET_CHANGE);
 export const useCart = computed(() => store.getters.GET_CART);
 export const receiptNo = computed(() => store.getters.GET_RECEIPT_NUMBER);
 export const receiptDate = computed(() => store.getters.GET_RECEIPT_DATE);
+export const tabProducts = computed(() => {
+  if (store.getters.GET_TAB_PRODUCTS.length > 0) {
+    return store.getters.GET_TAB_PRODUCTS;
+  }
+  return store.getters.GET_PRODUCTS;
+});
 export const isShowModalReceipt = computed(
   () => store.getters.GET_IS_SHOW_MODAL_RECEIPT
 );

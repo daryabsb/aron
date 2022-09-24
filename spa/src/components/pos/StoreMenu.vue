@@ -2,7 +2,12 @@
 import { ref } from "vue";
 import { useStore } from "vuex";
 import useFilteredProducts from "@/composables/useFilteredProducts";
-import { updateKeyword, priceFormat, addToCart } from "@/store/composables";
+import {
+  updateKeyword,
+  priceFormat,
+  addToCart,
+  tabProducts,
+} from "@/store/composables";
 
 /* COMPONENTS */
 import ProductsGroupTabs from "@/components/pos/ProductsGroupTabs.vue";
@@ -23,6 +28,7 @@ export default {
       useFilteredProducts,
       keyword,
       priceFormat,
+      tabProducts,
     };
   },
 };
@@ -36,22 +42,6 @@ export default {
       <div class="h-full overflow-y-auto px-2">
         <!-- CATEGORY TABS START -->
         <!-- <products-group-tabs></products-group-tabs> -->
-        <pink-tabs v-slot="{ productGroups, tabProducts, openTab }">
-          <div class="tab-content tab-space">
-            <div
-              v-for="content in productGroups"
-              :key="content.id"
-              :class="{
-                hidden: openTab !== content.id,
-                block: openTab === content.id,
-              }"
-            >
-            {{tabProducts[0]}}
-              <store-product-widget v-for="product in tabProducts" :key="product.id" :product="product"></store-product-widget>
-            </div>
-          </div>
-        </pink-tabs>
-        <!-- CATEGORY TABS END -->
         <div
           v-if="useFilteredProducts().length === 0"
           class="select-none bg-blue-gray-100 rounded-3xl flex flex-wrap content-center justify-center h-full opacity-25"
@@ -105,11 +95,31 @@ export default {
             </p>
           </div>
         </div>
-        <div class="grid grid-cols-4 gap-4 pb-3">
-          <template v-for="product in useFilteredProducts()" :key="product.id">
+        <pink-tabs v-slot="{ productGroups, openTab }">
+          <div class="tab-content tab-space">
+            <div
+              v-for="content in productGroups"
+              :key="content.id"
+              :class="{
+                hidden: openTab !== content.id,
+                block: openTab === content.id,
+              }"
+            >
+              <div class="grid grid-cols-4 gap-4 pb-3">
+                <template v-for="product in tabProducts" :key="product.id">
+                  <store-product-widget :item="product"></store-product-widget>
+                </template>
+              </div>
+            </div>
+          </div>
+        </pink-tabs>
+        <!-- CATEGORY TABS END -->
+
+        <!-- <div class="grid grid-cols-4 gap-4 pb-3">
+          <template v-for="product in tabProducts" :key="product.id">
             <store-product-widget :item="product" />
           </template>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

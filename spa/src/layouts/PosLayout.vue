@@ -10,13 +10,8 @@
       <router-view></router-view>
 
       <modal-first-time v-show="isShowModalFirstTime"></modal-first-time>
-
-      <!-- modal receipt -->
-      <modal-receipt v-show="isShowModalReceipt"></modal-receipt>
     </div>
     <!-- end of noprint-area -->
-
-    <div id="print-area" class="print-area"></div>
   </div>
 
   <!-- PAGE START OVER END -->
@@ -27,7 +22,6 @@ import PosLeftNav from "@/components/pos/PosLeftNav.vue";
 import PosRightNav from "@/components/pos/PosRightNav.vue";
 import StoreMenu from "@/components/pos/StoreMenu.vue";
 import ModalFirstTime from "@/components/modals/ModalFirstTime.vue";
-import ModalReceipt from "@/components/pos/ModalReceipt.vue";
 import { ref, onMounted } from "vue";
 import { useFetchProductsDispatch } from "@/store/composables";
 
@@ -47,7 +41,6 @@ export default {
     StoreMenu,
     PosLeftNav,
     PosRightNav,
-    ModalReceipt,
     ModalFirstTime,
   },
   setup() {
@@ -64,24 +57,6 @@ export default {
 
     onMounted(useFetchProductsDispatch);
 
-    const printAndProceed = () => {
-      const receiptContent = document.getElementById("receipt-content");
-      const titleBefore = document.title;
-      const printArea = document.getElementById("print-area");
-      printArea.innerHTML = receiptContent.innerHTML;
-      document.title = receiptNo;
-
-      window.print();
-      // isShowModalReceipt();
-      closeModalReceipt();
-
-      printArea.innerHTML = "";
-      document.title = titleBefore;
-
-      // TODO save sale data to database
-
-      clear();
-    };
     return {
       cart,
       change,
@@ -94,7 +69,6 @@ export default {
       receiptNo,
       receiptDate,
       closeModalReceipt,
-      printAndProceed,
       priceFormat,
       getTotalPrice,
     };

@@ -3,6 +3,8 @@ const state = () => {
     user: null,
     image: "",
     products: [],
+    tabProducts: [],
+    productGroups: [],
 
     // POS STATE
     db: null,

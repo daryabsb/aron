@@ -8,7 +8,8 @@ import moment from "moment";
 import {
   COMMIT_USER,
   COMMIT_PRODUCTS,
-  // FIND_CART_INDEX,
+  COMMIT_PRODUCT_GROUPS,
+  COMMIT_TAB_PRODUCTS,
   ADD_QUANTITY,
   ADD_CASH,
   UPDATE_CHANGE,
@@ -27,6 +28,14 @@ const mutations = {
   },
   [COMMIT_PRODUCTS](state, payload) {
     state.products = payload;
+  },
+  [COMMIT_PRODUCT_GROUPS](state, payload) {
+    state.productGroups = payload;
+  },
+  [COMMIT_TAB_PRODUCTS](state, groupID) {
+    state.tabProducts = state.products.filter(
+      (p) => p.product_group === groupID
+    );
   },
   [UPDATE_KEYWORD](state, payload) {
     state.keyword = payload;

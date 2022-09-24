@@ -108,6 +108,7 @@
         </div>
       </div>
     </Transition>
+    <div id="print-area" class="print-area"></div>
   </div>
 </template>
 
@@ -138,6 +139,7 @@ export default {
 
     const printAndProceed = () => {
       const receiptContent = document.getElementById("receipt-content");
+      console.log("receiptContent", receiptContent.innerHTML);
       const titleBefore = document.title;
       const printArea = document.getElementById("print-area");
       printArea.innerHTML = receiptContent.innerHTML;

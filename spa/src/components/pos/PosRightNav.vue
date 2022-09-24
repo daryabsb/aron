@@ -14,7 +14,12 @@ import {
   getTotalPrice,
   submit,
 } from "@/store/composables";
+import ModalReceipt from "@/components/pos/ModalReceipt.vue";
+
 export default {
+  components: {
+    ModalReceipt,
+  },
   setup() {
     const store = useStore();
     const moneys = store.state.moneys;
@@ -290,6 +295,8 @@ export default {
       </div>
       <!-- end of payment info -->
     </div>
+    <!-- modal receipt -->
+    <modal-receipt v-show="isShowModalReceipt"></modal-receipt>
   </div>
   <!-- end of right sidebar -->
 </template>

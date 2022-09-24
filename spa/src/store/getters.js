@@ -1,6 +1,7 @@
 import {
   GET_USER,
   GET_PRODUCTS,
+  GET_PRODUCT_GROUPS,
   GET_CART,
   GET_CHANGE,
   GET_CASH,
@@ -12,6 +13,7 @@ import {
   GET_IS_SHOW_MODAL_RECEIPT,
   GET_RECEIPT_NUMBER,
   GET_RECEIPT_DATE,
+  GET_TAB_PRODUCTS,
 } from "@/store/constants";
 
 const getters = {
@@ -20,6 +22,12 @@ const getters = {
   },
   [GET_PRODUCTS](state) {
     return state.products;
+  },
+  [GET_PRODUCT_GROUPS](state) {
+    return state.productGroups;
+  },
+  [GET_TAB_PRODUCTS](state) {
+    return state.tabProducts;
   },
   [GET_CART](state) {
     return state.cart;
