@@ -4,7 +4,6 @@ const getProductGroups = async () => {
   try {
     // console.log("baseUrl", baseUrl);
     const response = await axios.get(`${baseUrl}/product/groups/`);
-
     response.data.unshift({ id: 0, name: "All Products" });
     return response.data;
   } catch (err) {

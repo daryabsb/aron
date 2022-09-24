@@ -13,6 +13,7 @@ import {
   addQty,
   getTotalPrice,
   submit,
+  isShowModalReceipt,
 } from "@/store/composables";
 import ModalReceipt from "@/components/pos/ModalReceipt.vue";
 
@@ -51,6 +52,7 @@ export default {
       updateChange,
       selectItem,
       submit,
+      isShowModalReceipt,
     };
   },
 };

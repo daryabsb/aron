@@ -31,9 +31,9 @@ const actions = {
     context.commit(COMMIT_PRODUCTS, products);
   },
   [FETCH_PRODUCT_GROUPS]: async (context) => {
-    const products = await getProductGroups();
+    const productsGroup = await getProductGroups();
 
-    await context.commit(COMMIT_PRODUCT_GROUPS, products);
+    await context.commit(COMMIT_PRODUCT_GROUPS, productsGroup);
   },
   [ADD_TO_CART](context, payload) {
     const payloadToCommit = {

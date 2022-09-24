@@ -1,7 +1,11 @@
 from rest_framework import permissions, viewsets
 from django.db.models import Q
 from core.models import Barcode, Product, ProductGroup
-from .serializers import BarcodeSerializer, ProductSerializer, ProductsGroupSerializer
+from .serializers import (
+    BarcodeSerializer,
+    ProductSerializer,
+    ProductsGroupSerializer,
+)
 
 
 class ProductViewset(viewsets.ModelViewSet):
@@ -14,7 +18,7 @@ class ProductViewset(viewsets.ModelViewSet):
 
         # PERFORM FILTER BY SEARCH INPUT
         # conditions = Q()
-        id = self.request.query_params.get('group', None)
+        id = self.request.query_params.get("group", None)
         # print(keywords)
         if id:
             queryset = Product.objects.filter(product_group=id)
@@ -28,7 +32,12 @@ class ProductViewset(viewsets.ModelViewSet):
 
 class ProductGroupViewset(viewsets.ModelViewSet):
     serializer_class = ProductsGroupSerializer
-    queryset = ProductGroup.objects.filter(rank__lte=5).filter(rank__gt=0)
+    queryset = (
+        ProductGroup.objects.filter(rank__lte=5)
+        .filter(rank__gt=0)
+        .filter(products__isnull=False)
+        .distinct()
+    )
     permission_classes = (permissions.IsAuthenticated,)
 
     def perform_create(self, serializer):

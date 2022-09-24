@@ -105,7 +105,7 @@ export default {
                 block: openTab === content.id,
               }"
             >
-              <div class="grid grid-cols-4 gap-4 pb-3">
+              <div class="grid lg:grid-cols-6 md:grid-cols-4 gap-4 pb-3">
                 <template v-for="product in tabProducts" :key="product.id">
                   <store-product-widget :item="product"></store-product-widget>
                 </template>

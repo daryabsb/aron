@@ -2,7 +2,7 @@
   <div
     role="button"
     class="select-none cursor-pointer transition-shadow overflow-hidden border-2 border-solid border-blue-gray-100 rounded-2xl bg-white shadow-lg hover:shadow-lg"
-    title="Cucumber"
+    :title="item.name"
     @click="addToCart(item)"
   >
     <img :src="item.image" :alt="item.name" />

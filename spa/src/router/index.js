@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-// import Admin from "@/layouts/Admin.vue";
+import AdminLayout from "@/layouts/AdminLayout.vue";
+import PosLayout from "@/layouts/PosLayout.vue";
 // import Auth from "@/layouts/Auth.vue";
 
 // views for Admin layout
-import Dashboard from "@/views/pos/Dashboard.vue";
+import Store from "@/views/pos/Store.vue";
+import AdminDashboard from "@/views/admin/AdminDashboard.vue";
 // import Settings from "@/views/admin/Settings.vue";
 // import Tables from "@/views/admin/Tables.vue";
 // import Maps from "@/views/admin/Maps.vue";
@@ -16,58 +18,37 @@ import Dashboard from "@/views/pos/Dashboard.vue";
 
 // views without layouts
 
+import Index from "@/views/Index.vue";
 // import Landing from "@/views/Landing.vue";
 // import Profile from "@/views/Profile.vue";
-import HomeLayout from "@/layouts/HomeLayout.vue";
-import PosLayout from "@/layouts/PosLayout.vue";
 
 const routes = [
   {
+    path: "/management",
+    redirect: "/management/dashboard",
+    component: AdminLayout,
+    children: [
+      {
+        path: "/management/dashboard",
+        component: AdminDashboard,
+      },
+    ],
+  },
+  {
     path: "/pos",
-    redirect: "/pos/dashboard",
+    redirect: "/pos/store",
     component: PosLayout,
     children: [
       {
-        path: "/pos/dashboard",
-        component: Dashboard,
+        path: "/pos/store",
+        component: Store,
       },
-      //     {
-      //       path: "/dash/settings",
-      //       component: Settings,
-      //     },
-      //     {
-      //       path: "/dash/tables",
-      //       component: Tables,
-      //     },
-      //     {
-      //       path: "/dash/maps",
-      //       component: Maps,
-      //     },
     ],
   },
-  // {
-  //   path: "/auth",
-  //   redirect: "/auth/login",
-  //   component: Auth,
-  //   children: [
-  //     {
-  //       path: "/auth/login",
-  //       component: Login,
-  //     },
-  //     {
-  //       path: "/auth/register",
-  //       component: Register,
-  //     },
-  //   ],
-  // },
-  // {
-  //   path: "/landing",
-  //   component: Landing,
-  // },
-  // {
-  //   path: "/profile",
-  //   component: Profile,
-  // },
+  {
+    path: "/",
+    component: Index,
+  },
   { path: "/:pathMatch(.*)*", redirect: "/" },
 ];
 

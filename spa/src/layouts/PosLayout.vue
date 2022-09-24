@@ -13,8 +13,6 @@
     </div>
     <!-- end of noprint-area -->
   </div>
-
-  <!-- PAGE START OVER END -->
 </template>
 
 <script>

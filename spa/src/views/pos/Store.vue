@@ -1,20 +1,15 @@
 <script>
 import StoreMenu from "@/components/pos/StoreMenu.vue";
 import PosRightNav from "@/components/pos/PosRightNav.vue";
-import ModalReceipt from "@/components/pos/ModalReceipt.vue";
 
-import { isShowModalReceipt } from "@/store/composables";
 export default {
-  name: "Dashboard",
+  name: "Store",
   components: {
     StoreMenu,
     PosRightNav,
-    ModalReceipt,
   },
   setup() {
-    return {
-      isShowModalReceipt,
-    };
+    return {};
   },
 };
 </script>
@@ -27,9 +22,6 @@ export default {
 
     <pos-right-nav></pos-right-nav>
     <!-- modal receipt -->
-    <modal-receipt v-show="isShowModalReceipt"></modal-receipt>
-
-    <!-- PRINT_AREA -->
-    <div id="print-area" class="print-area"></div>
+    <!-- <modal-receipt v-show="isShowModalReceipt"></modal-receipt> -->
   </div>
 </template>

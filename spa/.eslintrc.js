@@ -34,7 +34,7 @@ module.exports = {
           "Login",
           "Register",
           "Popper",
-          "Dashboard",
+          "Store",
         ],
       },
     ],

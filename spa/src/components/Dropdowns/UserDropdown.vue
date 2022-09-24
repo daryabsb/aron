@@ -68,7 +68,6 @@ export default {
   },
   setup() {
     const user = useGetUser();
-
     return {
       user,
     };
