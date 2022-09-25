@@ -4,8 +4,8 @@
     <div
       class="flex flex-col items-center px-1 py-2 flex-shrink-0 w-20 bg-pink-500 rounded-lg"
     >
-      <a
-        href="#"
+      <router-link
+        to="/"
         class="flex items-center justify-center h-10 w-10 bg-pink-50 text-pink-700 rounded-full"
       >
         <img src="/media/img/logo-white.svg" alt="logo" />
@@ -43,7 +43,7 @@
             />
           </g>
         </svg>
-      </a>
+      </router-link>
       <ul class="flex flex-col space-y-2 mt-12">
         <li>
           <a href="#" class="flex items-center">

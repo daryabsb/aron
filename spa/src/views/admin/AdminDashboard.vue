@@ -2,7 +2,8 @@
   <div>
     <div class="flex flex-wrap">
       <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
-        <card-line-chart />
+        <card-line-chart-three />
+        <!-- <card-line-chart /> -->
       </div>
       <div class="w-full xl:w-4/12 px-4">
         <card-bar-chart />
@@ -23,9 +24,11 @@ import CardLineChart from "@/components/Cards/CardLineChart.vue";
 import CardBarChart from "@/components/Cards/CardBarChart.vue";
 import CardPageVisits from "@/components/Cards/CardPageVisits.vue";
 import CardSocialTraffic from "@/components/Cards/CardSocialTraffic.vue";
+import CardLineChartThree from "@/components/Cards/CardLineChartThree.vue";
 export default {
   name: "admin-dashboard",
   components: {
+    CardLineChartThree,
     CardLineChart,
     CardBarChart,
     CardPageVisits,

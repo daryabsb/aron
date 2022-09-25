@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blueGray-700"
+    class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-pink-100"
   >
     <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
       <div class="flex flex-wrap items-center">
@@ -8,7 +8,7 @@
           <h6 class="uppercase text-blueGray-100 mb-1 text-xs font-semibold">
             Overview
           </h6>
-          <h2 class="text-white text-xl font-semibold">
+          <h2 class="text-pink-700 text-xl font-semibold">
             Sales value
           </h2>
         </div>

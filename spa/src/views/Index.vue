@@ -21,8 +21,8 @@
           class="relative flex items-center bg-white min-w-md mx-auto mt-12 overflow-hidden text-center rounded-lg border border-solid border-green-600"
         >
           <input
+            v-model="key"
             type="text"
-            name="start"
             placeholder="Enter a customer name or an order to start..."
             class="w-96 h-12 px-6 py-2 shadow-lg font-normal bg-white text-purple-700 outline-none"
           />
@@ -32,6 +32,7 @@
               class="inline-flex items-center w-32 h-12 px-8 text-base font-bold leading-6 text-white transition duration-150 ease-in-out bg-green-600 border border-transparent hover:bg-green-700 focus:outline-none active:bg-indigo-700"
               data-primary="indigo-600"
               data-primary-reset="{}"
+              @click="navigateToPage"
             >
               Continue
             </button>
@@ -47,3 +48,25 @@
     </div>
   </div>
 </template>
+<script>
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+export default {
+  setup() {
+    const router = useRouter();
+    const key = ref("");
+    const navigateToPage = () => {
+      const keyToLink = key.value.toLowerCase();
+      // const url = `${baseUrl.slice(0, -3)}/${keyToLink}`;
+      if (key.value != "") {
+        router.push(`/${keyToLink}`);
+      }
+      router.push("/pos");
+    };
+    return {
+      key,
+      navigateToPage,
+    };
+  },
+};
+</script>
