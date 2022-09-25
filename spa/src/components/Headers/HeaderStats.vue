@@ -7,50 +7,50 @@
         <div class="flex flex-wrap">
           <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
             <card-stats
-              stat-subtitle="TRAFFIC"
-              stat-title="350,897"
-              stat-arrow="up"
-              stat-percent="3.48"
-              stat-percent-color="text-emerald-500"
-              stat-descripiron="Since last month"
-              stat-icon-name="far fa-chart-bar"
-              stat-icon-color="bg-red-500"
+              statSubtitle="TRAFFIC"
+              statTitle="350,897"
+              statArrow="up"
+              statPercent="3.48"
+              statPercentColor="text-emerald-500"
+              statDescripiron="Since last month"
+              statIconName="far fa-chart-bar"
+              statIconColor="bg-red-500"
             />
           </div>
           <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
             <card-stats
-              stat-subtitle="NEW USERS"
-              stat-title="2,356"
-              stat-arrow="down"
-              stat-percent="3.48"
-              stat-percent-color="text-red-500"
-              stat-descripiron="Since last week"
-              stat-icon-name="fas fa-chart-pie"
-              stat-icon-color="bg-orange-500"
+              statSubtitle="NEW USERS"
+              statTitle="2,356"
+              statArrow="down"
+              statPercent="3.48"
+              statPercentColor="text-red-500"
+              statDescripiron="Since last week"
+              statIconName="fas fa-chart-pie"
+              statIconColor="bg-orange-500"
             />
           </div>
           <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
             <card-stats
-              stat-subtitle="SALES"
-              stat-title="924"
-              stat-arrow="down"
-              stat-percent="1.10"
-              stat-percent-color="text-orange-500"
-              stat-descripiron="Since yesterday"
-              stat-icon-name="fas fa-users"
-              stat-icon-color="bg-pink-500"
+              statSubtitle="SALES"
+              statTitle="924"
+              statArrow="down"
+              statPercent="1.10"
+              statPercentColor="text-orange-500"
+              statDescripiron="Since yesterday"
+              statIconName="fas fa-users"
+              statIconColor="bg-pink-500"
             />
           </div>
           <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
             <card-stats
-              stat-subtitle="PERFORMANCE"
-              stat-title="49,65%"
-              stat-arrow="up"
-              stat-percent="12"
-              stat-percent-color="text-emerald-500"
-              stat-descripiron="Since last month"
-              stat-icon-name="fas fa-percent"
-              stat-icon-color="bg-emerald-500"
+              statSubtitle="PERFORMANCE"
+              statTitle="49,65%"
+              statArrow="up"
+              statPercent="12"
+              statPercentColor="text-emerald-500"
+              statDescripiron="Since last month"
+              statIconName="fas fa-percent"
+              statIconColor="bg-emerald-500"
             />
           </div>
         </div>

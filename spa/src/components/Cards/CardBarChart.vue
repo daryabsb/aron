@@ -1,22 +1,19 @@
 <template>
   <div
-    class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded"
+    class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded h-full"
   >
     <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
-      <div class="flex flex-wrap items-center">
-        <div class="relative w-full max-w-full flex-grow flex-1">
-          <h6 class="uppercase text-blueGray-400 mb-1 text-xs font-semibold">
-            Performance
-          </h6>
-          <h2 class="text-blueGray-700 text-xl font-semibold">
-            Total orders
+      <div class="flex flex-wrap items-center h-full">
+        <div class="relative w-full max-w-full flex-grow flex-1 py-4">
+          <h2 class="text-3xl">Total Sale</h2>
+          <h1 class="text-7xl">3.5K</h1>
+          <p class="text-lg">Top performing</p>
+          <h2 class="text-2xl font-medium">
+            <span>SEPTEMBER</span>
+            <br />
+            <span>9,500 USD</span>
           </h2>
         </div>
-      </div>
-    </div>
-    <div class="p-4 flex-auto">
-      <div class="relative h-350-px">
-        <canvas id="bar-chart"></canvas>
       </div>
     </div>
   </div>

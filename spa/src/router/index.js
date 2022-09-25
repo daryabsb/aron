@@ -7,7 +7,7 @@ import PosLayout from "@/layouts/PosLayout.vue";
 // views for Admin layout
 import Store from "@/views/pos/Store.vue";
 import AdminDashboard from "@/views/admin/AdminDashboard.vue";
-// import Settings from "@/views/admin/Settings.vue";
+import Settings from "@/views/admin/Settings.vue";
 // import Tables from "@/views/admin/Tables.vue";
 // import Maps from "@/views/admin/Maps.vue";
 
@@ -31,6 +31,10 @@ const routes = [
       {
         path: "/management/dashboard",
         component: AdminDashboard,
+      },
+      {
+        path: "/management/setting",
+        component: Settings,
       },
     ],
   },

@@ -2365,6 +2365,11 @@ select {
   line-height: 1;
 }
 
+.text-8xl {
+  font-size: 6rem /* 96px */;
+  line-height: 1;
+}
+
 .leading-none {
   line-height: 1;
 }
@@ -2476,6 +2481,9 @@ select {
 
 .mb-1 {
   margin-bottom: 0.25rem;
+}
+.mb-16 {
+  margin-bottom: 4rem /* 64px */;
 }
 
 .ml-1 {
@@ -4224,6 +4232,11 @@ select {
   .md\:pt-0 {
     padding-top: 0;
   }
+
+  .md\:pt-24 {
+    padding-top: 6rem /* 96px */;
+  }
+
   .md\:pb-2 {
     padding-bottom: 0.5rem;
   }
@@ -4425,6 +4438,9 @@ select {
   .xl\:mb-0 {
     margin-bottom: 0;
   }
+  .xl\:w-2\/12 {
+    width: 16.666667%;
+  }
   .xl\:w-3\/12 {
     width: 25%;
   }
@@ -4437,6 +4453,11 @@ select {
   .xl\:w-8\/12 {
     width: 66.666667%;
   }
+  .xl\:w-9\/12 {
+    width: 75%;
+  }
+}
+@media (min-width: 1280px) {
 }
 
 /***************************
@@ -6760,6 +6781,10 @@ select {
   height: 6rem;
 }
 
+.h-72 {
+  height: 18rem /* 288px */;
+}
+
 .h-auto {
   height: auto;
 }
@@ -6845,6 +6870,11 @@ select {
 
 .text-5xl {
   font-size: 3rem;
+  line-height: 1;
+}
+
+.text-7xl {
+  font-size: 4.5rem /* 72px */;
   line-height: 1;
 }
 
@@ -7500,6 +7530,10 @@ select {
   padding-left: 4rem;
 }
 
+.pb-24 {
+  padding-bottom: 6rem /* 96px */;
+}
+
 .pt-12 {
   padding-top: 3rem;
 }
@@ -7522,6 +7556,9 @@ select {
 
 .pb-20 {
   padding-bottom: 5rem;
+}
+.pb-24 {
+  padding-bottom: 6rem /* 96px */;
 }
 
 .pt-24 {
@@ -8311,6 +8348,22 @@ select {
 
 .w-3\/12 {
   width: 25%;
+}
+
+@media (min-width: 1280px) {
+  .xl\:w-3\/12 {
+    width: 25%;
+  }
+}
+
+.w-9\/12 {
+  width: 75%;
+}
+
+@media (min-width: 1280px) {
+  .xl\:w-9\/12 {
+    width: 75%;
+  }
 }
 
 .w-10\/12 {
