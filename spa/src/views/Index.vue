@@ -17,6 +17,32 @@
             >Malesuade adipiscing sagittis vel nulla nec.</span
           >
         </h2>
+        <ul class="mb-3 flex flex-wrap">
+          <li>
+            <button
+              type="button"
+              class="inline-flex items-center h-12 px-8 text-base font-bold leading-6 text-white transition duration-150 ease-in-out bg-green-600 border border-transparent hover:bg-green-700 focus:outline-none active:bg-indigo-700"
+              data-primary="indigo-600"
+              data-primary-reset="{}"
+              @click="navigateToPage"
+            >
+              Continue
+            </button>
+          </li>
+          <li>
+            <router-link
+              type="button"
+              class="inline-flex items-center h-12 mx-4 px-8 text-base font-bold leading-6 text-white transition duration-150 ease-in-out bg-green-600 border border-transparent hover:bg-green-700 focus:outline-none active:bg-indigo-700"
+              data-primary="indigo-600"
+              data-primary-reset="{}"
+              to="/management"
+            >
+              MANAGEMENT
+            </router-link>
+          </li>
+        </ul>
+        <br />
+        <br />
         <div
           class="relative flex items-center bg-white min-w-md mx-auto mt-12 overflow-hidden text-center rounded-lg border border-solid border-green-600"
         >
@@ -49,17 +75,20 @@
   </div>
 </template>
 <script>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import { useFetchUserDispatch } from "@/store/composables";
 import { useRouter } from "vue-router";
 export default {
   setup() {
+    onMounted(useFetchUserDispatch);
     const router = useRouter();
     const key = ref("");
     const navigateToPage = () => {
       const keyToLink = key.value.toLowerCase();
       // const url = `${baseUrl.slice(0, -3)}/${keyToLink}`;
-      if (key.value != "") {
-        router.push(`/${keyToLink}`);
+      console.log(key.value);
+      if (key.value === "management") {
+        router.push("/management");
       }
       router.push("/pos");
     };

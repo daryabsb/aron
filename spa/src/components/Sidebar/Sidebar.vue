@@ -64,7 +64,7 @@
             <input
               type="text"
               placeholder="Search"
-              class="border-0 px-3 py-2 h-12 border border-solid border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
+              class="px-3 py-2 h-12 border border-solid border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
             />
           </div>
         </form>
@@ -82,18 +82,18 @@
         <ul class="md:flex-col md:min-w-full flex flex-col list-none">
           <li class="items-center">
             <router-link
-              to="/admin/dashboard"
               v-slot="{ href, navigate, isActive }"
+              to="/management/dashboard"
             >
               <a
                 :href="href"
-                @click="navigate"
                 class="text-xs uppercase py-3 font-bold block"
                 :class="[
                   isActive
-                    ? 'text-emerald-500 hover:text-emerald-600'
+                    ? 'text-pink-500 hover:text-pink-700'
                     : 'text-blueGray-700 hover:text-blueGray-500',
                 ]"
+                @click="navigate"
               >
                 <i
                   class="fas fa-tv mr-2 text-sm"
@@ -106,18 +106,18 @@
 
           <li class="items-center">
             <router-link
-              to="/admin/settings"
               v-slot="{ href, navigate, isActive }"
+              to="/management/settings"
             >
               <a
                 :href="href"
-                @click="navigate"
                 class="text-xs uppercase py-3 font-bold block"
                 :class="[
                   isActive
-                    ? 'text-emerald-500 hover:text-emerald-600'
+                    ? 'text-pink-500 hover:text-pink-700'
                     : 'text-blueGray-700 hover:text-blueGray-500',
                 ]"
+                @click="navigate"
               >
                 <i
                   class="fas fa-tools mr-2 text-sm"
@@ -130,39 +130,39 @@
 
           <li class="items-center">
             <router-link
-              to="/admin/tables"
               v-slot="{ href, navigate, isActive }"
+              to="/management/products"
             >
               <a
                 :href="href"
-                @click="navigate"
                 class="text-xs uppercase py-3 font-bold block"
                 :class="[
                   isActive
-                    ? 'text-emerald-500 hover:text-emerald-600'
+                    ? 'text-pink-500 hover:text-pink-700'
                     : 'text-blueGray-700 hover:text-blueGray-500',
                 ]"
+                @click="navigate"
               >
                 <i
                   class="fas fa-table mr-2 text-sm"
                   :class="[isActive ? 'opacity-75' : 'text-blueGray-300']"
                 ></i>
-                Tables
+                Products
               </a>
             </router-link>
           </li>
 
           <li class="items-center">
-            <router-link to="/admin/maps" v-slot="{ href, navigate, isActive }">
+            <router-link v-slot="{ href, navigate, isActive }" to="/admin/maps">
               <a
                 :href="href"
-                @click="navigate"
                 class="text-xs uppercase py-3 font-bold block"
                 :class="[
                   isActive
-                    ? 'text-emerald-500 hover:text-emerald-600'
+                    ? 'text-pink-500 hover:text-pink-700'
                     : 'text-blueGray-700 hover:text-blueGray-500',
                 ]"
+                @click="navigate"
               >
                 <i
                   class="fas fa-map-marked mr-2 text-sm"
@@ -180,7 +180,7 @@
         <h6
           class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
         >
-          Auth Layout Pages
+          Products Related Pages
         </h6>
         <!-- Navigation -->
 
@@ -188,10 +188,10 @@
           <li class="items-center">
             <router-link
               class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-              to="/auth/login"
+              to="/management/products"
             >
               <i class="fas fa-fingerprint text-blueGray-300 mr-2 text-sm"></i>
-              Login
+              Products
             </router-link>
           </li>
 

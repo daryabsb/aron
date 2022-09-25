@@ -8,7 +8,7 @@ import PosLayout from "@/layouts/PosLayout.vue";
 import Store from "@/views/pos/Store.vue";
 import AdminDashboard from "@/views/admin/AdminDashboard.vue";
 import Settings from "@/views/admin/Settings.vue";
-// import Tables from "@/views/admin/Tables.vue";
+import Products from "@/views/admin/Products.vue";
 // import Maps from "@/views/admin/Maps.vue";
 
 // views for Auth layout
@@ -33,8 +33,12 @@ const routes = [
         component: AdminDashboard,
       },
       {
-        path: "/management/setting",
+        path: "/management/settings",
         component: Settings,
+      },
+      {
+        path: "/management/products",
+        component: Products,
       },
     ],
   },

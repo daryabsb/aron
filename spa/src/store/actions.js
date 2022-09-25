@@ -22,7 +22,7 @@ import {
 const actions = {
   [FETCH_USER]: async (context) => {
     const user = await getUser();
-    // console.log(user);
+    console.log(user.value);
     context.commit(COMMIT_USER, user);
   },
   [FETCH_PRODUCTS]: async (context) => {

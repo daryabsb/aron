@@ -31,7 +31,6 @@ export const useFetchProductsDispatch = () => {
 
 export const useFetchProductGroupsDispatch = () => {
   // const store = useStore();
-  console.log("CALLED");
   store.dispatch(FETCH_PRODUCT_GROUPS);
 };
 

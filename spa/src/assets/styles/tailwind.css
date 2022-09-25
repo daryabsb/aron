@@ -2449,9 +2449,19 @@ select {
   margin-right: 1rem;
 }
 
+.mx-6 {
+  margin-left: 1.5rem /* 24px */;
+  margin-right: 1.5rem /* 24px */;
+}
+
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.mx-8 {
+  margin-left: 2rem /* 32px */;
+  margin-right: 2rem /* 32px */;
 }
 
 .mx-auto {
@@ -2540,6 +2550,10 @@ select {
 
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.mr-6 {
+  margin-right: 1.5rem /* 24px */;
 }
 
 .mt-6 {
@@ -6103,6 +6117,23 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(249 168 212 / var(--tw-border-opacity));
 }
+
+.border-pink-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(236 72 153 / var(--tw-border-opacity));
+}
+
+.hover\:border-pink-700:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(190 24 93 / var(--tw-border-opacity));
+}
+
+.hover\:before\:border-pink-700:hover::before {
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-color: rgb(190 24 93 / var(--tw-border-opacity));
+}
+
 .border-pink-800 {
   --tw-border-opacity: 1;
   border-color: rgb(157 23 77 / var(--tw-border-opacity));
@@ -6285,6 +6316,14 @@ select {
 
 .border-b-2 {
   border-bottom-width: 2px;
+}
+
+.border-b-4 {
+  border-bottom-width: 4px;
+}
+
+.hover\:border-b:hover {
+  border-bottom-width: 1px;
 }
 
 .border-t {
@@ -6591,6 +6630,14 @@ select {
 .self-stretch {
   -ms-flex-item-align: stretch;
   align-self: stretch;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-items-auto {
