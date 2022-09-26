@@ -28,6 +28,7 @@
     "vue-cookies": "^1.8.1",
     "vue-router": "^4.0.3",
     "vue3-popper": "^1.5.0",
+    "vue3-tree": "^0.11.4",
     "vuex": "^4.0.0",
     "vuex-persistedstate": "^4.1.0"
   },
@@ -54,6 +55,8 @@
     "eslint-plugin-vue": "^8.0.3",
     "jest": "^27.0.5",
     "prettier": "^2.4.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.0.2",
     "ts-jest": "^27.0.4",
     "typescript": "~4.5.5",
     "vue-cli-plugin-moment": "~0.1.1",

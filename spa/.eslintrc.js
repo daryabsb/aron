@@ -39,7 +39,7 @@ module.exports = {
       },
     ],
     "vue/no-unused-components": "warn",
-    // "no-multi-str": "warn",
+    "no-useless-escape": "off",
     "no-unused-vars": "warn",
     "vue/require-explicit-emits": "off",
   },

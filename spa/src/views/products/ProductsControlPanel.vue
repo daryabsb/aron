@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen bg-pink-50 pt-20 pb-24 relative">
+  <div class="flex flex-col h-screen pt-20 pb-24 relative">
     <div class="flex flex-nowrap">
       <custom-grid-component />
     </div>

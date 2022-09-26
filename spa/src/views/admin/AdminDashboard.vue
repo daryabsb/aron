@@ -24,7 +24,7 @@ import CardBarChart from "@/components/Cards/CardBarChart.vue";
 import CardPageVisits from "@/components/Cards/CardPageVisits.vue";
 import CardSocialTraffic from "@/components/Cards/CardSocialTraffic.vue";
 export default {
-  name: "dashboard-page",
+  name: "DashboardPage",
   components: {
     CardLineChart,
     CardBarChart,

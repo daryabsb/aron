@@ -1,14 +1,20 @@
 const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
   transpileDependencies: true,
-
+  css: {
+    loaderOptions: {
+      sass: {
+        additionalData: `
+          @import "@/scss/_variables.scss";
+        `,
+      },
+    },
+  },
   pluginOptions: {
     moment: {
-      locales: [
-        ''
-      ]
-    }
-  }
+      locales: [""],
+    },
+  },
 });
 module.exports = {
   publicPath:
@@ -37,9 +43,7 @@ module.exports = {
 
   pluginOptions: {
     moment: {
-      locales: [
-        ''
-      ]
-    }
-  }
+      locales: [""],
+    },
+  },
 };

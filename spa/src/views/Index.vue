@@ -84,7 +84,6 @@ export default {
     const router = useRouter();
     const key = ref("");
     const navigateToPage = () => {
-      const keyToLink = key.value.toLowerCase();
       // const url = `${baseUrl.slice(0, -3)}/${keyToLink}`;
       console.log(key.value);
       if (key.value === "management") {

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-pink-50">
+  <div class="bg-gray-200">
     <sidebar />
     <div class="relative md:ml-64 bg-blue-gray-50">
       <admin-navbar />
@@ -15,7 +15,7 @@ import AdminNavbar from "@/components/Navbars/AdminNavbar.vue";
 import Sidebar from "@/components/Sidebar/Sidebar.vue";
 import FooterAdmin from "@/components/Footers/FooterAdmin.vue";
 export default {
-  name: "admin-layout",
+  name: "AdminLayout",
   components: {
     AdminNavbar,
     Sidebar,

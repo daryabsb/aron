@@ -36,19 +36,21 @@
           </div>
         </div>
       </div>
-      <div class="text-left mx-2 mt-12">
-        <ul class="list-plus">
-          <li>
-            <span class="mr-2"><i class="fa fa-plus"></i></span>
-            <span>Group 1</span>
-            <ul class="list-disc">
-              <li>Sub 1</li>
-              <li>Sub 2</li>
-            </ul>
-          </li>
-          <li>Group 2</li>
-          <li>Group 3</li>
-        </ul>
+      <div class="text-md uppercase leading-normal mx-2 mt-12">
+        <input v-model="searchText" type="text" />
+        <tree
+          :nodes="data"
+          :search-text="searchText"
+          :use-icon="true"
+          :use-checkbox="true"
+          :gap="0"
+          :expand-row-by-default="true"
+          use-row-delete
+          show-child-count
+          @node-expanded="onNodeExpanded"
+          @update:nodes="onUpdate"
+          @node-click="onNodeClick"
+        />
         <h3 class="text-xl font-semibold leading-normal text-blueGray-700 mb-2">
           Jenna Stones
         </h3>
@@ -86,13 +88,60 @@
   </div>
 </template>
 <script>
-import team2 from "@/assets/img/team-2-800x800.jpg";
-
+import { ref } from "vue";
 export default {
-  data() {
-    return {
-      team2,
+  setup() {
+    const data = ref([
+      {
+        id: 1,
+        label: "Animal",
+        gap: 0,
+        nodes: [
+          {
+            id: 2,
+            label: "Dog",
+            gap: 0,
+          },
+          {
+            id: 3,
+            label: "Cat",
+            gap: 0,
+            nodes: [
+              {
+                id: 4,
+                label: "Egyptian Mau Cat",
+                gap: 0,
+              },
+              {
+                id: 5,
+                label: "Japanese Bobtail Cat",
+                gap: 0,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: 6,
+        label: "People",
+        gap: 0,
+      },
+    ]);
+    const onNodeExpanded = (node, state) => {
+      console.log("state: ", state);
+      console.log("node: ", node);
     };
+
+    const onUpdate = (nodes) => {
+      console.log("nodes:", nodes);
+    };
+    const onNodeClick = (node) => {
+      console.log(node);
+    };
+    const toggle = (node) => {
+      console.log(node);
+    };
+    return { data, toggle, onNodeExpanded, onUpdate, onNodeClick };
   },
 };
 </script>

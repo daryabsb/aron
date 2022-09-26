@@ -8,7 +8,7 @@
     <div class="row-start-3 row-span-9 col-start-1 col-span-3">
       <side-card />
     </div>
-    <div class="row-start-3 row-span-9 col-start-5 col-span-9">
+    <div class="row-start-3 row-span-9 col-start-4 col-span-9">
       <card-settings />
     </div>
     <div
