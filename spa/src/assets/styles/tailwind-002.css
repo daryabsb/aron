@@ -1888,6 +1888,58 @@ select {
   display: grid;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+
+.col-span-8 {
+  grid-column: span 8 / span 8;
+}
+
+.col-span-9 {
+  grid-column: span 9 / span 9;
+}
+
+.col-span-12 {
+  grid-column: span 12 / span 12;
+}
+
+.row-span-1 {
+  grid-row: span 1 / span 1;
+}
+
+.col-start-1 {
+  grid-column-start: 1;
+}
+
+.col-start-2 {
+  grid-column-start: 2;
+}
+
+.row-span-1 {
+  grid-row: span 1 / span 1;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
+.row-span-3 {
+  grid-row: span 3 / span 3;
+}
+
+.row-start-2 {
+  grid-row-start: 2;
+}
+
 .inline-grid {
   display: inline-grid;
 }
@@ -2316,6 +2368,10 @@ select {
   height: 600px;
 }
 
+.h-3\/4 {
+  height: 75%;
+}
+
 .text-55 {
   font-size: 55rem;
 }
@@ -2412,6 +2468,14 @@ select {
 
 .m-4 {
   margin: 1rem;
+}
+
+.m-5 {
+  margin: 1.25rem /* 20px */;
+}
+
+.m-6 {
+  margin: 1.5rem /* 24px */;
 }
 
 .m-8 {
@@ -2654,6 +2718,22 @@ select {
 
 .max-h-860-px {
   max-height: 860px;
+}
+
+.max-h-10 {
+  max-height: 2.5rem /* 40px */;
+}
+
+.max-h-16 {
+  max-height: 4rem /* 64px */;
+}
+
+.max-h-20 {
+  max-height: 5rem /* 80px */;
+}
+
+.max-h-24 {
+  max-height: 6rem /* 96px */;
 }
 
 .max-w-md {
@@ -3902,6 +3982,14 @@ select {
   gap: 1.5rem;
 }
 
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.auto-rows-max {
+  grid-auto-rows: max-content;
+}
+
 .grid-flow-row {
   grid-auto-flow: row;
 }
@@ -3939,6 +4027,11 @@ select {
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
+
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
 @media (min-width: 1024px) {
   .lg\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -5845,6 +5938,11 @@ select {
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
 }
 
+.bg-pink-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 242 248 / var(--tw-bg-opacity));
+}
+
 .bg-pink-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(252 231 243 / var(--tw-bg-opacity));
@@ -6800,6 +6898,14 @@ select {
   height: 0.5rem;
 }
 
+.h-4 {
+  height: 1rem /* 16px */;
+}
+
+.h-4\/5 {
+  height: 80%;
+}
+
 .h-5 {
   height: 1.25rem;
 }
@@ -6862,6 +6968,10 @@ select {
 
 .h-600-px {
   height: 600px;
+}
+
+.h-96 {
+  height: 24rem /* 384px */;
 }
 
 .text-55 {
@@ -8300,8 +8410,16 @@ select {
   vertical-align: baseline;
 }
 
+.align-text-top {
+  vertical-align: text-top;
+}
+
 .align-top {
   vertical-align: top;
+}
+
+.self-start {
+  align-self: flex-start;
 }
 
 .align-middle {

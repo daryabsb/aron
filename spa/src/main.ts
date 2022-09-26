@@ -6,7 +6,8 @@ import moment from "moment";
 
 import Popper from "vue3-popper";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "@/assets/styles/tailwind.css";
+// import "@/assets/styles/tailwind.css";
+import "@/assets/tailwind.css";
 // import "@/assets/css/style.css";
 
 import App from "@/App.vue";

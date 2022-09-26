@@ -1,0 +1,25 @@
+<template>
+  <div class="bg-pink-50">
+    <sidebar />
+    <div class="relative md:ml-64 bg-blue-gray-50">
+      <admin-navbar />
+      <div class="mx-auto w-full">
+        <router-view />
+        <footer-admin />
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import AdminNavbar from "@/components/Navbars/AdminNavbar.vue";
+import Sidebar from "@/components/Sidebar/Sidebar.vue";
+import FooterAdmin from "@/components/Footers/FooterAdmin.vue";
+export default {
+  name: "admin-layout",
+  components: {
+    AdminNavbar,
+    Sidebar,
+    FooterAdmin,
+  },
+};
+</script>

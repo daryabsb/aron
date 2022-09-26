@@ -144,7 +144,7 @@
                 @click="navigate"
               >
                 <i
-                  class="fas fa-table mr-2 text-sm"
+                  class="fas fa-tags mr-2 text-sm"
                   :class="[isActive ? 'opacity-75' : 'text-blueGray-300']"
                 ></i>
                 Products
@@ -153,7 +153,10 @@
           </li>
 
           <li class="items-center">
-            <router-link v-slot="{ href, navigate, isActive }" to="/admin/maps">
+            <router-link
+              v-slot="{ href, navigate, isActive }"
+              to="/management/stocks"
+            >
               <a
                 :href="href"
                 class="text-xs uppercase py-3 font-bold block"
@@ -168,7 +171,7 @@
                   class="fas fa-map-marked mr-2 text-sm"
                   :class="[isActive ? 'opacity-75' : 'text-blueGray-300']"
                 ></i>
-                Maps
+                Stocks
               </a>
             </router-link>
           </li>
@@ -188,9 +191,9 @@
           <li class="items-center">
             <router-link
               class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-              to="/management/products"
+              to="/products"
             >
-              <i class="fas fa-fingerprint text-blueGray-300 mr-2 text-sm"></i>
+              <i class="fas fa-tags text-blueGray-300 mr-2 text-sm"></i>
               Products
             </router-link>
           </li>
@@ -198,12 +201,12 @@
           <li class="items-center">
             <router-link
               class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-              to="/auth/register"
+              to="/home/custom"
             >
               <i
                 class="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"
               ></i>
-              Register
+              Products Form
             </router-link>
           </li>
         </ul>

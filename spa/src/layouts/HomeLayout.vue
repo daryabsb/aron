@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col h-screen">
     <sidebar v-if="sidebarOpen" />
-    <index-navbar />
+    <admin-navbar />
     <router-view />
   </div>
 </template>
@@ -13,9 +13,11 @@ import { useFetchUserDispatch } from "@/store/composables";
 import useGetUser from "@/composables/useGetUser";
 
 import IndexNavbar from "@/components/Navbars/IndexNavbar.vue";
+import AdminNavbar from "@/components/Navbars/AdminNavbar.vue";
 export default {
   name: "HomeLayout",
   components: {
+    AdminNavbar,
     IndexNavbar,
     Sidebar,
   },

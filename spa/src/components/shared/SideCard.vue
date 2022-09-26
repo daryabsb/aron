@@ -36,10 +36,20 @@
           </div>
         </div>
       </div>
-      <div class="text-center mt-12">
-        <h3
-          class="text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2"
-        >
+      <div class="text-left mx-2 mt-12">
+        <ul class="list-plus">
+          <li>
+            <span class="mr-2"><i class="fa fa-plus"></i></span>
+            <span>Group 1</span>
+            <ul class="list-disc">
+              <li>Sub 1</li>
+              <li>Sub 2</li>
+            </ul>
+          </li>
+          <li>Group 2</li>
+          <li>Group 3</li>
+        </ul>
+        <h3 class="text-xl font-semibold leading-normal text-blueGray-700 mb-2">
           Jenna Stones
         </h3>
         <div
