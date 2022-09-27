@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <hr class="mb-4 border-b-1 border-slate-200" />
+  <div class="my-4">
     <div class="flex flex-wrap items-center md:justify-between justify-center">
       <div class="w-full md:w-4/12 px-4">
         <div

@@ -5,10 +5,10 @@
     :title="item.name"
     @click="addToCart(item)"
   >
-    <div class="overflow-hidden">
-      <img :src="item.image" class="object-cover" :alt="item.name" />
+    <div class="w-full overflow-hidden">
+      <img :src="item.image" class="pb-3 object-fit" :alt="item.name" />
     </div>
-    <div class="flex pb-3 px-3 text-sm -mt-3">
+    <div class="flex p-3 text-sm mt-3">
       <p class="flex-grow truncate mr-1">{{ item.name }}</p>
       <p class="nowrap font-semibold">
         {{ priceFormat(item.price) }}

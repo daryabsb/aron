@@ -8,7 +8,7 @@
           <div class="rounded-t bg-white mb-0 px-2 pt-6 pb-3">
             <div class="flex justify-between">
               <h6 class="text-blueGray-700 px-3 text-xl font-bold">
-                My account
+                Product Groups
               </h6>
 
               <!-- <input
@@ -54,6 +54,7 @@
           class="border border-solid w-full py-1 my-2"
           type="text"
         />
+        <tree-comp :groups="useGetAllProductGroups"></tree-comp>
         <tree
           :nodes="data"
           :search-text="searchText"
@@ -80,7 +81,7 @@
             <!--  :indeterminate="indeterminate"
               @click="toggleCheckbox(id)" -->
             <!-- <custom-checkbox class="mr-3" :checked="true" /> -->
-            <input type="checkbox" name="checkbox" id="" class="mr-3" />
+            <input type="checkbox" name="checkbox" class="mr-3" />
           </template>
         </tree>
       </div>
@@ -88,12 +89,19 @@
   </div>
 </template>
 <script>
-import { ref } from "vue";
-import useGetProductGroups from "@/composables/useGetProductGroups";
+import { ref, onMounted } from "vue";
+import { useFetchAllProductGroupsDispatch } from "@/store/composables";
+import useGetAllProductGroups from "@/composables/useGetAllProductGroups";
+import TreeComp from "@/components/utils/tree-list/TreeList.vue";
 export default {
+  components: {
+    TreeComp,
+  },
   setup() {
     const searchText = ref("");
-    console.log(useGetProductGroups.value);
+
+    onMounted(useFetchAllProductGroupsDispatch);
+
     const data = ref([
       {
         id: 1,
@@ -144,7 +152,15 @@ export default {
     const toggle = (node) => {
       console.log(node);
     };
-    return { searchText, data, toggle, onNodeExpanded, onUpdate, onNodeClick };
+    return {
+      searchText,
+      data,
+      useGetAllProductGroups,
+      toggle,
+      onNodeExpanded,
+      onUpdate,
+      onNodeClick,
+    };
   },
 };
 </script>

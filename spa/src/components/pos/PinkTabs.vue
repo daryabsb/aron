@@ -25,7 +25,10 @@
         class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded"
       >
         <div class="px-4 py-5">
-          <slot :product-groups="useGetProductGroups" :open-tab="openTab"></slot>
+          <slot
+            :product-groups="useGetProductGroups"
+            :open-tab="openTab"
+          ></slot>
         </div>
       </div>
     </div>
@@ -33,7 +36,7 @@
 </template>
 
 <script>
-import { reactive, ref, onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import {
   useFetchProductGroupsDispatch,
   filteredTabProductsByGroupId,
@@ -56,7 +59,7 @@ export default {
       }
     };
 
-    console.log("useGetProductGroups", useGetProductGroups);
+    // console.log("useGetProductGroups", useGetProductGroups);
 
     return {
       openTab,

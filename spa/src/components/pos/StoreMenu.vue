@@ -12,11 +12,18 @@ import {
 /* COMPONENTS */
 import ProductsGroupTabs from "@/components/pos/ProductsGroupTabs.vue";
 import PinkTabs from "@/components/pos/PinkTabs.vue";
+import PosProductList from "@/components/pos/products/PosProductList.vue";
 import StoreProductWidget from "@/components/pos/products/StoreProductWidget.vue";
 import SearchInput from "@/components/shared/SearchInput.vue";
 
 export default {
-  components: { SearchInput, ProductsGroupTabs, PinkTabs, StoreProductWidget },
+  components: {
+    SearchInput,
+    ProductsGroupTabs,
+    PosProductList,
+    PinkTabs,
+    StoreProductWidget,
+  },
   setup() {
     const store = useStore();
 
@@ -105,11 +112,15 @@ export default {
                 block: openTab === content.id,
               }"
             >
-              <div class="grid lg:grid-cols-4 md:grid-cols-4 gap-4 pb-3">
+              <pos-product-list :products="tabProducts"> </pos-product-list>
+
+              <!-- <div class="grid grid-cols-4 gap-3">
                 <template v-for="product in tabProducts" :key="product.id">
-                  <store-product-widget :item="product"></store-product-widget>
+                  <store-product-widget
+                    :product="product"
+                  ></store-product-widget>
                 </template>
-              </div>
+              </div> -->
             </div>
           </div>
         </pink-tabs>

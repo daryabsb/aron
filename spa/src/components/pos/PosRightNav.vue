@@ -60,14 +60,12 @@ export default {
 
 <template>
   <!-- right sidebar -->
-  <div
-    class="w-6/12 flex flex-col bg-blue-gray-50 h-full bg-white m-3 p-4 rounded-lg"
-  >
+  <div class="w-4/12 flex flex-col bg-gray-200 h-full m-3 p-4 rounded-lg">
     <div class="bg-white rounded-lg flex flex-col h-full shadow">
       <!-- empty cart -->
       <div
         v-if="cart.length === 0"
-        class="bg-blue-gray-50 flex-1 w-full p-4 opacity-25 select-none flex flex-col flex-wrap content-center justify-center"
+        class="bg-gray-300 flex-1 w-full p-4 select-none flex flex-col flex-wrap content-center justify-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

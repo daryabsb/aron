@@ -2,6 +2,7 @@ import {
   GET_USER,
   GET_PRODUCTS,
   GET_PRODUCT_GROUPS,
+  GET_ALL_PRODUCT_GROUPS,
   GET_CART,
   GET_CHANGE,
   GET_CASH,
@@ -24,7 +25,11 @@ const getters = {
     return state.products;
   },
   [GET_PRODUCT_GROUPS](state) {
+    console.log("from getters", state.allProductGroups);
     return state.productGroups;
+  },
+  [GET_ALL_PRODUCT_GROUPS](state) {
+    return state.allProductGroups;
   },
   [GET_TAB_PRODUCTS](state) {
     return state.tabProducts;
@@ -39,7 +44,6 @@ const getters = {
     return state.cart.reduce((total, item) => total + item.qty * item.price, 0);
   },
   [SUBMITABLE](state) {
-    console.log(state.change >= 0 && state.cart.length > 0);
     return state.change >= 0 && state.cart.length > 0;
   },
   [GET_CHANGE](state) {

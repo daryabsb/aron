@@ -5,6 +5,7 @@ const state = () => {
     products: [],
     tabProducts: [],
     productGroups: [],
+    allProductGroups: [],
 
     // POS STATE
     db: null,

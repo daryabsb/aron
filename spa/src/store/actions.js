@@ -1,6 +1,7 @@
 import getUser from "./api/getUser";
 import getProducts from "./api/getProducts";
 import getProductGroups from "./api/getProductGroups";
+import getAllProductGroups from "./api/getAllProductGroups";
 
 import {
   FETCH_USER,
@@ -8,7 +9,9 @@ import {
   FETCH_PRODUCTS,
   COMMIT_PRODUCTS,
   FETCH_PRODUCT_GROUPS,
+  FETCH_ALL_PRODUCT_GROUPS,
   COMMIT_PRODUCT_GROUPS,
+  COMMIT_ALL_PRODUCT_GROUPS,
   ADD_TO_CART,
   COMMIT_TO_CART,
   SUBMIT_ORDER,
@@ -22,7 +25,7 @@ import {
 const actions = {
   [FETCH_USER]: async (context) => {
     const user = await getUser();
-    console.log(user.value);
+    // console.log(user.value);
     context.commit(COMMIT_USER, user);
   },
   [FETCH_PRODUCTS]: async (context) => {
@@ -30,10 +33,16 @@ const actions = {
     // console.log(user);
     context.commit(COMMIT_PRODUCTS, products);
   },
+
   [FETCH_PRODUCT_GROUPS]: async (context) => {
     const productsGroup = await getProductGroups();
 
     await context.commit(COMMIT_PRODUCT_GROUPS, productsGroup);
+  },
+  [FETCH_ALL_PRODUCT_GROUPS]: async (context) => {
+    const allProductsGroups = await getAllProductGroups();
+
+    await context.commit(COMMIT_ALL_PRODUCT_GROUPS, allProductsGroups);
   },
   [ADD_TO_CART](context, payload) {
     const payloadToCommit = {

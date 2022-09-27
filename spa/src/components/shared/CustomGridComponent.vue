@@ -1,14 +1,14 @@
 <template>
   <div
-    class="min-h-screen grid grid-cols-12 auto-rows-max grid-rows-12 gap-4 m-4"
+    class="min-h-full grid grid-cols-12 auto-rows-max grid-rows-12 gap-4 mx-4 mt-5 w-full"
   >
     <div class="row-start-1 row-span-2 col-start-1 col-span-12 h-20">
       <custom-header />
     </div>
-    <div class="row-start-3 row-span-9 col-start-1 col-span-3">
+    <div class="row-start-3 row-span-10 col-start-1 col-span-3">
       <side-card />
     </div>
-    <div class="row-start-3 row-span-9 col-start-4 col-span-9">
+    <div class="row-start-3 row-span-10 col-start-4 col-span-9">
       <card-settings />
     </div>
     <div

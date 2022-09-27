@@ -28,8 +28,7 @@ class User(PermissionsMixin, AbstractBaseUser):
     name = models.CharField(max_length=255, null=True, blank=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
-    image = models.ImageField(null=True, blank=True,
-                              upload_to=upload_image_file_path)
+    image = models.ImageField(null=True, blank=True, upload_to=upload_image_file_path)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
@@ -43,8 +42,7 @@ class User(PermissionsMixin, AbstractBaseUser):
 
 class ApplicationProperty(models.Model):
     user = models.ForeignKey(
-        "User", on_delete=models.CASCADE,
-        related_name="application_properties"
+        "User", on_delete=models.CASCADE, related_name="application_properties"
     )
     name = models.CharField(max_length=50)
     value = models.SmallIntegerField()
@@ -57,8 +55,7 @@ class ApplicationProperty(models.Model):
 
 
 class Counter(models.Model):
-    user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="country")
+    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="country")
     name = models.CharField(max_length=30)
     value = models.SmallIntegerField()
 
@@ -70,8 +67,7 @@ class Counter(models.Model):
 
 
 class Country(models.Model):
-    user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="countries")
+    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="countries")
     name = models.CharField(max_length=100, unique=True)
     code = models.CharField(max_length=4)
 
@@ -102,23 +98,19 @@ COMPANY RELATED
 
 
 class Company(models.Model):
-    user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="companies")
+    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="companies")
     name = models.CharField(max_length=100, unique=True)
     address = models.CharField(max_length=300, null=True, blank=True)
     postal_code = models.CharField(max_length=50, null=True, blank=True)
     city = models.CharField(max_length=50, null=True, blank=True)
     country = models.ForeignKey(
-        "Country", default=1, on_delete=models.CASCADE,
-        related_name="companies"
+        "Country", default=1, on_delete=models.CASCADE, related_name="companies"
     )
     tax_number = models.CharField(max_length=100, null=True, blank=True)
     email = models.EmailField(max_length=255, unique=True)
     phone = models.CharField(max_length=100, null=True, blank=True)
-    logo = models.ImageField(null=True, blank=True,
-                             upload_to=upload_image_file_path)
-    bank_account_number = models.CharField(
-        max_length=300, null=True, blank=True)
+    logo = models.ImageField(null=True, blank=True, upload_to=upload_image_file_path)
+    bank_account_number = models.CharField(max_length=300, null=True, blank=True)
     bank_details = models.CharField(max_length=300, null=True, blank=True)
 
     created = models.DateTimeField(auto_now_add=True)
@@ -134,16 +126,14 @@ CUSTOMER RELATED
 
 
 class Customer(models.Model):
-    user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="customers")
+    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="customers")
     code = models.CharField(max_length=30, null=True, blank=True)
     name = models.CharField(max_length=100, unique=True)
     address = models.CharField(max_length=300, null=True, blank=True)
     postal_code = models.CharField(max_length=50, null=True, blank=True)
     city = models.CharField(max_length=50, null=True, blank=True)
     country = models.ForeignKey(
-        "Country", default=1, on_delete=models.CASCADE,
-        related_name="customers"
+        "Country", default=1, on_delete=models.CASCADE, related_name="customers"
     )
     tax_number = models.CharField(max_length=100, null=True, blank=True)
     email = models.EmailField(max_length=255, unique=True)
@@ -177,8 +167,7 @@ class CustomerDiscount(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=["customer", "type", "uid"],
-                name="unique_customer_discounts"
+                fields=["customer", "type", "uid"], name="unique_customer_discounts"
             )
         ]
 
@@ -191,8 +180,7 @@ class LoyaltyCard(models.Model):
         "User", on_delete=models.CASCADE, related_name="customer_loyalty_cards"
     )
     customer = models.ForeignKey(
-        "Customer", on_delete=models.CASCADE,
-        related_name="customer_loyalty_cards"
+        "Customer", on_delete=models.CASCADE, related_name="customer_loyalty_cards"
     )
     number = models.CharField(max_length=100)
 
@@ -238,8 +226,7 @@ class DocumentType(models.Model):
         related_name="document_types",
     )
     warehouse = models.ForeignKey(
-        "Warehouse", on_delete=models.SET_NULL, null=True,
-        related_name="document_types"
+        "Warehouse", on_delete=models.SET_NULL, null=True, related_name="document_types"
     )
     stock_direction = models.SmallIntegerField(default=0)
     editor_type = models.SmallIntegerField(default=0)
@@ -255,12 +242,10 @@ class DocumentType(models.Model):
 
 
 class Document(models.Model):
-    user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="documents")
+    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="documents")
     number = models.CharField(max_length=30, unique=True)
     customer = models.ForeignKey(
-        "Customer", on_delete=models.DO_NOTHING, null=True,
-        related_name="documents"
+        "Customer", on_delete=models.DO_NOTHING, null=True, related_name="documents"
     )
     order_number = models.CharField(max_length=30, unique=True)
     date = models.DateTimeField(auto_now_add=True)
@@ -271,8 +256,7 @@ class Document(models.Model):
         "DocumentType", on_delete=models.DO_NOTHING, related_name="documents"
     )
     warehouse = models.ForeignKey(
-        "Warehouse", null=True, on_delete=models.DO_NOTHING,
-        related_name="documents"
+        "Warehouse", null=True, on_delete=models.DO_NOTHING, related_name="documents"
     )
     reference_document_number = models.CharField(max_length=100, unique=True)
     internal_note = models.TextField(null=True, blank=True)
@@ -295,8 +279,7 @@ class DocumentItem(models.Model):
         "User", on_delete=models.CASCADE, related_name="document_items"
     )
     document = models.ForeignKey(
-        "Document", on_delete=models.CASCADE, null=True,
-        related_name="document_items"
+        "Document", on_delete=models.CASCADE, null=True, related_name="document_items"
     )
     product = models.ForeignKey(
         "Product", on_delete=models.DO_NOTHING, related_name="document_items"
@@ -346,8 +329,9 @@ class DocumentItemTax(models.Model):
 class Migration(models.Model):
     version = models.CharField(max_length=100)
     description = models.TextField(null=True, blank=True)
-    file_name = models.FileField(null=True, blank=True,
-                                 upload_to=upload_image_file_path)
+    file_name = models.FileField(
+        null=True, blank=True, upload_to=upload_image_file_path
+    )
     module = models.CharField(max_length=250)
 
     created = models.DateTimeField(auto_now_add=True)
@@ -387,11 +371,7 @@ class PaymentType(models.Model):
 
 
 class Payment(models.Model):
-    user = models.ForeignKey(
-        "User",
-        on_delete=models.CASCADE,
-        related_name="payments"
-    )
+    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="payments")
     document = models.ForeignKey(
         "Document",
         on_delete=models.CASCADE,
@@ -411,8 +391,7 @@ class Payment(models.Model):
 
 
 class FiscalItem(models.Model):
-    user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="fiscals")
+    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="fiscals")
     plu = models.IntegerField(null=True, blank=True)
     name = models.CharField(max_length=100)
     vat = models.CharField(max_length=50)
@@ -459,14 +438,13 @@ class FloorPlanTable(models.Model):
         return f"{self.name} @ {self.floor_plan.name}"
 
 
-'''
+"""
 POS RELATED
-'''
+"""
 
 
 class PosOrder(models.Model):
-    user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="orders")
+    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="orders")
     number = models.CharField(max_length=100, unique=True)
     discount = models.SmallIntegerField(default=0)
     discount_type = models.SmallIntegerField(default=0)
@@ -486,8 +464,7 @@ class PosOrderItem(models.Model):
         "User", on_delete=models.CASCADE, related_name="order_items"
     )
     order = models.ForeignKey(
-        "PosOrder", on_delete=models.CASCADE, null=True,
-        related_name="items"
+        "PosOrder", on_delete=models.CASCADE, null=True, related_name="items"
     )
     product = models.ForeignKey(
         "Product", on_delete=models.DO_NOTHING, related_name="order_items"
@@ -510,9 +487,9 @@ class PosOrderItem(models.Model):
         return f"Order#:{self.order.id}: {self.quantity}"
 
 
-'''
+"""
 PRINTER TABLES
-'''
+"""
 
 
 class PosPrinterSelection(models.Model):
@@ -525,24 +502,22 @@ class PosPrinterSelection(models.Model):
 
     class Meta:
         constraints = [
-            models.UniqueConstraint(
-                fields=["id", "key"], name="unique_printer_keys"
-            )
+            models.UniqueConstraint(fields=["id", "key"], name="unique_printer_keys")
         ]
 
     def __str__(self):
-        return f'{self.printer_name}: {self.key}' + \
-            f'| IsEnabled= {self.is_enabled}'
+        return f"{self.printer_name}: {self.key}" + f"| IsEnabled= {self.is_enabled}"
 
 
 class PosPrinterSelectionSettings(models.Model):
     user = models.ForeignKey(
-        "User", on_delete=models.CASCADE,
-        related_name="pos_printer_selection_settings"
+        "User", on_delete=models.CASCADE, related_name="pos_printer_selection_settings"
     )
     pos_printer_selection = models.ForeignKey(
-        "PosPrinterSelection", on_delete=models.CASCADE,
-        null=True, related_name="pos_printer_selection_settings"
+        "PosPrinterSelection",
+        on_delete=models.CASCADE,
+        null=True,
+        related_name="pos_printer_selection_settings",
     )
     paper_width = models.SmallIntegerField(default=32)
     header = models.CharField(max_length=100)
@@ -632,70 +607,67 @@ class PrintStation(models.Model):
 class PrintStationPosPrinterSelection(models.Model):
     print_station = models.ForeignKey("PrintStation", on_delete=models.CASCADE)
     pos_printer_selection = models.ForeignKey(
-        "PosPrinterSelection", on_delete=models.CASCADE)
+        "PosPrinterSelection", on_delete=models.CASCADE
+    )
 
     class Meta:
         constraints = [
             models.UniqueConstraint(
                 fields=["print_station", "pos_printer_selection"],
-                name="unique_printer_pos_printer_selection"
+                name="unique_printer_pos_printer_selection",
             )
         ]
 
     def __str__(self):
-        return f'{self.print_station.name} - {self.pos_printer_selection}'
+        return f"{self.print_station.name} - {self.pos_printer_selection}"
 
 
 class ProductGroupPrintStation(models.Model):
     user = models.ForeignKey(
-        "User", on_delete=models.CASCADE,
-        related_name="productGroupPrintStations"
+        "User", on_delete=models.CASCADE, related_name="productGroupPrintStations"
     )
     product_group = models.ForeignKey(
-        "ProductGroup", on_delete=models.CASCADE,
-        related_name='productGroupPrintStations'
+        "ProductGroup",
+        on_delete=models.CASCADE,
+        related_name="productGroupPrintStations",
     )
     print_station = models.ForeignKey(
-        "PrintStation", on_delete=models.CASCADE,
-        related_name='productGroupPrintStations'
+        "PrintStation",
+        on_delete=models.CASCADE,
+        related_name="productGroupPrintStations",
     )
 
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=("product_group", "print_station"),
-                name='pg_print_station'
+                fields=("product_group", "print_station"), name="pg_print_station"
             )
         ]
 
     def __str__(self):
-        return f'{self.product_group.name} - {self.print_station.name}'
+        return f"{self.product_group.name} - {self.print_station.name}"
 
 
 class ProductPrintStation(models.Model):
     user = models.ForeignKey(
-        "User", on_delete=models.CASCADE,
-        related_name="productPrintStations"
+        "User", on_delete=models.CASCADE, related_name="productPrintStations"
     )
     product = models.ForeignKey(
-        "Product", on_delete=models.CASCADE,
-        related_name='productPrintStations'
+        "Product", on_delete=models.CASCADE, related_name="productPrintStations"
     )
     print_station = models.ForeignKey(
-        "PrintStation", on_delete=models.CASCADE,
-        related_name='productPrintStations'
+        "PrintStation", on_delete=models.CASCADE, related_name="productPrintStations"
     )
 
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=("product", "print_station"),
-                name='product_print_station'
+                fields=("product", "print_station"), name="product_print_station"
             )
         ]
 
     def __str__(self):
-        return f'{self.product.name} - {self.print_station.name}'
+        return f"{self.product.name} - {self.print_station.name}"
 
 
 """
@@ -709,27 +681,24 @@ class ProductGroup(models.Model):
     )
     name = models.CharField(max_length=100)
     parent_group = models.ForeignKey(
-        "self", null=True, blank=True, on_delete=models.SET_NULL
+        "self", null=True, blank=True, on_delete=models.SET_NULL, related_name="groups"
     )
     color = models.CharField(max_length=50, default="Transparent")
-    image = models.ImageField(null=True, blank=True,
-                              upload_to=upload_image_file_path)
+    image = models.ImageField(null=True, blank=True, upload_to=upload_image_file_path)
     rank = models.SmallIntegerField(default=0)
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ('rank',)
+        ordering = ("rank",)
 
     def __str__(self):
         return self.name
 
 
 class Product(models.Model):
-    user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="products"
-    )
+    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="products")
     name = models.CharField(max_length=100)
     product_group = models.ForeignKey(
         "ProductGroup", on_delete=models.CASCADE, related_name="products"
@@ -748,8 +717,7 @@ class Product(models.Model):
     is_using_default_quantity = models.BooleanField(default=True)
     cost = models.FloatField(default=0, null=True, blank=True)
     margin = models.DecimalField(max_digits=18, decimal_places=3, default=0)
-    image = models.ImageField(null=True, blank=True,
-                              upload_to=upload_image_file_path)
+    image = models.ImageField(null=True, blank=True, upload_to=upload_image_file_path)
     color = models.CharField(max_length=50, default="Transparent")
     is_enabled = models.BooleanField(default=True)
     age_restriction = models.SmallIntegerField(null=True, blank=True)
@@ -764,8 +732,7 @@ class Product(models.Model):
 
 
 class Barcode(models.Model):
-    user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="barcodes")
+    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="barcodes")
     product = models.ForeignKey(
         "Product", on_delete=models.CASCADE, related_name="barcodes"
     )
@@ -779,8 +746,7 @@ class Barcode(models.Model):
 
 
 class ProductComment(models.Model):
-    user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="comments")
+    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="comments")
     product = models.ForeignKey(
         "Product", on_delete=models.CASCADE, related_name="comments"
     )
@@ -807,8 +773,7 @@ class Warehouse(models.Model):
 
 
 class Stock(models.Model):
-    user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="stocks")
+    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="stocks")
     product = models.ForeignKey(
         "Product", on_delete=models.CASCADE, related_name="stocks"
     )
@@ -825,13 +790,13 @@ class Stock(models.Model):
 
 class StockControl(models.Model):
     user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="stock_controls")
+        "User", on_delete=models.CASCADE, related_name="stock_controls"
+    )
     product = models.ForeignKey(
         "Product", on_delete=models.CASCADE, related_name="stock_controls"
     )
     customer = models.ForeignKey(
-        "Customer", on_delete=models.SET_NULL, null=True,
-        related_name="stock_controls"
+        "Customer", on_delete=models.SET_NULL, null=True, related_name="stock_controls"
     )
     recorder_poing = models.FloatField(default=0)
     preferred_quantity = models.SmallIntegerField(default=1)
@@ -839,20 +804,14 @@ class StockControl(models.Model):
     low_stock_warning_quantity = models.SmallIntegerField(default=1)
 
     class Meta:
-        indexes = [
-            models.Index(
-                fields=["product"], name="stock_control_product_index"
-            )
-        ]
+        indexes = [models.Index(fields=["product"], name="stock_control_product_index")]
 
     def __str__(self):
-        return f'{self.print_station.name} - {self.pos_printer_selection}'
+        return f"{self.print_station.name} - {self.pos_printer_selection}"
 
 
 class Tax(models.Model):
-    user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="taxes"
-    )
+    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="taxes")
     name = models.CharField(max_length=30)
     rate = models.DecimalField(max_digits=18, decimal_places=4, default=0)
     code = models.CharField(max_length=10, null=True, blank=True)
@@ -893,9 +852,9 @@ class ProductTax(models.Model):
         return f"{self.product.name} @ {self.tax.name}"
 
 
-'''
+"""
 PROMOTION RELATED
-'''
+"""
 
 
 class Promotion(models.Model):
@@ -915,7 +874,7 @@ class Promotion(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f'From {self.start_date} to {self.end_date}'
+        return f"From {self.start_date} to {self.end_date}"
 
 
 class PromotionItem(models.Model):
@@ -935,7 +894,7 @@ class PromotionItem(models.Model):
     quantity_limit = models.SmallIntegerField(default=0)
 
     def __str__(self):
-        return f'{Promotion.name}: {self.uid}'
+        return f"{Promotion.name}: {self.uid}"
 
 
 class SecurityKey(models.Model):
@@ -946,7 +905,7 @@ class SecurityKey(models.Model):
     level = models.SmallIntegerField(default=1)
 
     def __str__(self):
-        return f'{self.name}: Level {self.level}'
+        return f"{self.name}: Level {self.level}"
 
 
 class StartingCash(models.Model):
@@ -962,20 +921,14 @@ class StartingCash(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        constraints = [
-            models.UniqueConstraint(
-                fields=["id"], name="unique_id"
-            )
-        ]
+        constraints = [models.UniqueConstraint(fields=["id"], name="unique_id")]
 
     def __str__(self):
         return f"{self.amount} On {self.created}"
 
 
 class ZReport(models.Model):
-    user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="reports"
-    )
+    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="reports")
     number = models.SmallIntegerField()
     from_document = models.ForeignKey(
         "Document", on_delete=models.CASCADE, related_name="from_documents"

@@ -5,7 +5,6 @@
       <admin-navbar />
       <div class="mx-auto w-full">
         <router-view />
-        <footer-admin />
       </div>
     </div>
   </div>
@@ -13,13 +12,11 @@
 <script>
 import AdminNavbar from "@/components/Navbars/AdminNavbar.vue";
 import Sidebar from "@/components/Sidebar/Sidebar.vue";
-import FooterAdmin from "@/components/Footers/FooterAdmin.vue";
 export default {
   name: "AdminLayout",
   components: {
     AdminNavbar,
     Sidebar,
-    FooterAdmin,
   },
 };
 </script>

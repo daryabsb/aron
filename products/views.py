@@ -45,6 +45,12 @@ class ProductGroupViewset(viewsets.ModelViewSet):
         serializer.save(user=self.request.user)
 
 
+class AllProductGroupViewset(viewsets.ModelViewSet):
+    serializer_class = ProductsGroupSerializer
+    queryset = ProductGroup.objects.all()
+    permission_classes = (permissions.IsAuthenticated,)
+
+
 class BarcodeViewset(viewsets.ModelViewSet):
     serializer_class = BarcodeSerializer
     queryset = Barcode.objects.all()

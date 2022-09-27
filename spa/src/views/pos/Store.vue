@@ -18,6 +18,7 @@ export default {
   <div class="flex-grow flex">
     <!-- store menu -->
     <store-menu></store-menu>
+    <!-- <store-menu></store-menu> -->
     <!-- end of store menu -->
 
     <pos-right-nav></pos-right-nav>

@@ -9,6 +9,7 @@ import {
   COMMIT_USER,
   COMMIT_PRODUCTS,
   COMMIT_PRODUCT_GROUPS,
+  COMMIT_ALL_PRODUCT_GROUPS,
   COMMIT_TAB_PRODUCTS,
   ADD_QUANTITY,
   ADD_CASH,
@@ -28,6 +29,17 @@ const mutations = {
   },
   [COMMIT_PRODUCTS](state, payload) {
     state.products = payload;
+  },
+  [COMMIT_ALL_PRODUCT_GROUPS](state, payload) {
+    payload.forEach((el) => {
+      if (el.groups != null) {
+        el.groups.forEach((node) => {
+          let currentNodeIndex = payload.findIndex((g) => g.id === node.id);
+          payload.splice(currentNodeIndex, 1);
+        });
+      }
+    });
+    state.allProductGroups = payload;
   },
   [COMMIT_PRODUCT_GROUPS](state, payload) {
     state.productGroups = payload;
