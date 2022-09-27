@@ -54,7 +54,9 @@
           class="border border-solid w-full py-1 my-2"
           type="text"
         />
-        <tree-comp :groups="useGetAllProductGroups"></tree-comp>
+        <div class="tree" data-v-62a5b360="">
+          <tree-comp :groups="useGetAllProductGroups"></tree-comp>
+        </div>
         <tree
           :nodes="data"
           :search-text="searchText"
