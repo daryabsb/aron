@@ -283,11 +283,12 @@ export default {
             />
           </svg>
         </div>
+        DARYA
         <button
           class="text-white rounded-2xl text-lg w-full py-3 focus:outline-none"
           :class="{
             'bg-pink-500 hover:bg-pink-600': submitable(),
-            'bg-blue-gray-200': !submitable(),
+            'bg-gray-400': !submitable(),
           }"
           :disabled="!submitable()"
           @click="submit($event)"

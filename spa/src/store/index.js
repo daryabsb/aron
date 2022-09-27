@@ -16,6 +16,6 @@ export default createStore({
   actions,
   getters,
   modules: {},
-  plugins: [createPersistedState],
+  plugins: [createPersistedState()],
   strict: process.env.NODE_ENV !== "production",
 });

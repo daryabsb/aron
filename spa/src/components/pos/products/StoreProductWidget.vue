@@ -5,7 +5,9 @@
     :title="item.name"
     @click="addToCart(item)"
   >
-    <img :src="item.image" :alt="item.name" />
+    <div class="overflow-hidden">
+      <img :src="item.image" class="object-cover" :alt="item.name" />
+    </div>
     <div class="flex pb-3 px-3 text-sm -mt-3">
       <p class="flex-grow truncate mr-1">{{ item.name }}</p>
       <p class="nowrap font-semibold">

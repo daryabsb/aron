@@ -39,6 +39,7 @@ const getters = {
     return state.cart.reduce((total, item) => total + item.qty * item.price, 0);
   },
   [SUBMITABLE](state) {
+    console.log(state.change >= 0 && state.cart.length > 0);
     return state.change >= 0 && state.cart.length > 0;
   },
   [GET_CHANGE](state) {
