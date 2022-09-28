@@ -1,5 +1,7 @@
 <template>
-  <div class="min-h-full grid grid-cols-12 grid-rows-12 p-1 bg-zinc-700">
+  <div
+    class="max-h-screen overflow-auto grid grid-cols-12 grid-rows-12 p-1 bg-zinc-700"
+  >
     <div class="text-white row-start-1 row-span-2 col-start-1 col-span-12">
       <aronium-navbar />
       <!-- Sidebar -->
