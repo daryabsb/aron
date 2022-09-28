@@ -4,6 +4,7 @@ import AdminLayout from "@/layouts/AdminLayout.vue";
 import HomeLayout from "@/layouts/HomeLayout.vue";
 import PosLayout from "@/layouts/PosLayout.vue";
 import ProductsAdminLayout from "@/layouts/ProductsAdminLayout.vue";
+import ProductsManagementLayout from "@/layouts/ProductsManagementLayout.vue";
 // import Auth from "@/layouts/Auth.vue";
 
 // views for Admin layout
@@ -95,6 +96,11 @@ const routes = [
         component: CustomFactoryPage,
       },
     ],
+  },
+  {
+    path: "/aronium",
+    name: "aronium",
+    component: ProductsManagementLayout,
   },
   { path: "/:pathMatch(.*)*", redirect: "/" },
 ];
