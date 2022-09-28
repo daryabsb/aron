@@ -57,35 +57,28 @@
         <div class="tree" data-v-62a5b360="">
           <tree-comp :groups="useGetAllProductGroups"></tree-comp>
         </div>
-        <tree
-          :nodes="data"
-          :search-text="searchText"
-          :use-icon="true"
-          :use-checkbox="true"
-          :gap="0"
-          :expand-row-by-default="true"
-          use-row-delete
-          show-child-count
-          @node-expanded="onNodeExpanded"
-          @update:nodes="onUpdate"
-          @node-click="onNodeClick"
-        >
-          <template #iconActive>
-            <!-- <custom-active-icon /> -->
-            <i class="fa fa-plus"></i>
-          </template>
-          <template #iconInactive>
-            <!-- <custom-active-icon /> -->
-            <i class="fa-sharp fa-solid fa-minus"></i>
-          </template>
-          <template #checkbox>
-            <!-- #checkbox="{ id, checked, node, indeterminate, toggleCheckbox }" -->
-            <!--  :indeterminate="indeterminate"
-              @click="toggleCheckbox(id)" -->
-            <!-- <custom-checkbox class="mr-3" :checked="true" /> -->
-            <input type="checkbox" name="checkbox" class="mr-3" />
-          </template>
-        </tree>
+        <hr />
+
+        <div class="max-w-lg mx-auto p-8">
+          <details
+            v-for="group in useGetAllProductGroups"
+            :key="group.id"
+            class="open:bg-white dark:open:bg-slate-900 open:plus-1 open:ring-black/5 dark:open:ring-white/10 open:shadow-lg p-2 rounded-lg"
+          >
+            <summary
+              class="text-sm leading-6 text-slate-900 dark:text-white font-semibold select-none"
+            >
+              {{ group.name }}
+            </summary>
+            <ul
+              class="ml-8 mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400"
+            >
+              <li v-for="child in group.groups" :key="child.id">
+                {{ child.name }}
+              </li>
+            </ul>
+          </details>
+        </div>
       </div>
     </div>
   </div>
@@ -104,42 +97,36 @@ export default {
 
     onMounted(useFetchAllProductGroupsDispatch);
 
-    const data = ref([
+    const dataModel = ref([
       {
-        id: 1,
-        label: "Animal",
-        gap: 0,
-        nodes: [
+        id: "static-node1",
+        label: "My First Node",
+        children: [],
+      },
+      {
+        id: "static-node2",
+        label: "My Second Node",
+        children: [
           {
-            id: 2,
-            label: "Dog",
-            gap: 0,
+            id: "static-subnode1",
+            label: "This is a subnode",
+            children: [],
           },
           {
-            id: 3,
-            label: "Cat",
-            gap: 0,
-            nodes: [
+            id: "static-subnode2",
+            label: "This is another subnode",
+            children: [
               {
-                id: 4,
-                label: "Egyptian Mau Cat",
-                gap: 0,
-              },
-              {
-                id: 5,
-                label: "Japanese Bobtail Cat",
-                gap: 0,
+                id: "static-subsubnode1",
+                label: "An even deeper node",
+                children: [],
               },
             ],
           },
         ],
       },
-      {
-        id: 6,
-        label: "People",
-        gap: 0,
-      },
     ]);
+
     const onNodeExpanded = (node, state) => {
       console.log("state: ", state);
       console.log("node: ", node);
@@ -156,12 +143,12 @@ export default {
     };
     return {
       searchText,
-      data,
       useGetAllProductGroups,
       toggle,
       onNodeExpanded,
       onUpdate,
       onNodeClick,
+      dataModel,
     };
   },
 };

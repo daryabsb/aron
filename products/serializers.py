@@ -1,3 +1,4 @@
+from queue import Empty
 from rest_framework import serializers
 from core.models import Barcode, Product, ProductGroup
 
@@ -28,6 +29,7 @@ class NestedProductGroup(serializers.ModelSerializer):
 class ProductsGroupSerializer(serializers.ModelSerializer):
 
     groups = NestedProductGroup(many=True, read_only=True)
+    is_parent = serializers.SerializerMethodField()
 
     class Meta:
         model = ProductGroup
@@ -36,9 +38,14 @@ class ProductsGroupSerializer(serializers.ModelSerializer):
             "name",
             "parent_group",
             "groups",
+            'is_parent',
             "color",
             "image",
             "rank",
             "created",
             "updated",
         )
+
+    def get_is_parent(self, obj):
+        print(obj.parent_group)
+        return obj.parent_group is None

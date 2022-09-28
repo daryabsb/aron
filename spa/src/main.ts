@@ -3,8 +3,6 @@ import router from "@/router";
 import store from "@/store";
 import VueCookies from "vue-cookies";
 import moment from "moment";
-import Tree from "vue3-tree";
-import "vue3-tree/dist/style.css";
 
 import Popper from "vue3-popper";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -41,7 +39,6 @@ app.config.globalProperties.$filters = {
 };
 app
   .component("Popper", Popper)
-  .component("tree", Tree)
   .use(store)
   .use(router)
   .use(VueCookies)

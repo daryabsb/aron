@@ -28,7 +28,6 @@
     "vue-cookies": "^1.8.1",
     "vue-router": "^4.0.3",
     "vue3-popper": "^1.5.0",
-    "vue3-tree": "^0.11.4",
     "vuex": "^4.0.0",
     "vuex-persistedstate": "^4.1.0"
   },

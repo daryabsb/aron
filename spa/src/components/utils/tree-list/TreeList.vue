@@ -8,12 +8,11 @@
     >
       <div class="tree-row-item">
         <div
-          v-if="group.groups.length > 0"
           class="tree-row-item-icon-wrapper"
-          @click="toggleIcon"
+          @click="toggleIcon(group.id, $event)"
         >
           <!-- <custom-active-icon /> -->
-          <i v-if="closed" class="fa-sharp fa-solid fa-minus"></i>
+          <i v-if="!closed" class="fa fa-minus"></i>
           <i v-else class="fa fa-plus"></i>
         </div>
         <!-- #checkbox="{ id, checked, node, indeterminate, toggleCheckbox }" --><!--  :indeterminate="indeterminate"
@@ -39,7 +38,11 @@
           </svg>
         </div>
       </div>
-      <tree-list v-if="group.groups.length > 0" :groups="group.groups" />
+
+      <div v-show="closed" v-if="group.is_parent">
+        <tree-list :groups="group.groups" />
+      </div>
+
       <!-- <ul
           v-if="group.groups.length > 0 && closed"
           class="tree-list"
@@ -61,7 +64,7 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import TreeList from "@/components/utils/tree-list/TreeList.vue";
 export default {
   components: {
@@ -76,10 +79,9 @@ export default {
   setup() {
     let closed = ref(true);
 
-    const toggleIcon = () => {
-      console.log(closed);
+    const toggleIcon = (id, e) => {
+      console.log(e);
       closed.value = !closed.value;
-      console.log(closed);
     };
 
     return {

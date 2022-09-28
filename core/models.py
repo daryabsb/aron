@@ -695,6 +695,10 @@ class ProductGroup(models.Model):
 
     def __str__(self):
         return self.name
+    
+    @property
+    def has_children(self):
+        return self.groups is not None
 
 
 class Product(models.Model):
