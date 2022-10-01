@@ -4,46 +4,71 @@
       <div
         class="text-sm leading-normal mt-0 text-blueGray-400 font-bold uppercase"
       >
-        <div class="text-white max-w-lg mx-auto p-3">
-          <details
-            v-for="group in useGetAllProductGroups"
-            :key="group.id"
-            role="list"
-            :class="openIcon"
-          >
+        <div v-if="groups.length > 0" class="text-white max-w-lg mx-auto p-3">
+          <details role="list" :class="openIcon">
             <summary
               class="text-sm list-none leading-6 font-semibold select-none"
             >
-              <span v-if="group.groups.length > 0">
-                <i class="fa fa-plus"></i>
-              </span>
-              <span v-else class="ml-4">
-                <input
-                  :id="group.id"
-                  v-model="selectedGroups"
-                  :value="group.id"
-                  type="checkbox"
-                  :name="group.name"
-                />
-              </span>
-
-              {{ group.name }}
+              <i class="fa fa-plus"></i>
+              <input
+                :id="0"
+                v-model="selectedGroups"
+                class="ml-1"
+                :value="0"
+                type="checkbox"
+                name="All Products"
+              />
+              All Products
             </summary>
+
             <details
-              v-for="child in group.groups"
-              :key="child.id"
-              class="ml-4 text-sm leading-6"
+              v-for="group in groups"
+              :key="group.id"
+              role="list"
+              :class="openIcon"
             >
-              <summary class="list-none">
-                <input
-                  :id="child.id"
-                  v-model="selectedGroups"
-                  :value="child.id"
-                  type="checkbox"
-                  :name="child.name"
-                />
-                {{ child.name }}
+              <summary
+                class="text-sm list-none leading-6 font-semibold select-none"
+              >
+                <span v-if="group.groups">
+                  <i class="fa fa-plus"></i>
+                  <input
+                    :id="group.id"
+                    v-model="selectedGroups"
+                    class="ml-1"
+                    :value="group.id"
+                    type="checkbox"
+                    :name="group.name"
+                  />
+                </span>
+                <span v-else class="ml-4">
+                  <input
+                    :id="group.ID"
+                    v-model="selectedGroups"
+                    :value="group.ID"
+                    type="checkbox"
+                    :name="group.name"
+                  />
+                </span>
+
+                {{ group.name }}
               </summary>
+              <details
+                v-for="child in group.groups"
+                :key="child.ID"
+                class="ml-4 text-sm leading-6"
+              >
+                <summary class="list-none">
+                  <input
+                    :id="child.ID"
+                    v-model="selectedGroups"
+                    :value="child.id"
+                    type="checkbox"
+                    :name="child.name"
+                  />
+                  {{ child.name }}
+                </summary>
+              </details>
             </details>
           </details>
         </div>
@@ -52,17 +77,18 @@
   </div>
 </template>
 <script>
-import { ref, onMounted } from "vue";
-import { useFetchAllProductGroupsDispatch } from "@/store/composables";
-import useGetAllProductGroups from "@/composables/useGetAllProductGroups";
+import { ref } from "vue";
 export default {
+  props: {
+    groups: {
+      type: Object,
+      required: true,
+    },
+  },
   setup() {
     const searchText = ref("");
     const selectedGroups = ref([]);
-
     const openIcon = ["open:before:fa", "open:before:fa-plus"];
-
-    onMounted(useFetchAllProductGroupsDispatch);
 
     const onNodeExpanded = (node, state) => {
       console.log("state: ", state);
@@ -80,7 +106,6 @@ export default {
     };
     return {
       searchText,
-      useGetAllProductGroups,
       toggle,
       closed,
       onNodeExpanded,

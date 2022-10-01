@@ -7,6 +7,7 @@ import {
   FETCH_PRODUCTS,
   FETCH_PRODUCT_GROUPS,
   FETCH_ALL_PRODUCT_GROUPS,
+  CREATE_PRODUCT_GROUP,
   ADD_KEYWORD,
   SUBMIT_ORDER,
   ADD_CASH,
@@ -35,9 +36,13 @@ export const useFetchProductGroupsDispatch = () => {
   store.dispatch(FETCH_PRODUCT_GROUPS);
 };
 
+export const addNewProductGroup = (group) => {
+  store.dispatch(CREATE_PRODUCT_GROUP, group);
+};
+
 export const useFetchAllProductGroupsDispatch = () => {
   // const store = useStore();
-  store.dispatch(FETCH_ALL_PRODUCT_GROUPS);
+  store.dispatch(FETCH_PRODUCT_GROUPS);
 };
 
 export const filteredTabProductsByGroupId = (groupID) => {

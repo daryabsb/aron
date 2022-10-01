@@ -32,23 +32,41 @@ class ProductViewset(viewsets.ModelViewSet):
 
 class ProductGroupViewset(viewsets.ModelViewSet):
     serializer_class = ProductsGroupSerializer
-    queryset = (
-        ProductGroup.objects.filter(rank__lte=5)
-        .filter(rank__gt=0)
-        .filter(products__isnull=False)
-        .distinct()
-    )
+    queryset = ProductGroup.objects.all()
     permission_classes = (permissions.IsAuthenticated,)
 
     def perform_create(self, serializer):
         """Create a new product group"""
+
+        print("serializer", serializer)
         serializer.save(user=self.request.user)
 
 
-class AllProductGroupViewset(viewsets.ModelViewSet):
-    serializer_class = ProductsGroupSerializer
-    queryset = ProductGroup.objects.all()
-    permission_classes = (permissions.IsAuthenticated,)
+# class ProductGroupViewset(viewsets.ModelViewSet):
+#     serializer_class = ProductsGroupSerializer
+#     queryset = (
+#         ProductGroup.objects.filter(rank__lte=5)
+#         .filter(rank__gt=0)
+#         .filter(products__isnull=False)
+#         .distinct()
+#     )
+#     permission_classes = (permissions.IsAuthenticated,)
+
+#     def perform_create(self, serializer):
+#         """Create a new product group"""
+
+#         print("serializer", serializer)
+#         serializer.save(user=self.request.user)
+
+
+# class AllProductGroupViewset(viewsets.ModelViewSet):
+#     serializer_class = ProductsGroupSerializer
+#     queryset = ProductGroup.objects.all()
+#     permission_classes = (permissions.IsAuthenticated,)
+
+#     def perform_create(self, serializer):
+#         """Create a new product group"""
+#         serializer.save(user=self.request.user)
 
 
 class BarcodeViewset(viewsets.ModelViewSet):

@@ -25,7 +25,7 @@ export default {
       // console.log(productsMenu);
       const itemIndex = productsMenu.findIndex((itm) => itm.id === item.id);
       item.submit(item.title, data);
-      emit("open");
+      emit("open", item.title);
     };
 
     return { productsMenu, broadcastFunction };

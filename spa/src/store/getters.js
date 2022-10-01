@@ -25,12 +25,11 @@ const getters = {
     return state.products;
   },
   [GET_PRODUCT_GROUPS](state) {
-    console.log("from getters", state.allProductGroups);
     return state.productGroups;
   },
-  [GET_ALL_PRODUCT_GROUPS](state) {
-    return state.allProductGroups;
-  },
+  // [GET_ALL_PRODUCT_GROUPS](state) {
+  //   return state.allProductGroups;
+  // },
   [GET_TAB_PRODUCTS](state) {
     return state.tabProducts;
   },

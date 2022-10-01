@@ -1,4 +1,3 @@
-from queue import Empty
 from rest_framework import serializers
 from core.models import Barcode, Product, ProductGroup
 
@@ -38,7 +37,7 @@ class ProductsGroupSerializer(serializers.ModelSerializer):
             "name",
             "parent_group",
             "groups",
-            'is_parent',
+            "is_parent",
             "color",
             "image",
             "rank",
@@ -46,6 +45,10 @@ class ProductsGroupSerializer(serializers.ModelSerializer):
             "updated",
         )
 
+    def create(self, validated_data):
+        """Create a new user with encrypted password and return it"""
+        print("validated_data")
+        return ProductGroup.objects.create(**validated_data)
+
     def get_is_parent(self, obj):
-        print(obj.parent_group)
         return obj.parent_group is None
