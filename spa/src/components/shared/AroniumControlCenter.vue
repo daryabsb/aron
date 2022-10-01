@@ -3,7 +3,6 @@
     class="max-h-screen overflow-auto grid grid-cols-12 grid-rows-12 p-1 bg-zinc-700"
   >
     <aronium-modal v-if="closeModal" @close="close"></aronium-modal>
-
     <div class="text-white row-start-1 row-span-2 col-start-1 col-span-12">
       <aronium-navbar />
       <!-- Sidebar -->
@@ -14,32 +13,16 @@
     >
       <aronium-sidebar></aronium-sidebar>
     </div>
-    <div class="container flex flex-col gap-2 mt-2 ml-1 min-w-screen">
-      <div class="flex flex-grow-0 lg:w-full">
-        <aronium-header @open="open"></aronium-header>
-      </div>
 
-      <div class="grid grid-cols-8 grid-rows-1 gap-2 w-full">
-        <div class="col-span-2 w-full">
-          <aronium-side-card></aronium-side-card>
-        </div>
-        <div>
-          <aronium-products-management></aronium-products-management>
-        </div>
-      </div>
+    <div class="text-white col-start-3 col-span-10 row-start-3 row-span-2 m-1">
+      <aronium-header @open="open"></aronium-header>
     </div>
-
-    <div
-      class="text-white row-start-5 row-span-6 col-start-3 col-span-full m-1"
-    ></div>
-    <!-- <div class="text-white row-start-5 row-span-6 col-start-3 col-span-2 m-1">
-      
+    <div class="text-white row-start-5 row-span-6 col-start-3 col-span-2 m-1">
+      <aronium-side-card></aronium-side-card>
     </div>
-    <div
-      class="text-white row-start-5 row-span-6 col-start-5 auto-cols-max m-1"
-    >
-      
-    </div> -->
+    <div class="text-white row-start-5 row-span-6 col-start-5 col-span-8 m-1">
+      <aronium-products-management></aronium-products-management>
+    </div>
     <div class="text-white row-start-10 row-span-2 col-start-1 col-span-12 m-1">
       <aronium-footer></aronium-footer>
     </div>
