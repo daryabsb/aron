@@ -5,7 +5,24 @@
         class="absolute top-0 right-0 w-1/4 h-screen py-12 items-start text-zinc-100 p-8 z-50 bg-zinc-900 shadow-2xl"
       >
         <div class="text-left">
-          <h3 class="text-lg mb-8">FIRST TIME?</h3>
+          <div class="flex flex-nowrap">
+            <span>
+              <i
+                class="fa fa-arrow-left cursor-pointer text-white text-xl font-bold pr-6"
+                @click="$emit('close')"
+              ></i>
+            </span>
+            <h3 class="text-lg mb-8">FIRST TIME?</h3>
+          </div>
+
+          <div class="p-6">
+            <button
+              class="bg-pink-500 text-white active:bg-zinc-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
+              type="button"
+            >
+              Settings
+            </button>
+          </div>
           <!-- TABS PRODUCT CREATE -->
           <ul
             class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0 mb-4"
@@ -293,6 +310,7 @@ export default {
   components: {
     ModalRight,
   },
+  emits: ["close"],
   setup() {
     const tabsTitles = ref([
       {
