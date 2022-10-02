@@ -58,7 +58,7 @@
               <div class="py-3">
                 <form>
                   <div class="flex flex-col">
-                    <div class="w-full px-4">
+                    <div class="w-full px-2">
                       <div class="relative w-full mb-3">
                         <label
                           class="block text-sm mb-1"
