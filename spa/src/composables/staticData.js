@@ -2,7 +2,7 @@ export const productsMenu = [
   {
     id: 1,
     title: "Refresh",
-    icon: "fa fa-refresh fa-2x",
+    icon: " fa-solid fa-rotate fa-2x",
     submit: (title, item) => {
       console.log(title, item);
       location.reload();

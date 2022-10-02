@@ -2,7 +2,7 @@
   <modal-small>
     <template #modal-content>
       <div
-        class="absolute top-0 right-0 w-1/4 h-screen py-12 items-start text-zinc-100 p-8 z-50 bg-zinc-900 shadow-2xl"
+        class="glass absolute top-0 right-0 w-1/4 h-screen py-12 items-start text-zinc-100 p-8 z-50 border border-aronium-600 bg-aronium-800 shadow-2xl"
       >
         <div class="text-left">
           <div class="flex flex-nowrap justify-between">
@@ -16,30 +16,50 @@
           </div>
 
           <!-- TABS PRODUCT CREATE -->
-          <div class="border-b border-pink-500">
+          <div class="relative">
             <ul
-              class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0"
               id="tabs-tab"
+              class="border-b border-pink-500 nav nav-tabs flex flex-col md:flex-row justify-between flex-wrap list-none pl-0 my-2"
               role="tablist"
             >
               <li
-                v-for="tab in tabsTitles"
+                v-for="tab in tabsTitles.second"
                 :key="tab.id"
                 class="nav-item"
                 role="presentation"
               >
                 <a
+                  id="tabs-home-tab"
                   href="#tabs-home"
-                  class="nav-link block font-light text-sm leading-tight border-x-0 border-t-0 border-b-2 border-transparent px-4 py-1 hover:border-transparent hover:bg-zinc-500 focus:border-transparent"
+                  class="nav-link block font-light leading-tight border-x-0 border-t-0 border-b-2 border-transparent px-4 py-1 hover:border-transparent hover:bg-zinc-500 focus:border-transparent"
                   :class="[
                     tabNum === tab.id ? 'bg-pink-500 active' : 'border-none',
                     tab.disabled ? 'disabled' : '',
                   ]"
+                  @click="currentTab(tab.id)"
+                  >{{ tab.title }}</a
+                >
+              </li>
+            </ul>
+            <ul
+              id="tabs-second-row"
+              class="border-b border-pink-500 nav nav-tabs flex flex-col md:flex-row justify-between flex-wrap list-none pl-0"
+              role="tablist"
+            >
+              <li
+                v-for="tab in tabsTitles.first"
+                :key="tab.id"
+                class="nav-item"
+                role="presentation"
+              >
+                <a
                   id="tabs-home-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#tabs-home"
-                  role="tab"
-                  aria-selected="true"
+                  href="#tabs-home"
+                  class="nav-link block font-light leading-tight border-x-0 border-t-0 border-b-2 border-transparent px-4 py-1 hover:border-transparent hover:bg-zinc-500 focus:border-transparent"
+                  :class="[
+                    tabNum === tab.id ? 'bg-pink-500 active' : 'border-none',
+                    tab.disabled ? 'disabled' : '',
+                  ]"
                   @click="currentTab(tab.id)"
                   >{{ tab.title }}</a
                 >
@@ -58,162 +78,61 @@
               <div class="py-3">
                 <form>
                   <div class="flex flex-col">
-                    <div class="w-full px-2">
-                      <div class="relative w-full mb-3">
-                        <label
-                          class="block text-sm mb-1"
-                          htmlFor="grid-password"
-                        >
-                          Name
-                        </label>
-                        <input
-                          type="text"
-                          class="text-zinc-900 px-2 py-2 text-sm focus:border-2 focus:border-pink-500 w-full"
-                          value="lucky.jesse"
-                        />
-                        <!-- class=" ease-linear transition-all duration-150" -->
-                      </div>
+                    <div class="w-96">
+                      <text-input
+                        type="text"
+                        placeholder="Product name"
+                        label="Name"
+                        required
+                      ></text-input>
                     </div>
-                    <div class="w-full lg:w-6/12 px-4">
-                      <div class="relative w-full mb-3">
-                        <label
-                          class="block uppercase text-xs mb-2"
-                          htmlFor="grid-password"
-                        >
-                          Email address
-                        </label>
-                        <input
-                          type="email"
-                          class="text-zinc-900 border-0 px-3 py-2 bg-white text-sm focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                          value="jesse@example.com"
-                        />
-                      </div>
+                    <div class="w-32">
+                      <text-input
+                        type="text"
+                        placeholder="Internal code"
+                        label="Code"
+                      ></text-input>
                     </div>
-                    <div class="w-full lg:w-6/12 px-4">
-                      <div class="relative w-full mb-3">
-                        <label
-                          class="block uppercase text-xs mb-2"
-                          htmlFor="grid-password"
-                        >
-                          First Name
-                        </label>
-                        <input
-                          type="text"
-                          class="text-zinc-900 border-0 px-3 py-2 bg-white text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                          value="Lucky"
-                        />
-                      </div>
-                    </div>
-                    <div class="w-full lg:w-6/12 px-4">
-                      <div class="relative w-full mb-3">
-                        <label
-                          class="block uppercase text-xs mb-2"
-                          htmlFor="grid-password"
-                        >
-                          Last Name
-                        </label>
-                        <input
-                          type="text"
-                          class="text-zinc-900 border-0 px-3 py-2 bg-white text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                          value="Jesse"
-                        />
-                      </div>
+
+                    <text-input
+                      type="text"
+                      placeholder="Barcode"
+                      label="Barcode"
+                    >
+                      <template #validation>
+                        <p class="cursor-pointer" @click="generateBarcode">
+                          Generate barcode
+                        </p>
+                      </template>
+                    </text-input>
+                    <div class="w-48">
+                      <text-input
+                        type="text"
+                        placeholder="Unit"
+                        label="Unit of measurement"
+                      ></text-input>
                     </div>
                   </div>
                   <!-- END SECTION 1 CREATE PRODUCT -->
                   <hr class="mt-6 border-b-1 border-zinc-600" />
-
-                  <h6 class="text-sm mt-3 mb-6 uppercase">
-                    Contact Information
-                  </h6>
-                  <div class="flex flex-wrap">
-                    <div class="w-full lg:w-12/12 px-4">
-                      <div class="relative w-full mb-3">
-                        <label
-                          class="block uppercase text-xs mb-2"
-                          htmlFor="grid-password"
-                        >
-                          Address
-                        </label>
-                        <input
-                          type="text"
-                          class="text-zinc-900 border-0 px-3 py-2 bg-white text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                          value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
-                        />
-                      </div>
-                    </div>
-                    <div class="w-full lg:w-4/12 px-4">
-                      <div class="relative w-full mb-3">
-                        <label
-                          class="block uppercase text-xs mb-2"
-                          htmlFor="grid-password"
-                        >
-                          City
-                        </label>
-                        <input
-                          type="email"
-                          class="text-zinc-900 border-0 px-3 py-2 bg-white text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                          value="New York"
-                        />
-                      </div>
-                    </div>
-                    <div class="w-full lg:w-4/12 px-4">
-                      <div class="relative w-full mb-3">
-                        <label
-                          class="block uppercase text-xs mb-2"
-                          htmlFor="grid-password"
-                        >
-                          Country
-                        </label>
-                        <input
-                          type="text"
-                          class="text-zinc-900 border-0 px-3 py-2 bg-white text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                          value="United States"
-                        />
-                      </div>
-                    </div>
-                    <div class="w-full lg:w-4/12 px-4">
-                      <div class="relative w-full mb-3">
-                        <label
-                          class="block uppercase text-xs mb-2"
-                          htmlFor="grid-password"
-                        >
-                          Postal Code
-                        </label>
-                        <input
-                          type="text"
-                          class="text-zinc-900 border-0 px-3 py-2 bg-white text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                          value="Postal Code"
-                        />
-                      </div>
-                    </div>
+                  <div class="mb-2">
+                    <toggle-input
+                      target="active"
+                      label="Active"
+                      checked
+                    ></toggle-input>
                   </div>
-
-                  <hr class="mt-6 border-b-1 border-blueGray-300" />
-
-                  <h6 class="text-sm mt-3 mb-6 uppercase">
-                    About Me
-                  </h6>
-                  <div class="flex flex-wrap">
-                    <div class="w-full lg:w-12/12 px-4">
-                      <div class="relative w-full mb-3">
-                        <label
-                          class="block uppercase text-xs mb-2"
-                          htmlFor="grid-password"
-                        >
-                          About me
-                        </label>
-                        <textarea
-                          type="text"
-                          class="border-0 px-3 py-2 bg-white text-sm focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                          rows="4"
-                        >
-                    A beautiful UI Kit and Admin for VueJS & Tailwind CSS. It is Free
-                    and Open Source.
-                  </textarea
-                        >
-                      </div>
-                    </div>
+                  <div class="mb-2">
+                    <toggle-input
+                      target="default-uantity"
+                      label="Default quantity"
+                    ></toggle-input>
+                  </div>
+                  <div class="mb-2">
+                    <toggle-input
+                      target="service"
+                      label="Service (not using stock)"
+                    ></toggle-input>
                   </div>
                 </form>
               </div>
@@ -225,7 +144,60 @@
               role="tabpanel"
               aria-labelledby="tabs-profile-tab"
             >
-              Tab 2 content
+              <div class="py-3">
+                <form>
+                  <div class="flex flex-col">
+                    <div class="flex items-center w-48">
+                      <text-input
+                        type="text"
+                        placeholder="Add tax to product"
+                        label="Taxes"
+                      ></text-input>
+                      <span class="text-lg pr-3">
+                        <i class="fa fa-circle-question"></i>
+                      </span>
+                    </div>
+                    <div class="w-32">
+                      <text-input
+                        type="text"
+                        placeholder="Cost"
+                        label="Cost"
+                      ></text-input>
+                    </div>
+                    <div class="flex items-center w-32">
+                      <text-input
+                        type="text"
+                        placeholder="Markup"
+                        label="Markup"
+                      >
+                      </text-input
+                      >%
+                    </div>
+                    <div class="w-48">
+                      <text-input
+                        type="text"
+                        placeholder="Sale price"
+                        label="Sale price"
+                      ></text-input>
+                    </div>
+                  </div>
+                  <!-- END SECTION 1 CREATE PRODUCT -->
+                  <hr class="mt-6 border-b-1 border-zinc-600" />
+                  <div class="mb-2">
+                    <toggle-input
+                      target="pit"
+                      label="Price includes tax"
+                      checked
+                    ></toggle-input>
+                  </div>
+                  <div class="mb-2">
+                    <toggle-input
+                      target="pca"
+                      label="Price change allowed"
+                    ></toggle-input>
+                  </div>
+                </form>
+              </div>
             </div>
             <div
               v-if="tabNum === 3"
@@ -248,46 +220,26 @@
           </div>
           <!-- END TABS PRODUCT CREATE -->
         </div>
-        <div class="text-left">
+        <div
+          class="flex flex-nowrap justify-round absolute items-center bottom-3 right-4"
+        >
           <button
-            class="text-left w-full mb-3 rounded-xl bg-blue-gray-500 text-white focus:outline-none hover:bg-cyan-400 px-4 py-4"
+            class="w-36 text-center border border-aronium-600 font-light mr-2 flex bg-inherit text-white focus:outline-none hover:bg-aronium-sky hover:border-aronium-sky px-6 py-2"
             @click="startWithSampleData()"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 inline-block -mt-1 mr-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20"
-              />
-            </svg>
-            LOAD SAMPLE DATA
+            <span class="mr-3">
+              <i class="fa fa-check"></i>
+            </span>
+            Save
           </button>
           <button
-            class="text-left w-full rounded-xl bg-blue-gray-500 text-white focus:outline-none hover:bg-teal-400 px-4 py-4"
+            class="w-36 text-center border border-aronium-600 font-light mr-2 flex bg-inherit text-white focus:outline-none hover:bg-aronium-sky hover:border-aronium-sky px-6 py-2"
             @click="startBlank()"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 inline-block -mt-1 mr-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
-              />
-            </svg>
-            LEAVE IT EMPTY
+            <span class="pr-3">
+              <i class="fa fa-xmark"></i>
+            </span>
+            Cancel
           </button>
         </div>
       </div>
@@ -298,39 +250,58 @@
 <script>
 import { ref } from "vue";
 import useGetProductGroups from "@/composables/useGetProductGroups";
-import ModalSmall from "@/components/shared/ModalSmall.vue";
 import { addNewProductGroup } from "@/store/composables";
+
+import ModalSmall from "@/components/shared/ModalSmall.vue";
+import TextInput from "@/components/shared/forms/TextInput.vue";
+import ToggleInput from "../shared/forms/ToggleInput.vue";
 
 export default {
   components: {
     ModalSmall,
+    TextInput,
+    ToggleInput,
   },
   props: {},
   setup(props, { emit }) {
     // FOR PRODUCT FORM =>
 
-    const tabsTitles = ref([
-      {
-        id: 1,
-        title: "Details",
-        disabled: false,
-      },
-      {
-        id: 2,
-        title: "Prices & tax",
-        disabled: false,
-      },
-      {
-        id: 3,
-        title: "Comments",
-        disabled: false,
-      },
-      {
-        id: 4,
-        title: "Image & color",
-        disabled: true,
-      },
-    ]);
+    const tabsTitles = ref({
+      first: [
+        {
+          id: 1,
+          title: "Details",
+          disabled: false,
+        },
+        {
+          id: 2,
+          title: "Prices & tax",
+          disabled: false,
+        },
+        {
+          id: 3,
+          title: "Stock control",
+          disabled: false,
+        },
+      ],
+      second: [
+        {
+          id: 4,
+          title: "Print stations",
+          disabled: true,
+        },
+        {
+          id: 5,
+          title: "Comments",
+          disabled: true,
+        },
+        {
+          id: 6,
+          title: "Image & color",
+          disabled: true,
+        },
+      ],
+    });
     const isActive = ref(false);
     const tabNum = ref(1);
     const currentTab = (tabNumber) => {
@@ -363,12 +334,20 @@ export default {
       emit("close");
     };
 
+    const barcode = ref("");
+
+    const generateBarcode = () => {
+      barcode.value = "0101234567890128TEC-IT";
+    };
+
     return {
       // PRODUCT FORM RETURNS
       isActive,
       tabNum,
       tabsTitles,
       currentTab,
+      barcode,
+      generateBarcode,
 
       // GROUP FORM RETURNS
       parentId,

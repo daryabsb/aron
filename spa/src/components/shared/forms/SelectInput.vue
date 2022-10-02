@@ -4,17 +4,17 @@
       <label class="block text-sm mb-1" htmlFor="grid-password">
         {{ label }}
       </label>
+      <select :value="value" name="itemsSelect">
+        @input="handleInput">
+        <option v-for="(index, item) in items" :key="index">{{
+          item.name
+        }}</option>
+      </select>
+
       <input
         :type="type"
         :placeholder="placeholder"
         class="bg-inherit border text-aronium-white px-2 py-1 mb-1 text-sm w-full"
-        :class="
-          required
-            ? 'border-aronium-600 focus:border-pink-500'
-            : 'border-aronium-600'
-        "
-        :value="value"
-        @input="handleInput"
       />
       <span class="text-aronium-sky">
         <slot name="validation"></slot>
@@ -27,25 +27,15 @@
 <script>
 import { ref } from "vue";
 export default {
-  name: "TextInput",
+  name: "SelectInput",
   props: {
     label: {
       type: String,
       required: true,
     },
-    type: {
-      type: String,
+    items: {
+      type: Object,
       required: true,
-    },
-    placeholder: {
-      type: String,
-      required: false,
-      default: "",
-    },
-    required: {
-      type: Boolean,
-      reuired: false,
-      default: false,
     },
   },
   setup() {

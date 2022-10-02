@@ -1,17 +1,17 @@
 <template>
   <!-- Navbar -->
   <nav
-    class="bg-zinc-800 shadow-xl bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-2 w-full"
+    class="bg-aronium-900 border-b border-aronium-600 md:flex-row md:flex-nowrap md:justify-start flex items-center w-full"
   >
     <div
-      class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4"
+      class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 py-2 px-4"
     >
       <span>
         <i class="fa fa-arrow-left text-white text-xl font-bold pr-6"></i>
       </span>
       <!-- Brand -->
       <a
-        class="text-white text-sm uppercase hidden lg:inline-block font-semibold"
+        class="text-white text-2sm hidden lg:inline-block font-normal"
         href="javascript:void(0)"
       >
         Products Control Center
@@ -22,14 +22,14 @@
       >
         <div class="relative flex w-full flex-wrap items-stretch">
           <span
-            class="z-10 h-full leading-snug font-normal text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3"
+            class="absolute top-0 left-0 py-1 z-10 h-full leading-snug font-normal text-center text-aronium-600 bg-transparent rounded text-base items-center justify-center w-8"
           >
             <i class="fas fa-search"></i>
           </span>
           <input
             type="text"
             placeholder="Search here..."
-            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10"
+            class="border-0 px-3 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10"
           />
         </div>
       </form>

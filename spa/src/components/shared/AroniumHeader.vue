@@ -1,12 +1,10 @@
 <template>
-  <div
-    class="text-white border border-zinc-900 drop-shadow-lg shadow-zinc-900 bg-zinc-700 py-3"
-  >
-    <ul class="flex items-center text-xs">
+  <div class="text-aronium-white font-light bg-aronium-800">
+    <ul class="flex items-center text-sm">
       <li
         v-for="item in productsMenu"
         :key="item.id"
-        class="flex grow flex-col items-center px-5 my-1 font-normal uppercase hover:text-pink-700 cursor-pointer"
+        class="flex grow flex-col items-center px-5 font-normal mt-1 hover:text-pink-700 cursor-pointer"
         @click="item.submit($emit, item.title)"
       >
         <!-- @click="broadcastFunction(item)" -->

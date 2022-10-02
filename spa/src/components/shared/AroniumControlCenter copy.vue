@@ -1,32 +1,34 @@
 <template>
-  <div class="h-screen grid grid-cols-8 grid-rows-12 bg-aronium-800 gap-1">
+  <div
+    class="max-h-screen overflow-auto grid sm:grid-cols-1 md:grid-cols-12 md:grid-rows-12 p-1 bg-aronium-800"
+  >
     <aronium-modal-template
       v-if="closeModal"
       :modal-type="modalDataModule"
       @close="close"
     ></aronium-modal-template>
     <!-- <aronium-modal v-if="closeModal" @close="close"></aronium-modal> -->
-    <div class="text-white row-start-1 row-span-1 col-start-1 col-span-8">
+    <div class="text-white row-start-1 row-span-2 col-start-1 col-span-12">
       <aronium-navbar />
       <!-- Sidebar -->
     </div>
 
     <div
-      class="row-start-2 row-span-10 col-start-1 col-span-1 border border-aronium-600"
+      class="text-white row-start-3 row-span-5 col-start-1 col-span-2 h-full m-1"
     >
       <aronium-sidebar></aronium-sidebar>
     </div>
 
-    <div class="row-start-2 row-span-1 col-start-2 col-span-7">
+    <div class="text-white col-start-3 col-span-10 row-start-3 row-span-2 m-1">
       <aronium-header @open="(moduleName) => open(moduleName)"></aronium-header>
     </div>
-    <div class="row-start-3 row-span-9 col-start-2 col-span-1">
+    <div class="text-white row-start-5 row-span-6 col-start-3 col-span-2 m-1">
       <aronium-side-card></aronium-side-card>
     </div>
-    <div class="row-start-3 row-span-9 col-start-3 col-span-6">
+    <div class="text-white row-start-5 row-span-6 col-start-5 col-span-8 m-1">
       <aronium-products-management></aronium-products-management>
     </div>
-    <div class="row-start-12 row-span-1 col-start-1 col-span-8">
+    <div class="text-white row-start-10 row-span-2 col-start-1 col-span-12 m-1">
       <aronium-footer></aronium-footer>
     </div>
   </div>

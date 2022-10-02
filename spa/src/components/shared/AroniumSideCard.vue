@@ -1,5 +1,7 @@
 <template>
-  <div class="relative text-white flex flex-col bg-zinc-800 w-full h-full">
+  <div
+    class="relative text-white flex flex-col border border-aronium-600 bg-aronium-900 w-full h-full"
+  >
     <div class="px-4">
       <div
         class="text-sm leading-normal mt-0 text-blueGray-400 font-bold uppercase"

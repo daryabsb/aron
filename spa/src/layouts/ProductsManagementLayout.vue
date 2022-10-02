@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-200">
+  <div class="bg-aronium-800">
     <div>
       <aronium-control-center></aronium-control-center>
     </div>
