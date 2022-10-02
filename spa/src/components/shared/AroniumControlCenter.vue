@@ -4,7 +4,6 @@
   >
     <aronium-modal-template
       v-if="closeModal"
-      :groups="useGetProductGroups"
       :modal-type="modalDataModule"
       @close="close"
     ></aronium-modal-template>
@@ -24,7 +23,7 @@
       <aronium-header @open="(moduleName) => open(moduleName)"></aronium-header>
     </div>
     <div class="text-white row-start-5 row-span-6 col-start-3 col-span-2 m-1">
-      <aronium-side-card :groups="useGetProductGroups"></aronium-side-card>
+      <aronium-side-card></aronium-side-card>
     </div>
     <div class="text-white row-start-5 row-span-6 col-start-5 col-span-8 m-1">
       <aronium-products-management></aronium-products-management>
@@ -65,14 +64,9 @@ export default {
     const close = () => (closeModal.value = false);
     const open = (moduleName) => {
       modalDataModule.value = moduleName;
-      console.log({
-        modulename: moduleName,
-        modalDataModule: modalDataModule.value,
-      });
+
       closeModal.value = true;
     };
-
-    console.log("modalDataModule.value", modalDataModule.value);
 
     const isSideBar = ref(true);
 

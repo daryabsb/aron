@@ -7,8 +7,9 @@
         v-for="item in productsMenu"
         :key="item.id"
         class="flex grow flex-col items-center px-5 my-1 font-normal uppercase hover:text-pink-700 cursor-pointer"
-        @click="broadcastFunction(item)"
+        @click="item.submit($emit, item.title)"
       >
+        <!-- @click="broadcastFunction(item)" -->
         <span class="mb-2"><i :class="item.icon" aria-hidden="true"></i></span>
         <span class="text-center">{{ item.title }}</span>
       </li>
@@ -20,15 +21,14 @@
 import { productsMenu } from "@/composables/staticData";
 export default {
   emits: ["open"],
-  setup(props, { emit }) {
-    const broadcastFunction = (item, data = {}) => {
+  setup(props, context) {
+    const broadcastFunction = (item) => {
       // console.log(productsMenu);
-      const itemIndex = productsMenu.findIndex((itm) => itm.id === item.id);
-      item.submit(item.title, data);
-      emit("open", item.title);
+      item.submit(context, item.title);
+      // emit("open", item.title);
     };
 
-    return { productsMenu, broadcastFunction };
+    return { productsMenu, broadcastFunction, context };
   },
 };
 </script>

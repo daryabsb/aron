@@ -37,6 +37,7 @@ export const useFetchProductGroupsDispatch = () => {
 };
 
 export const addNewProductGroup = (group) => {
+  if (group.parent_group === 0) group.parent_group = null;
   store.dispatch(CREATE_PRODUCT_GROUP, group);
 };
 

@@ -3,8 +3,6 @@
     <template #modal-content>
       <aronium-modal-new-group
         v-if="modalType === 'New Group'"
-        :groups="useGetProductGroups"
-        :modal-type="modalDataModule"
         @close="close"
       ></aronium-modal-new-group>
       <aronium-modal-new-product
@@ -34,10 +32,6 @@ export default {
       type: String,
       required: true,
     },
-    // groups: {
-    //   type: Object,
-    //   required: true,
-    // },
   },
   emits: ["close"],
   setup(props, { emit }) {

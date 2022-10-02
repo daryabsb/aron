@@ -14,7 +14,7 @@
           <h3 class="text-lg mb-8">Add New Group</h3>
         </div>
         <h1 class="text-white text-2xl"></h1>
-        <h1 class="text-white text-2xl">Darya{{ modalType }}</h1>
+
         <div class="flex flex-col">
           <div class="flex flex-col">
             <label class="text-zinc-100 uppercase text-sm" for="group-name"
@@ -40,9 +40,12 @@
             class="my-3 pr-24 text-zinc-900"
             @change="onChange($event)"
           >
-            <option v-for="group in groups" :key="group.id" :value="group.id">{{
-              group.name
-            }}</option>
+            <option
+              v-for="group in useGetProductGroups"
+              :key="group.id"
+              :value="group.id"
+              >{{ group.name }}</option
+            >
           </select>
         </div>
         <div class="flex justify-even w-full">
@@ -68,16 +71,7 @@ export default {
   components: {
     ModalSmall,
   },
-  props: {
-    modalType: {
-      type: String,
-      required: true,
-    },
-    groups: {
-      type: Object,
-      required: true,
-    },
-  },
+  props: {},
   setup(props, { emit }) {
     const groupName = ref("");
     const parentId = ref(0);
@@ -103,7 +97,14 @@ export default {
       emit("close");
     };
 
-    return { parentId, groupName, groupNames, addNewGroup, onChange };
+    return {
+      parentId,
+      groupName,
+      groupNames,
+      addNewGroup,
+      onChange,
+      useGetProductGroups,
+    };
   },
 };
 </script>

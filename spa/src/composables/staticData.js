@@ -5,14 +5,16 @@ export const productsMenu = [
     icon: "fa fa-refresh fa-2x",
     submit: (title, item) => {
       console.log(title, item);
+      location.reload();
     },
   },
   {
     id: 2,
     title: "New Group",
     icon: "fa fa-folder-plus fa-2x",
-    submit: (title, item) => {
-      console.log(title, item);
+    submit: (emit, title) => {
+      emit("open", title);
+      // cnx.emit("open", title);
     },
   },
   {
@@ -35,8 +37,8 @@ export const productsMenu = [
     id: 5,
     title: "New Product",
     icon: "fa fa-plus fa-2x",
-    submit: (title, item) => {
-      console.log(title, item);
+    submit: (emit, title) => {
+      emit("open", title);
     },
   },
   {

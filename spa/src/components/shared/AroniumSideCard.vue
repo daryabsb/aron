@@ -4,7 +4,7 @@
       <div
         class="text-sm leading-normal mt-0 text-blueGray-400 font-bold uppercase"
       >
-        <div v-if="groups.length > 0" class="text-white max-w-lg mx-auto p-3">
+        <div class="text-white max-w-lg mx-auto p-3">
           <details role="list" :class="openIcon">
             <summary
               class="text-sm list-none leading-6 font-semibold select-none"
@@ -22,7 +22,7 @@
             </summary>
 
             <details
-              v-for="group in groups"
+              v-for="group in useGetProductGroups"
               :key="group.id"
               role="list"
               :class="openIcon"
@@ -30,7 +30,9 @@
               <summary
                 class="text-sm list-none leading-6 font-semibold select-none"
               >
-                <span v-if="group.groups">
+                <span
+                  v-if="group.groups != undefined && group.groups.length > 0"
+                >
                   <i class="fa fa-plus"></i>
                   <input
                     :id="group.id"
@@ -60,7 +62,7 @@
               >
                 <summary class="list-none">
                   <input
-                    :id="child.ID"
+                    :id="child.id"
                     v-model="selectedGroups"
                     :value="child.id"
                     type="checkbox"
@@ -78,13 +80,9 @@
 </template>
 <script>
 import { ref } from "vue";
+import useGetProductGroups from "@/composables/useGetProductGroups";
+
 export default {
-  props: {
-    groups: {
-      type: Object,
-      required: true,
-    },
-  },
   setup() {
     const searchText = ref("");
     const selectedGroups = ref([]);
@@ -113,6 +111,7 @@ export default {
       onNodeClick,
       selectedGroups,
       openIcon,
+      useGetProductGroups,
     };
   },
 };

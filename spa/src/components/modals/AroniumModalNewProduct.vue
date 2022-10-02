@@ -5,47 +5,48 @@
         class="absolute top-0 right-0 w-1/4 h-screen py-12 items-start text-zinc-100 p-8 z-50 bg-zinc-900 shadow-2xl"
       >
         <div class="text-left">
-          <div class="flex flex-nowrap">
+          <div class="flex flex-nowrap justify-between">
+            <h3 class="text-lg mb-8">New Product</h3>
             <span>
               <i
-                class="fa fa-arrow-left cursor-pointer text-white text-xl font-bold pr-6"
+                class="fa fa-arrow-right cursor-pointer text-white text-xl font-bold pr-6"
                 @click="$emit('close')"
               ></i>
             </span>
-            <h3 class="text-lg mb-8">FIRST TIME?</h3>
           </div>
 
           <!-- TABS PRODUCT CREATE -->
-          <ul
-            class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0 mb-4"
-            id="tabs-tab"
-            role="tablist"
-          >
-            <li
-              v-for="tab in tabsTitles"
-              :key="tab.id"
-              class="nav-item"
-              role="presentation"
+          <div class="border-b border-pink-500">
+            <ul
+              class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0"
+              id="tabs-tab"
+              role="tablist"
             >
-              <a
-                href="#tabs-home"
-                class="nav-link block font-medium text-xs leading-tight uppercase border-x-0 border-t-0 border-b-2 border-transparent px-6 py-3 my-2 hover:border-transparent hover:bg-zinc-500 focus:border-transparent"
-                :class="[
-                  tabNum === tab.id
-                    ? 'border-b border-pink-700 active'
-                    : 'border-none',
-                  tab.disabled ? 'disabled' : '',
-                ]"
-                id="tabs-home-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#tabs-home"
-                role="tab"
-                aria-selected="true"
-                @click="currentTab(tab.id)"
-                >{{ tab.title }}</a
+              <li
+                v-for="tab in tabsTitles"
+                :key="tab.id"
+                class="nav-item"
+                role="presentation"
               >
-            </li>
-          </ul>
+                <a
+                  href="#tabs-home"
+                  class="nav-link block font-light text-sm leading-tight border-x-0 border-t-0 border-b-2 border-transparent px-4 py-1 hover:border-transparent hover:bg-zinc-500 focus:border-transparent"
+                  :class="[
+                    tabNum === tab.id ? 'bg-pink-500 active' : 'border-none',
+                    tab.disabled ? 'disabled' : '',
+                  ]"
+                  id="tabs-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#tabs-home"
+                  role="tab"
+                  aria-selected="true"
+                  @click="currentTab(tab.id)"
+                  >{{ tab.title }}</a
+                >
+              </li>
+            </ul>
+          </div>
+
           <div id="tabs-tabContent" class="tab-content">
             <div
               v-if="tabNum === 1"
@@ -56,23 +57,21 @@
             >
               <div class="py-3">
                 <form>
-                  <h6 class="text-sm mt-3 mb-6 font-bold uppercase">
-                    User Information
-                  </h6>
-                  <div class="flex flex-wrap">
-                    <div class="w-full lg:w-6/12 px-4">
+                  <div class="flex flex-col">
+                    <div class="w-full px-4">
                       <div class="relative w-full mb-3">
                         <label
-                          class="block uppercase text-xs mb-2"
+                          class="block text-sm mb-1"
                           htmlFor="grid-password"
                         >
-                          Username
+                          Name
                         </label>
                         <input
                           type="text"
-                          class="text-zinc-900 border-0 px-3 py-2 text-sm focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                          class="text-zinc-900 px-2 py-2 text-sm focus:border-2 focus:border-pink-500 w-full"
                           value="lucky.jesse"
                         />
+                        <!-- class=" ease-linear transition-all duration-150" -->
                       </div>
                     </div>
                     <div class="w-full lg:w-6/12 px-4">
@@ -306,38 +305,29 @@ export default {
   components: {
     ModalSmall,
   },
-  props: {
-    modalType: {
-      type: String,
-      required: true,
-    },
-    groups: {
-      type: Object,
-      required: true,
-    },
-  },
+  props: {},
   setup(props, { emit }) {
     // FOR PRODUCT FORM =>
 
     const tabsTitles = ref([
       {
         id: 1,
-        title: "Initial",
+        title: "Details",
         disabled: false,
       },
       {
         id: 2,
-        title: "Prices",
+        title: "Prices & tax",
         disabled: false,
       },
       {
         id: 3,
-        title: "Photos",
+        title: "Comments",
         disabled: false,
       },
       {
         id: 4,
-        title: "More...",
+        title: "Image & color",
         disabled: true,
       },
     ]);
