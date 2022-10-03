@@ -187,7 +187,6 @@
                     <toggle-input
                       target="pit"
                       label="Price includes tax"
-                      checked
                     ></toggle-input>
                   </div>
                   <div class="mb-2">

@@ -22,7 +22,7 @@
       >
         <div class="relative flex w-full flex-wrap items-stretch">
           <span
-            class="absolute top-0 left-0 py-1 z-10 h-full leading-snug font-normal text-center text-aronium-600 bg-transparent rounded text-base items-center justify-center w-8"
+            class="absolute top-0 left-0 py-1 h-full leading-snug font-normal text-center text-aronium-600 bg-transparent rounded text-base items-center justify-center w-8"
           >
             <i class="fas fa-search"></i>
           </span>
