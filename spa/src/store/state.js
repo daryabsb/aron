@@ -21,6 +21,9 @@ const state = () => {
     isShowModalReceipt: false,
     receiptNo: null,
     receiptDate: null,
+
+    // CUSTOMERS STATE
+    customers: [],
   };
 };
 

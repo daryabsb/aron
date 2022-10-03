@@ -12,6 +12,7 @@
       <modal-first-time v-show="isShowModalFirstTime"></modal-first-time>
     </div>
     <!-- end of noprint-area -->
+    <div id="print-area" class="print-area"></div>
   </div>
 </template>
 

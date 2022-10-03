@@ -4,18 +4,22 @@
       <label class="block text-sm mb-1" htmlFor="grid-password">
         {{ label }}
       </label>
-      <select :value="value" name="itemsSelect">
-        @input="handleInput">
-        <option v-for="(index, item) in items" :key="index">{{
-          item.name
-        }}</option>
+      <select
+        class="bg-inherit relative text-aronium-white w-full px-2 py-1 mb-1 text-sm"
+        :value="value"
+        name="itemsSelect"
+      >
+        <option :value="none" class="bg-aronium-800 text-aronium-white w-full"
+          >(none)</option
+        >
+        <option
+          v-for="item in items"
+          :key="item.id"
+          class="bg-aronium-800 text-aronium-white w-full"
+          >{{ item.name }}</option
+        >
       </select>
 
-      <input
-        :type="type"
-        :placeholder="placeholder"
-        class="bg-inherit border text-aronium-white px-2 py-1 mb-1 text-sm w-full"
-      />
       <span class="text-aronium-sky">
         <slot name="validation"></slot>
       </span>
@@ -39,11 +43,13 @@ export default {
     },
   },
   setup() {
-    const value = ref("");
+    const value = ref(0);
+    const none = ref(0);
 
     const handleInput = (e) => (value.value = e.target.value);
 
     return {
+      none,
       value,
       handleInput,
     };

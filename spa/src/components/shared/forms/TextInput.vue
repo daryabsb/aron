@@ -8,12 +8,12 @@
         :type="type"
         :placeholder="placeholder"
         class="bg-inherit border text-aronium-white px-2 py-1 mb-1 text-sm w-full"
-        :class="
-          required
-            ? 'border-aronium-600 focus:border-pink-500'
-            : 'border-aronium-600'
-        "
+        :class="{
+          'border-aronium-600 focus:border-pink-500': required,
+          'disabled:opacity-75': disabled,
+        }"
         :value="value"
+        :disabled="disabled"
         @input="handleInput"
       />
       <span class="text-aronium-sky">
@@ -43,6 +43,11 @@ export default {
       default: "",
     },
     required: {
+      type: Boolean,
+      reuired: false,
+      default: false,
+    },
+    disabled: {
       type: Boolean,
       reuired: false,
       default: false,

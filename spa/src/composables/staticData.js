@@ -1,3 +1,5 @@
+import { ref } from "vue";
+
 export const productsMenu = [
   {
     id: 1,
@@ -122,3 +124,40 @@ export const productsMenu = [
     },
   },
 ];
+
+export const productsCreateTabsTitles = ref({
+  first: [
+    {
+      id: 1,
+      title: "Details",
+      disabled: false,
+    },
+    {
+      id: 2,
+      title: "Prices & tax",
+      disabled: false,
+    },
+    {
+      id: 3,
+      title: "Stock control",
+      disabled: false,
+    },
+  ],
+  second: [
+    {
+      id: 4,
+      title: "Comments",
+      disabled: true,
+    },
+    {
+      id: 5,
+      title: "Print stations",
+      disabled: true,
+    },
+    {
+      id: 6,
+      title: "Image & color",
+      disabled: true,
+    },
+  ],
+});

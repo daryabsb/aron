@@ -2,7 +2,7 @@ import {
   GET_USER,
   GET_PRODUCTS,
   GET_PRODUCT_GROUPS,
-  GET_ALL_PRODUCT_GROUPS,
+  GET_CUSTOMERS,
   GET_CART,
   GET_CHANGE,
   GET_CASH,
@@ -23,6 +23,9 @@ const getters = {
   },
   [GET_PRODUCTS](state) {
     return state.products;
+  },
+  [GET_CUSTOMERS](state) {
+    return state.customers;
   },
   [GET_PRODUCT_GROUPS](state) {
     return state.productGroups;

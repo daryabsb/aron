@@ -22,22 +22,20 @@ from core.forms import CustomLoginForm, CustomRegistrationForm
 from core.views import IndexTemplateView, logout_view, signup
 
 urlpatterns = [
-    path('login/', LoginView.as_view(
-        authentication_form=CustomLoginForm
-    ), name="login"),
-    path('signup/', signup, name="signup"),
-    path('logout/', logout_view),
-    path('admin/', admin.site.urls),
+    path(
+        "login/", LoginView.as_view(authentication_form=CustomLoginForm), name="login"
+    ),
+    path("signup/", signup, name="signup"),
+    path("logout/", logout_view),
+    path("admin/", admin.site.urls),
     # path('api/', include('core.api.urls')),
-    path('api/user/', include('user.api.urls')),
-    path('api/product/', include('products.urls')),
-    path('api/orders/', include('orders.urls')),
-    
+    path("api/user/", include("user.api.urls")),
+    path("api/product/", include("products.urls")),
+    path("api/customers/", include("customers.urls")),
+    path("api/orders/", include("orders.urls")),
     # path("accounts/", include("django.contrib.auth.urls")),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-urlpatterns += [
-    re_path(r"^.*$", IndexTemplateView.as_view(), name="entry")
-]
+urlpatterns += [re_path(r"^.*$", IndexTemplateView.as_view(), name="entry")]

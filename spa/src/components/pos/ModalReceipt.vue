@@ -28,7 +28,7 @@
         x-transition:leave-end="opacity-0 transform scale-90"
       >
         <div
-          id="receipt-content"
+          id="receipt-print-content"
           class="text-left w-full text-sm p-6 overflow-auto"
         >
           <div class="text-center">
@@ -137,15 +137,17 @@ export default {
     const change = useChange;
 
     const printAndProceed = () => {
-      const receiptContent = document.getElementById("receipt-content");
-      console.log("printArea", document.title);
+      const receiptContent = document.getElementById("receipt-print-content");
 
       const titleBefore = document.title;
       const printArea = document.getElementById("print-area");
+      console.log("receipt", printArea);
+
       printArea.innerHTML = receiptContent.innerHTML + printArea.innerHTML;
       document.title = receiptNo;
 
-      window.print(printArea.innerHTML);
+      window.print();
+      // window.print(printArea.innerHTML);
       // isShowModalReceipt();
       closeModalReceipt();
 

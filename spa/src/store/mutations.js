@@ -9,6 +9,7 @@ import {
   COMMIT_USER,
   COMMIT_PRODUCTS,
   COMMIT_PRODUCT_GROUPS,
+  COMMIT_CUSTOMERS,
   ADD_PRODUCT_GROUP,
   COMMIT_TAB_PRODUCTS,
   ADD_QUANTITY,
@@ -24,6 +25,9 @@ import {
 } from "@/store/constants";
 
 const mutations = {
+  [COMMIT_CUSTOMERS](state, payload) {
+    state.customers = payload;
+  },
   [COMMIT_USER](state, payload) {
     state.user = payload;
   },
@@ -48,6 +52,8 @@ const mutations = {
     state.productGroups.push(payload);
   },
   [COMMIT_TAB_PRODUCTS](state, groupID) {
+    console.log("groupID", groupID);
+    if (groupID === 0) state.tabProducts = state.products;
     state.tabProducts = state.products.filter(
       (p) => p.product_group === groupID
     );

@@ -5,8 +5,8 @@ import { computed } from "vue";
 import {
   FETCH_USER,
   FETCH_PRODUCTS,
+  FETCH_CUSTOMERS,
   FETCH_PRODUCT_GROUPS,
-  FETCH_ALL_PRODUCT_GROUPS,
   CREATE_PRODUCT_GROUP,
   ADD_KEYWORD,
   SUBMIT_ORDER,
@@ -21,18 +21,18 @@ import {
 import store from "@/store";
 
 /* ACTIONS */
+
+// USERS COMPOSABLES
 export const useFetchUserDispatch = () => {
-  // const store = useStore();
   store.dispatch(FETCH_USER);
 };
 
+// PRODUCTS COMPOSABLES
 export const useFetchProductsDispatch = () => {
-  // const store = useStore();
   store.dispatch(FETCH_PRODUCTS);
 };
 
 export const useFetchProductGroupsDispatch = () => {
-  // const store = useStore();
   store.dispatch(FETCH_PRODUCT_GROUPS);
 };
 
@@ -42,15 +42,21 @@ export const addNewProductGroup = (group) => {
 };
 
 export const useFetchAllProductGroupsDispatch = () => {
-  // const store = useStore();
   store.dispatch(FETCH_PRODUCT_GROUPS);
 };
 
+// CUSTOMERS COMPOSABLES
+export const useFetchCustomersDispatch = () => {
+  store.dispatch(FETCH_CUSTOMERS);
+};
+export const useCustomers = computed(() => store.getters.GET_CUSTOMERS);
+
+// ORDERS COMPOSABLES
 export const filteredTabProductsByGroupId = (groupID) => {
   store.commit(COMMIT_TAB_PRODUCTS, groupID);
 };
 
-// POS Composable
+// UTILITIES COMPOSABLES
 export const dateFormat = (date) => {
   const formatter = new Intl.DateTimeFormat("id", {
     dateStyle: "short",
@@ -67,10 +73,22 @@ export const numberFormat = (number) => {
 export const priceFormat = (number) => {
   return computed(() => (number ? ` ${numberFormat(number)} IQD` : ` 0 IQD`));
 };
-export const addCash = (amount) => {
-  // const store = useStore();
-  // console.log("amount-composables", amount);
 
+export const clearSound = () => {
+  playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
+};
+export const playSound = (src) => {
+  if (src) {
+    const sound = new Audio(src);
+    sound.play();
+  }
+};
+
+export const beep = () =>
+  playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
+
+// POS Composable
+export const addCash = (amount) => {
   return store.commit(ADD_CASH, amount);
 };
 export const updateKeyword = (keyword) => store.dispatch(ADD_KEYWORD, keyword);
@@ -91,22 +109,18 @@ export const isShowModalReceipt = computed(
 
 export const addToCart = (product) => store.dispatch(ADD_TO_CART, product);
 export const findCartIndex = (product) => {
-  // const store = useStore();
   return store.getters.GET_CART_INDEX(product);
 };
 export const addToCarts = (product) => {
-  // const store = useStore();
   store.dispatch.ADD_TO_CART(product);
 };
 export const getTotalPrice = () => {
-  // const store = useStore();
   return computed(() => store.getters.GET_TOTAL_PRICE);
 };
 export const getItemsCount = () => {
   return computed(() => store.getters.GET_ITEMS_COUNT);
 };
 export const clear = () => {
-  // const store = useStore();
   return store.commit(CLEAR);
 };
 export const closeModalReceipt = () => {
@@ -114,7 +128,6 @@ export const closeModalReceipt = () => {
 };
 
 export const addQty = (item, quantity) => {
-  // const store = useStore();
   const payload = {};
   const index = useCart.value.findIndex((i) => i.productId === item.productId);
 
@@ -124,51 +137,15 @@ export const addQty = (item, quantity) => {
   payload.item = item;
   payload.quantity = quantity;
 
-  // console.log(payload);
-
   store.commit(ADD_QUANTITY, payload);
   updateChange();
-
-  // console.log("useCart.value[index]", useCart.value[index]);
-
-  // const afterAdd = item.qty + quantity;
-  // if (useCart.value[index] === 0) {
-  //   ("==================================");
-  //   useCart.value.splice(index, 1);
-  //   clearSound();
-  // } else {
-  //   useCart.value[index].qty = afterAdd;
-  //   beep();
-  // }
-  // updateChange();
 };
 export const updateChange = () => {
-  // const store = useStore();
   return store.commit(UPDATE_CHANGE);
 };
 export const updateCash = (value) => store.commit.UPDATE_CASH(value);
 
 export const submitable = () => {
-  // const store = useStore();
   return store.getters.SUBMITABLE;
 };
-
-export const clearSound = () => {
-  playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
-};
-export const playSound = (src) => {
-  if (src) {
-    const sound = new Audio(src);
-    // console.log(sound);
-    sound.play();
-  }
-  // sound.src = src;
-  // sound.onended = () => delete sound;
-};
-
-export const beep = () =>
-  playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
-
-// export const submit = (e) => store.dispatch.SUBMIT_ORDER(e);
 export const submit = () => store.dispatch(SUBMIT_ORDER);
-// export const submit = (e) => console.log(e);

@@ -1,14 +1,34 @@
 <template>
   <div class="flex flex-wrap">
     <div class="w-full">
-      <ul class="grid grid-cols-4 mb-0 list-none pt-3 pb-4">
+      <ul class="flex flex-row justify-start mb-0 list-none pt-3 pb-4">
+        <li class="mt-2 mr-2 last:mr-0 flex-auto text-center">
+          <Transition>
+            <a
+              class="text-xs font-bold uppercase px-5 py-3 cursor-pointer shadow-lg rounded block leading-normal"
+              :class="{
+                'text-pink-600 bg-white': openTab !== 0,
+                'text-white bg-pink-600': openTab === 0,
+              }"
+              @click="toggleTabs(0)"
+            >
+              All Products
+            </a>
+          </Transition>
+        </li>
         <li
           v-for="tab in useGetProductGroups"
           :key="tab.id"
-          class="mt-2 mr-2 last:mr-0 flex-auto text-center"
+          :class="
+            tab.rank > 0 && tab.rank < 5
+              ? 'mt-2 mr-2 last:mr-0 flex-auto text-center'
+              : ''
+          "
         >
+          <!-- class="mt-2 mr-2 last:mr-0 flex-auto text-center" -->
           <Transition>
             <a
+              v-if="tab.rank > 0 && tab.rank < 5 && tab.groups.length === 0"
               class="text-xs font-bold uppercase px-5 py-3 cursor-pointer shadow-lg rounded block leading-normal"
               :class="{
                 'text-pink-600 bg-white': openTab !== tab.id,
