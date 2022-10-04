@@ -15,7 +15,7 @@
             </span>
           </div>
           <!-- TABS PRODUCT CREATE -->
-          <div class="h-24 grid grid-rows-3 grid-cols-1 relative">
+          <div class="h-16 grid grid-rows-3 grid-cols-1 relative">
             <div
               class="h-12 px-4 -m-2 row-span-1 col-start-1 col-span-1"
               :class="
@@ -27,22 +27,24 @@
                 class="border-b border-pink-500 flex flex-row justify-between flex-wrap list-none pl-0"
               >
                 <li v-for="tab in tabsTitles.second" :key="tab.id">
-                  <a
-                    id="tabs-home-tab"
-                    class="block font-light border-b-2 border-transparent px-4 py-1 hover:border-transparent hover:bg-zinc-500 focus:border-transparent"
-                    :class="[
-                      tabNum === tab.id
-                        ? 'bg-pink-500 active'
-                        : 'border-none hover:cursor-pointer',
-                      tab.disabled ? 'disabled' : '',
-                    ]"
-                    @click="currentTab(tab.id)"
-                    >{{ tab.title }}</a
-                  >
+                  <Transition>
+                    <a
+                      id="tabs-home-tab"
+                      class="block font-light border-b-2 border-transparent px-4 py-1 hover:border-transparent hover:bg-zinc-500 focus:border-transparent"
+                      :class="[
+                        tabNum === tab.id
+                          ? 'bg-pink-500 active'
+                          : 'border-none hover:cursor-pointer',
+                        tab.disabled ? 'disabled' : '',
+                      ]"
+                      @click="currentTab(tab.id)"
+                      >{{ tab.title }}</a
+                    >
+                  </Transition>
                 </li>
               </ul>
             </div>
-            <div class="h-3 m-1"></div>
+            <div class="h-3 mx-1"></div>
             <div
               class="h-12 px-4 -m-2 row-span-1 col-start-1 col-span-1"
               :class="
@@ -72,7 +74,7 @@
             </div>
           </div>
 
-          <div id="tabs-tabContent" class="tab-content">
+          <div id="tabs-tabContent" class="tab-content mt-3">
             <products-details-form v-if="tabNum === 1"></products-details-form>
             <products-prices-and-taxes-form
               v-if="tabNum === 2"
@@ -83,6 +85,12 @@
             <products-comments-form
               v-if="tabNum === 4"
             ></products-comments-form>
+            <products-print-station-form
+              v-if="tabNum === 5"
+            ></products-print-station-form>
+            <products-image-and-color-form
+              v-if="tabNum === 6"
+            ></products-image-and-color-form>
           </div>
           <!-- END TABS PRODUCT CREATE -->
         </div>
@@ -126,26 +134,25 @@ import {
 import { productsCreateTabsTitles as tabsTitles } from "@/composables/staticData";
 
 import ModalSmall from "@/components/shared/ModalSmall.vue";
-import TextInput from "@/components/shared/forms/TextInput.vue";
-import ToggleInput from "../shared/forms/ToggleInput.vue";
-import SelectInput from "../shared/forms/SelectInput.vue";
 
 // PRODUCTS FORMS
 import ProductsDetailsForm from "@/components/modals/products/ProductsDetailsForm.vue";
 import ProductsPricesAndTaxesForm from "@/components/modals/products/ProductsPricesAndTaxesForm.vue";
 import ProductsStockControlForm from "@/components/modals/products/ProductsStockControlForm.vue";
 import ProductsCommentsForm from "@/components/modals/products/ProductsCommentsForm.vue";
+import ProductsPrintStationForm from "./products/ProductsPrintStationForm.vue";
+import ProductsImageAndColorForm from "@/components/modals/products/ProductsImageAndColorForm.vue";
 
 export default {
   components: {
     ModalSmall,
-    TextInput,
-    ToggleInput,
-    SelectInput,
+
     ProductsDetailsForm,
     ProductsPricesAndTaxesForm,
     ProductsStockControlForm,
     ProductsCommentsForm,
+    ProductsPrintStationForm,
+    ProductsImageAndColorForm,
   },
   props: {},
   setup(props, { emit }) {
@@ -163,7 +170,6 @@ export default {
     const groupName = ref("");
     const parentId = ref(0);
     const groupMaps = ref([]);
-    console.log("props.moduleNAme", props.model);
     const groupNames = Object.entries(useGetProductGroups.value).forEach(
       (group) => {
         // let el = {};

@@ -3,6 +3,7 @@ import router from "@/router";
 import store from "@/store";
 import VueCookies from "vue-cookies";
 import moment from "moment";
+// import myUpload from "vue-image-crop-upload";
 
 import Popper from "vue3-popper";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -39,6 +40,7 @@ app.config.globalProperties.$filters = {
 };
 app
   .component("Popper", Popper)
+  // .component("myUpload", myUpload)
   .use(store)
   .use(router)
   .use(VueCookies)

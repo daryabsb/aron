@@ -1,27 +1,9 @@
 <template>
   <div class="py-3">
-    <div
-      class="flex flex-row w-full h-20 rounded-sm border border-aronium-sky my-2"
-    >
-      <div class="relative">
-        <span
-          class="flex justify-center items-center w-12 h-full bg-aronium-sky"
-        >
-          <span
-            class="flex justify-center items-center w-6 h-6 border border-aronium-white rounded-full"
-          >
-            <i class="fa fa-info"></i>
-          </span>
-        </span>
-      </div>
-      <div class="ml-3 p-1 text-sm">
-        <p>
-          Set low stock quantity rules that can be used as a stock reorder
-          point.
-        </p>
-        <p class="text-aronium-sky cursor-pointer">Learn more</p>
-      </div>
-    </div>
+    <information-alert
+      tip="Set low stock quantity rules that can be used as a stock reorder
+          point."
+    ></information-alert>
 
     <form>
       <div class="flex flex-col">
@@ -80,12 +62,14 @@ import useCustomers from "@/composables/useGetProductGroups";
 import TextInput from "@/components/shared/forms/TextInput.vue";
 import ToggleInput from "@/components/shared/forms/ToggleInput.vue";
 import SelectInput from "@/components/shared/forms/SelectInput.vue";
+import InformationAlert from "@/components/shared/InformationAlert.vue";
 
 export default {
   components: {
     TextInput,
     ToggleInput,
     SelectInput,
+    InformationAlert,
   },
   setup() {
     const barcode = ref("");

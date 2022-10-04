@@ -161,3 +161,32 @@ export const productsCreateTabsTitles = ref({
     },
   ],
 });
+
+export const colors = {
+  black: "#000",
+  white: "#fff",
+
+  zinc: "#18181b",
+
+  stone: "#1c1917",
+  red: "#7f1d1d",
+  orange: "#7c2d12",
+
+  yellow: "#713f12",
+  lime: "#365314",
+  green: "#14532d",
+  emerald: "#064e3b",
+  teal: "#134e4a",
+  cyan: "#164e63",
+  sky: "#0c4a6e",
+  blue: "#1e3a8a",
+  indigo: "#312e81",
+  violet: "#4c1d95",
+  purple: "#581c87",
+  fuchsia: "#701a75",
+  pink: "#831843",
+  rose: "#881337",
+  lightBlue: "#0c4a6e",
+
+  blueGray: "#0f172a",
+};

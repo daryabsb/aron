@@ -4,22 +4,24 @@
       <label class="block text-sm mb-1" htmlFor="grid-password">
         {{ label }}
       </label>
-      <select
-        class="bg-inherit relative text-aronium-white w-full px-2 py-1 mb-1 text-sm"
-        :value="value"
-        name="itemsSelect"
-      >
-        <option :value="none" class="bg-aronium-800 text-aronium-white w-full"
-          >(none)</option
+      <slot name="select">
+        <select
+          class="bg-inherit relative text-aronium-white w-full px-2 py-1 mb-1 text-sm"
+          :value="value"
+          name="itemsSelect"
         >
-        <option
-          v-for="item in items"
-          :key="item.id"
-          class="bg-aronium-800 text-aronium-white w-full"
-          >{{ item.name }}</option
-        >
-      </select>
+          <option :value="none" class="bg-aronium-800 text-aronium-white w-full"
+            >(none)</option
+          >
 
+          <option
+            v-for="item in items"
+            :key="item.id"
+            class="bg-aronium-800 text-aronium-white w-full"
+            >{{ item.name }}</option
+          >
+        </select>
+      </slot>
       <span class="text-aronium-sky">
         <slot name="validation"></slot>
       </span>

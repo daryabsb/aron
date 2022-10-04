@@ -1,38 +1,14 @@
 <template>
   <div class="flex flex-col py-3">
-    <div
-      class="flex flex-row w-full h-20 rounded-sm border border-aronium-sky my-2"
-    >
-      <div class="">
-        <span
-          class="flex justify-center items-center w-12 h-full bg-aronium-sky"
-        >
-          <span
-            class="flex justify-center items-center w-6 h-6 border border-aronium-white rounded-full"
-          >
-            <i class="fa fa-info"></i>
-          </span>
-        </span>
-      </div>
-      <div class="ml-3 p-1 text-sm">
-        <p>
-          Comments will be printed on kitchen tickets.
-        </p>
-        <p class="text-aronium-sky cursor-pointer">Learn more</p>
-      </div>
-    </div>
+    <information-alert
+      tip="Comments will be printed on kitchen tickets."
+      color="sky"
+    ></information-alert>
     <form>
       <div class="flex items-center -ml-2 mt-6">
         <div class="w-full mr-2">
           <text-input type="text" placeholder="Enter comment..."></text-input>
         </div>
-        <!-- <div class="w-72 mr-2">
-          <text-input-simple
-            type="text"
-            placeholder="Enter comment..."
-          ></text-input-simple>
-        </div> -->
-
         <button
           class="h-7 w-12 bg-inherit text-sm px-3 mb-2 mr-2 border border-aronium-600"
         >
@@ -74,13 +50,13 @@
 import { ref } from "vue";
 import useCustomers from "@/composables/useGetProductGroups";
 
-import TextInputSimple from "@/components/shared/forms/TextInputSimple.vue";
 import TextInput from "@/components/shared/forms/TextInput.vue";
+import InformationAlert from "@/components/shared/InformationAlert.vue";
 
 export default {
   components: {
-    TextInputSimple,
     TextInput,
+    InformationAlert,
   },
   setup() {
     const barcode = ref("");
