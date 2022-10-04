@@ -1,9 +1,9 @@
 <template>
   <div>
     <sidebar />
-    <div class="relative md:ml-64 bg-slate-100">
+    <div class="relative md:ml-64 bg-blue-gray-50">
       <admin-navbar />
-      <test-header-stats />
+      <header-stats />
       <div class="px-4 md:px-10 mx-auto w-full -m-24">
         <router-view />
         <footer-admin />
@@ -12,16 +12,16 @@
   </div>
 </template>
 <script>
-import AdminNavbar from "@/components/Navbars/AdminNavbar.vue";
+import AdminNavbar from "@/components/temporary/AdminNavbar.vue";
 import Sidebar from "@/components/Sidebar/Sidebar.vue";
-import TestHeaderStats from "@/components/Headers/TestHeaderStats.vue";
-import FooterAdmin from "@/components/Footers/FooterAdmin.vue";
+import HeaderStats from "@/components/temporary/HeaderStats.vue";
+import FooterAdmin from "@/components/temporary/FooterAdmin.vue";
 export default {
-  name: "TestLayout",
+  name: "AdminLayout",
   components: {
     AdminNavbar,
     Sidebar,
-    TestHeaderStats,
+    HeaderStats,
     FooterAdmin,
   },
 };

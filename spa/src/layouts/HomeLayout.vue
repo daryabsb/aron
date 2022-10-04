@@ -12,8 +12,8 @@ import { onMounted } from "vue";
 import { useFetchUserDispatch } from "@/store/composables";
 import useGetUser from "@/composables/useGetUser";
 
-import IndexNavbar from "@/components/Navbars/IndexNavbar.vue";
-import AdminNavbar from "@/components/Navbars/AdminNavbar.vue";
+import IndexNavbar from "@/components/temporary/IndexNavbar.vue";
+import AdminNavbar from "@/components/temporary/AdminNavbar.vue";
 export default {
   name: "HomeLayout",
   components: {

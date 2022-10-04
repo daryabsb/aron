@@ -20,7 +20,7 @@
 import PosLeftNav from "@/components/pos/PosLeftNav.vue";
 import PosRightNav from "@/components/pos/PosRightNav.vue";
 import StoreMenu from "@/components/pos/StoreMenu.vue";
-import ModalFirstTime from "@/components/modals/ModalFirstTime.vue";
+import ModalFirstTime from "@/components/temporary/ModalFirstTime.vue";
 import { ref, onMounted } from "vue";
 import { useFetchProductsDispatch } from "@/store/composables";
 

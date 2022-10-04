@@ -15,8 +15,8 @@
           >
 
           <option
-            v-for="item in items"
-            :key="item.id"
+            v-for="(index, item) in items"
+            :key="index"
             class="bg-aronium-800 text-aronium-white w-full"
             >{{ item.name }}</option
           >
@@ -37,7 +37,8 @@ export default {
   props: {
     label: {
       type: String,
-      required: true,
+      required: false,
+      default: "",
     },
     items: {
       type: Object,

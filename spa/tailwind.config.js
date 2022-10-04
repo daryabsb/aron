@@ -44,6 +44,8 @@ module.exports = {
       gridTemplateRows: {
         // Simple 12 row grid
         "12": "repeat(12, minmax(0, 1fr))",
+        "9": "repeat(9, minmax(0, 1fr))",
+        "8": "repeat(8, minmax(0, 1fr))",
 
         // Complex site-specific row configuration
         // 'layout': '200px minmax(900px, 1fr) 100px',

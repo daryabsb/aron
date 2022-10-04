@@ -10,7 +10,7 @@
   </div>
 </template>
 <script>
-import AdminNavbar from "@/components/Navbars/AdminNavbar.vue";
+import AdminNavbar from "@/components/temporary/AdminNavbar.vue";
 import Sidebar from "@/components/Sidebar/Sidebar.vue";
 export default {
   name: "AdminLayout",

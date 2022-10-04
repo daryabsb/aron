@@ -22,7 +22,7 @@
 import CustomHeader from "@/components/shared/CustomHeader.vue";
 import SideCard from "@/components/shared/SideCard.vue";
 import CardSettings from "@/components/Cards/CardSettings.vue";
-import FooterAdmin from "@/components/Footers/FooterAdmin.vue";
+import FooterAdmin from "@/components/temporary/FooterAdmin.vue";
 export default {
   components: {
     CustomHeader,

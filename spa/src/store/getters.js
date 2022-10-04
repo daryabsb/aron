@@ -15,6 +15,7 @@ import {
   GET_RECEIPT_NUMBER,
   GET_RECEIPT_DATE,
   GET_TAB_PRODUCTS,
+  GET_PRINTERS_LIST,
 } from "@/store/constants";
 
 const getters = {
@@ -29,6 +30,9 @@ const getters = {
   },
   [GET_PRODUCT_GROUPS](state) {
     return state.productGroups;
+  },
+  [GET_PRINTERS_LIST](state) {
+    return state.printerList;
   },
   // [GET_ALL_PRODUCT_GROUPS](state) {
   //   return state.allProductGroups;

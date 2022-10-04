@@ -22,6 +22,7 @@ import {
   UPDATE_KEYWORD,
   COMMIT_TO_CART,
   CLOSE_MODAL_RECEIPT,
+  COMMIT_PRINTERS_LIST,
 } from "@/store/constants";
 
 const mutations = {
@@ -48,8 +49,12 @@ const mutations = {
   [COMMIT_PRODUCT_GROUPS](state, payload) {
     state.productGroups = payload;
   },
-  [ADD_PRODUCT_GROUP](state, payload) {
-    state.productGroups.push(payload);
+
+  [COMMIT_PRODUCT_GROUPS](state, payload) {
+    state.productGroups = payload;
+  },
+  [COMMIT_PRINTERS_LIST](state, payload) {
+    state.printerList = payload;
   },
   [COMMIT_TAB_PRODUCTS](state, groupID) {
     console.log("groupID", groupID);

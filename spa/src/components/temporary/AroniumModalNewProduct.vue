@@ -108,7 +108,7 @@
           </button>
           <button
             class="w-36 text-center border border-aronium-600 font-light mr-2 flex bg-inherit text-white focus:outline-none hover:bg-aronium-sky hover:border-aronium-sky px-6 py-2"
-            @click="startBlank()"
+            @click="$emit('close')"
           >
             <span class="pr-3">
               <i class="fa fa-xmark"></i>
@@ -140,7 +140,7 @@ import ProductsDetailsForm from "@/components/modals/products/ProductsDetailsFor
 import ProductsPricesAndTaxesForm from "@/components/modals/products/ProductsPricesAndTaxesForm.vue";
 import ProductsStockControlForm from "@/components/modals/products/ProductsStockControlForm.vue";
 import ProductsCommentsForm from "@/components/modals/products/ProductsCommentsForm.vue";
-import ProductsPrintStationForm from "./products/ProductsPrintStationForm.vue";
+import ProductsPrintStationForm from "@/components/modals/products/ProductsPrintStationForm.vue";
 import ProductsImageAndColorForm from "@/components/modals/products/ProductsImageAndColorForm.vue";
 
 export default {

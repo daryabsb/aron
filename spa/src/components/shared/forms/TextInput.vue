@@ -31,7 +31,8 @@ export default {
   props: {
     label: {
       type: String,
-      required: true,
+      required: false,
+      default: "",
     },
     type: {
       type: String,

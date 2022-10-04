@@ -3,6 +3,7 @@ import getProducts from "./api/getProducts";
 import getProductGroups from "./api/getProductGroups";
 import createProductGroup from "./api/createProductGroup";
 import getCustomers from "@/store/api/getCustomers";
+import getPrinterList from "@/store/api/getPrinterList";
 
 import {
   FETCH_USER,
@@ -23,6 +24,8 @@ import {
   UPDATE_CASH,
   ADD_KEYWORD,
   ADD_CASH,
+  FETCH_PRINTERS_LIST,
+  COMMIT_PRINTERS_LIST,
 } from "@/store/constants";
 
 const actions = {
@@ -46,6 +49,11 @@ const actions = {
     const productsGroup = await getProductGroups();
 
     await context.commit(COMMIT_PRODUCT_GROUPS, productsGroup);
+  },
+
+  [FETCH_PRINTERS_LIST]: async (context) => {
+    const printerList = await getPrinterList();
+    await context.commit(COMMIT_PRINTERS_LIST, printerList);
   },
   // [FETCH_ALL_PRODUCT_GROUPS]: async (context) => {
   //   const allProductsGroups = await getAllProductGroups();

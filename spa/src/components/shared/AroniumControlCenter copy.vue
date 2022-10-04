@@ -35,11 +35,11 @@
 </template>
 <script>
 import { ref, onMounted } from "vue";
-import AroniumNavbar from "@/components/Navbars/AroniumNavbar.vue";
+import AroniumNavbar from "@/components/temporary/AroniumNavbar.vue";
 import AroniumHeader from "@/components/shared/AroniumHeader.vue";
 import AroniumSidebar from "@/components/Sidebar/AroniumSidebar.vue";
 import AroniumSideCard from "@/components/shared/AroniumSideCard.vue";
-import AroniumFooter from "@/components/Footers/AroniumFooter.vue";
+import AroniumFooter from "@/components/temporary/AroniumFooter.vue";
 import AroniumProductsManagement from "@/components/Cards/AroniumProductsManagement.vue";
 import AroniumModalTemplate from "@/components/shared/AroniumModalTemplate.vue";
 

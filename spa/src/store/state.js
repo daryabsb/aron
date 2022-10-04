@@ -24,6 +24,9 @@ const state = () => {
 
     // CUSTOMERS STATE
     customers: [],
+
+    // PRINTERS STATE
+    printerList: [],
   };
 };
 

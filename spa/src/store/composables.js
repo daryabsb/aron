@@ -1,5 +1,6 @@
 /* eslint-disable no-delete-var */
 import { computed } from "vue";
+import axios from "axios";
 // import { store } from "vuex";
 
 import {
@@ -17,6 +18,7 @@ import {
   CLOSE_MODAL_RECEIPT,
   ADD_TO_CART,
   COMMIT_TAB_PRODUCTS,
+  FETCH_PRINTERS_LIST,
 } from "@/store/constants";
 import store from "@/store";
 
@@ -40,6 +42,16 @@ export const addNewProductGroup = (group) => {
   if (group.parent_group === 0) group.parent_group = null;
   store.dispatch(CREATE_PRODUCT_GROUP, group);
 };
+
+export const token = async (email, password) => {
+  const response = await axios.post("/api/user/token/", { email, password });
+  return response.data;
+};
+
+export const useFetchPrinterListDispatch = () => {
+  store.dispatch(FETCH_PRINTERS_LIST);
+};
+export const usePrinterList = computed(() => store.getters.GET_PRINTERS_LIST);
 
 export const useFetchAllProductGroupsDispatch = () => {
   store.dispatch(FETCH_PRODUCT_GROUPS);

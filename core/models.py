@@ -28,7 +28,8 @@ class User(PermissionsMixin, AbstractBaseUser):
     name = models.CharField(max_length=255, null=True, blank=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
-    image = models.ImageField(null=True, blank=True, upload_to=upload_image_file_path)
+    image = models.ImageField(null=True, blank=True,
+                              upload_to=upload_image_file_path)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
@@ -55,7 +56,8 @@ class ApplicationProperty(models.Model):
 
 
 class Counter(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="country")
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="country")
     name = models.CharField(max_length=30)
     value = models.SmallIntegerField()
 
@@ -67,7 +69,8 @@ class Counter(models.Model):
 
 
 class Country(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="countries")
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="countries")
     name = models.CharField(max_length=100, unique=True)
     code = models.CharField(max_length=4)
 
@@ -98,7 +101,8 @@ COMPANY RELATED
 
 
 class Company(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="companies")
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="companies")
     name = models.CharField(max_length=100, unique=True)
     address = models.CharField(max_length=300, null=True, blank=True)
     postal_code = models.CharField(max_length=50, null=True, blank=True)
@@ -109,8 +113,10 @@ class Company(models.Model):
     tax_number = models.CharField(max_length=100, null=True, blank=True)
     email = models.EmailField(max_length=255, unique=True)
     phone = models.CharField(max_length=100, null=True, blank=True)
-    logo = models.ImageField(null=True, blank=True, upload_to=upload_image_file_path)
-    bank_account_number = models.CharField(max_length=300, null=True, blank=True)
+    logo = models.ImageField(null=True, blank=True,
+                             upload_to=upload_image_file_path)
+    bank_account_number = models.CharField(
+        max_length=300, null=True, blank=True)
     bank_details = models.CharField(max_length=300, null=True, blank=True)
 
     created = models.DateTimeField(auto_now_add=True)
@@ -126,7 +132,8 @@ CUSTOMER RELATED
 
 
 class Customer(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="customers")
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="customers")
     code = models.CharField(max_length=30, null=True, blank=True)
     name = models.CharField(max_length=100, unique=True)
     address = models.CharField(max_length=300, null=True, blank=True)
@@ -242,7 +249,8 @@ class DocumentType(models.Model):
 
 
 class Document(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="documents")
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="documents")
     number = models.CharField(max_length=30, unique=True)
     customer = models.ForeignKey(
         "Customer", on_delete=models.DO_NOTHING, null=True, related_name="documents"
@@ -371,7 +379,8 @@ class PaymentType(models.Model):
 
 
 class Payment(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="payments")
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="payments")
     document = models.ForeignKey(
         "Document",
         on_delete=models.CASCADE,
@@ -391,7 +400,8 @@ class Payment(models.Model):
 
 
 class FiscalItem(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="fiscals")
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="fiscals")
     plu = models.IntegerField(null=True, blank=True)
     name = models.CharField(max_length=100)
     vat = models.CharField(max_length=50)
@@ -444,7 +454,8 @@ POS RELATED
 
 
 class PosOrder(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="orders")
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="orders")
     number = models.CharField(max_length=100, unique=True)
     discount = models.SmallIntegerField(default=0)
     discount_type = models.SmallIntegerField(default=0)
@@ -502,7 +513,8 @@ class PosPrinterSelection(models.Model):
 
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=["id", "key"], name="unique_printer_keys")
+            models.UniqueConstraint(
+                fields=["id", "key"], name="unique_printer_keys")
         ]
 
     def __str__(self):
@@ -684,7 +696,8 @@ class ProductGroup(models.Model):
         "self", null=True, blank=True, on_delete=models.SET_NULL, related_name="groups"
     )
     color = models.CharField(max_length=50, default="Transparent")
-    image = models.ImageField(null=True, blank=True, upload_to=upload_image_file_path)
+    image = models.ImageField(null=True, blank=True,
+                              upload_to=upload_image_file_path)
     rank = models.SmallIntegerField(default=0)
 
     created = models.DateTimeField(auto_now_add=True)
@@ -702,7 +715,8 @@ class ProductGroup(models.Model):
 
 
 class Product(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="products")
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="products")
     name = models.CharField(max_length=100)
     product_group = models.ForeignKey(
         "ProductGroup", on_delete=models.CASCADE, related_name="products"
@@ -721,7 +735,8 @@ class Product(models.Model):
     is_using_default_quantity = models.BooleanField(default=True)
     cost = models.FloatField(default=0, null=True, blank=True)
     margin = models.DecimalField(max_digits=18, decimal_places=3, default=0)
-    image = models.ImageField(null=True, blank=True, upload_to=upload_image_file_path)
+    image = models.ImageField(null=True, blank=True,
+                              upload_to=upload_image_file_path)
     color = models.CharField(max_length=50, default="Transparent")
     is_enabled = models.BooleanField(default=True)
     age_restriction = models.SmallIntegerField(null=True, blank=True)
@@ -736,7 +751,8 @@ class Product(models.Model):
 
 
 class Barcode(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="barcodes")
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="barcodes")
     product = models.ForeignKey(
         "Product", on_delete=models.CASCADE, related_name="barcodes"
     )
@@ -750,7 +766,8 @@ class Barcode(models.Model):
 
 
 class ProductComment(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="comments")
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="comments")
     product = models.ForeignKey(
         "Product", on_delete=models.CASCADE, related_name="comments"
     )
@@ -777,7 +794,8 @@ class Warehouse(models.Model):
 
 
 class Stock(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="stocks")
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="stocks")
     product = models.ForeignKey(
         "Product", on_delete=models.CASCADE, related_name="stocks"
     )
@@ -808,14 +826,16 @@ class StockControl(models.Model):
     low_stock_warning_quantity = models.SmallIntegerField(default=1)
 
     class Meta:
-        indexes = [models.Index(fields=["product"], name="stock_control_product_index")]
+        indexes = [models.Index(
+            fields=["product"], name="stock_control_product_index")]
 
     def __str__(self):
         return f"{self.print_station.name} - {self.pos_printer_selection}"
 
 
 class Tax(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="taxes")
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="taxes")
     name = models.CharField(max_length=30)
     rate = models.DecimalField(max_digits=18, decimal_places=4, default=0)
     code = models.CharField(max_length=10, null=True, blank=True)
@@ -925,14 +945,16 @@ class StartingCash(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        constraints = [models.UniqueConstraint(fields=["id"], name="unique_id")]
+        constraints = [models.UniqueConstraint(
+            fields=["id"], name="unique_id")]
 
     def __str__(self):
         return f"{self.amount} On {self.created}"
 
 
 class ZReport(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="reports")
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="reports")
     number = models.SmallIntegerField()
     from_document = models.ForeignKey(
         "Document", on_delete=models.CASCADE, related_name="from_documents"

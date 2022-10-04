@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from django.contrib.auth.views import LoginView
 from core.forms import CustomLoginForm, CustomRegistrationForm
 from core.views import IndexTemplateView, logout_view, signup
+from core.api.views import PrinterNamesList
 
 urlpatterns = [
     path(
@@ -27,8 +28,9 @@ urlpatterns = [
     ),
     path("signup/", signup, name="signup"),
     path("logout/", logout_view),
+    path("api/core/", include("core.api.urls")),
     path("admin/", admin.site.urls),
-    # path('api/', include('core.api.urls')),
+    path('printers/', PrinterNamesList.as_view()),
     path("api/user/", include("user.api.urls")),
     path("api/product/", include("products.urls")),
     path("api/customers/", include("customers.urls")),

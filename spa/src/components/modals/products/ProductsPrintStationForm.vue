@@ -13,7 +13,30 @@
           <i class="fa fa-print"></i>
           <span class="ml-3">Assign print station</span>
         </button>
-        <select-input class="-ml-2 opacity-50" disabled></select-input>
+        <select-input class="-ml-2 opacity-50" :items="usePrinterList">
+          <template #select>
+            <select
+              v-model="value"
+              class="bg-inherit relative text-aronium-white w-full py-1 mb-1 text-sm"
+              name="itemsSelect"
+            >
+              <option
+                :value="0"
+                class="bg-aronium-800 text-aronium-white w-full"
+                >(none)</option
+              >
+
+              <option
+                v-for="item in usePrinterList"
+                :key="item"
+                class="bg-aronium-800 text-aronium-white w-full"
+                :value="item"
+              >
+                {{ item }}
+              </option>
+            </select>
+          </template>
+        </select-input>
       </div>
 
       <!-- END SECTION 1 CREATE PRODUCT -->
@@ -22,8 +45,11 @@
 </template>
 
 <script>
-import { ref } from "vue";
-import useCustomers from "@/composables/useGetProductGroups";
+import { ref, onMounted } from "vue";
+import {
+  usePrinterList,
+  useFetchPrinterListDispatch,
+} from "@/store/composables";
 
 import SelectInput from "@/components/shared/forms/SelectInput.vue";
 import InformationAlert from "@/components/shared/InformationAlert.vue";
@@ -34,17 +60,13 @@ export default {
     InformationAlert,
   },
   setup() {
-    const barcode = ref("");
-    const isLowStockWarning = ref(true);
-    const generateBarcode = () => {
-      barcode.value = "0101234567890128TEC-IT";
-    };
+    onMounted(useFetchPrinterListDispatch);
+
+    const value = ref("");
 
     return {
-      barcode,
-      isLowStockWarning,
-      generateBarcode,
-      useCustomers,
+      usePrinterList,
+      value,
     };
   },
 };

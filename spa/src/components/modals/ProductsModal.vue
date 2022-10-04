@@ -1,22 +1,22 @@
 <template>
   <modal-small>
     <template #modal-content>
-      <aronium-modal-new-group
+      <products-modal-new-group
         v-if="modalType === 'New Group'"
         @close="close"
-      ></aronium-modal-new-group>
-      <aronium-modal-new-product
+      ></products-modal-new-group>
+      <products-modal-new-product
         v-if="modalType === 'New Product'"
         @close="close"
-      ></aronium-modal-new-product>
+      ></products-modal-new-product>
     </template>
   </modal-small>
 </template>
 <script>
 import { ref, onMounted } from "vue";
 import ModalSmall from "@/components/shared/ModalSmall.vue";
-import AroniumModalNewGroup from "@/components/temporary/AroniumModalNewGroup.vue";
-import AroniumModalNewProduct from "@/components/temporary/AroniumModalNewProduct.vue";
+import ProductsModalNewGroup from "@/components/modals/products/ProductsModalNewGroup.vue";
+import ProductsModalNewProduct from "@/components/modals/products/ProductsModalNewProduct.vue";
 
 import { useFetchProductGroupsDispatch } from "@/store/composables";
 import useGetProductGroups from "@/composables/useGetProductGroups";
@@ -24,8 +24,8 @@ import useGetProductGroups from "@/composables/useGetProductGroups";
 export default {
   components: {
     ModalSmall,
-    AroniumModalNewGroup,
-    AroniumModalNewProduct,
+    ProductsModalNewGroup,
+    ProductsModalNewProduct,
   },
   props: {
     modalType: {
