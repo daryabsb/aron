@@ -80,6 +80,9 @@
             <products-stock-control-form
               v-if="tabNum === 3"
             ></products-stock-control-form>
+            <products-comments-form
+              v-if="tabNum === 4"
+            ></products-comments-form>
           </div>
           <!-- END TABS PRODUCT CREATE -->
         </div>
@@ -131,6 +134,7 @@ import SelectInput from "../shared/forms/SelectInput.vue";
 import ProductsDetailsForm from "@/components/modals/products/ProductsDetailsForm.vue";
 import ProductsPricesAndTaxesForm from "@/components/modals/products/ProductsPricesAndTaxesForm.vue";
 import ProductsStockControlForm from "@/components/modals/products/ProductsStockControlForm.vue";
+import ProductsCommentsForm from "@/components/modals/products/ProductsCommentsForm.vue";
 
 export default {
   components: {
@@ -141,6 +145,7 @@ export default {
     ProductsDetailsForm,
     ProductsPricesAndTaxesForm,
     ProductsStockControlForm,
+    ProductsCommentsForm,
   },
   props: {},
   setup(props, { emit }) {

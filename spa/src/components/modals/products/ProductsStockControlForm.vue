@@ -67,32 +67,8 @@
             </template>
           </text-input>
         </div>
-
-        <div class="w-48">
-          <text-input
-            type="text"
-            placeholder="Unit"
-            label="Unit of measurement"
-          ></text-input>
-        </div>
       </div>
       <!-- END SECTION 1 CREATE PRODUCT -->
-      <hr class="mt-6 border-b-1 border-zinc-600" />
-      <div class="mb-2">
-        <toggle-input target="active" label="Active" checked></toggle-input>
-      </div>
-      <div class="mb-2">
-        <toggle-input
-          target="default-uantity"
-          label="Default quantity"
-        ></toggle-input>
-      </div>
-      <div class="mb-2">
-        <toggle-input
-          target="service"
-          label="Service (not using stock)"
-        ></toggle-input>
-      </div>
     </form>
   </div>
 </template>
