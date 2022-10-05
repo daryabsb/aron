@@ -1,5 +1,6 @@
 <template>
   <div class="bg-aronium-800 p-1">
+    <!-- <modal-calculator></modal-calculator> -->
     <!-- noprint-area -->
     <div class="hide-print">
       <div
@@ -12,7 +13,7 @@
         >
           <h1>Darya</h1>
         </div>
-        <div class="col-start-1 col-span-3 row-start-2 row-span-10">
+        <div class="col-start-1 col-span-3 row-start-2 row-span-11">
           <pos-right-nav></pos-right-nav>
         </div>
         <div class="col-start-4 col-span-8 row-start-2 row-span-10">
@@ -28,6 +29,8 @@
 </template>
 
 <script>
+import ModalCalculator from "@/components/modals/ModalCalculator.vue";
+
 import PosRightNav from "@/components/pos/PosRightNav.vue";
 import StoreMenu from "@/components/pos/StoreMenu.vue";
 import ModalFirstTime from "@/components/temporary/ModalFirstTime.vue";
@@ -50,6 +53,7 @@ export default {
     StoreMenu,
     PosRightNav,
     ModalFirstTime,
+    ModalCalculator,
   },
   setup() {
     let time = ref(null);

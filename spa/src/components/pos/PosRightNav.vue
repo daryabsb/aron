@@ -25,7 +25,7 @@ export default {
   setup() {
     const store = useStore();
     const moneys = store.state.moneys;
-    const ID = ref(5);
+    const ID = ref(0);
     const orderID = computed(() => (ID.value > 0 ? ID : "---"));
 
     // GETTERS from COMPOSABLES
@@ -69,35 +69,34 @@ export default {
 <template>
   <!-- right sidebar -->
   <div
-    class="w-full h-full flex flex-col bg-aronium-900 border border-aronium-600"
+    class="w-full h-full container flex flex-col bg-aronium-900 border border-aronium-600"
   >
-    <div class="flex p-2 h-16 border-b border-aronium-600">
+    <div
+      class="flex justify-center items-center p-1 h-12 border-b border-aronium-600"
+    >
       <button
-        class="w-32 mr-1 text-center border border-aronium-600 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-2"
+        class="capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
         @click="startWithSampleData()"
       >
         <span class="mr-3">
-          <i class="fa fa-times fa-lg"></i>
+          <i class="fa fa-times fa-sm"></i>
         </span>
-        Delete
+        delete
       </button>
+
       <button
-        class="w-32 mr-1 text-center border border-aronium-600 font-light flex bg-inherit hover:bg-aronium-700 px-8 py-2"
-        @click="startWithSampleData()"
+        class="capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
+        @click="add()"
       >
-        Quantity
+        quantity
       </button>
-      <div v-if="ID > 0" class="grow text-xl py-2 text-center">
-        <span>{{ ID }}</span>
-      </div>
-      <div v-else>
-        <button
-          class="font-light flex border border-aronium-600 bg-inherit hover:bg-aronium-700 p-auto py-2"
-          @click="getIdNumber()"
-        >
-          ---
-        </button>
-      </div>
+
+      <button
+        class="grow justify-center mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
+        @click="getIdNumber()"
+      >
+        {{ ID || "---" }}
+      </button>
     </div>
 
     <div class="text-aronium-white flex flex-col h-full">
@@ -183,31 +182,41 @@ export default {
           </div>
         </div>
 
-        <div class="flex-1 w-full overflow-auto">
+        <div class="flex-2 w-full overflow-auto">
           <template v-for="item in cart" :key="item.id">
             <div
-              class="mb-3 bg-transparent w-full px-2 py-2 flex justify-center"
-              :class="item.id === ID ? 'bg-aronium-sky' : 'bg-inherit'"
+              class="mb-2 bg-transparent border-y border-aronium-800 shadow-lg w-full px-2 my-1 py-1 flex justify-center"
+              :class="item.id === ID ? 'bg-aronium-sky-300' : 'bg-inherit'"
               @click="selectItem(item)"
             >
-              <img
+              <!-- <img
                 :src="item.image"
                 alt=""
-                class="rounded-lg h-10 w-10 bg-transparent shadow mr-2"
-              />
+                class="rounded-sm h-8 w-8 bg-transparent shadow mr-2"
+              /> -->
               <div class="flex-grow">
-                <h5 class="text-sm">{{ item.name }}</h5>
-                <p class="text-xs block">{{ priceFormat(item.price) }}</p>
+                <h5
+                  class="text-sm subpixel-antialiased tracking-wider font-semibold"
+                >
+                  {{ item.name }}
+                </h5>
+                <p class="text-xs block mt-1 opacity-40">
+                  #{{ item.id }} : {{ priceFormat(item.price) }} ( Subtotal={{
+                    item.price * item.qty
+                  }}
+                  )
+                </p>
               </div>
-              <div class="py-1">
-                <div class="grid-flow-col gap-2">
+
+              <div>
+                <div class="grid-flow-col items-center">
                   <button
-                    class="h-8 w-8 mr-1 mb-1 rounded-lg text-center text-white bg-pink-300 hover:bg-pink-700 focus:outline-none"
+                    class="relative h-11 w-11 m-1 rounded-sm text-center text-aronium-white bg-inherit border border-aronium-700 shadow-sm hover:bg-pink-700 focus:outline-none"
                     @click="addQty(item, -1)"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="h-8 w-8 inline-block"
+                      class="h-6 w-6 absolute top-2 left-2"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -223,15 +232,16 @@ export default {
                   <input
                     v-model="item.qty"
                     type="text"
-                    class="h-8 w-12 bg-white rounded-lg text-center shadow border-pink-300 focus:border-pink-700 focus:shadow-lg"
+                    class="h-8 border-0 w-11 mr-1 text-center text-aronium-white bg-inherit"
                   />
+
                   <button
-                    class="h-8 w-8 mb-1 ml-1 rounded-lg text-center text-white bg-pink-300 hover:bg-pink-700 focus:outline-none"
+                    class="relative h-11 w-11 mr-1 rounded-sm text-center text-aronium-white bg-inherit border border-aronium-700 shadow-sm hover:bg-pink-700 focus:outline-none"
                     @click="addQty(item, 1)"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="h-8 w-8 inline-block"
+                      class="h-6 w-6 absolute top-2 left-2"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -253,17 +263,74 @@ export default {
       <!-- end of cart items -->
 
       <!-- payment info -->
-      <div class="select-none h-auto w-full text-center pt-3 pb-4 px-4">
-        <div class="flex mb-3 text-lg font-semibold text-pink-700">
+      <div class="flex flex-col p-2 h-56 border-t border-aronium-600">
+        <div class="w-full flex justify-between text-aronium-white">
+          <span class="text-sm">Subtotal</span>
+          <span class="text-2sm">{{ priceFormat(getTotalPrice().value) }}</span>
+        </div>
+        <div class="mb-1 pt-2 w-full flex justify-between text-aronium-white">
+          <span class="text-sm">Tax</span>
+          <span class="text-2sm">{{
+            priceFormat(getTotalPrice().value * 0.05)
+          }}</span>
+        </div>
+        <hr class="border-dashed" />
+        <div class="w-full flex justify-between text-aronium-white my-1">
+          <span class="text-lg text-pink-400 uppercase">Total</span>
+          <span class="text-lg text-pink-400">{{
+            priceFormat(getTotalPrice().value * 1.05)
+          }}</span>
+        </div>
+        <hr class="border-dashed" />
+        <div class="w-full flex justify-between text-aronium-white">
+          <span class="text-sm">Cash</span>
+          <span class="text-2sm">{{ priceFormat(cash) }}</span>
+        </div>
+        <hr class="border-1" />
+        <div class="w-full flex justify-between text-aronium-white">
+          <span class="text-sm">Change</span>
+          <span class="text-2sm">{{ priceFormat(change) }}</span>
+        </div>
+
+        <div class="flex items-start p-1 h-32 border-t mt-3 border-aronium-600">
+          <button
+            class="h-12 mb-3 capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
+            @click="startWithSampleData()"
+          >
+            <span class="mr-3">
+              <i class="fa fa-times fa-sm"></i>
+            </span>
+            delete
+          </button>
+
+          <button
+            class="h-12 capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
+            :disabled="!submitable()"
+            @click="submit($event)"
+          >
+            submit
+          </button>
+          <button
+            class="h-12 capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
+            :disabled="!submitable()"
+            @click="submit($event)"
+          >
+            submit
+          </button>
+        </div>
+      </div>
+
+      <!-- <div class="select-none h-auto w-full text-center pt-3 pb-4 px-4"> -->
+      <!-- <div class="flex mb-3 text-lg font-semibold text-pink-400">
           <div>TOTAL</div>
           <div class="text-right w-full">
             {{ priceFormat(getTotalPrice().value) }}
           </div>
-        </div>
-        <div
+        </div> -->
+      <!-- <div
           class="mb-3 text-blue-gray-700 px-3 pt-2 pb-3 rounded-lg bg-blue-gray-50"
-        >
-          <div class="flex text-lg font-semibold">
+        > -->
+      <!-- <div class="flex text-lg font-semibold">
             <div class="flex-grow text-left">CASH</div>
             <div class="flex text-right">
               <input
@@ -276,8 +343,8 @@ export default {
               <div class="m-1">IQD</div>
             </div>
           </div>
-          <hr class="my-2" />
-          <div class="grid grid-cols-3 gap-2 mt-2">
+          <hr class="my-2" /> -->
+      <!-- <div class="grid grid-cols-3 gap-2 mt-2">
             <template v-for="money in moneys" :key="money">
               <button
                 class="bg-white rounded-lg shadow hover:shadow-lg focus:outline-none inline-block px-2 py-1 text-sm m-1"
@@ -288,9 +355,9 @@ export default {
                 </span>
               </button>
             </template>
-          </div>
-        </div>
-        <div
+          </div> -->
+      <!-- </div> -->
+      <!-- <div
           v-if="change > 0"
           class="flex mb-3 text-lg font-semibold bg-pink-50 text-blue-gray-700 rounded-lg py-2 px-3"
         >
@@ -298,16 +365,16 @@ export default {
           <div class="text-right flex-grow text-pink-700">
             {{ priceFormat(change) }}
           </div>
-        </div>
-        <div
+        </div> -->
+      <!-- <div
           v-if="change < 0"
           class="flex mb-3 text-lg font-semibold bg-pink-100 text-blue-gray-700 rounded-lg py-2 px-3"
         >
           <div class="text-right flex-grow text-pink-600">
             {{ priceFormat(change) }}
           </div>
-        </div>
-        <div
+        </div> -->
+      <!-- <div
           v-if="change == 0 && cart.length > 0"
           class="flex justify-center mb-3 text-lg font-semibold bg-pink-50 text-pink-700 rounded-lg py-2 px-3"
         >
@@ -325,9 +392,9 @@ export default {
               d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
             />
           </svg>
-        </div>
-        DARYA
-        <button
+        </div> -->
+
+      <!-- <button
           class="text-white rounded-2xl text-lg w-full py-3 focus:outline-none"
           :class="{
             'bg-pink-500 hover:bg-pink-600': submitable(),
@@ -337,8 +404,8 @@ export default {
           @click="submit($event)"
         >
           SUBMIT
-        </button>
-      </div>
+        </button> -->
+      <!-- </div> -->
       <!-- end of payment info -->
     </div>
     <!-- modal receipt -->

@@ -5,6 +5,9 @@ import VueCookies from "vue-cookies";
 import moment from "moment";
 // import myUpload from "vue-image-crop-upload";
 
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+// import { library } from "@fortawesome/fontawesome-svg-core";
+
 import Popper from "vue3-popper";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 // import "@/assets/styles/tailwind.css";
@@ -44,4 +47,5 @@ app
   .use(store)
   .use(router)
   .use(VueCookies)
+  .component("font-awesome-icon", FontAwesomeIcon)
   .mount("#app");
