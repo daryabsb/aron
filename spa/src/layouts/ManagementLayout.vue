@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen grid grid-cols-8 grid-rows-12 bg-aronium-800 gap-1">
+  <div class="h-screen grid grid-cols-8 grid-rows-12 bg-aronium-800 gap-2">
     <aronium-modal-template
       v-if="closeModal"
       :modal-type="modalDataModule"
@@ -16,7 +16,7 @@
     >
       <management-sidebar></management-sidebar>
     </div>
-    <div class="row-start-2 row-span-10 col-start-2 col-span-7">
+    <div class="row-start-2 row-span-9 col-start-2 col-span-7">
       <router-view></router-view>
     </div>
 

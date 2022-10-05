@@ -1,8 +1,8 @@
 <template>
   <div
-    class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded h-full"
+    class="relative flex flex-col min-w-0 break-words bg-white w-full shadow-lg rounded h-full"
   >
-    <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
+    <div class="rounded-t mb-0 px-4 bg-transparent">
       <div class="flex flex-wrap items-center h-full">
         <div class="relative w-full max-w-full flex-grow flex-1 py-4">
           <h2 class="text-3xl">Total Sale</h2>

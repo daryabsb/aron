@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-8 grid-rows-9 bg-aronium-800 gap-1 h-full w-full">
+  <div class="bg-aronium-800 h-full w-full">
     <products-modal
       v-if="closeModal"
       :modal-type="modalDataModule"
@@ -7,17 +7,17 @@
     ></products-modal>
     <!-- <aronium-modal v-if="closeModal" @close="close"></aronium-modal> -->
     <!-- <aronium-control-center></aronium-control-center> -->
-    <div class="container bg-inherit">
-      <div class="">
+    <div class="bg-inherit h-full">
+      <div class="py-3">
         <products-header
           @open="(moduleName) => open(moduleName)"
         ></products-header>
       </div>
-      <div class="flex flex-nowrap">
-        <div class="basis-1/2 mr-3 w-full">
-          <products-side-card class="pr-20"></products-side-card>
+      <div class="grid grid-cols-12 grid-rows-12 place-content-stretch h-full">
+        <div class="row-start-1 row-span-12 col-start-1 col-span-2 mr-2 h-full">
+          <products-side-card></products-side-card>
         </div>
-        <div class="basis-1/2">
+        <div class="row-start-1 row-span-12 col-start-3 col-span-10 h-full">
           <products-management></products-management>
         </div>
       </div>
