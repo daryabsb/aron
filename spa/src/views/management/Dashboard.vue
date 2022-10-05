@@ -1,35 +1,43 @@
 <template>
   <div>
+    <div class="m-2">
+      <!-- <div class="w-full xl:w-3/12 px-4">
+        <card-social-traffic />
+      </div> -->
+      <!-- <div class="w-full mb-12 xl:mb-0 px-2"> -->
+      <dashboard-line-chart />
+      <!-- </div> -->
+    </div>
     <div class="flex flex-wrap">
-      <div class="w-full h-full xl:w-3/12 px-4 h-72">
-        <card-bar-chart />
+      <div class="w-full xl:w-3/12 px-4 h-72">
+        <dashboard-bar-chart />
       </div>
       <div class="w-full xl:w-9/12 mb-12 xl:mb-0 px-2">
-        <card-line-chart />
+        <dashboard-line-chart />
       </div>
     </div>
     <div class="flex flex-wrap mt-4">
       <div class="w-full xl:w-3/12 px-4">
-        <card-social-traffic />
+        <dashboard-social-traffic />
       </div>
       <div class="w-full xl:w-9/12 mb-12 xl:mb-0 px-2">
-        <card-page-visits />
+        <dashboard-page-visits />
       </div>
     </div>
   </div>
 </template>
 <script>
-import CardLineChart from "@/components/Cards/CardLineChart.vue";
-import CardBarChart from "@/components/Cards/CardBarChart.vue";
-import CardPageVisits from "@/components/Cards/CardPageVisits.vue";
-import CardSocialTraffic from "@/components/Cards/CardSocialTraffic.vue";
+import DashboardLineChart from "@/components/management/dashboard/DashboardLineChart.vue";
+import DashboardBarChart from "@/components/management/dashboard/DashboardBarChart.vue";
+import DashboardPageVisits from "@/components/management/dashboard/DashboardPageVisits.vue";
+import DashboardSocialTraffic from "@/components/management/dashboard/DashboardSocialTraffic.vue";
 export default {
   name: "DashboardPage",
   components: {
-    CardLineChart,
-    CardBarChart,
-    CardPageVisits,
-    CardSocialTraffic,
+    DashboardLineChart,
+    DashboardBarChart,
+    DashboardPageVisits,
+    DashboardSocialTraffic,
   },
 };
 </script>

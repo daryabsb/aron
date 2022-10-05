@@ -41,6 +41,10 @@ module.exports = {
           },
         },
       },
+      gridTemplateCols: {
+        // Simple 12 row grid
+        "16": "repeat(16, minmax(0, 1fr))",
+      },
       gridTemplateRows: {
         // Simple 12 row grid
         "12": "repeat(12, minmax(0, 1fr))",

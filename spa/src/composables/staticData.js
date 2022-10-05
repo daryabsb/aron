@@ -1,4 +1,38 @@
 import { ref } from "vue";
+import dataLabels from "chartjs-plugin-datalabels";
+
+export const sideBArNavItems = [
+  {
+    id: 1,
+    name: "Dashboard",
+    link: "/management/dashboard",
+    icon: "fas fa-tv mr-2 text-sm",
+  },
+  {
+    id: 2,
+    name: "Documents",
+    link: "/management/documents",
+    icon: "fas fa-tools mr-2 text-sm",
+  },
+  {
+    id: 3,
+    name: "Products",
+    link: "/management/products",
+    icon: "fas fa-tags mr-2 text-sm",
+  },
+  {
+    id: 4,
+    name: "Stocks",
+    link: "/management/stocks",
+    icon: "fas fa-map-marked mr-2 text-sm",
+  },
+  {
+    id: 5,
+    name: "Pos",
+    link: "/pos",
+    icon: "fas fa-tags text-blueGray-300 mr-2 text-sm",
+  },
+];
 
 export const productsMenu = [
   {
@@ -189,4 +223,89 @@ export const colors = {
   lightBlue: "#0c4a6e",
 
   blueGray: "#0f172a",
+};
+
+const dataForChart = (year) => {
+  if (year === 1980) {
+    return [65, 59, 80, 81, 56, 55, 40, 10, 25, 92, 12, 43];
+  }
+  if (year === 1981) {
+    return [47, 85, 36, 22, 14, 100, 71, 19, 96, 92, 46, 30];
+  }
+  if (year === 1982) {
+    return [65, 59, 80, 81, 56, 55, 40, 10, 25, 92, 12, 43];
+  }
+  if (year === 1983) {
+    return [65, 59, 80, 81, 56, 55, 40, 10, 25, 92, 12, 43];
+  }
+};
+
+export const lineChart = {
+  type: "bar",
+  // locally registered and available for this chart
+  plugins: [dataLabels],
+  data: {
+    labels: [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ],
+    datasets: [
+      {
+        label: "Caffine Consumption",
+        // data: [65, 59, 80, 81, 56, 55, 40, 10, 25, 92, 12, 43],
+        data: dataForChart(1982),
+        fill: false,
+        borderColor: "#888888",
+        backgroundColor: "#ffffff",
+      },
+      // {
+      //   label: "Productivity",
+      //   data: [70, 25, 110, 90, 5, 60, 30],
+      //   fill: false,
+      //   borderColor: "#00D8FF",
+      //   tension: 0.5,
+      //   backgroundColor: "purple",
+      // },
+    ],
+  },
+  options: {
+    plugins: {
+      zoom: {
+        zoom: {
+          wheel: {
+            enabled: true,
+          },
+          pinch: {
+            enabled: true,
+          },
+          mode: "y",
+        },
+      },
+      datalabels: {
+        backgroundColor: function (context) {
+          console.log(context);
+          return context.dataset.backgroundColor;
+        },
+        borderRadius: 4,
+        borderColor: "#888888",
+        strokeStyle: "#888888",
+        color: "white",
+        font: {
+          weight: "bold",
+        },
+        formatter: Math.round,
+        padding: 6,
+      },
+    },
+  },
 };

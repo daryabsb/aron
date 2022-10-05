@@ -81,7 +81,7 @@ import Cookies from "js-cookie";
 
 import { colors } from "@/composables/staticData";
 
-import { token } from "@/store/composables";
+// import { token } from "@/store/composables";
 
 import SelectInput from "@/components/shared/forms/SelectInput.vue";
 

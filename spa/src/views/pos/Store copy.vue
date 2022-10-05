@@ -15,9 +15,14 @@ export default {
 </script>
 <template>
   <!-- page content -->
-  <div class="bg-transparent">
+  <div class="flex-grow flex">
     <!-- store menu -->
-    <!-- <pos-right-nav></pos-right-nav> -->
     <store-menu></store-menu>
+    <!-- <store-menu></store-menu> -->
+    <!-- end of store menu -->
+
+    <pos-right-nav></pos-right-nav>
+    <!-- modal receipt -->
+    <!-- <modal-receipt v-show="isShowModalReceipt"></modal-receipt> -->
   </div>
 </template>

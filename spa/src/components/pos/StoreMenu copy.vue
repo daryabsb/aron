@@ -42,7 +42,7 @@ export default {
 </script>
 <template>
   <!-- store menu -->
-  <div class="flex flex-col bg-transparent h-full w-full py-4">
+  <div class="flex flex-col bg-blue-gray-50 h-full w-full py-4">
     <!-- SEARCH INPUT IN STORE -->
     <search-input></search-input>
     <div class="h-full overflow-hidden mt-4">

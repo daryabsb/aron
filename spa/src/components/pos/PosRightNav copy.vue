@@ -1,5 +1,4 @@
 <script>
-import { ref, computed } from "vue";
 import { useStore } from "vuex";
 import { CLEAR, UPDATE_CASH } from "@/store/constants";
 import {
@@ -25,8 +24,6 @@ export default {
   setup() {
     const store = useStore();
     const moneys = store.state.moneys;
-    const ID = ref(5);
-    const orderID = computed(() => (ID.value > 0 ? ID : "---"));
 
     // GETTERS from COMPOSABLES
     const cart = useCart;
@@ -37,17 +34,13 @@ export default {
     const updateCash = (value) => store.commit(UPDATE_CASH, value);
     const clear = () => store.commit(CLEAR);
 
-    const selectItem = (item) => (ID.value = item.id);
-
-    const getIdNumber = () => console.log("ID Number is 5");
+    const selectItem = (e) => console.log(e);
 
     return {
       cart,
       change,
       moneys,
       cash,
-      orderID,
-      ID,
       addQty,
       getTotalPrice,
       getItemsCount,
@@ -59,7 +52,6 @@ export default {
       updateChange,
       selectItem,
       submit,
-      getIdNumber,
       isShowModalReceipt,
     };
   },
@@ -68,44 +60,12 @@ export default {
 
 <template>
   <!-- right sidebar -->
-  <div
-    class="w-full h-full flex flex-col bg-aronium-900 border border-aronium-600"
-  >
-    <div class="flex p-2 h-16 border-b border-aronium-600">
-      <button
-        class="w-32 mr-1 text-center border border-aronium-600 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-2"
-        @click="startWithSampleData()"
-      >
-        <span class="mr-3">
-          <i class="fa fa-times fa-lg"></i>
-        </span>
-        Delete
-      </button>
-      <button
-        class="w-32 mr-1 text-center border border-aronium-600 font-light flex bg-inherit hover:bg-aronium-700 px-8 py-2"
-        @click="startWithSampleData()"
-      >
-        Quantity
-      </button>
-      <div v-if="ID > 0" class="grow text-xl py-2 text-center">
-        <span>{{ ID }}</span>
-      </div>
-      <div v-else>
-        <button
-          class="font-light flex border border-aronium-600 bg-inherit hover:bg-aronium-700 p-auto py-2"
-          @click="getIdNumber()"
-        >
-          ---
-        </button>
-      </div>
-    </div>
-
-    <div class="text-aronium-white flex flex-col h-full">
+  <div class="w-4/12 flex flex-col bg-gray-200 h-full m-3 p-4 rounded-lg">
+    <div class="bg-white rounded-lg flex flex-col h-full shadow">
       <!-- empty cart -->
-
       <div
         v-if="cart.length === 0"
-        class="flex-1 w-full p-4 select-none flex flex-col flex-wrap content-center justify-center"
+        class="bg-gray-300 flex-1 w-full p-4 select-none flex flex-col flex-wrap content-center justify-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -128,16 +88,13 @@ export default {
 
       <!-- cart items -->
       <!-- v-if="cart.length > 0" -->
-      <div class="flex-1 flex flex-col overflow-auto h-full">
-        <!-- v-if="cart.length > 0" -->
-        <div class="hidden h-16 text-center justify-center">
-          <div
-            class="text-aronium-white hover:text-pink-700 pl-8 text-left text-lg py-4 relative"
-          >
+      <div class="flex-1 flex flex-col overflow-auto">
+        <div class="h-16 text-center flex justify-center">
+          <div class="pl-8 text-left text-lg py-4 relative">
             <!-- cart icon -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-8 inline-block"
+              class="h-8 inline-block text-pink-700"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -150,7 +107,7 @@ export default {
               />
             </svg>
 
-            <h1 class="inline-block font-semibold ml-3">
+            <h1 class="text-pink-700 inline-block font-semibold ml-3">
               {{ getItemsCount() }}
             </h1>
 
@@ -162,7 +119,7 @@ export default {
           <div class="flex-grow px-8 text-right text-lg py-4 relative">
             <!-- trash button -->
             <button
-              class="hover:text-pink-700 focus:outline-none"
+              class="text-pink-300 hover:text-pink-700 focus:outline-none"
               @click="clear()"
             >
               <svg
@@ -182,18 +139,16 @@ export default {
             </button>
           </div>
         </div>
-
-        <div class="flex-1 w-full overflow-auto">
+        <div class="flex-1 w-full px-4 overflow-auto">
           <template v-for="item in cart" :key="item.id">
             <div
-              class="mb-3 bg-transparent w-full px-2 py-2 flex justify-center"
-              :class="item.id === ID ? 'bg-aronium-sky' : 'bg-inherit'"
+              class="select-none mb-3 bg-blue-gray-50 border-pink-300 rounded-lg w-full text-blue-gray-700 py-2 px-2 flex justify-center"
               @click="selectItem(item)"
             >
               <img
                 :src="item.image"
                 alt=""
-                class="rounded-lg h-10 w-10 bg-transparent shadow mr-2"
+                class="rounded-lg h-10 w-10 bg-white shadow mr-2"
               />
               <div class="flex-grow">
                 <h5 class="text-sm">{{ item.name }}</h5>

@@ -1,26 +1,15 @@
 <template>
-  <div class="bg-aronium-800 p-1">
+  <div class="bg-blue-gray-50">
     <!-- noprint-area -->
-    <div class="hide-print">
-      <div
-        class="grid grid-cols-12 grid-rows-12 text-aronium-white h-screen gap-2"
-      >
-        <!-- left sidebar -->
-        <!-- <pos-left-nav></pos-left-nav> -->
-        <div
-          class="col-start-1 col-span-12 row-start-1 row-span-1 border border-aronium-600"
-        >
-          <h1>Darya</h1>
-        </div>
-        <div class="col-start-1 col-span-3 row-start-2 row-span-10">
-          <pos-right-nav></pos-right-nav>
-        </div>
-        <div class="col-start-4 col-span-8 row-start-2 row-span-10">
-          <router-view></router-view>
-        </div>
+    <div
+      class="hide-print flex flex-row h-screen antialiased text-blue-gray-800"
+    >
+      <!-- left sidebar -->
+      <pos-left-nav></pos-left-nav>
 
-        <modal-first-time v-show="isShowModalFirstTime"></modal-first-time>
-      </div>
+      <router-view></router-view>
+
+      <modal-first-time v-show="isShowModalFirstTime"></modal-first-time>
     </div>
     <!-- end of noprint-area -->
     <div id="print-area" class="print-area"></div>
@@ -28,6 +17,7 @@
 </template>
 
 <script>
+import PosLeftNav from "@/components/pos/PosLeftNav.vue";
 import PosRightNav from "@/components/pos/PosRightNav.vue";
 import StoreMenu from "@/components/pos/StoreMenu.vue";
 import ModalFirstTime from "@/components/temporary/ModalFirstTime.vue";
@@ -48,6 +38,7 @@ import {
 export default {
   components: {
     StoreMenu,
+    PosLeftNav,
     PosRightNav,
     ModalFirstTime,
   },

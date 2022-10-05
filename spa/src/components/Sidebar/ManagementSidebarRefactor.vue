@@ -73,109 +73,78 @@
         <hr class="my-4 md:min-w-full" />
 
         <!-- Navigation -->
-
-        <ul class="md:flex-col md:min-w-full flex flex-col list-none">
-          <li class="items-center">
-            <router-link
-              v-for="item in sideBArNavItems"
-              :key="item.id"
-              v-slot="{ href, navigate, isActive }"
-              :to="item.link"
-            >
-              <a
-                :href="href"
-                class="text-sm py-2 font-normal block"
-                :class="[
-                  isActive
-                    ? 'text-pink-500 hover:text-pink-700'
-                    : 'text-blueGray-700 hover:text-blueGray-500',
-                ]"
-                @click="navigate"
+        <div class="flex">
+          <!-- <ul class="md:flex-col md:min-w-full flex flex-col list-none">
+            <li class="items-center">
+              <router-link
+                v-for="item in sideBArNavItems"
+                :key="item.id"
+                v-slot="{ href, navigate, isActive }"
+                :to="item.link"
               >
-                <!-- class="fas fa-tv mr-2 text-sm" -->
-                <i
+                <a
+                  :href="href"
+                  class="text-sm py-2 font-normal block"
                   :class="[
                     isActive
-                      ? `opacity-75 ${item.icon}`
-                      : `text-aronium-white ${item.icon}`,
-                    item.icon,
+                      ? 'text-pink-500 hover:text-pink-700'
+                      : 'text-blueGray-700 hover:text-blueGray-500',
                   ]"
-                ></i>
-                {{ item.name }}
-              </a>
-            </router-link>
-          </li>
-        </ul>
+                  @click="navigate"
+                >
+                  <i
+                    :class="[
+                      isActive
+                        ? `opacity-75 ${item.icon}`
+                        : `text-aronium-white ${item.icon}`,
+                      item.icon,
+                    ]"
+                  ></i>
+                </a>
+              </router-link>
+            </li>
+          </ul> -->
+          <ul
+            class="md:flex-col z-10 md:min-w-full flex flex-col list-none"
+            @mouseleave="toggleCollapseShow('hidden')"
+          >
+            <li class="items-center">
+              <router-link
+                v-for="item in sideBArNavItems"
+                :key="item.id"
+                v-slot="{ href, navigate, isActive }"
+                :to="item.link"
+              >
+                <a
+                  :href="href"
+                  class="text-sm py-2 font-normal block"
+                  :class="[
+                    isActive
+                      ? 'text-pink-500 hover:text-pink-700'
+                      : 'text-blueGray-700 hover:text-blueGray-500',
+                  ]"
+                  @click="navigate"
+                >
+                  <!-- class="fas fa-tv mr-2 text-sm" -->
+                  <i
+                    :class="[
+                      isActive
+                        ? `opacity-75 ${item.icon}`
+                        : `text-aronium-white ${item.icon}`,
+                      item.icon,
+                    ]"
+                  ></i>
+                  {{ item.name }}
+                </a>
+              </router-link>
+            </li>
+          </ul>
+        </div>
 
         <!-- Divider -->
-        <hr class="my-4 md:min-w-full" />
-        <!-- Heading -->
-        <h6
-          class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
-        >
-          POS Related Pages
-        </h6>
-        <!-- Navigation -->
-
-        <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
-          <li class="items-center">
-            <router-link
-              class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-              to="/pos"
-            >
-              <i class="fas fa-tags text-blueGray-300 mr-2 text-sm"></i>
-              Pos
-            </router-link>
-          </li>
-
-          <li class="items-center">
-            <router-link
-              class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-              to="/home/custom"
-            >
-              <i
-                class="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"
-              ></i>
-              Products Form
-            </router-link>
-          </li>
-        </ul>
-
-        <!-- Divider -->
-        <hr class="my-4 md:min-w-full" />
-        <!-- Heading -->
-        <h6
-          class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
-        >
-          No Layout Pages
-        </h6>
-        <!-- Navigation -->
-
-        <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
-          <li class="items-center">
-            <router-link
-              class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-              to="/landing"
-            >
-              <i class="fas fa-newspaper text-blueGray-300 mr-2 text-sm"></i>
-              Landing Page
-            </router-link>
-          </li>
-
-          <li class="items-center">
-            <router-link
-              class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-              to="/profile"
-            >
-              <i class="fas fa-user-circle text-blueGray-300 mr-2 text-sm"></i>
-              Profile Page
-            </router-link>
-          </li>
-        </ul>
-
-        <!-- Divider -->
-        <hr class="my-4 md:min-w-full" />
-        <!-- Heading -->
+        <div class="mb-3 mt-auto">
+          <hr class="my-4 md:min-w-full" />
+        </div>
       </div>
     </div>
   </nav>
@@ -200,9 +169,9 @@ export default {
       collapseShow.value = classes;
     };
     return {
+      sideBArNavItems,
       collapseShow,
       toggleCollapseShow,
-      sideBArNavItems,
     };
   },
 };
