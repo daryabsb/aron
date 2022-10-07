@@ -15,10 +15,8 @@
   ```
 -->
 <template>
-  <div class="bg-white">
-    <div
-      class="mt-3 grid grid-cols-1 gap-y-5 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
-    >
+  <div class="p-2">
+    <div class="grid gap-2 grid-cols-6" :class="gridClasses">
       <div v-for="product in products" :key="product.id" class="group relative">
         <pos-single-product :product="product"></pos-single-product>
       </div>
@@ -27,6 +25,7 @@
 </template>
 
 <script>
+import { ref } from "vue";
 import PosSingleProduct from "@/components/pos/products/PosSingleProduct.vue";
 export default {
   components: { PosSingleProduct },
@@ -35,6 +34,26 @@ export default {
       type: Object,
       required: true,
     },
+    cols: {
+      type: String,
+      required: false,
+      default: "6",
+    },
+    rows: {
+      type: String,
+      required: false,
+      default: "6",
+    },
+  },
+  setup(props) {
+    console.log("x: ", props.rows, " | y: ", props.cols);
+    const x = ref(props.rows);
+    const y = ref(props.cols);
+    const gridClasses = `grid-cols-${y.value} grid-rows-${x.value}`;
+
+    return {
+      gridClasses,
+    };
   },
 };
 </script>

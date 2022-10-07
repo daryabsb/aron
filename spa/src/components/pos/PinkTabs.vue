@@ -1,13 +1,15 @@
 <template>
   <div class="flex flex-wrap">
     <div class="w-full">
-      <ul class="flex flex-row justify-start mb-0 list-none pt-3 pb-4">
-        <li class="mt-2 mr-2 last:mr-0 flex-auto text-center">
+      <ul class="flex flex-row justify-start mb-0 list-none pb-4">
+        <li
+          class="mt-2 mr-2 last:mr-0 flex-auto text-center border border-aronium-600"
+        >
           <Transition>
             <a
-              class="text-xs font-bold uppercase px-5 py-3 cursor-pointer shadow-lg rounded block leading-normal"
+              class="text-xs font-bold uppercase px-5 py-3 cursor-pointer block"
               :class="{
-                'text-pink-600 bg-white': openTab !== 0,
+                'text-pink-600 ': openTab !== 0,
                 'text-white bg-pink-600': openTab === 0,
               }"
               @click="toggleTabs(0)"
@@ -21,7 +23,7 @@
           :key="tab.id"
           :class="
             tab.rank > 0 && tab.rank < 5
-              ? 'mt-2 mr-2 last:mr-0 flex-auto text-center'
+              ? 'mt-2 mr-2 last:mr-0 flex-auto text-center border border-aronium-600'
               : ''
           "
         >
@@ -29,9 +31,9 @@
           <Transition>
             <a
               v-if="tab.rank > 0 && tab.rank < 5 && tab.groups.length === 0"
-              class="text-xs font-bold uppercase px-5 py-3 cursor-pointer shadow-lg rounded block leading-normal"
+              class="text-xs font-bold uppercase px-5 py-3 cursor-pointer block"
               :class="{
-                'text-pink-600 bg-white': openTab !== tab.id,
+                'text-pink-600': openTab !== tab.id,
                 'text-white bg-pink-600': openTab === tab.id,
               }"
               @click="toggleTabs(tab.id)"
@@ -42,7 +44,7 @@
         </li>
       </ul>
       <div
-        class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded"
+        class="relative flex flex-col min-w-0 break-words text-aronium-white w-full mb-6"
       >
         <div class="px-4 py-5">
           <slot

@@ -12,31 +12,35 @@ export default {
 };
 </script>
 <template>
-  <div class="flex px-2 flex-row relative">
-    <div
-      class="absolute left-3 top-3 m-2 p-2 rounded-full bg-pink-500 text-white"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-        />
-      </svg>
+  <div class="h-11 border-b">
+    <!-- NEW SEARCH INPUT -->
+
+    <div class="flex flex-nowrap">
+      <span class="text-xs h-full py-3 px-3 border-r border-aronium-600">
+        <i class="fa fa-barcode"></i>
+      </span>
+      <span class="text-xs h-full py-3 px-3 border-r border-aronium-600">
+        123
+      </span>
+      <span class="text-xs h-full py-3 px-3 border-r border-aronium-600">
+        <i class="fa fa-tags"></i>
+      </span>
+
+      <input
+        v-model="keyword"
+        class="w-full border-0 placeholder:italic placeholder:text-aronium-600 placeholder:text-2sm h-10 bg-inherit p-3 sm:text-sm"
+        placeholder="Search for anything..."
+        type="text"
+        @keyup="updateKeyword(keyword)"
+      />
+
+      <span class="flex items-center mx-2">
+        <i class="fa fa-search"></i>
+      </span>
+      <span class="flex items-center mx-2">
+        <i class="fa fa-keyboard"></i>
+      </span>
     </div>
-    <input
-      v-model="keyword"
-      type="text"
-      class="bg-white rounded-lg border-none shadow text-lg w-full h-12 pl-16 focus:outline-pink-500 focus:shadow-lg"
-      placeholder="Barcode, Name, Picture, anything at all ..."
-      @keyup="updateKeyword(keyword)"
-    />
   </div>
+  <!-- END NEW INPUT -->
 </template>

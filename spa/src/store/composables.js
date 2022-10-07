@@ -100,6 +100,17 @@ export const beep = () =>
   playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
 
 // POS Composable
+export const keyword = computed(() => store.getters.GET_KEYWORD);
+export const products = computed(() => store.getters.GET_PRODUCTS);
+export const filteredProducts = computed(() => {
+  // const store = useStore();
+
+  const rg = keyword.value ? new RegExp(keyword.value, "gi") : null;
+
+  console.log(products.value.filter((p) => !rg || p.name.match(rg)));
+  return tabProducts.value.filter((p) => !rg || p.name.match(rg));
+});
+
 export const addCash = (amount) => {
   return store.commit(ADD_CASH, amount);
 };

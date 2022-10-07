@@ -69,13 +69,12 @@ export default {
 <template>
   <!-- right sidebar -->
   <div
-    class="w-full h-full container flex flex-col bg-aronium-900 border border-aronium-600"
+    class="h-full w-full mx-1 flex flex-col bg-aronium-900 border border-aronium-500"
   >
-    <div
-      class="flex justify-center items-center p-1 h-12 border-b border-aronium-600"
-    >
+    <div class="flex justify-center items-center p-1 h-18 bg-aronium-900">
       <button
-        class="capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
+        class="capitalize mr-1 border border-aronium-500 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
+        disabled
         @click="startWithSampleData()"
       >
         <span class="mr-3">
@@ -85,21 +84,21 @@ export default {
       </button>
 
       <button
-        class="capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
+        class="capitalize mr-1 border border-aronium-500 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
         @click="add()"
       >
         quantity
       </button>
 
       <button
-        class="grow justify-center mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
+        class="grow justify-center mr-1 border border-aronium-500 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
         @click="getIdNumber()"
       >
         {{ ID || "---" }}
       </button>
     </div>
 
-    <div class="text-aronium-white flex flex-col h-full">
+    <div class="grow text-aronium-white flex flex-col h-full overflow-auto">
       <!-- empty cart -->
 
       <div
@@ -127,7 +126,7 @@ export default {
 
       <!-- cart items -->
       <!-- v-if="cart.length > 0" -->
-      <div class="flex-1 flex flex-col overflow-auto h-full">
+      <div class="flex-1 flex flex-col overflow-hidden h-full">
         <!-- v-if="cart.length > 0" -->
         <div class="hidden h-16 text-center justify-center">
           <div
@@ -185,8 +184,12 @@ export default {
         <div class="flex-2 w-full overflow-auto">
           <template v-for="item in cart" :key="item.id">
             <div
-              class="mb-2 bg-transparent border-y border-aronium-800 shadow-lg w-full px-2 my-1 py-1 flex justify-center"
-              :class="item.id === ID ? 'bg-aronium-sky-300' : 'bg-inherit'"
+              class="bg-aronium-700 border-y border-aronium-500 shadow w-full px-2 py-1 flex justify-center"
+              :class="
+                item.id === ID
+                  ? 'bg-aronium-sky-600  text-aronium-50 text-shadow-lg'
+                  : 'bg-inherit'
+              "
               @click="selectItem(item)"
             >
               <!-- <img
@@ -200,7 +203,7 @@ export default {
                 >
                   {{ item.name }}
                 </h5>
-                <p class="text-xs block mt-1 opacity-40">
+                <p class="text-xs block mt-1 opacity-75">
                   #{{ item.id }} : {{ priceFormat(item.price) }} ( Subtotal={{
                     item.price * item.qty
                   }}
@@ -263,62 +266,6 @@ export default {
       <!-- end of cart items -->
 
       <!-- payment info -->
-      <div class="flex flex-col p-2 h-56 border-t border-aronium-600">
-        <div class="w-full flex justify-between text-aronium-white">
-          <span class="text-sm">Subtotal</span>
-          <span class="text-2sm">{{ priceFormat(getTotalPrice().value) }}</span>
-        </div>
-        <div class="mb-1 pt-2 w-full flex justify-between text-aronium-white">
-          <span class="text-sm">Tax</span>
-          <span class="text-2sm">{{
-            priceFormat(getTotalPrice().value * 0.05)
-          }}</span>
-        </div>
-        <hr class="border-dashed" />
-        <div class="w-full flex justify-between text-aronium-white my-1">
-          <span class="text-lg text-pink-400 uppercase">Total</span>
-          <span class="text-lg text-pink-400">{{
-            priceFormat(getTotalPrice().value * 1.05)
-          }}</span>
-        </div>
-        <hr class="border-dashed" />
-        <div class="w-full flex justify-between text-aronium-white">
-          <span class="text-sm">Cash</span>
-          <span class="text-2sm">{{ priceFormat(cash) }}</span>
-        </div>
-        <hr class="border-1" />
-        <div class="w-full flex justify-between text-aronium-white">
-          <span class="text-sm">Change</span>
-          <span class="text-2sm">{{ priceFormat(change) }}</span>
-        </div>
-
-        <div class="flex items-start p-1 h-32 border-t mt-3 border-aronium-600">
-          <button
-            class="h-12 mb-3 capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
-            @click="startWithSampleData()"
-          >
-            <span class="mr-3">
-              <i class="fa fa-times fa-sm"></i>
-            </span>
-            delete
-          </button>
-
-          <button
-            class="h-12 capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
-            :disabled="!submitable()"
-            @click="submit($event)"
-          >
-            submit
-          </button>
-          <button
-            class="h-12 capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
-            :disabled="!submitable()"
-            @click="submit($event)"
-          >
-            submit
-          </button>
-        </div>
-      </div>
 
       <!-- <div class="select-none h-auto w-full text-center pt-3 pb-4 px-4"> -->
       <!-- <div class="flex mb-3 text-lg font-semibold text-pink-400">
@@ -407,6 +354,67 @@ export default {
         </button> -->
       <!-- </div> -->
       <!-- end of payment info -->
+    </div>
+    <div class="flex flex-col p-2 mt-2 h-56 border-t border-aronium-600">
+      <div class="w-full flex justify-between text-aronium-white">
+        <span class="text-sm">Subtotal</span>
+        <span class="text-2sm">{{ priceFormat(getTotalPrice().value) }}</span>
+      </div>
+      <div class="mb-1 pt-2 w-full flex justify-between text-aronium-white">
+        <span class="text-sm">Tax</span>
+        <span class="text-2sm">{{
+          priceFormat(getTotalPrice().value * 0.05)
+        }}</span>
+      </div>
+      <hr class="border-dashed" />
+      <div class="w-full flex justify-between text-aronium-white my-1">
+        <span class="text-lg text-pink-400 uppercase">Total</span>
+        <span class="text-lg text-pink-400">{{
+          priceFormat(getTotalPrice().value * 1.05)
+        }}</span>
+      </div>
+      <hr class="border-dashed" />
+      <div class="w-full flex justify-between text-aronium-white">
+        <span class="text-sm">Cash</span>
+        <span class="text-2sm">{{ priceFormat(cash) }}</span>
+      </div>
+
+      <hr class="border-1" />
+      <div class="w-full flex justify-between text-aronium-white">
+        <span class="text-sm">Change</span>
+        <span
+          class="text-2sm text-aroium-danger"
+          :class="change < 0 ? 'text-aronium-danger' : 'text-inherit'"
+          >{{ priceFormat(change) }}</span
+        >
+      </div>
+
+      <div class="flex items-start p-1 h-32 border-t mt-3 border-aronium-600">
+        <button
+          class="h-12 mb-3 capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
+          @click="clear()"
+        >
+          <span class="mr-3">
+            <i class="fa fa-times fa-sm"></i>
+          </span>
+          void order
+        </button>
+
+        <button
+          class="h-12 capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
+          :disabled="!submitable()"
+          @click="submit($event)"
+        >
+          submit
+        </button>
+        <button
+          class="h-12 capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
+          :disabled="!submitable()"
+          @click="submit($event)"
+        >
+          submit
+        </button>
+      </div>
     </div>
     <!-- modal receipt -->
     <modal-receipt v-show="isShowModalReceipt"></modal-receipt>

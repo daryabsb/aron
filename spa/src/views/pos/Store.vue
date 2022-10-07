@@ -1,12 +1,12 @@
 <script>
 import StoreMenu from "@/components/pos/StoreMenu.vue";
-import PosRightNav from "@/components/pos/PosRightNav.vue";
+import SearchInput from "@/components/shared/SearchInput.vue";
 
 export default {
   name: "Store",
   components: {
     StoreMenu,
-    PosRightNav,
+    SearchInput,
   },
   setup() {
     return {};
@@ -15,9 +15,11 @@ export default {
 </script>
 <template>
   <!-- page content -->
-  <div class="bg-transparent">
+  <div class="h-full flex flex-col bg-transparent border border-aronium-600">
     <!-- store menu -->
     <!-- <pos-right-nav></pos-right-nav> -->
+    <search-input></search-input>
+
     <store-menu></store-menu>
   </div>
 </template>

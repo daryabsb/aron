@@ -1,9 +1,10 @@
 <script>
 import { ref } from "vue";
 import { useStore } from "vuex";
-import useFilteredProducts from "@/composables/useFilteredProducts";
+// import useFilteredProducts from "@/composables/useFilteredProducts";
 import {
   updateKeyword,
+  filteredProducts,
   priceFormat,
   addToCart,
   tabProducts,
@@ -14,11 +15,9 @@ import ProductsGroupTabs from "@/components/pos/ProductsGroupTabs.vue";
 import PinkTabs from "@/components/pos/PinkTabs.vue";
 import PosProductList from "@/components/pos/products/PosProductList.vue";
 import StoreProductWidget from "@/components/pos/products/StoreProductWidget.vue";
-import SearchInput from "@/components/shared/SearchInput.vue";
 
 export default {
   components: {
-    SearchInput,
     ProductsGroupTabs,
     PosProductList,
     PinkTabs,
@@ -32,7 +31,7 @@ export default {
     return {
       addToCart,
       updateKeyword,
-      useFilteredProducts,
+      filteredProducts,
       keyword,
       priceFormat,
       tabProducts,
@@ -42,16 +41,19 @@ export default {
 </script>
 <template>
   <!-- store menu -->
-  <div class="flex flex-col bg-transparent h-full w-full py-4">
+  <div class="flex flex-col bg-transparent h-full w-full">
     <!-- SEARCH INPUT IN STORE -->
-    <search-input></search-input>
-    <div class="h-full overflow-hidden mt-4">
-      <div class="h-full overflow-y-auto px-2">
+    <div class="h-full overflow-hidden">
+      <div
+        v-if="filteredProducts != undefined"
+        class="h-full overflow-y-auto px-2"
+      >
         <!-- CATEGORY TABS START -->
         <!-- <products-group-tabs></products-group-tabs> -->
+
         <div
-          v-if="useFilteredProducts().length === 0"
-          class="select-none bg-blue-gray-100 rounded-3xl flex flex-wrap content-center justify-center h-full opacity-25"
+          v-if="filteredProducts.length === 0"
+          class="select-none bg-inherit flex flex-wrap content-center justify-center h-full opacity-25"
         >
           <div class="w-full text-center">
             <svg
@@ -76,7 +78,7 @@ export default {
           </div>
         </div>
         <div
-          v-if="useFilteredProducts().length === 0 && keyword.length > 0"
+          v-if="filteredProducts.length === 0 && keyword.length > 0"
           class="select-none bg-blue-gray-100 rounded-3xl flex flex-wrap content-center justify-center h-full opacity-25"
         >
           <div class="w-full text-center">
@@ -112,7 +114,8 @@ export default {
                 block: openTab === content.id,
               }"
             >
-              <pos-product-list :products="tabProducts"> </pos-product-list>
+              <pos-product-list :products="filteredProducts">
+              </pos-product-list>
 
               <!-- <div class="grid grid-cols-4 gap-3">
                 <template v-for="product in tabProducts" :key="product.id">
