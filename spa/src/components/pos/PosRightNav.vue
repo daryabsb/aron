@@ -184,7 +184,7 @@ export default {
         <div class="flex-2 w-full overflow-auto">
           <template v-for="item in cart" :key="item.id">
             <div
-              class="bg-aronium-700 border-y border-aronium-500 shadow w-full px-2 py-1 flex justify-center"
+              class="bg-aronium-700 border-y border-aronium-500 shadow w-full px-2 md:py-0 xl:py-1 flex justify-center"
               :class="
                 item.id === ID
                   ? 'bg-aronium-sky-600  text-aronium-50 text-shadow-lg'
@@ -204,33 +204,21 @@ export default {
                   {{ item.name }}
                 </h5>
                 <p class="text-xs block mt-1 opacity-75">
-                  #{{ item.id }} : {{ priceFormat(item.price) }} ( Subtotal={{
-                    item.price * item.qty
-                  }}
+                  #{{ item.id }} : {{ priceFormat(item.price) }}
+                </p>
+                <p class="text-xs block mt-1 opacity-75 md:hidden">
+                  ( Subtotal={{ item.price * item.qty }}
                   )
                 </p>
               </div>
 
               <div>
-                <div class="grid-flow-col items-center">
+                <div class="flex items-center">
                   <button
-                    class="relative h-11 w-11 m-1 rounded-sm text-center text-aronium-white bg-inherit border border-aronium-700 shadow-sm hover:bg-pink-700 focus:outline-none"
+                    class="flex flex-row items-center justify-center text-sm h-8 w-8 m-1 rounded-sm text-center text-aronium-white bg-inherit border border-aronium-700 shadow-sm hover:bg-pink-700 focus:outline-none"
                     @click="addQty(item, -1)"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6 absolute top-2 left-2"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M20 12H4"
-                      />
-                    </svg>
+                    <i class="fa fa-minus"></i>
                   </button>
                   <input
                     v-model="item.qty"
@@ -239,23 +227,10 @@ export default {
                   />
 
                   <button
-                    class="relative h-11 w-11 mr-1 rounded-sm text-center text-aronium-white bg-inherit border border-aronium-700 shadow-sm hover:bg-pink-700 focus:outline-none"
+                    class="flex items-center justify-center text-sm h-8 w-8 mr-1 rounded-sm text-center text-aronium-white bg-inherit border border-aronium-700 shadow-sm hover:bg-pink-700 focus:outline-none"
                     @click="addQty(item, 1)"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6 absolute top-2 left-2"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                      />
-                    </svg>
+                    <i class="fa fa-plus"></i>
                   </button>
                 </div>
               </div>
