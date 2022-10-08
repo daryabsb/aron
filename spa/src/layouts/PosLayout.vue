@@ -3,19 +3,29 @@
     <!-- <modal-calculator></modal-calculator> -->
     <!-- noprint-area -->
     <div class="hide-print">
+      <cash-popper v-if="openCashModal" @close="cashModal"></cash-popper>
+      <payment-popper
+        v-if="openPaymentModal"
+        class="w-full"
+        @close="paymentModal"
+      ></payment-popper>
+
       <div
-        class="grid grid-cols-12 grid-rows-12 text-aronium-white h-screen gap-2 pb-3"
+        class="grid grid-cols-12 grid-rows-12 text-aronium-white h-screen w-full gap-3 pb-3"
       >
         <!-- left sidebar -->
         <!-- <pos-left-nav></pos-left-nav> -->
 
-        <div class="col-start-1 col-span-12 row-start-1 row-span-1 px-1">
-          <pos-header></pos-header>
+        <div class="col-span-12 row-span-1 px-1">
+          <pos-header
+            @cash-modal="cashModal"
+            @payment-modal="paymentModal"
+          ></pos-header>
         </div>
-        <div class="col-start-1 col-span-3 row-start-2 row-span-11">
+        <div class="col-span-3 row-span-11 mt-4">
           <pos-right-nav></pos-right-nav>
         </div>
-        <div class="col-start-4 col-span-9 row-start-2 row-span-11">
+        <div class="col-span-9 row-span-11 mt-4">
           <router-view></router-view>
         </div>
 
@@ -34,7 +44,71 @@ import PosHeader from "@/components/Navbars/PosHeader.vue";
 import PosRightNav from "@/components/pos/PosRightNav.vue";
 import StoreMenu from "@/components/pos/StoreMenu.vue";
 import ModalFirstTime from "@/components/temporary/ModalFirstTime.vue";
-import { useFetchProductsDispatch } from "@/store/composables";
+import {
+  useFetchProductsDispatch,
+  openCashModal,
+  openPaymentModal,
+} from "@/store/composables";
+
+import CashPopper from "@/components/poppers/CashPopper.vue";
+import PaymentPopper from "@/components/poppers/PaymentPopper.vue";
+
+// F keys event listener
+// window.onkeydown = (evt) => {
+
+//   const getEvt = (key) => {
+//     const myKeys = new Map();
+//     myKeys.set("F8", (openCashModal.value = !openCashModal.value));
+//     return myKeys.get(key) || "None";
+//   };
+//   return getEvt(evt.key);
+// };
+
+// window.onkeydown = (evt) => {
+//   switch (evt.key) {
+//     case "F8":
+//       openPaymentModal.value = true;
+//       break;
+//     case "F9":
+//       openCashModal.value = true;
+//       break;
+//     default:
+//       openCashModal.value = false;
+//       openPaymentModal.value = false;
+//   }
+
+//   return "Congratulations";
+// };
+
+window.onkeydown = (evt) => {
+  // console.log(evt.key);
+  const getEvt = (key) => {
+    const F8 = "F8";
+    const F9 = "F9";
+    const esc = "esc";
+    const defaultKey = "default";
+
+    const myKeys = {
+      [F8]: () => (openPaymentModal.value = true),
+      [F9]: () => (openCashModal.value = true),
+      [esc]: () => {
+        openCashModal.value = false;
+        openPaymentModal.value = false;
+      },
+      [defaultKey]: () => {
+        openCashModal.value = false;
+        openPaymentModal.value = false;
+      },
+    };
+    console.log(openPaymentModal.value);
+
+    // console.log(myKeys[key]);
+    return myKeys[key] || myKeys[defaultKey];
+  };
+  return getEvt(evt.key)();
+};
+
+// END of F keys
 
 import {
   useCash,
@@ -51,7 +125,8 @@ import {
 export default {
   components: {
     PosHeader,
-    StoreMenu,
+    PaymentPopper,
+    CashPopper,
     PosRightNav,
     ModalFirstTime,
     ModalCalculator,
@@ -70,6 +145,17 @@ export default {
 
     onMounted(useFetchProductsDispatch);
 
+    // CASH
+    // const openCashModal = ref(false);
+    const cashModal = () => {
+      openCashModal.value = !openCashModal.value;
+    };
+    const paymentModal = () => {
+      openPaymentModal.value = !openPaymentModal.value;
+    };
+
+    // PAYMENT
+
     // const openModal = (msg) => console.log(msg);
 
     return {
@@ -86,6 +172,14 @@ export default {
       closeModalReceipt,
       priceFormat,
       getTotalPrice,
+
+      // CASH PROPERTIES
+      openCashModal,
+      cashModal,
+
+      // PAYMENT
+      openPaymentModal,
+      paymentModal,
     };
   },
 };

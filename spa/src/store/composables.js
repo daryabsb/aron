@@ -1,5 +1,5 @@
 /* eslint-disable no-delete-var */
-import { computed } from "vue";
+import { ref, computed } from "vue";
 import axios from "axios";
 // import { store } from "vuex";
 
@@ -62,6 +62,12 @@ export const useFetchCustomersDispatch = () => {
   store.dispatch(FETCH_CUSTOMERS);
 };
 export const useCustomers = computed(() => store.getters.GET_CUSTOMERS);
+
+// CASH COMPOSABLES
+export const openCashModal = ref(false);
+
+// PAYMENT COMPOSABLES
+export const openPaymentModal = ref(false);
 
 // ORDERS COMPOSABLES
 export const filteredTabProductsByGroupId = (groupID) => {
@@ -172,3 +178,41 @@ export const submitable = () => {
   return store.getters.SUBMITABLE;
 };
 export const submit = () => store.dispatch(SUBMIT_ORDER);
+
+// TEMPORARY FUNCTIONS
+
+export const anyWindowFunction = (evt) => {
+  // F keys event listener
+  window.onkeydown = (evt) => {
+    const getEvt = (key) => {
+      key = key.toString();
+
+      const myKeys = new Map();
+
+      // myKeys.set("119", (openPaymentModal.value = !openPaymentModal.value));
+      // myKeys.set("120", (openCashModal.value = !openCashModal.value));
+      console.log(myKeys.get(key) || "None");
+    };
+
+    getEvt(evt.keyCode);
+    // console.log(typeof evt.keyCode);
+    return "119" || "Did not reach";
+    // openModal(evt);
+    // switch (evt.keyCode) {
+    //   //ESC
+    //   case 27:
+    //     evt.preventDefault();
+    //     console.log("esc");
+    //     break;
+    //   //F1
+    //   case 112:
+    //     evt.preventDefault();
+    //     console.log("f1");
+    //     break;
+    //   default:
+    //     return;
+    // }
+  };
+
+  // END of F keys
+};

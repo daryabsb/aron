@@ -15,7 +15,8 @@ export default {
 </script>
 <template>
   <!-- page content -->
-  <div class="h-full flex flex-col bg-transparent border border-aronium-600">
+
+  <div class="bg-transparent border border-aronium-500">
     <!-- store menu -->
     <!-- <pos-right-nav></pos-right-nav> -->
     <search-input></search-input>
