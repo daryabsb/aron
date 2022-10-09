@@ -160,7 +160,7 @@
               <div class="relative flex justify-start w-full">
                 Total:
                 <input
-                  v-model="cashValue"
+                  v-model="cash"
                   type="text"
                   class="grow font-semibold text-3xl bg-inherit text-end focus:ring-0 border-0 border-b border-aronium-500 focus:border-aronium-sky-500"
                   ref="input"
@@ -169,7 +169,7 @@
                   <i class="fa fa-pencil"></i>
                 </span>
               </div>
-              <div class="flex justify-round w-full h-full">
+              <div class="flex justify-around w-full h-full">
                 <!-- MONEY -->
                 <div class="grid grid-cols-3 gap-2 mt-2">
                   <div v-for="money in moneys" :key="money">
@@ -183,13 +183,20 @@
                     </button>
                   </div>
                 </div>
-                <!-- <calculator></calculator> -->
-                <numericpad
-                  :onInput="onInput"
-                  :onDelete="onDelete"
-                  :onReset="onReset"
-                  :show="showKeypad"
-                />
+                <div class="h-72 w-96">
+                  <calculator></calculator>
+                </div>
+                <!-- <div class="flex flex-col justify-between w-72 h-80">
+                  <div class="h-20 border border-aronium-500">
+                    <span>{{ number }}</span>
+                  </div>
+                  <numericpad
+                    :on-input="onInput"
+                    :on-delete="onDelete"
+                    :on-reset="onReset"
+                    :show="showKeypad"
+                  />
+                </div> -->
               </div>
             </div>
           </div>
@@ -199,16 +206,17 @@
   </div>
 </template>
 <script>
-import { ref, onMounted, nextTick } from "vue";
+import { ref } from "vue";
 import {
   priceFormat,
   addQty,
   addCash,
+  useCash,
   useCart,
   useMoneys,
 } from "@/store/composables";
 
-import Calculator from "@/components/shared/Calculator.vue";
+import Calculator from "@/components/shared/calculator/Calculator.vue";
 import numericpad from "@/components/imported/numeric-keypad.vue";
 export default {
   components: {
@@ -222,7 +230,17 @@ export default {
     const maxLength = ref(6);
     const showKeypad = ref(true);
     const onInput = (key) => {
+      const myKeys = {
+        10: parseInt(","),
+        11: 0,
+        12: parseInt("."),
+      };
+      key = myKeys[key] || key;
+      if (key === 11) key = 0;
+      // number.value = (number.value + key).slice(0, maxLength.value);
       number.value = (number.value + key).slice(0, maxLength.value);
+
+      console.log(number.value);
     };
     const onDelete = () => {
       number.value = number.value.slice(0, number.value.length - 1);
@@ -232,10 +250,14 @@ export default {
     };
 
     const cart = useCart;
+    const cash = useCash;
     const isShowItems = ref(true);
     const moneys = useMoneys;
+    const inputMoney = ref(0);
 
     const cashValue = ref(0);
+    // const cashValue = computed(() => parseInt(number.value) + inputMoney.value);
+
     const addCashValue = (value) => {
       cashValue.value = value;
       addCash(value);
@@ -251,12 +273,14 @@ export default {
       onInput,
       onDelete,
       onReset,
+      inputMoney,
 
       isShowItems,
       showItems,
       priceFormat,
       addQty,
       cart,
+      cash,
       moneys,
       addCash,
       addCashValue,

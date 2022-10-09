@@ -55,3 +55,23 @@ export const GET_MONEYS = "GET_MONEYS";
 export const FETCH_CUSTOMERS = "FETCH_CUSTOMERS";
 export const COMMIT_CUSTOMERS = "COMMIT_CUSTOMERS";
 export const GET_CUSTOMERS = "GET_CUSTOMERS";
+
+// CALCULATOR CONSTANTS
+export const DIGITS = [
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  ".",
+  ",",
+];
+export const OPERATORS = ["/", "*", "+", "-"];
+export const RESULT_KEYS = ["=", "Enter"];
+export const CLEAR_KEYS = ["Escape"];
+export const ERASE_KEYS = ["Backspace"];
