@@ -124,6 +124,7 @@ export const updateKeyword = (keyword) => store.dispatch(ADD_KEYWORD, keyword);
 export const useCash = computed(() => store.getters.GET_CASH);
 export const useChange = computed(() => store.getters.GET_CHANGE);
 export const useCart = computed(() => store.getters.GET_CART);
+export const useMoneys = computed(() => store.getters.GET_MONEYS);
 export const receiptNo = computed(() => store.getters.GET_RECEIPT_NUMBER);
 export const receiptDate = computed(() => store.getters.GET_RECEIPT_DATE);
 export const tabProducts = computed(() => {

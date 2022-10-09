@@ -16,6 +16,7 @@ import {
   GET_RECEIPT_DATE,
   GET_TAB_PRODUCTS,
   GET_PRINTERS_LIST,
+  GET_MONEYS,
 } from "@/store/constants";
 
 const getters = {
@@ -57,6 +58,9 @@ const getters = {
   },
   [GET_CASH](state) {
     return state.cash;
+  },
+  [GET_MONEYS](state) {
+    return state.moneys;
   },
   [GET_CART_INDEX]: (state) => (product) =>
     state.cart.findIndex((p) => p.id === product.id),

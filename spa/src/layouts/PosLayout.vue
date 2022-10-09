@@ -85,22 +85,20 @@ window.onkeydown = (evt) => {
   const getEvt = (key) => {
     const F8 = "F8";
     const F9 = "F9";
-    const esc = "esc";
+    const Escape = "Escape";
     const defaultKey = "default";
 
     const myKeys = {
       [F8]: () => (openPaymentModal.value = true),
       [F9]: () => (openCashModal.value = true),
-      [esc]: () => {
+      [Escape]: () => {
         openCashModal.value = false;
         openPaymentModal.value = false;
       },
       [defaultKey]: () => {
-        openCashModal.value = false;
-        openPaymentModal.value = false;
+        "none";
       },
     };
-    console.log(openPaymentModal.value);
 
     // console.log(myKeys[key]);
     return myKeys[key] || myKeys[defaultKey];

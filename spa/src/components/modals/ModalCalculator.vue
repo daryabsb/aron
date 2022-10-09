@@ -18,7 +18,7 @@
             <div class="p-2 text-white text-right text-lg bg-aronium-800">
               = <span class="text-aronium-danger">2100</span>
             </div>
-
+            <!-- calculator -->
             <div class="flex flex-col mt-6">
               <div
                 v-for="item in calculator"
@@ -68,6 +68,7 @@
                 </div>
               </div>
             </div>
+            <!-- End calculator -->
           </div>
         </div>
       </div>
