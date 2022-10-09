@@ -1,7 +1,7 @@
 <template>
   <button
     :class="classes"
-    class="sm:h-24 p-4 rounded-lg focus:outline-none active:bg-gray-400"
+    class="h-16 px-8 p-3 rounded-sm focus:outline-none active:bg-gray-400"
     @keydown.enter.prevent
     @keydown.space.prevent
   >

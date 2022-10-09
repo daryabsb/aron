@@ -169,7 +169,7 @@
                   <i class="fa fa-pencil"></i>
                 </span>
               </div>
-              <div class="flex justify-around w-full h-full">
+              <div class="flex justify-around w-full h-full mt-8">
                 <!-- MONEY -->
                 <div class="grid grid-cols-3 gap-2 mt-2">
                   <div v-for="money in moneys" :key="money">
@@ -183,7 +183,7 @@
                     </button>
                   </div>
                 </div>
-                <div class="h-72 w-96">
+                <div class="">
                   <calculator></calculator>
                 </div>
                 <!-- <div class="flex flex-col justify-between w-72 h-80">
