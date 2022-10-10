@@ -48,7 +48,7 @@
       </div>
 
       <div
-        class="text-center bg-transparent text-aronium-white"
+        class="relative text-center bg-transparent text-aronium-white"
         :class="isShowItems ? 'w-4/5' : 'w-full'"
       >
         <div
@@ -59,10 +59,13 @@
             <i :class="isShowItems ? 'fa fa-times' : 'fa fa-circle'"></i>
           </span>
         </div>
+        <payment-popper-discount></payment-popper-discount>
         <div
           class="w-full h-full bg-aronium-700 border-b border-r border-aronium-500 text-left p-3"
         >
-          <div class="flex items-center justify-between w-full h-12 bg-inherit">
+          <div
+            class="relative flex items-center justify-between w-full h-12 bg-inherit"
+          >
             <div class="flex items-center h-full">
               <button
                 class="bg-aronium-danger py-4 px-12"
@@ -92,7 +95,7 @@
                 @click="$emit('close')"
               >
                 <span class="mr-2"><i class="fa fa-user"></i></span>
-                Discount
+                Customer
               </button>
             </div>
           </div>
@@ -231,12 +234,12 @@ import {
 
 import Calculator from "@/components/shared/calculator/Calculator.vue";
 import Moneys from "@/components/Cards/Moneys.vue";
-import numericpad from "@/components/imported/numeric-keypad.vue";
+import PaymentPopperDiscount from "@/components/poppers/PaymentPopperDiscount.vue";
 export default {
   components: {
     Calculator,
     Moneys,
-    numericpad,
+    PaymentPopperDiscount,
   },
   emits: ["close", "cashOut"],
   setup(props, context) {

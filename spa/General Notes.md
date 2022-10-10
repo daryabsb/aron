@@ -13,3 +13,7 @@ Moving average price is an inventory costing method wherein “the average price
 This, along with standard price, are two of the most popular methods for inventory costing.
 
 link: https://www.skuvault.com/blog/how-to-calculate-moving-average-price-and-why-its-important/#:~:text=Moving%20average%20price%20is%20an,popular%20methods%20for%20inventory%20costing.
+
+Essential API views:
+Document
+DocumentCategory

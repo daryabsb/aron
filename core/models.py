@@ -507,7 +507,6 @@ class PosPrinterSelection(models.Model):
     key = models.CharField(max_length=30, unique=True)
     printer_name = models.CharField(max_length=100)
     is_enabled = models.BooleanField(default=False)
-
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
