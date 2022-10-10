@@ -17,10 +17,12 @@ import {
   isShowModalReceipt,
 } from "@/store/composables";
 import ModalReceipt from "@/components/pos/ModalReceipt.vue";
+import Button from "@/components/shared/Button.vue";
 
 export default {
   components: {
     ModalReceipt,
+    Button,
   },
   setup() {
     const store = useStore();
@@ -98,7 +100,7 @@ export default {
       </button>
     </div>
 
-    <div class="grow text-aronium-white flex flex-col h-full overflow-auto">
+    <div class="text-aronium-white flex flex-col h-full overflow-auto">
       <!-- empty cart -->
 
       <div
@@ -168,7 +170,7 @@ export default {
           </div>
         </div>
 
-        <div class="flex-2 w-full overflow-auto">
+        <div class="flex-1 w-full overflow-auto">
           <template v-for="item in cart" :key="item.id">
             <div
               class="bg-aronium-700 border-y border-aronium-500 shadow w-full px-2 md:py-0 xl:py-1 flex justify-center"
@@ -336,12 +338,12 @@ export default {
         }}</span>
       </div>
       <hr class="border-dashed" />
-      <div class="w-full flex justify-between text-aronium-white">
+      <!-- <div class="w-full flex justify-between text-aronium-white">
         <span class="text-sm">Cash</span>
         <span class="text-2sm">{{ priceFormat(cash) }}</span>
-      </div>
+      </div> -->
 
-      <hr class="border-1" />
+      <!-- <hr class="border-1" />
       <div class="w-full flex justify-between text-aronium-white">
         <span class="text-sm">Change</span>
         <span
@@ -349,33 +351,39 @@ export default {
           :class="change < 0 ? 'text-aronium-danger' : 'text-inherit'"
           >{{ priceFormat(change) }}</span
         >
-      </div>
+      </div> -->
 
-      <div class="flex items-start p-1 h-32 border-t mt-3 border-aronium-600">
-        <button
-          class="h-12 mb-3 capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
+      <div class="flex items-start p-1 h-16 border-t mt-3 border-aronium-600">
+        <Button
+          class="w-1/3 mb-3 capitalize mr-1 items-center justify-center border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-4 py-1"
+          variant="red"
           @click="clear()"
         >
           <span class="mr-3">
-            <i class="fa fa-times fa-sm"></i>
+            <i class="fa fa-trash fa-sm"></i>
           </span>
           void order
-        </button>
-
-        <button
-          class="h-12 capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
-          :disabled="!submitable()"
-          @click="submit($event)"
+        </Button>
+        <Button
+          class="w-1/3 mb-3 capitalize mr-1 items-center justify-center border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-4 py-1"
+          variant="transRed"
+          @click="clear()"
         >
-          submit
-        </button>
-        <button
-          class="h-12 capitalize mr-1 border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
-          :disabled="!submitable()"
-          @click="submit($event)"
+          <span class="mr-3">
+            <i class="fa fa-lock fa-lg"></i>
+          </span>
+          Lock
+        </Button>
+        <Button
+          class="w-1/3 mb-3 capitalize mr-1 items-center justify-center border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-4 py-1"
+          variant="transGreen"
+          @click="clear()"
         >
-          submit
-        </button>
+          <span class="mr-1">
+            <i class="fa fa-repeat fa-lg"></i>
+          </span>
+          Repeat round
+        </Button>
       </div>
     </div>
     <!-- modal receipt -->

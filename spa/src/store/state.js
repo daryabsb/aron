@@ -13,7 +13,7 @@ const state = () => {
     firstTime: localStorage.getItem("first_time") === null,
     activeMenu: "pos",
     loadingSampleData: false,
-    moneys: [250, 500, 5000, 10000, 25000, 50000],
+    moneys: [250, 500, 1000, 5000, 10000, 25000, 50000, 100000],
     keyword: "",
     cart: [],
     cash: 0,

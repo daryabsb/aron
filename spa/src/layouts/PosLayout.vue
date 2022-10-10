@@ -3,11 +3,16 @@
     <!-- <modal-calculator></modal-calculator> -->
     <!-- noprint-area -->
     <div class="hide-print">
-      <cash-popper v-if="openCashModal" @close="cashModal"></cash-popper>
+      <cash-popper
+        v-if="openCashModal"
+        class="w-full"
+        @close="cashModal"
+      ></cash-popper>
       <payment-popper
         v-if="openPaymentModal"
         class="w-full"
         @close="paymentModal"
+        @cashOut="cashOut"
       ></payment-popper>
 
       <div
@@ -152,6 +157,11 @@ export default {
       openPaymentModal.value = !openPaymentModal.value;
     };
 
+    const cashOut = () => {
+      paymentModal();
+      cashModal();
+    };
+
     // PAYMENT
 
     // const openModal = (msg) => console.log(msg);
@@ -178,6 +188,7 @@ export default {
       // PAYMENT
       openPaymentModal,
       paymentModal,
+      cashOut,
     };
   },
 };

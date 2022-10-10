@@ -101,13 +101,14 @@
               <h1 class="mb-3 text-xl font-light">Payment Type</h1>
               <button
                 class="flex bg-aronium-inherit border border-aronium-500 py-4 w-44 justify-center text-sm my-1"
-                @click="$emit('close')"
+                @click="$emit('cashOut')"
               >
+                <!-- :disabled="submitable()" -->
                 Cash
               </button>
               <button
                 class="flex bg-aronium-inherit border border-aronium-500 py-4 w-44 justify-center text-sm my-1"
-                @click="$emit('close')"
+                @click="$emit('cashOut')"
               >
                 Credit Card
               </button>
@@ -149,13 +150,13 @@
                 Total:
                 <span
                   class="font-semibold text-2xl text-aronium-sky-500 ml-auto"
-                  >399.750</span
+                  >{{ priceFormat(getTotalPrice().value * 1.05) }}</span
                 >
               </div>
-              Number is : {{ number }}<br />
+              <!-- Number is : {{ number }}<br />
               <a href="#" @click="showKeypad = !showKeypad"
                 ><h4>Toggle Keypad</h4></a
-              >
+              > -->
 
               <div class="relative flex justify-start w-full">
                 Total:
@@ -169,9 +170,16 @@
                   <i class="fa fa-pencil"></i>
                 </span>
               </div>
-              <div class="flex justify-around w-full h-full mt-8">
+              <div class="flex justify-between w-full text-aronium-danger">
+                Change:
+                <span
+                  class="font-semibold text-2xl text-aronium-sky-500 ml-auto"
+                  >{{ priceFormat(change) }}</span
+                >
+              </div>
+              <div class="flex justify-around w-full h-full bottom-0">
                 <!-- MONEY -->
-                <div class="grid grid-cols-3 gap-2 mt-2">
+                <!-- <div class="grid grid-cols-3 gap-2 mt-2">
                   <div v-for="money in moneys" :key="money">
                     <button
                       class="bg-inherit rounded-lg shadow hover:shadow-lg focus:outline-none inline-block px-2 py-1 text-sm m-1"
@@ -182,10 +190,11 @@
                       </span>
                     </button>
                   </div>
-                </div>
-                <div class="">
-                  <calculator></calculator>
-                </div>
+                </div> -->
+                <moneys></moneys>
+
+                <calculator></calculator>
+
                 <!-- <div class="flex flex-col justify-between w-72 h-80">
                   <div class="h-20 border border-aronium-500">
                     <span>{{ number }}</span>
@@ -214,17 +223,23 @@ import {
   useCash,
   useCart,
   useMoneys,
+  getTotalPrice,
+  useChange,
+  submitable,
+  submit,
 } from "@/store/composables";
 
 import Calculator from "@/components/shared/calculator/Calculator.vue";
+import Moneys from "@/components/Cards/Moneys.vue";
 import numericpad from "@/components/imported/numeric-keypad.vue";
 export default {
   components: {
     Calculator,
+    Moneys,
     numericpad,
   },
-  emits: ["close"],
-  setup() {
+  emits: ["close", "cashOut"],
+  setup(props, context) {
     // Numeric pad
     const number = ref("");
     const maxLength = ref(6);
@@ -251,6 +266,7 @@ export default {
 
     const cart = useCart;
     const cash = useCash;
+    const change = useChange;
     const isShowItems = ref(true);
     const moneys = useMoneys;
     const inputMoney = ref(0);
@@ -264,6 +280,8 @@ export default {
     };
 
     const showItems = () => (isShowItems.value = !isShowItems.value);
+
+    const payTheBill = () => context.emit("cashOut");
 
     return {
       // Numeric pad
@@ -285,6 +303,12 @@ export default {
       addCash,
       addCashValue,
       cashValue,
+      getTotalPrice,
+      change,
+      submitable,
+      submit,
+
+      payTheBill,
     };
   },
 };

@@ -53,21 +53,21 @@
         </div>
       </li>
 
-      <li
-        class="relative font-light mr-2 last:mr-0"
-        @click="$emit('cashModal')"
-      >
-        <div
-          class="cursor-pointer hover:text-pink-700 w-32 h-16 flex flex-col items-center border border-aronium-500 py-1"
+      <li class="relative font-light mr-2 last:mr-0">
+        <button
+          :disabled="cart.length === 0"
+          class="cursor-pointer hover:text-pink-700 w-32 h-16 flex flex-col items-center border border-aronium-500 py-1 disabled:opacity-30 disabled:hover:text-aronium-600 disabled:cursor-auto"
+          @click="$emit('cashModal')"
         >
           <!-- @click="broadcastFunction(item)" -->
+
           <span class="text-3xl"
             ><h1 class="font-bold drop-shadow-lg">F9</h1></span
           >
           <span class="text-center text-sm font-semibold tracking-wider"
             >Cash</span
           >
-        </div>
+        </button>
       </li>
     </ul>
   </div>
@@ -75,6 +75,8 @@
 
 <script>
 import { posHeaderItems } from "@/composables/staticData";
+import { useCart } from "@/store/composables";
+import Button from "@/components/shared/Button.vue";
 
 // export default {
 // components: {
@@ -83,8 +85,10 @@ import { posHeaderItems } from "@/composables/staticData";
 // emits: ["open"],
 // setup(props, context) {
 export default {
+  components: { Button },
   emits: ["cashModal", "paymentModal"],
   setup() {
+    const cart = useCart;
     const broadcastFunction = (item) => {
       console.log(item);
     };
@@ -95,6 +99,7 @@ export default {
       posHeaderItems,
       broadcastFunction,
       openModal,
+      cart,
     };
   },
 };

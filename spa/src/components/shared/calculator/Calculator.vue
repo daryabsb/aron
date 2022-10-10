@@ -51,9 +51,9 @@
 import { onBeforeUnmount, onMounted } from "vue";
 import { useCalculate } from "@/composables/useCalculate";
 import { useKeyboard } from "@/composables/useKeyboard";
-import Button from "./Button.vue";
+import Button from "@/components/shared/Button.vue";
 import Screen from "./Screen.vue";
-import Grid from "./Grid.vue";
+import Grid from "@/components/shared/Grid.vue";
 import {
   DIGITS,
   OPERATORS,
