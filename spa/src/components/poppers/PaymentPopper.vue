@@ -21,6 +21,12 @@
           <div v-for="item in cart" :key="item.id">
             <div
               class="bg-aronium-700 border-b mb-2 border-aronium-500 shadow w-full px-2 md:py-0 xl:py-1 flex justify-center"
+              :class="
+                item.id === ID
+                  ? 'bg-aronium-sky-600  text-aronium-50 text-shadow-lg'
+                  : 'bg-inherit'
+              "
+              @click="selectItem(item)"
             >
               <!-- <img
                 :src="item.image"
@@ -59,7 +65,10 @@
             <i :class="isShowItems ? 'fa fa-times' : 'fa fa-circle'"></i>
           </span>
         </div>
-        <payment-popper-discount></payment-popper-discount>
+        <payment-popper-discount
+          :id="ID"
+          :item="cartItem"
+        ></payment-popper-discount>
         <div
           class="w-full h-full bg-aronium-700 border-b border-r border-aronium-500 text-left p-3"
         >
@@ -218,7 +227,8 @@
   </div>
 </template>
 <script>
-import { ref } from "vue";
+import { ref, reactive } from "vue";
+
 import {
   priceFormat,
   addQty,
@@ -284,6 +294,27 @@ export default {
 
     const showItems = () => (isShowItems.value = !isShowItems.value);
 
+    const ID = ref(null);
+    const cartItem = reactive({ id: 0, name: "" });
+    const selectItem = (item) => {
+      if (cartItem.id === 0) {
+        let { id, name } = item;
+        console.log("id", id);
+
+        cartItem.id = id;
+        ID.value = id;
+        // item.value.id =
+        // item.value.name = JSON.parse(JSON.stringify(cartItem.name));
+        cartItem.name = name;
+      } else {
+        console.log("check if null", cartItem.id === 0);
+        ID.value = null;
+        cartItem.id = 0;
+        cartItem.name = "";
+      }
+      return cartItem;
+    };
+
     const payTheBill = () => context.emit("cashOut");
 
     return {
@@ -310,6 +341,10 @@ export default {
       change,
       submitable,
       submit,
+
+      ID,
+      cartItem,
+      selectItem,
 
       payTheBill,
     };
