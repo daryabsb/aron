@@ -17,6 +17,8 @@ const state = () => {
     keyword: "",
     cart: [],
     cash: 0,
+    discount: "",
+    discountType: "%",
     change: 0,
     isShowModalReceipt: false,
     receiptNo: null,

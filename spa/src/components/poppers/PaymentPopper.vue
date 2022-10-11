@@ -66,8 +66,11 @@
           </span>
         </div>
         <payment-popper-discount
+          v-if="isDiscountPopper"
           :id="ID"
           :item="cartItem"
+          @input="addDiscount"
+          @cancel="isDiscountPopper = false"
         ></payment-popper-discount>
         <div
           class="w-full h-full bg-aronium-700 border-b border-r border-aronium-500 text-left p-3"
@@ -87,7 +90,7 @@
             <div class="flex items-center h-full">
               <button
                 class="flex bg-aronium-inherit border border-aronium-500 py-4 px-12 mr-1"
-                @click="$emit('close')"
+                @click="openDiscountPopper"
               >
                 <span class="mr-2"><i class="fa fa-percent"></i></span>
                 Discount
@@ -284,6 +287,12 @@ export default {
     const moneys = useMoneys;
     const inputMoney = ref(0);
 
+    const isDiscountPopper = ref(false);
+
+    const openDiscountPopper = () => {
+      isDiscountPopper.value = true;
+    };
+
     const cashValue = ref(0);
     // const cashValue = computed(() => parseInt(number.value) + inputMoney.value);
 
@@ -313,6 +322,12 @@ export default {
         cartItem.name = "";
       }
       return cartItem;
+    };
+
+    const addedDiscount = ref("");
+
+    const addDiscount = (data) => {
+      addedDiscount.value = data;
     };
 
     const payTheBill = () => context.emit("cashOut");
@@ -345,8 +360,11 @@ export default {
       ID,
       cartItem,
       selectItem,
+      addDiscount,
 
       payTheBill,
+      openDiscountPopper,
+      isDiscountPopper,
     };
   },
 };

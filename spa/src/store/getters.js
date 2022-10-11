@@ -17,6 +17,7 @@ import {
   GET_TAB_PRODUCTS,
   GET_PRINTERS_LIST,
   GET_MONEYS,
+  GET_DISCOUNT,
 } from "@/store/constants";
 
 const getters = {
@@ -47,8 +48,20 @@ const getters = {
   [GET_ITEMS_COUNT](state) {
     return state.cart.reduce((count, item) => count + item.qty, 0);
   },
+  [GET_DISCOUNT](state) {
+    return state.discount + state.discountType;
+  },
   [GET_TOTAL_PRICE](state) {
-    return state.cart.reduce((total, item) => total + item.qty * item.price, 0);
+    let total, totalPrice, discount;
+    if (state.discountType === "%") {
+      discount = parseInt(state.discount) / 100;
+      totalPrice =
+        state.cart.reduce((total, item) => total + item.qty * item.price, 0) *
+        discount;
+    }
+
+    // return state.cart.reduce((total, item) => total + item.qty * item.price, 0);
+    return totalPrice;
   },
   [SUBMITABLE](state) {
     return state.change >= 0 && state.cart.length > 0;

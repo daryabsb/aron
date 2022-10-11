@@ -10,7 +10,7 @@ import {
   COMMIT_PRODUCTS,
   COMMIT_PRODUCT_GROUPS,
   COMMIT_CUSTOMERS,
-  ADD_PRODUCT_GROUP,
+  ADD_DISCOUNT,
   COMMIT_TAB_PRODUCTS,
   ADD_QUANTITY,
   ADD_CASH,
@@ -34,6 +34,10 @@ const mutations = {
   },
   [COMMIT_PRODUCTS](state, payload) {
     state.products = payload;
+  },
+  [ADD_DISCOUNT](state, payload) {
+    state.discount = payload.discount;
+    state.discountType = payload.discountType;
   },
   // [COMMIT_ALL_PRODUCT_GROUPS](state, payload) {
   //   payload.forEach((el) => {

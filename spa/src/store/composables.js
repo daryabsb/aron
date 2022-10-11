@@ -19,6 +19,7 @@ import {
   ADD_TO_CART,
   COMMIT_TAB_PRODUCTS,
   FETCH_PRINTERS_LIST,
+  ADD_DISCOUNT,
 } from "@/store/constants";
 import store from "@/store";
 
@@ -140,6 +141,10 @@ export const isShowModalReceipt = computed(
 export const addToCart = (product) => store.dispatch(ADD_TO_CART, product);
 export const findCartIndex = (product) => {
   return store.getters.GET_CART_INDEX(product);
+};
+export const addDiscount = (payload) => {
+  console.log(payload.discount);
+  store.commit(ADD_DISCOUNT, payload);
 };
 export const addToCarts = (product) => {
   store.dispatch.ADD_TO_CART(product);

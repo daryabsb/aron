@@ -3,7 +3,7 @@
     rows="4"
     cols="4"
     gap="2"
-    class="shadow-2xl h-full w-full sm:my-4 p-3 pt-8 sm:rounded-sm bg-inherit border border-aronium-500"
+    class="h-full w-full sm:my-4 p-3 pt-8 sm:rounded-sm bg-inherit border border-aronium-500"
   >
     <Button
       v-for="money in moneys"

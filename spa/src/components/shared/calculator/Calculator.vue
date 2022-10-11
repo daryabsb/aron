@@ -3,7 +3,7 @@
     rows="4"
     cols="6"
     gap="2"
-    class="shadow-2xl h-full w-full sm:my-4 p-3 pt-8 sm:rounded-sm bg-inherit border border-aronium-500"
+    class="h-full w-full sm:my-4 p-3 pt-8 sm:rounded-sm bg-inherit border border-aronium-500"
   >
     <!-- class="shadow-2xl w-full sm:max-w-md sm:h-auto sm:my-3 p-3 pt-12 sm:rounded-sm bg-inherit border border-aronium-500" -->
     <Screen :text="memory" :error="error" class="col-span-6" />

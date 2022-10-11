@@ -25,6 +25,9 @@ export const GET_PRINTERS_LIST = "GET_PRINTERS_LIST";
 // POS
 export const GET_CART = "GET_CART";
 export const ADD_TO_CART = "ADD_TO_CART";
+export const ADD_DISCOUNT = "ADD_DISCOUNT";
+export const GET_DISCOUNT = "GET_DISCOUNT";
+
 export const FIND_CART_INDEX = "FIND_CART_INDEX";
 export const BEEP = "BEEP";
 export const ADD_QUANTITY = "ADD_QUANTITY";
