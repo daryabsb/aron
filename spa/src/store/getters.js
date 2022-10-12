@@ -20,6 +20,8 @@ import {
   GET_DISCOUNT,
 } from "@/store/constants";
 
+import { getItemTotalPrice } from "@/store/composables";
+
 const getters = {
   [GET_USER](state) {
     return state.user;
@@ -52,7 +54,11 @@ const getters = {
     return state.discount + state.discountType;
   },
   [GET_TOTAL_PRICE](state) {
-    return state.cart.reduce((total, item) => total + item.qty * item.price, 0);
+    // return state.cart.reduce((total, item) => total + item.qty * item.price, 0);
+    return state.cart.reduce(
+      (total, item) => total + getItemTotalPrice(item).value,
+      0
+    );
   },
   [SUBMITABLE](state) {
     return state.change >= 0 && state.cart.length > 0;

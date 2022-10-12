@@ -43,8 +43,7 @@
 
               <div>
                 <div class="flex items-center">
-                  {{ item.qty }} <i class="fa fa-times mx-6"></i>
-                  {{ priceFormat(item.price) }}
+                  {{ priceFormat(getItemTotalPrice(item).value) }}
                 </div>
               </div>
             </div>
@@ -68,8 +67,9 @@
         </div>
         <payment-popper-discount
           v-if="isDiscountPopper"
-          :item="cartItem"
-          @cancel="isDiscountPopper = false"
+          :id="ID"
+          :items="cart"
+          @cancel="closeDiscountPopper"
         ></payment-popper-discount>
         <div
           class="w-full h-full bg-aronium-700 border-b border-r border-aronium-500 text-left p-3"
@@ -239,6 +239,7 @@ import {
   useCart,
   useMoneys,
   getTotalPrice,
+  getItemTotalPrice,
   useChange,
   submitable,
   submit,
@@ -265,7 +266,12 @@ export default {
     const isDiscountPopper = ref(false);
 
     const openDiscountPopper = () => {
+      ID.value = null;
       isDiscountPopper.value = true;
+    };
+    const closeDiscountPopper = () => {
+      ID.value = null;
+      isDiscountPopper.value = false;
     };
 
     const cashValue = ref(0);
@@ -282,11 +288,11 @@ export default {
     const cartItem = ref(null);
 
     const selectItem = (item) => {
-      if (!cartItem.value) {
-        cartItem.value = item;
+      if (!ID.value) {
+        ID.value = item.id;
+      } else if (ID.value !== item.id) {
         ID.value = item.id;
       } else {
-        cartItem.value = null;
         ID.value = null;
       }
     };
@@ -307,6 +313,7 @@ export default {
       addCashValue,
       cashValue,
       getTotalPrice,
+      getItemTotalPrice,
       change,
       submitable,
       submit,
@@ -317,6 +324,7 @@ export default {
 
       openDiscountPopper,
       isDiscountPopper,
+      closeDiscountPopper,
     };
   },
 };

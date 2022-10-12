@@ -12,7 +12,9 @@ import {
   useCart,
   updateChange,
   addQty,
+  getCartIndex,
   getTotalPrice,
+  getItemTotalPrice,
   submit,
   isShowModalReceipt,
 } from "@/store/composables";
@@ -51,7 +53,9 @@ export default {
       orderID,
       ID,
       addQty,
+      getCartIndex,
       getTotalPrice,
+      getItemTotalPrice,
       getItemsCount,
       addCash,
       updateCash,
@@ -188,14 +192,26 @@ export default {
               /> -->
               <div class="flex-grow">
                 <h5
-                  class="text-sm subpixel-antialiased tracking-wider font-semibold"
+                  class="relative text-sm subpixel-antialiased tracking-wider font-semibold w-32"
                 >
-                  {{ item.name }}
+                  <span>{{ item.name }}</span>
+                  <div
+                    v-if="item.discount"
+                    class="flex absolute right-0 top-0 w-6 h-6 text-sm font-semibold text-center text-aronium-danger"
+                  >
+                    <span>-</span>
+                    <span>{{ item.discount }}</span>
+                    <span>{{ item.discountType }}</span>
+                  </div>
                 </h5>
+
                 <p class="text-xs block mt-1 opacity-75">
-                  <span>#{{ item.id }} : {{ priceFormat(item.price) }}</span>
+                  <span
+                    >#{{ item.id }} :
+                    {{ priceFormat(getItemTotalPrice(item).value) }}</span
+                  >
                   <span class="md:hidden xl:inline-block"
-                    >( Subtotal={{ item.price * item.qty }}
+                    >( Subtotal={{ getItemTotalPrice(item) }}
                     )
                   </span>
                 </p>

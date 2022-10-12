@@ -61,24 +61,12 @@
               </button>
             </div>
           </div>
-          <div class="relative mt-6 text-xl">
-            <label class="w-32">
-              <span
-                class="absolute bottom-3 right-4"
-                :class="
-                  tabID === 2 && item === null
-                    ? 'opacity-50 select-none'
-                    : 'opacity-100'
-                "
-                :disabled="tabID === 2 && item === null"
-                >{{ discountType }}</span
-              >
-            </label>
+          <div class="flex justify-center relative mt-6 text-xl w-full">
             <input
-              id="discount-input"
-              v-model="discount"
+              id="cart-discount-input"
+              v-model="cartInputValue"
               type="text"
-              class="bg-inherit border-0 border-b-2 text-right pb-3 pr-10 items-center focus:outline-none focus:ring-0"
+              class="relative bg-inherit border-0 border-b-2 text-right pb-3 pr-10 items-center focus:outline-none focus:ring-0"
               :class="
                 tabID === 2 && item === null
                   ? 'opacity-50 text-opacity-50 select-none'
@@ -87,51 +75,9 @@
               :disabled="tabID === 2 && item === null"
               @input="addCartDiscount()"
             />
-          </div>
-        </div>
-
-        <div
-          v-if="tabID === 2 && item === null"
-          class="text-xl font-light w-full h-full"
-        >
-          Please select an item to add Item discount
-        </div>
-        <div
-          v-if="tabID === 2 && item !== null"
-          class="text-xl font-light w-full h-full"
-        >
-          This is a discount for " {{ item.name }} "
-          <div class="flex flex-col items-center">
-            <div class="flex justify-center mt-4 w-full height-16">
-              <button
-                class="rounded-l-lg w-20 bg-inherit border border-aronium-500"
-                :class="
-                  discountType === '%'
-                    ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
-                    : 'bg-inherit  border-aronium-500'
-                "
-                @click="toggleDiscountType('%')"
-              >
-                %
-              </button>
-              <button
-                class="rounded-r-lg w-20 border"
-                :class="
-                  discountType === '$'
-                    ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
-                    : 'bg-inherit  border-aronium-500'
-                "
-                @click="toggleDiscountType('$')"
-              >
-                $
-              </button>
-            </div>
-          </div>
-
-          <div class="relative mt-6 text-xl">
-            <label class="w-32">
+            <label class="absolute ml-48 mt-2">
               <span
-                class="absolute bottom-3 right-4"
+                class="text-aronium-white"
                 :class="
                   tabID === 2 && item === null
                     ? 'opacity-50 select-none'
@@ -141,21 +87,97 @@
                 >{{ discountType }}</span
               >
             </label>
-            <input
-              id="discount-input"
-              v-model="discount"
-              type="text"
-              class="bg-inherit border-0 border-b-2 text-right pb-3 pr-10 items-center focus:outline-none focus:ring-0"
-              :class="
-                tabID === 2 && item === null
-                  ? 'opacity-50 text-opacity-50 select-none'
-                  : 'opacity-100'
-              "
-              :disabled="tabID === 2 && item === null"
-              @input="addItemDiscount(item)"
-            />
           </div>
         </div>
+
+        <div
+          v-if="tabID === 2 && id === null"
+          class="text-xl font-light w-full h-full"
+        >
+          Please select an item to add Item discount
+        </div>
+        <div v-if="tabID === 2 && id !== null">
+          <div v-for="item in items" :key="item.id">
+            <div v-if="item.id === id">
+              <div class="text-xl font-light w-full h-full">
+                This is a discount for " {{ item.name }} "
+                <div class="flex flex-col items-center">
+                  <div class="flex justify-center mt-4 w-full height-16">
+                    <button
+                      class="rounded-l-lg w-20 bg-inherit border border-aronium-500"
+                      :class="
+                        discountType === '%'
+                          ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
+                          : 'bg-inherit  border-aronium-500'
+                      "
+                      @click="toggleDiscountType('%')"
+                    >
+                      %
+                    </button>
+                    <button
+                      class="rounded-r-lg w-20 border"
+                      :class="
+                        discountType === '$'
+                          ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
+                          : 'bg-inherit  border-aronium-500'
+                      "
+                      @click="toggleDiscountType('$')"
+                    >
+                      $
+                    </button>
+                  </div>
+                </div>
+
+                <div class="w-full flex justify-center mt-6 text-xl">
+                  <!-- <label class="w-32">
+                    <span
+                      class="absolute bottom-3 right-4"
+                      :class="
+                        tabID === 2 && id === null
+                          ? 'opacity-50 select-none'
+                          : 'opacity-100'
+                      "
+                      :disabled="tabID === 2 && id === null"
+                      >{{ discountType }}</span
+                    >
+                  </label> -->
+                  <input
+                    :id="id"
+                    v-model="itemInputValue"
+                    type="text"
+                    class="relative bg-inherit border-0 border-b-2 text-right pb-3 pr-10 items-center focus:outline-none focus:ring-0"
+                    :class="
+                      tabID === 2 && id === null
+                        ? 'opacity-50 text-opacity-50 select-none'
+                        : 'opacity-100'
+                    "
+                    :disabled="tabID === 2 && id === null"
+                    @input="addItemDiscount(id)"
+                  />
+                  <label class="absolute ml-48 mt-2">
+                    <span
+                      class="text-aronium-white"
+                      :class="
+                        tabID === 2 && id === null
+                          ? 'opacity-50 select-none'
+                          : 'opacity-100'
+                      "
+                      :disabled="tabID === 2 && item === null"
+                      >{{ discountType }}</span
+                    >
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div
+          v-if="tabID === 2 && item === null"
+          class="text-xl font-light w-full h-full"
+        >
+          Please select an item to add Item discount
+        </div> -->
       </div>
     </div>
 
@@ -165,9 +187,14 @@
           <span>Subtotal: {{ priceFormat(getTotalPrice().value) }}</span>
         </div>
         <div>
-          <span>Total discount: {{ totalDiscount }}</span>
+          <span>Total discount: {{ priceFormat(totalDiscount) }}</span>
         </div>
-        <div><span>Total: 4,308.75</span></div>
+        <div>
+          <span
+            >Total:
+            {{ priceFormat(getTotalPrice().value - totalDiscount) }}</span
+          >
+        </div>
       </div>
       <div class="h-1/2 flex justify-between w-full p-1">
         <button
@@ -208,26 +235,38 @@ export default {
   components: {},
   props: {
     id: { type: Number, default: null },
-    item: { type: Object, default: null },
+    items: { type: Object, default: null },
   },
   emits: ["input", "cancel"],
-  setup() {
-    const selectInputText = () => {
-      const discountInput = document.getElementById("discount-input");
-      discountInput.focus();
-      discountInput.setSelectionRange(0, 3);
+  setup(props) {
+    const selectCartInputText = () => {
+      const cartDiscountInput = document.getElementById("cart-discount-input");
+      // const itemDiscountInput = document.getElementById("item-discount-input");
+      cartDiscountInput.focus();
+      // discountInput.focus();
+      cartDiscountInput.setSelectionRange(0, 3);
     };
-    onMounted(selectInputText);
+    const selectItemInputText = (id) => {
+      const itemDiscountInput = document.getElementById(id);
+      if (!itemDiscountInput) return;
+      itemDiscountInput.focus();
+      itemDiscountInput.setSelectionRange(0, 3);
+    };
+
+    onMounted(selectCartInputText);
     const tabID = ref(1);
-    const discount = ref("0");
+    // const discount = ref("0");
     const discountType = ref("%");
 
     const toggleDiscountType = async (type) => {
+      cartInputValue.value = 0;
       discountType.value = type;
-      discount.value = "0";
+      // discount.value = "0";
       await nextTick();
-      selectInputText();
+      if (tabID.value === 1) selectCartInputText();
+      if (tabID.value === 2 && props.id !== null) selectItemInputText(props.id);
     };
+
     const cartDiscount = async () => {
       tabID.value = 1;
       await nextTick();
@@ -242,48 +281,75 @@ export default {
     const totalItemDiscount = ref([]);
     const totalAfterCartDiscount = ref(0);
 
-    const totalDiscount = computed(
-      () =>
-        totalAfterCartDiscount.value +
-        totalItemDiscount.value.reduce((total, item) => total + item.value, 0)
-    );
+    // TOTAL ORDER DISCOUNT CALCULATIONS
+    const totalOrderDiscount = ref(0);
+    const cartInputValue = ref(0);
 
     const addCartDiscount = () => {
       if (discountType.value == "%") {
-        totalAfterCartDiscount.value = 0;
-        totalAfterCartDiscount.value =
-          (getTotalPrice().value * parseInt(discount.value)) / 100;
+        let discount = parseInt(cartInputValue.value) / 100;
+        totalOrderDiscount.value = getTotalPrice().value * discount;
         return;
       }
       if (discountType.value == "$") {
-        totalAfterCartDiscount.value = 0;
-        totalAfterCartDiscount.value = parseInt(discount.value);
+        console.log(cartInputValue.value);
+        let discount = parseInt(cartInputValue.value);
+        totalOrderDiscount.value = discount;
         return;
       }
     };
-    const addItemDiscount = (item) => {
-      if (!item) return;
 
-      let singleItemDiscount = null;
-      const itemIndex = totalItemDiscount.value.indexOf(item.id);
-      if (!itemIndex) {
-        singleItemDiscount.item = item.id;
+    // EACH ORDER ITEM DISCOUNT CALCULATIONS
+    // const totalItemsDiscount = ref(0);
+    const totalItemsDiscount = computed(() => {
+      return perItemsDiscount.value.reduce(
+        (total, item) => total + item.discount,
+        0
+      );
+    });
+    const perItemsDiscount = ref([]);
+    const perItemDiscount = ref({ id: null, discount: 0 });
+    const itemInputValue = ref(0);
+    const addItemDiscount = (id) => {
+      if (!id) return;
+      // console.log("id", id);
+      // const itemIndex = perItemsDiscount.value.indexOf(item);.map(e => e.hello).indexOf('stevie')
+      const itemIndex = perItemsDiscount.value
+        .map((item) => item.id)
+        .indexOf(id);
+
+      if (itemIndex === -1) {
+        //     singleItemDiscount.item = item.id;
         if (discountType.value == "%") {
-          singleItemDiscount.value =
-            item.price * item.qty * parseInt(discount.value);
-          totalItemDiscount.value.push(singleItemDiscount);
+          let discount = parseInt(itemInputValue.value) / 100;
+          perItemDiscount.value.id = id;
+          perItemDiscount.value.discount = discount;
+          //         item.price * item.qty * parseInt(discount.value);
+          perItemsDiscount.value.push(perItemDiscount.value);
           return;
         }
         if (discountType.value == "$") {
-          singleItemDiscount.value = parseInt(discount.value);
-          totalItemDiscount.value.push(singleItemDiscount);
-          return;
+          //       singleItemDiscount.value = parseInt(discount.value);
+          //       totalItemDiscount.value.push(singleItemDiscount);
+          //       return;
         }
+      } else {
+        let item = perItemsDiscount.value[itemIndex];
+        if (discountType.value == "%") {
+          let discount = parseInt(itemInputValue.value) / 100;
+          item.discount += discount;
+        }
+        console.log("itemIndex", itemIndex);
       }
-      console.log(totalItemDiscount.value.length);
     };
 
-    const clearDiscounts = () => (discount.value = "0");
+    // TOTAL DISCOUNT CALCULATIONS
+
+    const totalDiscount = computed(
+      () => totalOrderDiscount.value + totalItemsDiscount.value
+    );
+
+    // const clearDiscounts = () => (discount.value = "0");
 
     return {
       totalItemDiscount,
@@ -294,12 +360,13 @@ export default {
       itemDiscount,
       toggleDiscountType,
       discountType,
-      discount,
-      clearDiscounts,
+      // clearDiscounts,
       priceFormat,
       getTotalPrice,
       addCartDiscount,
       addItemDiscount,
+      cartInputValue,
+      itemInputValue,
       totalDiscount,
     };
   },

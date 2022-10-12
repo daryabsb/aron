@@ -149,8 +149,19 @@ export const addDiscount = (payload) => {
 export const addToCarts = (product) => {
   store.dispatch.ADD_TO_CART(product);
 };
+export const getCartIndex = (item) =>
+  computed(() => store.getters.GET_CART_INDEX(item));
 export const getTotalPrice = () => {
   return computed(() => store.getters.GET_TOTAL_PRICE);
+};
+export const getItemTotalPrice = (item) => {
+  let discount;
+  if (item.discountType === "%") {
+    discount = item.price * item.qty * (item.discount / 100);
+  } else {
+    discount = item.discount;
+  }
+  return computed(() => item.price * item.qty - discount);
 };
 export const getItemsCount = () => {
   return computed(() => store.getters.GET_ITEMS_COUNT);

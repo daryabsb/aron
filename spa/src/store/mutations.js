@@ -78,6 +78,7 @@ const mutations = {
     const { product, getters } = payload;
     const index = getters.GET_CART_INDEX(product);
     // console.log("index", index);
+
     if (index === -1) {
       state.cart.push({
         id: product.id,
@@ -88,6 +89,8 @@ const mutations = {
         measurement: product.measurement_unit,
         option: product.option,
         qty: 1,
+        discount: 0,
+        discountType: "%",
       });
     } else {
       state.cart[index].qty += 1;
