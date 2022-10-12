@@ -326,15 +326,13 @@ export default {
       </div>
       <div class="mb-1 pt-2 w-full flex justify-between text-aronium-white">
         <span class="text-sm">Tax</span>
-        <span class="text-2sm">{{
-          priceFormat(getTotalPrice().value * 0.05)
-        }}</span>
+        <span class="text-2sm">0</span>
       </div>
       <hr class="border-dashed" />
       <div class="w-full flex justify-between text-aronium-white my-1">
         <span class="text-lg text-pink-400 uppercase">Total</span>
         <span class="text-lg text-pink-400">{{
-          priceFormat(getTotalPrice().value * 1.05)
+          priceFormat(getTotalPrice().value)
         }}</span>
       </div>
       <hr class="border-dashed" />

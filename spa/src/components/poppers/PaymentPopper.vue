@@ -43,6 +43,7 @@
 
               <div>
                 <div class="flex items-center">
+                  {{ item.qty }} <i class="fa fa-times mx-6"></i>
                   {{ priceFormat(item.price) }}
                 </div>
               </div>
@@ -67,9 +68,7 @@
         </div>
         <payment-popper-discount
           v-if="isDiscountPopper"
-          :id="ID"
           :item="cartItem"
-          @input="addDiscount"
           @cancel="isDiscountPopper = false"
         ></payment-popper-discount>
         <div
@@ -230,7 +229,7 @@
   </div>
 </template>
 <script>
-import { ref, reactive } from "vue";
+import { ref } from "vue";
 
 import {
   priceFormat,
@@ -255,31 +254,7 @@ export default {
     PaymentPopperDiscount,
   },
   emits: ["close", "cashOut"],
-  setup(props, context) {
-    // Numeric pad
-    const number = ref("");
-    const maxLength = ref(6);
-    const showKeypad = ref(true);
-    const onInput = (key) => {
-      const myKeys = {
-        10: parseInt(","),
-        11: 0,
-        12: parseInt("."),
-      };
-      key = myKeys[key] || key;
-      if (key === 11) key = 0;
-      // number.value = (number.value + key).slice(0, maxLength.value);
-      number.value = (number.value + key).slice(0, maxLength.value);
-
-      console.log(number.value);
-    };
-    const onDelete = () => {
-      number.value = number.value.slice(0, number.value.length - 1);
-    };
-    const onReset = () => {
-      number.value = "";
-    };
-
+  setup() {
     const cart = useCart;
     const cash = useCash;
     const change = useChange;
@@ -304,42 +279,21 @@ export default {
     const showItems = () => (isShowItems.value = !isShowItems.value);
 
     const ID = ref(null);
-    const cartItem = reactive({ id: 0, name: "" });
+    const cartItem = ref(null);
+
     const selectItem = (item) => {
-      if (cartItem.id === 0) {
-        let { id, name } = item;
-        console.log("id", id);
-
-        cartItem.id = id;
-        ID.value = id;
-        // item.value.id =
-        // item.value.name = JSON.parse(JSON.stringify(cartItem.name));
-        cartItem.name = name;
+      if (!cartItem.value) {
+        cartItem.value = item;
+        ID.value = item.id;
       } else {
-        console.log("check if null", cartItem.id === 0);
+        cartItem.value = null;
         ID.value = null;
-        cartItem.id = 0;
-        cartItem.name = "";
       }
-      return cartItem;
     };
-
-    const addedDiscount = ref("");
-
-    const addDiscount = (data) => {
-      addedDiscount.value = data;
-    };
-
-    const payTheBill = () => context.emit("cashOut");
 
     return {
       // Numeric pad
-      number,
-      maxLength,
-      showKeypad,
-      onInput,
-      onDelete,
-      onReset,
+
       inputMoney,
 
       isShowItems,
@@ -360,9 +314,7 @@ export default {
       ID,
       cartItem,
       selectItem,
-      addDiscount,
 
-      payTheBill,
       openDiscountPopper,
       isDiscountPopper,
     };

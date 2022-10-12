@@ -52,16 +52,7 @@ const getters = {
     return state.discount + state.discountType;
   },
   [GET_TOTAL_PRICE](state) {
-    let total, totalPrice, discount;
-    if (state.discountType === "%") {
-      discount = parseInt(state.discount) / 100;
-      totalPrice =
-        state.cart.reduce((total, item) => total + item.qty * item.price, 0) *
-        discount;
-    }
-
-    // return state.cart.reduce((total, item) => total + item.qty * item.price, 0);
-    return totalPrice;
+    return state.cart.reduce((total, item) => total + item.qty * item.price, 0);
   },
   [SUBMITABLE](state) {
     return state.change >= 0 && state.cart.length > 0;
