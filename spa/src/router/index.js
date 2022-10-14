@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import HomeLayout from "@/layouts/HomeLayout.vue";
+// import HomeLayout from "@/layouts/HomeLayout.vue";
 import PosLayout from "@/layouts/PosLayout.vue";
-import ProductsAdminLayout from "@/components/temporary/ProductsAdminLayout.vue";
+// import ProductsAdminLayout from "@/components/temporary/ProductsAdminLayout.vue";
 import ManagementLayout from "@/layouts/ManagementLayout.vue";
 // import Auth from "@/layouts/Auth.vue";
 

@@ -1,3 +1,4 @@
+import { uuid } from "vue3-uuid";
 import {
   beep,
   clearSound,
@@ -23,6 +24,7 @@ import {
   COMMIT_TO_CART,
   CLOSE_MODAL_RECEIPT,
   COMMIT_PRINTERS_LIST,
+  SUBMIT_CART,
 } from "@/store/constants";
 
 const mutations = {
@@ -74,26 +76,50 @@ const mutations = {
     state.cart.reduce((total, item) => total + item.qty * item.price, 0);
   },
   // [FIND_CART_INDEX](state, product) {},
+  [SUBMIT_CART](state) {
+    const order = {};
+    order.number = uuid.v4();
+    order.discount = 0;
+    order.discountType = 0;
+    order.items = [];
+    order.tax = 0;
+    order.total = 0;
+
+    console.log(state.cart);
+    state.cart.push(order);
+  },
   [COMMIT_TO_CART](state, payload) {
-    const { product, getters } = payload;
-    const index = getters.GET_CART_INDEX(product);
+    const { cartItem, getters } = payload;
+    const product = cartItem.value.product;
+
+    if (state.cart.length === -1) {
+      const cart = {};
+      cart.id = state.cart.items.length + 1;
+      cart.discount = 0;
+      cart.discount_type = 0;
+      cart.items = [];
+      state.cart.push(cart);
+    }
+
+    const index = getters.GET_CART_INDEX(cartItem.value.product);
     // console.log("index", index);
 
     if (index === -1) {
-      state.cart.push({
-        id: product.id,
-        image: product.image,
-        name: product.name,
-        price: product.price,
-        currency: product.currency,
-        measurement: product.measurement_unit,
-        option: product.option,
-        qty: 1,
+      state.cart.items = [];
+      state.cart.items.push({
+        id: state.cart.items.length + 1,
+        product: cartItem.value.product,
+        price: cartItem.price,
+        quantity: cartItem.quantity,
+        is_locked: false,
         discount: 0,
-        discountType: "%",
+        discountType: 0,
+        voide_by: 0,
+        comment: "",
+        bundle: "",
       });
     } else {
-      state.cart[index].qty += 1;
+      state.cart.items[index].quantity += 1;
     }
     beep();
     updateChange();

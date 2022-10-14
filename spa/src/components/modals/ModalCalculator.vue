@@ -1,73 +1,62 @@
 <template>
   <modal-small>
     <template #modal-content>
-      <div class="relative h-screen w-screen flex items-center justify-center">
-        <div class="h-screen w-screen absolute bg-aronium-900 opacity-70"></div>
-        <div
-          class="overflow-hidden z-10 mt-3 shadow-lg mb-2 bg-aronium-900 border"
-        >
-          <div class="flex flex-col mt-3 px-3">
-            <div class="p-5 text-white text-center text-lg bg-inherit">
-              <span class="text-aronium-danger">Calcu</span>lator
-            </div>
-            <div
-              class="pt-3 px-3 pb-0 text-white text-right text-lg bg-aronium-800"
+      <div class="relative flex items-center justify-center">
+        <div class="w-screen h-screen bg-aronium-800 bg-opacity-50">
+          <div
+            class="w-fit h-fit mx-auto my-52 overflow-hidden z-10 shadow-lg shadow-transparent bg-aronium-800 border"
+          >
+            <Grid
+              rows="4"
+              cols="6"
+              gap="2"
+              class="h-full w-full sm:my-4 p-3 pt-8 sm:rounded-sm bg-inherit border border-aronium-500"
             >
-              2000 + 100
-            </div>
-            <div class="p-2 text-white text-right text-lg bg-aronium-800">
-              = <span class="text-aronium-danger">2100</span>
-            </div>
-            <!-- calculator -->
-            <div class="flex flex-col mt-6">
-              <div
-                v-for="item in calculator"
-                :key="item"
-                class="flex items-stretch my-1 bg-aronium-900 h-12"
+              <!-- class="shadow-2xl w-full sm:max-w-md sm:h-auto sm:my-3 p-3 pt-12 sm:rounded-sm bg-inherit border border-aronium-500" -->
+              <Screen
+                :header="type"
+                :text="memory"
+                :error="error"
+                class="col-span-6"
+              />
+
+              <!-- <Button variant="transRed" class="col-span-2" @click="clear">Clear</Button> -->
+              <Button variant="transRed" @click="clear">Clear</Button>
+              <Button variant="transGreen" @click="addOperator('-')">-</Button>
+              <Button variant="transGreen" @click="addOperator('*')">*</Button>
+              <Button
+                v-for="number in ['7', '8', '9']"
+                :key="number"
+                variant="transparent"
+                @click="addDigit(number)"
               >
-                <div
-                  v-for="num in item.row"
-                  :key="num"
-                  class="p-1 py-2 justify-center flex items-center text-white text-lg font-normal"
-                >
-                  <div
-                    class="h-12 w-16 flex items-center bg-aronium-800 justify-center shadow-lg border border-aronium-700 hover:border hover:border-gray-500 focus:outline-none"
-                  >
-                    {{ num.toString() }}
-                  </div>
-                </div>
-                <div
-                  v-if="item.hasIcon"
-                  class="p-1 py-2 justify-center flex items-center text-white text-lg font-normal"
-                >
-                  <div
-                    class="h-12 w-16 flex items-center bg-aronium-800 justify-center shadow-lg border border-aronium-700 hover:border hover:border-gray-500 focus:outline-none"
-                  >
-                    <i :class="item.icon"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="flex items-stretch my-1 mb-4 bg-aronium-900 h-12">
-                <div
-                  class="py-1 px-1 justify-start flex items-center text-white text-lg font-normal"
-                >
-                  <div
-                    class="h-12 w-[8.6rem] flex items-center bg-aronium-800 justify-center shadow-lg border border-aronium-700 hover:border hover:border-gray-500 focus:outline-none"
-                  >
-                    0
-                  </div>
-                </div>
-                <div
-                  class="py-1 px-1 justify-start flex items-center text-white text-lg font-normal"
-                >
-                  <div
-                    class="h-12 w-16 flex items-center bg-aronium-800 justify-center shadow-lg border border-aronium-700 hover:border hover:border-gray-500 focus:outline-none"
-                  >
-                    .
-                  </div>
-                </div>
-              </div>
-            </div>
+                {{ number }}
+              </Button>
+
+              <Button variant="transYellow" @click="eraseLast">Del</Button>
+              <Button variant="transGreen" @click="addOperator('+')">+</Button>
+              <Button variant="transparent" @click="addDigit('.')">.</Button>
+              <Button
+                v-for="number in ['4', '5', '6']"
+                :key="number"
+                variant="transparent"
+                @click="addDigit(number)"
+              >
+                {{ number }}
+              </Button>
+
+              <Button variant="transGreen" @click="submitResult">=</Button>
+              <Button variant="transGreen" @click="addOperator('/')">/</Button>
+              <Button variant="transparent" @click="addDigit('0')">0</Button>
+              <Button
+                v-for="number in ['3', '2', '1'].reverse()"
+                :key="number"
+                variant="transparent"
+                @click="addDigit(number)"
+              >
+                {{ number }}
+              </Button>
+            </Grid>
             <!-- End calculator -->
           </div>
         </div>
@@ -76,37 +65,55 @@
   </modal-small>
 </template>
 <script>
-import { reactive, ref } from "vue";
+import { onBeforeUnmount, onMounted } from "vue";
+import { useCalculate } from "@/composables/useCalculate";
+import { useKeyboard } from "@/composables/useKeyboard";
+import Button from "@/components/shared/Button.vue";
+import Screen from "@/components/shared/calculator/Screen.vue";
+import Grid from "@/components/shared/Grid.vue";
+import {
+  DIGITS,
+  OPERATORS,
+  RESULT_KEYS,
+  CLEAR_KEYS,
+  ERASE_KEYS,
+} from "@/store/constants";
 import ModalSmall from "@/components/shared/ModalSmall.vue";
 export default {
-  components: {
-    ModalSmall,
+  components: { ModalSmall, Button, Screen, Grid },
+  props: {
+    type: { type: String, required: true },
   },
-  setup() {
-    const openCalculator = ref(true);
-    const calculator = reactive([
-      {
-        row: [1, 2, 3],
-        hasIcon: true,
-        icon: "fa-sharp fa-solid fa-delete-left",
-      },
-      {
-        row: [4, 5, 6],
-        hasIcon: true,
-        icon: "esc",
-      },
-      {
-        row: [7, 8, 9],
-        hasIcon: true,
-        icon: "fa-solid fa-arrow-turn-down-left",
-      },
-    ]);
-    const value = ref(0);
-    return {
-      calculator,
-      openCalculator,
-      value,
+  emits: ["addResult", "close"],
+  setup(props, context) {
+    const calculate = useCalculate();
+    const submitResult = () => {
+      context.emit("addResult", {
+        value: calculate.memory.value,
+        type: props.type,
+      });
+      context.emit("close");
+      // calculate.calculateResult();
     };
+    const keyboard = useKeyboard();
+
+    onMounted(() => {
+      keyboard.addListener((e) => {
+        const key = e.key === "," ? "." : e.key;
+
+        if (DIGITS.includes(key)) calculate.addDigit(key);
+        if (OPERATORS.includes(key)) calculate.addOperator(key);
+        if (RESULT_KEYS.includes(key)) calculate.calculateResult();
+        if (ERASE_KEYS.includes(key)) calculate.eraseLast();
+        if (CLEAR_KEYS.includes(key)) calculate.clear();
+      });
+    });
+
+    onBeforeUnmount(() => {
+      keyboard.removeAllListeners();
+    });
+
+    return { submitResult, ...calculate };
   },
 };
 </script>

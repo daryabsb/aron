@@ -13,7 +13,7 @@
   </modal-small>
 </template>
 <script>
-import { ref, onMounted } from "vue";
+import { onMounted } from "vue";
 import ModalSmall from "@/components/shared/ModalSmall.vue";
 import ProductsModalNewGroup from "@/components/modals/products/ProductsModalNewGroup.vue";
 import ProductsModalNewProduct from "@/components/modals/products/ProductsModalNewProduct.vue";

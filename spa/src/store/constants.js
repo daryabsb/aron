@@ -23,7 +23,11 @@ export const COMMIT_PRINTERS_LIST = "COMMIT_PRINTERS_LIST";
 export const GET_PRINTERS_LIST = "GET_PRINTERS_LIST";
 
 // POS
+export const CREATE_CART = "CREATE_CART";
+export const SUBMIT_CART = "SUBMIT_CART";
+export const GET_CART_BY_NUMBER = "GET_CART_BY_NUMBER";
 export const GET_CART = "GET_CART";
+export const GET_CART_LAST_ORDER = "GET_CART_LAST_ORDER";
 export const ADD_TO_CART = "ADD_TO_CART";
 export const ADD_DISCOUNT = "ADD_DISCOUNT";
 export const GET_DISCOUNT = "GET_DISCOUNT";

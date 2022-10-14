@@ -5,13 +5,12 @@
 </template>
 
 <script>
-
 export default {
   name: "Grid",
   props: {
     rows: { type: [String, Number], required: true },
     cols: { type: [String, Number], required: true },
-    gap: { type: [String, Number], defualt: 0 },
+    gap: { type: [String, Number], default: 0 },
   },
 };
 </script>

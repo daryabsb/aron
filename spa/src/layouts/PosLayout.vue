@@ -12,7 +12,7 @@
         v-if="openPaymentModal"
         class="w-full"
         @close="paymentModal"
-        @cashOut="cashOut"
+        @cash-out="cashOut"
       ></payment-popper>
 
       <div
@@ -44,10 +44,10 @@
 
 <script>
 import { ref, onMounted } from "vue";
-import ModalCalculator from "@/components/modals/ModalCalculator.vue";
+// import ModalCalculator from "@/components/modals/ModalCalculator.vue";
 import PosHeader from "@/components/Navbars/PosHeader.vue";
 import PosRightNav from "@/components/pos/PosRightNav.vue";
-import StoreMenu from "@/components/pos/StoreMenu.vue";
+// import StoreMenu from "@/components/pos/StoreMenu.vue";
 import ModalFirstTime from "@/components/temporary/ModalFirstTime.vue";
 import {
   useFetchProductsDispatch,
@@ -132,7 +132,7 @@ export default {
     CashPopper,
     PosRightNav,
     ModalFirstTime,
-    ModalCalculator,
+    // ModalCalculator,
   },
   setup() {
     let time = ref(null);

@@ -41,8 +41,6 @@
 </template>
 
 <script>
-import { ref, onMounted } from "vue";
-
 import TextInput from "@/components/shared/forms/TextInput.vue";
 import ToggleInput from "@/components/shared/forms/ToggleInput.vue";
 

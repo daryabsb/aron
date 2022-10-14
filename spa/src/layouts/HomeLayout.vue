@@ -12,13 +12,13 @@ import { onMounted } from "vue";
 import { useFetchUserDispatch } from "@/store/composables";
 import useGetUser from "@/composables/useGetUser";
 
-import IndexNavbar from "@/components/temporary/IndexNavbar.vue";
+// import IndexNavbar from "@/components/temporary/IndexNavbar.vue";
 import AdminNavbar from "@/components/temporary/AdminNavbar.vue";
 export default {
   name: "HomeLayout",
   components: {
     AdminNavbar,
-    IndexNavbar,
+    // IndexNavbar,
     Sidebar,
   },
   setup() {

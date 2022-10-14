@@ -70,8 +70,12 @@ export default {
     show: { type: Boolean, default: true, required: false },
     close: { type: String, default: "Close", required: false },
     onInput: { type: Function, required: true },
-    onDelete: { type: Function, required: false },
-    onReset: { type: Function, required: false },
+    onDelete: {
+      type: Function,
+      required: false,
+      default: () => 1,
+    },
+    onReset: { type: Function, required: false, default: () => 1 },
   },
 };
 </script>

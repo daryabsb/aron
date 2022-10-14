@@ -26,7 +26,10 @@ import {
   ADD_CASH,
   FETCH_PRINTERS_LIST,
   COMMIT_PRINTERS_LIST,
+  CREATE_CART,
+  SUBMIT_CART,
 } from "@/store/constants";
+import mutations from "./mutations";
 
 const actions = {
   [FETCH_USER]: async (context) => {
@@ -64,10 +67,13 @@ const actions = {
     const productGroup = await createProductGroup(payload);
     await context.commit(ADD_PRODUCT_GROUP, productGroup);
   },
+  [CREATE_CART](context) {
+    context.commit(SUBMIT_CART);
+  },
   [ADD_TO_CART](context, payload) {
     const payloadToCommit = {
       getters: context.getters,
-      product: payload,
+      cartItem: payload,
     };
     context.commit(COMMIT_TO_CART, payloadToCommit);
   },
@@ -79,7 +85,7 @@ const actions = {
 
     context.commit(ADD_CASH, amount);
   },
-  [SUBMIT_ORDER](context, payload) {
+  [SUBMIT_ORDER](context) {
     // console.log(payload);
     context.commit(SUBMIT);
   },

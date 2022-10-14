@@ -3,6 +3,7 @@ import router from "@/router";
 import store from "@/store";
 import VueCookies from "vue-cookies";
 import moment from "moment";
+// import UUID from "vue3-uuid";
 // import myUpload from "vue-image-crop-upload";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -47,5 +48,6 @@ app
   .use(store)
   .use(router)
   .use(VueCookies)
+  // .use(UUID)
   .component("font-awesome-icon", FontAwesomeIcon)
   .mount("#app");

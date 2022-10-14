@@ -137,16 +137,16 @@ import {
   receiptNo,
 } from "@/store/composables";
 import Button from "@/components/shared/Button.vue";
-import Calculator from "@/components/shared/calculator/Calculator.vue";
-import Moneys from "@/components/Cards/Moneys.vue";
-import numericpad from "@/components/imported/numeric-keypad.vue";
+// import Calculator from "@/components/shared/calculator/Calculator.vue";
+// import Moneys from "@/components/Cards/Moneys.vue";
+// import numericpad from "@/components/imported/numeric-keypad.vue";
 import ToggleInput from "@/components/shared/forms/ToggleInput.vue";
 export default {
   components: {
     Button,
-    Calculator,
-    Moneys,
-    numericpad,
+    // Calculator,
+    // Moneys,
+    // numericpad,
     ToggleInput,
   },
   emits: ["close"],

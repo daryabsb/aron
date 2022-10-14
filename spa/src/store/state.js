@@ -15,6 +15,7 @@ const state = () => {
     loadingSampleData: false,
     moneys: [250, 500, 1000, 5000, 10000, 25000, 50000, 100000],
     keyword: "",
+    // cart: [],
     cart: [],
     cash: 0,
     discount: "",

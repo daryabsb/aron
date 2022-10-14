@@ -2,7 +2,8 @@
   <div
     class="relative flex justify-end items-center px-5 rounded-lg bg-gray-800"
   >
-    <div class="overflow-hidden text-right">
+    <div class="flex justify-between overflow-hidden text-right">
+      <!-- <span>Add {{ header }}:</span> -->
       <span
         v-if="!error"
         class="float-right whitespace-pre pr-5"
@@ -31,6 +32,7 @@ export default {
   name: "Screen",
   // components: { LinkToRepository },
   props: {
+    header: { type: String, default: "" },
     text: { type: String, default: "" },
     error: { type: Boolean, default: false },
   },

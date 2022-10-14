@@ -1,5 +1,5 @@
 <template>
-  <div role="button" :title="product.name" @click="addToCart(product)">
+  <div role="button" :title="product.name" @click="addProductToCart(product)">
     <div
       class="h-48 border border-aronium-700 py-2 px-2 w-full overflow-hidden bg-inherit text-aronium-white group-hover:opacity-75"
     >
@@ -26,12 +26,32 @@
         </div>
       </div>
     </div>
+    <modal-calculator
+      v-if="openCalculator"
+      @add-result="addResult"
+      @close="closeCalculator"
+      :type="modalType"
+    ></modal-calculator>
+    <div
+      v-if="!isUsingDefaultQuantity"
+      class="fixed w-96 h-56 bg-aronium-800 border border-aronium-500 p-3 mx-auto my-auto z-50"
+    >
+      <div class="flex flex-col justify-center items center w-full h-full">
+        <input type="text" name="" id="" v-model="quantity" />
+        <button @click="addQuantiy">Add</button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import { ref, nextTick } from "vue";
 import { addToCart, priceFormat } from "@/store/composables";
+import ModalCalculator from "@/components/modals/ModalCalculator.vue";
 export default {
+  components: {
+    ModalCalculator,
+  },
   props: {
     product: {
       type: Object,
@@ -39,9 +59,69 @@ export default {
     },
   },
   setup() {
+    const orderItem = {};
+    const openCalculator = ref(false);
+    const modalType = ref("");
+    const isUsingDefaultQuantity = ref(true);
+    const quantity = ref(0);
+    const isPriceChangeAllowed = ref(false);
+    const isTaxInclusivePrice = ref(false);
+    const price = ref(0);
+
+    const closeCalculator = () => (openCalculator.value = false);
+    const addResult = (payload) => {};
+
+    const addQuantity = () => {
+      modalType.value = "Quantity";
+      openCalculator.value = false;
+    };
+    const addPrice = (price) => {};
+
+    const addProductToCart = async (product) => {
+      if (product) orderItem.product = product;
+
+      if (!product.is_using_default_quantity) {
+        // modalType.value = "Quantity";
+        openCalculator.value = true;
+      }
+      return;
+      // await nextTick();
+      // if (!quantity.value) {
+      //   orderItem.quantity = 1;
+      // } else {
+      //   orderItem.quantity = quantity.value;
+      // }
+
+      // // if (!product.is_using_default_quantity) {
+      // //   alert("Please add a modal for adding some quantity!");
+      // // }
+
+      // if (product.is_price_change_allowed) alert("Price should be added!");
+      // if (!price.value) {
+      //   orderItem.price = product.price;
+      // } else {
+      //   orderItem.price = price.value;
+      // }
+      // if (product.is_tax_inclusive_price)
+      //   alert(`Add price inclusive tax!! ${isTaxInclusivePrice.value}`);
+
+      // console.log("addProductToCart", product);
+
+      // addToCart(orderItem);
+    };
+
     return {
+      addProductToCart,
+      addQuantity,
+      addPrice,
       priceFormat,
       addToCart,
+      quantity,
+      isUsingDefaultQuantity,
+      openCalculator,
+      closeCalculator,
+      modalType,
+      addResult,
     };
   },
 };

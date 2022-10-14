@@ -20,6 +20,7 @@ import {
   COMMIT_TAB_PRODUCTS,
   FETCH_PRINTERS_LIST,
   ADD_DISCOUNT,
+  CREATE_CART,
 } from "@/store/constants";
 import store from "@/store";
 
@@ -138,6 +139,8 @@ export const isShowModalReceipt = computed(
   () => store.getters.GET_IS_SHOW_MODAL_RECEIPT
 );
 
+export const createCart = () => store.dispatch(CREATE_CART);
+
 export const addToCart = (product) => store.dispatch(ADD_TO_CART, product);
 export const findCartIndex = (product) => {
   return store.getters.GET_CART_INDEX(product);
@@ -200,6 +203,7 @@ export const submit = () => store.dispatch(SUBMIT_ORDER);
 
 export const anyWindowFunction = (evt) => {
   // F keys event listener
+  console.log(evt);
   window.onkeydown = (evt) => {
     const getEvt = (key) => {
       key = key.toString();

@@ -65,9 +65,13 @@ import {
 export default {
   name: "Calculator",
   components: { Button, Screen, Grid },
-
-  setup: () => {
+  emits: ["calculatorValue"],
+  setup: (context) => {
     const calculate = useCalculate();
+    const calculateResult = () => {
+      calculate.calculateResult();
+      context.emit("calculateValue", calculate.memory);
+    };
     const keyboard = useKeyboard();
 
     onMounted(() => {

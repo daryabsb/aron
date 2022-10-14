@@ -175,10 +175,10 @@
               <div class="relative flex justify-start w-full">
                 Total:
                 <input
+                  ref="input"
                   v-model="cash"
                   type="text"
                   class="grow font-semibold text-3xl bg-inherit text-end focus:ring-0 border-0 border-b border-aronium-500 focus:border-aronium-sky-500"
-                  ref="input"
                 />
                 <span class="absolute left-12 top-2 text-xl">
                   <i class="fa fa-pencil"></i>
@@ -230,20 +230,7 @@
 </template>
 <script>
 import { ref } from "vue";
-
-import {
-  priceFormat,
-  addQty,
-  addCash,
-  useCash,
-  useCart,
-  useMoneys,
-  getTotalPrice,
-  getItemTotalPrice,
-  useChange,
-  submitable,
-  submit,
-} from "@/store/composables";
+import { usePos } from "@/store/composables/pos";
 
 import Calculator from "@/components/shared/calculator/Calculator.vue";
 import Moneys from "@/components/Cards/Moneys.vue";
@@ -256,11 +243,12 @@ export default {
   },
   emits: ["close", "cashOut"],
   setup() {
-    const cart = useCart;
-    const cash = useCash;
-    const change = useChange;
+    const pos = usePos();
+    const cart = pos.useCart;
+    const cash = pos.useCash;
+    const change = pos.useChange;
     const isShowItems = ref(true);
-    const moneys = useMoneys;
+    const moneys = pos.useMoneys;
     const inputMoney = ref(0);
 
     const isDiscountPopper = ref(false);
@@ -279,7 +267,7 @@ export default {
 
     const addCashValue = (value) => {
       cashValue.value = value;
-      addCash(value);
+      pos.addCash(value);
     };
 
     const showItems = () => (isShowItems.value = !isShowItems.value);
@@ -304,19 +292,12 @@ export default {
 
       isShowItems,
       showItems,
-      priceFormat,
-      addQty,
       cart,
       cash,
       moneys,
-      addCash,
       addCashValue,
       cashValue,
-      getTotalPrice,
-      getItemTotalPrice,
       change,
-      submitable,
-      submit,
 
       ID,
       cartItem,
@@ -325,6 +306,7 @@ export default {
       openDiscountPopper,
       isDiscountPopper,
       closeDiscountPopper,
+      ...usePos,
     };
   },
 };

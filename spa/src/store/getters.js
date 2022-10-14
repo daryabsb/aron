@@ -18,6 +18,8 @@ import {
   GET_PRINTERS_LIST,
   GET_MONEYS,
   GET_DISCOUNT,
+  GET_CART_BY_NUMBER,
+  GET_CART_LAST_ORDER,
 } from "@/store/constants";
 
 import { getItemTotalPrice } from "@/store/composables";
@@ -44,18 +46,27 @@ const getters = {
   [GET_TAB_PRODUCTS](state) {
     return state.tabProducts;
   },
+  [GET_CART_BY_NUMBER](state) {
+    if (!state.cart.length) return;
+    return state.cart[state.cart.length - 1];
+  },
   [GET_CART](state) {
-    return state.cart;
+    return state.cart[state];
+  },
+  [GET_CART_LAST_ORDER](state) {
+    return state.cart.length ? state.cart[state.cart.length - 1] : [];
   },
   [GET_ITEMS_COUNT](state) {
-    return state.cart.reduce((count, item) => count + item.qty, 0);
+    if (!state.cart.items) return 0;
+    return state.cart.items.reduce((count, item) => count + item.quantity, 0);
   },
   [GET_DISCOUNT](state) {
     return state.discount + state.discountType;
   },
   [GET_TOTAL_PRICE](state) {
     // return state.cart.reduce((total, item) => total + item.qty * item.price, 0);
-    return state.cart.reduce(
+    if (!state.cart.items) return 0;
+    return state.cart.items.reduce(
       (total, item) => total + getItemTotalPrice(item).value,
       0
     );
@@ -72,8 +83,12 @@ const getters = {
   [GET_MONEYS](state) {
     return state.moneys;
   },
-  [GET_CART_INDEX]: (state) => (product) =>
-    state.cart.findIndex((p) => p.id === product.id),
+  // [GET_CART_INDEX]: (state) => (product) => {
+  //   if (!state.cart.items && !product) return -1;
+  //   return state.cart.items
+  //     .map((p) => p.product)
+  //     .findIndex((p) => p.id === product.id);
+  // },
   [GET_KEYWORD](state) {
     return state.keyword;
   },

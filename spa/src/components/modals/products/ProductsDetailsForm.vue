@@ -62,7 +62,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 import useGetProductGroups from "@/composables/useGetProductGroups";
 
 import TextInput from "@/components/shared/forms/TextInput.vue";

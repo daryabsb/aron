@@ -1,6 +1,5 @@
 <script>
 import { ref } from "vue";
-import { useStore } from "vuex";
 // import useFilteredProducts from "@/composables/useFilteredProducts";
 import {
   updateKeyword,
@@ -11,21 +10,19 @@ import {
 } from "@/store/composables";
 
 /* COMPONENTS */
-import ProductsGroupTabs from "@/components/pos/ProductsGroupTabs.vue";
+// import ProductsGroupTabs from "@/components/pos/ProductsGroupTabs.vue";
 import PinkTabs from "@/components/pos/PinkTabs.vue";
 import PosProductList from "@/components/pos/products/PosProductList.vue";
-import StoreProductWidget from "@/components/pos/products/StoreProductWidget.vue";
+// import StoreProductWidget from "@/components/pos/products/StoreProductWidget.vue";
 
 export default {
   components: {
-    ProductsGroupTabs,
+    // ProductsGroupTabs,
     PosProductList,
     PinkTabs,
-    StoreProductWidget,
+    // StoreProductWidget,
   },
   setup() {
-    const store = useStore();
-
     const keyword = ref("");
 
     return {

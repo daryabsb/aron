@@ -53,7 +53,7 @@
           field="img"
           :width="300"
           :height="300"
-          langType="en"
+          lang-type="en"
           url=""
           img-format="jpg"
           @crop-success="cropSuccess"
@@ -74,7 +74,7 @@
 </template>
 
 <script>
-import { ref, reactive } from "vue";
+import { ref } from "vue";
 import myUpload from "vue-image-crop-upload";
 
 import Cookies from "js-cookie";
@@ -117,6 +117,7 @@ export default {
     const toggleShow = () => (show.value = !show.value);
 
     const cropSuccess = (imgDataUrl, field) => {
+      console.log(field);
       console.log("-------- crop success --------");
       img.value = imgDataUrl;
     };

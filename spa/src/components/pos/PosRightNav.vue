@@ -12,7 +12,6 @@ import {
   useCart,
   updateChange,
   addQty,
-  getCartIndex,
   getTotalPrice,
   getItemTotalPrice,
   submit,
@@ -53,7 +52,6 @@ export default {
       orderID,
       ID,
       addQty,
-      getCartIndex,
       getTotalPrice,
       getItemTotalPrice,
       getItemsCount,
@@ -108,7 +106,7 @@ export default {
       <!-- empty cart -->
 
       <div
-        v-if="cart.length === 0"
+        v-if="cart.items.length === 0"
         class="flex-1 w-full p-4 select-none flex flex-col flex-wrap content-center justify-center"
       >
         <svg
@@ -175,7 +173,7 @@ export default {
         </div>
 
         <div class="flex-1 w-full overflow-auto">
-          <template v-for="item in cart" :key="item.id">
+          <template v-for="item in cart.items" :key="item.id">
             <div
               class="bg-aronium-700 border-y border-aronium-500 shadow w-full px-2 md:py-0 xl:py-1 flex justify-center"
               :class="
@@ -183,7 +181,7 @@ export default {
                   ? 'bg-aronium-sky-600  text-aronium-50 text-shadow-lg'
                   : 'bg-inherit'
               "
-              @click="selectItem(item)"
+              @click="selectItem(item.product)"
             >
               <!-- <img
                 :src="item.image"
@@ -194,24 +192,24 @@ export default {
                 <h5
                   class="relative text-sm subpixel-antialiased tracking-wider font-semibold w-32"
                 >
-                  <span>{{ item.name }}</span>
+                  <span>{{ item.product.name }}</span>
                   <div
-                    v-if="item.discount"
+                    v-if="item.product.discount"
                     class="flex absolute right-0 top-0 w-6 h-6 text-sm font-semibold text-center text-aronium-danger"
                   >
                     <span>-</span>
-                    <span>{{ item.discount }}</span>
-                    <span>{{ item.discountType }}</span>
+                    <span>{{ item.product.discount }}</span>
+                    <span>{{ item.product.discountType }}</span>
                   </div>
                 </h5>
 
                 <p class="text-xs block mt-1 opacity-75">
                   <span
-                    >#{{ item.id }} :
+                    >#{{ item.product.id }} :
                     {{ priceFormat(getItemTotalPrice(item).value) }}</span
                   >
                   <span class="md:hidden xl:inline-block"
-                    >( Subtotal={{ getItemTotalPrice(item) }}
+                    >( Subtotal={{ getItemTotalPrice(item.product) }}
                     )
                   </span>
                 </p>
@@ -221,19 +219,19 @@ export default {
                 <div class="flex items-center">
                   <button
                     class="flex flex-row items-center justify-center text-sm h-8 w-8 m-1 rounded-sm text-center text-aronium-white bg-inherit border border-aronium-700 shadow-sm hover:bg-pink-700 focus:outline-none"
-                    @click="addQty(item, -1)"
+                    @click="addQty(item.product, -1)"
                   >
                     <i class="fa fa-minus"></i>
                   </button>
                   <input
-                    v-model="item.qty"
+                    v-model="item.product.quantity"
                     type="text"
                     class="h-8 border-0 w-11 mr-1 text-center text-aronium-white bg-inherit"
                   />
 
                   <button
                     class="flex items-center justify-center text-sm h-8 w-8 mr-1 rounded-sm text-center text-aronium-white bg-inherit border border-aronium-700 shadow-sm hover:bg-pink-700 focus:outline-none"
-                    @click="addQty(item, 1)"
+                    @click="addQty(item.product, 1)"
                   >
                     <i class="fa fa-plus"></i>
                   </button>

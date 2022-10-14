@@ -21,7 +21,7 @@
 import { ref } from "vue";
 import Vue3ChartJs from "@j-t-mcc/vue3-chartjs";
 import zoomPlugin from "chartjs-plugin-zoom";
-import dataLabels from "chartjs-plugin-datalabels";
+// import dataLabels from "chartjs-plugin-datalabels";
 
 import { lineChart } from "@/composables/staticData";
 
@@ -36,6 +36,7 @@ export default {
     const labelsOn = ref(false);
     return {
       lineChart,
+      labelsOn,
     };
   },
 };
