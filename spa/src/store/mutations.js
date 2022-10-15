@@ -89,35 +89,31 @@ const mutations = {
     state.cart.push(order);
   },
   [COMMIT_TO_CART](state, payload) {
-    const { cartItem, getters } = payload;
-    const product = cartItem.value.product;
+    const { orderItem, getters } = payload;
+    const product = orderItem;
 
-    if (state.cart.length === -1) {
-      const cart = {};
-      cart.id = state.cart.items.length + 1;
-      cart.discount = 0;
-      cart.discount_type = 0;
-      cart.items = [];
-      state.cart.push(cart);
-    }
+    // if (state.cart.length === -1) {
+    //   cart.items = [];
+    //   state.cart.push(cart);
+    // }
 
-    const index = getters.GET_CART_INDEX(cartItem.value.product);
+    const index = getters.GET_CART_INDEX(orderItem);
     // console.log("index", index);
 
     if (index === -1) {
-      state.cart.items = [];
-      state.cart.items.push({
-        id: state.cart.items.length + 1,
-        product: cartItem.value.product,
-        price: cartItem.price,
-        quantity: cartItem.quantity,
-        is_locked: false,
-        discount: 0,
-        discountType: 0,
-        voide_by: 0,
-        comment: "",
-        bundle: "",
-      });
+      // state.cart.items = [];
+      // state.cart.items.push({
+      //   id: state.cart.items.length + 1,
+      //   product: cartItem.value.product,
+      //   price: cartItem.price,
+      //   quantity: cartItem.quantity,
+      //   is_locked: false,
+      //   discount: 0,
+      //   discountType: 0,
+      //   voide_by: 0,
+      //   comment: "",
+      //   bundle: "",
+      // });
     } else {
       state.cart.items[index].quantity += 1;
     }

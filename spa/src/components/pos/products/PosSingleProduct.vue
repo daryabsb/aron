@@ -69,7 +69,12 @@ export default {
     const price = ref(0);
 
     const closeCalculator = () => (openCalculator.value = false);
-    const addResult = (payload) => {};
+    const addResult = (payload) => {
+      if (payload.type === "Quantity") quantity.value = payload.value;
+      if (payload.type === "Price") price.value = payload.value;
+      openCalculator.value = false;
+      addProductToCart();
+    };
 
     const addQuantity = () => {
       modalType.value = "Quantity";
@@ -78,36 +83,41 @@ export default {
     const addPrice = (price) => {};
 
     const addProductToCart = async (product) => {
-      if (product) orderItem.product = product;
-
-      if (!product.is_using_default_quantity) {
-        // modalType.value = "Quantity";
-        openCalculator.value = true;
+      if (product) {
+        orderItem.product = product;
+        orderItem.id = product.id;
       }
-      return;
-      // await nextTick();
-      // if (!quantity.value) {
-      //   orderItem.quantity = 1;
-      // } else {
-      //   orderItem.quantity = quantity.value;
-      // }
 
-      // // if (!product.is_using_default_quantity) {
-      // //   alert("Please add a modal for adding some quantity!");
-      // // }
+      if (!quantity.value) {
+        if (product && !product.is_using_default_quantity) {
+          modalType.value = "Quantity";
+          openCalculator.value = true;
+          return;
+        } else orderItem.quantity = 1;
+      } else orderItem.quantity = quantity.value;
 
-      // if (product.is_price_change_allowed) alert("Price should be added!");
+      if (!price.value) {
+        if (product && product.is_price_change_allowed) {
+          modalType.value = "Price";
+          openCalculator.value = true;
+          return;
+        } else orderItem.price = product.price;
+      } else orderItem.price = price.value;
+
       // if (!price.value) {
       //   orderItem.price = product.price;
-      // } else {
-      //   orderItem.price = price.value;
+      //   if (product.is_price_change_allowed) {
+      //     modalType.value = "Price";
+      //     openCalculator.value = true;
+      //   }
       // }
-      // if (product.is_tax_inclusive_price)
-      //   alert(`Add price inclusive tax!! ${isTaxInclusivePrice.value}`);
+      // await nextTick();
 
-      // console.log("addProductToCart", product);
+      if (product.is_tax_inclusive_price)
+        alert(`Add price inclusive tax!! ${isTaxInclusivePrice.value}`);
 
-      // addToCart(orderItem);
+      console.log(orderItem);
+      addToCart(orderItem);
     };
 
     return {

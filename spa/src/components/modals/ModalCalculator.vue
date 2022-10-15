@@ -6,6 +6,7 @@
           <div
             class="w-fit h-fit mx-auto my-52 overflow-hidden z-10 shadow-lg shadow-transparent bg-aronium-800 border"
           >
+            {{ type }}DaRYA
             <Grid
               rows="4"
               cols="6"
@@ -84,7 +85,7 @@ export default {
   props: {
     type: { type: String, required: true },
   },
-  emits: ["addResult", "close"],
+  emits: ["addResult"],
   setup(props, context) {
     const calculate = useCalculate();
     const submitResult = () => {
@@ -92,8 +93,7 @@ export default {
         value: calculate.memory.value,
         type: props.type,
       });
-      context.emit("close");
-      // calculate.calculateResult();
+      calculate.calculateResult();
     };
     const keyboard = useKeyboard();
 

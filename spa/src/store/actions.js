@@ -73,7 +73,7 @@ const actions = {
   [ADD_TO_CART](context, payload) {
     const payloadToCommit = {
       getters: context.getters,
-      cartItem: payload,
+      orderItem: payload,
     };
     context.commit(COMMIT_TO_CART, payloadToCommit);
   },
