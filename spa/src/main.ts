@@ -37,6 +37,10 @@ app.config.globalProperties.$filters = {
   timeAgo(date: moment.MomentInput) {
     return moment(date).fromNow();
   },
+  dateToRandom(date: moment.MomentInput) {
+    // return moment(date).format("dddd, MMMM Do YYYY");
+    return moment(date).format("YY-MM-DD");
+  },
   dateMoment(date: moment.MomentInput) {
     // return moment(date).format("dddd, MMMM Do YYYY");
     return moment(date).format("DD/MM/YYYY");

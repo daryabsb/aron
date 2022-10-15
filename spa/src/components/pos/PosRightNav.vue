@@ -16,12 +16,16 @@ import {
   getItemTotalPrice,
   submit,
   isShowModalReceipt,
+  activeOrderNumber,
+  getActiveOrder,
 } from "@/store/composables";
 import ModalReceipt from "@/components/pos/ModalReceipt.vue";
+import ActiveOrderPopper from "@/components/poppers/ActiveOrderPopper.vue";
 import Button from "@/components/shared/Button.vue";
 
 export default {
   components: {
+    ActiveOrderPopper,
     ModalReceipt,
     Button,
   },
@@ -65,6 +69,8 @@ export default {
       submit,
       getIdNumber,
       isShowModalReceipt,
+      activeOrderNumber,
+      getActiveOrder,
     };
   },
 };
@@ -94,19 +100,20 @@ export default {
         quantity
       </button>
 
-      <button
+      <active-order-popper></active-order-popper>
+      <!-- <button
         class="grow justify-center mr-1 border border-aronium-500 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
         @click="getIdNumber()"
       >
-        {{ ID || "---" }}
-      </button>
+        {{ activeOrderNumber || "---" }}
+      </button> -->
     </div>
 
     <div class="text-aronium-white flex flex-col h-full overflow-auto">
       <!-- empty cart -->
 
       <div
-        v-if="cart.items.length === 0"
+        v-if="getActiveOrder().items.length === 0"
         class="flex-1 w-full p-4 select-none flex flex-col flex-wrap content-center justify-center"
       >
         <svg
@@ -140,11 +147,11 @@ export default {
             <i class="fa fa-cart h-8 inline-block"></i>
 
             <h1 class="inline-block font-semibold ml-3">
-              {{ getItemsCount() }}
+              {{ getActiveOrder().items.length }}
             </h1>
 
             <div
-              v-if="getItemsCount > 0"
+              v-if="getActiveOrder().items.length > 0"
               class="text-center absolute bg-pink-500 text-white w-5 h-5 text-xs p-0 leading-5 rounded-full -right-2 top-3"
             ></div>
           </div>
@@ -173,7 +180,7 @@ export default {
         </div>
 
         <div class="flex-1 w-full overflow-auto">
-          <template v-for="item in cart.items" :key="item.id">
+          <template v-for="item in getActiveOrder().items" :key="item.id">
             <div
               class="bg-aronium-700 border-y border-aronium-500 shadow w-full px-2 md:py-0 xl:py-1 flex justify-center"
               :class="

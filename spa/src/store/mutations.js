@@ -4,6 +4,9 @@ import {
   clearSound,
   getTotalPrice,
   updateChange,
+  generateUID,
+  getActiveOrder,
+  findCartIndex,
 } from "@/store/composables";
 import moment from "moment";
 import {
@@ -78,44 +81,36 @@ const mutations = {
   // [FIND_CART_INDEX](state, product) {},
   [SUBMIT_CART](state) {
     const order = {};
-    order.number = uuid.v4();
+    // order.number = uuid.v4();
+    order.number = generateUID();
     order.discount = 0;
     order.discountType = 0;
     order.items = [];
     order.tax = 0;
     order.total = 0;
 
-    console.log(state.cart);
+    state.activeOrderNumber = order.number;
     state.cart.push(order);
+    console.log(state.cart);
   },
   [COMMIT_TO_CART](state, payload) {
     const { orderItem, getters } = payload;
-    const product = orderItem;
 
+    // if (orderItem) {
+    // }
     // if (state.cart.length === -1) {
     //   cart.items = [];
     //   state.cart.push(cart);
     // }
 
-    const index = getters.GET_CART_INDEX(orderItem);
-    // console.log("index", index);
+    const index = findCartIndex(orderItem);
+    console.log("index", index);
 
     if (index === -1) {
-      // state.cart.items = [];
-      // state.cart.items.push({
-      //   id: state.cart.items.length + 1,
-      //   product: cartItem.value.product,
-      //   price: cartItem.price,
-      //   quantity: cartItem.quantity,
-      //   is_locked: false,
-      //   discount: 0,
-      //   discountType: 0,
-      //   voide_by: 0,
-      //   comment: "",
-      //   bundle: "",
-      // });
+      console.log("Mutation", getActiveOrder().items);
+      getActiveOrder().items.push(orderItem);
     } else {
-      state.cart.items[index].quantity += 1;
+      getActiveOrder().items[index].quantity += 1;
     }
     beep();
     updateChange();

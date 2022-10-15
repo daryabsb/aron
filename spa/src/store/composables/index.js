@@ -1,5 +1,5 @@
 /* eslint-disable no-delete-var */
-import { ref, computed } from "vue";
+import { ref, computed, createApp } from "vue";
 import axios from "axios";
 // import { store } from "vuex";
 
@@ -125,8 +125,8 @@ export const addCash = (amount) => {
 export const updateKeyword = (keyword) => store.dispatch(ADD_KEYWORD, keyword);
 export const useCash = computed(() => store.getters.GET_CASH);
 export const useChange = computed(() => store.getters.GET_CHANGE);
-// export const useCart = computed(() => store.getters.GET_CART);
-export const useCart = computed(() => store.getters.GET_CART_LAST_ORDER);
+export const useCart = computed(() => store.getters.GET_CART);
+// export const useCart = computed(() => store.getters.GET_CART_LAST_ORDER);
 export const useMoneys = computed(() => store.getters.GET_MONEYS);
 export const receiptNo = computed(() => store.getters.GET_RECEIPT_NUMBER);
 export const receiptDate = computed(() => store.getters.GET_RECEIPT_DATE);
@@ -139,12 +139,28 @@ export const tabProducts = computed(() => {
 export const isShowModalReceipt = computed(
   () => store.getters.GET_IS_SHOW_MODAL_RECEIPT
 );
-
+export const generateUID = () => {
+  // I generate the UID from two parts here
+  // to ensure the random number provide enough bits.
+  let firstPart = new Date();
+  let secondPart = (Math.random() * (49999 - 101) + 101) | 0;
+  firstPart = `${firstPart.getDate()}${firstPart.getMonth()}${firstPart.getFullYear()}`;
+  secondPart = secondPart.toString();
+  console.log(firstPart + secondPart);
+  return firstPart + secondPart;
+};
 export const createCart = () => store.dispatch(CREATE_CART);
-
+export const activeOrderNumber = computed(
+  () => store.getters.GET_ACTIVE_ORDER_NUMBER
+);
+export const getActiveOrder = () =>
+  useCart.value.find((item) => item.number === activeOrderNumber.value);
 export const addToCart = (product) => store.dispatch(ADD_TO_CART, product);
-export const findCartIndex = (product) => {
-  return store.getters.GET_CART_INDEX(product);
+export const findCartIndex = (orderItem) => {
+  // return store.getters.GET_CART_INDEX(product);
+  console.log("161 | ", getActiveOrder().items.length);
+  if (getActiveOrder().items.length === 0) return -1;
+  return getActiveOrder().value.items.findIndex((p) => p.id === orderItem.id);
 };
 export const addDiscount = (payload) => {
   console.log(payload.discount);

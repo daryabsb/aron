@@ -17,6 +17,7 @@ const state = () => {
     keyword: "",
     // cart: [],
     cart: [],
+    activeOrderNumber: null,
     cash: 0,
     discount: "",
     discountType: "%",

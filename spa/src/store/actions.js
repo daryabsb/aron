@@ -29,7 +29,6 @@ import {
   CREATE_CART,
   SUBMIT_CART,
 } from "@/store/constants";
-import mutations from "./mutations";
 
 const actions = {
   [FETCH_USER]: async (context) => {

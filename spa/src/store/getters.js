@@ -20,9 +20,10 @@ import {
   GET_DISCOUNT,
   GET_CART_BY_NUMBER,
   GET_CART_LAST_ORDER,
+  GET_ACTIVE_ORDER_NUMBER,
 } from "@/store/constants";
 
-import { getItemTotalPrice } from "@/store/composables";
+import { getItemTotalPrice, getActiveOrder } from "@/store/composables";
 
 const getters = {
   [GET_USER](state) {
@@ -51,7 +52,7 @@ const getters = {
     return state.cart[state.cart.length - 1];
   },
   [GET_CART](state) {
-    return state.cart[state];
+    return state.cart;
   },
   [GET_CART_LAST_ORDER](state) {
     return state.cart.length ? state.cart[state.cart.length - 1] : [];
@@ -83,11 +84,13 @@ const getters = {
   [GET_MONEYS](state) {
     return state.moneys;
   },
+  [GET_ACTIVE_ORDER_NUMBER](state) {
+    return state.activeOrderNumber;
+  },
   // [GET_CART_INDEX]: (state) => (product) => {
-  //   if (!state.cart.items && !product) return -1;
-  //   return state.cart.items
-  //     .map((p) => p.product)
-  //     .findIndex((p) => p.id === product.id);
+  //   if (!getActiveOrder.value && !product) return -1;
+  //   console.log(getActiveOrder.value);
+  //   return getActiveOrder.items.findIndex((p) => p.id === product.id);
   // },
   [GET_KEYWORD](state) {
     return state.keyword;

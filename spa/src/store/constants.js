@@ -27,6 +27,7 @@ export const CREATE_CART = "CREATE_CART";
 export const SUBMIT_CART = "SUBMIT_CART";
 export const GET_CART_BY_NUMBER = "GET_CART_BY_NUMBER";
 export const GET_CART = "GET_CART";
+export const GET_ACTIVE_ORDER_NUMBER = "GET_ACTIVE_ORDER_NUMBER";
 export const GET_CART_LAST_ORDER = "GET_CART_LAST_ORDER";
 export const ADD_TO_CART = "ADD_TO_CART";
 export const ADD_DISCOUNT = "ADD_DISCOUNT";

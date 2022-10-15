@@ -28,16 +28,16 @@
     </div>
     <modal-calculator
       v-if="openCalculator"
+      :type="modalType"
       @add-result="addResult"
       @close="closeCalculator"
-      :type="modalType"
     ></modal-calculator>
     <div
       v-if="!isUsingDefaultQuantity"
       class="fixed w-96 h-56 bg-aronium-800 border border-aronium-500 p-3 mx-auto my-auto z-50"
     >
       <div class="flex flex-col justify-center items center w-full h-full">
-        <input type="text" name="" id="" v-model="quantity" />
+        <input id="" v-model="quantity" type="text" name="" />
         <button @click="addQuantiy">Add</button>
       </div>
     </div>
@@ -46,7 +46,7 @@
 
 <script>
 import { ref, nextTick } from "vue";
-import { addToCart, priceFormat } from "@/store/composables";
+import { addToCart, priceFormat, activeOrderNumber } from "@/store/composables";
 import ModalCalculator from "@/components/modals/ModalCalculator.vue";
 export default {
   components: {
@@ -86,7 +86,10 @@ export default {
       if (product) {
         orderItem.product = product;
         orderItem.id = product.id;
-      }
+        orderItem.orderNumber = activeOrderNumber.value;
+        // orderItem.quantity = 1;
+        orderItem.price = product.price;
+      } else return;
 
       if (!quantity.value) {
         if (product && !product.is_using_default_quantity) {
@@ -96,13 +99,13 @@ export default {
         } else orderItem.quantity = 1;
       } else orderItem.quantity = quantity.value;
 
-      if (!price.value) {
-        if (product && product.is_price_change_allowed) {
-          modalType.value = "Price";
-          openCalculator.value = true;
-          return;
-        } else orderItem.price = product.price;
-      } else orderItem.price = price.value;
+      // if (!price.value) {
+      //   if (product && product.is_price_change_allowed) {
+      //     modalType.value = "Price";
+      //     openCalculator.value = true;
+      //     return;
+      //   } else orderItem.price = product.price;
+      // } else orderItem.price = price.value;
 
       // if (!price.value) {
       //   orderItem.price = product.price;
@@ -113,10 +116,10 @@ export default {
       // }
       // await nextTick();
 
-      if (product.is_tax_inclusive_price)
+      if (product && product.is_tax_inclusive_price)
         alert(`Add price inclusive tax!! ${isTaxInclusivePrice.value}`);
 
-      console.log(orderItem);
+      // console.log(orderItem);
       addToCart(orderItem);
     };
 
