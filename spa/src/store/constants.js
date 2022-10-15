@@ -28,6 +28,7 @@ export const SUBMIT_CART = "SUBMIT_CART";
 export const GET_CART_BY_NUMBER = "GET_CART_BY_NUMBER";
 export const GET_CART = "GET_CART";
 export const GET_ACTIVE_ORDER_NUMBER = "GET_ACTIVE_ORDER_NUMBER";
+export const GET_ACTIVE_ORDER = "GET_ACTIVE_ORDER";
 export const GET_CART_LAST_ORDER = "GET_CART_LAST_ORDER";
 export const ADD_TO_CART = "ADD_TO_CART";
 export const ADD_DISCOUNT = "ADD_DISCOUNT";
@@ -66,18 +67,18 @@ export const GET_CUSTOMERS = "GET_CUSTOMERS";
 
 // CALCULATOR CONSTANTS
 export const DIGITS = [
-  "0",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  ".",
-  ",",
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    ".",
+    ",",
 ];
 export const OPERATORS = ["/", "*", "+", "-"];
 export const RESULT_KEYS = ["=", "Enter"];

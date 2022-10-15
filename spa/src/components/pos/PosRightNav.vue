@@ -30,6 +30,7 @@ export default {
     Button,
   },
   setup() {
+    console.log("getActiveOrder",getActiveOrder.value);
     const store = useStore();
     const moneys = store.state.moneys;
     const ID = ref(0);
@@ -113,7 +114,7 @@ export default {
       <!-- empty cart -->
 
       <div
-        v-if="getActiveOrder().items.length === 0"
+        v-if="!getActiveOrder"
         class="flex-1 w-full p-4 select-none flex flex-col flex-wrap content-center justify-center"
       >
         <svg
@@ -208,17 +209,15 @@ export default {
                     <span>{{ item.product.discount }}</span>
                     <span>{{ item.product.discountType }}</span>
                   </div>
+                  
                 </h5>
 
                 <p class="text-xs block mt-1 opacity-75">
                   <span
-                    >#{{ item.product.id }} :
+                    >#{{ item.id }} :
                     {{ priceFormat(getItemTotalPrice(item).value) }}</span
                   >
-                  <span class="md:hidden xl:inline-block"
-                    >( Subtotal={{ getItemTotalPrice(item.product) }}
-                    )
-                  </span>
+                 
                 </p>
               </div>
 

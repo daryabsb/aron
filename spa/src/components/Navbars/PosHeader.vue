@@ -17,7 +17,7 @@
             <span class="mb-1 text-xl"
               ><i :class="item.icon" aria-hidden="true"></i
             ></span>
-            <span class="text-center">{{ item.title }}</span>
+            <span class="text-center w-20">{{ item.title }}</span>
           </div>
         </li>
       </ul>
@@ -28,13 +28,13 @@
           @click="saveSale"
         >
           <div
-            class="flex flex-col items-center border border-aronium-500 px-6 py-1"
+            class="flex flex-col items-center border border-aronium-500 px-6 py-1 "
           >
             <!-- @click="broadcastFunction(item)" -->
             <span class="text-3xl"
-              ><h1 class="font-bold drop-shadow-lg">F9</h1></span
+              ><h1 class="font-bold drop-shadow-lg">F7</h1></span
             >
-            <span class="text-center text-sm font-semibold tracking-wider"
+            <span class="text-center text-sm font-semibold tracking-wider w-16"
               >Save sale</span
             >
           </div>
@@ -110,10 +110,12 @@ export default {
     const openModal = (e) => {
       console.log("e.keyCode: ", e.keyCode);
     };
+    const saveSale = ()=> console.log("Sale saved!");
     return {
       posHeaderItems,
       broadcastFunction,
       openModal,
+      saveSale,
       cart,
     };
   },
