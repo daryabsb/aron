@@ -85,23 +85,21 @@ const mutations = {
 
     console.log(
       "state.cart[activeOrder].items | ",
-      state.cart[activeOrder].items
+      state.cart[activeOrder].items.findIndex(
+        (item) => item.id === orderItem.id
+      )
     );
-    console.log(" | orderItem", orderItem);
+
     // const index = findCartIndex(orderItem);
-    const index = state.cart[activeOrder].items.findIndex(
-      (item) => item.id === orderItem.id
-    );
+    const index = state.cart[activeOrder].items.findIndex((item) => {
+      console.log(`Item.id= ${item.id}`, ` | orderItem.id= ${orderItem.id}`);
+      return item.id === orderItem.id;
+    });
 
     console.log("index", index);
-    if (index > -1) {
-      state.cart[activeOrder].items[index].quantity += 1;
-      beep();
-      updateChange();
-    }
-
-    state.cart[activeOrder].items.push(orderItem);
-
+    if (index === -1) {
+      state.cart[activeOrder].items.push(orderItem);
+    } else state.cart[activeOrder].items[index].quantity++;
     beep();
     updateChange();
   },
@@ -115,9 +113,9 @@ const mutations = {
     state.cart.reduce((total, item) => total + item.qty * item.price, 0);
   },
   [ADD_QUANTITY](state, payload) {
-    // console.log("ADD_QUANTITY", payload.item);
     const { item, quantity } = payload;
-    // console.log(payload);
+    console.log(payload);
+
     const index = state.cart.findIndex((i) => i.id === item.id);
     if (index === -1) {
       return;
