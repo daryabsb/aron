@@ -1,6 +1,7 @@
 <script>
 import { ref, computed } from "vue";
 import { useStore } from "vuex";
+import { usePos } from "@/stores/pos";
 import { CLEAR, UPDATE_CASH } from "@/store/constants";
 import {
   priceFormat,
@@ -9,16 +10,11 @@ import {
   getItemsCount,
   useCash,
   useChange,
-  useCart,
   updateChange,
-  addQty,
   getTotalPrice,
   getItemTotalPrice,
   submit,
   isShowModalReceipt,
-  activeOrderNumber,
-  useActiveOrder,
-  createCart,
 } from "@/store/composables";
 import ModalReceipt from "@/components/pos/ModalReceipt.vue";
 import ActiveOrderPopper from "@/components/poppers/ActiveOrderPopper.vue";
@@ -32,12 +28,20 @@ export default {
   },
   setup() {
     const store = useStore();
-    const moneys = store.state.moneys;
+    const pos = usePos();
+    const createCart = pos.createCart;
+    const addQty = pos.addQty;
+
+    const activeOrderNumber = ref(pos.activeNumber);
+    const useActiveOrder = ref(pos.useActiveOrder);
+    console.table(useActiveOrder.value);
+    const moneys = ref(pos.moneys);
     const ID = ref(0);
+    // const createCart = pos.createCart();
     const orderID = computed(() => (ID.value > 0 ? ID : "---"));
 
     // GETTERS from COMPOSABLES
-    const cart = useCart;
+    const cart = ref(pos.cart);
     const cash = useCash;
     const change = useChange;
 
@@ -119,10 +123,10 @@ export default {
 
     <div class="text-aronium-white flex flex-col h-full overflow-auto">
       <!-- empty cart -->
-
+      <!-- <pre>{{ useActiveOrder }}</pre> -->
       <div
-        v-if="useActiveOrder.items.length === 0"
         class="flex-1 w-full p-4 select-none flex flex-col flex-wrap content-center justify-center"
+        v-if="useActiveOrder.items.length === 0"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

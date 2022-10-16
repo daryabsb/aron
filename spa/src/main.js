@@ -1,7 +1,6 @@
 import { createApp } from "vue";
 import router from "@/router";
 import store from "@/store";
-import { createPinia } from "pinia";
 import VueCookies from "vue-cookies";
 import moment from "moment";
 // import UUID from "vue3-uuid";
@@ -51,7 +50,6 @@ app
   .component("Popper", Popper)
   // .component("myUpload", myUpload)
   .use(store)
-  .use(createPinia())
   .use(router)
   .use(VueCookies)
   // .use(UUID)

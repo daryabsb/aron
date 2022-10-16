@@ -33,7 +33,8 @@
 </template>
 
 <script>
-import { activeOrderNumber, useCart } from "@/store/composables";
+import { ref } from "vue";
+import { usePos } from "@/stores/pos";
 
 // import Popper from "vue3-popper";
 
@@ -44,7 +45,9 @@ export default {
     // Popper,
   },
   setup() {
-    const cart = useCart;
+    const store = usePos();
+    const cart = store.cart;
+    const activeOrderNumber = ref(store.activeNumber);
     const submitActiveOrderNumber = () => {
       close();
     };

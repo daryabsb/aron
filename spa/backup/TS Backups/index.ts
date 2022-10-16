@@ -1,6 +1,5 @@
 /* eslint-disable no-delete-var */
 import { ref, computed, createApp } from "vue";
-import { usePos } from "@/stores/pos";
 import axios from "axios";
 // import { store } from "vuex";
 
@@ -178,6 +177,14 @@ export const addDiscount = (payload) => {
 export const getCartIndex = (item) =>
   computed(() => store.getters.GET_CART_INDEX(item));
 
+export const getTotalPrice = () => {
+  return computed(() => store.getters.GET_TOTAL_PRICE);
+};
+
+export const getItemTotalPrice = (item) => {
+  // console.log("item.price * item.quantity", item.price * item.quantity);
+  return computed(() => item.price * item.quantity);
+};
 export const getItemsCount = () => {
   return computed(() => store.getters.GET_ITEMS_COUNT);
 };
@@ -274,10 +281,7 @@ export const useActiveOrder = computed({
 });
 
 export const useOrderItemIndex = (product) => {
-  const store = usePos();
-  return store.useActiveOrder.value.items.findIndex(
-    (item) => item.id === product.id
-  );
+  return useActiveOrder.value.items.findIndex((item) => item.id === product.id);
 };
 
 export const addQty = (item, quantity) => {
@@ -288,17 +292,3 @@ export const addQty = (item, quantity) => {
 export const activeOrderIndex = computed(() =>
   useCart.value.findIndex((order) => order.number === activeOrderNumber.value)
 );
-export const getTotalPrice = () => {
-  if (!activeOrderNumber.value) return 0;
-  return computed(() =>
-    useActiveOrder.value.items.reduce(
-      (total, item) => total + getItemTotalPrice(item).value,
-      0
-    )
-  );
-};
-
-export const getItemTotalPrice = (item) => {
-  // console.log("item.price * item.quantity", item.price * item.quantity);
-  return computed(() => item.price * item.quantity);
-};

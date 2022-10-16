@@ -41,7 +41,8 @@
 <script>
 import { ref, onMounted } from "vue";
 import { useFetchUserDispatch } from "@/store/composables";
-import { createCart } from "@/store/composables";
+import { usePos } from "@/stores/pos";
+// import { createCart } from "@/store/composables";
 import { useRouter } from "vue-router";
 import Button from "@/components/shared/Button.vue";
 export default {
@@ -49,11 +50,12 @@ export default {
     Button,
   },
   setup() {
+    const store = usePos();
     // const { createCart } = usePos;
     const router = useRouter();
     onMounted(useFetchUserDispatch);
     const addNewCart = () => {
-      createCart();
+      store.createCart();
       router.push("/pos");
     };
     const key = ref("");

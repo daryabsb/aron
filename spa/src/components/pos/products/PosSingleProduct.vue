@@ -45,8 +45,9 @@
 </template>
 
 <script>
-import { ref, nextTick } from "vue";
-import { addToCart, priceFormat, activeOrderNumber } from "@/store/composables";
+import { ref, nextTick, reactive } from "vue";
+import { priceFormat } from "@/store/composables";
+import { usePos } from "@/stores/pos";
 import ModalCalculator from "@/components/modals/ModalCalculator.vue";
 export default {
   components: {
@@ -59,7 +60,10 @@ export default {
     },
   },
   setup() {
-    const orderItem = {};
+    const store = usePos();
+    const addToCart = store.addToCart;
+    const activeOrderNumber = store.activeNumber;
+    const orderItem = reactive({});
     const openCalculator = ref(false);
     const modalType = ref("");
     const isUsingDefaultQuantity = ref(true);
@@ -82,28 +86,30 @@ export default {
     };
     const addPrice = (price) => {};
 
-    const addProductToCart = async (product) => {
+    const addProductToCart = (product) => {
       if (product) {
         orderItem.product = product;
         orderItem.id = product.id;
-        orderItem.orderNumber = activeOrderNumber.value;
+        orderItem.orderNumber = activeOrderNumber;
+        orderItem.quantity = 1;
+        orderItem.price = product.price;
       }
 
-      if (!quantity.value) {
-        if (product && !product.is_using_default_quantity) {
-          modalType.value = "Quantity";
-          openCalculator.value = true;
-          return;
-        } else orderItem.quantity = 1;
-      } else orderItem.quantity = quantity.value;
+      // if (!quantity.value) {
+      //   if (product && !product.is_using_default_quantity) {
+      //     modalType.value = "Quantity";
+      //     openCalculator.value = true;
+      //     return;
+      //   } else orderItem.quantity = 1;
+      // } else orderItem.quantity = quantity.value;
 
-      if (!price.value) {
-        if (product && product.is_price_change_allowed) {
-          modalType.value = "Price";
-          openCalculator.value = true;
-          return;
-        } else orderItem.price = product.price;
-      } else orderItem.price = price.value;
+      // if (!price.value) {
+      //   if (product && product.is_price_change_allowed) {
+      //     modalType.value = "Price";
+      //     openCalculator.value = true;
+      //     return;
+      //   } else orderItem.price = product.price;
+      // } else orderItem.price = price.value;
 
       // if (!price.value) {
       //   orderItem.price = product.price;
@@ -114,10 +120,10 @@ export default {
       // }
       // await nextTick();
 
-      if (product && product.is_tax_inclusive_price)
-        alert(`Add price inclusive tax!! ${isTaxInclusivePrice.value}`);
-      quantity.value = 0;
-      price.value = 0;
+      // if (product && product.is_tax_inclusive_price)
+      //   alert(`Add price inclusive tax!! ${isTaxInclusivePrice.value}`);
+      // quantity.value = 0;
+      // price.value = 0;
       addToCart(orderItem);
     };
 
