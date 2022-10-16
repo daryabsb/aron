@@ -5,7 +5,7 @@ import createProductGroup from "./api/createProductGroup";
 import getCustomers from "@/store/api/getCustomers";
 import getPrinterList from "@/store/api/getPrinterList";
 
-import { generateUID, useActiveOrder } from "@/store/composables";
+import { generateUID, useOrderItemIndex } from "@/store/composables";
 
 import {
   FETCH_USER,
@@ -32,6 +32,7 @@ import {
   SUBMIT_CART,
   ADD_ACTIVE_ORDER_NUMBER,
   ADD_ACTIVE_ORDER,
+  ADD_QUANTITY,
 } from "@/store/constants";
 
 const actions = {
@@ -85,8 +86,14 @@ const actions = {
     await context.commit(ADD_ACTIVE_ORDER, order);
     await context.commit(SUBMIT_CART, order);
   },
-  [ADD_TO_CART]: (context, payload) => {
-    context.commit(COMMIT_TO_CART, payload);
+  [ADD_TO_CART]: async (context, orderItem) => {
+    const index = useOrderItemIndex(orderItem);
+
+    if (index === -1) {
+      await context.commit(COMMIT_TO_CART, orderItem);
+    } else {
+      await context.commit(ADD_QUANTITY, index);
+    }
   },
   [ADD_KEYWORD](context, keyword) {
     context.commit(UPDATE_KEYWORD, keyword);

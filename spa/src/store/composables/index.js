@@ -258,8 +258,15 @@ export const anyWindowFunction = (evt) => {
   // END of F keys
 };
 
-export const addToCarts = (product) => {
-  store.commit(COMMIT_TO_CART, product);
+export const addToCarts = (orderItem) => {
+  // const index = useOrderItemIndex(orderItem);
+
+  // if (index === -1) {
+  //   store.commit(COMMIT_TO_CART, orderItem);
+  // } else {
+  //   store.commit(ADD_QUANTITY, index);
+  // }
+  store.dispatch(ADD_TO_CART, orderItem);
 };
 
 export const useActiveOrder = computed({

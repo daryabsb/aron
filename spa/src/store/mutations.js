@@ -80,25 +80,8 @@ const mutations = {
     state.activeOrder = order;
   },
   [COMMIT_TO_CART](state, orderItem) {
-    // console.log("state.cart", state.cart);
+    state.cart[activeOrderIndex.value].items.push(orderItem);
 
-    const index = useOrderItemIndex(orderItem);
-
-    console.log("WHAT IS MISSING", orderItem);
-
-    console.log("active Order index", activeOrderIndex.value);
-    console.log("orderItem index", index);
-    if (index === -1) {
-      state.cart[activeOrderIndex.value].items.push(orderItem);
-      return;
-    } else {
-      // console.log("FOUND IN ORDER");
-      state.cart[0].items[0].quantity += 1;
-      console.log(
-        "check if quantity added",
-        state.cart[activeOrderIndex.value].items[index].quantity
-      );
-    }
     beep();
     updateChange();
   },
@@ -111,21 +94,13 @@ const mutations = {
   [GET_TOTAL_PRICE](state) {
     state.cart.reduce((total, item) => total + item.qty * item.price, 0);
   },
-  [ADD_QUANTITY](state, payload) {
-    const { item, quantity } = payload;
-    console.log(payload);
-
-    const activeOrderIndex = state.cart.findIndex(
-      (order) => order.number === activeOrderNumber.value
-    );
-
-    const index = useOrderItemIndex(item);
-
+  [ADD_QUANTITY](state, index) {
     if (index === -1) {
       return;
     }
-
-    state.cart[activeOrderIndex].items[index].quantity += quantity;
+    console.log("index", index, " | activeOrderIndex", activeOrderIndex.value);
+    // state.cart[activeOrderIndex.value].items[index].quantity += 1;
+    state.cart[1].items[0].quantity += 1;
 
     beep();
     getTotalPrice();
