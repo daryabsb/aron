@@ -18,6 +18,7 @@ import {
   isShowModalReceipt,
   activeOrderNumber,
   useActiveOrder,
+  createCart,
 } from "@/store/composables";
 import ModalReceipt from "@/components/pos/ModalReceipt.vue";
 import ActiveOrderPopper from "@/components/poppers/ActiveOrderPopper.vue";
@@ -71,6 +72,7 @@ export default {
       isShowModalReceipt,
       activeOrderNumber,
       useActiveOrder,
+      createCart,
     };
   },
 };
@@ -101,6 +103,12 @@ export default {
       </button>
 
       <active-order-popper></active-order-popper>
+      <button
+        class="capitalize mr-1 border border-aronium-500 font-light flex bg-inherit hover:bg-aronium-700 px-5 py-1"
+        @click="createCart()"
+      >
+        New Order
+      </button>
       <!-- <button
         class="grow justify-center mr-1 border border-aronium-500 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
         @click="getIdNumber()"
@@ -111,7 +119,7 @@ export default {
 
     <div class="text-aronium-white flex flex-col h-full overflow-auto">
       <!-- empty cart -->
-      {{ useActiveOrder.items.length === 0 }}
+
       <div
         v-if="useActiveOrder.items.length === 0"
         class="flex-1 w-full p-4 select-none flex flex-col flex-wrap content-center justify-center"

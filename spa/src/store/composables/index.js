@@ -21,6 +21,7 @@ import {
   FETCH_PRINTERS_LIST,
   ADD_DISCOUNT,
   CREATE_CART,
+  COMMIT_TO_CART,
 } from "@/store/constants";
 import store from "@/store";
 
@@ -121,16 +122,16 @@ export const filteredProducts = computed(() => {
 export const addCash = (amount) => {
   return store.commit(ADD_CASH, amount);
 };
-export const useActiveOrder = computed({
-  get() {
-    return store.getters.GET_ACTIVE_ORDER;
-  },
-  // setter
-  set(orderItem) {
-    // Note: we are using destructuring assignment syntax here.
-    store.dispatch(CREATE_CART, orderItem);
-  },
-});
+// export const useActiveOrder = computed({
+//   get() {
+//     return store.getters.GET_ACTIVE_ORDER;
+//   },
+//   // setter
+//   set(orderItem) {
+//     // Note: we are using destructuring assignment syntax here.
+//     store.dispatch(CREATE_CART, orderItem);
+//   },
+// });
 
 export const updateKeyword = (keyword) => store.dispatch(ADD_KEYWORD, keyword);
 export const useCash = computed(() => store.getters.GET_CASH);
@@ -172,9 +173,6 @@ export const findCartIndex = (orderItem) => {
 export const addDiscount = (payload) => {
   store.commit(ADD_DISCOUNT, payload);
 };
-export const addToCarts = (product) => {
-  store.dispatch.ADD_TO_CART(product);
-};
 
 export const getCartIndex = (item) =>
   computed(() => store.getters.GET_CART_INDEX(item));
@@ -197,20 +195,20 @@ export const closeModalReceipt = () => {
   store.commit(CLOSE_MODAL_RECEIPT);
 };
 
-export const addQty = (cartItemIndex, quantity) => {
-  if (!quantity) quantity = 1;
-  return store.commit(ADD_QUANTITY, { cartItemIndex, quantity });
-  // const payload = {};
-  // const index = useCart.value.findIndex((i) => i.id === cartItem.id);
-  // if (index === -1) {
-  //   return;
-  // }
-  // payload.item = item;
-  // payload.quantity = quantity;
+// export const addQty = (item, quantity) => {
+//   if (!quantity) quantity = 1;
+//   return store.commit(ADD_QUANTITY, { item, quantity });
+// const payload = {};
+// const index = useCart.value.findIndex((i) => i.id === cartItem.id);
+// if (index === -1) {
+//   return;
+// }
+// payload.item = item;
+// payload.quantity = quantity;
 
-  // store.commit(ADD_QUANTITY, payload);
-  // updateChange();
-};
+// store.commit(ADD_QUANTITY, payload);
+// updateChange();
+// };
 export const updateChange = () => {
   return store.commit(UPDATE_CHANGE);
 };
@@ -259,3 +257,31 @@ export const anyWindowFunction = (evt) => {
 
   // END of F keys
 };
+
+export const addToCarts = (product) => {
+  store.commit(COMMIT_TO_CART, product);
+};
+
+export const useActiveOrder = computed({
+  get() {
+    return store.getters.GET_ACTIVE_ORDER;
+  },
+  // setter
+  set(orderItem) {
+    // Note: we are using destructuring assignment syntax here.
+    store.dispatch(CREATE_CART, orderItem);
+  },
+});
+
+export const useOrderItemIndex = (product) => {
+  return useActiveOrder.value.items.findIndex((item) => item.id === product.id);
+};
+
+export const addQty = (item, quantity) => {
+  if (!quantity) quantity = 1;
+  return store.commit(ADD_QUANTITY, { item, quantity });
+};
+
+export const activeOrderIndex = computed(() =>
+  useCart.value.findIndex((order) => order.number === activeOrderNumber.value)
+);

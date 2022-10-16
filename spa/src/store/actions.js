@@ -85,8 +85,8 @@ const actions = {
     await context.commit(ADD_ACTIVE_ORDER, order);
     await context.commit(SUBMIT_CART, order);
   },
-  [ADD_TO_CART]: async (context, payload) => {
-    await context.commit(COMMIT_TO_CART, payload);
+  [ADD_TO_CART]: (context, payload) => {
+    context.commit(COMMIT_TO_CART, payload);
   },
   [ADD_KEYWORD](context, keyword) {
     context.commit(UPDATE_KEYWORD, keyword);

@@ -87,9 +87,7 @@ export default {
         orderItem.product = product;
         orderItem.id = product.id;
         orderItem.orderNumber = activeOrderNumber.value;
-        // orderItem.quantity = 1;
-        orderItem.price = product.price;
-      } else return;
+      }
 
       if (!quantity.value) {
         if (product && !product.is_using_default_quantity) {
@@ -99,13 +97,13 @@ export default {
         } else orderItem.quantity = 1;
       } else orderItem.quantity = quantity.value;
 
-      // if (!price.value) {
-      //   if (product && product.is_price_change_allowed) {
-      //     modalType.value = "Price";
-      //     openCalculator.value = true;
-      //     return;
-      //   } else orderItem.price = product.price;
-      // } else orderItem.price = price.value;
+      if (!price.value) {
+        if (product && product.is_price_change_allowed) {
+          modalType.value = "Price";
+          openCalculator.value = true;
+          return;
+        } else orderItem.price = product.price;
+      } else orderItem.price = price.value;
 
       // if (!price.value) {
       //   orderItem.price = product.price;
@@ -118,8 +116,8 @@ export default {
 
       if (product && product.is_tax_inclusive_price)
         alert(`Add price inclusive tax!! ${isTaxInclusivePrice.value}`);
-
-      // console.log(orderItem);
+      quantity.value = 0;
+      price.value = 0;
       addToCart(orderItem);
     };
 

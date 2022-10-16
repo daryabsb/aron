@@ -8,7 +8,7 @@
       </button>
       <template #content="{ close }">
         <div
-          class="bg-inherit text-aronium-white text-base z-50 py-2 list-none border border-aronium-500 min-w-48"
+          class="bg-aronium-900 min-w-full text-aronium-white text-base z-50 py-2 list-none border border-aronium-500 min-w-48"
         >
           <a
             v-for="item in cart"

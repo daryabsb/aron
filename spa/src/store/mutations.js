@@ -4,7 +4,9 @@ import {
   getTotalPrice,
   updateChange,
   activeOrderNumber,
-  findCartIndex,
+  activeOrderIndex,
+  useOrderItemIndex,
+  addQty,
 } from "@/store/composables";
 import moment from "moment";
 import {
@@ -79,27 +81,24 @@ const mutations = {
   },
   [COMMIT_TO_CART](state, orderItem) {
     // console.log("state.cart", state.cart);
-    const activeOrder = state.cart.findIndex((item) => {
-      return item.number === activeOrderNumber.value;
-    });
 
-    console.log(
-      "state.cart[activeOrder].items | ",
-      state.cart[activeOrder].items.findIndex(
-        (item) => item.id === orderItem.id
-      )
-    );
+    const index = useOrderItemIndex(orderItem);
 
-    // const index = findCartIndex(orderItem);
-    const index = state.cart[activeOrder].items.findIndex((item) => {
-      console.log(`Item.id= ${item.id}`, ` | orderItem.id= ${orderItem.id}`);
-      return item.id === orderItem.id;
-    });
+    console.log("WHAT IS MISSING", orderItem);
 
-    console.log("index", index);
+    console.log("active Order index", activeOrderIndex.value);
+    console.log("orderItem index", index);
     if (index === -1) {
-      state.cart[activeOrder].items.push(orderItem);
-    } else state.cart[activeOrder].items[index].quantity++;
+      state.cart[activeOrderIndex.value].items.push(orderItem);
+      return;
+    } else {
+      // console.log("FOUND IN ORDER");
+      state.cart[0].items[0].quantity += 1;
+      console.log(
+        "check if quantity added",
+        state.cart[activeOrderIndex.value].items[index].quantity
+      );
+    }
     beep();
     updateChange();
   },
@@ -116,18 +115,19 @@ const mutations = {
     const { item, quantity } = payload;
     console.log(payload);
 
-    const index = state.cart.findIndex((i) => i.id === item.id);
+    const activeOrderIndex = state.cart.findIndex(
+      (order) => order.number === activeOrderNumber.value
+    );
+
+    const index = useOrderItemIndex(item);
+
     if (index === -1) {
       return;
     }
-    const afterAddItem = state.cart[index].qty + quantity;
-    if (afterAddItem === 0) {
-      state.cart.splice(index, 1);
-      clearSound();
-    } else {
-      state.cart[index].qty = afterAddItem;
-      beep();
-    }
+
+    state.cart[activeOrderIndex].items[index].quantity += quantity;
+
+    beep();
     getTotalPrice();
   },
 

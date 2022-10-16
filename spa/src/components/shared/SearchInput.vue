@@ -12,7 +12,7 @@ export default {
 };
 </script>
 <template>
-  <div class="h-11 border-b">
+  <div class="h-11 border-b border-aronium-500">
     <!-- NEW SEARCH INPUT -->
 
     <div class="flex flex-nowrap">
