@@ -17,7 +17,7 @@ import {
   submit,
   isShowModalReceipt,
   activeOrderNumber,
-  getActiveOrder,
+  useActiveOrder,
 } from "@/store/composables";
 import ModalReceipt from "@/components/pos/ModalReceipt.vue";
 import ActiveOrderPopper from "@/components/poppers/ActiveOrderPopper.vue";
@@ -30,7 +30,6 @@ export default {
     Button,
   },
   setup() {
-    console.log("getActiveOrder",getActiveOrder.value);
     const store = useStore();
     const moneys = store.state.moneys;
     const ID = ref(0);
@@ -71,7 +70,7 @@ export default {
       getIdNumber,
       isShowModalReceipt,
       activeOrderNumber,
-      getActiveOrder,
+      useActiveOrder,
     };
   },
 };
@@ -112,9 +111,9 @@ export default {
 
     <div class="text-aronium-white flex flex-col h-full overflow-auto">
       <!-- empty cart -->
-
+      {{ useActiveOrder.items.length === 0 }}
       <div
-        v-if="!getActiveOrder"
+        v-if="useActiveOrder.items.length === 0"
         class="flex-1 w-full p-4 select-none flex flex-col flex-wrap content-center justify-center"
       >
         <svg
@@ -148,11 +147,11 @@ export default {
             <i class="fa fa-cart h-8 inline-block"></i>
 
             <h1 class="inline-block font-semibold ml-3">
-              {{ getActiveOrder().items.length }}
+              <!-- {{ useActiveOrder.value.items.length }} -->
             </h1>
 
             <div
-              v-if="getActiveOrder().items.length > 0"
+              v-if="useActiveOrder.items.length > 0"
               class="text-center absolute bg-pink-500 text-white w-5 h-5 text-xs p-0 leading-5 rounded-full -right-2 top-3"
             ></div>
           </div>
@@ -181,7 +180,7 @@ export default {
         </div>
 
         <div class="flex-1 w-full overflow-auto">
-          <template v-for="item in getActiveOrder().items" :key="item.id">
+          <template v-for="item in useActiveOrder.items" :key="item.id">
             <div
               class="bg-aronium-700 border-y border-aronium-500 shadow w-full px-2 md:py-0 xl:py-1 flex justify-center"
               :class="
@@ -209,7 +208,6 @@ export default {
                     <span>{{ item.product.discount }}</span>
                     <span>{{ item.product.discountType }}</span>
                   </div>
-                  
                 </h5>
 
                 <p class="text-xs block mt-1 opacity-75">
@@ -217,7 +215,8 @@ export default {
                     >#{{ item.id }} :
                     {{ priceFormat(getItemTotalPrice(item).value) }}</span
                   >
-                 
+                  <!-- <span>#{{ item.id }} : {{ item }}</span> -->
+                  <!-- <span>#{{ item.id }} : {{ getItemTotalPrice(item) }}</span> -->
                 </p>
               </div>
 
@@ -225,19 +224,19 @@ export default {
                 <div class="flex items-center">
                   <button
                     class="flex flex-row items-center justify-center text-sm h-8 w-8 m-1 rounded-sm text-center text-aronium-white bg-inherit border border-aronium-700 shadow-sm hover:bg-pink-700 focus:outline-none"
-                    @click="addQty(item.product, -1)"
+                    @click="addQty(item, -1)"
                   >
                     <i class="fa fa-minus"></i>
                   </button>
                   <input
-                    v-model="item.product.quantity"
+                    v-model="item.quantity"
                     type="text"
                     class="h-8 border-0 w-11 mr-1 text-center text-aronium-white bg-inherit"
                   />
 
                   <button
                     class="flex items-center justify-center text-sm h-8 w-8 mr-1 rounded-sm text-center text-aronium-white bg-inherit border border-aronium-700 shadow-sm hover:bg-pink-700 focus:outline-none"
-                    @click="addQty(item.product, 1)"
+                    @click="addQty(item, 1)"
                   >
                     <i class="fa fa-plus"></i>
                   </button>

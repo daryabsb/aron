@@ -5,6 +5,8 @@ import createProductGroup from "./api/createProductGroup";
 import getCustomers from "@/store/api/getCustomers";
 import getPrinterList from "@/store/api/getPrinterList";
 
+import { generateUID, useActiveOrder } from "@/store/composables";
+
 import {
   FETCH_USER,
   COMMIT_USER,
@@ -28,6 +30,8 @@ import {
   COMMIT_PRINTERS_LIST,
   CREATE_CART,
   SUBMIT_CART,
+  ADD_ACTIVE_ORDER_NUMBER,
+  ADD_ACTIVE_ORDER,
 } from "@/store/constants";
 
 const actions = {
@@ -66,15 +70,23 @@ const actions = {
     const productGroup = await createProductGroup(payload);
     await context.commit(ADD_PRODUCT_GROUP, productGroup);
   },
-  [CREATE_CART](context) {
-    context.commit(SUBMIT_CART);
+  [CREATE_CART]: async (context) => {
+    const order = {};
+    // order.number = uuid.v4();
+    order.number = generateUID();
+    order.discount = 0;
+    order.discountType = 0;
+    order.items = [];
+    order.tax = 0;
+    order.total = 0;
+
+    // console.log("ACTION ADD ACTIVE ORDER", order);
+    await context.commit(ADD_ACTIVE_ORDER_NUMBER, order.number);
+    await context.commit(ADD_ACTIVE_ORDER, order);
+    await context.commit(SUBMIT_CART, order);
   },
-  [ADD_TO_CART](context, payload) {
-    const payloadToCommit = {
-      getters: context.getters,
-      orderItem: payload,
-    };
-    context.commit(COMMIT_TO_CART, payloadToCommit);
+  [ADD_TO_CART]: async (context, payload) => {
+    await context.commit(COMMIT_TO_CART, payload);
   },
   [ADD_KEYWORD](context, keyword) {
     context.commit(UPDATE_KEYWORD, keyword);
