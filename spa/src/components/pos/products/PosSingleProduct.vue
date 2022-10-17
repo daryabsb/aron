@@ -1,5 +1,5 @@
 <template>
-  <div role="button" :title="product.name" @click="addProductToCart(product)">
+  <div role="button" :title="product.name" @click="addToCart(product)">
     <div
       class="h-48 border border-aronium-700 py-2 px-2 w-full overflow-hidden bg-inherit text-aronium-white group-hover:opacity-75"
     >
@@ -32,7 +32,7 @@
       @add-result="addResult"
       @close="closeCalculator"
     ></modal-calculator>
-    <div
+    <!-- <div
       v-if="!isUsingDefaultQuantity"
       class="fixed w-96 h-56 bg-aronium-800 border border-aronium-500 p-3 mx-auto my-auto z-50"
     >
@@ -40,7 +40,7 @@
         <input id="" v-model="quantity" type="text" name="" />
         <button @click="addQuantiy">Add</button>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -73,64 +73,46 @@ export default {
     const price = ref(0);
 
     const closeCalculator = () => (openCalculator.value = false);
-    const addResult = (payload) => {
-      if (payload.type === "Quantity") quantity.value = payload.value;
-      if (payload.type === "Price") price.value = payload.value;
-      openCalculator.value = false;
-      addProductToCart();
-    };
-
-    const addQuantity = () => {
-      modalType.value = "Quantity";
-      openCalculator.value = false;
-    };
-    const addPrice = (price) => {};
 
     const addProductToCart = (product) => {
-      if (product) {
-        orderItem.product = product;
-        orderItem.id = product.id;
-        orderItem.orderNumber = activeOrderNumber;
-        orderItem.quantity = 1;
-        orderItem.price = product.price;
-      }
+      orderItem.product = product;
+      orderItem.id = product.id;
+      orderItem.orderNumber = activeOrderNumber;
+      orderItem.quantity = 1;
+      orderItem.price = product.price;
 
-      if (!quantity.value) {
-        if (product && !product.is_using_default_quantity) {
-          modalType.value = "Quantity";
-          openCalculator.value = true;
-          return;
-        } else orderItem.quantity = 1;
-      } else orderItem.quantity = quantity.value;
+      // if (!product.is_using_default_quantity) {
+      //   modalType.value = "Quantity";
+      //   openCalculator.value = true;
+      //   return;
+      // } else orderItem.quantity = 1;
 
-      if (!price.value) {
-        if (product && product.is_price_change_allowed) {
-          modalType.value = "Price";
-          openCalculator.value = true;
-          return;
-        } else orderItem.price = product.price;
-      } else orderItem.price = price.value;
+      // if (!quantity.value) {
+      //   if (product && !product.is_using_default_quantity) {
+      //     modalType.value = "Quantity";
+      //     openCalculator.value = true;
+      //     return;
+      //   } else orderItem.quantity = 1;
+      // } else orderItem.quantity = quantity.value;
 
       // if (!price.value) {
-      //   orderItem.price = product.price;
-      //   if (product.is_price_change_allowed) {
+      //   if (product && product.is_price_change_allowed) {
       //     modalType.value = "Price";
       //     openCalculator.value = true;
-      //   }
-      // }
+      //     return;
+      //   } else orderItem.price = product.price;
+      // } else orderItem.price = price.value;
+
       // await nextTick();
 
       // if (product && product.is_tax_inclusive_price)
       //   alert(`Add price inclusive tax!! ${isTaxInclusivePrice.value}`);
-      quantity.value = 0;
-      price.value = 0;
+
       addToCart(orderItem);
     };
 
     return {
       addProductToCart,
-      addQuantity,
-      addPrice,
       priceFormat,
       addToCart,
       quantity,
@@ -138,7 +120,6 @@ export default {
       openCalculator,
       closeCalculator,
       modalType,
-      addResult,
     };
   },
 };

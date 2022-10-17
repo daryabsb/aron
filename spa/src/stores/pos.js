@@ -5,7 +5,7 @@ import {
   beep,
   updateChange,
   useOrderItemIndex,
-  getItemTotalPrice,
+  clearSound,
 } from "@/store/composables";
 
 export const usePos = defineStore("pos", {
@@ -33,23 +33,39 @@ export const usePos = defineStore("pos", {
       this.activeNumber = number;
     },
 
-    addToCart(orderItem) {
+    addToCart(product, quantity = 1, price = 0) {
+      if (!quantity) quantity = 1;
+      if (!price) price = product.price;
+      const orderItem = {
+        id: product.id,
+        product,
+        quantity,
+        price,
+      };
+      console.log(orderItem);
       const index = useOrderItemIndex(orderItem);
+
       if (index === -1) {
         this.useActiveOrder.value.items.push(orderItem);
       } else {
-        this.useActiveOrder.value.items[index].quantity += 1;
+        this.addQty(orderItem, (orderItem.quantity = 1), index);
+        // this.useActiveOrder.value.items[index].quantity += orderItem.quantity;
       }
+
       beep();
       updateChange();
     },
-    addQty(orderItem, quantity) {
-      const index = useOrderItemIndex(orderItem);
+    addQty(orderItem, quantity, index) {
+      if (!index) index = useOrderItemIndex(orderItem);
       const item = this.useActiveOrder.value.items[index];
-      item.quantity += quantity;
-      //   item.total = item.price * item.quantity;
-
-      beep();
+      const afterAdd = item.quantity + quantity;
+      if (afterAdd === 0) {
+        this.useActiveOrder.value.items.splice(index, 1);
+        clearSound();
+      } else {
+        item.quantity = afterAdd;
+        beep();
+      }
       updateChange();
     },
   },

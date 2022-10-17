@@ -1,5 +1,5 @@
 <script>
-import { ref, computed } from "vue";
+import { ref, computed, onMounted, createApp } from "vue";
 import { useStore } from "vuex";
 import { usePos } from "@/stores/pos";
 import { CLEAR, UPDATE_CASH } from "@/store/constants";
@@ -25,7 +25,7 @@ export default {
     ModalReceipt,
     Button,
   },
-  setup() {
+  async setup() {
     const store = useStore();
     const pos = usePos();
     const getTotalPrice = pos.totalPrice;
@@ -33,9 +33,10 @@ export default {
     const addQty = pos.addQty;
 
     const activeOrderNumber = ref(pos.activeNumber);
-    const useActiveOrder = ref(pos.useActiveOrder);
-    console.table(useActiveOrder.value);
+    const useActiveOrder = pos.useActiveOrder;
+
     const moneys = ref(pos.moneys);
+
     const ID = ref(0);
     // const createCart = pos.createCart();
     const orderID = computed(() => (ID.value > 0 ? ID : "---"));
@@ -125,8 +126,8 @@ export default {
       <!-- empty cart -->
       <!-- <pre>{{ useActiveOrder }}</pre> -->
       <div
-        class="flex-1 w-full p-4 select-none flex flex-col flex-wrap content-center justify-center"
         v-if="useActiveOrder.items.length === 0"
+        class="flex-1 w-full p-4 select-none flex flex-col flex-wrap content-center justify-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -258,6 +259,7 @@ export default {
           </template>
         </div>
       </div>
+      {{ getTotalPrice }}
       <!-- end of cart items -->
 
       <!-- payment info -->

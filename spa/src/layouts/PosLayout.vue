@@ -28,7 +28,14 @@
           ></pos-header>
         </div>
         <div class="col-span-3 row-span-11 mt-4">
-          <pos-right-nav></pos-right-nav>
+          <Suspense>
+            <template #default>
+              <pos-right-nav></pos-right-nav>
+            </template>
+            <template #fallback>
+              <span>Loading...</span>
+            </template>
+          </Suspense>
         </div>
         <div class="col-span-9 row-span-11 mt-4">
           <router-view></router-view>
@@ -44,6 +51,7 @@
 
 <script>
 import { ref, onMounted } from "vue";
+import { usePos } from "@/stores/pos";
 // import ModalCalculator from "@/components/modals/ModalCalculator.vue";
 import PosHeader from "@/components/Navbars/PosHeader.vue";
 import PosRightNav from "@/components/pos/PosRightNav.vue";
@@ -135,6 +143,8 @@ export default {
     // ModalCalculator,
   },
   setup() {
+    const store = usePos();
+    const createCart = store.createCart;
     let time = ref(null);
     let activeMenu = "pos";
     let isShowModalFirstTime = false;
@@ -145,7 +155,10 @@ export default {
     const change = useChange;
 
     let receiptDate = ref(null);
-
+    onMounted(() => {
+      useFetchProductsDispatch();
+      if (store.cart.length === 0) createCart();
+    });
     onMounted(useFetchProductsDispatch);
 
     // CASH

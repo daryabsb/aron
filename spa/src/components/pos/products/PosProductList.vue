@@ -46,7 +46,7 @@ export default {
     },
   },
   setup(props) {
-    console.log("x: ", props.rows, " | y: ", props.cols);
+    // console.log("x: ", props.rows, " | y: ", props.cols);
     const x = ref(props.rows);
     const y = ref(props.cols);
     const gridClasses = `grid-cols-${y.value} grid-rows-${x.value}`;
