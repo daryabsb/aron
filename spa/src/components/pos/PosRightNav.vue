@@ -11,7 +11,6 @@ import {
   useCash,
   useChange,
   updateChange,
-  getTotalPrice,
   getItemTotalPrice,
   submit,
   isShowModalReceipt,
@@ -29,6 +28,7 @@ export default {
   setup() {
     const store = useStore();
     const pos = usePos();
+    const getTotalPrice = pos.totalPrice;
     const createCart = pos.createCart;
     const addQty = pos.addQty;
 
@@ -350,20 +350,22 @@ export default {
       <!-- </div> -->
       <!-- end of payment info -->
     </div>
+
     <div class="flex flex-col p-2 mt-2 h-56 border-t border-aronium-600">
       <div class="w-full flex justify-between text-aronium-white">
         <span class="text-sm">Subtotal</span>
-        <span class="text-2sm">{{ priceFormat(getTotalPrice().value) }}</span>
+        <span class="text-2sm">{{ priceFormat(getTotalPrice) }}</span>
       </div>
       <div class="mb-1 pt-2 w-full flex justify-between text-aronium-white">
         <span class="text-sm">Tax</span>
         <span class="text-2sm">0</span>
       </div>
       <hr class="border-dashed" />
+
       <div class="w-full flex justify-between text-aronium-white my-1">
         <span class="text-lg text-pink-400 uppercase">Total</span>
         <span class="text-lg text-pink-400">{{
-          priceFormat(getTotalPrice().value)
+          priceFormat(getTotalPrice)
         }}</span>
       </div>
       <hr class="border-dashed" />

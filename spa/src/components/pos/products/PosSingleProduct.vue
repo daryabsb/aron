@@ -95,21 +95,21 @@ export default {
         orderItem.price = product.price;
       }
 
-      // if (!quantity.value) {
-      //   if (product && !product.is_using_default_quantity) {
-      //     modalType.value = "Quantity";
-      //     openCalculator.value = true;
-      //     return;
-      //   } else orderItem.quantity = 1;
-      // } else orderItem.quantity = quantity.value;
+      if (!quantity.value) {
+        if (product && !product.is_using_default_quantity) {
+          modalType.value = "Quantity";
+          openCalculator.value = true;
+          return;
+        } else orderItem.quantity = 1;
+      } else orderItem.quantity = quantity.value;
 
-      // if (!price.value) {
-      //   if (product && product.is_price_change_allowed) {
-      //     modalType.value = "Price";
-      //     openCalculator.value = true;
-      //     return;
-      //   } else orderItem.price = product.price;
-      // } else orderItem.price = price.value;
+      if (!price.value) {
+        if (product && product.is_price_change_allowed) {
+          modalType.value = "Price";
+          openCalculator.value = true;
+          return;
+        } else orderItem.price = product.price;
+      } else orderItem.price = price.value;
 
       // if (!price.value) {
       //   orderItem.price = product.price;
@@ -122,8 +122,8 @@ export default {
 
       // if (product && product.is_tax_inclusive_price)
       //   alert(`Add price inclusive tax!! ${isTaxInclusivePrice.value}`);
-      // quantity.value = 0;
-      // price.value = 0;
+      quantity.value = 0;
+      price.value = 0;
       addToCart(orderItem);
     };
 

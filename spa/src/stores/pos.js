@@ -68,7 +68,8 @@ export const usePos = defineStore("pos", {
       );
       if (activeOrder.items.length === 0) return 0;
       activeOrder.total = activeOrder.items.reduce(
-        (total, item) => total + item.price * item.quantity
+        (total, item) => total + item.price * item.quantity,
+        0
       );
 
       console.log("activeOrder.total", activeOrder.total);
