@@ -33,16 +33,13 @@ export const usePos = defineStore("pos", {
       this.activeNumber = number;
     },
 
-    addToCart(product, quantity = 1, price = 0) {
-      if (!quantity) quantity = 1;
-      if (!price) price = product.price;
+    addToCart(product, quantity = 1, price = 0, tax = 0) {
       const orderItem = {
         id: product.id,
         product,
         quantity,
         price,
       };
-      console.log(orderItem);
       const index = useOrderItemIndex(orderItem);
 
       if (index === -1) {
@@ -77,18 +74,17 @@ export const usePos = defineStore("pos", {
         state.cart.find((item) => item.number === state.activeNumber)
       );
     },
-    totalPrice: (state) => {
+    totalPrice(state) {
       if (!state.activeNumber) return 0;
       const activeOrder = state.cart.find(
         (order) => order.number === state.activeNumber
       );
       if (activeOrder.items.length === 0) return 0;
-      activeOrder.total = activeOrder.items.reduce(
-        (total, item) => total + item.price * item.quantity,
-        0
-      );
+      const total = activeOrder.items.reduce((total, item) => {
+        total + item.price * item.quantity, 0;
+      });
+      activeOrder.total = total;
 
-      console.log("activeOrder.total", activeOrder.total);
       return computed(() => activeOrder.total);
     },
   },

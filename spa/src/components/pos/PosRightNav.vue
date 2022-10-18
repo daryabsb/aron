@@ -8,6 +8,7 @@ import {
   submitable,
   addCash,
   getItemsCount,
+  getTotalPrice,
   useCash,
   useChange,
   updateChange,
@@ -28,7 +29,6 @@ export default {
   async setup() {
     const store = useStore();
     const pos = usePos();
-    const getTotalPrice = pos.totalPrice;
     const createCart = pos.createCart;
     const addQty = pos.addQty;
 
@@ -259,7 +259,7 @@ export default {
           </template>
         </div>
       </div>
-      {{ getTotalPrice }}
+      {{ getTotalPrice() }}
       <!-- end of cart items -->
 
       <!-- payment info -->
@@ -352,11 +352,11 @@ export default {
       <!-- </div> -->
       <!-- end of payment info -->
     </div>
-
+    {{ getTotalPrice() }}
     <div class="flex flex-col p-2 mt-2 h-56 border-t border-aronium-600">
       <div class="w-full flex justify-between text-aronium-white">
         <span class="text-sm">Subtotal</span>
-        <span class="text-2sm">{{ priceFormat(getTotalPrice) }}</span>
+        <span class="text-2sm">{{ priceFormat(getTotalPrice().value) }}</span>
       </div>
       <div class="mb-1 pt-2 w-full flex justify-between text-aronium-white">
         <span class="text-sm">Tax</span>
@@ -367,7 +367,7 @@ export default {
       <div class="w-full flex justify-between text-aronium-white my-1">
         <span class="text-lg text-pink-400 uppercase">Total</span>
         <span class="text-lg text-pink-400">{{
-          priceFormat(getTotalPrice)
+          priceFormat(getTotalPrice().value)
         }}</span>
       </div>
       <hr class="border-dashed" />

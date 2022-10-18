@@ -292,7 +292,7 @@ export const getTotalPrice = () => {
   if (!activeOrderNumber.value) return 0;
   return computed(() =>
     useActiveOrder.value.items.reduce(
-      (total, item) => total + getItemTotalPrice(item).value,
+      (total, item) => total + item.price * item.quantity,
       0
     )
   );

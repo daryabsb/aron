@@ -1,5 +1,5 @@
 <template>
-  <div role="button" :title="product.name" @click="addToCart(product)">
+  <div role="button" :title="product.name" @click="addProductToCart()">
     <div
       class="h-48 border border-aronium-700 py-2 px-2 w-full overflow-hidden bg-inherit text-aronium-white group-hover:opacity-75"
     >
@@ -26,12 +26,16 @@
         </div>
       </div>
     </div>
-    <modal-calculator
-      v-if="openCalculator"
-      :type="modalType"
-      @add-result="addResult"
-      @close="closeCalculator"
+    <!-- <modal-calculator
+      v-if="isUsingDefaultQuantity"
+      type="Quantity"
+      @close="addQuantity, qty"
     ></modal-calculator>
+    <modal-calculator
+      v-if="isPriceChangeAllowed"
+      type="Price"
+      @close="addPrice, price"
+    ></modal-calculator> -->
     <!-- <div
       v-if="!isUsingDefaultQuantity"
       class="fixed w-96 h-56 bg-aronium-800 border border-aronium-500 p-3 mx-auto my-auto z-50"
@@ -59,56 +63,57 @@ export default {
       required: true,
     },
   },
-  setup() {
+  setup(props) {
     const store = usePos();
     const addToCart = store.addToCart;
-    const activeOrderNumber = store.activeNumber;
-    const orderItem = reactive({});
     const openCalculator = ref(false);
-    const modalType = ref("");
-    const isUsingDefaultQuantity = ref(true);
+
     const quantity = ref(0);
+
+    const isUsingDefaultQuantity = ref(false);
     const isPriceChangeAllowed = ref(false);
-    const isTaxInclusivePrice = ref(false);
-    const price = ref(0);
+    // const isTaxInclusivePrice = ref(false);
 
-    const closeCalculator = () => (openCalculator.value = false);
+    // const checkQuantiy = () => {
+    //   if (!quantity.value && !props.product.is_using_default_quantity) {
+    //     isUsingDefaultQuantity.value = false;
+    //   }
+    //   quantity.value = 1;
+    //   checkPrice();
+    // };
+    // const addQuantity = (qty) => {
+    //   isUsingDefaultQuantity.value = true;
+    //   console.log(qty);
+    //   quantity.value = qty;
+    //   checkPrice;
+    // };
+    // const checkPrice = () => {
+    //   if (!price.value && props.product.is_price_change_allowed) {
+    //     isPriceChangeAllowed.value = true;
+    //   }
+    //   price.value = props.product.price;
+    //   checkTaxInclusive();
+    // };
+    // const addPrice = (selectedPrice) => {
+    //   price.value = selectedPrice;
+    //   isPriceChangeAllowed.value = false;
+    //   checkTaxInclusive();
+    // };
+    // const checkTaxInclusive = () => {
+    //   if (props.product.is_tax_inclusive_price) {
+    //     isTaxInclusivePrice.value = true;
+    //   }
+    //   tax.value = 0;
+    //   addProductToCart();
+    // };
+    // const addTaxInclusive = (selectedPrice) => {
+    //   price.value = selectedPrice;
+    //   isTaxInclusivePrice.value = false;
+    //   addProductToCart();
+    // };
 
-    const addProductToCart = (product) => {
-      orderItem.product = product;
-      orderItem.id = product.id;
-      orderItem.orderNumber = activeOrderNumber;
-      orderItem.quantity = 1;
-      orderItem.price = product.price;
-
-      // if (!product.is_using_default_quantity) {
-      //   modalType.value = "Quantity";
-      //   openCalculator.value = true;
-      //   return;
-      // } else orderItem.quantity = 1;
-
-      // if (!quantity.value) {
-      //   if (product && !product.is_using_default_quantity) {
-      //     modalType.value = "Quantity";
-      //     openCalculator.value = true;
-      //     return;
-      //   } else orderItem.quantity = 1;
-      // } else orderItem.quantity = quantity.value;
-
-      // if (!price.value) {
-      //   if (product && product.is_price_change_allowed) {
-      //     modalType.value = "Price";
-      //     openCalculator.value = true;
-      //     return;
-      //   } else orderItem.price = product.price;
-      // } else orderItem.price = price.value;
-
-      // await nextTick();
-
-      // if (product && product.is_tax_inclusive_price)
-      //   alert(`Add price inclusive tax!! ${isTaxInclusivePrice.value}`);
-
-      addToCart(orderItem);
+    const addProductToCart = () => {
+      addToCart(props.product, 1, props.product.price, 0);
     };
 
     return {
@@ -117,9 +122,15 @@ export default {
       addToCart,
       quantity,
       isUsingDefaultQuantity,
+      isPriceChangeAllowed,
       openCalculator,
-      closeCalculator,
-      modalType,
+      // checkQuantiy,
+      // addQuantity,
+      // checkPrice,
+      // addPrice,
+      // checkTaxInclusive,
+
+      // addTaxInclusive,
     };
   },
 };

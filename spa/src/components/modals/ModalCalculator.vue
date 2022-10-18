@@ -85,14 +85,11 @@ export default {
   props: {
     type: { type: String, required: true },
   },
-  emits: ["addResult"],
+  emits: ["close"],
   setup(props, context) {
     const calculate = useCalculate();
     const submitResult = () => {
-      context.emit("addResult", {
-        value: calculate.memory.value,
-        type: props.type,
-      });
+      context.emit("close", calculate.memory.value);
       calculate.calculateResult();
     };
     const keyboard = useKeyboard();
