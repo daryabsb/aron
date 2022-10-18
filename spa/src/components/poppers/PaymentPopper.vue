@@ -18,15 +18,15 @@
           class="w-full h-full bg-aronium-700 border-b border-r border-aronium-500 text-left p-3"
         >
           <!-- ITEMS HERE -->
-          <div v-for="item in cart" :key="item.id">
+          <div v-for="item in activeOrder.items" :key="item.id">
             <div
               class="bg-aronium-700 border-b mb-2 border-aronium-500 shadow w-full px-2 md:py-0 xl:py-1 flex justify-center"
               :class="
-                item.id === ID
+                item.product.id === ID
                   ? 'bg-aronium-sky-600  text-aronium-50 text-shadow-lg'
                   : 'bg-inherit'
               "
-              @click="selectItem(item)"
+              @click="selectItem(item.product)"
             >
               <!-- <img
                 :src="item.image"
@@ -37,7 +37,7 @@
                 <h5
                   class="text-sm subpixel-antialiased tracking-wider font-semibold"
                 >
-                  {{ item.name }}
+                  {{ item.product.name }}
                 </h5>
               </div>
 
@@ -164,7 +164,7 @@
                 Total:
                 <span
                   class="font-semibold text-2xl text-aronium-sky-500 ml-auto"
-                  >{{ priceFormat(getTotalPrice().value * 1.05) }}</span
+                  >{{ priceFormat(activeOrder.total) }}</span
                 >
               </div>
               <!-- Number is : {{ number }}<br />
@@ -176,7 +176,7 @@
                 Total:
                 <input
                   ref="input"
-                  v-model="cash"
+                  :value="cash"
                   type="text"
                   class="grow font-semibold text-3xl bg-inherit text-end focus:ring-0 border-0 border-b border-aronium-500 focus:border-aronium-sky-500"
                 />
@@ -230,7 +230,7 @@
 </template>
 <script>
 import { ref } from "vue";
-import { usePos } from "@/store/composables/pos";
+import { usePos } from "@/stores/pos";
 
 import Calculator from "@/components/shared/calculator/Calculator.vue";
 import Moneys from "@/components/Cards/Moneys.vue";
@@ -243,12 +243,18 @@ export default {
   },
   emits: ["close", "cashOut"],
   setup() {
-    const pos = usePos();
-    const cart = pos.useCart;
-    const cash = pos.useCash;
-    const change = pos.useChange;
+    const store = usePos();
+    const cart = store.cart;
+    const cash = ref(store.cash);
+    const change = ref(store.change);
     const isShowItems = ref(true);
-    const moneys = pos.useMoneys;
+    const moneys = store.useMoneys;
+    const priceFormat = store.priceFormat;
+    const getItemTotalPrice = store.getItemTotalPrice;
+    const getItemSubTotal = store.getItemSubTotal;
+
+    const getTotalPrice = store.totalPrice;
+    const activeOrder = store.useActiveOrder;
     const inputMoney = ref(0);
 
     const isDiscountPopper = ref(false);
@@ -267,7 +273,7 @@ export default {
 
     const addCashValue = (value) => {
       cashValue.value = value;
-      pos.addCash(value);
+      store.addCash(value);
     };
 
     const showItems = () => (isShowItems.value = !isShowItems.value);
@@ -289,24 +295,23 @@ export default {
       // Numeric pad
 
       inputMoney,
-
+      cash,
+      change,
+      activeOrder,
       isShowItems,
       showItems,
-      cart,
-      cash,
-      moneys,
+      getTotalPrice,
       addCashValue,
       cashValue,
-      change,
-
+      priceFormat,
+      getItemTotalPrice,
       ID,
       cartItem,
       selectItem,
-
+      getItemSubTotal,
       openDiscountPopper,
       isDiscountPopper,
       closeDiscountPopper,
-      ...usePos,
     };
   },
 };

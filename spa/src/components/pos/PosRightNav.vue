@@ -34,6 +34,7 @@ export default {
 
     const activeOrderNumber = ref(pos.activeNumber);
     const useActiveOrder = pos.useActiveOrder;
+    const subTotalBeforeTax = pos.subTotalBeforeTax;
 
     const moneys = ref(pos.moneys);
 
@@ -64,6 +65,7 @@ export default {
       addQty,
       getTotalPrice,
       getItemTotalPrice,
+      subTotalBeforeTax,
       getItemsCount,
       addCash,
       updateCash,
@@ -259,7 +261,7 @@ export default {
           </template>
         </div>
       </div>
-      {{ getTotalPrice() }}
+
       <!-- end of cart items -->
 
       <!-- payment info -->
@@ -352,22 +354,21 @@ export default {
       <!-- </div> -->
       <!-- end of payment info -->
     </div>
-    {{ getTotalPrice() }}
     <div class="flex flex-col p-2 mt-2 h-56 border-t border-aronium-600">
       <div class="w-full flex justify-between text-aronium-white">
         <span class="text-sm">Subtotal</span>
-        <span class="text-2sm">{{ priceFormat(getTotalPrice().value) }}</span>
+        <span class="text-2sm">{{ priceFormat(subTotalBeforeTax) }}</span>
       </div>
       <div class="mb-1 pt-2 w-full flex justify-between text-aronium-white">
         <span class="text-sm">Tax</span>
-        <span class="text-2sm">0</span>
+        <span class="text-2sm">{{ useActiveOrder.tax }}</span>
       </div>
       <hr class="border-dashed" />
 
       <div class="w-full flex justify-between text-aronium-white my-1">
         <span class="text-lg text-pink-400 uppercase">Total</span>
         <span class="text-lg text-pink-400">{{
-          priceFormat(getTotalPrice().value)
+          priceFormat(useActiveOrder.total)
         }}</span>
       </div>
       <hr class="border-dashed" />

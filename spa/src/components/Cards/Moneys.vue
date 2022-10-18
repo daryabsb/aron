@@ -18,12 +18,14 @@
 <script>
 import Button from "@/components/shared/Button.vue";
 import Grid from "@/components/shared/Grid.vue";
-import { useMoneys, addCash } from "@/store/composables";
+import { usePos } from "@/stores/pos";
 export default {
   name: "Moneys",
   components: { Button, Grid },
   setup() {
-    const moneys = useMoneys;
+    const store = usePos();
+    const moneys = store.useMoneys;
+    const addCash = store.addCash;
 
     return {
       moneys,
