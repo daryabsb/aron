@@ -31,7 +31,7 @@ export const usePos = defineStore("pos", {
       // order.number = uuid.v4();
       this.cart.push(order);
       console.log(this.cart);
-      this.activeNumber = number;
+      this.changeActiveOrderNumber(number);
     },
     changeActiveOrderNumber(number) {
       this.activeNumber = number;
@@ -171,12 +171,10 @@ export const usePos = defineStore("pos", {
       // console.log("!this.isActiveNumber.value", !this.isActiveNumber.value);
       if (!this.isActiveNumber.value) return 0;
       if (!this.isActiveOrderItems) return 0;
-      const subTotal = this.useActiveOrder.value.items.reduce(
+      return this.useActiveOrder.value.items.reduce(
         (total, item) => total + this.getItemTotalPrice(item).value,
         0
       );
-
-      return subTotal;
     },
     totalPrice() {
       if (!this.isActiveNumber.value) return 0;

@@ -9,6 +9,7 @@
       <template #content="{ close }">
         <div
           class="bg-aronium-900 min-w-full text-aronium-white text-base z-50 py-2 list-none border border-aronium-500 min-w-48"
+          @click="close"
         >
           <a
             v-for="item in cart"
@@ -49,10 +50,10 @@ export default {
     const changeActiveOrderNumber = store.changeActiveOrderNumber;
 
     const cart = store.cart;
-    const activeOrderNumber = ref(store.activeNumber);
-    const submitActiveOrderNumber = (number) => {
-      close();
+    const activeOrderNumber = store.activeNumber;
+    const submitActiveOrderNumber = async (number) => {
       changeActiveOrderNumber(number);
+      // close();
     };
     return {
       submitActiveOrderNumber,
