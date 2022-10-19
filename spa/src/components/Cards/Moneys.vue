@@ -25,6 +25,7 @@ export default {
   setup() {
     const store = usePos();
     const moneys = store.useMoneys;
+
     const addCash = store.addCash;
 
     return {

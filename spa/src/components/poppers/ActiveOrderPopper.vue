@@ -15,7 +15,7 @@
             :key="item.number"
             href="javascript:void(0);"
             class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent"
-            @click="submitActiveOrderNumber"
+            @click="submitActiveOrderNumber(item.number)"
           >
             {{ item.number }}
           </a>
@@ -46,10 +46,13 @@ export default {
   },
   setup() {
     const store = usePos();
+    const changeActiveOrderNumber = store.changeActiveOrderNumber;
+
     const cart = store.cart;
     const activeOrderNumber = ref(store.activeNumber);
-    const submitActiveOrderNumber = () => {
+    const submitActiveOrderNumber = (number) => {
       close();
+      changeActiveOrderNumber(number);
     };
     return {
       submitActiveOrderNumber,

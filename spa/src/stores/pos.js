@@ -1,13 +1,6 @@
 import { computed, ref } from "vue";
 import { defineStore } from "pinia";
 import moment from "moment";
-import {
-  generateUID,
-  beep,
-  updateChange,
-  useOrderItemIndex,
-  clearSound,
-} from "@/store/composables";
 
 export const usePos = defineStore("pos", {
   state: () => {
@@ -40,12 +33,20 @@ export const usePos = defineStore("pos", {
       console.log(this.cart);
       this.activeNumber = number;
     },
+    changeActiveOrderNumber(number) {
+      this.activeNumber = number;
+    },
     generateUID: () => {
       let firstPart = new Date();
       let secondPart = (Math.random() * (49999 - 101) + 101) | 0;
       firstPart = `${firstPart.getDate()}${firstPart.getMonth()}${firstPart.getFullYear()}`;
       secondPart = secondPart.toString();
       return firstPart + secondPart;
+    },
+    useOrderItemIndex(product) {
+      return this.useActiveOrder.value.items.findIndex(
+        (item) => item.id === product.id
+      );
     },
 
     addToCart(product, quantity = 1, price = 0, tax = 0) {
@@ -56,7 +57,7 @@ export const usePos = defineStore("pos", {
         tax,
         price,
       };
-      const index = useOrderItemIndex(orderItem);
+      const index = this.useOrderItemIndex(orderItem);
 
       if (index === -1) {
         this.useActiveOrder.value.items.push(orderItem);
@@ -65,21 +66,21 @@ export const usePos = defineStore("pos", {
         // this.useActiveOrder.value.items[index].quantity += orderItem.quantity;
       }
 
-      beep();
-      updateChange();
+      this.beep();
+      this.updateChange();
     },
     addQty(orderItem, quantity, index) {
-      if (!index) index = useOrderItemIndex(orderItem);
+      if (!index) index = this.useOrderItemIndex(orderItem);
       const item = this.useActiveOrder.value.items[index];
       const afterAdd = item.quantity + quantity;
       if (afterAdd === 0) {
         this.useActiveOrder.value.items.splice(index, 1);
-        clearSound();
+        this.clearSound();
       } else {
         item.quantity = afterAdd;
-        beep();
+        this.beep();
       }
-      updateChange();
+      this.updateChange();
     },
     getItemSubTotal(item) {
       item.price * item.quantity;
@@ -93,12 +94,17 @@ export const usePos = defineStore("pos", {
       this.beep();
       console.log(this.cash, amount);
     },
+    clearCash() {
+      this.cash = 0;
+      this.change = 0;
+      this.clearSound();
+    },
     updateCash(value) {
       this.cash = parseFloat(value.replace(/[^0-9]+/g, ""));
       this.updateChange();
     },
     updateChange() {
-      this.change = this.cash - this.totalPrice.value;
+      this.change = this.cash - this.totalPrice;
     },
     getItemTotalPrice(item) {
       return computed(() => item.price * item.quantity);
@@ -115,13 +121,13 @@ export const usePos = defineStore("pos", {
       );
     },
 
-    clear: (state) => {
-      state.cash = 0;
-      state.cart = [];
-      state.receiptNo = null;
-      state.receiptDate = null;
-      updateChange();
-      clearSound();
+    clear() {
+      this.cash = 0;
+      this.cart = [];
+      this.receiptNo = null;
+      this.receiptDate = null;
+      this.updateChange();
+      this.clearSound();
     },
     submit: (state) => {
       const time = new Date();
@@ -138,10 +144,15 @@ export const usePos = defineStore("pos", {
     beep() {
       this.playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
     },
+    clearSound() {
+      this.playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
+    },
   },
   getters: {
     activeOrderNumber: (state) => state.activeNumber,
-    useMoneys: (state) => state.moneys,
+    useMoneys(state) {
+      return computed(() => state.moneys);
+    },
     useActiveOrder: (state) => {
       return computed(() =>
         state.cart.find((item) => item.number === state.activeNumber)
@@ -159,26 +170,31 @@ export const usePos = defineStore("pos", {
     subTotalBeforeTax() {
       // console.log("!this.isActiveNumber.value", !this.isActiveNumber.value);
       if (!this.isActiveNumber.value) return 0;
-      // console.log("!this.isActiveOrderItems", !this.isActiveOrderItems);
       if (!this.isActiveOrderItems) return 0;
-      const totalBeforeTax = this.useActiveOrder.value.items.reduce(
-        (total, item) => total + item.price * item.quantity,
+      const subTotal = this.useActiveOrder.value.items.reduce(
+        (total, item) => total + this.getItemTotalPrice(item).value,
         0
       );
-      return computed(() => totalBeforeTax);
+
+      return subTotal;
     },
     totalPrice() {
       if (!this.isActiveNumber.value) return 0;
       if (!this.isActiveOrderItems) return 0;
-      console.log("from totalPriceBeforeTax", this.subTotalBeforeTax.value);
+      //   console.log("from totalPriceBeforeTax", this.subTotalBeforeTax.value);
 
-      const total =
-        this.subTotalBeforeTax.value + this.useActiveOrder.value.tax;
+      const total = this.subTotalBeforeTax + this.useActiveOrder.value.tax;
       this.useActiveOrder.value.total = total;
-      return computed(() => total);
+      return total;
     },
-    submitable: () => {
-      return computed(() => this.change >= 0 && this.cart.length > 0);
+    submitable(state) {
+      return state.change >= 0 && state.cart.length > 0;
+    },
+    useCash(state) {
+      return computed(() => state.cash);
+    },
+    useChange(state) {
+      return computed(() => state.change);
     },
   },
 });

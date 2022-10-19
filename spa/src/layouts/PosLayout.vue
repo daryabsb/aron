@@ -145,6 +145,7 @@ export default {
   setup() {
     const store = usePos();
     const createCart = store.createCart;
+    const clearCash = store.clearCash;
     let time = ref(null);
     let activeMenu = "pos";
     let isShowModalFirstTime = false;
@@ -168,6 +169,7 @@ export default {
     };
     const paymentModal = () => {
       openPaymentModal.value = !openPaymentModal.value;
+      clearCash();
     };
 
     const cashOut = () => {

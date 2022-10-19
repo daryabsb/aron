@@ -27,31 +27,23 @@ export default {
     Button,
   },
   async setup() {
-    const store = useStore();
-    const pos = usePos();
-    const createCart = pos.createCart;
-    const addQty = pos.addQty;
-
-    const activeOrderNumber = ref(pos.activeNumber);
-    const useActiveOrder = pos.useActiveOrder;
-    const subTotalBeforeTax = pos.subTotalBeforeTax;
-
-    const moneys = ref(pos.moneys);
-
-    const ID = ref(0);
-    // const createCart = pos.createCart();
-    const orderID = computed(() => (ID.value > 0 ? ID : "---"));
-
-    // GETTERS from COMPOSABLES
-    const cart = ref(pos.cart);
-    const cash = useCash;
-    const change = useChange;
-
-    // const addCash = (amount) => store.commit(UPDATE_CHANGE, amount);
-    const updateCash = (value) => store.commit(UPDATE_CASH, value);
-    const clear = () => store.commit(CLEAR);
-
+    const store = usePos();
+    const createCart = store.createCart;
+    const addQty = store.addQty;
+    const clear = store.clear;
     const selectItem = (item) => (ID.value = item.id);
+    const moneys = store.useMoneys;
+
+    const activeOrderNumber = store.activeNumber;
+    const useActiveOrder = store.useActiveOrder;
+    const subTotalBeforeTax = store.subTotalBeforeTax;
+    const ID = ref(0);
+    const orderID = computed(() => (ID.value > 0 ? ID : "---"));
+    const cart = store.cart;
+    const cash = store.cash;
+    const change = store.change;
+
+    const updateCash = store.updateCash;
 
     const getIdNumber = () => console.log("ID Number is 5");
 
@@ -263,96 +255,6 @@ export default {
       </div>
 
       <!-- end of cart items -->
-
-      <!-- payment info -->
-
-      <!-- <div class="select-none h-auto w-full text-center pt-3 pb-4 px-4"> -->
-      <!-- <div class="flex mb-3 text-lg font-semibold text-pink-400">
-          <div>TOTAL</div>
-          <div class="text-right w-full">
-            {{ priceFormat(getTotalPrice().value) }}
-          </div>
-        </div> -->
-      <!-- <div
-          class="mb-3 text-blue-gray-700 px-3 pt-2 pb-3 rounded-lg bg-blue-gray-50"
-        > -->
-      <!-- <div class="flex text-lg font-semibold">
-            <div class="flex-grow text-left">CASH</div>
-            <div class="flex text-right">
-              <input
-                :value="cash"
-                :placeholder="cash"
-                type="text"
-                class="h-8 text-right border-none shadow rounded-lg focus:bg-white focus:shadow-lg px-2 focus:outline-none"
-                @keyup="updateCash($event.target.value)"
-              />
-              <div class="m-1">IQD</div>
-            </div>
-          </div>
-          <hr class="my-2" /> -->
-      <!-- <div class="grid grid-cols-3 gap-2 mt-2">
-            <template v-for="money in moneys" :key="money">
-              <button
-                class="bg-white rounded-lg shadow hover:shadow-lg focus:outline-none inline-block px-2 py-1 text-sm m-1"
-                @click="addCash(money)"
-              >
-                +<span>
-                  {{ money }}
-                </span>
-              </button>
-            </template>
-          </div> -->
-      <!-- </div> -->
-      <!-- <div
-          v-if="change > 0"
-          class="flex mb-3 text-lg font-semibold bg-pink-50 text-blue-gray-700 rounded-lg py-2 px-3"
-        >
-          <div class="text-pink-700">CHANGE</div>
-          <div class="text-right flex-grow text-pink-700">
-            {{ priceFormat(change) }}
-          </div>
-        </div> -->
-      <!-- <div
-          v-if="change < 0"
-          class="flex mb-3 text-lg font-semibold bg-pink-100 text-blue-gray-700 rounded-lg py-2 px-3"
-        >
-          <div class="text-right flex-grow text-pink-600">
-            {{ priceFormat(change) }}
-          </div>
-        </div> -->
-      <!-- <div
-          v-if="change == 0 && cart.length > 0"
-          class="flex justify-center mb-3 text-lg font-semibold bg-pink-50 text-pink-700 rounded-lg py-2 px-3"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8 inline-block"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
-            />
-          </svg>
-        </div> -->
-
-      <!-- <button
-          class="text-white rounded-2xl text-lg w-full py-3 focus:outline-none"
-          :class="{
-            'bg-pink-500 hover:bg-pink-600': submitable(),
-            'bg-gray-400': !submitable(),
-          }"
-          :disabled="!submitable()"
-          @click="submit($event)"
-        >
-          SUBMIT
-        </button> -->
-      <!-- </div> -->
-      <!-- end of payment info -->
     </div>
     <div class="flex flex-col p-2 mt-2 h-56 border-t border-aronium-600">
       <div class="w-full flex justify-between text-aronium-white">
@@ -372,26 +274,12 @@ export default {
         }}</span>
       </div>
       <hr class="border-dashed" />
-      <!-- <div class="w-full flex justify-between text-aronium-white">
-        <span class="text-sm">Cash</span>
-        <span class="text-2sm">{{ priceFormat(cash) }}</span>
-      </div> -->
-
-      <!-- <hr class="border-1" />
-      <div class="w-full flex justify-between text-aronium-white">
-        <span class="text-sm">Change</span>
-        <span
-          class="text-2sm text-aroium-danger"
-          :class="change < 0 ? 'text-aronium-danger' : 'text-inherit'"
-          >{{ priceFormat(change) }}</span
-        >
-      </div> -->
 
       <div class="flex items-start p-1 h-16 border-t mt-3 border-aronium-600">
         <Button
           class="w-1/3 mb-3 capitalize mr-1 items-center justify-center border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-4 py-1"
           variant="red"
-          @click="clear()"
+          @click="clear"
         >
           <span class="mr-3">
             <i class="fa fa-trash fa-sm"></i>

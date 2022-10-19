@@ -28,11 +28,11 @@
               "
               @click="selectItem(item.product)"
             >
-              <!-- <img
-                :src="item.image"
+              <img
+                :src="item.product.image"
                 alt=""
-                class="rounded-sm h-8 w-8 bg-transparent shadow mr-2"
-              /> -->
+                class="rounded-sm h-8 w-8 hover:h-20 hover:w-20 hover:shadow-2xl bg-transparent shadow mr-2"
+              />
               <div class="flex-grow">
                 <h5
                   class="text-sm subpixel-antialiased tracking-wider font-semibold"
@@ -117,7 +117,6 @@
                 class="flex bg-aronium-inherit border border-aronium-500 py-4 w-44 justify-center text-sm my-1"
                 @click="$emit('cashOut')"
               >
-                <!-- :disabled="submitable()" -->
                 Cash
               </button>
               <button
@@ -167,16 +166,12 @@
                   >{{ priceFormat(activeOrder.total) }}</span
                 >
               </div>
-              <!-- Number is : {{ number }}<br />
-              <a href="#" @click="showKeypad = !showKeypad"
-                ><h4>Toggle Keypad</h4></a
-              > -->
 
               <div class="relative flex justify-start w-full">
                 Total:
                 <input
                   ref="input"
-                  :value="cash"
+                  v-model="cash"
                   type="text"
                   class="grow font-semibold text-3xl bg-inherit text-end focus:ring-0 border-0 border-b border-aronium-500 focus:border-aronium-sky-500"
                 />
@@ -192,34 +187,9 @@
                 >
               </div>
               <div class="flex justify-around w-full h-full bottom-0">
-                <!-- MONEY -->
-                <!-- <div class="grid grid-cols-3 gap-2 mt-2">
-                  <div v-for="money in moneys" :key="money">
-                    <button
-                      class="bg-inherit rounded-lg shadow hover:shadow-lg focus:outline-none inline-block px-2 py-1 text-sm m-1"
-                      @click="addCashValue(money)"
-                    >
-                      +<span>
-                        {{ money }}
-                      </span>
-                    </button>
-                  </div>
-                </div> -->
                 <moneys></moneys>
 
                 <calculator></calculator>
-
-                <!-- <div class="flex flex-col justify-between w-72 h-80">
-                  <div class="h-20 border border-aronium-500">
-                    <span>{{ number }}</span>
-                  </div>
-                  <numericpad
-                    :on-input="onInput"
-                    :on-delete="onDelete"
-                    :on-reset="onReset"
-                    :show="showKeypad"
-                  />
-                </div> -->
               </div>
             </div>
           </div>
@@ -245,8 +215,9 @@ export default {
   setup() {
     const store = usePos();
     const cart = store.cart;
-    const cash = ref(store.cash);
-    const change = ref(store.change);
+    const cash = store.useCash;
+    const change = store.useChange;
+    console.log("change", change);
     const isShowItems = ref(true);
     const moneys = store.useMoneys;
     const priceFormat = store.priceFormat;
@@ -269,7 +240,6 @@ export default {
     };
 
     const cashValue = ref(0);
-    // const cashValue = computed(() => parseInt(number.value) + inputMoney.value);
 
     const addCashValue = (value) => {
       cashValue.value = value;
