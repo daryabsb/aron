@@ -46,6 +46,21 @@
                   <hr />
                 </li>
                 <li>
+                  <router-link v-slot="{ href, navigate }" to="/playground">
+                    <a
+                      :href="href"
+                      class="text-sm py-2 font-normal block"
+                      @click="navigate"
+                    >
+                      <!-- class="fas fa-tv mr-2 text-sm" -->
+                      <i class="fa fa-screwdriver-wrench fa-lg"></i>
+                      Playground
+                    </a>
+                  </router-link>
+
+                  <hr />
+                </li>
+                <li>
                   <a
                     href="javascript:void(0);"
                     class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent"

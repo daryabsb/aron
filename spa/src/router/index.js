@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 // import HomeLayout from "@/layouts/HomeLayout.vue";
 import PosLayout from "@/layouts/PosLayout.vue";
+import Playground from "@/layouts/Playground.vue";
 // import ProductsAdminLayout from "@/components/temporary/ProductsAdminLayout.vue";
 import ManagementLayout from "@/layouts/ManagementLayout.vue";
 // import Auth from "@/layouts/Auth.vue";
@@ -30,83 +31,83 @@ import Index from "@/views/Index.vue";
 // import Landing from "@/views/Landing.vue";
 // import Profile from "@/views/Profile.vue";
 
-const routes = [
-  {
-    path: "/management",
-    redirect: "/management/dashboard",
-    component: ManagementLayout,
-    children: [
-      {
-        path: "/management/dashboard",
-        component: Dashboard,
-      },
-      {
-        path: "/management/documents",
-        component: Documents,
-      },
-      {
-        path: "/management/products",
-        component: Products,
-      },
-      {
-        path: "/management/stocks",
-        component: Stocks,
-      },
-    ],
-  },
-  {
-    path: "/pos",
-    redirect: "/pos/store",
-    component: PosLayout,
-    children: [
-      {
-        path: "/pos/store",
-        component: Store,
-      },
-    ],
-  },
-  // {
-  //   path: "/products",
-  //   redirect: "/products/control-panel",
-  //   component: ProductsAdminLayout,
-  //   children: [
-  //     {
-  //       path: "/products/control-panel",
-  //       name: "manage-products",
-  //       component: ProductsControlPanel,
-  //     },
-  //   ],
-  // },
-  {
-    path: "/",
-    component: Index,
-  },
-  // {
-  //   path: "/home",
-  //   redirect: "/home/dashboard",
-  //   component: HomeLayout,
-  //   children: [
-  //     {
-  //       path: "/home/dashboard",
-  //       component: HomeDashboard,
-  //     },
-  //     {
-  //       path: "/home/custom",
-  //       component: CustomFactoryPage,
-  //     },
-  //   ],
-  // },
-  // {
-  //   path: "/aronium",
-  //   name: "aronium",
-  //   component: ManagementLayout,
-  // },
-  { path: "/:pathMatch(.*)*", redirect: "/" },
+const routes = [{
+        path: "/management",
+        redirect: "/management/dashboard",
+        component: ManagementLayout,
+        children: [{
+                path: "/management/dashboard",
+                component: Dashboard,
+            },
+            {
+                path: "/management/documents",
+                component: Documents,
+            },
+            {
+                path: "/management/products",
+                component: Products,
+            },
+            {
+                path: "/management/stocks",
+                component: Stocks,
+            },
+        ],
+    },
+    {
+        path: "/pos",
+        redirect: "/pos/store",
+        component: PosLayout,
+        children: [{
+            path: "/pos/store",
+            component: Store,
+        }, ],
+    },
+    // {
+    //   path: "/products",
+    //   redirect: "/products/control-panel",
+    //   component: ProductsAdminLayout,
+    //   children: [
+    //     {
+    //       path: "/products/control-panel",
+    //       name: "manage-products",
+    //       component: ProductsControlPanel,
+    //     },
+    //   ],
+    // },
+    {
+        path: "/",
+        component: Index,
+    },
+    {
+        path: "/playground",
+        component: Playground
+    },
+    // {
+    //   path: "/home",
+    //   redirect: "/home/dashboard",
+    //   component: HomeLayout,
+    //   children: [
+    //     {
+    //       path: "/home/dashboard",
+    //       component: HomeDashboard,
+    //     },
+    //     {
+    //       path: "/home/custom",
+    //       component: CustomFactoryPage,
+    //     },
+    //   ],
+    // },
+    // {
+    //   path: "/aronium",
+    //   name: "aronium",
+    //   component: ManagementLayout,
+    // },
+    { path: "/:pathMatch(.*)*", redirect: "/" },
 ];
 
 const router = createRouter({
-  history: createWebHistory("/"),
-  routes,
+    history: createWebHistory("/"),
+    routes,
 });
 
 export default router;
