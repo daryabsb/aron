@@ -1,11 +1,17 @@
 from rest_framework import serializers
-from core.models import Barcode, Product, ProductGroup
+from core.models import Barcode, Product, ProductGroup, Stock, Warehouse
 
 
 class ProductSerializer(serializers.ModelSerializer):
+    stock_quantity = serializers.SerializerMethodField()
     class Meta:
         model = Product
         fields = "__all__"
+
+    def get_stock_quantity(self, obj):
+        stock = Stock.objects.get(product=obj.id)
+        # print(stock.quantity)
+        return stock.quantity
 
 
 class BarcodeSerializer(serializers.ModelSerializer):
@@ -23,6 +29,23 @@ class NestedProductGroup(serializers.ModelSerializer):
             "name",
         )
         # read_only_fields = ("id",)
+
+
+class WarehouseSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Warehouse
+        fields = ('id', 'name', )
+        read_only_fields = ('id',)
+
+
+class StockSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Stock
+        fields = ('id', 'product', 'warehouse', 'quantity',
+                  'created', 'updated',)
+        read_only_fields = ('id',)
 
 
 class ProductsGroupSerializer(serializers.ModelSerializer):

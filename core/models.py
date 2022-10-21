@@ -749,6 +749,7 @@ class Product(models.Model):
         return f"{self.name} - {self.price} /{self.product_group}"
 
 
+
 class Barcode(models.Model):
     user = models.ForeignKey(
         "User", on_delete=models.CASCADE, related_name="barcodes")
@@ -801,12 +802,13 @@ class Stock(models.Model):
     warehouse = models.ForeignKey(
         "Warehouse", on_delete=models.CASCADE, related_name="stocks"
     )
+    quantity = models.SmallIntegerField(default=0)
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.product} @ {self.warehouse}"
+        return f"{self.quantity}{self.product.measurement_unit} of {self.product} @ {self.warehouse}"
 
 
 class StockControl(models.Model):
@@ -819,7 +821,7 @@ class StockControl(models.Model):
     customer = models.ForeignKey(
         "Customer", on_delete=models.SET_NULL, null=True, related_name="stock_controls"
     )
-    recorder_poing = models.FloatField(default=0)
+    reorder_poing = models.FloatField(default=0)
     preferred_quantity = models.SmallIntegerField(default=1)
     is_low_stock_warning_enabled = models.BooleanField(default=True)
     low_stock_warning_quantity = models.SmallIntegerField(default=1)
@@ -946,6 +948,8 @@ class StartingCash(models.Model):
     class Meta:
         constraints = [models.UniqueConstraint(
             fields=["id"], name="unique_id")]
+
+        verbose_name_plural = "starting cash"
 
     def __str__(self):
         return f"{self.amount} On {self.created}"

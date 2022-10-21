@@ -27,7 +27,7 @@
             @payment-modal="paymentModal"
           ></pos-header>
         </div>
-        <div class="col-span-3 row-span-11 mt-4">
+        <div class="col-span-3 row-span-11">
           <Suspense>
             <template #default>
               <pos-right-nav></pos-right-nav>
@@ -37,11 +37,11 @@
             </template>
           </Suspense>
         </div>
-        <div class="col-span-9 row-span-11 mt-4">
+        <div class="col-span-9 row-span-11">
           <router-view></router-view>
         </div>
 
-        <modal-first-time v-show="isShowModalFirstTime"></modal-first-time>
+        <!-- <modal-first-time v-show="isShowModalFirstTime"></modal-first-time> -->
       </div>
     </div>
     <!-- end of noprint-area -->
@@ -56,7 +56,7 @@ import { usePos } from "@/stores/pos";
 import PosHeader from "@/components/Navbars/PosHeader.vue";
 import PosRightNav from "@/components/pos/PosRightNav.vue";
 // import StoreMenu from "@/components/pos/StoreMenu.vue";
-import ModalFirstTime from "@/components/temporary/ModalFirstTime.vue";
+// import ModalFirstTime from "@/components/temporary/ModalFirstTime.vue";
 import {
   useFetchProductsDispatch,
   openCashModal,
@@ -139,7 +139,7 @@ export default {
     PaymentPopper,
     CashPopper,
     PosRightNav,
-    ModalFirstTime,
+    // ModalFirstTime,
     // ModalCalculator,
   },
   setup() {

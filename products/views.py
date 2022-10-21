@@ -1,11 +1,40 @@
 from rest_framework import permissions, viewsets
-from django.db.models import Q
-from core.models import Barcode, Product, ProductGroup
+# from django.db.models import Q
+from core.models import Barcode, Product, ProductGroup, Stock
 from .serializers import (
     BarcodeSerializer,
     ProductSerializer,
     ProductsGroupSerializer,
+    StockSerializer,
 )
+
+
+class StockViewset(viewsets.ModelViewSet):
+    serializer_class = StockSerializer
+    queryset = Stock.objects.all()
+    permission_classes = (permissions.IsAuthenticated,)
+
+    def get_queryset(self):
+
+        queryset = Stock.objects.all()
+
+        return queryset
+
+    def get_queryset(self):
+        queryset = Stock.objects.all()
+
+        # PERFORM FILTER BY SEARCH INPUT
+        # conditions = Q()
+        id = self.request.query_params.get("group", None)
+        # print(keywords)
+        if id:
+            queryset = Stock.objects.filter(product__product_group=id)
+
+        return queryset
+
+    def perform_create(self, serializer):
+        """Create a new product"""
+        serializer.save(user=self.request.user)
 
 
 class ProductViewset(viewsets.ModelViewSet):

@@ -1,7 +1,7 @@
 <template>
   <div
     role="button"
-    class="select-none cursor-pointer transition-shadow overflow-hidden border-2 border-solid border-blue-gray-100 rounded-2xl bg-white shadow-lg hover:shadow-lg"
+    class="select-none cursor-pointer transition-shadow overflow-hidden border-2 border-solid border-blue-gray-100 rounded-2xl bg-aronium-900 shadow-lg hover:shadow-lg"
     :title="item.name"
     @click="addToCart(item)"
   >

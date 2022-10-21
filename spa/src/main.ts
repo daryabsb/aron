@@ -46,6 +46,9 @@ app.config.globalProperties.$filters = {
     // return moment(date).format("dddd, MMMM Do YYYY");
     return moment(date).format("DD/MM/YYYY");
   },
+  reverse(items: string[]) {
+    return items.slice().reverse();
+  },
 };
 app
   .component("Popper", Popper)

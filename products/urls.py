@@ -6,6 +6,7 @@ from .views import (
     BarcodeViewset,
     ProductGroupViewset,
     ProductViewset,
+    StockViewset,
 )
 
 router = routers.DefaultRouter()
@@ -13,6 +14,7 @@ router = routers.DefaultRouter()
 router.register("all", ProductViewset)
 router.register("groups", ProductGroupViewset)
 router.register("barcodes", BarcodeViewset)
+router.register("stocks", StockViewset)
 
 app_name = "product"
 

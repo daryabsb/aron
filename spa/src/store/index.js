@@ -1,5 +1,5 @@
 import { createStore } from "vuex";
-import createPersistedState from "vuex-persistedstate";
+// import createPersistedState from "vuex-persistedstate";
 import axios from "axios";
 
 import state from "@/store/state";
@@ -16,6 +16,6 @@ export default createStore({
   actions,
   getters,
   modules: {},
-  plugins: [createPersistedState()],
+  // plugins: [createPersistedState()],
   strict: process.env.NODE_ENV !== "production",
 });

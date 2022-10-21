@@ -84,7 +84,7 @@ export default {
   >
     <div class="flex justify-center items-center p-1 h-18 bg-aronium-900">
       <button
-        class="capitalize mr-1 border border-aronium-500 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
+        class="capitalize mr-1 border border-aronium-500 font-light flex bg-inherit hover:bg-aronium-700 px-4 py-1"
         disabled
         @click="startWithSampleData()"
       >
@@ -95,7 +95,7 @@ export default {
       </button>
 
       <button
-        class="capitalize mr-1 border border-aronium-500 font-light flex bg-inherit hover:bg-aronium-700 px-6 py-1"
+        class="capitalize mr-1 border border-aronium-500 font-light flex bg-inherit hover:bg-aronium-700 px-4 py-1"
         @click="add()"
       >
         quantity
@@ -103,7 +103,7 @@ export default {
 
       <active-order-popper></active-order-popper>
       <button
-        class="capitalize mr-1 border border-aronium-500 font-light flex bg-inherit hover:bg-aronium-700 px-5 py-1"
+        class="grow justify-center capitalize mr-1 border border-aronium-500 font-light flex bg-inherit hover:bg-aronium-700 px-4 py-1"
         @click="createCart()"
       >
         New Order
@@ -267,45 +267,41 @@ export default {
       </div>
       <hr class="border-dashed" />
 
-      <div class="w-full flex justify-between text-aronium-white my-1">
+      <div class="w-full flex justify-between text-aronium-white my-1 py-1">
         <span class="text-lg text-pink-400 uppercase">Total</span>
         <span class="text-lg text-pink-400">{{
           priceFormat(useActiveOrder.total)
         }}</span>
       </div>
-      <hr class="border-dashed" />
 
-      <div class="flex items-start p-1 h-16 border-t mt-3 border-aronium-600">
-        <Button
-          class="w-1/3 mb-3 capitalize mr-1 items-center justify-center border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-4 py-1"
-          variant="red"
+      <div class="flex items-start p-1 h-12 border-t mt-1 border-aronium-600">
+        <button
+          class="flex flex-col w-1/3 h-12 text-sm capitalize mr-1 items-center justify-center font-light bg-aronium-danger hover:bg-red-600 hover:shadow-lg px-4 py-1"
           @click="clear"
         >
-          <span class="mr-3">
+          <span class="text-xl">
             <i class="fa fa-trash fa-sm"></i>
           </span>
           void order
-        </Button>
-        <Button
-          class="w-1/3 mb-3 capitalize mr-1 items-center justify-center border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-4 py-1"
-          variant="transRed"
+        </button>
+        <button
+          class="flex flex-col w-1/3 h-12 text-sm capitalize mr-1 items-center justify-center font-light bg-aronium-800 hover:bg-aronium-700 hover:shadow-lg px-4 py-1"
           @click="clear()"
         >
-          <span class="mr-3">
+          <span>
             <i class="fa fa-lock fa-lg"></i>
           </span>
           Lock
-        </Button>
-        <Button
-          class="w-1/3 mb-3 capitalize mr-1 items-center justify-center border border-aronium-700 font-light flex bg-inherit hover:bg-aronium-700 px-4 py-1"
-          variant="transGreen"
+        </button>
+        <button
+          class="flex flex-col w-1/3 h-12 text-sm capitalize mr-1 items-center justify-center font-light bg-aronium-800 hover:bg-aronium-700 hover:shadow-lg px-4 py-1"
           @click="clear()"
         >
-          <span class="mr-1">
+          <span>
             <i class="fa fa-repeat fa-lg"></i>
           </span>
           Repeat round
-        </Button>
+        </button>
       </div>
     </div>
     <!-- modal receipt -->

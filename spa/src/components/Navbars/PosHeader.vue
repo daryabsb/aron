@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between h-full pt-6">
+  <div class="flex justify-between h-full pt-4 items-center">
     <div
       class="w-2/3 my-1 md:flex items-center justify-start divide-x divide-aronium-500 text-aronium-white font-light bg-aronium-800"
     >
@@ -28,7 +28,7 @@
           @click="saveSale"
         >
           <div
-            class="flex flex-col items-center border border-aronium-500 px-6 py-1 "
+            class="flex flex-col items-center border border-aronium-500 px-6 py-1"
           >
             <!-- @click="broadcastFunction(item)" -->
             <span class="text-3xl"
@@ -110,7 +110,7 @@ export default {
     const openModal = (e) => {
       console.log("e.keyCode: ", e.keyCode);
     };
-    const saveSale = ()=> console.log("Sale saved!");
+    const saveSale = () => console.log("Sale saved!");
     return {
       posHeaderItems,
       broadcastFunction,
