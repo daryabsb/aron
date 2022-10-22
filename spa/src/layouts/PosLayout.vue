@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-aronium-800 p-1">
+  <div class="bg-aronium-800 p-1 box-border">
     <!-- <modal-calculator></modal-calculator> -->
     <!-- noprint-area -->
     <div class="hide-print">
@@ -16,7 +16,7 @@
       ></payment-popper>
 
       <div
-        class="grid grid-cols-12 grid-rows-12 text-aronium-white h-screen w-full gap-3 pb-3"
+        class="grid grid-cols-12 grid-rows-12 text-aronium-white h-screen w-full gap-3 pb-3 overflow-auto"
       >
         <!-- left sidebar -->
         <!-- <pos-left-nav></pos-left-nav> -->

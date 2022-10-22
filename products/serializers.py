@@ -1,17 +1,27 @@
 from rest_framework import serializers
 from core.models import Barcode, Product, ProductGroup, Stock, Warehouse
+from django.shortcuts import get_object_or_404
 
 
 class ProductSerializer(serializers.ModelSerializer):
     stock_quantity = serializers.SerializerMethodField()
+
     class Meta:
         model = Product
-        fields = "__all__"
+        fields = ("id", "name", "code", "description", "age_restriction",
+                  "price", "is_tax_inclusive_price", "is_price_change_allowed",
+                  "is_service", "is_using_default_quantity", "cost", "margin",
+                  "image", "color", "is_enabled", "measurement_unit", "plu",
+                  "last_purchase_price", "rank", "user", "product_group",
+                  "currency", "stock_quantity",)
 
     def get_stock_quantity(self, obj):
-        stock = Stock.objects.get(product=obj.id)
-        # print(stock.quantity)
-        return stock.quantity
+        if Stock.objects.filter(product=obj.id).exists():
+            stock = Stock.objects.get(product=obj.id)
+            # print(stock)
+        # if stock:
+            return stock.quantity
+        return 0
 
 
 class BarcodeSerializer(serializers.ModelSerializer):

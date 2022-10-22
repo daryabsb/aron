@@ -1,3 +1,4 @@
+<!-- /* eslint-disable */ -->
 <script setup>
 import { ref, computed, onUpdated, onMounted, watch } from "vue";
 import { priceFormat } from "@/store/composables";
@@ -10,8 +11,6 @@ const fetchStore = useFetch();
 const activeGroup = ref(0);
 onMounted(fetchStore.fetchGroups);
 const filteredGroups = ref(fetchStore.filteredGroups);
-const childGroups = fetchStore.childGroups;
-console.log("childGroup(1)", childGroups(1));
 const submitItem = (item) => {
   console.log(item);
   isOpen.value = item.id;
@@ -33,17 +32,17 @@ const nodeWasClicked = (node) => {
     class="h-screen flex flex-col m-2 items-center justify-center bg-aronium-900"
   >
     <div
-      class="bg-aronium-800 borde border-aronium-500 shadlow-xl h-1/2 w-2/3 overflow-hidden"
+      class="bg-aronium-800 borde border-aronium-500 shadlow-xl h-1/3 w-2/3 overflow-hidden"
     >
       <div class="grid grid-cols-6">
         <div
+          v-for="item in filteredGroups"
+          :key="item.id"
           :class="
             activeGroup === item.id
               ? `col-span-${childGroups(item.id).length + 1}`
               : 'col-span-1'
           "
-          v-for="item in filteredGroups"
-          :key="item.id"
         >
           <details class="h-64 flex">
             <summary
@@ -143,9 +142,9 @@ const nodeWasClicked = (node) => {
       </div>
     </div>
     <div
-      class="bg-aronium-800 borde my-2 text-aronium-white border-aronium-500 shadlow-xl h-1/2 w-2/3 overflow-hidden"
+      class="grow flex flex-wrap bg-aronium-800 borde py-4 text-aronium-white border-aronium-500 shadlow-xl h-1/2 w-2/3 overflow-hidden"
     >
-      <GroupTree :nodes="root" @onClick="nodeWasClicked" />
+      <GroupTree :nodes="filteredGroups" @on-click="nodeWasClicked" />
     </div>
   </div>
 </template>
