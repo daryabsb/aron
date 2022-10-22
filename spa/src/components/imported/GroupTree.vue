@@ -75,6 +75,7 @@ export default {
     const isExpanded = (item) => expanded.value.indexOf(item) !== -1;
 
     const nodeClicked = (item = {}, id = 0) => {
+
       if (item) {
         console.log(
           "item",

@@ -1,37 +1,37 @@
 <template>
   <div class="flex justify-between h-full pt-4 items-center">
     <div
-      class="w-2/3 my-1 md:flex items-center justify-start divide-x divide-aronium-500 text-aronium-white font-light bg-aronium-800"
+      class="laptop:flex w-2/3 my-1 md:flex items-center justify-start divide-x divide-aronium-500 text-aronium-white font-light bg-aronium-800"
     >
       <ul class="flex text-sm mr-3">
         <li
           v-for="item in posHeaderItems"
           :key="item.id"
-          class="font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0"
+          class="font-light  hover:text-pink-700 cursor-pointer mr-2 last:mr-0"
           @click="item.submit($emit, item.title)"
         >
           <div
-            class="flex flex-col items-center border border-aronium-500 px-4 py-1"
+            class="flex flex-col items-center border border-aronium-500 py-1"
           >
             <!-- @click="broadcastFunction(item)" -->
-            <span class="mb-1 text-xl"
+            <span class="mb-1 text-xl px-8"
               ><i :class="item.icon" aria-hidden="true"></i
             ></span>
-            <span class="text-center w-20">{{ item.title }}</span>
+            <span class="text-center   xl:w-20">{{ item.title }}</span>
           </div>
         </li>
       </ul>
 
-      <ul class="flex text-sm pl-3">
+      <ul class="flex text-sm px-3">
         <li
-          class="block font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0"
+          class="block font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0 py-3"
           @click="saveSale"
         >
           <div
-            class="flex flex-col items-center border border-aronium-500 px-6 py-1"
+            class="flex flex-col items-center border border-aronium-500 laptop:px-2 xl:px-6 "
           >
             <!-- @click="broadcastFunction(item)" -->
-            <span class="text-3xl"
+            <span class="text-3xl laptop:text-3xl"
               ><h1 class="font-bold drop-shadow-lg">F7</h1></span
             >
             <span class="text-center text-sm font-semibold tracking-wider w-16"
