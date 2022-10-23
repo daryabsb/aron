@@ -1,3 +1,4 @@
+import { computed } from "vue";
 import { defineStore } from "pinia";
 
 export const useModals = defineStore("modals", {
@@ -5,5 +6,17 @@ export const useModals = defineStore("modals", {
     return {
       searchModal: false,
     };
+  },
+  getters: {
+    isSearchModal(state) {
+      return computed({
+        get() {
+          return state.searchModal;
+        },
+        set(value) {
+          state.searchModal = value;
+        },
+      });
+    },
   },
 });

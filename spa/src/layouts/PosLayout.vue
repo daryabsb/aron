@@ -14,7 +14,10 @@
         @close="paymentModal"
         @cash-out="cashOut"
       ></payment-popper>
-      <header-search-popper v-show="searchModal"></header-search-popper>
+      <header-search-popper
+        v-show="isSearchModal"
+        @close="searchModal"
+      ></header-search-popper>
 
       <div
         class="laptop:flex laptop:flex-col xl:grid xl:grid-cols-12 xl:grid-rows-12 text-aronium-white h-screen w-full overflow-auto"
@@ -158,9 +161,9 @@ export default {
     let activeMenu = "pos";
     let isShowModalFirstTime = false;
 
-    const modals = useModals();
-    const searchModal = modals.searchModal;
-    console.log("searchModal", searchModal);
+    const mods = useModals();
+    const isSearchModal = ref(mods.isSearchModal);
+    console.log("searchModal", isSearchModal);
 
     // GETTERS from COMPOSABLES
     const cart = useCart;
@@ -176,6 +179,9 @@ export default {
 
     // CASH
     // const openCashModal = ref(false);
+    const searchModal = () => {
+      isSearchModal.value = !isSearchModal.value;
+    };
     const cashModal = () => {
       openCashModal.value = !openCashModal.value;
     };
@@ -218,6 +224,7 @@ export default {
       cashOut,
 
       searchModal,
+      isSearchModal,
     };
   },
 };
