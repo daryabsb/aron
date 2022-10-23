@@ -16,32 +16,31 @@
       ></payment-popper>
 
       <div
-        class="laptop:flex laptop:flex-wrap xl:grid xl:grid-cols-12 grid-rows-12 text-aronium-white h-screen w-full gap-3 pb-3 overflow-auto"
+        class="laptop:flex laptop:flex-col xl:grid xl:grid-cols-12 xl:grid-rows-12 text-aronium-white h-screen w-full overflow-auto"
       >
         <!-- left sidebar -->
         <!-- <pos-left-nav></pos-left-nav> -->
 
-        <div class="col-span-12 row-span-1 px-1 laptop:w-full">
+        <div class="xl:col-span-12 xl:row-span-1 px-1 laptop:w-full h-min my-3">
           <pos-header
             @cash-modal="cashModal"
             @payment-modal="paymentModal"
           ></pos-header>
         </div>
-        <div class="xl:grid xl:grid-cols-12 laptop:flex laptop:flex-wrap">
-
-        <div class="col-span-3 row-span-11 laptop:w-1/3">
-          <Suspense>
-            <template #default>
-              <pos-right-nav></pos-right-nav>
-            </template>
-            <template #fallback>
-              <span>Loading...</span>
-            </template>
-          </Suspense>
-        </div>
-        <div class="col-span-9 row-span-11 laptop:w-2/3">
-          <router-view></router-view>
-        </div>
+        <div class="xl:grid xl:grid-cols-12 laptop:flex laptop:flex-wrap grow">
+          <div class="mr-2 xl:col-span-3 xl:row-span-11 laptop:w-auto">
+            <Suspense>
+              <template #default>
+                <pos-right-nav></pos-right-nav>
+              </template>
+              <template #fallback>
+                <span>Loading...</span>
+              </template>
+            </Suspense>
+          </div>
+          <div class="xl:col-span-9 xl:row-span-11 laptop:w-2/3 grow h-full">
+            <router-view></router-view>
+          </div>
         </div>
 
         <!-- <modal-first-time v-show="isShowModalFirstTime"></modal-first-time> -->

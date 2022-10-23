@@ -16,7 +16,7 @@ export default {
 <template>
   <!-- page content -->
 
-  <div class="bg-transparent border border-aronium-500">
+  <div class="bg-transparent">
     <!-- store menu -->
     <!-- <pos-right-nav></pos-right-nav> -->
     <search-input></search-input>

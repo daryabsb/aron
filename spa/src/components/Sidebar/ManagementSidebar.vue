@@ -32,8 +32,8 @@
       <!-- Collapse -->
       <div
         class="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded"
-        :class="collapseShow"
       >
+        <!-- :class="collapseShow" -->
         <!-- Collapse header -->
         <div
           class="md:min-w-full md:hidden block pb-2 mb-2 border-b border-solid border-blueGray-200"

@@ -1,13 +1,13 @@
 <template>
-  <div class="flex justify-between h-full pt-4 items-center">
+  <div class="flex justify-between h-full items-center">
     <div
-      class="laptop:flex w-2/3 my-1 md:flex items-center justify-start divide-x divide-aronium-500 text-aronium-white font-light bg-aronium-800"
+      class="laptop:flex w-auto md:flex items-center justify-start divide-x divide-aronium-500 text-aronium-white font-light bg-aronium-800"
     >
       <ul class="flex text-sm mr-3">
         <li
           v-for="item in posHeaderItems"
           :key="item.id"
-          class="font-light  hover:text-pink-700 cursor-pointer mr-2 last:mr-0"
+          class="font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0"
           @click="item.submit($emit, item.title)"
         >
           <div
@@ -17,26 +17,27 @@
             <span class="mb-1 text-xl px-8"
               ><i :class="item.icon" aria-hidden="true"></i
             ></span>
-            <span class="text-center   xl:w-20">{{ item.title }}</span>
+            <span class="text-center xl:w-20">{{ item.title }}</span>
           </div>
         </li>
       </ul>
+      <Teleport to="#modal">
+        <header-search-popper v-if="searchModal"></header-search-popper>
+      </Teleport>
 
-      <ul class="flex text-sm px-3">
+      <ul class="flex text-sm mr-3">
         <li
-          class="block font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0 py-3"
+          class="font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0"
           @click="saveSale"
         >
           <div
-            class="flex flex-col items-center border border-aronium-500 laptop:px-2 xl:px-6 "
+            class="px-8 flex flex-col items-center border border-aronium-500 py-1"
           >
             <!-- @click="broadcastFunction(item)" -->
-            <span class="text-3xl laptop:text-3xl"
+            <span class="mb-1 text-xl"
               ><h1 class="font-bold drop-shadow-lg">F7</h1></span
             >
-            <span class="text-center text-sm font-semibold tracking-wider w-16"
-              >Save sale</span
-            >
+            <span class="text-center xl:w-20">Save sale</span>
           </div>
         </li>
         <li
@@ -44,33 +45,29 @@
           @click="$emit('paymentModal')"
         >
           <div
-            class="w-32 h-16 flex flex-col items-center bg-aronium-green py-1"
+            class="px-10 flex flex-col items-center border border-aronium-500 py-1"
           >
             <!-- @click="broadcastFunction(item)" -->
-            <span class="text-3xl"
+            <span class="mb-1 text-xl"
               ><h1 class="font-bold drop-shadow-lg">F8</h1></span
             >
-            <span class="text-center text-sm font-semibold tracking-wider"
-              >Payment</span
-            >
+            <span class="text-center xl:w-20">Payment</span>
           </div>
         </li>
-
-        <li class="relative font-light mr-2 last:mr-0">
-          <button
-            :disabled="cart.length === 0"
-            class="cursor-pointer hover:text-pink-700 w-32 h-16 flex flex-col items-center border border-aronium-500 py-1 disabled:opacity-30 disabled:hover:text-aronium-600 disabled:cursor-auto"
-            @click="$emit('cashModal')"
+        <li
+          :disabled="cart.length === 0"
+          class="font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0 disabled:opacity-30 disabled:hover:text-aronium-600 disabled:cursor-auto"
+          @click="$emit('cashModal')"
+        >
+          <div
+            class="px-10 flex flex-col items-center border border-aronium-500 py-1"
           >
             <!-- @click="broadcastFunction(item)" -->
-
-            <span class="text-3xl"
+            <span class="mb-1 text-xl"
               ><h1 class="font-bold drop-shadow-lg">F9</h1></span
             >
-            <span class="text-center text-sm font-semibold tracking-wider"
-              >Cash</span
-            >
-          </button>
+            <span class="text-center xl:w-20">Cash</span>
+          </div>
         </li>
       </ul>
     </div>
@@ -83,12 +80,15 @@
 </template>
 
 <script>
+import { ref } from "vue";
 import { posHeaderItems } from "@/composables/staticData";
 import { useCart } from "@/store/composables";
+import { useModals } from "@/stores/modals";
 
 import UserDropdown from "@/components/Dropdowns/UserDropdown.vue";
 // import MainMenuModal from "@/components/modals/MainMenuModal.vue";
 import MainMenuPopper from "@/components/poppers/MainMenuPopper.vue";
+import HeaderSearchPopper from "@/components/poppers/HeaderSearchPopper.vue";
 
 // export default {
 // components: {
@@ -100,9 +100,13 @@ export default {
   components: {
     UserDropdown,
     MainMenuPopper,
+    HeaderSearchPopper,
   },
   emits: ["cashModal", "paymentModal"],
   setup() {
+    const modals = useModals();
+    const searchModal = ref(modals.searchModal);
+    console.log("searchModal", searchModal);
     const cart = useCart;
     const broadcastFunction = (item) => {
       console.log(item);
@@ -117,6 +121,7 @@ export default {
       openModal,
       saveSale,
       cart,
+      searchModal,
     };
   },
 };

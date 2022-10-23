@@ -38,13 +38,10 @@ export default {
 </script>
 <template>
   <!-- store menu -->
-  <div class="flex flex-col bg-transparent h-full w-full">
+  <div class="flex flex-col">
     <!-- SEARCH INPUT IN STORE -->
-    <div class="h-full overflow-hidden">
-      <div
-        v-if="filteredProducts != undefined"
-        class="h-full overflow-y-auto px-2"
-      >
+    <div class="overflow-y-hidden">
+      <div v-if="filteredProducts != undefined" class="px-2">
         <!-- CATEGORY TABS START -->
         <!-- <products-group-tabs></products-group-tabs> -->
 

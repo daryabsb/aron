@@ -15,14 +15,27 @@
             <h3 class="text-sm">
               <a href="#">
                 <span aria-hidden="true" class="absolute inset-0" />
-                {{ product.name }}
+                <span class="truncate">
+                  {{ product.name }}
+                </span>
               </a>
             </h3>
             <p class="mt-1 text-sm">{{ product.color }}</p>
           </div>
-          <p class="text-sm font-medium">
-            {{ priceFormat(product.price) }}
-          </p>
+          <div class="relative">
+            <p class="text-sm font-medium">
+              {{ priceFormat(product.price) }}
+            </p>
+            <p
+              v-if="product.stock_quantity"
+              class="m-2 text-sm text-aronium-green"
+            >
+              {{ product.stock_quantity }}
+            </p>
+            <p v-else class="m-2 text-sm text-aronium-danger">
+              Out of Stock
+            </p>
+          </div>
         </div>
       </div>
     </div>

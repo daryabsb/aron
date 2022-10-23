@@ -1,5 +1,6 @@
 import { ref } from "vue";
 import dataLabels from "chartjs-plugin-datalabels";
+import { useModals } from "@/stores/modals";
 
 export const sideBArNavItems = [
   {
@@ -165,7 +166,10 @@ export const posHeaderItems = [
     title: "Search",
     icon: " fa fa-search",
     submit: (title, item) => {
-      console.log(title, item);
+      const store = useModals();
+      console.log(store.searchModal);
+      store.searchModal = true;
+      console.log(store.searchModal);
     },
   },
   {
