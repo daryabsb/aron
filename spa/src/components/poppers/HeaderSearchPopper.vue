@@ -18,32 +18,22 @@
           class="w-full h-full bg-aronium-700 border-b border-r border-aronium-500 text-left p-3"
         >
           <!-- ITEMS HERE -->
-          <div v-for="item in activeOrder.items" :key="item.id">
+          <div>
             <div
               class="bg-aronium-700 border-b mb-2 border-aronium-500 shadow w-full px-2 md:py-0 xl:py-1 flex justify-center"
-              :class="
-                item.product.id === ID
-                  ? 'bg-aronium-sky-600  text-aronium-50 text-shadow-lg'
-                  : 'bg-inherit'
-              "
-              @click="selectItem(item.product)"
+              @click="selectItem()"
             >
-              <img
-                :src="item.product.image"
-                alt=""
-                class="rounded-sm h-8 w-8 hover:h-20 hover:w-20 hover:shadow-2xl bg-transparent shadow mr-2"
-              />
               <div class="flex-grow">
                 <h5
                   class="text-sm subpixel-antialiased tracking-wider font-semibold"
                 >
-                  {{ item.product.name }}
+                  Tomato
                 </h5>
               </div>
 
               <div>
                 <div class="flex items-center">
-                  {{ priceFormat(getItemTotalPrice(item).value) }}
+                  {{ priceFormat(500) }}
                 </div>
               </div>
             </div>
@@ -163,7 +153,7 @@
                 Total:
                 <span
                   class="font-semibold text-2xl text-aronium-sky-500 ml-auto"
-                  >{{ priceFormat(activeOrder.total) }}</span
+                  >{{ priceFormat(500) }}</span
                 >
               </div>
 

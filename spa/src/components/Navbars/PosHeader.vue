@@ -21,9 +21,9 @@
           </div>
         </li>
       </ul>
-      <Teleport to="#modal">
-        <header-search-popper v-if="searchModal"></header-search-popper>
-      </Teleport>
+      <!-- <Teleport to="#modal"> -->
+
+      <!-- </Teleport> -->
 
       <ul class="flex text-sm mr-3">
         <li
@@ -83,12 +83,10 @@
 import { ref } from "vue";
 import { posHeaderItems } from "@/composables/staticData";
 import { useCart } from "@/store/composables";
-import { useModals } from "@/stores/modals";
 
 import UserDropdown from "@/components/Dropdowns/UserDropdown.vue";
 // import MainMenuModal from "@/components/modals/MainMenuModal.vue";
 import MainMenuPopper from "@/components/poppers/MainMenuPopper.vue";
-import HeaderSearchPopper from "@/components/poppers/HeaderSearchPopper.vue";
 
 // export default {
 // components: {
@@ -100,13 +98,9 @@ export default {
   components: {
     UserDropdown,
     MainMenuPopper,
-    HeaderSearchPopper,
   },
   emits: ["cashModal", "paymentModal"],
   setup() {
-    const modals = useModals();
-    const searchModal = ref(modals.searchModal);
-    console.log("searchModal", searchModal);
     const cart = useCart;
     const broadcastFunction = (item) => {
       console.log(item);
@@ -121,7 +115,6 @@ export default {
       openModal,
       saveSale,
       cart,
-      searchModal,
     };
   },
 };

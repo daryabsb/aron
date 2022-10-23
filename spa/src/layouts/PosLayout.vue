@@ -14,6 +14,7 @@
         @close="paymentModal"
         @cash-out="cashOut"
       ></payment-popper>
+      <header-search-popper v-show="searchModal"></header-search-popper>
 
       <div
         class="laptop:flex laptop:flex-col xl:grid xl:grid-cols-12 xl:grid-rows-12 text-aronium-white h-screen w-full overflow-auto"
@@ -54,6 +55,8 @@
 <script>
 import { ref, onMounted } from "vue";
 import { usePos } from "@/stores/pos";
+import { useModals } from "@/stores/modals";
+
 // import ModalCalculator from "@/components/modals/ModalCalculator.vue";
 import PosHeader from "@/components/Navbars/PosHeader.vue";
 import PosRightNav from "@/components/pos/PosRightNav.vue";
@@ -67,6 +70,7 @@ import {
 
 import CashPopper from "@/components/poppers/CashPopper.vue";
 import PaymentPopper from "@/components/poppers/PaymentPopper.vue";
+import HeaderSearchPopper from "@/components/poppers/HeaderSearchPopper.vue";
 
 // F keys event listener
 // window.onkeydown = (evt) => {
@@ -141,6 +145,8 @@ export default {
     PaymentPopper,
     CashPopper,
     PosRightNav,
+    HeaderSearchPopper,
+
     // ModalFirstTime,
     // ModalCalculator,
   },
@@ -151,6 +157,10 @@ export default {
     let time = ref(null);
     let activeMenu = "pos";
     let isShowModalFirstTime = false;
+
+    const modals = useModals();
+    const searchModal = modals.searchModal;
+    console.log("searchModal", searchModal);
 
     // GETTERS from COMPOSABLES
     const cart = useCart;
@@ -206,6 +216,8 @@ export default {
       openPaymentModal,
       paymentModal,
       cashOut,
+
+      searchModal,
     };
   },
 };
