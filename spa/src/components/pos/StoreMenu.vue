@@ -99,7 +99,7 @@ export default {
           </div>
         </div>
         <pink-tabs v-slot="{ productGroups, openTab }">
-          <div class="tab-content tab-space bg-amber-300">
+          <div class="tab-content tab-space">
             <div
               v-for="content in productGroups"
               :key="content.id"
