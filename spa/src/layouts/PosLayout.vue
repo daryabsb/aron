@@ -132,11 +132,11 @@
         <div class="absolute bg-aronium-800" aria-hidden="true" />
         <!-- Decorative dot pattern -->
 
-        <div class="flex flex-grow gap-3 p-2">
+        <div class="flex gap-3 p-2">
           <!-- Contact information -->
 
           <div
-            class="w-1/4 flex flex-col relative overflow-hidden md:col-span-1 lg:col-span-2 border border-aronium-500 bg-gradient-to-b from-aronium-700 to-aronium-900 py-3 px-3"
+            class="w-1/4 flex flex-col relative overflow-hidden border border-aronium-500 bg-gradient-to-b from-aronium-700 to-aronium-900 py-3 px-3"
           >
             <!-- Decorative angle backgrounds -->
 
