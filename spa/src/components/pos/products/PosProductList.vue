@@ -15,20 +15,38 @@
   ```
 -->
 <template>
-  <div class="p-2">
-    <div class="grid gap-2 grid-cols-6" :class="gridClasses">
-      <div v-for="product in products" :key="product.id" class="group relative">
-        <pos-single-product :product="product"></pos-single-product>
+  <Suspense>
+    <template #default>
+      <div class="p-2">
+        <div class="grid gap-2 grid-cols-6" :class="gridClasses">
+          <div
+            v-for="product in products"
+            :key="product.id"
+            class="group relative"
+          >
+            <pos-single-product :product="product"></pos-single-product>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </template>
+    <template #fallback>
+      <div class="p-2">
+        <div class="grid gap-2 grid-cols-6" :class="gridClasses">
+          <div v-for="product in 3" :key="product" class="group relative">
+            <pos-single-product-skeleton></pos-single-product-skeleton>
+          </div>
+        </div>
+      </div>
+    </template>
+  </Suspense>
 </template>
 
 <script>
 import { ref } from "vue";
 import PosSingleProduct from "@/components/pos/products/PosSingleProduct.vue";
+import PosSingleProductSkeleton from "@/components/pos/products/PosSingleProductSkeleton.vue";
 export default {
-  components: { PosSingleProduct },
+  components: { PosSingleProduct, PosSingleProductSkeleton },
   props: {
     products: {
       type: Object,

@@ -2,7 +2,7 @@
   <div>
     <Popper arrow>
       <button
-        class="grow justify-center mr-1 border border-aronium-500 font-light flex bg-inherit hover:bg-aronium-700 px-4 py-1"
+        class="mr-2 justify-center relative inline-flex items-center rounded-r-sm border border-aronium-500 bg-aronium-700 ml-2 px-4 py-2 text-sm font-medium text-aronium-white hover:bg-pink-500"
       >
         {{ aNumber || activeOrderNumber }}
       </button>

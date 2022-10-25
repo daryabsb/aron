@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex items-center space-x-3 rounded-sm border border-aronium-500 bg-aronium-700 px-6 py-2 shadow-sm focus-within:ring-2 focus-within:ring-pink-500 focus-within:ring-offset-0 hover:border-pink-500"
+    class="max-h-16 relative flex items-center space-x-3 rounded-sm border border-aronium-500 bg-aronium-700 px-6 py-2 shadow-sm focus-within:ring-2 focus-within:ring-pink-500 focus-within:ring-offset-0 hover:border-pink-500"
   >
     <div class="flex-shrink-0">
       <img class="h-10 w-10 rounded-full" :src="item.product.image" alt="" />

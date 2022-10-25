@@ -132,18 +132,17 @@
         <div class="absolute bg-aronium-800" aria-hidden="true" />
         <!-- Decorative dot pattern -->
 
-        <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-6 px-2">
+        <div class="flex flex-grow gap-3 p-2">
           <!-- Contact information -->
+
           <div
-            class="flex flex-col flex-1 relative overflow-hidden md:col-span-1 lg:col-span-2 border border-aronium-500 bg-gradient-to-b from-aronium-700 to-aronium-900 m-2 py-10 px-3 xl:p-3"
+            class="w-1/4 flex flex-col relative overflow-hidden md:col-span-1 lg:col-span-2 border border-aronium-500 bg-gradient-to-b from-aronium-700 to-aronium-900 py-3 px-3"
           >
             <!-- Decorative angle backgrounds -->
 
             <store-order></store-order>
           </div>
-          <div
-            class="py-10 px-6 sm:px-10 col-span-2 md:col-span-2 lg:col-span-4 xl:p-12"
-          >
+          <div class="grow">
             <router-view></router-view>
           </div>
           <!-- Contact form -->

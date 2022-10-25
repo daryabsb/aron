@@ -27,10 +27,11 @@ export const useFetch = defineStore("api", {
     async fetchProductsByGroupId(groupId) {
       try {
         const products = await getProducts(groupId);
-        this.filteredroducts = products;
+        this.filteredProducts = products;
       } catch (error) {
         console.log("getProducts from store", error);
       }
+      console.log("this.filteredProducts", this.filteredProducts);
     },
     async fetchGroups() {
       try {

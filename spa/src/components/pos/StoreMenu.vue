@@ -42,14 +42,11 @@ export default {
   <div class="flex flex-col">
     <!-- SEARCH INPUT IN STORE -->
     <div class="overflow-y-hidden">
-      <div
-        v-if="useFilteredProducts() != undefined"
-        class="overflow-y-auto px-2"
-      >
+      <div v-if="useFilteredProducts() != undefined" class="overflow-y-auto">
         <!-- CATEGORY TABS START -->
         <!-- <products-group-tabs></products-group-tabs> -->
 
-        <pink-tabs>Darya </pink-tabs>
+        <pink-tabs> </pink-tabs>
         <!-- CATEGORY TABS END -->
 
         <!-- <div class="grid grid-cols-4 gap-4 pb-3">

@@ -15,12 +15,9 @@
     </div>
     <!-- {{ productGroups }} -->
     <div class="hidden sm:block">
-      <nav
-        class="isolate flex divide-x divide-gray-200 rounded-sm shadow"
-        aria-label="Tabs"
-      >
+      <nav class="isolate flex rounded-sm shadow" aria-label="Tabs">
         <button
-          class="relative min-w-0 flex-1 overflow-hidden bg-aronium-800 border border-aronium-500 mr-1 my-2 py-4 px-4 text-sm font-medium text-center hover:bg-aronium-600 focus:z-10"
+          class="relative min-w-0 flex-1 overflow-hidden bg-aronium-800 border border-aronium-500 mr-1 my-2 py-4 px-4 text-sm font-medium text-center hover:bg-aronium-600 focus:right-1 focus:right-pink-500 focus:z-10"
           :class="[
             openTab === 0
               ? 'text-pink-500'
@@ -43,7 +40,7 @@
           :class="[
             tab.id === openTab
               ? 'text-pink-500'
-              : 'text-aronium-white hover:text-poink-700',
+              : 'text-aronium-white hover:text-pink-700',
           ]"
           :aria-current="tab.id === openTab ? 'page' : undefined"
           @click="toggleTabs(tab.id)"
@@ -111,7 +108,6 @@
           </div>
         </div>
       </div>
-
       <pos-product-list :products="filteredProducts"></pos-product-list>
     </div>
   </div>
@@ -129,25 +125,25 @@ export default {
   },
   setup() {
     const store = useFetch();
-    onBeforeMount(store.fetchProductData);
-    const keyword = ref("");
+    // onBeforeMount(store.fetchProductData);
     const openTab = ref(0);
+    const products = computed(() =>
+      store.fetchProductsByGroupId(openTab.value)
+    );
+    onMounted(store.fetchProductsByGroupId(openTab.value));
 
-    const products = computed(() => store.products);
+    const keyword = ref("");
+
+    console.log("products", products);
+    console.log("products");
     const productGroups = computed(() =>
       store.productGroups.filter((g) => g.rank > 0)
     );
 
-    const filteredProducts = computed(() =>
-      products.value.filter((p) => {
-        if (openTab.value === 0) return products;
-        return p.product_group === openTab.value;
-      })
-    );
+    const filteredProducts = computed(() => store.filteredProducts);
 
     // onMounted(store.fetchProductData);
     // products.value = store.products;
-    console.log(productGroups.value);
 
     const toggleTabs = (tabNumber) => {
       openTab.value = tabNumber;
