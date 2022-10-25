@@ -132,59 +132,21 @@
         <div class="absolute bg-aronium-800" aria-hidden="true" />
         <!-- Decorative dot pattern -->
 
-        <div class="mx-auto lg:px-8">
-          <div class="relative">
-            <div class="grid grid-cols-1 lg:grid-cols-3">
-              <!-- Contact information -->
-              <div
-                class="relative overflow-hidden col-span-1 bg-gradient-to-b h-full from-aronium-700 to-aronium-900 py-10 px-6 sm:px-10 xl:p-12"
-              >
-                <!-- Decorative angle backgrounds -->
-                <div
-                  class="pointer-events-none absolute inset-0 sm:hidden"
-                  aria-hidden="true"
-                >
-                  <svg
-                    class="absolute inset-0 h-full w-full"
-                    width="343"
-                    height="388"
-                    viewBox="0 0 343 388"
-                    fill="none"
-                    preserveAspectRatio="xMidYMid slice"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M-99 461.107L608.107-246l707.103 707.107-707.103 707.103L-99 461.107z"
-                      fill="url(#linear1)"
-                      fill-opacity=".1"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="linear1"
-                        x1="254.553"
-                        y1="107.554"
-                        x2="961.66"
-                        y2="814.66"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop stop-color="#fff" />
-                        <stop offset="1" stop-color="#fff" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
+        <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-6 px-2">
+          <!-- Contact information -->
+          <div
+            class="flex flex-col flex-1 relative overflow-hidden md:col-span-1 lg:col-span-2 border border-aronium-500 bg-gradient-to-b from-aronium-700 to-aronium-900 m-2 py-10 px-3 xl:p-3"
+          >
+            <!-- Decorative angle backgrounds -->
 
-                <store-order></store-order>
-              </div>
-
-              <!-- Contact form -->
-              <div class="h-full py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-                <h3 class="text-lg font-medium text-warm-gray-900">
-                  Send us a message
-                </h3>
-              </div>
-            </div>
+            <store-order></store-order>
           </div>
+          <div
+            class="py-10 px-6 sm:px-10 col-span-2 md:col-span-2 lg:col-span-4 xl:p-12"
+          >
+            <router-view></router-view>
+          </div>
+          <!-- Contact form -->
         </div>
       </section>
 
@@ -194,15 +156,41 @@
 </template>
 
 <script setup>
-import { defineComponent, h } from "vue";
+import { defineComponent, h, ref, onMounted } from "vue";
+import { useFetch } from "@/stores/fetch";
+import { usePos } from "@/stores/pos";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
 import StoreOrder from "@/components/pos/StoreOrder.vue";
+import PosSingleProduct from "@/components/pos/products/PosSingleProduct.vue";
+import StoreMenu from "@/components/pos/StoreMenu.vue";
+import PinkTabs from "@/components/pos/PinkTabs.vue";
+import PosProductList from "@/components/pos/products/PosProductList.vue";
+
+import {
+  updateKeyword,
+  filteredProducts,
+  priceFormat,
+  addToCart,
+  tabProducts,
+} from "@/store/composables";
+
 import {
   Bars3Icon,
   EnvelopeIcon,
   PhoneIcon,
   XMarkIcon,
 } from "@heroicons/vue/24/outline";
+
+const keyword = ref("");
+const fetchStore = useFetch();
+const posStore = usePos();
+
+onMounted(async () => {
+  await fetchStore.fetchGroups();
+  await fetchStore.fetchProducts();
+});
+
+const products = fetchStore.useFilteredProductsByGroups;
 
 const navigation = [
   { name: "Changelog", href: "#" },

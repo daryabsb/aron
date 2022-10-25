@@ -42,6 +42,11 @@ export const useFetch = defineStore("api", {
         console.log("getProducts from store", error);
       }
     },
+    async fetchProductData() {
+      await this.fetchGroups();
+      await this.fetchProducts();
+      console.log("hooray");
+    },
     async fetchStock() {
       try {
         const stocks = await getStockList();
@@ -66,7 +71,7 @@ export const useFetch = defineStore("api", {
     },
     filteredGroups(state) {
       if (state.productGroups.length === 0) [];
-      console.log("From getters", state.productGroups);
+      // console.log("From getters", state.productGroups);
       return computed(
         () =>
           state.productGroups.filter(
@@ -79,6 +84,12 @@ export const useFetch = defineStore("api", {
         state.productGroups.filter((group) => group.parent_group === parentID);
       //   ||
       //   state.products.filter((product) => product.parent_group === parentID)
+    },
+    useFilteredProductsByGroups(state) {
+      if (state.productGroups.length === 0) [];
+      // console.log("From getters", state.productGroups);
+      return (groupID) =>
+        state.products.filter((product) => product.parent_group === groupID);
     },
   },
 });
