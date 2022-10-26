@@ -186,41 +186,75 @@ export default {
           </div>
         </div>
 
-        <div class="flex-1 w-full overflow-auto p-1">
-          <Suspense>
-            <template #default>
-              <template v-for="item in useActiveOrder.items" :key="item.id">
-                <!-- NEW OrderItem -->
-                <order-item
-                  :item="item"
-                  @click="selectItem(item.product)"
-                ></order-item>
-              </template>
-            </template>
-            <template #fallback>
-              <div
-                class="flex-1 w-full p-4 select-none flex flex-col flex-wrap content-center justify-center"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-16 inline-block"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+        <div class="flex-1 w-full overflow-auto">
+          <template v-for="item in useActiveOrder.items" :key="item.id">
+            <div
+              class="bg-aronium-700 border-y border-aronium-500 shadow w-full px-2 md:py-0 xl:py-1 flex justify-center"
+              :class="
+                item.id === ID
+                  ? 'bg-aronium-sky-600  text-aronium-50 text-shadow-lg'
+                  : 'bg-inherit'
+              "
+            >
+              <!-- <img
+                :src="item.image"
+                alt=""
+                class="rounded-sm h-8 w-8 bg-transparent shadow mr-2"
+              /> -->
+              <div class="flex-grow">
+                <h5
+                  class="relative text-sm subpixel-antialiased tracking-wider font-semibold w-32"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-                <p>
-                  CART EMPTY
+                  <span>{{ item.product.name }}</span>
+                  <div
+                    v-if="item.product.discount"
+                    class="flex absolute right-0 top-0 w-6 h-6 text-sm font-semibold text-center text-aronium-danger"
+                  >
+                    <span>-</span>
+                    <span>{{ item.product.discount }}</span>
+                    <span>{{ item.product.discountType }}</span>
+                  </div>
+                </h5>
+
+                <p class="text-xs block mt-1 opacity-75">
+                  <span
+                    >#{{ item.id }} :
+                    {{ priceFormat(getItemTotalPrice(item).value) }}</span
+                  >
+                  <!-- <span>#{{ item.id }} : {{ item }}</span> -->
+                  <!-- <span>#{{ item.id }} : {{ getItemTotalPrice(item) }}</span> -->
                 </p>
               </div>
-            </template>
-          </Suspense>
+
+              <div>
+                <div class="flex items-center">
+                  <button
+                    class="flex flex-row items-center justify-center text-sm h-8 w-8 m-1 rounded-sm text-center text-aronium-white bg-inherit border border-aronium-700 shadow-sm hover:bg-pink-700 focus:outline-none"
+                    @click="addQty(item, -1)"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input
+                    v-model="item.quantity"
+                    type="text"
+                    class="h-8 border-0 w-11 mr-1 text-center text-aronium-white bg-inherit"
+                  />
+
+                  <button
+                    class="flex items-center justify-center text-sm h-8 w-8 mr-1 rounded-sm text-center text-aronium-white bg-inherit border border-aronium-700 shadow-sm hover:bg-pink-700 focus:outline-none"
+                    @click="addQty(item, 1)"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- NEW OrderItem -->
+            <order-item
+              :item="item"
+              @click="selectItem(item.product)"
+            ></order-item>
+          </template>
         </div>
       </div>
 
