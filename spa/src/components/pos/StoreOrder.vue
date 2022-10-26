@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col">
+  <div class="h-[40em] overflow-auto flex flex-col">
     <div>
       <span class="w-full isolate flex items-stretch rounded-sm shadow-sm">
         <button
