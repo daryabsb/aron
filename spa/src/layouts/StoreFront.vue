@@ -1,6 +1,6 @@
 <template>
   <div
-    class=" w-full h-screen flex flex-col justify-center text-aronium-white bg-aronium-900 z-10"
+    class="w-full h-screen flex flex-col justify-center text-aronium-white bg-aronium-900 z-10"
   >
     <!-- ITEMS AT PAYMENT MODAL -->
     <!-- <search-panel></search-panel> -->
@@ -15,7 +15,7 @@
       </span> -->
     </div>
     <div
-      class="h-[30rem] flex justify-between items-center border-x border-aronium-500 bg-transparent"
+      class="h-[30rem] flex flex-grow justify-between items-center border-x border-aronium-500 bg-transparent"
     >
       <div class="w-1/3 h-full border-r border-aronium-500">
         <div class="relative w-full">
