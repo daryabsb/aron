@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-aronium-800 p-1 box-border">
+  <div class="relative bg-aronium-800 p-1 box-border">
     <!-- <modal-calculator></modal-calculator> -->
     <!-- noprint-area -->
     <div class="hide-print">
@@ -14,6 +14,7 @@
         @close="paymentModal"
         @cash-out="cashOut"
       ></payment-popper>
+
       <header-search-popper
         v-show="isSearchModal"
         @close="searchModal"

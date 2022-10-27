@@ -31,13 +31,13 @@ export default {
     const createCart = store.createCart;
     const addQty = store.addQty;
     const clear = store.clear;
+    const ID = ref(0);
     const selectItem = (item) => (ID.value = item.id);
     const moneys = store.useMoneys;
 
     const activeOrderNumber = store.activeNumber;
     const useActiveOrder = store.useActiveOrder;
     const subTotalBeforeTax = store.subTotalBeforeTax;
-    const ID = ref(0);
     const orderID = computed(() => (ID.value > 0 ? ID : "---"));
     const cart = store.cart;
     const cash = store.cash;

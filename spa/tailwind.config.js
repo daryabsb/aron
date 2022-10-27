@@ -5,6 +5,8 @@ module.exports = {
   content: ["./public/**/*.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     screens: {
+      phone: "420px",
+      // => @media (min-width: 640px) { ... }
       tablet: "640px",
       // => @media (min-width: 640px) { ... }
 

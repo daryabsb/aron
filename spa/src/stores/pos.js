@@ -49,11 +49,12 @@ export const usePos = defineStore("pos", {
       );
     },
 
-    addToCart(product, quantity = 1, price = 0, tax = 0) {
+    addToCart(product, quantity = 1, price = 0, discount = 0, tax = 0) {
       const orderItem = {
         id: product.id,
         product,
         quantity,
+        discount,
         tax,
         price,
       };

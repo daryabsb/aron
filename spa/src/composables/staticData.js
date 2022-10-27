@@ -2,7 +2,7 @@ import { ref } from "vue";
 import dataLabels from "chartjs-plugin-datalabels";
 import { useModals } from "@/stores/modals";
 
-export const sideBArNavItems = [
+export const sideBarNavItems = [
   {
     id: 1,
     name: "Dashboard",
@@ -31,6 +31,12 @@ export const sideBArNavItems = [
     id: 5,
     name: "Pos",
     link: "/pos",
+    icon: "fas fa-tags text-blueGray-300 mr-2 text-sm",
+  },
+  {
+    id: 6,
+    name: "store",
+    link: "/store",
     icon: "fas fa-tags text-blueGray-300 mr-2 text-sm",
   },
 ];

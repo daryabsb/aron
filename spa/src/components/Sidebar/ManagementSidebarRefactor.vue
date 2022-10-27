@@ -110,7 +110,7 @@
           >
             <li class="items-center">
               <router-link
-                v-for="item in sideBArNavItems"
+                v-for="item in sideBarNavItems"
                 :key="item.id"
                 v-slot="{ href, navigate, isActive }"
                 :to="item.link"
@@ -156,7 +156,7 @@ import { ref } from "vue";
 import NotificationDropdown from "@/components/Dropdowns/NotificationDropdown.vue";
 import UserDropdown from "@/components/Dropdowns/UserDropdown.vue";
 
-import { sideBArNavItems } from "@/composables/staticData";
+import { sideBarNavItems } from "@/composables/staticData";
 
 export default {
   components: {
@@ -169,7 +169,7 @@ export default {
       collapseShow.value = classes;
     };
     return {
-      sideBArNavItems,
+      sideBarNavItems,
       collapseShow,
       toggleCollapseShow,
     };

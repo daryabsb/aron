@@ -3,19 +3,21 @@
     class="h-full w-full fixed flex flex-col justify-center text-aronium-white bg-aronium-900 z-10"
   >
     <!-- ITEMS AT PAYMENT MODAL -->
+    <!-- <search-panel></search-panel> -->
 
     <div
-      class="py-8 px-4 flex justify-between items-center border border-aronium-500 bg-transparent"
+      class="py-1 w-full px-2 flex items-center border border-aronium-500 bg-transparent"
     >
-      <h1 class="text-2xl font-light tracking-wider">Search</h1>
+      <store-header></store-header>
+      <!-- <h1 class="text-2xl font-light tracking-wider">Search</h1>
       <span @click="$emit('close')">
         <i class="fa fa-times"></i>
-      </span>
+      </span> -->
     </div>
     <div
       class="h-full flex justify-between items-center border-x border-aronium-500 bg-transparent"
     >
-      <div class="w-1/2 h-full border-r border-aronium-500">
+      <div class="w-1/3 h-full border-r border-aronium-500">
         <div class="relative w-full">
           <input
             type="text"
@@ -45,10 +47,20 @@
         </div>
         <div class="relative w-full">
           Darya
-          <search-panel></search-panel>
         </div>
       </div>
-      <div class="w-1/2 h-full">details panel</div>
+      <div class="w-2/3 h-full">
+        <div class="relative w-full">
+          <input
+            type="text"
+            placeholder="Product names..."
+            class="w-full px-10 bg-transparent outline-none border-x-0 border-t-0 border-b border-aronium-500"
+          />
+          <i class="absolute top-3 left-3 fa fa-search"></i>
+          <i class="absolute top-3 right-3 fa fa-times"></i>
+        </div>
+        <router-view></router-view>
+      </div>
     </div>
     <div
       class="py-8 px-4 flex justify-between items-center border border-aronium-500 bg-transparent"
@@ -64,12 +76,15 @@
 import { ref } from "vue";
 import { usePos } from "@/stores/pos";
 
+import StoreHeader from "@/components/Navbars/StoreHeader.vue";
+
 import Calculator from "@/components/shared/calculator/Calculator.vue";
 import Moneys from "@/components/Cards/Moneys.vue";
 import PaymentPopperDiscount from "@/components/poppers/PaymentPopperDiscount.vue";
 import SearchPanel from "@/components/shared/SearchPanel.vue";
 export default {
   components: {
+    StoreHeader,
     Calculator,
     Moneys,
     PaymentPopperDiscount,
