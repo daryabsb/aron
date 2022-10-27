@@ -1,12 +1,12 @@
 <template>
   <div
-    class="h-full w-full fixed flex flex-col justify-center text-aronium-white bg-aronium-900 z-10"
+    class=" w-full h-screen flex flex-col justify-center text-aronium-white bg-aronium-900 z-10"
   >
     <!-- ITEMS AT PAYMENT MODAL -->
     <!-- <search-panel></search-panel> -->
 
     <div
-      class="py-1 w-full px-2 flex items-center border border-aronium-500 bg-transparent"
+      class="h-20 py-1 w-full px-2 flex items-center border border-aronium-500 bg-transparent"
     >
       <store-header></store-header>
       <!-- <h1 class="text-2xl font-light tracking-wider">Search</h1>
@@ -15,7 +15,7 @@
       </span> -->
     </div>
     <div
-      class="h-full flex justify-between items-center border-x border-aronium-500 bg-transparent"
+      class="h-[30rem] flex justify-between items-center border-x border-aronium-500 bg-transparent"
     >
       <div class="w-1/3 h-full border-r border-aronium-500">
         <div class="relative w-full">
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div
-      class="py-8 px-4 flex justify-between items-center border border-aronium-500 bg-transparent"
+      class="h-20 px-4 flex justify-between items-center border border-aronium-500 bg-transparent"
     >
       <h1 class="text-2xl font-light tracking-wider">Search</h1>
       <span @click="$emit('close')">
