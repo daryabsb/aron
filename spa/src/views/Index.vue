@@ -56,7 +56,7 @@ export default {
     onMounted(useFetchUserDispatch);
     const addNewCart = () => {
       store.createCart();
-      router.push("/pos");
+      router.push("/store");
     };
     const key = ref("");
     const navigateToPage = () => {
@@ -65,7 +65,7 @@ export default {
       if (key.value === "management") {
         router.push("/management");
       }
-      router.push("/pos");
+      router.push("/store");
     };
     const findOrderOrCustomer = (number) => {
       if (!number) {
