@@ -20,12 +20,15 @@
         <Suspense>
           <template #default>
             <div
-              class="col-span-1 flex flex-col justify-between rounded-sm px-4 py-2 shadow"
+              class="h-32 border border-aronium-500 w-full col-span-1 flex flex-col items-center justify-center rounded-sm shadow"
               @click="selectGroup(item.id)"
             >
-              <div v-if="item.image">
+              <div
+                v-if="item.image"
+                class="h-20 w-full flex justify-center items-center mb-2"
+              >
                 <img
-                  class="w-full object-fit"
+                  class="object-contain h-20"
                   :src="item.image"
                   :alt="item.name"
                 />

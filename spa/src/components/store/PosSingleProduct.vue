@@ -1,7 +1,7 @@
 <template>
   <div role="button" :title="product.name" @click="addProductToCart()">
     <div
-      class="h-48 border border-aronium-700 py-2 px-2 w-full overflow-hidden bg-inherit text-aronium-white group-hover:opacity-75"
+      class="h-48 border border-aronium-500 py-2 px-2 w-full overflow-hidden bg-inherit text-aronium-white group-hover:opacity-75"
     >
       <!-- class="h-48 aspect-w-1 border aspect-h-1 w-full overflow-hidden bg-inherit text-aronium-white group-hover:opacity-75 lg:aspect-none" -->
       <div class="w-full h-32 border-b border-aronium-600">
