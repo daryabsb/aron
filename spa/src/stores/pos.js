@@ -155,6 +155,7 @@ export const usePos = defineStore("pos", {
       return computed(() => state.moneys);
     },
     useActiveOrder: (state) => {
+      console.log(state.activeNumber);
       return computed(() =>
         state.cart.find((item) => item.number === state.activeNumber)
       );

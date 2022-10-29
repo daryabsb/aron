@@ -1,7 +1,79 @@
 <template>
   <div class="flex justify-between w-full h-full items-center">
+    <div class="w-full phone:flex md:hidden text-aronium-white font-light">
+      <Popper arrow>
+        <a class="text-aronium-white block" href="#pablo">
+          <div class="items-center flex">
+            <span
+              class="w-10 h-10 text-sm text-aronium-white inline-flex items-center justify-center"
+            >
+              <button class="ml-6 text-2xl">
+                <i class="fa fa-bars"></i>
+              </button>
+            </span>
+          </div>
+        </a>
+
+        <template #content="{ close }">
+          <Transition mode="out-in">
+            <div
+              class="w-full bg-aronium-800 border-y border-l pl-6 pr-20 border-aronium-500 text-base z-50 float-left py-6 list-none text-left rounded shadow-lg"
+            >
+              <div class="h-fit w-full pr-2 mb-6">
+                <div
+                  class="flex justify-between w-full text-aronium-white py-6"
+                >
+                  <span class="cursor-pointer mr-4" @click="close"
+                    ><i class="fa fa-arrow-left"></i
+                  ></span>
+                  <span>
+                    <h1>POS1 - Darya Ibrahim</h1>
+                  </span>
+                  <!-- @click="close" -->
+                </div>
+              </div>
+              <div class="flex flex-col justify-between">
+                <ul class="my-6">
+                  <li>
+                    <a
+                      href="javascript:void(0);"
+                      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent"
+                    >
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0);"
+                      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent"
+                    >
+                      Another action
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="http://127.0.0.1:8000/logout/"
+                      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent"
+                    >
+                      Logout
+                    </a>
+                  </li>
+                  <li class="cursor-pointer" @click="close">
+                    <a
+                      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent"
+                      >Close</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Transition>
+        </template>
+      </Popper>
+    </div>
     <div
-      class="flex flex-nowrap text-aronium-white font-light overflow-auto scrollbar"
+      class="phone:hidden md:flex md:flex-nowrap w-full text-aronium-white font-light overflow-auto scrollbar"
     >
       <ul class="flex text-sm mr-3">
         <li
@@ -83,7 +155,11 @@
 import { ref } from "vue";
 import { posHeaderItems } from "@/composables/staticData";
 import { useCart } from "@/store/composables";
-
+import {
+  Bars3Icon,
+  Bars2Icon,
+  ChevronDoubleLeftIcon,
+} from "@heroicons/vue/24/outline";
 import UserDropdown from "@/components/Dropdowns/UserDropdown.vue";
 // import MainMenuModal from "@/components/modals/MainMenuModal.vue";
 import MainMenuPopper from "@/components/poppers/MainMenuPopper.vue";
@@ -98,6 +174,7 @@ export default {
   components: {
     UserDropdown,
     MainMenuPopper,
+    Bars3Icon,
   },
   emits: ["cashModal", "paymentModal"],
   setup() {

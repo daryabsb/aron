@@ -2,54 +2,23 @@
   <div
     class="w-full h-screen flex flex-col justify-center text-aronium-white bg-aronium-900 z-10"
   >
-    <!-- ITEMS AT PAYMENT MODAL -->
-    <!-- <search-panel></search-panel> -->
-
     <div
       class="h-20 py-1 w-full px-2 flex items-center border border-aronium-500 bg-transparent"
     >
       <store-header></store-header>
-      <!-- <h1 class="text-2xl font-light tracking-wider">Search</h1>
-      <span @click="$emit('close')">
-        <i class="fa fa-times"></i>
-      </span> -->
+    </div>
+    <div class="relative w-full">
+      <store-search></store-search>
     </div>
     <div
-      class="h-[30rem] flex flex-grow justify-between items-center border-x border-aronium-500 bg-transparent"
+      class="h-[12rem] bg-aronium-900 flex flex-grow justify-between items-center border-x border-aronium-500"
     >
-      <div class="w-1/3 h-full border-r border-aronium-500">
-        <div class="relative w-full">
-          <input
-            type="text"
-            placeholder="Product names..."
-            class="w-full px-10 bg-transparent outline-none border-x-0 border-t-0 border-b border-aronium-500"
-          />
-          <i class="absolute top-3 left-3 fa fa-search"></i>
-          <i class="absolute top-3 right-3 fa fa-times"></i>
-        </div>
-        <div class="relative w-full">
-          <input
-            type="text"
-            placeholder="Product code..."
-            class="w-full px-10 bg-transparent outline-none border-x-0 border-t-0 border-b border-aronium-500"
-          />
-          <i class="absolute top-3 left-3 fa fa-search"></i>
-          <i class="absolute top-3 right-3 fa fa-times"></i>
-        </div>
-        <div class="relative w-full">
-          <input
-            type="text"
-            placeholder="Barcodes..."
-            class="w-full px-10 bg-transparent outline-none border-x-0 border-t-0 border-b border-aronium-500"
-          />
-          <i class="absolute top-3 left-3 fa fa-search"></i>
-          <i class="absolute top-3 right-3 fa fa-times"></i>
-        </div>
-        <div class="relative w-full">
-          Darya
-        </div>
+      <div
+        class="phone:w-full md:w-1/3 p-2 overflow-auto scrollbar h-full border-r border-aronium-500"
+      >
+        <store-order></store-order>
       </div>
-      <div class="w-2/3 h-full">
+      <div class="phone:hidden md:block w-2/3 overflow-auto scrollbar h-full">
         <div class="relative w-full">
           <input
             type="text"
@@ -63,8 +32,9 @@
       </div>
     </div>
     <div
-      class="h-20 px-4 flex justify-between items-center border border-aronium-500 bg-transparent"
+      class="fixed bottom-0 w-full h-fit bg-aronium-900 px-2 flex justify-between items-center border border-aronium-500"
     >
+      <store-totals-calculations></store-totals-calculations>
       <h1 class="text-2xl font-light tracking-wider">Search</h1>
       <span @click="$emit('close')">
         <i :class="isShowItems ? 'fa fa-times' : 'fa fa-circle'"></i>
@@ -77,6 +47,9 @@ import { ref } from "vue";
 import { usePos } from "@/stores/pos";
 
 import StoreHeader from "@/components/Navbars/StoreHeader.vue";
+import StoreOrder from "@/components/store/StoreOrder.vue";
+import StoreSearch from "@/components/store/StoreSearch.vue";
+import StoreTotalsCalculations from "@/components/store/StoreTotalsCalculations.vue";
 
 import Calculator from "@/components/shared/calculator/Calculator.vue";
 import Moneys from "@/components/Cards/Moneys.vue";
@@ -85,6 +58,9 @@ import SearchPanel from "@/components/shared/SearchPanel.vue";
 export default {
   components: {
     StoreHeader,
+    StoreSearch,
+    StoreOrder,
+    StoreTotalsCalculations,
     Calculator,
     Moneys,
     PaymentPopperDiscount,
@@ -93,6 +69,7 @@ export default {
   emits: ["close", "cashOut"],
   setup() {
     const store = usePos();
+    const createCart = store.createCart;
     const cart = store.cart;
     const cash = store.useCash;
     const change = store.useChange;
@@ -139,6 +116,7 @@ export default {
         ID.value = null;
       }
     };
+    createCart();
 
     return {
       // Numeric pad

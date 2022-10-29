@@ -64,6 +64,18 @@ class ProductGroupViewset(viewsets.ModelViewSet):
     queryset = ProductGroup.objects.all()
     permission_classes = (permissions.IsAuthenticated,)
 
+    # def get_queryset(self):
+    #     queryset = ProductGroup.objects.all()
+
+    #     # PERFORM FILTER BY SEARCH INPUT
+    #     # conditions = Q()
+    #     children = self.request.query_params.get("children", None)
+    #     # print(keywords)
+    #     if children:
+    #         queryset = Product.objects.filter(parent_group=id)
+
+    #     return queryset
+
     def perform_create(self, serializer):
         """Create a new product group"""
 
