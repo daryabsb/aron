@@ -13,15 +13,15 @@
         </dt>
         <dd class="mt-1 flex items-baseline justify-between md:block lg:flex">
           <div
-            class="flex items-baseline text-2xl font-semibold text-aronium-white"
+            class="flex items-baseline text-green-700 text-2xl font-semibold text-aronium-white"
           >
             {{ item.stat }}
-            <span class="ml-2 text-sm font-medium text-aronium-300"
+            <!-- <span class="ml-2 text-sm font-medium text-aronium-300"
               >from {{ item.value }}</span
-            >
+            > -->
           </div>
 
-          <div
+          <!-- <div
             :class="[
               item.changeType === 'increase'
                 ? 'bg-green-100 text-green-800'
@@ -44,7 +44,7 @@
               by
             </span>
             {{ item.change }}
-          </div>
+          </div> -->
         </dd>
       </div>
     </dl>

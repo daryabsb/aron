@@ -72,6 +72,7 @@
         </template>
       </Popper>
     </div>
+
     <div
       class="phone:hidden md:flex md:flex-nowrap w-full text-aronium-white font-light overflow-auto scrollbar"
     >
@@ -163,6 +164,9 @@ import {
 import UserDropdown from "@/components/Dropdowns/UserDropdown.vue";
 // import MainMenuModal from "@/components/modals/MainMenuModal.vue";
 import MainMenuPopper from "@/components/poppers/MainMenuPopper.vue";
+
+// import CashPopper from "@/components/poppers/CashPopper.vue";
+// import PaymentPopper from "@/components/poppers/PaymentPopper.vue";
 
 // export default {
 // components: {

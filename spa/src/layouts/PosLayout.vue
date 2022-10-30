@@ -15,10 +15,10 @@
         @cash-out="cashOut"
       ></payment-popper>
 
-      <header-search-popper
+      <!-- <header-search-popper
         v-show="isSearchModal"
         @close="searchModal"
-      ></header-search-popper>
+      ></header-search-popper> -->
 
       <div
         class="grid grid-cols-8 grid-rows-12 text-aronium-white h-screen w-full overflow-auto"
@@ -75,7 +75,7 @@ import {
 
 import CashPopper from "@/components/poppers/CashPopper.vue";
 import PaymentPopper from "@/components/poppers/PaymentPopper.vue";
-import HeaderSearchPopper from "@/components/poppers/HeaderSearchPopper.vue";
+// import HeaderSearchPopper from "@/components/poppers/HeaderSearchPopper.vue";
 
 // F keys event listener
 // window.onkeydown = (evt) => {
@@ -150,7 +150,7 @@ export default {
     PaymentPopper,
     CashPopper,
     PosRightNav,
-    HeaderSearchPopper,
+    // HeaderSearchPopper,
     StoreOrder,
 
     // ModalFirstTime,

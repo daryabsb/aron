@@ -173,9 +173,7 @@ export const posHeaderItems = [
     icon: " fa fa-search",
     submit: (title, item) => {
       const store = useModals();
-      console.log(store.searchModal);
       store.searchModal = true;
-      console.log(store.searchModal);
     },
   },
   {

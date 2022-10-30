@@ -1,5 +1,5 @@
 <template>
-  <search-panel @close="close"></search-panel>
+  DaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDaryaDarya
 </template>
 <script>
 import { ref } from "vue";

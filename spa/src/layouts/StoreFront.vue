@@ -1,12 +1,13 @@
 <template>
   <div
-    class="w-full h-screen flex flex-col justify-center text-aronium-white bg-aronium-900 z-10"
+    class="relative w-full h-screen flex flex-col justify-center text-aronium-white bg-aronium-900 z-10"
   >
     <div
       class="h-20 py-1 w-full px-2 flex items-center border border-aronium-500 bg-transparent"
     >
       <store-header></store-header>
     </div>
+
     <div class="relative w-full">
       <store-search></store-search>
     </div>
@@ -18,6 +19,12 @@
       >
         <store-order></store-order>
       </div>
+
+      <header-search-popper
+        v-if="isSearchModal"
+        @close="searchModal"
+      ></header-search-popper>
+
       <div class="phone:hidden md:block w-2/3 overflow-auto scrollbar h-full">
         <div class="relative w-full">
           <input
@@ -43,8 +50,9 @@
   </div>
 </template>
 <script>
-import { ref } from "vue";
+import { ref, defineAsyncComponent } from "vue";
 import { usePos } from "@/stores/pos";
+import { useModals } from "@/stores/modals";
 
 import StoreHeader from "@/components/Navbars/StoreHeader.vue";
 import StoreOrder from "@/components/store/StoreOrder.vue";
@@ -55,6 +63,18 @@ import Calculator from "@/components/shared/calculator/Calculator.vue";
 import Moneys from "@/components/Cards/Moneys.vue";
 import PaymentPopperDiscount from "@/components/poppers/PaymentPopperDiscount.vue";
 import SearchPanel from "@/components/shared/SearchPanel.vue";
+import HeaderSearchPopper from "@/components/poppers/HeaderSearchPopper.vue";
+
+const CashPopper = defineAsyncComponent(() =>
+  import("@/components/poppers/CashPopper.vue")
+);
+const PaymentPopper = defineAsyncComponent(() => {
+  import("@/components/poppers/PaymentPopper.vue");
+});
+// const HeaderSearchPopper = defineAsyncComponent(() => {
+//   import("@/components/poppers/HeaderSearchPopper.vue");
+// });
+
 export default {
   components: {
     StoreHeader,
@@ -64,6 +84,7 @@ export default {
     Calculator,
     Moneys,
     PaymentPopperDiscount,
+    HeaderSearchPopper,
     SearchPanel,
   },
   emits: ["close", "cashOut"],
@@ -83,6 +104,12 @@ export default {
     const getTotalPrice = store.totalPrice;
     const activeOrder = store.useActiveOrder;
     const inputMoney = ref(0);
+
+    const mods = useModals();
+    const isSearchModal = mods.isSearchModal;
+    const searchModal = () => {
+      mods.searchModal = !mods.searchModal;
+    };
 
     const isDiscountPopper = ref(false);
 
@@ -120,6 +147,8 @@ export default {
 
     return {
       // Numeric pad
+      isSearchModal,
+      searchModal,
 
       inputMoney,
       cash,

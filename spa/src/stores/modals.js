@@ -9,14 +9,7 @@ export const useModals = defineStore("modals", {
   },
   getters: {
     isSearchModal(state) {
-      return computed({
-        get() {
-          return state.searchModal;
-        },
-        set(value) {
-          state.searchModal = value;
-        },
-      });
+      return computed(() => state.searchModal);
     },
   },
 });
