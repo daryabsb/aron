@@ -28,7 +28,34 @@
             leave-from="opacity-100 translate-y-0 sm:scale-100"
             leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <slot name="modal-content"></slot>
+            <DialogPanel
+              class="relative transform overflow-hidden rounded-sm bg-aronium-800 border border-aronium-500 px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:p-6"
+              :class="`sm:max-w-${props.size}`"
+            >
+              <div>
+                <slot name="icon"></slot>
+                <!-- <div
+                  class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100"
+                >
+                
+                  <CheckIcon
+                    class="h-6 w-6 text-green-600"
+                    aria-hidden="true"
+                  />
+                </div> -->
+                <div class="mt-3 text-center sm:mt-5">
+                  <DialogTitle as="h3">
+                    <slot name="title"></slot>
+                  </DialogTitle>
+                  <div class="mt-2">
+                    <slot name="content"></slot>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <slot name="button"></slot>
+              </div>
+            </DialogPanel>
           </TransitionChild>
         </div>
       </div>
@@ -37,7 +64,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, defineProps } from "vue";
 import {
   Dialog,
   DialogPanel,
@@ -46,6 +73,9 @@ import {
   TransitionRoot,
 } from "@headlessui/vue";
 import { CheckIcon } from "@heroicons/vue/24/outline";
+const props = defineProps({
+  size: String,
+});
 
 const open = ref(true);
 </script>
