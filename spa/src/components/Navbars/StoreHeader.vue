@@ -115,7 +115,7 @@
         </li>
         <li
           class="font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0"
-          @click="$emit('paymentModal')"
+          @click="paymentModal"
         >
           <div
             class="px-10 flex flex-col items-center border border-aronium-500 py-1"
@@ -127,10 +127,13 @@
             <span class="text-center xl:w-20">Payment</span>
           </div>
         </li>
+        {{
+          activeOrder.items.length === 0
+        }}
         <li
-          :disabled="cart.length === 0"
+          :disabled="activeOrder.items.length === 0"
           class="font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0 disabled:opacity-30 disabled:hover:text-aronium-600 disabled:cursor-auto"
-          @click="$emit('cashModal')"
+          @click="cashModal"
         >
           <div
             class="px-10 flex flex-col items-center border border-aronium-500 py-1"
@@ -156,45 +159,46 @@
 import { ref } from "vue";
 import { posHeaderItems } from "@/composables/staticData";
 import { useCart } from "@/store/composables";
+import { useModals } from "@/stores/modals";
+import { usePos } from "@/stores/pos";
 import {
   Bars3Icon,
   Bars2Icon,
   ChevronDoubleLeftIcon,
 } from "@heroicons/vue/24/outline";
 import UserDropdown from "@/components/Dropdowns/UserDropdown.vue";
-// import MainMenuModal from "@/components/modals/MainMenuModal.vue";
 import MainMenuPopper from "@/components/poppers/MainMenuPopper.vue";
 
-// import CashPopper from "@/components/poppers/CashPopper.vue";
-// import PaymentPopper from "@/components/poppers/PaymentPopper.vue";
-
-// export default {
-// components: {
-//   CashPopper,
-// },
-// emits: ["open"],
-// setup(props, context) {
 export default {
   components: {
     UserDropdown,
     MainMenuPopper,
     Bars3Icon,
   },
-  emits: ["cashModal", "paymentModal"],
+
   setup() {
+    const store = useModals();
+    const pos = usePos();
     const cart = useCart;
+    const activeOrder = pos.useActiveOrder;
+
     const broadcastFunction = (item) => {
       console.log(item);
     };
+    const paymentModal = () => (store.openPaymentModal = true);
+    const cashModal = () => (store.openCashModal = true);
     const openModal = (e) => {
       console.log("e.keyCode: ", e.keyCode);
     };
     const saveSale = () => console.log("Sale saved!");
     return {
       posHeaderItems,
+      paymentModal,
+      cashModal,
       broadcastFunction,
       openModal,
       saveSale,
+      activeOrder,
       cart,
     };
   },

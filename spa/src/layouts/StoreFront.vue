@@ -20,11 +20,6 @@
         <store-order></store-order>
       </div>
 
-      <header-search-popper
-        v-if="isSearchModal"
-        @close="searchModal"
-      ></header-search-popper>
-
       <div class="phone:hidden md:block w-2/3 overflow-auto scrollbar h-full">
         <div class="relative w-full">
           <input
@@ -38,6 +33,7 @@
         <router-view></router-view>
       </div>
     </div>
+
     <div
       class="fixed bottom-0 w-full h-fit bg-aronium-900 px-2 flex justify-between items-center border border-aronium-500"
     >
@@ -54,6 +50,12 @@ import { ref, defineAsyncComponent } from "vue";
 import { usePos } from "@/stores/pos";
 import { useModals } from "@/stores/modals";
 
+import {
+  useFetchProductsDispatch,
+  openCashModal,
+  openPaymentModal,
+} from "@/store/composables";
+
 import StoreHeader from "@/components/Navbars/StoreHeader.vue";
 import StoreOrder from "@/components/store/StoreOrder.vue";
 import StoreSearch from "@/components/store/StoreSearch.vue";
@@ -64,6 +66,7 @@ import Moneys from "@/components/Cards/Moneys.vue";
 import PaymentPopperDiscount from "@/components/poppers/PaymentPopperDiscount.vue";
 import SearchPanel from "@/components/shared/SearchPanel.vue";
 import HeaderSearchPopper from "@/components/poppers/HeaderSearchPopper.vue";
+// import PaymentPopper from "@/components/poppers/PaymentPopper.vue";
 
 const CashPopper = defineAsyncComponent(() =>
   import("@/components/poppers/CashPopper.vue")

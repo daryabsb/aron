@@ -57,7 +57,6 @@
       <button
         type="button"
         class="font-medium hover:text-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
-        @click="alert('Nothing')"
       >
         <PlusIcon
           class="h-5 w-5 flex-shrink-0"
