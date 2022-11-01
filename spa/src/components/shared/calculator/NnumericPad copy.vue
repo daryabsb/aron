@@ -1,29 +1,25 @@
 <template>
   <Grid
     rows="4"
-    cols="6"
+    cols="4"
     gap="2"
     class="h-full w-full sm:my-4 p-3 pt-8 sm:rounded-sm bg-inherit border border-aronium-500"
   >
     <!-- class="shadow-2xl w-full sm:max-w-md sm:h-auto sm:my-3 p-3 pt-12 sm:rounded-sm bg-inherit border border-aronium-500" -->
-    <Screen :text="memory" :error="error" class="col-span-6" />
+    <!-- <Screen :text="memory" :error="error" class="col-span-6" /> -->
 
     <!-- <Button variant="transRed" class="col-span-2" @click="clear">Clear</Button> -->
-    <Button variant="transRed" @click="clear">Clear</Button>
-    <Button variant="transGreen" @click="addOperator('-')">-</Button>
-    <Button variant="transGreen" @click="addOperator('*')">*</Button>
+
     <Button
-      v-for="number in ['7', '8', '9']"
+      v-for="number in ['1', '2', '3']"
       :key="number"
       variant="transparent"
       @click="addDigit(number)"
     >
       {{ number }}
     </Button>
-
     <Button variant="transYellow" @click="eraseLast">Del</Button>
-    <Button variant="transGreen" @click="addOperator('+')">+</Button>
-    <Button variant="transparent" @click="addDigit('.')">.</Button>
+
     <Button
       v-for="number in ['4', '5', '6']"
       :key="number"
@@ -32,18 +28,26 @@
     >
       {{ number }}
     </Button>
+    <Button variant="transRed" @click="clear">Esc</Button>
 
-    <Button variant="transGreen" @click="calculateResult">=</Button>
-    <Button variant="transGreen" @click="addOperator('/')">/</Button>
-    <Button variant="transparent" @click="addDigit('0')">0</Button>
     <Button
-      v-for="number in ['3', '2', '1'].reverse()"
+      v-for="number in ['7', '8', '9']"
       :key="number"
       variant="transparent"
       @click="addDigit(number)"
     >
       {{ number }}
     </Button>
+    <Button
+      variant="transparent"
+      class="row-start-3 col-start-4 inset-0 col-span-1 row-span-2"
+      @click="calculateResult"
+      >Ent</Button
+    >
+    <Button variant="transparent" class="col-span-2" @click="addDigit('0')"
+      >0</Button
+    >
+    <Button variant="transparent" @click="addDigit('.')">.</Button>
   </Grid>
 </template>
 
@@ -66,11 +70,12 @@ export default {
   name: "Calculator",
   components: { Button, Screen, Grid },
   emits: ["calculatorValue"],
-  setup: (context) => {
+  setup: (props, context) => {
     const calculate = useCalculate();
     const calculateResult = () => {
-      calculate.calculateResult();
-      context.emit("calculatorValue", "calculate.memory");
+      // calculate.calculateResult();
+      // console.log(context);
+      context.emit("calculatorValue", calculate.memory);
     };
     const keyboard = useKeyboard();
 
@@ -90,7 +95,7 @@ export default {
       keyboard.removeAllListeners();
     });
 
-    return { ...calculate };
+    return { ...calculate, calculateResult };
   },
 };
 </script>

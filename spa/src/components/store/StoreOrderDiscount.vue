@@ -164,7 +164,7 @@
             </div>
           </div>
 
-          <NumericPad />
+          <NumericPad @calculatorValue="discountValue" />
         </div>
       </template>
       <template #button>
@@ -181,7 +181,8 @@
 </template>
 
 <script setup>
-import { ref, defineProps, nextTick } from "vue";
+import { ref, computed, defineProps, nextTick } from "vue";
+import { useCalculate } from "@/composables/useCalculate";
 import {
   Dialog,
   DialogPanel,
@@ -208,12 +209,12 @@ const priceFormat = store.priceFormat;
 const getTotalPrice = store.totalPrice;
 const activeNumber = ref(store.activeNumber);
 const useActiveOrder = ref(store.useActiveOrder);
-console.log(useActiveOrder.value);
 
 const tabID = ref(1);
 const discountType = ref("%");
 const totalOrderDiscount = ref(0);
 const cartInputValue = ref(0);
+const itemInputValue = ref(0);
 const selectCartInputText = () => {
   const cartDiscountInput = document.getElementById("cart-discount-input");
   // const itemDiscountInput = document.getElementById("item-discount-input");
@@ -242,5 +243,11 @@ const cartDiscount = async () => {
 };
 const itemDiscount = () => {
   tabID.value = 2;
+};
+
+const discountValue = (payload) => {
+  if (tabID.value == 1) cartInputValue.value = payload.value;
+  if (tabID.value == 2) itemInputValue.value = payload.value;
+  console.log("itemInputValue.value", payload.value);
 };
 </script>

@@ -1,4 +1,5 @@
 <template>
+  {{ memory }}
   <Grid
     rows="4"
     cols="4"
@@ -41,7 +42,7 @@
     <Button
       variant="transparent"
       class="row-start-3 col-start-4 inset-0 col-span-1 row-span-2"
-      @click="addDigit('.')"
+      @click="calculateResult"
       >Ent</Button
     >
     <Button variant="transparent" class="col-span-2" @click="addDigit('0')"
@@ -52,6 +53,7 @@
 </template>
 
 <script>
+import { ref } from "vue";
 import { onBeforeUnmount, onMounted } from "vue";
 import { useCalculate } from "@/composables/useCalculate";
 import { useKeyboard } from "@/composables/useKeyboard";
@@ -67,34 +69,93 @@ import {
 } from "@/store/constants";
 
 export default {
-  name: "Calculator",
+  name: "NumericPad",
   components: { Button, Screen, Grid },
   emits: ["calculatorValue"],
-  setup: (context) => {
-    const calculate = useCalculate();
-    const calculateResult = () => {
-      calculate.calculateResult();
-      context.emit("calculateValue", calculate.memory);
-    };
+  setup: (props, context) => {
+    // const calculate = useCalculate();
     const keyboard = useKeyboard();
+
+    // const isDigit = calculate.isDigit;
+    // const lastCharIsOperator = calculate.lastCharIsOperator;
+
+    let memory = ref("");
+    let error = ref(false);
+    let clearOnNextDigit = ref(false);
 
     onMounted(() => {
       keyboard.addListener((e) => {
         const key = e.key === "," ? "." : e.key;
 
-        if (DIGITS.includes(key)) calculate.addDigit(key);
-        if (OPERATORS.includes(key)) calculate.addOperator(key);
-        if (RESULT_KEYS.includes(key)) calculate.calculateResult();
-        if (ERASE_KEYS.includes(key)) calculate.eraseLast();
-        if (CLEAR_KEYS.includes(key)) calculate.clear();
+        if (DIGITS.includes(key)) addDigit(key);
+        // if (OPERATORS.includes(key)) calculate.addOperator(key);
+        if (RESULT_KEYS.includes(key)) calculateResult();
+        if (ERASE_KEYS.includes(key)) eraseLast();
+        if (CLEAR_KEYS.includes(key)) clear();
       });
     });
+
+    function clear() {
+      memory.value = "";
+      error.value = false;
+    }
+    const eraseLast = () => {
+      if (!memory.value.length) return;
+
+      memory.value = memory.value.slice(0, memory.value.length - 1);
+      clearOnNextDigit.value = false;
+    };
+
+    const isOperator = (string) => {
+      return OPERATORS.includes(string);
+    };
+
+    const lastCharIsOperator = (string) => {
+      const stringNormalized = string.replace(/\s/g, "");
+      return isOperator(stringNormalized[stringNormalized.length - 1]);
+    };
+
+    const isDigit = (string) => {
+      return DIGITS.includes(string);
+    };
+
+    const addDigit = (digit) => {
+      if (!isDigit(digit)) {
+        throw new Error("Invalid param, is not a valid digit");
+      }
+
+      const lastDigit = memory.value[memory.value.length - 1];
+
+      if (lastDigit === "." && digit === ".") return;
+      if (lastDigit === "0" && memory.value.length === 1) clear();
+      if (clearOnNextDigit.value) clear();
+      if ((!memory.value || lastCharIsOperator(memory.value)) && digit === ".")
+        memory.value += "0";
+
+      clearOnNextDigit.value = false;
+      memory.value += `${digit}`;
+    };
+
+    const calculateResult = () => {
+      // calculate.calculateResult();
+      // console.log(context);
+      context.emit("calculatorValue", memory);
+      clear();
+    };
 
     onBeforeUnmount(() => {
       keyboard.removeAllListeners();
     });
 
-    return { ...calculate };
+    return {
+      memory,
+      error,
+      clearOnNextDigit,
+      clear,
+      eraseLast,
+      addDigit,
+      calculateResult,
+    };
   },
 };
 </script>
