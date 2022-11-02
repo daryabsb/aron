@@ -85,45 +85,6 @@ export default {
 
     const isUsingDefaultQuantity = ref(false);
     const isPriceChangeAllowed = ref(false);
-    // const isTaxInclusivePrice = ref(false);
-
-    // const checkQuantiy = () => {
-    //   if (!quantity.value && !props.product.is_using_default_quantity) {
-    //     isUsingDefaultQuantity.value = false;
-    //   }
-    //   quantity.value = 1;
-    //   checkPrice();
-    // };
-    // const addQuantity = (qty) => {
-    //   isUsingDefaultQuantity.value = true;
-    //   console.log(qty);
-    //   quantity.value = qty;
-    //   checkPrice;
-    // };
-    // const checkPrice = () => {
-    //   if (!price.value && props.product.is_price_change_allowed) {
-    //     isPriceChangeAllowed.value = true;
-    //   }
-    //   price.value = props.product.price;
-    //   checkTaxInclusive();
-    // };
-    // const addPrice = (selectedPrice) => {
-    //   price.value = selectedPrice;
-    //   isPriceChangeAllowed.value = false;
-    //   checkTaxInclusive();
-    // };
-    // const checkTaxInclusive = () => {
-    //   if (props.product.is_tax_inclusive_price) {
-    //     isTaxInclusivePrice.value = true;
-    //   }
-    //   tax.value = 0;
-    //   addProductToCart();
-    // };
-    // const addTaxInclusive = (selectedPrice) => {
-    //   price.value = selectedPrice;
-    //   isTaxInclusivePrice.value = false;
-    //   addProductToCart();
-    // };
 
     const addProductToCart = () => {
       addToCart(props.product, 1, props.product.price, 0);
@@ -137,13 +98,6 @@ export default {
       isUsingDefaultQuantity,
       isPriceChangeAllowed,
       openCalculator,
-      // checkQuantiy,
-      // addQuantity,
-      // checkPrice,
-      // addPrice,
-      // checkTaxInclusive,
-
-      // addTaxInclusive,
     };
   },
 };

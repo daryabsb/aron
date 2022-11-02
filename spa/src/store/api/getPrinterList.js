@@ -1,7 +1,6 @@
 import axios from "axios";
 const getPrinterList = async () => {
   try {
-    // console.log("baseUrl", baseUrl);
     const response = await axios.get("/printers/");
 
     return response.data;

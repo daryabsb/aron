@@ -22,7 +22,6 @@ import {
   FETCH_PRINTERS_LIST,
   ADD_DISCOUNT,
   CREATE_CART,
-  COMMIT_TO_CART,
 } from "@/store/constants";
 import store from "@/store";
 
@@ -113,8 +112,6 @@ export const beep = () =>
 export const keyword = computed(() => store.getters.GET_KEYWORD);
 export const products = computed(() => store.getters.GET_PRODUCTS);
 export const filteredProducts = computed(() => {
-  // const store = useStore();
-
   const rg = keyword.value ? new RegExp(keyword.value, "gi") : null;
 
   return tabProducts.value.filter((p) => !rg || p.name.match(rg));
@@ -123,22 +120,11 @@ export const filteredProducts = computed(() => {
 export const addCash = (amount) => {
   return store.commit(ADD_CASH, amount);
 };
-// export const useActiveOrder = computed({
-//   get() {
-//     return store.getters.GET_ACTIVE_ORDER;
-//   },
-//   // setter
-//   set(orderItem) {
-//     // Note: we are using destructuring assignment syntax here.
-//     store.dispatch(CREATE_CART, orderItem);
-//   },
-// });
 
 export const updateKeyword = (keyword) => store.dispatch(ADD_KEYWORD, keyword);
 export const useCash = computed(() => store.getters.GET_CASH);
 export const useChange = computed(() => store.getters.GET_CHANGE);
 export const useCart = computed(() => store.getters.GET_CART);
-// export const useCart = computed(() => store.getters.GET_CART_LAST_ORDER);
 export const useMoneys = computed(() => store.getters.GET_MONEYS);
 export const receiptNo = computed(() => store.getters.GET_RECEIPT_NUMBER);
 export const receiptDate = computed(() => store.getters.GET_RECEIPT_DATE);
@@ -168,8 +154,6 @@ export const addToCart = (product) => store.dispatch(ADD_TO_CART, product);
 
 export const findCartIndex = (orderItem) => {
   return store.getters.GET_CART_INDEX(orderItem);
-  // if (useActiveOrder.value.items.length === 0) return -1;
-  // return useActiveOrder.value.items.findIndex((p) => p.id === orderItem.id);
 };
 export const addDiscount = (payload) => {
   store.commit(ADD_DISCOUNT, payload);
@@ -187,21 +171,6 @@ export const clear = () => {
 export const closeModalReceipt = () => {
   store.commit(CLOSE_MODAL_RECEIPT);
 };
-
-// export const addQty = (item, quantity) => {
-//   if (!quantity) quantity = 1;
-//   return store.commit(ADD_QUANTITY, { item, quantity });
-// const payload = {};
-// const index = useCart.value.findIndex((i) => i.id === cartItem.id);
-// if (index === -1) {
-//   return;
-// }
-// payload.item = item;
-// payload.quantity = quantity;
-
-// store.commit(ADD_QUANTITY, payload);
-// updateChange();
-// };
 export const updateChange = () => {
   return store.commit(UPDATE_CHANGE);
 };
@@ -215,50 +184,20 @@ export const submit = () => store.dispatch(SUBMIT_ORDER);
 // TEMPORARY FUNCTIONS
 
 export const anyWindowFunction = (evt) => {
-  // F keys event listener
-  // console.log(evt);
   window.onkeydown = (evt) => {
     const getEvt = (key) => {
       key = key.toString();
-
       const myKeys = new Map();
-
-      // myKeys.set("119", (openPaymentModal.value = !openPaymentModal.value));
-      // myKeys.set("120", (openCashModal.value = !openCashModal.value));
-      // console.log(myKeys.get(key) || "None");
     };
 
     getEvt(evt.keyCode);
-    // console.log(typeof evt.keyCode);
     return "119" || "Did not reach";
-    // openModal(evt);
-    // switch (evt.keyCode) {
-    //   //ESC
-    //   case 27:
-    //     evt.preventDefault();
-    //     console.log("esc");
-    //     break;
-    //   //F1
-    //   case 112:
-    //     evt.preventDefault();
-    //     console.log("f1");
-    //     break;
-    //   default:
-    //     return;
-    // }
   };
 
   // END of F keys
 };
 
 export const addToCarts = (orderItem) => {
-  // const index = useOrderItemIndex(orderItem);
-
-  // if (index === -1) {
-  //   store.commit(COMMIT_TO_CART, orderItem);
-  // } else {
-  //   store.commit(ADD_QUANTITY, index);
-  // }
   store.dispatch(ADD_TO_CART, orderItem);
 };
 
@@ -299,6 +238,5 @@ export const getTotalPrice = () => {
 };
 
 export const getItemTotalPrice = (item) => {
-  // console.log("item.price * item.quantity", item.price * item.quantity);
   return computed(() => item.price * item.quantity);
 };

@@ -173,14 +173,6 @@
 <script setup>
 import { defineEmits } from "vue";
 defineEmits(["close"]);
-// window.onkeydown = (e) => console.log(e);
-// window.document.body.onclick = (e) => console.log(e);
-// document.addEventListener("keypress", (e) => {
-//   console.log(e.keyCode);
-//   console.log(e.key);
-//   console.log(e.code);
-//   console.log(e.shiftKey);
-// });
 
 import { computed, ref } from "vue";
 import { MagnifyingGlassIcon } from "@heroicons/vue/20/solid";
@@ -256,8 +248,8 @@ const filteredPeople = computed(() =>
       })
 );
 
-function onSelect(person) {
-  // window.location = person.url;
-  console.log(person);
-}
+// function onSelect(person) {
+//   // window.location = person.url;
+//   console.log(person);
+// }
 </script>

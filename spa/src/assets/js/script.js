@@ -44,7 +44,6 @@ function initApp() {
     },
     async loadProducts() {
       this.products = await this.db.getProducts();
-      console.log("products loaded", this.products);
     },
     async startWithSampleData() {
       const response = await fetch("data/sample.json");

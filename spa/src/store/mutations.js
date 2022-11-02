@@ -86,10 +86,7 @@ const mutations = {
     updateChange();
   },
   [UPDATE_CHANGE](state) {
-    // console.log("change called");
-
     state.change = state.cash - getTotalPrice().value;
-    // console.log("change mutations", state.change);
   },
   [GET_TOTAL_PRICE](state) {
     state.cart.reduce((total, item) => total + item.qty * item.price, 0);
@@ -98,7 +95,7 @@ const mutations = {
     if (index === -1) {
       return;
     }
-    console.log("index", index, " | activeOrderIndex", activeOrderIndex.value);
+
     // state.cart[activeOrderIndex.value].items[index].quantity += 1;
     state.cart[1].items[0].quantity += 1;
 
@@ -107,10 +104,7 @@ const mutations = {
   },
 
   [ADD_CASH](state, amount) {
-    // console.log("amount-mutations", amount);
-    // console.log("cash before-mutations", state.cash);
     state.cash += amount || 0;
-    // console.log("cash after-mutations", state.cash);
 
     updateChange();
     beep();

@@ -1,7 +1,6 @@
 import axios from "axios";
 const getStockList = async (groupId = 0) => {
   try {
-    // console.log("baseUrl", baseUrl);
     let searchKey = null;
     if (groupId === 0 || !groupId) {
       searchKey = `?group=${groupId}/`;

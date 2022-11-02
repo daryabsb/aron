@@ -1,5 +1,4 @@
 <template>
-  {{ memory }}
   <Grid
     rows="4"
     cols="4"
@@ -29,7 +28,7 @@
     >
       {{ number }}
     </Button>
-    <Button variant="transRed" @click="clear">Esc</Button>
+    <Button variant="transRed" @click="clear">Clr</Button>
 
     <Button
       v-for="number in ['7', '8', '9']"
@@ -55,7 +54,7 @@
 <script>
 import { ref } from "vue";
 import { onBeforeUnmount, onMounted } from "vue";
-import { useCalculate } from "@/composables/useCalculate";
+import useCalculate from "@/services/useCalculate";
 import { useKeyboard } from "@/composables/useKeyboard";
 import Button from "@/components/shared/Button.vue";
 import Screen from "./Screen.vue";
@@ -71,15 +70,13 @@ import {
 export default {
   name: "NumericPad",
   components: { Button, Screen, Grid },
-  emits: ["calculatorValue"],
+
+  emits: ["calculatorValue", "close"],
   setup: (props, context) => {
     // const calculate = useCalculate();
     const keyboard = useKeyboard();
 
-    // const isDigit = calculate.isDigit;
-    // const lastCharIsOperator = calculate.lastCharIsOperator;
-
-    let memory = ref("");
+    const memory = ref("");
     let error = ref(false);
     let clearOnNextDigit = ref(false);
 
@@ -95,29 +92,20 @@ export default {
       });
     });
 
-    function clear() {
-      memory.value = "";
-      error.value = false;
-    }
-    const eraseLast = () => {
-      if (!memory.value.length) return;
+    // const isOperator = useCalculate.isOperator;
+    // const lastCharIsOperator = useCalculate.lastCharIsOperator;
+    // const isDigit = useCalculate.isDigit;
 
-      memory.value = memory.value.slice(0, memory.value.length - 1);
-      clearOnNextDigit.value = false;
-    };
-
-    const isOperator = (string) => {
+    function isOperator(string) {
       return OPERATORS.includes(string);
-    };
-
-    const lastCharIsOperator = (string) => {
+    }
+    function lastCharIsOperator(string) {
       const stringNormalized = string.replace(/\s/g, "");
       return isOperator(stringNormalized[stringNormalized.length - 1]);
-    };
-
-    const isDigit = (string) => {
+    }
+    function isDigit(string) {
       return DIGITS.includes(string);
-    };
+    }
 
     const addDigit = (digit) => {
       if (!isDigit(digit)) {
@@ -134,15 +122,27 @@ export default {
 
       clearOnNextDigit.value = false;
       memory.value += `${digit}`;
+      context.emit("calculatorValue", memory);
     };
 
     const calculateResult = () => {
-      // calculate.calculateResult();
-      // console.log(context);
-      context.emit("calculatorValue", memory);
-      clear();
+      context.emit("close");
+      // clear();
     };
 
+    const eraseLast = () => {
+      if (!memory.value.length) return;
+
+      memory.value = memory.value.slice(0, memory.value.length - 1);
+      context.emit("calculatorValue", memory);
+      clearOnNextDigit.value = false;
+    };
+
+    const clear = () => {
+      memory.value = "";
+      error.value = false;
+      context.emit("calculatorValue", memory);
+    };
     onBeforeUnmount(() => {
       keyboard.removeAllListeners();
     });

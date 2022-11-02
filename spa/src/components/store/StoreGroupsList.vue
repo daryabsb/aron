@@ -86,7 +86,7 @@ const loadProductGroups = async () => {
   try {
     const response = await productsGroupsAPI.getProductGroups();
     productGroups.value = response.data;
-    // console.log("response.data", response.data);
+
     return response.data;
   } catch (error) {
     console.log(error);
@@ -108,7 +108,6 @@ const selectedGroup = computed(() =>
   productGroups.value.find((group) => group.id === id.value)
 );
 
-console.log("selectedGroup", selectedGroup.value);
 const back = () => {
   id.value = null;
 };

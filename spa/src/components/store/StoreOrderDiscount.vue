@@ -67,8 +67,8 @@
             </div>
             <div class="flex justify-center relative mt-6 text-xl w-full">
               <input
-                id="cart-discount-input"
                 v-model="cartInputValue"
+                id="cart-discount-input"
                 type="text"
                 class="relative bg-inherit border-0 border-b-2 text-right pb-3 pr-10 items-center focus:outline-none focus:ring-0"
                 :class="
@@ -77,8 +77,9 @@
                     : 'opacity-100'
                 "
                 :disabled="tabID === 2 && item === null"
-                @input="addCartDiscount()"
               />
+
+              <!-- @input="addCartDiscount()" -->
               <label class="absolute ml-48 mt-2">
                 <span
                   class="text-aronium-white"
@@ -92,79 +93,88 @@
                 >
               </label>
             </div>
+            <keep-alive>
+              <NumericPad
+                @close="submitResults"
+                @calculator-value="discountValue"
+              />
+            </keep-alive>
           </div>
 
           <div
-            v-if="tabID === 2 && id === null"
+            v-if="tabID === 2 && selectedItem.id === null"
             class="text-xl font-light w-full h-full"
           >
             Please select an item to add Item discount
           </div>
-          <div v-if="tabID === 2 && id !== null">
-            <div v-for="item in items" :key="item.id">
-              <div v-if="item.id === id">
-                <div class="text-xl font-light w-full h-full">
-                  This is a discount for " {{ item.name }} "
-                  <div class="flex flex-col items-center">
-                    <div class="flex justify-center mt-4 w-full height-16">
-                      <button
-                        class="rounded-l-lg w-20 bg-inherit border border-aronium-500"
-                        :class="
-                          discountType === '%'
-                            ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
-                            : 'bg-inherit  border-aronium-500'
-                        "
-                        @click="toggleDiscountType('%')"
-                      >
-                        %
-                      </button>
-                      <button
-                        class="rounded-r-lg w-20 border"
-                        :class="
-                          discountType === '$'
-                            ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
-                            : 'bg-inherit  border-aronium-500'
-                        "
-                        @click="toggleDiscountType('$')"
-                      >
-                        $
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="w-full flex justify-center mt-6 text-xl">
-                    <input
-                      :id="id"
-                      v-model="itemInputValue"
-                      type="text"
-                      class="relative bg-inherit border-0 border-b-2 text-right pb-3 pr-10 items-center focus:outline-none focus:ring-0"
+          <div v-if="tabID === 2 && selectedItem.id !== null">
+            <div>
+              <div class="text-xl text-aronium-white font-light w-full h-full">
+                This is a discount for " {{ selectedItem.product.name }} "
+                <div class="flex flex-col items-center">
+                  <div class="flex justify-center mt-4 w-full height-16">
+                    <button
+                      class="rounded-l-lg w-20 bg-inherit border border-aronium-500"
                       :class="
-                        tabID === 2 && id === null
-                          ? 'opacity-50 text-opacity-50 select-none'
-                          : 'opacity-100'
+                        discountType === '%'
+                          ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
+                          : 'bg-inherit  border-aronium-500'
                       "
-                      :disabled="tabID === 2 && id === null"
-                      @input="addItemDiscount(id)"
-                    />
-                    <label class="absolute ml-48 mt-2">
-                      <span
-                        class="text-aronium-white"
-                        :class="
-                          tabID === 2 && id === null
-                            ? 'opacity-50 select-none'
-                            : 'opacity-100'
-                        "
-                        :disabled="tabID === 2 && item === null"
-                        >{{ discountType }}</span
-                      >
-                    </label>
+                      @click="toggleDiscountType('%')"
+                    >
+                      %
+                    </button>
+                    <button
+                      class="rounded-r-lg w-20 border"
+                      :class="
+                        discountType === '$'
+                          ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
+                          : 'bg-inherit  border-aronium-500'
+                      "
+                      @click="toggleDiscountType('$')"
+                    >
+                      $
+                    </button>
                   </div>
                 </div>
+
+                <div class="w-full flex justify-center mt-6 text-xl">
+                  <input
+                    :id="selectedItem.id"
+                    v-model="itemInputValue"
+                    type="text"
+                    class="relative bg-inherit border-0 border-b-2 text-right pb-3 pr-10 items-center focus:outline-none focus:ring-0"
+                    :class="
+                      tabID === 2 && selectedItem.id === null
+                        ? 'opacity-50 text-opacity-50 select-none'
+                        : 'opacity-100'
+                    "
+                    :disabled="tabID === 2 && selectedItem.id === null"
+                    @input="addItemDiscount(id)"
+                  />
+                  <label class="absolute ml-48 mt-2">
+                    <span
+                      class="text-aronium-white"
+                      :class="
+                        tabID === 2 && selectedItem.id === null
+                          ? 'opacity-50 select-none'
+                          : 'opacity-100'
+                      "
+                      :disabled="tabID === 2 && selectedItem.item === null"
+                      >{{ discountType }}</span
+                    >
+                  </label>
+                </div>
+
+                <NumericPad
+                  @close="submitResults"
+                  @calculator-value="discountValue"
+                />
               </div>
             </div>
           </div>
 
-          <NumericPad @calculatorValue="discountValue" />
+          <!-- <NumericPad @calculatorValue="discountValue" /> -->
         </div>
       </template>
       <template #button>
@@ -181,7 +191,7 @@
 </template>
 
 <script setup>
-import { ref, computed, defineProps, nextTick } from "vue";
+import { ref, computed, defineProps, defineEmits, nextTick } from "vue";
 import { useCalculate } from "@/composables/useCalculate";
 import {
   Dialog,
@@ -194,10 +204,11 @@ import { CheckIcon } from "@heroicons/vue/24/outline";
 import { usePos } from "@/stores/pos";
 import NumericPad from "@/components/shared/calculator/NnumericPad.vue";
 
-const props = defineProps({
-  id: { type: Number, default: null },
-  items: { type: Object, default: null },
-});
+// const props = defineProps({
+// id: { type: Number, default: null },
+// items: { type: Object, default: null },
+// });
+const emit = defineEmits(["close"]);
 
 import StoreOrderTopButtons from "@/components/store/StoreOrderTopButtons.vue";
 import Modal from "@/components/shared/Modal.vue";
@@ -210,7 +221,18 @@ const getTotalPrice = store.totalPrice;
 const activeNumber = ref(store.activeNumber);
 const useActiveOrder = ref(store.useActiveOrder);
 
-const tabID = ref(1);
+const selectedItem = computed(() =>
+  useActiveOrder.value.items.find((item) => item.isActive)
+);
+// const tabID = ref(1);
+const tabID = computed({
+  get() {
+    return selectedItem.value.id ? 2 : 1;
+  },
+  set(value) {
+    tabID.value = value;
+  },
+});
 const discountType = ref("%");
 const totalOrderDiscount = ref(0);
 const cartInputValue = ref(0);
@@ -229,12 +251,12 @@ const selectItemInputText = (id) => {
   itemDiscountInput.setSelectionRange(0, 3);
 };
 const toggleDiscountType = async (type) => {
-  cartInputValue.value = 0;
+  // cartInputValue.value = 0;
   discountType.value = type;
   // discount.value = "0";
-  await nextTick();
-  if (tabID.value === 1) selectCartInputText();
-  if (tabID.value === 2 && props.id !== null) selectItemInputText(props.id);
+  // await nextTick();
+  // if (tabID.value === 1) selectCartInputText();
+  // if (tabID.value === 2 && selectedItem.id !== null) selectItemInputText(selectedItem.id);
 };
 const cartDiscount = async () => {
   tabID.value = 1;
@@ -248,6 +270,10 @@ const itemDiscount = () => {
 const discountValue = (payload) => {
   if (tabID.value == 1) cartInputValue.value = payload.value;
   if (tabID.value == 2) itemInputValue.value = payload.value;
-  console.log("itemInputValue.value", payload.value);
+};
+
+const submitResults = () => {
+  // console.log("CONGRATULATIONS!!");
+  emit("close");
 };
 </script>

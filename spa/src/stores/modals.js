@@ -7,6 +7,7 @@ export const useModals = defineStore("modals", {
       searchModal: false,
       openPaymentModal: false,
       openCashModal: false,
+      openOrderDiscountModal: false,
     };
   },
   getters: {
@@ -18,6 +19,9 @@ export const useModals = defineStore("modals", {
     },
     isCashModal(state) {
       return computed(() => state.openCashModal);
+    },
+    isStoreOrderDiscount(state) {
+      return computed(() => state.openOrderDiscountModal);
     },
   },
 });

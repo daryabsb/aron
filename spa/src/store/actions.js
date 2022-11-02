@@ -38,12 +38,10 @@ import {
 const actions = {
   [FETCH_USER]: async (context) => {
     const user = await getUser();
-    // console.log(user.value);
     context.commit(COMMIT_USER, user);
   },
   [FETCH_PRODUCTS]: async (context) => {
     const products = await getProducts();
-    // console.log(user);
     context.commit(COMMIT_PRODUCTS, products);
   },
   [FETCH_CUSTOMERS]: async (context) => {
@@ -62,18 +60,13 @@ const actions = {
     const printerList = await getPrinterList();
     await context.commit(COMMIT_PRINTERS_LIST, printerList);
   },
-  // [FETCH_ALL_PRODUCT_GROUPS]: async (context) => {
-  //   const allProductsGroups = await getAllProductGroups();
 
-  //   await context.commit(COMMIT_ALL_PRODUCT_GROUPS, allProductsGroups);
-  // },
   [CREATE_PRODUCT_GROUP]: async (context, payload) => {
     const productGroup = await createProductGroup(payload);
     await context.commit(ADD_PRODUCT_GROUP, productGroup);
   },
   [CREATE_CART]: async (context) => {
     const order = {};
-    // order.number = uuid.v4();
     order.number = generateUID();
     order.discount = 0;
     order.discountType = 0;
@@ -81,7 +74,6 @@ const actions = {
     order.tax = 0;
     order.total = 0;
 
-    // console.log("ACTION ADD ACTIVE ORDER", order);
     await context.commit(ADD_ACTIVE_ORDER_NUMBER, order.number);
     await context.commit(ADD_ACTIVE_ORDER, order);
     await context.commit(SUBMIT_CART, order);
@@ -99,12 +91,9 @@ const actions = {
     context.commit(UPDATE_KEYWORD, keyword);
   },
   [UPDATE_CASH](context, amount) {
-    // console.log("amount-actions", amount);
-
     context.commit(ADD_CASH, amount);
   },
   [SUBMIT_ORDER](context) {
-    // console.log(payload);
     context.commit(SUBMIT);
   },
 };

@@ -294,7 +294,6 @@ export default {
         return;
       }
       if (discountType.value == "$") {
-        console.log(cartInputValue.value);
         let discount = parseInt(cartInputValue.value);
         totalOrderDiscount.value = discount;
         return;
@@ -314,8 +313,7 @@ export default {
     const itemInputValue = ref(0);
     const addItemDiscount = (id) => {
       if (!id) return;
-      // console.log("id", id);
-      // const itemIndex = perItemsDiscount.value.indexOf(item);.map(e => e.hello).indexOf('stevie')
+
       const itemIndex = perItemsDiscount.value
         .map((item) => item.id)
         .indexOf(id);
@@ -341,7 +339,6 @@ export default {
           let discount = parseInt(itemInputValue.value) / 100;
           item.discount += discount;
         }
-        console.log("itemIndex", itemIndex);
       }
     };
 

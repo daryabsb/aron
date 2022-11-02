@@ -134,8 +134,6 @@ export default {
 
     const keyword = ref("");
 
-    console.log("products", products);
-    console.log("products");
     const productGroups = computed(() =>
       store.productGroups.filter((g) => g.rank > 0)
     );
@@ -159,21 +157,4 @@ export default {
     };
   },
 };
-
-// products.value = response.data;
-// const groupsResponse = await fetch(
-// "http://127.0.0.1:8000/api/product/groups/"
-// );
-// productGroups.value = groupsResponse.data;
-
-// console.log(productGroups.value);
-// const filteredProducts = computed(() =>
-//   products.value.filter((p) => p.parent_group === openTab.value)
-// );
-// const tabs = [
-//   { name: "My Account", href: "#", current: true },
-//   { name: "Company", href: "#", current: false },
-//   { name: "Team Members", href: "#", current: false },
-//   { name: "Billing", hr, PosProductListef: "#", current: false },
-// ];
 </script>

@@ -81,8 +81,6 @@ export default {
       }
     };
 
-    // console.log("useGetProductGroups", useGetProductGroups);
-
     return {
       openTab,
       toggleTabs,

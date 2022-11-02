@@ -61,7 +61,6 @@ export default {
     const key = ref("");
     const navigateToPage = () => {
       // const url = `${baseUrl.slice(0, -3)}/${keyToLink}`;
-      console.log(key.value);
       if (key.value === "management") {
         router.push("/management");
       }

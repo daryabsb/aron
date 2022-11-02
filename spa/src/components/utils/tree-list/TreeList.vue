@@ -80,7 +80,6 @@ export default {
     let closed = ref(true);
 
     const toggleIcon = (id, e) => {
-      console.log(e);
       closed.value = !closed.value;
     };
 

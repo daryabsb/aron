@@ -28,7 +28,11 @@
         >" {{ useActiveOrder.number }} "</span
       > -->
       <template v-for="item in useActiveOrder.items" :key="item.id">
-        <order-item v-if="item" :item="item"></order-item>
+        <order-item
+          v-if="item"
+          :item="item"
+          @click="selectItem(item)"
+        ></order-item>
       </template>
     </div>
   </div>
@@ -40,11 +44,21 @@ import { usePos } from "@/stores/pos";
 import StoreOrderTopButtons from "@/components/store/StoreOrderTopButtons.vue";
 import OrderItem from "@/components/store/orders/OrderItem.vue";
 
+const id = ref(null);
+
 // const OrderItem = defineAsyncComponent(() =>
 //   import("@/components/store/orders/OrderItem.vue")
 // );
 const store = usePos();
 const activeNumber = ref(store.activeNumber);
 const useActiveOrder = ref(store.useActiveOrder);
-console.log(useActiveOrder.value);
+
+const selectItem = (itm) => {
+  for (let item of useActiveOrder.value.items) {
+    // if (!item.isActive) continue;
+    // if(item.id==itm.id) continue;
+    item.isActive = false;
+  }
+  itm.isActive = !itm.isActive;
+};
 </script>

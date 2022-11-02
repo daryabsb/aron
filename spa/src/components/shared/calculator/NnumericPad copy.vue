@@ -73,8 +73,6 @@ export default {
   setup: (props, context) => {
     const calculate = useCalculate();
     const calculateResult = () => {
-      // calculate.calculateResult();
-      // console.log(context);
       context.emit("calculatorValue", calculate.memory);
     };
     const keyboard = useKeyboard();

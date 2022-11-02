@@ -30,7 +30,6 @@ export const usePos = defineStore("pos", {
       };
       // order.number = uuid.v4();
       this.cart.push(order);
-      console.log(this.cart);
       this.changeActiveOrderNumber(number);
     },
     changeActiveOrderNumber(number) {
@@ -57,6 +56,7 @@ export const usePos = defineStore("pos", {
         discount,
         tax,
         price,
+        isActive: false,
       };
       const index = this.useOrderItemIndex(orderItem);
 
@@ -86,14 +86,11 @@ export const usePos = defineStore("pos", {
     getItemSubTotal(item) {
       item.price * item.quantity;
     },
-    // addCash: (state, amount) => (state.cash += amount || 0),
     addCash(amount) {
       this.cash += amount || 0;
-      // console.log("cash after-mutations", state.cash);
 
       this.updateChange();
       this.beep();
-      console.log(this.cash, amount);
     },
     clearCash() {
       this.cash = 0;
@@ -155,7 +152,6 @@ export const usePos = defineStore("pos", {
       return computed(() => state.moneys);
     },
     useActiveOrder: (state) => {
-      console.log(state.activeNumber);
       return computed(() =>
         state.cart.find((item) => item.number === state.activeNumber)
       );
@@ -170,7 +166,6 @@ export const usePos = defineStore("pos", {
       return computed(() => this.useActiveOrder.value.items.length !== 0);
     },
     subTotalBeforeTax() {
-      // console.log("!this.isActiveNumber.value", !this.isActiveNumber.value);
       if (!this.isActiveNumber.value) return 0;
       if (!this.isActiveOrderItems) return 0;
       return this.useActiveOrder.value.items.reduce(
@@ -181,7 +176,6 @@ export const usePos = defineStore("pos", {
     totalPrice() {
       if (!this.isActiveNumber.value) return 0;
       if (!this.isActiveOrderItems) return 0;
-      //   console.log("from totalPriceBeforeTax", this.subTotalBeforeTax.value);
 
       const total = this.subTotalBeforeTax + this.useActiveOrder.value.tax;
       this.useActiveOrder.value.total = total;

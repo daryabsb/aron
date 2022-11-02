@@ -59,7 +59,7 @@ const store = usePos();
 const totalBeforeTax = computed(() => store.subTotalBeforeTax);
 const total = computed(() => store.totalPrice);
 const totalTax = store.useActiveOrder.value.tax;
-console.log(totalTax);
+
 import { ArrowDownIcon, ArrowUpIcon } from "@heroicons/vue/20/solid";
 
 const stats = ref([

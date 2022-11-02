@@ -12,7 +12,6 @@ const activeGroup = ref(0);
 onMounted(fetchStore.fetchGroups);
 const filteredGroups = ref(fetchStore.filteredGroups);
 const submitItem = (item) => {
-  console.log(item);
   isOpen.value = item.id;
   activeGroup.value = item.id;
 };
@@ -21,9 +20,6 @@ const isOpen = ref(0);
 // TREE STUFF
 
 const root = ref(rootData);
-const nodeWasClicked = (node) => {
-  console.log(node.name);
-};
 
 // END TREE
 </script>

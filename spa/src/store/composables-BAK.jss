@@ -115,7 +115,6 @@ export const filteredProducts = computed(() => {
 
   const rg = keyword.value ? new RegExp(keyword.value, "gi") : null;
 
-  console.log(products.value.filter((p) => !rg || p.name.match(rg)));
   return tabProducts.value.filter((p) => !rg || p.name.match(rg));
 });
 
@@ -146,7 +145,6 @@ export const findCartIndex = (product) => {
   return store.getters.GET_CART_INDEX(product);
 };
 export const addDiscount = (payload) => {
-  console.log(payload.discount);
   store.commit(ADD_DISCOUNT, payload);
 };
 export const addToCarts = (product) => {
@@ -203,7 +201,6 @@ export const submit = () => store.dispatch(SUBMIT_ORDER);
 
 export const anyWindowFunction = (evt) => {
   // F keys event listener
-  console.log(evt);
   window.onkeydown = (evt) => {
     const getEvt = (key) => {
       key = key.toString();
@@ -212,23 +209,19 @@ export const anyWindowFunction = (evt) => {
 
       // myKeys.set("119", (openPaymentModal.value = !openPaymentModal.value));
       // myKeys.set("120", (openCashModal.value = !openCashModal.value));
-      console.log(myKeys.get(key) || "None");
     };
 
     getEvt(evt.keyCode);
-    // console.log(typeof evt.keyCode);
     return "119" || "Did not reach";
     // openModal(evt);
     // switch (evt.keyCode) {
     //   //ESC
     //   case 27:
     //     evt.preventDefault();
-    //     console.log("esc");
     //     break;
     //   //F1
     //   case 112:
     //     evt.preventDefault();
-    //     console.log("f1");
     //     break;
     //   default:
     //     return;

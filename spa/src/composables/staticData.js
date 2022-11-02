@@ -2,6 +2,8 @@ import { ref } from "vue";
 import dataLabels from "chartjs-plugin-datalabels";
 import { useModals } from "@/stores/modals";
 
+const store = useModals();
+
 export const sideBarNavItems = [
   {
     id: 1,
@@ -190,7 +192,7 @@ export const posHeaderItems = [
     title: "Discount",
     icon: "fa fa-percent",
     submit: (title, item) => {
-      console.log(title, item);
+      store.openOrderDiscountModal = true;
     },
   },
   {

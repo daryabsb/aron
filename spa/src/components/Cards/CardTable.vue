@@ -235,7 +235,6 @@ export default {
         comment: "",
       };
       orderItems.value.push(orderItem);
-      console.log(orderItems.value);
     };
 
     return {

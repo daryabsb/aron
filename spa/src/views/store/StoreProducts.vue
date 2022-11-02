@@ -12,7 +12,10 @@
       @cash-out="cashOut"
     ></payment-popper>
     <search-panel v-if="isSearchModal" @close="searchModal"></search-panel>
-    <store-order-discount></store-order-discount>
+    <store-order-discount
+      v-if="isStoreOrderDiscount"
+      @close="orderDiscountModal"
+    ></store-order-discount>
     <!-- <header-search-popper
       v-if="isSearchModal"
       @close="searchModal"
@@ -36,7 +39,6 @@ import StoreOrderDiscount from "@/components/store/StoreOrderDiscount.vue";
 const store = useModals();
 
 window.onkeydown = (evt) => {
-  console.log(evt.key);
   const getEvt = (key) => {
     const F8 = "F8";
     const F9 = "F9";
@@ -57,8 +59,6 @@ window.onkeydown = (evt) => {
         "none";
       },
     };
-
-    // console.log(myKeys[key]);
     return myKeys[key] || myKeys[defaultKey];
   };
   return getEvt(evt.key)();
@@ -81,6 +81,7 @@ export default {
     const isSearchModal = ref(store.isSearchModal);
     const isPaymentModal = ref(store.isPaymentModal);
     const isCashModal = ref(store.isCashModal);
+    const isStoreOrderDiscount = ref(store.isStoreOrderDiscount);
     const clearCash = pos.clearCash;
 
     const searchModal = () => {
@@ -89,6 +90,10 @@ export default {
 
     const cashModal = () => {
       store.openCashModal = false;
+    };
+
+    const orderDiscountModal = () => {
+      store.openOrderDiscountModal = false;
     };
 
     const paymentModal = () => {
@@ -103,6 +108,8 @@ export default {
     return {
       searchModal,
       isSearchModal,
+      isStoreOrderDiscount,
+      orderDiscountModal,
       cashModal,
       isCashModal,
       isPaymentModal,

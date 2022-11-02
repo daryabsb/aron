@@ -165,8 +165,6 @@ export default {
       if (key === 11) key = 0;
       // number.value = (number.value + key).slice(0, maxLength.value);
       number.value = (number.value + key).slice(0, maxLength.value);
-
-      console.log(number.value);
     };
     const onDelete = () => {
       number.value = number.value.slice(0, number.value.length - 1);
@@ -197,7 +195,6 @@ export default {
 
       const titleBefore = document.title;
       const printArea = document.getElementById("print-area");
-      console.log("receipt", printArea);
 
       printArea.innerHTML = receiptContent.innerHTML + printArea.innerHTML;
       document.title = receiptNo;

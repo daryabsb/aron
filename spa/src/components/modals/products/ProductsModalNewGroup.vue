@@ -76,7 +76,6 @@ export default {
     const groupName = ref("");
     const parentId = ref(0);
     const groupMaps = ref([]);
-    console.log("props.moduleNAme", props.model);
     const groupNames = Object.entries(useGetProductGroups.value).forEach(
       (group) => {
         // let el = {};

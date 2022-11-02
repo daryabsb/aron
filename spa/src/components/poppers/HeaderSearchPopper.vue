@@ -22,7 +22,6 @@ export default {
     const cart = store.cart;
     const cash = store.useCash;
     const change = store.useChange;
-    console.log("change", change);
     const isShowItems = ref(true);
     const moneys = store.useMoneys;
     const priceFormat = store.priceFormat;

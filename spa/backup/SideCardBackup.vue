@@ -125,7 +125,6 @@ import useGetProductGroups from "@/composables/useGetProductGroups";
 export default {
   setup() {
     const searchText = ref("");
-    console.log(useGetProductGroups.value);
     const data = ref([
       {
         id: 1,

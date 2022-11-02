@@ -105,7 +105,6 @@ import PaymentPopper from "@/components/poppers/PaymentPopper.vue";
 // };
 
 window.onkeydown = (evt) => {
-  // console.log(evt.key);
   const getEvt = (key) => {
     const F8 = "F8";
     const F9 = "F9";
@@ -124,7 +123,6 @@ window.onkeydown = (evt) => {
       },
     };
 
-    // console.log(myKeys[key]);
     return myKeys[key] || myKeys[defaultKey];
   };
   return getEvt(evt.key)();
@@ -166,7 +164,6 @@ export default {
 
     const mods = useModals();
     const isSearchModal = ref(mods.isSearchModal);
-    console.log("searchModal", isSearchModal);
 
     // GETTERS from COMPOSABLES
     const cart = useCart;

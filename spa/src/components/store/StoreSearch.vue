@@ -11,8 +11,6 @@ const memoryOptions = [
 
 const mem = ref(memoryOptions[0]);
 
-console.log(mem.value);
-
 const keyword = ref("");
 </script>
 <template>

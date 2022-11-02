@@ -36,11 +36,7 @@ export const usePos = () => {
   const keyword = computed(() => store.getters.GET_KEYWORD);
   const products = computed(() => store.getters.GET_PRODUCTS);
   const filteredProducts = computed(() => {
-    // const store = useStore();
-
     const rg = keyword.value ? new RegExp(keyword.value, "gi") : null;
-
-    console.log(products.value.filter((p) => !rg || p.name.match(rg)));
     return tabProducts.value.filter((p) => !rg || p.name.match(rg));
   });
 
@@ -69,7 +65,6 @@ export const usePos = () => {
     return store.getters.GET_CART_INDEX(product);
   };
   const addDiscount = (payload) => {
-    console.log(payload.discount);
     store.commit(ADD_DISCOUNT, payload);
   };
 
@@ -79,7 +74,6 @@ export const usePos = () => {
     return computed(() => store.getters.GET_TOTAL_PRICE);
   };
   const getItemTotalPrice = (item) => {
-    console.log("getItemTotalPrice", item);
     let discount;
     if (item.discountType === "%") {
       discount = item.price * item.qty * (item.discount / 100);

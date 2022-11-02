@@ -127,9 +127,9 @@
             <span class="text-center xl:w-20">Payment</span>
           </div>
         </li>
-        {{
+        <!-- {{
           activeOrder.items.length === 0
-        }}
+        }} -->
         <li
           :disabled="activeOrder.items.length === 0"
           class="font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0 disabled:opacity-30 disabled:hover:text-aronium-600 disabled:cursor-auto"
@@ -187,16 +187,18 @@ export default {
     };
     const paymentModal = () => (store.openPaymentModal = true);
     const cashModal = () => (store.openCashModal = true);
-    const openModal = (e) => {
-      console.log("e.keyCode: ", e.keyCode);
-    };
+    const orderDiscountModal = () => (store.openOrderDiscountModal = true);
+    // const openModal = (e) => {
+    //   console.log("e.keyCode: ", e.keyCode);
+    // };
     const saveSale = () => console.log("Sale saved!");
     return {
       posHeaderItems,
       paymentModal,
       cashModal,
+      orderDiscountModal,
       broadcastFunction,
-      openModal,
+      // openModal,
       saveSale,
       activeOrder,
       cart,

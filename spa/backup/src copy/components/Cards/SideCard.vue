@@ -108,9 +108,7 @@ export default {
 
     const closeId = computed(() =>
       toggleref.value === idToOpen.value
-        ? // ? console.log(true)
-          // : console.log(false)
-          ["fa", "fa-plus", "bg-pink-500"]
+        ? ["fa", "fa-plus", "bg-pink-500"]
         : ["fa", "fa-minus", "bg-gray-700"]
     );
 

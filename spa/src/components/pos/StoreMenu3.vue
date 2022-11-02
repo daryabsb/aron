@@ -31,17 +31,16 @@ export default {
     const activeGroup = ref(0);
 
     const submitItem = (item) => {
-      console.log(item);
       activeGroup.value = item.id;
     };
 
-    onUpdated(() => {
-      console.log("updating: " + activeGroup.value);
-    });
+    // onUpdated(() => {
+    //   console.log("updating: " + activeGroup.value);
+    // });
 
-    const nodeWasClicked = (node) => {
-      console.log(node.name);
-    };
+    // const nodeWasClicked = (node) => {
+    //   console.log(node.name);
+    // };
 
     const filteredGroups = ref(fetchStore.filteredGroups);
     const childGroups = ref(fetchStore.childGroups);

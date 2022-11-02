@@ -21,9 +21,7 @@ export default {
   emits: ["open"],
   setup(props, context) {
     const broadcastFunction = (item) => {
-      // console.log(productsMenu);
       item.submit(context, item.title);
-      // emit("open", item.title);
     };
 
     return { productsMenu, broadcastFunction, context };
