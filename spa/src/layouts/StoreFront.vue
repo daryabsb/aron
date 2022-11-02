@@ -56,7 +56,7 @@ import {
   openPaymentModal,
 } from "@/store/composables";
 
-import StoreHeader from "@/components/Navbars/StoreHeader.vue";
+import StoreHeader from "@/components/Headers/StoreHeader.vue";
 import StoreOrder from "@/components/store/StoreOrder.vue";
 import StoreSearch from "@/components/store/StoreSearch.vue";
 import StoreTotalsCalculations from "@/components/store/StoreTotalsCalculations.vue";

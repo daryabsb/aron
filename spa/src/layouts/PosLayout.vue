@@ -63,7 +63,7 @@ import { usePos } from "@/stores/pos";
 import { useModals } from "@/stores/modals";
 
 // import ModalCalculator from "@/components/modals/ModalCalculator.vue";
-import PosHeader from "@/components/Navbars/PosHeader.vue";
+import PosHeader from "@/components/Headers/PosHeader.vue";
 import PosRightNav from "@/components/pos/PosRightNav.vue";
 import StoreOrder from "@/components/pos/StoreOrder.vue";
 // import ModalFirstTime from "@/components/temporary/ModalFirstTime.vue";

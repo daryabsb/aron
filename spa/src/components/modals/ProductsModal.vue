@@ -1,5 +1,5 @@
 <template>
-  <modal-small>
+  <modal>
     <template #modal-content>
       <products-modal-new-group
         v-if="modalType === 'New Group'"
@@ -10,11 +10,12 @@
         @close="close"
       ></products-modal-new-product>
     </template>
-  </modal-small>
+  </modal>
 </template>
 <script>
 import { onMounted } from "vue";
-import ModalSmall from "@/components/shared/ModalSmall.vue";
+import Modal from "@/components/shared/Modal.vue";
+// import ModalSmall from "@/components/shared/ModalSmall.vue";
 import ProductsModalNewGroup from "@/components/modals/products/ProductsModalNewGroup.vue";
 import ProductsModalNewProduct from "@/components/modals/products/ProductsModalNewProduct.vue";
 
@@ -23,7 +24,8 @@ import useGetProductGroups from "@/composables/useGetProductGroups";
 
 export default {
   components: {
-    ModalSmall,
+    Modal,
+    // ModalSmall,
     ProductsModalNewGroup,
     ProductsModalNewProduct,
   },

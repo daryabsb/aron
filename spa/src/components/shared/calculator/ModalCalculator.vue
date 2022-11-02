@@ -1,12 +1,12 @@
 <template>
-  <modal-small>
+  <modal>
     <template #modal-content>
       <div class="relative flex items-center justify-center">
         <div class="w-screen h-screen bg-aronium-800 bg-opacity-50">
           <div
             class="w-fit h-fit mx-auto my-52 overflow-hidden z-10 shadow-lg shadow-transparent bg-aronium-800 border"
           >
-            {{ type }}DaRYA
+            {{ type }}
             <Grid
               rows="4"
               cols="6"
@@ -63,7 +63,7 @@
         </div>
       </div>
     </template>
-  </modal-small>
+  </modal>
 </template>
 <script>
 import { onBeforeUnmount, onMounted } from "vue";
@@ -79,9 +79,10 @@ import {
   CLEAR_KEYS,
   ERASE_KEYS,
 } from "@/store/constants";
-import ModalSmall from "@/components/shared/ModalSmall.vue";
+import Modal from "@/components/shared/Modal.vue";
+// import ModalSmall from "@/components/shared/ModalSmall.vue";
 export default {
-  components: { ModalSmall, Button, Screen, Grid },
+  components: { Modal, Button, Screen, Grid },
   props: {
     type: { type: String, required: true },
   },

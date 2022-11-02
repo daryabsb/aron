@@ -1,5 +1,5 @@
 <template>
-  <modal-small>
+  <modal>
     <template #modal-content>
       <div
         class="glass absolute top-0 right-0 w-1/4 h-screen py-12 items-start text-zinc-100 p-8 z-50 border border-aronium-600 bg-aronium-800 shadow-2xl"
@@ -118,7 +118,7 @@
         </div>
       </div>
     </template>
-  </modal-small>
+  </modal>
 </template>
 
 <script>
@@ -133,7 +133,8 @@ import {
 // COMPOSABLES
 import { productsCreateTabsTitles as tabsTitles } from "@/composables/staticData";
 
-import ModalSmall from "@/components/shared/ModalSmall.vue";
+import Modal from "@/components/shared/Modal.vue";
+// import ModalSmall from "@/components/shared/ModalSmall.vue";
 
 // PRODUCTS FORMS
 import ProductsDetailsForm from "@/components/modals/products/ProductsDetailsForm.vue";
@@ -145,7 +146,8 @@ import ProductsImageAndColorForm from "@/components/modals/products/ProductsImag
 
 export default {
   components: {
-    ModalSmall,
+    Modal,
+    // ModalSmall,
 
     ProductsDetailsForm,
     ProductsPricesAndTaxesForm,

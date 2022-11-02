@@ -1,5 +1,5 @@
 <template>
-  <modal-small>
+  <modal>
     <template #modal-content>
       <div
         class="absolute top-0 right-0 w-1/4 h-screen py-12 items-start text-zinc-100 p-8 z-50 bg-zinc-900 shadow-2xl"
@@ -58,18 +58,21 @@
         </div>
       </div>
     </template>
-  </modal-small>
+  </modal>
 </template>
 
 <script>
 import { ref } from "vue";
 import useGetProductGroups from "@/composables/useGetProductGroups";
-import ModalSmall from "@/components/shared/ModalSmall.vue";
+import Modal from "@/components/shared/Modal.vue";
+
+// import ModalSmall from "@/components/shared/ModalSmall.vue";
 import { addNewProductGroup } from "@/store/composables";
 
 export default {
   components: {
-    ModalSmall,
+    Modal,
+    // ModalSmall,
   },
   props: {},
   setup(props, { emit }) {

@@ -14,8 +14,7 @@
     <div
       class="row-start-2 row-span-10 col-start-1 col-span-1 border border-aronium-600"
     >
-      <management-sidebar v-if="fullSideBar"></management-sidebar>
-      <management-sidebar-refactor v-else></management-sidebar-refactor>
+      <management-sidebar></management-sidebar>
     </div>
     <div class="row-start-2 row-span-9 col-start-2 col-span-7">
       <router-view></router-view>
@@ -30,13 +29,11 @@
 import { ref } from "vue";
 import ManagementNavbar from "@/components/Navbars/ManagementNavbar.vue";
 import ManagementSidebar from "@/components/Sidebar/ManagementSidebar.vue";
-import ManagementSidebarRefactor from "@/components/Sidebar/ManagementSidebarRefactor.vue";
 import ManagementFooter from "@/components/Footers/ManagementFooter.vue";
 export default {
   components: {
     ManagementNavbar,
     ManagementSidebar,
-    ManagementSidebarRefactor,
     ManagementFooter,
   },
   setup() {

@@ -26,37 +26,15 @@
         </div>
       </div>
     </div>
-    <!-- <modal-calculator
-      v-if="isUsingDefaultQuantity"
-      type="Quantity"
-      @close="addQuantity, qty"
-    ></modal-calculator>
-    <modal-calculator
-      v-if="isPriceChangeAllowed"
-      type="Price"
-      @close="addPrice, price"
-    ></modal-calculator> -->
-    <!-- <div
-      v-if="!isUsingDefaultQuantity"
-      class="fixed w-96 h-56 bg-aronium-800 border border-aronium-500 p-3 mx-auto my-auto z-50"
-    >
-      <div class="flex flex-col justify-center items center w-full h-full">
-        <input id="" v-model="quantity" type="text" name="" />
-        <button @click="addQuantiy">Add</button>
-      </div>
-    </div> -->
   </div>
 </template>
 
 <script>
-import { ref, nextTick, reactive } from "vue";
+import { ref } from "vue";
 import { priceFormat } from "@/store/composables";
 import { usePos } from "@/stores/pos";
-import ModalCalculator from "@/components/modals/ModalCalculator.vue";
 export default {
-  components: {
-    ModalCalculator,
-  },
+  components: {},
   props: {
     product: {
       type: Object,

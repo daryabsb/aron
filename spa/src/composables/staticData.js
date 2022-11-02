@@ -49,7 +49,7 @@ export const productsMenu = [
     title: "Refresh",
     icon: " fa-solid fa-rotate fa-2x",
     submit: (title, item) => {
-      console.log(title, item);
+      // console.log(title, item);
       location.reload();
     },
   },
@@ -67,7 +67,7 @@ export const productsMenu = [
     title: "Edit Group",
     icon: "fa-solid fa-pen-to-square fa-2x",
     submit: (title, item) => {
-      console.log(title, item);
+      // console.log(title, item);
     },
   },
   {
@@ -75,7 +75,7 @@ export const productsMenu = [
     title: "Delete Group",
     icon: "fa fa-folder-minus fa-2x",
     submit: (title, item) => {
-      console.log(title, item);
+      // console.log(title, item);
     },
   },
   {
@@ -91,7 +91,7 @@ export const productsMenu = [
     title: "Edit Prod.",
     icon: "fa fa-pen fa-2x",
     submit: (title, item) => {
-      console.log(title, item);
+      // console.log(title, item);
     },
   },
   {
@@ -99,7 +99,7 @@ export const productsMenu = [
     title: "Delete Prod.",
     icon: "fa fa-trash fa-2x",
     submit: (title, item) => {
-      console.log(title, item);
+      // console.log(title, item);
     },
   },
   {
@@ -107,7 +107,7 @@ export const productsMenu = [
     title: "Print",
     icon: "fa fa-print fa-2x",
     submit: (title, item) => {
-      console.log(title, item);
+      // console.log(title, item);
     },
   },
   {
@@ -115,7 +115,7 @@ export const productsMenu = [
     title: "Save Pdf",
     icon: "fa fa-file-pdf fa-2x",
     submit: (title, item) => {
-      console.log(title, item);
+      // console.log(title, item);
     },
   },
   {
@@ -123,7 +123,7 @@ export const productsMenu = [
     title: "Price Tags",
     icon: "fa-solid fa-hashtag fa-2x",
     submit: (title, item) => {
-      console.log(title, item);
+      // console.log(title, item);
     },
   },
   {
@@ -131,7 +131,7 @@ export const productsMenu = [
     title: "Sorting",
     icon: "fa fa-arrow-down-wide-short fa-2x",
     submit: (title, item) => {
-      console.log(title, item);
+      // console.log(title, item);
     },
   },
   {
@@ -139,7 +139,7 @@ export const productsMenu = [
     title: "mov.avg.price",
     icon: "fa fa-money-bill-trend-up fa-2x",
     submit: (title, item) => {
-      console.log(title, item);
+      // console.log(title, item);
     },
   },
   {
@@ -147,7 +147,7 @@ export const productsMenu = [
     title: "Import",
     icon: "fa fa-arrow-down fa-2x",
     submit: (title, item) => {
-      console.log(title, item);
+      // console.log(title, item);
     },
   },
   {
@@ -155,7 +155,7 @@ export const productsMenu = [
     title: "Export",
     icon: "fa fa-arrow-up fa-2x",
     submit: (title, item) => {
-      console.log(title, item);
+      // console.log(title, item);
     },
   },
   {
@@ -163,7 +163,7 @@ export const productsMenu = [
     title: "Help",
     icon: "fa fa-circle-question fa-2x",
     submit: (title, item) => {
-      console.log(title, item);
+      // console.log(title, item);
     },
   },
 ];
@@ -200,7 +200,7 @@ export const posHeaderItems = [
     title: "New sale",
     icon: "fa fa-plus",
     submit: (title, item) => {
-      console.log(title, item);
+      // console.log(title, item);
     },
   },
   {

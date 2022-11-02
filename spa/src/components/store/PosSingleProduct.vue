@@ -65,7 +65,7 @@
 import { ref, nextTick, reactive } from "vue";
 import { priceFormat } from "@/store/composables";
 import { usePos } from "@/stores/pos";
-import ModalCalculator from "@/components/modals/ModalCalculator.vue";
+import ModalCalculator from "@/components/shared/calculator/ModalCalculator.vue";
 export default {
   components: {
     ModalCalculator,

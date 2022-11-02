@@ -62,14 +62,11 @@
 </template>
 
 <script>
-import { ref, nextTick, reactive } from "vue";
+import { ref } from "vue";
 import { priceFormat } from "@/store/composables";
 import { usePos } from "@/stores/pos";
-import ModalCalculator from "@/components/modals/ModalCalculator.vue";
 export default {
-  components: {
-    ModalCalculator,
-  },
+  components: {},
   props: {
     product: {
       type: Object,
