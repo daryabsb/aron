@@ -10,6 +10,7 @@
       <management-navbar />
       <!-- Sidebar -->
     </div>
+    <!-- <products-modal></products-modal> -->
 
     <div
       class="row-start-2 row-span-10 col-start-1 col-span-1 border border-aronium-600"
@@ -27,11 +28,14 @@
 </template>
 <script>
 import { ref } from "vue";
+
 import ManagementNavbar from "@/components/Navbars/ManagementNavbar.vue";
 import ManagementSidebar from "@/components/Sidebar/ManagementSidebar.vue";
 import ManagementFooter from "@/components/Footers/ManagementFooter.vue";
+import ProductsModal from "@/components/modals/ProductsModal.vue";
 export default {
   components: {
+    ProductsModal,
     ManagementNavbar,
     ManagementSidebar,
     ManagementFooter,
@@ -39,8 +43,11 @@ export default {
   setup() {
     const fullSideBar = ref(true);
 
+    const open = ref(true);
+
     return {
       fullSideBar,
+      open,
     };
   },
 };

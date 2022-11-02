@@ -1,5 +1,5 @@
 <template>
-  <TransitionRoot as="template" :show="props.open">
+  <TransitionRoot as="template" :show="open">
     <Dialog as="div" class="relative z-10" @close="closePanel">
       <div class="fixed inset-0" />
 
@@ -23,9 +23,9 @@
                 >
                   <div class="px-4 sm:px-6">
                     <div class="flex items-start justify-between">
-                      <DialogTitle class="text-lg font-medium text-gray-900">{{
-                        modalType
-                      }}</DialogTitle>
+                      <DialogTitle class="text-lg font-medium text-gray-900"
+                        >Panel title</DialogTitle
+                      >
                       <div class="ml-3 flex h-7 items-center">
                         <button
                           type="button"
@@ -59,7 +59,7 @@
 </template>
 
 <script setup>
-import { ref, defineEmits, defineProps } from "vue";
+import { ref, defineEmits } from "vue";
 import {
   Dialog,
   DialogPanel,
@@ -68,27 +68,9 @@ import {
   TransitionRoot,
 } from "@headlessui/vue";
 import { XMarkIcon } from "@heroicons/vue/24/outline";
-import ProductsModalNewGroup from "@/components/modals/products/ProductsModalNewGroup.vue";
-import ProductsModalNewProduct from "@/components/modals/products/ProductsModalNewProduct.vue";
+const open = ref(true);
 
-import { useFetchProductGroupsDispatch } from "@/store/composables";
-import useGetProductGroups from "@/composables/useGetProductGroups";
-
-const props = defineProps({
-  modalType: {
-    type: String,
-    required: true,
-  },
-  open: {
-    type: Boolean,
-    defaule: false,
-  },
-});
-
-// const open = ref(props.openPanel);
 const emit = defineEmits(["close"]);
-
-useFetchProductGroupsDispatch();
 
 const closePanel = () => {
   emit("close");

@@ -1,8 +1,8 @@
 <template>
   <div class="bg-aronium-800 h-full w-full">
     <products-modal
-      v-if="closeModal"
       :modal-type="modalDataModule"
+      :open="closeModal"
       @close="close"
     ></products-modal>
     <!-- <aronium-modal v-if="closeModal" @close="close"></aronium-modal> -->
@@ -22,10 +22,13 @@
         </div>
       </div>
     </div>
+    <!-- <SideModal></SideModal> -->
   </div>
 </template>
 <script>
 import { ref, onMounted } from "vue";
+
+// import SideModal from "@/components/shared/Modal.vue";
 
 import ProductsModal from "@/components/modals/ProductsModal.vue";
 // import AroniumControlCenter from "@/components/shared/AroniumControlCenter.vue";
@@ -40,17 +43,22 @@ import useGetProductGroups from "@/composables/useGetProductGroups";
 export default {
   name: "ProductsManagementView",
   components: {
+    // SideModal,
     ProductsHeader,
     ProductsSideCard,
     ProductsManagement,
     ProductsModal,
+
     // AroniumControlCenter,
   },
   setup() {
     onMounted(useFetchProductGroupsDispatch);
     const closeModal = ref(false);
     const modalDataModule = ref("");
-    const close = () => (closeModal.value = false);
+    const close = () => {
+      closeModal.value = false;
+      console.log("close called");
+    };
     const open = (moduleName) => {
       modalDataModule.value = moduleName;
 
