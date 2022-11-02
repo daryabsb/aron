@@ -1,18 +1,6 @@
 <template>
-  <div
-    class="glass w-1/4 h-screen py-12 items-start text-zinc-100 p-8 z-50 border border-aronium-600 bg-aronium-800 shadow-2xl"
-  >
-    Darya
+  <div class="glass h-full py-12 items-start text-zinc-100">
     <div class="text-left">
-      <div class="flex flex-nowrap justify-between">
-        <h3 class="text-lg mb-8">New Product</h3>
-        <span>
-          <i
-            class="fa fa-arrow-right cursor-pointer text-white text-xl font-bold pr-6"
-            @click="$emit('close')"
-          ></i>
-        </span>
-      </div>
       <!-- TABS PRODUCT CREATE -->
       <div class="h-16 grid grid-rows-3 grid-cols-1 relative">
         <div

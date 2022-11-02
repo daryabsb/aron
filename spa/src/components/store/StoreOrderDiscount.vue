@@ -225,14 +225,7 @@ const selectedItem = computed(() =>
   useActiveOrder.value.items.find((item) => item.isActive)
 );
 // const tabID = ref(1);
-const tabID = computed({
-  get() {
-    return selectedItem.value.id ? 2 : 1;
-  },
-  set(value) {
-    tabID.value = value;
-  },
-});
+const tabID = computed(() => (selectedItem.value ? 2 : 1));
 const discountType = ref("%");
 const totalOrderDiscount = ref(0);
 const cartInputValue = ref(0);

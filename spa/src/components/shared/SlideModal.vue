@@ -1,5 +1,5 @@
 <template>
-  <TransitionRoot as="template" :show="open">
+  <TransitionRoot as="template" :show="props.open">
     <Dialog as="div" class="relative z-10" @close="closePanel">
       <div class="fixed inset-0" />
 
@@ -17,14 +17,18 @@
               leave-from="translate-x-0"
               leave-to="translate-x-full"
             >
-              <DialogPanel class="pointer-events-auto w-screen max-w-md">
+              <DialogPanel
+                class="pointer-events-auto w-screen"
+                :class="`max-w-${props.size}`"
+              >
                 <div
-                  class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl"
+                  class="flex h-full flex-col overflow-y-scroll bg-aronium-900 border-l border-aronium-500 py-6 shadow-xl"
                 >
                   <div class="px-4 sm:px-6">
                     <div class="flex items-start justify-between">
-                      <DialogTitle class="text-lg font-medium text-gray-900"
-                        >Panel title</DialogTitle
+                      <DialogTitle
+                        class="text-lg font-medium text-aronium-white"
+                        ><slot name="title">Panel title</slot></DialogTitle
                       >
                       <div class="ml-3 flex h-7 items-center">
                         <button
@@ -41,10 +45,12 @@
                   <div class="relative mt-6 flex-1 px-4 sm:px-6">
                     <!-- Replace with your content -->
                     <div class="absolute inset-0 px-4 sm:px-6">
-                      <div
-                        class="h-full border-2 border-dashed border-gray-200"
-                        aria-hidden="true"
-                      />
+                      <slot name="content">
+                        <div
+                          class="h-full border-2 border-dashed border-gray-200"
+                          aria-hidden="true"
+                        />
+                      </slot>
                     </div>
                     <!-- /End replace -->
                   </div>
@@ -59,7 +65,7 @@
 </template>
 
 <script setup>
-import { ref, defineEmits } from "vue";
+import { ref, defineEmits, defineProps } from "vue";
 import {
   Dialog,
   DialogPanel,
@@ -69,6 +75,17 @@ import {
 } from "@headlessui/vue";
 import { XMarkIcon } from "@heroicons/vue/24/outline";
 const open = ref(true);
+
+const props = defineProps({
+  open: {
+    type: Boolean,
+    defaule: false,
+  },
+  size: {
+    type: String,
+    default: "md,",
+  },
+});
 
 const emit = defineEmits(["close"]);
 
