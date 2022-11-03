@@ -54,6 +54,7 @@ export const usePos = defineStore("pos", {
         product,
         quantity,
         discount,
+        discountType: "%",
         tax,
         price,
         isActive: false,

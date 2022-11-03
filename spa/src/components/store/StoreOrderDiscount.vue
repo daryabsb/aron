@@ -2,31 +2,44 @@
   <div>
     <Modal size="md">
       <template #title>
-        <div
-          class="flex justify-center items-end w-full h-12 border-b border-aronium-500"
-        >
-          <button
-            class="h-12 text-lg mx-2 px-6 border-b-2"
-            :class="
-              tabID === 1
-                ? 'text-aronium-sky  border-aronium-sky'
-                : 'text-aronium-white border-transparent'
-            "
-            @click="cartDiscount"
-          >
-            Cart discount
-          </button>
-          <button
-            class="h-12 text-lg mx-2 px-6 border-b-2"
-            :class="
-              tabID === 2
-                ? 'text-aronium-sky  border-aronium-sky'
-                : 'text-aronium-white border-transparent'
-            "
-            @click="itemDiscount"
-          >
-            Item discount
-          </button>
+        <div>
+          <div class="sm:hidden">
+            <label for="tabs" class="sr-only">Select a tab</label>
+            <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
+            <select
+              id="tabs"
+              name="tabs"
+              class="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+            >
+              <option
+                v-for="tab in tabs"
+                :key="tab.id"
+                :selected="tab.current"
+                >{{ tab.name }}</option
+              >
+            </select>
+          </div>
+          <div class="hidden sm:block">
+            <div class="border-b border-aronium-500">
+              <nav
+                class="-mb-px flex justify-center space-x-12"
+                aria-label="Tabs"
+              >
+                <span
+                  v-for="tab in tabs"
+                  :key="tab.id"
+                  :class="[
+                    tab.current
+                      ? 'border-pink-700 text-pink-700'
+                      : 'border-transparent text-aronium-white hover:text-aronium-300 hover:border-aronium-300',
+                    'whitespace-nowrap py-4 px-1 border-b font-normal text-md cursor-pointer',
+                  ]"
+                  @click="toggleTab(tab.id)"
+                  >{{ tab.name }}</span
+                >
+              </nav>
+            </div>
+          </div>
         </div>
       </template>
       <template #content>
@@ -34,145 +47,13 @@
           <div class="p-5">
             <img src="/media/icons/cart.svg" class="w-16" alt="cart-icon" />
           </div>
-          <div
-            v-if="tabID === 1"
-            class="text-xl text-aronium-white font-light w-full h-full"
-          >
-            Applly cart discount
-            <div class="flex flex-col items-center">
-              <div class="flex justify-center mt-4 w-full height-16">
-                <button
-                  class="rounded-l-lg w-20 bg-inherit border border-aronium-500"
-                  :class="
-                    discountType === '%'
-                      ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
-                      : 'bg-inherit  border-aronium-500'
-                  "
-                  @click="toggleDiscountType('%')"
-                >
-                  %
-                </button>
-                <button
-                  class="rounded-r-lg w-20 border"
-                  :class="
-                    discountType === '$'
-                      ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
-                      : 'bg-inherit  border-aronium-500'
-                  "
-                  @click="toggleDiscountType('$')"
-                >
-                  $
-                </button>
-              </div>
-            </div>
-            <div class="flex justify-center relative mt-6 text-xl w-full">
-              <input
-                v-model="cartInputValue"
-                id="cart-discount-input"
-                type="text"
-                class="relative bg-inherit border-0 border-b-2 text-right pb-3 pr-10 items-center focus:outline-none focus:ring-0"
-                :class="
-                  tabID === 2 && item === null
-                    ? 'opacity-50 text-opacity-50 select-none'
-                    : 'opacity-100'
-                "
-                :disabled="tabID === 2 && item === null"
-              />
-
-              <!-- @input="addCartDiscount()" -->
-              <label class="absolute ml-48 mt-2">
-                <span
-                  class="text-aronium-white"
-                  :class="
-                    tabID === 2 && item === null
-                      ? 'opacity-50 select-none'
-                      : 'opacity-100'
-                  "
-                  :disabled="tabID === 2 && item === null"
-                  >{{ discountType }}</span
-                >
-              </label>
-            </div>
-            <keep-alive>
-              <NumericPad
-                @close="submitResults"
-                @calculator-value="discountValue"
-              />
-            </keep-alive>
-          </div>
-
-          <div
-            v-if="tabID === 2 && selectedItem.id === null"
-            class="text-xl font-light w-full h-full"
-          >
-            Please select an item to add Item discount
-          </div>
-          <div v-if="tabID === 2 && selectedItem.id !== null">
-            <div>
-              <div class="text-xl text-aronium-white font-light w-full h-full">
-                This is a discount for " {{ selectedItem.product.name }} "
-                <div class="flex flex-col items-center">
-                  <div class="flex justify-center mt-4 w-full height-16">
-                    <button
-                      class="rounded-l-lg w-20 bg-inherit border border-aronium-500"
-                      :class="
-                        discountType === '%'
-                          ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
-                          : 'bg-inherit  border-aronium-500'
-                      "
-                      @click="toggleDiscountType('%')"
-                    >
-                      %
-                    </button>
-                    <button
-                      class="rounded-r-lg w-20 border"
-                      :class="
-                        discountType === '$'
-                          ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
-                          : 'bg-inherit  border-aronium-500'
-                      "
-                      @click="toggleDiscountType('$')"
-                    >
-                      $
-                    </button>
-                  </div>
-                </div>
-
-                <div class="w-full flex justify-center mt-6 text-xl">
-                  <input
-                    :id="selectedItem.id"
-                    v-model="itemInputValue"
-                    type="text"
-                    class="relative bg-inherit border-0 border-b-2 text-right pb-3 pr-10 items-center focus:outline-none focus:ring-0"
-                    :class="
-                      tabID === 2 && selectedItem.id === null
-                        ? 'opacity-50 text-opacity-50 select-none'
-                        : 'opacity-100'
-                    "
-                    :disabled="tabID === 2 && selectedItem.id === null"
-                    @input="addItemDiscount(id)"
-                  />
-                  <label class="absolute ml-48 mt-2">
-                    <span
-                      class="text-aronium-white"
-                      :class="
-                        tabID === 2 && selectedItem.id === null
-                          ? 'opacity-50 select-none'
-                          : 'opacity-100'
-                      "
-                      :disabled="tabID === 2 && selectedItem.item === null"
-                      >{{ discountType }}</span
-                    >
-                  </label>
-                </div>
-
-                <NumericPad
-                  @close="submitResults"
-                  @calculator-value="discountValue"
-                />
-              </div>
-            </div>
-          </div>
+          <keep-alive>
+            <component
+              :is="component"
+              @close="$emit('close')"
+              :disabled="selectedItem"
+            />
+          </keep-alive>
 
           <!-- <NumericPad @calculatorValue="discountValue" /> -->
         </div>
@@ -181,7 +62,7 @@
         <button
           type="button"
           class="inline-flex leading-6 w-full justify-center rounded-sm border border-aronium-500 bg-aronium-900 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-aronium-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm"
-          @click="open = false"
+          @click="$emit('close')"
         >
           Clear all discounts
         </button>
@@ -191,82 +72,40 @@
 </template>
 
 <script setup>
-import { ref, computed, defineProps, defineEmits, nextTick } from "vue";
-import { useCalculate } from "@/composables/useCalculate";
-import {
-  Dialog,
-  DialogPanel,
-  DialogTitle,
-  TransitionChild,
-  TransitionRoot,
-} from "@headlessui/vue";
-import { CheckIcon } from "@heroicons/vue/24/outline";
-import { usePos } from "@/stores/pos";
-import NumericPad from "@/components/shared/calculator/NnumericPad.vue";
-
-// const props = defineProps({
-// id: { type: Number, default: null },
-// items: { type: Object, default: null },
-// });
-const emit = defineEmits(["close"]);
-
-import StoreOrderTopButtons from "@/components/store/StoreOrderTopButtons.vue";
+import { ref, computed } from "vue";
 import Modal from "@/components/shared/Modal.vue";
-// const OrderItem = defineAsyncComponent(() =>
-//   import("@/components/store/orders/OrderItem.vue")
-// );
+
+import { usePos } from "@/stores/pos";
+
+import StoreOrderDiscountCart from "@/components/store/StoreOrderDiscountCart.vue";
+import StoreOrderDiscountCartItem from "@/components/store/StoreOrderDiscountCartItem.vue";
+
 const store = usePos();
-const priceFormat = store.priceFormat;
-const getTotalPrice = store.totalPrice;
-const activeNumber = ref(store.activeNumber);
 const useActiveOrder = ref(store.useActiveOrder);
 
+const activeItem = computed(() =>
+  useActiveOrder.value.items.find((itm) => itm.isActive)
+);
 const selectedItem = computed(() =>
   useActiveOrder.value.items.find((item) => item.isActive)
 );
-// const tabID = ref(1);
-const tabID = computed(() => (selectedItem.value ? 2 : 1));
-const discountType = ref("%");
-const totalOrderDiscount = ref(0);
-const cartInputValue = ref(0);
-const itemInputValue = ref(0);
-const selectCartInputText = () => {
-  const cartDiscountInput = document.getElementById("cart-discount-input");
-  // const itemDiscountInput = document.getElementById("item-discount-input");
-  cartDiscountInput.focus();
-  // discountInput.focus();
-  cartDiscountInput.setSelectionRange(0, 3);
-};
-const selectItemInputText = (id) => {
-  const itemDiscountInput = document.getElementById(id);
-  if (!itemDiscountInput) return;
-  itemDiscountInput.focus();
-  itemDiscountInput.setSelectionRange(0, 3);
-};
-const toggleDiscountType = async (type) => {
-  // cartInputValue.value = 0;
-  discountType.value = type;
-  // discount.value = "0";
-  // await nextTick();
-  // if (tabID.value === 1) selectCartInputText();
-  // if (tabID.value === 2 && selectedItem.id !== null) selectItemInputText(selectedItem.id);
-};
-const cartDiscount = async () => {
-  tabID.value = 1;
-  await nextTick();
-  toggleDiscountType("%");
-};
-const itemDiscount = () => {
-  tabID.value = 2;
+
+const tabs = ref([
+  { id: 1, name: "Cart discount", href: "#", current: true },
+  { id: 2, name: "Item discount", href: "#", current: false },
+]);
+
+const toggleTab = (ID) => {
+  const selectedTab = tabs.value.find((tab) => tab.id == ID);
 };
 
-const discountValue = (payload) => {
-  if (tabID.value == 1) cartInputValue.value = payload.value;
-  if (tabID.value == 2) itemInputValue.value = payload.value;
-};
+const component = computed(() => {
+  if (selectedItem.value) {
+    return StoreOrderDiscountCartItem;
+  } else {
+    return StoreOrderDiscountCart;
+  }
+});
 
-const submitResults = () => {
-  // console.log("CONGRATULATIONS!!");
-  emit("close");
-};
+// const emit = defineEmits(["close"]);
 </script>

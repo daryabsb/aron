@@ -1,5 +1,5 @@
 <template>
-  <slide-modal size="md" :open="open" @close="closePanel">
+  <slide-modal :size="size" :open="open" @close="closePanel">
     <template #title>
       {{ modalType }}
     </template>
@@ -45,6 +45,7 @@ const props = defineProps({
 
 // const open = ref(props.openPanel);
 const emit = defineEmits(["close"]);
+const size = computed(() => (props.modalType == "New Product" ? "2xl" : "md"));
 
 const component = computed(() => {
   if (props.modalType == "New Product") {
