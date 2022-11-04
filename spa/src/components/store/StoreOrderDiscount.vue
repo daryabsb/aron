@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Modal size="md">
+    <Modal @close="$emit('close')" size="md">
       <template #title>
         <div>
           <div class="sm:hidden">
@@ -15,6 +15,7 @@
                 v-for="tab in tabs"
                 :key="tab.id"
                 :selected="tab.current"
+                @click="toggleTab(tab.id)"
                 >{{ tab.name }}</option
               >
             </select>
@@ -51,7 +52,7 @@
             <component
               :is="component"
               @close="$emit('close')"
-              :disabled="selectedItem"
+              :disabled="activeItem"
             />
           </keep-alive>
 
@@ -72,7 +73,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, watch, reactive, onMounted } from "vue";
 import Modal from "@/components/shared/Modal.vue";
 
 import { usePos } from "@/stores/pos";
@@ -86,26 +87,38 @@ const useActiveOrder = ref(store.useActiveOrder);
 const activeItem = computed(() =>
   useActiveOrder.value.items.find((itm) => itm.isActive)
 );
-const selectedItem = computed(() =>
-  useActiveOrder.value.items.find((item) => item.isActive)
-);
-
 const tabs = ref([
-  { id: 1, name: "Cart discount", href: "#", current: true },
+  { id: 1, name: "Cart discount", href: "#", current: false },
   { id: 2, name: "Item discount", href: "#", current: false },
 ]);
 
-const toggleTab = (ID) => {
-  const selectedTab = tabs.value.find((tab) => tab.id == ID);
-};
-
-const component = computed(() => {
-  if (selectedItem.value) {
-    return StoreOrderDiscountCartItem;
+const tabID = ref(1);
+onMounted(() => {
+  if (!activeItem.value) {
+    tabID.value = 1;
+    // tabs.value[0].current = true;
   } else {
-    return StoreOrderDiscountCart;
+    tabID.value = 2;
+    // tabs.value[1].current = true;
   }
 });
+
+watch(
+  () => tabID,
+  () => {
+    tabs.value.forEach((tab) => (tab.current = !tab.current));
+  }
+);
+
+const toggleTab = (ID) => {
+  const selectedTab = tabs.value.find((tab) => tab.id == ID);
+  selectedTab.current = true;
+  tabID.value = ID;
+};
+
+const component = computed(() =>
+  tabID.value == 1 ? StoreOrderDiscountCart : StoreOrderDiscountCartItem
+);
 
 // const emit = defineEmits(["close"]);
 </script>
