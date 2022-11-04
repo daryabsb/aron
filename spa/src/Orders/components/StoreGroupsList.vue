@@ -71,7 +71,7 @@ const pos = usePos();
 const addToCart = pos.addToCart;
 
 const ProductSingleItem = defineAsyncComponent(() =>
-  import("./PosSingleProduct.vue")
+  import("@/Orders/components/Cards/PosSingleProduct.vue")
 );
 
 import { useFetch } from "@/stores/fetch";

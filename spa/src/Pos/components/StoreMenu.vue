@@ -11,8 +11,8 @@ import {
 
 /* COMPONENTS */
 // import ProductsGroupTabs from "@/components/pos/ProductsGroupTabs.vue";
-import PinkTabs from "@/components/pos/PinkTabs.vue";
-import PosProductList from "@/components/pos/products/PosProductList.vue";
+import PinkTabs from "@/Pos/components/PinkTabs.vue";
+import PosProductList from "@/Pos/components/products/PosProductList.vue";
 // import StoreProductWidget from "@/components/pos/products/StoreProductWidget.vue";
 
 export default {

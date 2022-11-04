@@ -166,8 +166,8 @@ import {
   Bars2Icon,
   ChevronDoubleLeftIcon,
 } from "@heroicons/vue/24/outline";
-import UserDropdown from "@/components/Dropdowns/UserDropdown.vue";
-import MainMenuPopper from "@/components/poppers/MainMenuPopper.vue";
+import UserDropdown from "@/Users/components/UserDropdown.vue";
+import MainMenuPopper from "@/Orders/components/Modals/MainMenuPopper.vue";
 
 export default {
   components: {

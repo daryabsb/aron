@@ -131,7 +131,7 @@
           <li class="items-center">
             <router-link
               class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-              to="/home/custom"
+              to="/"
             >
               <i
                 class="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"
@@ -155,7 +155,7 @@
           <li class="items-center">
             <router-link
               class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-              to="/landing"
+              to="/"
             >
               <i class="fas fa-newspaper text-blueGray-300 mr-2 text-sm"></i>
               Landing Page
@@ -165,7 +165,7 @@
           <li class="items-center">
             <router-link
               class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-              to="/profile"
+              to="/"
             >
               <i class="fas fa-user-circle text-blueGray-300 mr-2 text-sm"></i>
               Profile Page

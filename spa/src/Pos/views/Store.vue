@@ -1,5 +1,5 @@
 <script>
-import StoreMenu from "@/components/pos/StoreMenu.vue";
+import StoreMenu from "@/Pos/components/StoreMenu.vue";
 import SearchInput from "@/components/shared/SearchInput.vue";
 
 export default {

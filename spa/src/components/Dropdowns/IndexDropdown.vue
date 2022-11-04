@@ -67,13 +67,13 @@
             No Layout
           </span>
           <router-link
-            to="/landing"
+            to="/"
             class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
           >
             Landing
           </router-link>
           <router-link
-            to="/profile"
+            to="/"
             class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
           >
             Profile

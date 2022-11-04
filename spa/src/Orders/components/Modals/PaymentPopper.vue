@@ -203,8 +203,9 @@ import { ref } from "vue";
 import { usePos } from "@/stores/pos";
 
 import Calculator from "@/components/shared/calculator/Calculator.vue";
-import Moneys from "@/components/Cards/Moneys.vue";
-import PaymentPopperDiscount from "@/components/poppers/PaymentPopperDiscount.vue";
+
+import Moneys from "@/Orders/components/Cards/Moneys.vue";
+import PaymentPopperDiscount from "@/Orders/components/Modals/PaymentPopperDiscount.vue";
 export default {
   components: {
     Calculator,

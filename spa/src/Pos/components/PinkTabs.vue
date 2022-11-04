@@ -117,7 +117,7 @@
 import { ref, computed, onMounted, onBeforeMount } from "vue";
 import getAllProductGroups from "@/stores/api/getAllProductGroups";
 import { useFetch } from "@/stores/fetch";
-import PosProductList from "@/components/pos/products/PosProductList.vue";
+import PosProductList from "@/Pos/components/products/PosProductList.vue";
 
 export default {
   components: {

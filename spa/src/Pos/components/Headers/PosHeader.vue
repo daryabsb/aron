@@ -84,9 +84,9 @@ import { ref } from "vue";
 import { posHeaderItems } from "@/composables/staticData";
 import { useCart } from "@/store/composables";
 
-import UserDropdown from "@/components/Dropdowns/UserDropdown.vue";
+import UserDropdown from "@/Users/components/UserDropdown.vue";
 // import MainMenuModal from "@/components/modals/MainMenuModal.vue";
-import MainMenuPopper from "@/components/poppers/MainMenuPopper.vue";
+import MainMenuPopper from "@/Pos/components/Modals/MainMenuPopper.vue";
 
 // export default {
 // components: {

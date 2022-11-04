@@ -43,8 +43,8 @@
 
 <script>
 import { ref } from "vue";
-import PosSingleProduct from "@/components/pos/products/PosSingleProduct.vue";
-import PosSingleProductSkeleton from "@/components/pos/products/PosSingleProductSkeleton.vue";
+import PosSingleProduct from "@/Pos/components/products/PosSingleProduct.vue";
+import PosSingleProductSkeleton from "@/Pos/components/products/PosSingleProductSkeleton.vue";
 export default {
   components: { PosSingleProduct, PosSingleProductSkeleton },
   props: {
