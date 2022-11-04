@@ -27,7 +27,8 @@
 </template>
 <script>
 import { ref, onMounted } from "vue";
-
+import useManagementStore from "@/Management/managementStore"
+import productsAPI from "@/services/productsAPI"
 // import SideModal from "@/components/shared/Modal.vue";
 
 import ProductsModal from "@/Management/components/modals/ProductsModal.vue";
@@ -36,7 +37,7 @@ import ProductsModal from "@/Management/components/modals/ProductsModal.vue";
 import ProductsHeader from "@/Management/components/Headers/ProductsHeader.vue";
 import ProductsSideCard from "@/Management/components/Products/ProductsSideCard.vue";
 // import ProductsSideCard from "@/Management/component components/products/ProductsSideCard.vue";
-// import ProductsManagement from "@/Management/components/products/ProductsManagement.vue";
+import ProductsManagement from "@/Management/components/Products/ProductsManagement.vue";
 
 import { useFetchProductGroupsDispatch } from "@/store/composables";
 import useGetProductGroups from "@/composables/useGetProductGroups";
@@ -53,6 +54,20 @@ export default {
     // AroniumControlCenter,
   },
   setup() {
+    // const store = useManagementStore()
+    const products = ref([])
+    const loadProducts = async () => {
+  try {
+    const response = await productsAPI.getProducts();
+    products.value = response.data;
+
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+loadProducts()
+    console.log("products from manage",products.value);
     onMounted(useFetchProductGroupsDispatch);
     const closeModal = ref(false);
     const modalDataModule = ref("");
@@ -69,6 +84,7 @@ export default {
     const isSideBar = ref(true);
 
     return {
+      products,
       useGetProductGroups,
       close,
       open,
