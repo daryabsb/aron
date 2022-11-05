@@ -51,18 +51,25 @@ isTaxOnItemTotal    Bool
     return this.product.price * this.quantity;
   }
   get totalWithTax() {
+    if (!this.tax) return this.itemTotalPrice;
     let taxRate = this.tax / 100;
-    if (this.tax)
-      return this.getItemTotalPrice() * taxRate + this.getItemTotalPrice();
-    return this.getItemTotalPrice();
+    return this.itemTotalPrice * taxRate + this.itemTotalPrice;
   }
   get totalWithDsicount() {
-    if (!this.discount) return this.getTotalWithTax();
-    if (this.discountType !== 0) return this.getTotalWithTax() - this.discount;
+    if (!this.discount) return this.totalWithTax;
+    if (this.discountType !== 0) return this.totalWithTax - this.discount;
     let discountRate = this.discount / 100;
-    return this.getTotalWithTax() * discountRate;
+    return this.totalWithTax * discountRate;
   }
   get orderItemTotal() {
-    return this.getTotalWithDsicount();
+    // console.log("Quantity: ", this.quantity, " X Price: ", this.product.price);
+    // console.log(
+    //   "itemTotalPrice: ",
+    //   this.itemTotalPrice,
+    //   " totalWithTax: ",
+    //   this.totalWithTax
+    // );
+    // console.log("totalWithDsicount: ", this.totalWithDsicount);
+    return this.totalWithDsicount;
   }
 }

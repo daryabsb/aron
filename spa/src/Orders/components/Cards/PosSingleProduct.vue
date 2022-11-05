@@ -87,9 +87,6 @@ export default {
     const isUsingDefaultQuantity = ref(false);
     const isPriceChangeAllowed = ref(false);
     const order = new OrderItem(props.product);
-    order.quantity = 2;
-    order.tax = 5;
-    console.log(order.getOrderItemTotal());
 
     const addProductToCart = () => {
       addToCart(props.product, 1, props.product.price, 0);
