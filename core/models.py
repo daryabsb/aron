@@ -724,8 +724,11 @@ class Product(models.Model):
     description = models.CharField(max_length=300, null=True, blank=True)
     plu = models.IntegerField(null=True, blank=True)
     measurement_unit = models.CharField(max_length=10, null=True, blank=True)
+
     price = models.FloatField(default=0)
+
     is_tax_inclusive_price = models.BooleanField(default=False)
+
     currency = models.ForeignKey(
         "Currency", on_delete=models.CASCADE, related_name="products"
     )
@@ -747,7 +750,6 @@ class Product(models.Model):
 
     def __str__(self):
         return f"{self.name} - {self.price} /{self.product_group}"
-
 
 
 class Barcode(models.Model):
@@ -874,7 +876,7 @@ class ProductTax(models.Model):
         ]
 
     def __str__(self):
-        return f"{self.product.name} @ {self.tax.name}"
+        return f"{self.product.name} @ {self.tax.rate}"
 
 
 """

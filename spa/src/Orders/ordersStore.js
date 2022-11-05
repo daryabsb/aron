@@ -55,7 +55,7 @@ export const useOrderStore = defineStore("orders", {
         product,
         quantity,
         discount,
-        discountType: "%",
+        discountType: 0,
         tax,
         price,
         isActive: false,

@@ -63,6 +63,7 @@
 
 <script>
 import { ref, nextTick, reactive } from "vue";
+import OrderItem from "@/Orders/OrderItem";
 import { priceFormat } from "@/store/composables";
 import { useOrderStore } from "@/Orders/ordersStore";
 import ModalCalculator from "@/components/shared/calculator/ModalCalculator.vue";
@@ -85,6 +86,10 @@ export default {
 
     const isUsingDefaultQuantity = ref(false);
     const isPriceChangeAllowed = ref(false);
+    const order = new OrderItem(props.product);
+    order.quantity = 2;
+    order.tax = 5;
+    console.log(order.getOrderItemTotal());
 
     const addProductToCart = () => {
       addToCart(props.product, 1, props.product.price, 0);
