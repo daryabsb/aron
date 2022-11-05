@@ -39,7 +39,6 @@
                   placeholder="Search..."
                   @change="query = $event.target.value"
                 />
-                <i class="fa fa-times"></i>
               </div>
 
               <ComboboxOptions
@@ -171,10 +170,8 @@
 </template>
 
 <script setup>
-import { defineEmits } from "vue";
-defineEmits(["close"]);
-
 import { computed, ref } from "vue";
+import { defineEmits } from "vue";
 import { MagnifyingGlassIcon } from "@heroicons/vue/20/solid";
 import { ChevronRightIcon, UsersIcon } from "@heroicons/vue/24/outline";
 import {
@@ -187,6 +184,8 @@ import {
   TransitionChild,
   TransitionRoot,
 } from "@headlessui/vue";
+
+defineEmits(["close"]);
 
 const people = [
   {
@@ -248,8 +247,8 @@ const filteredPeople = computed(() =>
       })
 );
 
-// function onSelect(person) {
-//   // window.location = person.url;
-//   console.log(person);
-// }
+function onSelect(person) {
+  // window.location = person.url;
+  console.log(person);
+}
 </script>

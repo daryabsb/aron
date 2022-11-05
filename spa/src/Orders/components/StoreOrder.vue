@@ -1,7 +1,7 @@
 <template>
   <div>
     <store-order-top-buttons></store-order-top-buttons>
-    <div class="overflow-hidden scrollbar w-full">
+    <div class="overflow-hidden scrollbar w-full px-2">
       <div
         v-if="useActiveOrder.items.length === 0"
         class="flex-1 w-full p-4 select-none flex flex-col flex-wrap content-center justify-center"

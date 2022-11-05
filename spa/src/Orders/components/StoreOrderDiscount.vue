@@ -78,8 +78,8 @@ import Modal from "@/components/shared/Modal.vue";
 
 import { useOrderStore } from "@/Orders/ordersStore";
 
-import StoreOrderDiscountCart from "@/components/store/StoreOrderDiscountCart.vue";
-import StoreOrderDiscountCartItem from "@/components/store/StoreOrderDiscountCartItem.vue";
+import StoreOrderDiscountCart from "@/Orders/components/StoreOrderDiscountCart.vue";
+import StoreOrderDiscountCartItem from "@/Orders/components/StoreOrderDiscountCartItem.vue";
 
 const store = useOrderStore();
 const useActiveOrder = ref(store.useActiveOrder);

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col space-y-2 flex-1 h-[90rem] mt-3">
+  <div class="flex flex-col space-y-2 flex-1 max-h-[90rem] mt-3">
     <Suspense>
       <template #default>
         <template v-for="item in useActiveOrder.items" :key="item.id">
