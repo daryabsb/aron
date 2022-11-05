@@ -30,7 +30,6 @@
 import { ref } from "vue";
 import { useModals } from "@/stores/modals";
 import { useOrderStore } from "@/Orders/ordersStore";
-
 import SearchInput from "@/components/shared/SearchInput.vue";
 import SearchPanel from "@/components/shared/SearchPanel.vue";
 
@@ -117,6 +116,7 @@ export default {
       isPaymentModal,
       paymentModal,
       cashOut,
+      close,
     };
   },
 };

@@ -9,6 +9,7 @@
         alt=""
       />
     </div>
+
     <div class="min-w-0 flex-1">
       <a href="#" class="focus:outline-none text-aronium-white">
         <!-- <span class="absolute inset-0" aria-hidden="true" /> -->
@@ -22,15 +23,11 @@
                 : 'text-aronium-white',
             ]"
           >
-            {{ props.item.quantity * props.item.price }}
+            {{ props.item.itemTotalPrice }}
           </span>
           <span v-if="props.item.discount">
             {{ " " }}
-            {{
-              props.item.quantity * props.item.price -
-              (props.item.quantity * props.item.price * props.item.discount) /
-                100
-            }}</span
+            {{ props.item.totalWithDsicount }}</span
           >
         </p>
       </a>

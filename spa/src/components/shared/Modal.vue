@@ -17,7 +17,7 @@
 
       <div class="fixed inset-0 z-10 overflow-y-auto">
         <div
-          class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
+          class="flex min-h-full items-end justify-center p-2 text-center sm:items-center sm:p-0"
         >
           <TransitionChild
             as="template"
@@ -29,7 +29,7 @@
             leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
             <DialogPanel
-              class="relative transform overflow-hidden rounded-sm bg-aronium-800 border border-aronium-500 px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:p-6"
+              class="relative transform overflow-hidden rounded-sm bg-aronium-800 border border-aronium-500 px-2 pt-3 pb-2 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:p-2"
               :class="`sm:max-w-${props.size}`"
             >
               <div>
@@ -48,7 +48,7 @@
                     <slot name="title"></slot>
                   </DialogTitle>
                   <div class="mt-2">
-                    <slot name="content"></slot>
+                    <slot name="content" @get-value="getValue"></slot>
                   </div>
                 </div>
               </div>
@@ -64,7 +64,7 @@
 </template>
 
 <script setup>
-import { ref, defineProps } from "vue";
+import { ref, defineProps, defineEmits } from "vue";
 import {
   Dialog,
   DialogPanel,
@@ -76,6 +76,8 @@ import { CheckIcon } from "@heroicons/vue/24/outline";
 const props = defineProps({
   size: String,
 });
-
+const emit = defineEmits(["getValue"]);
+console.log("modal is run");
 const open = ref(true);
+const getValue = () => emit("getValue");
 </script>

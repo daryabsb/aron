@@ -41,7 +41,7 @@
       </label>
     </div>
     <keep-alive>
-      <NumericPad @close="submitResults" @calculator-value="discountValue" />
+      <NumericPad @close="submitResults" @get-value="discountValue" />
     </keep-alive>
   </div>
 </template>
@@ -50,7 +50,7 @@
 import { ref, defineEmits } from "vue";
 
 import { useOrderStore } from "@/Orders/ordersStore";
-import NumericPad from "@/components/shared/calculator/NnumericPad.vue";
+import NumericPad from "@/components/shared/calculator/NumericPad.vue";
 
 const emit = defineEmits(["close"]);
 

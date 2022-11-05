@@ -1,5 +1,16 @@
 <template>
-  <div class="">
+  <div>
+    <!-- <numeric-pad @close="close" @get-value="getValue"></numeric-pad> -->
+    <numeric-pad
+      v-if="isCheckPriceOpen"
+      @close="close"
+      @get-value="getPrice"
+    ></numeric-pad>
+    <numeric-pad
+      v-if="isDefaultQtyOpen"
+      @close="close"
+      @get-value="getQuantity"
+    ></numeric-pad>
     <div
       class="overflow-auto scrollbar mt-5 px-3 grid phone:grid-cols-1 tablet:grid-cols-6 xl:grid-cols-8 gap-3"
     >
@@ -54,7 +65,10 @@
           v-if="selectedGroupProducts.length > 0"
           class="relative col-span-1 shadow"
         >
-          <product-single-item :product="item"></product-single-item>
+          <product-single-item
+            :product="item"
+            @click="createOrder(item)"
+          ></product-single-item>
         </div>
       </template>
     </div>
@@ -64,6 +78,10 @@
 <script setup>
 import { ref, computed, defineAsyncComponent } from "vue";
 import { ChevronDoubleLeftIcon } from "@heroicons/vue/24/outline";
+import NumericPad from "@/components/shared/calculator/NumericPad.vue";
+
+import OrderItem from "@/Orders/OrderItem";
+
 import productsGroupsAPI from "@/services/productsGroupsAPI";
 import { useOrderStore } from "@/Orders/ordersStore";
 import { useFetch } from "@/stores/fetch";
@@ -119,5 +137,69 @@ const selectGroup = async (groupId) => {
   id.value = groupId;
   await loadProductGroups();
   await loadProductsByGroupId(groupId);
+};
+const isNumpadOpen = ref(false);
+const isCheckPriceOpen = ref(false);
+const isDefaultQtyOpen = ref(false);
+const isTaxInclusiveOpen = ref(false);
+const order = ref(null);
+
+const close = () => (isNumpadOpen.value = false);
+
+// PREPARE PRODUCT TO ORDER
+// 1. Add the clicked item to the created OrderItem
+const createOrder = (item) => {
+  order.value = new OrderItem(item);
+  checkPrice(item);
+};
+
+// 2. Check the change price on the product
+
+const checkPrice = (item) => {
+  if (item.is_price_change_allowed) {
+    isCheckPriceOpen.value = true;
+    return;
+  } else {
+    checkQuantiy();
+  }
+};
+
+// 3. Get the price and proceed with checkQuantity
+const getPrice = (value) => {
+  order.value.price = value;
+  isCheckPriceOpen.value = false;
+  checkQuantiy();
+};
+
+// 4. Check the is default quantity on the item
+const checkQuantiy = () => {
+  if (!order.value.product.is_using_default_quantity) {
+    isDefaultQtyOpen.value = true;
+    return;
+  } else {
+    // checkTaxInclusivePrice()
+    addProductToCart();
+  }
+};
+// 5. Get the quantity and proceed
+const getQuantity = async (value) => {
+  order.value.quantity = value;
+  isDefaultQtyOpen.value = false;
+  // checkTaxInclusivePrice()
+  addProductToCart();
+};
+// 4. CHECK TAX TO BE ADDED LATER
+const checkTaxInclusivePrice = () => {
+  console.log("Tax Done");
+};
+// 5. Dispatch the order to cart =>>
+
+const addProductToCart = () => {
+  addToCart(order);
+  // order = null;
+};
+const getValue = (value) => {
+  console.log(value);
+  close();
 };
 </script>

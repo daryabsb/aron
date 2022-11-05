@@ -49,23 +49,14 @@ export const useOrderStore = defineStore("orders", {
       );
     },
 
-    addToCart(product, quantity = 1, price = 0, discount = 0, tax = 0) {
-      const orderItem = {
-        id: product.id,
-        product,
-        quantity,
-        discount,
-        discountType: 0,
-        tax,
-        price,
-        isActive: false,
-      };
-      const index = this.useOrderItemIndex(orderItem);
+    addToCart(orderItem) {
+      // console.log("from orderStore", orderItem.value);
+      const index = this.useOrderItemIndex(orderItem.value);
 
       if (index === -1) {
-        this.useActiveOrder.value.items.push(orderItem);
+        this.useActiveOrder.value.items.push(orderItem.value);
       } else {
-        this.addQty(orderItem, (orderItem.quantity = 1), index);
+        this.addQty(orderItem.value, (orderItem.value.quantity = 1), index);
         // this.useActiveOrder.value.items[index].quantity += orderItem.quantity;
       }
 
@@ -147,6 +138,17 @@ export const useOrderStore = defineStore("orders", {
     clearSound() {
       this.playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
     },
+    calculateActiveOrderDiscount(total) {
+      // console.log("total", total);
+      // if (!this.useActiveOrder.value.discount) return 0;
+      // console.log((this.useActiveOrder.value.discount * total) / 100);
+      // const discountType = this.useActiveOrder.value.discountType;
+      // if (discountType !== 0) {
+      // return this.useActiveOrder.value.discount;
+      // } else {
+      return (this.useActiveOrder.value.discount * total) / 100;
+      // }
+    },
   },
   getters: {
     activeOrderNumber: (state) => state.activeNumber,
@@ -167,11 +169,20 @@ export const useOrderStore = defineStore("orders", {
 
       return computed(() => this.useActiveOrder.value.items.length !== 0);
     },
+
     subTotalBeforeTax() {
       if (!this.isActiveNumber.value) return 0;
       if (!this.isActiveOrderItems) return 0;
       return this.useActiveOrder.value.items.reduce(
-        (total, item) => total + this.getItemTotalPrice(item).value,
+        (total, item) => total + item.itemTotalPrice,
+        0
+      );
+    },
+    subTotalBeforeDiscount() {
+      if (!this.isActiveNumber.value) return 0;
+      if (!this.isActiveOrderItems) return 0;
+      return this.useActiveOrder.value.items.reduce(
+        (total, item) => total + item.totalWithTax,
         0
       );
     },
@@ -179,9 +190,19 @@ export const useOrderStore = defineStore("orders", {
       if (!this.isActiveNumber.value) return 0;
       if (!this.isActiveOrderItems) return 0;
 
-      const total = this.subTotalBeforeTax + this.useActiveOrder.value.tax;
-      this.useActiveOrder.value.total = total;
-      return total;
+      const total = this.useActiveOrder.value.items.reduce(
+        (total, item) => total + item.totalWithDsicount,
+        0
+      );
+      console.log(
+        "this.calculateActiveOrderDiscount(total)",
+        // !this.useActiveOrder.value.discountType
+        this.calculateActiveOrderDiscount(total)
+      );
+      this.useActiveOrder.value.total =
+        total - this.calculateActiveOrderDiscount(total);
+      // this.useActiveOrder.value.total = total;
+      return computed(() => this.useActiveOrder.value.total);
     },
     submitable(state) {
       return state.change >= 0 && state.cart.length > 0;

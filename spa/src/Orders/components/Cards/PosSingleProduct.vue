@@ -1,9 +1,8 @@
 <template>
-  <div role="button" :title="product.name" @click="addProductToCart()">
+  <div role="button" :title="product.name">
     <div
       class="h-48 border border-aronium-500 py-2 px-2 w-full overflow-hidden bg-inherit text-aronium-white group-hover:opacity-75"
     >
-      <!-- class="h-48 aspect-w-1 border aspect-h-1 w-full overflow-hidden bg-inherit text-aronium-white group-hover:opacity-75 lg:aspect-none" -->
       <div class="w-full h-32 border-b border-aronium-600">
         <img
           :src="product.image"
@@ -39,74 +38,25 @@
         </div>
       </div>
     </div>
-    <!-- <modal-calculator
-      v-if="isUsingDefaultQuantity"
-      type="Quantity"
-      @close="addQuantity, qty"
-    ></modal-calculator>
-    <modal-calculator
-      v-if="isPriceChangeAllowed"
-      type="Price"
-      @close="addPrice, price"
-    ></modal-calculator> -->
-    <!-- <div
-      v-if="!isUsingDefaultQuantity"
-      class="fixed w-96 h-56 bg-aronium-800 border border-aronium-500 p-3 mx-auto my-auto z-50"
-    >
-      <div class="flex flex-col justify-center items center w-full h-full">
-        <input id="" v-model="quantity" type="text" name="" />
-        <button @click="addQuantiy">Add</button>
-      </div>
-    </div> -->
   </div>
 </template>
 
 <script>
 import { ref, nextTick, reactive } from "vue";
-import OrderItem from "@/Orders/OrderItem";
+
 import { priceFormat } from "@/store/composables";
 import { useOrderStore } from "@/Orders/ordersStore";
-import ModalCalculator from "@/components/shared/calculator/ModalCalculator.vue";
 export default {
-  components: {
-    ModalCalculator,
-  },
+  components: {},
   props: {
     product: {
       type: Object,
       required: true,
     },
   },
-  setup(props) {
-    const store = useOrderStore();
-    const addToCart = store.addToCart;
-    const openCalculator = ref(false);
-
-    const quantity = ref(0);
-
-    const isUsingDefaultQuantity = ref(false);
-    const isPriceChangeAllowed = ref(false);
-    const order = new OrderItem(props.product);
-
-    const addProductToCart = () => {
-      addToCart(props.product, 1, props.product.price, 0);
-    };
-
+  setup(prps) {
     return {
-      addProductToCart,
       priceFormat,
-      addToCart,
-      quantity,
-      isUsingDefaultQuantity,
-      isPriceChangeAllowed,
-      openCalculator,
-      // checkQuantiy,
-      // addQuantity,
-      // checkPrice,
-      // addPrice,
-      // checkTaxInclusive,
-
-      // addTaxInclusive,
     };
   },
 };

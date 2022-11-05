@@ -1,16 +1,20 @@
 export default class OrderItem {
   constructor(
     _product,
+    _price = 0,
     _quantity = 1,
     _discount = 0,
     _discountType = 0,
     _tax = 0
   ) {
     this.product = _product;
+    this.id = this.product.id;
+    this.price = _price;
     this.quantity = _quantity;
     this.discountType = _discountType;
     this.discount = _discount;
     this.tax = _tax;
+    this.isActive = false;
   }
 
   /*
