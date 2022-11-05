@@ -160,7 +160,8 @@ import { ref } from "vue";
 import { posHeaderItems } from "@/composables/staticData";
 import { useCart } from "@/store/composables";
 import { useModals } from "@/stores/modals";
-import { usePos } from "@/stores/pos";
+import { useOrderStore } from "@/Orders/ordersStore";
+// const store = useOrderStore();
 import {
   Bars3Icon,
   Bars2Icon,
@@ -178,7 +179,7 @@ export default {
 
   setup() {
     const store = useModals();
-    const pos = usePos();
+    const pos = useOrderStore();
     const cart = useCart;
     const activeOrder = pos.useActiveOrder;
 

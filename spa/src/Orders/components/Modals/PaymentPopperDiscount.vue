@@ -229,7 +229,7 @@
 import { ref, nextTick, onMounted, computed } from "vue";
 
 // import { priceFormat, getTotalPrice } from "@/store/composables/pos";
-import { usePos } from "@/store/composables/pos";
+import { useOrderStore } from "@/Orders/ordersStore";
 
 export default {
   name: "PaymentPopperDiscount",
@@ -240,7 +240,7 @@ export default {
   },
   emits: ["input", "cancel"],
   setup(props) {
-    const { priceFormat, getTotalPrice } = usePos();
+    const { priceFormat, getTotalPrice } = useOrderStore();
     const selectCartInputText = () => {
       const cartDiscountInput = document.getElementById("cart-discount-input");
       // const itemDiscountInput = document.getElementById("item-discount-input");

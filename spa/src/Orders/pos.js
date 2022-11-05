@@ -1,8 +1,8 @@
-import { ref, computed } from "vue";
+import { computed, ref } from "vue";
 import { defineStore } from "pinia";
-import { moment } from "moment";
+import moment from "moment";
 
-export const useOrderStore = defineStore("orders", {
+export const usePos = defineStore("pos", {
   state: () => {
     return {
       cart: [],
@@ -17,7 +17,6 @@ export const useOrderStore = defineStore("orders", {
       isShowModalReceipt: false,
     };
   },
-
   actions: {
     createCart() {
       const number = this.generateUID();

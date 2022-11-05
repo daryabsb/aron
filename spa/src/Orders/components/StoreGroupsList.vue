@@ -65,17 +65,17 @@
 import { ref, computed, defineAsyncComponent } from "vue";
 import { ChevronDoubleLeftIcon } from "@heroicons/vue/24/outline";
 import productsGroupsAPI from "@/services/productsGroupsAPI";
-import { usePos } from "@/stores/pos";
+import { useOrderStore } from "@/Orders/ordersStore";
+import { useFetch } from "@/stores/fetch";
+import { onMounted } from "@vue/runtime-core";
 
-const pos = usePos();
+const pos = useOrderStore();
 const addToCart = pos.addToCart;
 
 const ProductSingleItem = defineAsyncComponent(() =>
   import("@/Orders/components/Cards/PosSingleProduct.vue")
 );
 
-import { useFetch } from "@/stores/fetch";
-import { onMounted } from "@vue/runtime-core";
 const store = useFetch();
 onMounted(store.fetchGroups);
 const productGroups = ref([]);

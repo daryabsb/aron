@@ -4,6 +4,17 @@
 
 @tailwind utilities;
 
+@layer base {
+  html {
+    background-color: #333333;
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
 @media print {
   .hide-print {
     display: none !important;

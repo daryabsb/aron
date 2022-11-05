@@ -76,12 +76,12 @@
 import { ref, computed, watch, reactive, onMounted } from "vue";
 import Modal from "@/components/shared/Modal.vue";
 
-import { usePos } from "@/stores/pos";
+import { useOrderStore } from "@/Orders/ordersStore";
 
 import StoreOrderDiscountCart from "@/components/store/StoreOrderDiscountCart.vue";
 import StoreOrderDiscountCartItem from "@/components/store/StoreOrderDiscountCartItem.vue";
 
-const store = usePos();
+const store = useOrderStore();
 const useActiveOrder = ref(store.useActiveOrder);
 
 const activeItem = computed(() =>

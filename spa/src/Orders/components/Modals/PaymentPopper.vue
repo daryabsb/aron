@@ -200,7 +200,7 @@
 </template>
 <script>
 import { ref } from "vue";
-import { usePos } from "@/stores/pos";
+import { useOrderStore } from "@/Orders/ordersStore";
 
 import Calculator from "@/components/shared/calculator/Calculator.vue";
 
@@ -214,7 +214,7 @@ export default {
   },
   emits: ["close", "cashOut"],
   setup() {
-    const store = usePos();
+    const store = useOrderStore();
     const cart = store.cart;
     const cash = store.useCash;
     const change = store.useChange;

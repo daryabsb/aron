@@ -47,7 +47,7 @@
 </template>
 <script>
 import { ref, defineAsyncComponent } from "vue";
-import { usePos } from "@/stores/pos";
+import { useOrderStore } from "@/Orders/ordersStore";
 import { useModals } from "@/stores/modals";
 
 import {
@@ -92,7 +92,7 @@ export default {
   },
   emits: ["close", "cashOut"],
   setup() {
-    const store = usePos();
+    const store = useOrderStore();
     const createCart = store.createCart;
     const cart = store.cart;
     const cash = store.useCash;

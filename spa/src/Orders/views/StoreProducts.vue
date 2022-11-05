@@ -29,7 +29,7 @@
 <script>
 import { ref } from "vue";
 import { useModals } from "@/stores/modals";
-import { usePos } from "@/stores/pos";
+import { useOrderStore } from "@/Orders/ordersStore";
 
 import SearchInput from "@/components/shared/SearchInput.vue";
 import SearchPanel from "@/components/shared/SearchPanel.vue";
@@ -78,7 +78,7 @@ export default {
     StoreOrderDiscount,
   },
   setup() {
-    const pos = usePos();
+    const pos = useOrderStore();
 
     const isSearchModal = ref(store.isSearchModal);
     const isPaymentModal = ref(store.isPaymentModal);

@@ -1,53 +1,59 @@
 <template>
-  <!-- Navbar -->
-  <nav
-    class="bg-aronium-900 border-b border-aronium-600 md:flex-row md:flex-nowrap md:justify-start flex items-center w-full"
-  >
-    <div
-      class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 py-2 px-4"
-    >
-      <span>
-        <i class="fa fa-arrow-left text-white text-xl font-bold pr-6"></i>
-      </span>
-      <!-- Brand -->
-      <a
-        class="text-white text-2sm hidden lg:inline-block font-normal"
-        href="javascript:void(0)"
+  <header class="bg-aronium-900">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
+      <div
+        class="flex w-full items-center justify-between border-b border-indigo-500 py-6 lg:border-none"
       >
-        Products Control Center
-      </a>
-      <!-- Form -->
-      <form
-        class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3"
-      >
-        <div class="relative flex w-full flex-wrap items-stretch">
-          <span
-            class="absolute top-0 left-0 py-1 h-full leading-snug font-normal text-center text-aronium-600 bg-transparent rounded text-base items-center justify-center w-8"
-          >
-            <i class="fas fa-search"></i>
-          </span>
-          <input
-            type="text"
-            placeholder="Search here..."
-            class="border-0 px-3 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10"
-          />
+        <div class="flex items-center">
+          <a href="#">
+            <span class="sr-only">Your Company</span>
+            <img
+              class="h-10 w-auto"
+              src="https://tailwindui.com/img/logos/mark.svg?color=white"
+              alt=""
+            />
+          </a>
+          <div class="ml-10 hidden space-x-8 lg:block">
+            <a
+              v-for="link in navigation"
+              :key="link.name"
+              :href="link.href"
+              class="text-base font-medium text-white hover:text-indigo-50"
+              >{{ link.name }}</a
+            >
+          </div>
         </div>
-      </form>
-      <!-- User -->
-      <ul class="flex-col md:flex-row list-none items-center hidden md:flex">
-        <user-dropdown />
-      </ul>
-    </div>
-  </nav>
-  <!-- End Navbar -->
+        <div class="ml-10 space-x-4">
+          <a
+            href="#"
+            class="inline-block rounded-md border border-transparent bg-indigo-500 py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
+            >Sign in</a
+          >
+          <a
+            href="#"
+            class="inline-block rounded-md border border-transparent bg-white py-2 px-4 text-base font-medium text-indigo-600 hover:bg-indigo-50"
+            >Sign up</a
+          >
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center space-x-6 py-4 lg:hidden">
+        <a
+          v-for="link in navigation"
+          :key="link.name"
+          :href="link.href"
+          class="text-base font-medium text-white hover:text-indigo-50"
+          >{{ link.name }}</a
+        >
+      </div>
+    </nav>
+  </header>
 </template>
 
-<script>
-import UserDropdown from "@/components/Dropdowns/UserDropdown.vue";
-
-export default {
-  components: {
-    UserDropdown,
-  },
-};
+<script setup>
+const navigation = [
+  { name: "Solutions", href: "#" },
+  { name: "Pricing", href: "#" },
+  { name: "Docs", href: "#" },
+  { name: "Company", href: "#" },
+];
 </script>

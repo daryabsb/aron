@@ -53,8 +53,8 @@
 
 <script setup>
 import { ref, computed } from "vue";
-import { usePos } from "@/stores/pos";
-const store = usePos();
+import { useOrderStore } from "@/Orders/ordersStore";
+const store = useOrderStore();
 
 const totalBeforeTax = computed(() => store.subTotalBeforeTax);
 const total = computed(() => store.totalPrice);

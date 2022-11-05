@@ -76,8 +76,8 @@
 
 <script setup>
 import { ref } from "vue";
-import { usePos } from "@/stores/pos";
-const store = usePos();
+import { useOrderStore } from "@/Orders/ordersStore";
+const store = useOrderStore();
 const cart = store.cart;
 const createCart = store.createCart;
 const changeActiveOrderNumber = store.changeActiveOrderNumber;

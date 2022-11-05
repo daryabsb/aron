@@ -64,7 +64,7 @@
 <script>
 import { ref, nextTick, reactive } from "vue";
 import { priceFormat } from "@/store/composables";
-import { usePos } from "@/stores/pos";
+import { useOrderStore } from "@/Orders/ordersStore";
 import ModalCalculator from "@/components/shared/calculator/ModalCalculator.vue";
 export default {
   components: {
@@ -77,7 +77,7 @@ export default {
     },
   },
   setup(props) {
-    const store = usePos();
+    const store = useOrderStore();
     const addToCart = store.addToCart;
     const openCalculator = ref(false);
 

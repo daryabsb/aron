@@ -13,11 +13,11 @@
           @open="(moduleName) => open(moduleName)"
         ></products-header>
       </div>
-      <div class="grid grid-cols-12 grid-rows-12 place-content-stretch h-full">
-        <div class="row-start-1 row-span-12 col-start-1 col-span-2 mr-2 h-full">
+      <div class="md:grid md:grid-cols-4">
+        <div class="md:col-span-1 mr-2 inset-y-0">
           <products-side-card></products-side-card>
         </div>
-        <div class="row-start-1 row-span-12 col-start-3 col-span-10 h-full">
+        <div class="col-span-3 inset-y-0">
           <products-management></products-management>
         </div>
       </div>
@@ -27,8 +27,8 @@
 </template>
 <script>
 import { ref, onMounted } from "vue";
-import useManagementStore from "@/Management/managementStore"
-import productsAPI from "@/services/productsAPI"
+import useManagementStore from "@/Management/managementStore";
+import productsAPI from "@/services/productsAPI";
 // import SideModal from "@/components/shared/Modal.vue";
 
 import ProductsModal from "@/Management/components/modals/ProductsModal.vue";
@@ -55,19 +55,19 @@ export default {
   },
   setup() {
     // const store = useManagementStore()
-    const products = ref([])
+    const products = ref([]);
     const loadProducts = async () => {
-  try {
-    const response = await productsAPI.getProducts();
-    products.value = response.data;
+      try {
+        const response = await productsAPI.getProducts();
+        products.value = response.data;
 
-    return response.data;
-  } catch (error) {
-    console.log(error);
-  }
-};
-loadProducts()
-    console.log("products from manage",products.value);
+        return response.data;
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    loadProducts();
+    console.log("products from manage", products.value);
     onMounted(useFetchProductGroupsDispatch);
     const closeModal = ref(false);
     const modalDataModule = ref("");

@@ -41,7 +41,7 @@
 <script>
 import { ref, onMounted } from "vue";
 import { useFetchUserDispatch } from "@/store/composables";
-import { usePos } from "@/stores/pos";
+import { useOrderStore } from "@/Orders/ordersStore";
 // import { createCart } from "@/store/composables";
 import { useRouter } from "vue-router";
 import Button from "@/components/shared/Button.vue";
@@ -50,7 +50,7 @@ export default {
     Button,
   },
   setup() {
-    const store = usePos();
+    const store = useOrderStore();
     // const { createCart } = usePos;
     const router = useRouter();
     onMounted(useFetchUserDispatch);

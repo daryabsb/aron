@@ -35,7 +35,7 @@
 
 <script>
 import { ref } from "vue";
-import { usePos } from "@/stores/pos";
+import { useOrderStore } from "@/Orders/ordersStore";
 
 // import Popper from "vue3-popper";
 
@@ -46,7 +46,7 @@ export default {
     // Popper,
   },
   setup() {
-    const store = usePos();
+    const store = useOrderStore();
     const changeActiveOrderNumber = store.changeActiveOrderNumber;
     const aNumber = ref("");
     const cart = store.cart;

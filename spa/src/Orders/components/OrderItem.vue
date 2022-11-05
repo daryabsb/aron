@@ -70,11 +70,11 @@
 </template>
 
 <script setup>
-import { usePos } from "@/stores/pos";
+import { useOrderStore } from "@/Orders/ordersStore";
 import { defineProps } from "vue";
 import { PlusIcon, MinusIcon } from "@heroicons/vue/20/solid";
 
-const store = usePos();
+const store = useOrderStore();
 
 const addQty = store.addQty;
 

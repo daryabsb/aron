@@ -40,7 +40,7 @@
 
 <script setup>
 import { ref, defineAsyncComponent } from "vue";
-import { usePos } from "@/stores/pos";
+import { useOrderStore } from "@/Orders/ordersStore";
 import StoreOrderTopButtons from "@/Orders/components/StoreOrderTopButtons.vue";
 import OrderItem from "@/Orders/components/OrderItem.vue";
 
@@ -49,7 +49,7 @@ const id = ref(null);
 // const OrderItem = defineAsyncComponent(() =>
 //   import("@/components/store/orders/OrderItem.vue")
 // );
-const store = usePos();
+const store = useOrderStore();
 const activeNumber = ref(store.activeNumber);
 const useActiveOrder = ref(store.useActiveOrder);
 

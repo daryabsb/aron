@@ -34,12 +34,12 @@
 </template>
 
 <script setup>
-import { usePos } from "@/stores/pos";
+import { useOrderStore } from "@/Orders/ordersStore";
 
 import OrderItem from "@/components/pos/orders/OrderItem.vue";
 // import { products } from "./PlaceHolder";
 
-const store = usePos();
+const store = useOrderStore();
 const activeOrderNumber = store.activeNumber;
 const useActiveOrder = store.useActiveOrder;
 </script>
