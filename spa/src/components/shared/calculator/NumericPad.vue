@@ -144,7 +144,7 @@ export default {
     const clear = () => {
       memory.value = "";
       error.value = false;
-      context.emit("calculatorValue", memory);
+      context.emit("getValue", memory);
     };
     onBeforeUnmount(() => {
       keyboard.removeAllListeners();

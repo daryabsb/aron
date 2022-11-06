@@ -58,7 +58,7 @@
 </template>
 
 <script setup>
-import { ref, computed, defineEmits } from "vue";
+import { ref, computed, defineEmits, onMounted } from "vue";
 
 import { useOrderStore } from "@/Orders/ordersStore";
 import NumericPad from "@/components/shared/calculator/NumericPad.vue";
@@ -77,20 +77,22 @@ const selectedItem = computed({
     selectedItem.value.discount = value;
   },
 });
-// const selectItemInputText = () => {
-//   const itemDiscountInput = document.getElementById(selectedItem.value.id);
-//   if (!itemDiscountInput) return;
-//   itemDiscountInput.focus();
-//   itemDiscountInput.setSelectionRange(0, 3);
-// };
-// onMounted(selectItemInputText);
+const selectItemInputText = () => {
+  const itemDiscountInput = document.getElementById(selectedItem.value.id);
+  if (!itemDiscountInput) return;
+  itemDiscountInput.focus();
+  itemDiscountInput.setSelectionRange(0, 3);
+};
+onMounted(() => {
+  if (selectedItem.value) selectItemInputText();
+});
 
 const discountType = ref(0);
 const itemInputValue = ref(0);
 
 const toggleDiscountType = (type) => {
   discountType.value = type;
-  // selectItemInputText();
+  selectItemInputText();
 };
 
 const discountValue = (payload) => {

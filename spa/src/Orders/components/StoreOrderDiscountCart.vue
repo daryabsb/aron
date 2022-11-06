@@ -29,7 +29,7 @@
     </div>
     <div class="flex justify-center relative mt-6 text-xl w-full">
       <input
-        v-model="cartInputValue"
+        value="0"
         id="cart-discount-input"
         type="text"
         class="relative bg-inherit border-0 border-b-2 text-right pb-3 pr-10 items-center focus:outline-none focus:ring-0"
@@ -49,7 +49,7 @@
 </template>
 
 <script setup>
-import { ref, defineEmits } from "vue";
+import { ref, defineEmits, onMounted } from "vue";
 
 import { useOrderStore } from "@/Orders/ordersStore";
 import NumericPad from "@/components/shared/calculator/NumericPad.vue";
@@ -69,9 +69,11 @@ const selectCartInputText = () => {
   // discountInput.focus();
   cartDiscountInput.setSelectionRange(0, 3);
 };
+onMounted(selectCartInputText);
 
 const toggleDiscountType = (type) => {
-  type == "%" ? (discountType.value = 0) : (discountType.value = 1);
+  discountType.value = type;
+  selectCartInputText();
 };
 
 const discountValue = (payload) => {
