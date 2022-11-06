@@ -6,22 +6,22 @@
         <button
           class="rounded-l-lg w-20 bg-inherit border border-aronium-500"
           :class="
-            discountType === '%'
+            discountType === 0
               ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
               : 'bg-inherit  border-aronium-500'
           "
-          @click="toggleDiscountType('%')"
+          @click="toggleDiscountType(0)"
         >
           %
         </button>
         <button
           class="rounded-r-lg w-20 border"
           :class="
-            discountType === '$'
+            discountType === 1
               ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
               : 'bg-inherit  border-aronium-500'
           "
-          @click="toggleDiscountType('$')"
+          @click="toggleDiscountType(1)"
         >
           $
         </button>
@@ -37,7 +37,9 @@
 
       <!-- @input="addCartDiscount()" -->
       <label class="absolute ml-48 mt-2">
-        <span class="text-aronium-white">{{ discountType }}</span>
+        <span class="text-aronium-white">{{
+          discountType == 0 ? "%" : "$"
+        }}</span>
       </label>
     </div>
     <keep-alive>
@@ -57,7 +59,7 @@ const emit = defineEmits(["close"]);
 const store = useOrderStore();
 const useActiveOrder = ref(store.useActiveOrder);
 
-const discountType = ref("%");
+const discountType = ref(0);
 const cartInputValue = ref(0);
 
 const selectCartInputText = () => {
@@ -69,7 +71,7 @@ const selectCartInputText = () => {
 };
 
 const toggleDiscountType = (type) => {
-  discountType.value = type;
+  type == "%" ? (discountType.value = 0) : (discountType.value = 1);
 };
 
 const discountValue = (payload) => {

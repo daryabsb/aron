@@ -1,54 +1,66 @@
 <template>
-  <Grid
-    rows="4"
-    cols="4"
-    gap="2"
-    class="h-full w-full text-aronium-white sm:my-4 p-2 pt-2 sm:rounded-sm bg-inherit border border-aronium-500"
-  >
-    <!-- class="shadow-2xl w-full sm:max-w-md sm:h-auto sm:my-3 p-3 pt-12 sm:rounded-sm bg-inherit border border-aronium-500" -->
-    <!-- <Screen :text="memory" :error="error" class="col-span-6" /> -->
+  <modal size="md" @close="closePanel">
+    <template #title>
+      <h1 class="text-aronium-white">{{ memory || 0 }}</h1>
+    </template>
+    <template #content>
+      <div class="">
+        <Grid
+          rows="4"
+          cols="4"
+          gap="2"
+          class="h-full w-full text-aronium-white sm:my-4 p-2 pt-2 sm:rounded-sm bg-inherit border border-aronium-500"
+        >
+          <!-- class="shadow-2xl w-full sm:max-w-md sm:h-auto sm:my-3 p-3 pt-12 sm:rounded-sm bg-inherit border border-aronium-500" -->
+          <!-- <Screen :text="memory" :error="error" class="col-span-6" /> -->
 
-    <!-- <Button variant="transRed" class="col-span-2" @click="clear">Clear</Button> -->
+          <!-- <Button variant="transRed" class="col-span-2" @click="clear">Clear</Button> -->
 
-    <Button
-      v-for="number in ['1', '2', '3']"
-      :key="number"
-      variant="transparent"
-      @click="addDigit(number)"
-    >
-      {{ number }}
-    </Button>
-    <Button variant="transYellow" @click="eraseLast">Del</Button>
+          <Button
+            v-for="number in ['1', '2', '3']"
+            :key="number"
+            variant="transparent"
+            @click="addDigit(number)"
+          >
+            {{ number }}
+          </Button>
+          <Button variant="transYellow" @click="eraseLast">Del</Button>
 
-    <Button
-      v-for="number in ['4', '5', '6']"
-      :key="number"
-      variant="transparent"
-      @click="addDigit(number)"
-    >
-      {{ number }}
-    </Button>
-    <Button variant="transRed" @click="clear">Clr</Button>
+          <Button
+            v-for="number in ['4', '5', '6']"
+            :key="number"
+            variant="transparent"
+            @click="addDigit(number)"
+          >
+            {{ number }}
+          </Button>
+          <Button variant="transRed" @click="clear">Clr</Button>
 
-    <Button
-      v-for="number in ['7', '8', '9']"
-      :key="number"
-      variant="transparent"
-      @click="addDigit(number)"
-    >
-      {{ number }}
-    </Button>
-    <Button
-      variant="transparent"
-      class="row-start-3 col-start-4 inset-0 col-span-1 row-span-2"
-      @click="calculateResult"
-      >Ent</Button
-    >
-    <Button variant="transparent" class="col-span-2" @click="addDigit('0')"
-      >0</Button
-    >
-    <Button variant="transparent" @click="addDigit('.')">.</Button>
-  </Grid>
+          <Button
+            v-for="number in ['7', '8', '9']"
+            :key="number"
+            variant="transparent"
+            @click="addDigit(number)"
+          >
+            {{ number }}
+          </Button>
+          <Button
+            variant="transparent"
+            class="row-start-3 col-start-4 inset-0 col-span-1 row-span-2"
+            @click="calculateResult"
+            >Ent</Button
+          >
+          <Button
+            variant="transparent"
+            class="col-span-2"
+            @click="addDigit('0')"
+            >0</Button
+          >
+          <Button variant="transparent" @click="addDigit('.')">.</Button>
+        </Grid>
+      </div>
+    </template>
+  </modal>
 </template>
 
 <script>

@@ -141,13 +141,13 @@ export const useOrderStore = defineStore("orders", {
     calculateActiveOrderDiscount(total) {
       // console.log("total", total);
       // if (!this.useActiveOrder.value.discount) return 0;
-      // console.log((this.useActiveOrder.value.discount * total) / 100);
+      console.log(this.useActiveOrder.value.discountType);
       // const discountType = this.useActiveOrder.value.discountType;
-      // if (discountType !== 0) {
-      // return this.useActiveOrder.value.discount;
-      // } else {
-      return (this.useActiveOrder.value.discount * total) / 100;
-      // }
+      if (this.useActiveOrder.value.discountType === 0) {
+        return (this.useActiveOrder.value.discount * total) / 100;
+      } else {
+        return this.useActiveOrder.value.discount;
+      }
     },
   },
   getters: {
@@ -194,11 +194,7 @@ export const useOrderStore = defineStore("orders", {
         (total, item) => total + item.totalWithDsicount,
         0
       );
-      console.log(
-        "this.calculateActiveOrderDiscount(total)",
-        // !this.useActiveOrder.value.discountType
-        this.calculateActiveOrderDiscount(total)
-      );
+
       this.useActiveOrder.value.total =
         total - this.calculateActiveOrderDiscount(total);
       // this.useActiveOrder.value.total = total;
