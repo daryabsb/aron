@@ -61,19 +61,13 @@ isTaxOnItemTotal    Bool
   }
   get totalWithDsicount() {
     if (!this.discount) return this.totalWithTax;
-    if (this.discountType !== 0) return this.totalWithTax - this.discount;
-    let discountRate = this.discount / 100;
-    return this.totalWithTax * discountRate;
+    if (this.discountType === 0) {
+      let discountRate = (this.totalWithTax * this.discount) / 100;
+      return this.totalWithTax - discountRate;
+    }
+    return this.totalWithTax - this.discount;
   }
   get orderItemTotal() {
-    // console.log("Quantity: ", this.quantity, " X Price: ", this.product.price);
-    // console.log(
-    //   "itemTotalPrice: ",
-    //   this.itemTotalPrice,
-    //   " totalWithTax: ",
-    //   this.totalWithTax
-    // );
-    // console.log("totalWithDsicount: ", this.totalWithDsicount);
     return this.totalWithDsicount;
   }
 }

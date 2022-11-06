@@ -34,10 +34,11 @@
     </div>
     <div
       v-if="props.item.discount"
-      class="p-3 h-8 w-9 rounded-full bg-aronium-danger relative"
+      class="p-2 h-9 w-9 rounded-full bg-aronium-danger relative"
     >
-      <span class="absolute top-1 left-1 text-sm"
-        >{{ props.item.discount }}%</span
+      <span class="absolute top-2 left-1 text-xs"
+        >{{ props.item.discount
+        }}{{ props.item.discountType == 0 ? "%" : "$" }}</span
       >
     </div>
     <div class="ml-4 flex flex-shrink-0 space-x-4">
@@ -76,6 +77,6 @@ const store = useOrderStore();
 const addQty = store.addQty;
 
 const props = defineProps({
-  item: Object,
+  item: { type: Object, required: true },
 });
 </script>

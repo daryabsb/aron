@@ -41,23 +41,14 @@
   </div>
 </template>
 
-<script>
-import { ref, nextTick, reactive } from "vue";
-
+<script setup>
+import { defineProps } from "vue";
 import { priceFormat } from "@/store/composables";
-import { useOrderStore } from "@/Orders/ordersStore";
-export default {
-  components: {},
-  props: {
-    product: {
-      type: Object,
-      required: true,
-    },
+
+defineProps({
+  product: {
+    type: Object,
+    required: true,
   },
-  setup(prps) {
-    return {
-      priceFormat,
-    };
-  },
-};
+});
 </script>

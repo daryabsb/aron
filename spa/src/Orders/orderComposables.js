@@ -1,4 +1,6 @@
 import { computed } from "vue";
+import { useModals } from "@/stores/modals";
+const store = useModals();
 
 export const orderItemTotalPrice = (orderItem) => {
   let total;
@@ -13,8 +15,28 @@ export const calculateTax = (item) => {
   return item.total + taxRate;
 };
 
-const multiply = (a, b) => a * b;
-const divide = (a, b) => a / b;
-const subtract = (a, b) => a - b;
+export const getEvt = (key) => {
+  const F8 = "F8";
+  const F9 = "F9";
+  const F4 = "F4";
+  const Control = "Control";
+  const Escape = "Escape";
+  const defaultKey = "default";
 
-export const calculateItemDiscount = (item) => {};
+  const myKeys = {
+    [F8]: () => (store.openPaymentModal = true),
+    [F9]: () => (store.openCashModal = true),
+    [F4]: () => (store.openOrderDiscountModal = true),
+    [Control]: () => (store.searchModal = true),
+    [Escape]: () => {
+      store.openCashModal = false;
+      store.openPaymentModal = false;
+      store.searchModal = false;
+      store.openOrderDiscountModal = false;
+    },
+    [defaultKey]: () => {
+      "none";
+    },
+  };
+  return myKeys[key] || myKeys[defaultKey];
+};

@@ -34,15 +34,7 @@
             >
               <div>
                 <slot name="icon"></slot>
-                <!-- <div
-                  class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100"
-                >
-                
-                  <CheckIcon
-                    class="h-6 w-6 text-green-600"
-                    aria-hidden="true"
-                  />
-                </div> -->
+
                 <div class="mt-3 text-center sm:mt-5">
                   <DialogTitle as="h3">
                     <slot name="title"></slot>
@@ -72,12 +64,11 @@ import {
   TransitionChild,
   TransitionRoot,
 } from "@headlessui/vue";
-import { CheckIcon } from "@heroicons/vue/24/outline";
 const props = defineProps({
-  size: String,
+  size: { type: String, default: "md" },
 });
 const emit = defineEmits(["getValue"]);
-console.log("modal is run");
+
 const open = ref(true);
 const getValue = () => emit("getValue");
 </script>

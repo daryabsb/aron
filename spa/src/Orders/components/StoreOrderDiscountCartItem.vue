@@ -1,7 +1,12 @@
 <template>
   <div>
     <div v-if="!selectedItem" class="text-xl font-light w-full h-full">
-      Please select an item to add Item discount
+      <h1 class="text-xl text-aronium-white my-16">
+        Please select an item to add Item discount
+      </h1>
+      <div class="w-full">
+        <EmptyNumericPad />
+      </div>
     </div>
     <div v-else class="text-xl text-aronium-white font-light w-full h-full">
       This is a discount for " {{ selectedItem.product.name }} "
@@ -10,22 +15,22 @@
           <button
             class="rounded-l-lg w-20 bg-inherit border border-aronium-500"
             :class="
-              discountType === '%'
+              discountType === 0
                 ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
                 : 'bg-inherit  border-aronium-500'
             "
-            @click="toggleDiscountType('%')"
+            @click="toggleDiscountType(0)"
           >
             %
           </button>
           <button
             class="rounded-r-lg w-20 border"
             :class="
-              discountType === '$'
+              discountType === 1
                 ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
                 : 'bg-inherit  border-aronium-500'
             "
-            @click="toggleDiscountType('$')"
+            @click="toggleDiscountType(1)"
           >
             $
           </button>
@@ -35,13 +40,15 @@
       <div class="w-full flex justify-center mt-6 text-xl">
         <input
           :id="selectedItem.id"
-          v-model="itemInputValue"
+          value="0"
           type="text"
           class="relative bg-inherit border-0 border-b-2 text-right pb-3 pr-10 items-center focus:outline-none focus:ring-0"
-          @input="addItemDiscount(id)"
         />
+        <!-- @input="addItemDiscount(id)" -->
         <label class="absolute ml-48 mt-2">
-          <span class="text-aronium-white">{{ discountType }}</span>
+          <span class="text-aronium-white">{{
+            discountType == 0 ? "%" : "$"
+          }}</span>
         </label>
       </div>
 
@@ -55,6 +62,7 @@ import { ref, computed, defineEmits } from "vue";
 
 import { useOrderStore } from "@/Orders/ordersStore";
 import NumericPad from "@/components/shared/calculator/NumericPad.vue";
+import EmptyNumericPad from "@/components/shared/calculator/EmptyNumericPad.vue";
 
 const emit = defineEmits(["close"]);
 
@@ -69,18 +77,20 @@ const selectedItem = computed({
     selectedItem.value.discount = value;
   },
 });
+// const selectItemInputText = () => {
+//   const itemDiscountInput = document.getElementById(selectedItem.value.id);
+//   if (!itemDiscountInput) return;
+//   itemDiscountInput.focus();
+//   itemDiscountInput.setSelectionRange(0, 3);
+// };
+// onMounted(selectItemInputText);
 
-const discountType = ref("%");
+const discountType = ref(0);
 const itemInputValue = ref(0);
 
-const selectItemInputText = (id) => {
-  const itemDiscountInput = document.getElementById(id);
-  if (!itemDiscountInput) return;
-  itemDiscountInput.focus();
-  itemDiscountInput.setSelectionRange(0, 3);
-};
 const toggleDiscountType = (type) => {
   discountType.value = type;
+  // selectItemInputText();
 };
 
 const discountValue = (payload) => {

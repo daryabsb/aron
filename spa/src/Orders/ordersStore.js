@@ -29,7 +29,6 @@ export const useOrderStore = defineStore("orders", {
         tax: 0,
         total: 0,
       };
-      // order.number = uuid.v4();
       this.cart.push(order);
       this.changeActiveOrderNumber(number);
     },
@@ -50,14 +49,12 @@ export const useOrderStore = defineStore("orders", {
     },
 
     addToCart(orderItem) {
-      // console.log("from orderStore", orderItem.value);
       const index = this.useOrderItemIndex(orderItem.value);
 
       if (index === -1) {
         this.useActiveOrder.value.items.push(orderItem.value);
       } else {
         this.addQty(orderItem.value, (orderItem.value.quantity = 1), index);
-        // this.useActiveOrder.value.items[index].quantity += orderItem.quantity;
       }
 
       this.beep();
@@ -139,10 +136,6 @@ export const useOrderStore = defineStore("orders", {
       this.playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
     },
     calculateActiveOrderDiscount(total) {
-      // console.log("total", total);
-      // if (!this.useActiveOrder.value.discount) return 0;
-      console.log(this.useActiveOrder.value.discountType);
-      // const discountType = this.useActiveOrder.value.discountType;
       if (this.useActiveOrder.value.discountType === 0) {
         return (this.useActiveOrder.value.discount * total) / 100;
       } else {
@@ -182,7 +175,7 @@ export const useOrderStore = defineStore("orders", {
       if (!this.isActiveNumber.value) return 0;
       if (!this.isActiveOrderItems) return 0;
       return this.useActiveOrder.value.items.reduce(
-        (total, item) => total + item.totalWithTax,
+        (total, item) => total + item.totalWithDsicount,
         0
       );
     },
@@ -197,7 +190,6 @@ export const useOrderStore = defineStore("orders", {
 
       this.useActiveOrder.value.total =
         total - this.calculateActiveOrderDiscount(total);
-      // this.useActiveOrder.value.total = total;
       return computed(() => this.useActiveOrder.value.total);
     },
     submitable(state) {
