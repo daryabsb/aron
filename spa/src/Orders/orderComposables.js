@@ -2,6 +2,15 @@ import { computed } from "vue";
 import { useModals } from "@/stores/modals";
 const store = useModals();
 
+export const numberFormat = (number) => {
+  return number.toString();
+  // .replace(/^0|\./g)
+  // .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+};
+export const priceFormat = (number) => {
+  return computed(() => (number ? ` ${number} IQD` : ""));
+};
+
 export const orderItemTotalPrice = (orderItem) => {
   let total;
   if (!orderItem.discount && !orderItem.tax)

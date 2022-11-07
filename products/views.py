@@ -1,4 +1,5 @@
 from rest_framework import permissions, viewsets
+from itertools import chain
 # from django.db.models import Q
 from core.models import Barcode, Product, ProductGroup, Stock
 from .serializers import (
@@ -64,17 +65,34 @@ class ProductGroupViewset(viewsets.ModelViewSet):
     queryset = ProductGroup.objects.all()
     permission_classes = (permissions.IsAuthenticated,)
 
-    # def get_queryset(self):
-    #     queryset = ProductGroup.objects.all()
+    def get_queryset(self):
+        queryset = ProductGroup.objects.all()
 
-    #     # PERFORM FILTER BY SEARCH INPUT
-    #     # conditions = Q()
-    #     children = self.request.query_params.get("children", None)
-    #     # print(keywords)
-    #     if children:
-    #         queryset = Product.objects.filter(parent_group=id)
+        parent_id = self.kwargs.get('pk', None)
 
-    #     return queryset
+        if parent_id:
+            children = ProductGroup.objects.filter(parent_group=parent_id)
+            products = Product.objects.filter(product_group=parent_id)
+
+            queryset = chain(children, products)
+            print(type(queryset))
+            return {children: children, products: products}
+            # # children_products = Product.objects.filter(parent_group=)
+            # for child in children:
+            #     my_list.append(child)
+            #     for product in products:
+            #         my_list.append(product)
+
+            # for my in my_list:
+            #     print(type(my))
+        # PERFORM FILTER BY SEARCH INPUT
+        # conditions = Q()
+        # children = self.request.query_params.get("children", None)
+        # print(keywords)
+        # if children:
+        #     queryset = Product.objects.filter(parent_group=id)
+
+        return queryset
 
     def perform_create(self, serializer):
         """Create a new product group"""
