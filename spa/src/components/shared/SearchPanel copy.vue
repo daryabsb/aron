@@ -1,6 +1,6 @@
 <template>
   <TransitionRoot :show="open" as="template" @after-leave="query = ''" appear>
-    <Dialog as="div" class="relative z-10" @close="$emit('close')">
+    <Dialog as="div" class="relative z-10" @close="open = false">
       <TransitionChild
         as="template"
         enter="ease-out duration-300"
@@ -11,7 +11,7 @@
         leave-to="opacity-0"
       >
         <div
-          class="fixed inset-0 bg-aronium-900 bg-opacity-90 transition-opacity"
+          class="fixed inset-0 bg-gray-500 bg-opacity-25 transition-opacity"
         />
       </TransitionChild>
 
@@ -26,24 +26,24 @@
           leave-to="opacity-0 scale-95"
         >
           <DialogPanel
-            class="mx-auto h-full w-full transform divide-y divide-aronium-500 overflow-hidden rounded-sm bg-aronium-900 border border-aronium-500 z-50 shadow-2xl ring-1 ring-black ring-opacity-5 transition-all"
+            class="mx-auto max-w-3xl transform divide-y divide-gray-100 overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black ring-opacity-5 transition-all"
           >
             <Combobox v-slot="{ activeOption }" @update:modelValue="onSelect">
               <div class="relative">
                 <MagnifyingGlassIcon
-                  class="pointer-events-none absolute top-3.5 left-4 h-5 w-5 text-aronium-white"
+                  class="pointer-events-none absolute top-3.5 left-4 h-5 w-5 text-gray-400"
                   aria-hidden="true"
                 />
                 <ComboboxInput
-                  class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-aronium-white placeholder-aronium-500 focus:ring-0 sm:text-sm"
+                  class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-gray-800 placeholder-gray-400 focus:ring-0 sm:text-sm"
                   placeholder="Search..."
                   @change="query = $event.target.value"
                 />
               </div>
 
               <ComboboxOptions
-                v-if="query === '' || filteredProducts.length > 0"
-                class="flex divide-x divide-aronium-500"
+                v-if="query === '' || filteredPeople.length > 0"
+                class="flex divide-x divide-gray-100"
                 as="div"
                 static
                 hold
@@ -56,13 +56,13 @@
                 >
                   <h2
                     v-if="query === ''"
-                    class="mt-2 mb-4 text-xs font-semibold text-aronium-white"
+                    class="mt-2 mb-4 text-xs font-semibold text-gray-500"
                   >
                     Recent searches
                   </h2>
-                  <div hold class="-mx-2 text-sm text-aronium-white">
+                  <div hold class="-mx-2 text-sm text-gray-700">
                     <ComboboxOption
-                      v-for="person in query === '' ? recent : filteredProducts"
+                      v-for="person in query === '' ? recent : filteredPeople"
                       :key="person.id"
                       :value="person"
                       as="template"
@@ -70,8 +70,8 @@
                     >
                       <div
                         :class="[
-                          'group flex cursor-default select-none items-center rounded-sm p-2 hover:text-pink-700',
-                          active && 'bg-aronium-100 text-pink-700',
+                          'group flex cursor-default select-none items-center rounded-md p-2',
+                          active && 'bg-gray-100 text-gray-900',
                         ]"
                       >
                         <img
@@ -84,7 +84,7 @@
                         }}</span>
                         <ChevronRightIcon
                           v-if="active"
-                          class="ml-3 h-5 w-5 flex-none text-aronium-white"
+                          class="ml-3 h-5 w-5 flex-none text-gray-400"
                           aria-hidden="true"
                         />
                       </div>
@@ -94,7 +94,7 @@
 
                 <div
                   v-if="activeOption"
-                  class="hidden h-96 w-1/2 flex-none flex-col divide-y divide-aronium-500 overflow-y-auto sm:flex"
+                  class="hidden h-96 w-1/2 flex-none flex-col divide-y divide-gray-100 overflow-y-auto sm:flex"
                 >
                   <div class="flex-none p-6 text-center">
                     <img
@@ -102,39 +102,37 @@
                       alt=""
                       class="mx-auto h-16 w-16 rounded-full"
                     />
-                    <h2 class="mt-3 font-semibold text-aronium-white">
+                    <h2 class="mt-3 font-semibold text-gray-900">
                       {{ activeOption.name }}
                     </h2>
-                    <p class="text-sm leading-6 text-aronium-white">
+                    <p class="text-sm leading-6 text-gray-500">
                       {{ activeOption.role }}
                     </p>
                   </div>
                   <div class="flex flex-auto flex-col justify-between p-6">
                     <dl
-                      class="grid grid-cols-1 gap-x-6 gap-y-3 text-sm text-aronium-white"
+                      class="grid grid-cols-1 gap-x-6 gap-y-3 text-sm text-gray-700"
                     >
-                      <dt class="col-end-1 font-semibold text-aronium-white">
+                      <dt class="col-end-1 font-semibold text-gray-900">
                         Phone
                       </dt>
                       <dd>{{ activeOption.phone }}</dd>
-                      <dt class="col-end-1 font-semibold text-aronium-white">
-                        URL
-                      </dt>
+                      <dt class="col-end-1 font-semibold text-gray-900">URL</dt>
                       <dd class="truncate">
                         <a
                           :href="activeOption.url"
-                          class="text-pink-700 underline"
+                          class="text-indigo-600 underline"
                         >
                           {{ activeOption.url }}
                         </a>
                       </dd>
-                      <dt class="col-end-1 font-semibold text-aronium-white">
+                      <dt class="col-end-1 font-semibold text-gray-900">
                         Email
                       </dt>
                       <dd class="truncate">
                         <a
                           :href="`mailto:${activeOption.email}`"
-                          class="text-pink-700 underline"
+                          class="text-indigo-600 underline"
                         >
                           {{ activeOption.email }}
                         </a>
@@ -142,7 +140,7 @@
                     </dl>
                     <button
                       type="button"
-                      class="mt-6 w-full rounded-md border border-transparent bg-pink-700 py-2 px-4 text-sm font-medium text-aronium-white shadow-sm hover:bg-pink-900 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+                      class="mt-6 w-full rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     >
                       Send message
                     </button>
@@ -151,7 +149,7 @@
               </ComboboxOptions>
 
               <div
-                v-if="query !== '' && filteredProducts.length === 0"
+                v-if="query !== '' && filteredPeople.length === 0"
                 class="py-14 px-6 text-center text-sm sm:px-14"
               >
                 <UsersIcon
@@ -241,7 +239,7 @@ const recent = [people[0], people[3], people[1], people[2]];
 
 const open = ref(true);
 const query = ref("");
-const filteredProducts = computed(() =>
+const filteredPeople = computed(() =>
   query.value === ""
     ? []
     : people.filter((person) => {

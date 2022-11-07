@@ -11,81 +11,73 @@
       @close="close"
       @get-value="getQuantity"
     ></numeric-pad>
-    <div
-      class="overflow-auto scrollbar mt-5 px-3 grid phone:grid-cols-1 tablet:grid-cols-6 xl:grid-cols-8 gap-3"
-    >
-      <div
-        v-if="id"
-        class="col-span-1 rounded-sm bg-white px-4 py-5 shadow sm:p-6"
-        @click="back"
+    <div class="overflow-auto scrollbar mt-5 px-3">
+      <ul
+        role="list"
+        class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
       >
-        <dt class="truncate text-sm font-medium text-gray-500">
-          <ChevronDoubleLeftIcon />
-        </dt>
-      </div>
-
-      <template
-        v-for="item in id ? selectedGroup.groups : parents"
-        :key="item.id"
-      >
-        <Suspense>
-          <template #default>
-            <div
-              class="h-32 border border-aronium-500 w-full col-span-1 flex flex-col items-center justify-center rounded-sm shadow"
-              @click="selectGroup(item.id)"
-            >
+        <li
+          role="button"
+          v-for="item in people"
+          :key="item.email"
+          class="col-span-1 flex flex-col divide-y divide-aronium-500 rounded-sm bg-aronium-700 border border-aronium-500 text-center shadow"
+          @click="selectItem(item)"
+        >
+          <div class="flex flex-1 flex-col p-4">
+            <img
+              class="mx-auto h-32 w-32 flex-shrink-0 rounded-sm"
+              :src="item.image"
+              alt=""
+            />
+            <h3 class="mt-4 text-sm font-medium text-aronium-white">
+              {{ item.name }}
+            </h3>
+            <dl class="mt-1 flex flex-grow flex-col justify-between">
+              <dt class="sr-only">Title</dt>
+              <dd class="text-sm text-gray-500">{{ item.title }}</dd>
+            </dl>
+          </div>
+          <div>
+            <div class="-mt-px flex divide-x divide-aronium-500">
               <div
-                v-if="item.image"
-                class="h-20 w-full flex justify-center items-center mb-2"
+                class="flex w-0 flex-1 text-aronium-white hover:text-pink-700"
               >
-                <img
-                  class="object-contain h-20"
-                  :src="item.image"
-                  :alt="item.name"
-                />
-              </div>
-              <div v-else class="flex justify-center items-center">
-                {{ item.name }}
+                <a
+                  :href="`mailto:${item.email}`"
+                  class="relative -mr-px inline-flex w-0 flex-1 items-center justify-center rounded-bl-sm border border-transparent py-2 text-sm font-medium"
+                >
+                  <EnvelopeIcon class="h-5 w-5" aria-hidden="true" />
+                  <span class="ml-3">Email</span>
+                </a>
               </div>
               <div
-                v-if="item.image"
-                class="truncate text-sm font-medium text-gray-500"
+                class="-ml-px flex w-0 flex-1 text-aronium-white hover:text-pink-700"
               >
-                {{ item.name }}
+                <a
+                  :href="`tel:${item.telephone}`"
+                  class="relative inline-flex w-0 flex-1 items-center justify-center rounded-br-sm border border-transparent py-2 text-sm font-medium"
+                >
+                  <PhoneIcon class="h-5 w-5" aria-hidden="true" />
+                  <span class="ml-3">Call</span>
+                </a>
               </div>
             </div>
-          </template>
-          <template #fallback>
-            Loading
-          </template>
-        </Suspense>
-      </template>
-      <template v-for="item in id ? selectedGroupProducts : []" :key="item.id">
-        <div
-          v-if="selectedGroupProducts.length > 0"
-          class="relative col-span-1 shadow"
-        >
-          <product-single-item
-            :product="item"
-            @click="createOrder(item)"
-          ></product-single-item>
-        </div>
-      </template>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, defineAsyncComponent } from "vue";
-import { ChevronDoubleLeftIcon } from "@heroicons/vue/24/outline";
-import NumericPad from "@/components/shared/calculator/NumericPad.vue";
-
+import { ref, computed, onMounted, defineAsyncComponent } from "vue";
 import OrderItem from "@/Orders/OrderItem";
+import NumericPad from "@/components/shared/calculator/NumericPad.vue";
 
 import productsGroupsAPI from "@/services/productsGroupsAPI";
 import { useOrderStore } from "@/Orders/ordersStore";
 import { useFetch } from "@/stores/fetch";
-import { onMounted } from "@vue/runtime-core";
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/vue/20/solid";
 
 const pos = useOrderStore();
 const addToCart = pos.addToCart;
@@ -98,7 +90,6 @@ const store = useFetch();
 onMounted(store.fetchGroups);
 const productGroups = ref([]);
 const selectedGroupProducts = ref([]);
-// const productGroups = store.productGroups.length > 0 ? store.productGroups : [];
 
 const loadProductGroups = async () => {
   try {
@@ -202,4 +193,160 @@ const getValue = (value) => {
   console.log(value);
   close();
 };
+
+const selectItem = (item) => console.log(item);
+
+const people = [
+  {
+    id: 1,
+    name: "Groceries",
+
+    is_parent: true,
+    color: "Transparent",
+    image:
+      "http://127.0.0.1:8000/media/uploads/productgroup/7cca1bc0-c167-4672-98e3-35db6f5840e6.jpg",
+    rank: 0,
+    created: "2022-09-13T19:46:50.013689Z",
+    updated: "2022-09-13T19:46:50.013689Z",
+  },
+  {
+    id: 1,
+    name: "Groceries",
+    parent_group: null,
+    groups: [
+      {
+        id: 2,
+        name: "Vegetables",
+      },
+      {
+        id: 3,
+        name: "Fruit",
+      },
+    ],
+    title: "Paradigm",
+    role: "==>",
+    email: "janecooper@example.com",
+    telephone: "+1-202-555-0170",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  },
+  {
+    name: "Jane Cooper",
+    title: "Paradigm",
+    role: "Admin",
+    email: "janecooper@example.com",
+    telephone: "+1-202-555-0170",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  },
+  {
+    name: "Jane Cooper",
+    title: "Paradigm",
+    role: "Admin",
+    email: "janecooper@example.com",
+    telephone: "+1-202-555-0170",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  },
+  {
+    name: "Jane Cooper",
+    title: "Paradigm",
+    role: "Admin",
+    email: "janecooper@example.com",
+    telephone: "+1-202-555-0170",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  },
+  {
+    name: "Jane Cooper",
+    title: "Paradigm",
+    role: "Admin",
+    email: "janecooper@example.com",
+    telephone: "+1-202-555-0170",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  },
+  {
+    name: "Jane Cooper",
+    title: "Paradigm",
+    role: "Admin",
+    email: "janecooper@example.com",
+    telephone: "+1-202-555-0170",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  },
+  {
+    name: "Jane Cooper",
+    title: "Paradigm",
+    role: "Admin",
+    email: "janecooper@example.com",
+    telephone: "+1-202-555-0170",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  },
+  {
+    name: "Jane Cooper",
+    title: "Paradigm",
+    role: "Admin",
+    email: "janecooper@example.com",
+    telephone: "+1-202-555-0170",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  },
+  {
+    name: "Jane Cooper",
+    title: "Paradigm",
+    role: "Admin",
+    email: "janecooper@example.com",
+    telephone: "+1-202-555-0170",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  },
+  {
+    name: "Jane Cooper",
+    title: "Paradigm",
+    role: "Admin",
+    email: "janecooper@example.com",
+    telephone: "+1-202-555-0170",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  },
+  {
+    name: "Jane Cooper",
+    title: "Paradigm",
+    role: "Admin",
+    email: "janecooper@example.com",
+    telephone: "+1-202-555-0170",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  },
+  {
+    name: "Jane Cooper",
+    title: "Paradigm",
+    role: "Admin",
+    email: "janecooper@example.com",
+    telephone: "+1-202-555-0170",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  },
+  {
+    name: "Jane Cooper",
+    title: "Paradigm",
+    role: "Admin",
+    email: "janecooper@example.com",
+    telephone: "+1-202-555-0170",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  },
+  {
+    name: "Jane Cooper",
+    title: "Paradigm",
+    role: "Admin",
+    email: "janecooper@example.com",
+    telephone: "+1-202-555-0170",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  },
+  // More people...
+];
 </script>

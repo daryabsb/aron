@@ -78,7 +78,7 @@
     >
       <ul class="flex text-sm mr-3">
         <li
-          v-for="item in posHeaderItems"
+          v-for="item in storeHeaderItems"
           :key="item.id"
           class="font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0"
           @click="item.submit($emit, item.title)"
@@ -157,7 +157,7 @@
 
 <script>
 import { ref } from "vue";
-import { posHeaderItems } from "@/composables/staticData";
+import { storeHeaderItems } from "@/Orders/orderStaticData";
 import { useCart } from "@/store/composables";
 import { useModals } from "@/stores/modals";
 import { useOrderStore } from "@/Orders/ordersStore";
@@ -193,7 +193,7 @@ export default {
     // };
     const saveSale = () => console.log("Sale saved!");
     return {
-      posHeaderItems,
+      storeHeaderItems,
       paymentModal,
       cashModal,
       orderDiscountModal,

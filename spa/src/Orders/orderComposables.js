@@ -27,7 +27,7 @@ export const getEvt = (key) => {
     [F8]: () => (store.openPaymentModal = true),
     [F9]: () => (store.openCashModal = true),
     [F4]: () => (store.openOrderDiscountModal = true),
-    [Control]: () => (store.searchModal = true),
+    [Control]: () => (store.searchModal = !store.searchModal),
     [Escape]: () => {
       store.openCashModal = false;
       store.openPaymentModal = false;

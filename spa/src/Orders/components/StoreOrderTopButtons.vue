@@ -1,6 +1,6 @@
 <template>
   <div
-    class="phone:hidden p-2 text-aronium-white md:grid grid-cols-1 gap-2 sm:grid-cols-4"
+    class="phone:hidden p-2 text-aronium-white md:grid grid-cols-1 gap-2 sm:grid-cols-3"
   >
     <div
       class="py-3 border border-aronium-500 flex justify-center items-center hover:bg-pink-600"
@@ -23,7 +23,7 @@
       </button>
     </div>
     <div
-      class="py-3 border border-aronium-500 flex justify-center items-center hover:bg-pink-600"
+      class="grow py-3 border border-aronium-500 flex justify-center items-center hover:bg-pink-600"
     >
       <Popper arrow>
         <button
@@ -55,18 +55,6 @@
           </div>
         </template>
       </Popper>
-    </div>
-
-    <div
-      class="py-3 border border-aronium-500 flex justify-center items-center hover:bg-pink-600"
-    >
-      <button
-        role="button"
-        class="mt-1 px-2 text-sm font-semibold tracking-tight"
-        @click="createCart"
-      >
-        New order
-      </button>
     </div>
   </div>
   <!-- <pre>

@@ -13,7 +13,8 @@ class ProductSerializer(serializers.ModelSerializer):
                   "is_service", "is_using_default_quantity", "cost", "margin",
                   "image", "color", "is_enabled", "measurement_unit", "plu",
                   "last_purchase_price", "rank", "user", "product_group",
-                  "currency", "stock_quantity",)
+                  "currency", "stock_quantity", "created", "updated")
+        read_only_fields = ("id",)
 
     def get_stock_quantity(self, obj):
         if Stock.objects.filter(product=obj.id).exists():
