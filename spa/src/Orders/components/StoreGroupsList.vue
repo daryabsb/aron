@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pb-24">
     <!-- <numeric-pad @close="close" @get-value="getValue"></numeric-pad> -->
     <numeric-pad
       v-if="isCheckPriceOpen"

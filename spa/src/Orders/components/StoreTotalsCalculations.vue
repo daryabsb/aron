@@ -1,7 +1,7 @@
 <template>
   <div>
     <dl
-      class="grid grid-cols-1 divide-y divide-aronium-500 overflow-hidden rounded-lg bg-aronium-900 shadow md:grid-cols-3 md:divide-y-0 md:divide-x"
+      class="grid grid-cols-1 divide-y divide-aronium-500 overflow-hidden rounded-lg bg-aronium-900 shadow md:grid-cols-4 md:divide-y-0 md:divide-x"
     >
       <div
         v-for="item in stats"
@@ -56,30 +56,40 @@ import { ref, computed } from "vue";
 import { useOrderStore } from "@/Orders/ordersStore";
 const store = useOrderStore();
 
+const activeOrder = store.useActiveOrder.value;
+
 const totalBeforeTax = computed(() => store.subTotalBeforeTax);
+const totalBeforeDiscount = computed(() => store.subTotalBeforeDiscount);
 const total = computed(() => store.totalPrice);
-const totalTax = store.useActiveOrder.value.tax;
+const totalTax = activeOrder.tax;
 
 const stats = ref([
   {
     name: "Total before tax",
     stat: totalBeforeTax,
     value: totalBeforeTax,
-    change: "12%",
+    variant: false,
     changeType: "increase",
   },
   {
     name: "Total tax",
     stat: totalTax,
     value: totalTax,
-    change: "2.02%",
+    variant: false,
     changeType: "increase",
+  },
+  {
+    name: "Total",
+    stat: totalBeforeDiscount,
+    value: totalBeforeDiscount,
+    variant: activeOrder.discount ? true : false,
+    changeType: "decrease",
   },
   {
     name: "Total",
     stat: total,
     value: total,
-    change: "4.05%",
+    variant: false,
     changeType: "decrease",
   },
 ]);
