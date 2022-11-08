@@ -33,9 +33,10 @@
             @select-item="selectGroup(group.id)"
           />
           <StoreGroupListItem
-            v-for="group in selectedGroupProducts.groups"
+            v-for="group in selectedGroupProducts"
             :key="group.id"
             :item="group"
+            @add-to-cart="createOrder, item"
             @back="removeId"
             @select-item="selectGroup(group.id)"
           />
@@ -90,10 +91,11 @@ const loadProductGroups = async () => {
 onMounted(loadProductGroups);
 const id = computed(() => ids.value[ids.value.length - 1]);
 
-const loadProductsByGroupId = async () => {
+const loadProductsByGroupId = async (groupId) => {
   try {
     const response = await productsGroupsAPI.filterGroups(id.value);
     selectedGroupProducts.value = response.data;
+    console.log("selectedGroupProducts.value", selectedGroupProducts.value);
   } catch (error) {
     console.log(error);
   }
@@ -102,11 +104,11 @@ const selectGroup = async (groupId) => {
   // if (id.value) id.value = 0;
   ids.value.push(groupId);
 
-  // await loadProductGroups();
+  await loadProductsByGroupId();
 };
-onUpdated(() => loadProductsByGroupId());
-const removeId = () => {
+const removeId = async () => {
   ids.value.splice(-1);
+  await loadProductsByGroupId();
 };
 
 // const parents = computed(() =>

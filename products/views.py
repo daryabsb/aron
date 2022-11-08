@@ -12,6 +12,7 @@ from .serializers import (
     ProductSerializer,
     ProductsGroupSerializer,
     StockSerializer,
+    CommonSerializer,
 )
 
 
@@ -75,32 +76,45 @@ class ProductViewset(viewsets.ModelViewSet):
 
 
 class ProductGroupViewset(viewsets.ModelViewSet):
-    serializer_class = ProductsGroupSerializer
+    # serializer_class = ProductsGroupSerializer
+    serializer_class = CommonSerializer
     queryset = ProductGroup.objects.all()
     permission_classes = (permissions.IsAuthenticated,)
 
     def get_queryset(self):
         queryset = ProductGroup.objects.filter(parent_group=None)
 
-        # parent_id = self.kwargs.get('pk', None)
+        # kwarg_id = self.kwargs.get('pk', None)
         parent_id = self.request.query_params.get('group', None)
 
         if parent_id:
+
             # queryset = ProductGroup.objects.filter(parent_group=parent_id)
             # group = ProductGroup.objects.get(id=parent_id)
             # queryset |= ProductGroup.objects.filter(parent_group=group.id)
             children = ProductGroup.objects.filter(parent_group=parent_id)
-            products = Product.objects.filter(product_group=parent_id)
+            products = Product.objects.filter(parent_group=parent_id)
             queryset = chain(children, products)
-            # for el in queryset:
-            #     print(el)
+            print(queryset)
             # products = Product.objects.filter(product_group=parent_id)
 
             return queryset
-        '''
 
-        '''
+        # elif kwarg_id:
+        #     queryset = ProductGroup.objects.filter(pk=kwarg_id)
+
+        #     return queryset
+            '''
+
+            '''
         return queryset
+
+    # def get_serializer_class(self):
+    #     obj = self.get_object()
+    #     # is_product =  or None
+    #     if obj.is_product:
+    #         return ProductSerializer
+    #     return ProductsGroupSerializer
 
     def perform_create(self, serializer):
         """Create a new product group"""

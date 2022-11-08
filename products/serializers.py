@@ -5,7 +5,6 @@ from django.shortcuts import get_object_or_404
 
 class ProductSerializer(serializers.ModelSerializer):
     stock_quantity = serializers.SerializerMethodField()
-    parent_group = serializers.SerializerMethodField()
 
     class Meta:
         model = Product
@@ -13,8 +12,9 @@ class ProductSerializer(serializers.ModelSerializer):
                   "price", "is_tax_inclusive_price", "is_price_change_allowed",
                   "is_service", "is_using_default_quantity", "cost", "margin",
                   "image", "color", "is_enabled", "measurement_unit", "plu",
-                  "last_purchase_price", "rank", "user", "product_group", "parent_group",
-                  "currency", "stock_quantity", "created", "updated")
+                  "last_purchase_price", "rank", "user", "parent_group",
+                  "is_product", "currency", "stock_quantity", "created",
+                  "updated")
         read_only_fields = ("id",)
 
     def get_stock_quantity(self, obj):
@@ -24,10 +24,6 @@ class ProductSerializer(serializers.ModelSerializer):
         # if stock:
             return stock.quantity
         return 0
-
-    def get_parent_group(self, obj):
-
-        return obj.product_group
 
 
 class BarcodeSerializer(serializers.ModelSerializer):
@@ -77,6 +73,8 @@ class ProductsGroupSerializer(serializers.ModelSerializer):
             "parent_group",
             "groups",
             "is_parent",
+            "is_product",
+
             "color",
             "image",
             "rank",
@@ -91,3 +89,17 @@ class ProductsGroupSerializer(serializers.ModelSerializer):
 
     def get_is_parent(self, obj):
         return obj.parent_group is None
+
+
+class CommonSerializer(serializers.Serializer):
+
+    @classmethod
+    def get_serializer(cls, model):
+        if model == Product:
+            return ProductSerializer
+        elif model == ProductGroup:
+            return ProductsGroupSerializer
+
+    def to_representation(self, instance):
+        serializer = self.get_serializer(instance.__class__)
+        return serializer(instance, context=self.context).data

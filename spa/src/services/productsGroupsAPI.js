@@ -8,6 +8,6 @@ export default {
     return API().get(`/product/all/?group=${groupId}`);
   },
   filterGroups(id) {
-    return API().get(`/product/groups/${id}/`);
+    return API().get(`/product/groups/?group=${id}`);
   },
 };
