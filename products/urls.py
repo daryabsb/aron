@@ -12,7 +12,7 @@ from .views import (
 router = routers.DefaultRouter()
 
 router.register("all", ProductViewset)
-router.register("groups", ProductGroupViewset,basename='group')
+router.register("groups", ProductGroupViewset)
 router.register("barcodes", BarcodeViewset)
 router.register("stocks", StockViewset)
 

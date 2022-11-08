@@ -69,9 +69,11 @@ class ProductViewset(viewsets.ModelViewSet):
 #         group = ProductsGroupSerializer(ProductGroup.objects.get(pk=pk)).data
 #         # children = ProductsGroupSerializer(ProductGroup.objects.filter(parent_group=pk))
 #         products = ProductSerializer(Product.objects.filter(product_group=pk)).data
-        
+
 #         # print(Response([group, children,products], status=status.HTTP_200_OK))
 #         return Response([group,products], status=status.HTTP_200_OK)
+
+
 class ProductGroupViewset(viewsets.ModelViewSet):
     serializer_class = ProductsGroupSerializer
     queryset = ProductGroup.objects.all()
@@ -80,32 +82,33 @@ class ProductGroupViewset(viewsets.ModelViewSet):
     def get_queryset(self):
         queryset = ProductGroup.objects.filter(parent_group=None)
 
-        parent_id = self.kwargs.get('pk', None)
+        # parent_id = self.kwargs.get('pk', None)
+        parent_id = self.request.query_params.get('group', None)
 
         if parent_id:
-            queryset = ProductGroup.objects.none()
-            group = ProductGroup.objects.get(id=parent_id)
-            queryset |= ProductGroup.objects.filter(parent_group=group.id)
+            # queryset = ProductGroup.objects.filter(parent_group=parent_id)
             # group = ProductGroup.objects.get(id=parent_id)
-            # children = ProductGroup.objects.filter(parent_group=parent_id)
+            # queryset |= ProductGroup.objects.filter(parent_group=group.id)
+            children = ProductGroup.objects.filter(parent_group=parent_id)
+            products = Product.objects.filter(product_group=parent_id)
+            queryset = chain(children, products)
+            # for el in queryset:
+            #     print(el)
             # products = Product.objects.filter(product_group=parent_id)
 
-
-
-
-            
             return queryset
+        '''
 
-
-
+        '''
         return queryset
-        
+
     def perform_create(self, serializer):
         """Create a new product group"""
 
         print("serializer", serializer)
         serializer.save(user=self.request.user)
-   
+
+
 '''
         conditions = Q()
         id = self.kwargs.get('pk', None)
@@ -177,6 +180,8 @@ class BarcodeViewset(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         """Create a new Barcode"""
         serializer.save(user=self.request.user)
+
+
 '''
 # from django.http import JsonResponse
 # class ProductGroupViewset(viewsets.ViewSet):

@@ -5,6 +5,7 @@ from django.shortcuts import get_object_or_404
 
 class ProductSerializer(serializers.ModelSerializer):
     stock_quantity = serializers.SerializerMethodField()
+    parent_group = serializers.SerializerMethodField()
 
     class Meta:
         model = Product
@@ -12,7 +13,7 @@ class ProductSerializer(serializers.ModelSerializer):
                   "price", "is_tax_inclusive_price", "is_price_change_allowed",
                   "is_service", "is_using_default_quantity", "cost", "margin",
                   "image", "color", "is_enabled", "measurement_unit", "plu",
-                  "last_purchase_price", "rank", "user", "product_group",
+                  "last_purchase_price", "rank", "user", "product_group", "parent_group",
                   "currency", "stock_quantity", "created", "updated")
         read_only_fields = ("id",)
 
@@ -23,6 +24,10 @@ class ProductSerializer(serializers.ModelSerializer):
         # if stock:
             return stock.quantity
         return 0
+
+    def get_parent_group(self, obj):
+
+        return obj.product_group
 
 
 class BarcodeSerializer(serializers.ModelSerializer):

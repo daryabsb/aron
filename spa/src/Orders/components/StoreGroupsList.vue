@@ -16,138 +16,37 @@
         role="list"
         class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
       >
-        <li
-          v-for="item in ids.length > 0
-            ? [
-                ...selectedGroupProducts.group,
-                ...selectedGroupProducts.groups,
-                ...selectedGroupProducts.products,
-              ]
-            : productGroups"
-          :key="item.name"
-          role="button"
-          class="col-span-1 flex flex-col divide-y divide-aronium-500 rounded-sm bg-aronium-700 border border-aronium-500 text-center shadow"
-        >
-          <div class="flex flex-1 flex-col p-4">
-            <img
-              v-if="item.image"
-              class="mx-auto h-32 w-32 flex-shrink-0 rounded-sm"
-              :src="item.image"
-              alt=""
-            />
-            <img
-              v-else
-              class="mx-auto h-32 w-32 flex-shrink-0 rounded-sm"
-              src="http://127.0.0.1:8000/media/uploads/product/product.jpg"
-              alt=""
-            />
-
-            <h3 class="mt-4 text-sm font-medium text-aronium-white">
-              {{ item.name }}
-            </h3>
-            <dl class="mt-1 flex flex-grow flex-col justify-between">
-              <dt class="sr-only">Title</dt>
-              <dd class="text-sm text-gray-500">
-                {{ item.price ? `${item.price}  IQD` : "" }}
-              </dd>
-            </dl>
-          </div>
-          <div>
-            <div class="-mt-px flex divide-x divide-aronium-500">
-              <div
-                v-if="ids.length > 0"
-                class="flex w-0 flex-1 text-aronium-white hover:text-pink-700"
-                @click="removeId"
-              >
-                <a
-                  href="#"
-                  class="relative -mr-px inline-flex w-0 flex-1 items-center justify-center rounded-bl-sm border border-transparent py-2 text-sm font-medium"
-                >
-                  <ArrowLeftIcon class="h-5 w-5" aria-hidden="true" />
-                  <span class="ml-3">Back</span>
-                </a>
-              </div>
-              <div
-                class="-ml-px flex w-0 flex-1 text-aronium-white hover:text-pink-700"
-                @click="selectItem(item)"
-              >
-                <a
-                  href="#"
-                  class="relative inline-flex w-0 flex-1 items-center justify-center rounded-br-sm border border-transparent py-2 text-sm font-medium"
-                >
-                  <span class="mr-3">Expand</span>
-                  <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </li>
-        <!-- <li
-          v-for="item in ids.length === 0 ? productGroups : []"
-          :key="item.email"
-          role="button"
-          class="col-span-1 flex flex-col divide-y divide-aronium-500 rounded-sm bg-aronium-700 border border-aronium-500 text-center shadow"
-          @click="selectItem(item)"
-        >
-          <div class="flex flex-1 flex-col p-4">
-            <img
-              v-if="item.image"
-              class="mx-auto h-32 w-32 flex-shrink-0 rounded-sm"
-              :src="item.image"
-              alt=""
-            />
-            <img
-              v-else
-              class="mx-auto h-32 w-32 flex-shrink-0 rounded-sm"
-              src="http://127.0.0.1:8000/media/uploads/product/product.jpg"
-              alt=""
-            />
-
-            <h3 class="mt-4 text-sm font-medium text-aronium-white">
-              {{ item.name }}
-            </h3>
-            <dl class="mt-1 flex flex-grow flex-col justify-between">
-              <dt class="sr-only">Title</dt>
-              <dd class="text-sm text-gray-500">
-                {{ item.price ? `${item.price}  IQD` : "" }}
-              </dd>
-            </dl>
-          </div>
-          <div>
-            <div class="-mt-px flex divide-x divide-aronium-500">
-              <div
-                v-if="ids.length > 0"
-                class="flex w-0 flex-1 text-aronium-white hover:text-pink-700"
-              >
-                <a
-                  :href="`mailto:${item.email}`"
-                  class="relative -mr-px inline-flex w-0 flex-1 items-center justify-center rounded-bl-sm border border-transparent py-2 text-sm font-medium"
-                >
-                  <ArrowLeftIcon class="h-5 w-5" aria-hidden="true" />
-                  <span class="ml-3">Back</span>
-                </a>
-              </div>
-              <div
-                class="-ml-px flex w-0 flex-1 text-aronium-white hover:text-pink-700"
-              >
-                <a
-                  :href="`tel:${item.telephone}`"
-                  class="relative inline-flex w-0 flex-1 items-center justify-center rounded-br-sm border border-transparent py-2 text-sm font-medium"
-                >
-                  <span class="mr-3">Expand</span>
-                  <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </li> -->
+        <template v-if="ids.length === 0">
+          <StoreGroupListItem
+            v-for="group in productGroups"
+            :key="group.id"
+            :item="group"
+            @select-item="selectGroup(group.id)"
+          />
+        </template>
+        <template v-else>
+          <!-- v-for="group in selectedGroupProducts"
+          :key="group.id" -->
+          <StoreGroupListItem
+            :item="selectedGroupProducts"
+            @back="removeId"
+            @select-item="selectGroup(group.id)"
+          />
+          <StoreGroupListItem
+            v-for="group in selectedGroupProducts.groups"
+            :key="group.id"
+            :item="group"
+            @back="removeId"
+            @select-item="selectGroup(group.id)"
+          />
+        </template>
       </ul>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, defineAsyncComponent } from "vue";
+import { ref, computed, onMounted, onUpdated, defineAsyncComponent } from "vue";
 import OrderItem from "@/Orders/OrderItem";
 import NumericPad from "@/components/shared/calculator/NumericPad.vue";
 
@@ -170,9 +69,14 @@ const ProductSingleItem = defineAsyncComponent(() =>
   import("@/Orders/components/Cards/PosSingleProduct.vue")
 );
 
+const StoreGroupListItem = defineAsyncComponent(() =>
+  import("@/Orders/components/StoreGroupsListItem.vue")
+);
+
 const store = useFetch();
 const productGroups = ref([]);
 const selectedGroupProducts = ref([]);
+
 const ids = ref([]);
 
 const loadProductGroups = async () => {
@@ -184,16 +88,27 @@ const loadProductGroups = async () => {
   }
 };
 onMounted(loadProductGroups);
+const id = computed(() => ids.value[ids.value.length - 1]);
 
 const loadProductsByGroupId = async () => {
   try {
     const response = await productsGroupsAPI.filterGroups(id.value);
     selectedGroupProducts.value = response.data;
-    console.log(selectedGroupProducts.value);
   } catch (error) {
     console.log(error);
   }
 };
+const selectGroup = async (groupId) => {
+  // if (id.value) id.value = 0;
+  ids.value.push(groupId);
+
+  // await loadProductGroups();
+};
+onUpdated(() => loadProductsByGroupId());
+const removeId = () => {
+  ids.value.splice(-1);
+};
+
 // const parents = computed(() =>
 //   productGroups.value.filter((group) => group.is_parent === true)
 // );
@@ -207,12 +122,6 @@ const loadProductsByGroupId = async () => {
 // loadProductGroups();
 
 // const id = ref(null);
-// const selectGroup = async (groupId) => {
-//   // if (id.value) id.value = 0;
-//   id.value = groupId;
-//   await loadProductGroups();
-//   await loadProductsByGroupId(groupId);
-// };
 const isNumpadOpen = ref(false);
 const isCheckPriceOpen = ref(false);
 const isDefaultQtyOpen = ref(false);
@@ -282,8 +191,6 @@ const selectItem = (item) => {
   ids.value.push(item.id);
   loadProductsByGroupId();
 };
-const removeId = () => ids.value.slice(ids.value.length - 1, 1);
-const id = computed(() => ids.value[ids.value.length - 1]);
 
 const people = [
   {
