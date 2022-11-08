@@ -11,6 +11,13 @@
         alt=""
       />
       <img
+        v-else-if="isBack"
+        class="mx-auto h-32 w-32 flex-shrink-0 rounded-sm"
+        src="http://127.0.0.1:8000/media/uploads/product/home.jpg"
+        alt=""
+      />
+
+      <img
         v-else
         class="mx-auto h-32 w-32 flex-shrink-0 rounded-sm"
         src="http://127.0.0.1:8000/media/uploads/product/product.jpg"
@@ -40,13 +47,14 @@
             href="#"
             class="relative -mr-px inline-flex w-0 flex-1 items-center justify-center rounded-bl-sm border border-transparent py-2 text-sm font-medium"
           >
-            <ArrowLeftIcon class="h-5 w-5" aria-hidden="true" />
+            <!-- <ArrowLeftIcon class="h-5 w-5" aria-hidden="true" /> -->
             <span class="ml-3">Add to Cart</span>
           </a>
         </div>
       </div>
       <div v-else class="-mt-px flex divide-x divide-aronium-500">
         <div
+          v-if="isBack"
           class="flex w-0 flex-1 text-aronium-white hover:text-pink-700"
           @click="$emit('back', item.id)"
         >
@@ -59,6 +67,7 @@
           </a>
         </div>
         <div
+          v-if="!isBack"
           class="-ml-px flex w-0 flex-1 text-aronium-white hover:text-pink-700"
           @click="$emit('selectItem')"
         >
@@ -81,7 +90,10 @@ import { ref, computed, defineProps, defineEmits } from "vue";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/vue/20/solid";
 
 defineEmits(["back", "addToCart", "selectItem"]);
-defineProps({ item: { type: Object, required: true } });
+defineProps({
+  item: { type: Object, required: true },
+  isBack: { type: Boolean, default: false },
+});
 
 // const close = () => (isNumpadOpen.value = false);
 </script>
