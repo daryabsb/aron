@@ -1,4 +1,9 @@
 from rest_framework import permissions, viewsets
+from rest_framework.views import APIView
+from rest_framework import status
+from django.shortcuts import get_object_or_404
+from rest_framework.response import Response
+from django.db.models import Q
 from itertools import chain
 # from django.db.models import Q
 from core.models import Barcode, Product, ProductGroup, Stock
@@ -58,25 +63,65 @@ class ProductViewset(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         """Create a new product"""
         serializer.save(user=self.request.user)
+# class ProductGroupViewset(APIView):
 
-
+#     def get(self, request, pk=None):
+#         group = ProductsGroupSerializer(ProductGroup.objects.get(pk=pk)).data
+#         # children = ProductsGroupSerializer(ProductGroup.objects.filter(parent_group=pk))
+#         products = ProductSerializer(Product.objects.filter(product_group=pk)).data
+        
+#         # print(Response([group, children,products], status=status.HTTP_200_OK))
+#         return Response([group,products], status=status.HTTP_200_OK)
 class ProductGroupViewset(viewsets.ModelViewSet):
     serializer_class = ProductsGroupSerializer
     queryset = ProductGroup.objects.all()
     permission_classes = (permissions.IsAuthenticated,)
 
     def get_queryset(self):
-        queryset = ProductGroup.objects.all()
+        queryset = ProductGroup.objects.filter(parent_group=None)
 
         parent_id = self.kwargs.get('pk', None)
 
         if parent_id:
-            children = ProductGroup.objects.filter(parent_group=parent_id)
-            products = Product.objects.filter(product_group=parent_id)
+            queryset = ProductGroup.objects.none()
+            group = ProductGroup.objects.get(id=parent_id)
+            queryset |= ProductGroup.objects.filter(parent_group=group.id)
+            # group = ProductGroup.objects.get(id=parent_id)
+            # children = ProductGroup.objects.filter(parent_group=parent_id)
+            # products = Product.objects.filter(product_group=parent_id)
 
-            queryset = chain(children, products)
-            print(type(queryset))
-            return {children: children, products: products}
+
+
+
+            
+            return queryset
+
+
+
+        return queryset
+        
+    def perform_create(self, serializer):
+        """Create a new product group"""
+
+        print("serializer", serializer)
+        serializer.save(user=self.request.user)
+   
+'''
+        conditions = Q()
+        id = self.kwargs.get('pk', None)
+        # print(keywords)
+        if id:
+            
+            # print(keywords_list)
+            for word in keywords_list:
+                conditions |= Q(name__icontains=word) | Q(email__icontains=word)
+    
+            if conditions:
+                # print(type(conditions))
+                queryset = User.objects.filter(conditions)
+        
+
+
             # # children_products = Product.objects.filter(parent_group=)
             # for child in children:
             #     my_list.append(child)
@@ -94,12 +139,8 @@ class ProductGroupViewset(viewsets.ModelViewSet):
 
         return queryset
 
-    def perform_create(self, serializer):
-        """Create a new product group"""
 
-        print("serializer", serializer)
-        serializer.save(user=self.request.user)
-
+'''
 
 # class ProductGroupViewset(viewsets.ModelViewSet):
 #     serializer_class = ProductsGroupSerializer
@@ -136,3 +177,28 @@ class BarcodeViewset(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         """Create a new Barcode"""
         serializer.save(user=self.request.user)
+'''
+# from django.http import JsonResponse
+# class ProductGroupViewset(viewsets.ViewSet):
+    # serializer_class = ProductsGroupSerializer
+    # queryset = ProductGroup.objects.all()
+    # permission_classes = (permissions.IsAuthenticated,)
+    # authentication_classes = [authentication.TokenAuthentication]
+    # permission_classes = [permissions.IsAdminUser]
+
+    # def list(self, request):
+    #     queryset = ProductGroup.objects.all()
+    #     serializer = ProductsGroupSerializer(queryset, many=True)
+    #     return Response(serializer.data)
+
+    # def retrieve(self, request, pk=None):
+    #     queryset = ProductGroup.objects.all()
+        # group = get_object_or_404(queryset, pk=pk)
+        # group = list(ProductGroup.objects.filter(id=pk).values())
+        # children = list(ProductGroup.objects.filter(parent_group=pk).values())
+        # products = list(Product.objects.filter(product_group=pk).values())
+        # children_serializer = ProductsGroupSerializer(children)
+        products_serializer = ProductSerializer(products)
+        # return Response(products_serializer.data)
+        # return JsonResponse({'group':group,'groups':children,'products':products},safe=False)
+'''

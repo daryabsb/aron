@@ -7,4 +7,7 @@ export default {
   getProductsByGroupId(groupId) {
     return API().get(`/product/all/?group=${groupId}`);
   },
+  filterGroups(id) {
+    return API().get(`/product/groups/${id}/`);
+  },
 };

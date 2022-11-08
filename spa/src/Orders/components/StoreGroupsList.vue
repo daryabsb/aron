@@ -17,7 +17,73 @@
         class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
       >
         <li
-          v-for="item in people"
+          v-for="item in ids.length > 0
+            ? [
+                ...selectedGroupProducts.group,
+                ...selectedGroupProducts.groups,
+                ...selectedGroupProducts.products,
+              ]
+            : productGroups"
+          :key="item.name"
+          role="button"
+          class="col-span-1 flex flex-col divide-y divide-aronium-500 rounded-sm bg-aronium-700 border border-aronium-500 text-center shadow"
+        >
+          <div class="flex flex-1 flex-col p-4">
+            <img
+              v-if="item.image"
+              class="mx-auto h-32 w-32 flex-shrink-0 rounded-sm"
+              :src="item.image"
+              alt=""
+            />
+            <img
+              v-else
+              class="mx-auto h-32 w-32 flex-shrink-0 rounded-sm"
+              src="http://127.0.0.1:8000/media/uploads/product/product.jpg"
+              alt=""
+            />
+
+            <h3 class="mt-4 text-sm font-medium text-aronium-white">
+              {{ item.name }}
+            </h3>
+            <dl class="mt-1 flex flex-grow flex-col justify-between">
+              <dt class="sr-only">Title</dt>
+              <dd class="text-sm text-gray-500">
+                {{ item.price ? `${item.price}  IQD` : "" }}
+              </dd>
+            </dl>
+          </div>
+          <div>
+            <div class="-mt-px flex divide-x divide-aronium-500">
+              <div
+                v-if="ids.length > 0"
+                class="flex w-0 flex-1 text-aronium-white hover:text-pink-700"
+                @click="removeId"
+              >
+                <a
+                  href="#"
+                  class="relative -mr-px inline-flex w-0 flex-1 items-center justify-center rounded-bl-sm border border-transparent py-2 text-sm font-medium"
+                >
+                  <ArrowLeftIcon class="h-5 w-5" aria-hidden="true" />
+                  <span class="ml-3">Back</span>
+                </a>
+              </div>
+              <div
+                class="-ml-px flex w-0 flex-1 text-aronium-white hover:text-pink-700"
+                @click="selectItem(item)"
+              >
+                <a
+                  href="#"
+                  class="relative inline-flex w-0 flex-1 items-center justify-center rounded-br-sm border border-transparent py-2 text-sm font-medium"
+                >
+                  <span class="mr-3">Expand</span>
+                  <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- <li
+          v-for="item in ids.length === 0 ? productGroups : []"
           :key="item.email"
           role="button"
           class="col-span-1 flex flex-col divide-y divide-aronium-500 rounded-sm bg-aronium-700 border border-aronium-500 text-center shadow"
@@ -50,6 +116,7 @@
           <div>
             <div class="-mt-px flex divide-x divide-aronium-500">
               <div
+                v-if="ids.length > 0"
                 class="flex w-0 flex-1 text-aronium-white hover:text-pink-700"
               >
                 <a
@@ -57,7 +124,7 @@
                   class="relative -mr-px inline-flex w-0 flex-1 items-center justify-center rounded-bl-sm border border-transparent py-2 text-sm font-medium"
                 >
                   <ArrowLeftIcon class="h-5 w-5" aria-hidden="true" />
-                  <span class="ml-3">Email</span>
+                  <span class="ml-3">Back</span>
                 </a>
               </div>
               <div
@@ -67,13 +134,13 @@
                   :href="`tel:${item.telephone}`"
                   class="relative inline-flex w-0 flex-1 items-center justify-center rounded-br-sm border border-transparent py-2 text-sm font-medium"
                 >
-                  <span class="mr-3">Call</span>
+                  <span class="mr-3">Expand</span>
                   <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
                 </a>
               </div>
             </div>
           </div>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
@@ -104,48 +171,48 @@ const ProductSingleItem = defineAsyncComponent(() =>
 );
 
 const store = useFetch();
-onMounted(store.fetchGroups);
 const productGroups = ref([]);
 const selectedGroupProducts = ref([]);
+const ids = ref([]);
 
 const loadProductGroups = async () => {
   try {
     const response = await productsGroupsAPI.getProductGroups();
     productGroups.value = response.data;
-
-    return response.data;
   } catch (error) {
     console.log(error);
   }
 };
+onMounted(loadProductGroups);
 
 const loadProductsByGroupId = async () => {
   try {
-    const response = await productsGroupsAPI.getProductsByGroupId(id.value);
+    const response = await productsGroupsAPI.filterGroups(id.value);
     selectedGroupProducts.value = response.data;
+    console.log(selectedGroupProducts.value);
   } catch (error) {
     console.log(error);
   }
 };
-const parents = computed(() =>
-  productGroups.value.filter((group) => group.is_parent === true)
-);
-const selectedGroup = computed(() =>
-  productGroups.value.find((group) => group.id === id.value)
-);
+// const parents = computed(() =>
+//   productGroups.value.filter((group) => group.is_parent === true)
+// );
+// const selectedGroup = computed(() =>
+//   productGroups.value.find((group) => group.id === id.value)
+// );
 
-const back = () => {
-  id.value = null;
-};
-loadProductGroups();
+// const back = () => {
+//   id.value = null;
+// };
+// loadProductGroups();
 
-const id = ref(null);
-const selectGroup = async (groupId) => {
-  // if (id.value) id.value = 0;
-  id.value = groupId;
-  await loadProductGroups();
-  await loadProductsByGroupId(groupId);
-};
+// const id = ref(null);
+// const selectGroup = async (groupId) => {
+//   // if (id.value) id.value = 0;
+//   id.value = groupId;
+//   await loadProductGroups();
+//   await loadProductsByGroupId(groupId);
+// };
 const isNumpadOpen = ref(false);
 const isCheckPriceOpen = ref(false);
 const isDefaultQtyOpen = ref(false);
@@ -211,7 +278,12 @@ const getValue = (value) => {
   close();
 };
 
-const selectItem = (item) => console.log(item);
+const selectItem = (item) => {
+  ids.value.push(item.id);
+  loadProductsByGroupId();
+};
+const removeId = () => ids.value.slice(ids.value.length - 1, 1);
+const id = computed(() => ids.value[ids.value.length - 1]);
 
 const people = [
   {
