@@ -11,20 +11,21 @@
           class="bg-aronium-900 min-w-full text-aronium-white text-base z-50 py-2 list-none border border-aronium-500 min-w-48"
           @click="close"
         >
-          <a
+          <router-link
             v-for="item in $filters.reverse(cart)"
             :key="item.number"
-            href="javascript:void(0);"
+            :to="`/store/order/${item.number}`"
             class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent"
             @click="submitActiveOrderNumber(item.number)"
           >
-            {{ item.price }}
-          </a>
+            {{ item.number }} </router-link
+          >>
 
-          <a
+          <router-link
             class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent"
+            to="#"
             @click="close"
-            >Close</a
+            >Close</router-link
           >
         </div>
       </template>

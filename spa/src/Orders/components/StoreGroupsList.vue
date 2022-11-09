@@ -11,10 +11,10 @@
       @close="close"
       @get-value="getQuantity"
     ></numeric-pad>
-    <div class="overflow-auto scrollbar mt-5 px-3">
+    <div class="overflow-auto scrollbar px-3">
       <ul
         role="list"
-        class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+        class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
       >
         <template v-if="ids.length === 0">
           <StoreGroupListItem

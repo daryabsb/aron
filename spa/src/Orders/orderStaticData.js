@@ -9,7 +9,7 @@ export const storeHeaderItems = [
     id: 1,
     title: "Search",
     icon: " fa fa-search",
-    submit: (title, item) => {
+    submit: () => {
       mods.searchModal = true;
     },
   },
@@ -25,7 +25,7 @@ export const storeHeaderItems = [
     id: 3,
     title: "Discount",
     icon: "fa fa-percent",
-    submit: (title, item) => {
+    submit: () => {
       mods.openOrderDiscountModal = true;
     },
   },
@@ -33,7 +33,7 @@ export const storeHeaderItems = [
     id: 4,
     title: "New sale",
     icon: "fa fa-plus",
-    submit: (title, item) => {
+    submit: () => {
       store.createCart();
     },
   },

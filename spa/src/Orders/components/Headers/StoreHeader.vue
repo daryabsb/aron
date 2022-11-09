@@ -147,6 +147,54 @@
         </li>
       </ul>
     </div>
+    <Popper arrow>
+      <div
+        class="h-full font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0 disabled:opacity-30 disabled:hover:text-aronium-600 disabled:cursor-auto"
+      >
+        <div
+          class="py-4 inset-y-0 px-10 flex flex-col items-center border border-aronium-500"
+        >
+          <span class="text-center font-semibold">{{ activeNumber }}</span>
+        </div>
+      </div>
+      <template #content="{ close }">
+        <div
+          class="bg-aronium-900 min-w-full text-aronium-white text-base z-50 py-2 list-none border border-aronium-500 min-w-48"
+          @click="close"
+        >
+          <router-link
+            v-for="order in $filters.reverse(cart)"
+            v-slot="{ href, navigate, isActive }"
+            :key="order.number"
+            :to="`/store/order/${order.number}`"
+            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent"
+            @click="changeActiveOrderNumber(order.number)"
+          >
+            <a
+              :href="href"
+              class="text-sm py-2 font-normal block"
+              :class="[
+                isActive
+                  ? 'text-pink-500 hover:text-pink-700'
+                  : 'text-blueGray-700 hover:text-blueGray-500',
+              ]"
+              @click="navigate"
+            >
+              {{ order.number }}
+            </a>
+          </router-link>
+
+          <router-link
+            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent"
+            to="#"
+            @click="close"
+            >Close</router-link
+          >
+        </div>
+      </template>
+    </Popper>
+    <!-- @click="broadcastFunction(item)" -->
+
     <div class="flex items-center p-3">
       <user-dropdown></user-dropdown>
 
@@ -155,54 +203,27 @@
   </div>
 </template>
 
-<script>
-import { ref } from "vue";
+<script setup>
+import { computed } from "vue";
+import { useRoute } from "vue-router";
 import { storeHeaderItems } from "@/Orders/orderStaticData";
-import { useCart } from "@/store/composables";
 import { useModals } from "@/stores/modals";
 import { useOrderStore } from "@/Orders/ordersStore";
-import {
-  Bars3Icon,
-  Bars2Icon,
-  ChevronDoubleLeftIcon,
-} from "@heroicons/vue/24/outline";
+
 import UserDropdown from "@/Users/components/UserDropdown.vue";
 import MainMenuPopper from "@/Orders/components/Modals/MainMenuPopper.vue";
 
-export default {
-  components: {
-    UserDropdown,
-    MainMenuPopper,
-    Bars3Icon,
-  },
+const store = useModals();
+const pos = useOrderStore();
+const route = useRoute();
+const cart = pos.cart;
+const changeActiveOrderNumber = pos.changeActiveOrderNumber;
+console.log(cart);
+const activeOrder = pos.useActiveOrder;
+const activeNumber = computed(() => route.params.number);
 
-  setup() {
-    const store = useModals();
-    const pos = useOrderStore();
-    const cart = useCart;
-    const activeOrder = pos.useActiveOrder;
+const paymentModal = () => (store.openPaymentModal = true);
+const cashModal = () => (store.openCashModal = true);
 
-    const broadcastFunction = (item) => {
-      console.log(item);
-    };
-    const paymentModal = () => (store.openPaymentModal = true);
-    const cashModal = () => (store.openCashModal = true);
-    const orderDiscountModal = () => (store.openOrderDiscountModal = true);
-    // const openModal = (e) => {
-    //   console.log("e.keyCode: ", e.keyCode);
-    // };
-    const saveSale = () => console.log("Sale saved!");
-    return {
-      storeHeaderItems,
-      paymentModal,
-      cashModal,
-      orderDiscountModal,
-      broadcastFunction,
-      // openModal,
-      saveSale,
-      activeOrder,
-      cart,
-    };
-  },
-};
+const saveSale = () => console.log("Sale saved!");
 </script>

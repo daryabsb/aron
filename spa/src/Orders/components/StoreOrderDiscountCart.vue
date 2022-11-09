@@ -58,6 +58,7 @@ import NumericPad from "@/components/shared/calculator/NumericPad.vue";
 const emit = defineEmits(["close"]);
 
 const store = useOrderStore();
+
 const useActiveOrder = ref(store.useActiveOrder);
 
 const discountType = ref(0);
@@ -84,6 +85,7 @@ const discountValue = (payload) => {
 const submitResults = () => {
   useActiveOrder.value.discountType = discountType.value;
   useActiveOrder.value.discount = cartInputValue.value;
+  store.updateChange();
   emit("close");
 };
 </script>

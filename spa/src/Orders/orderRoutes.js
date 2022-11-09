@@ -16,6 +16,18 @@ const routes = [
           import(
             /* webpackChunkName: "store" */ "@/Orders/views/StoreProducts.vue"
           ),
+        children: [
+          {
+            path: "/store/order/:number",
+            name: "StoreOrder",
+            component: () =>
+              import(
+                /* webpackChunkName: "store" */ "@/Orders/views/StoreOrder.vue"
+              ),
+            // props: (route) => ({ number: parseInt(route.params.number) }),
+            props: true,
+          },
+        ],
       },
     ],
   },

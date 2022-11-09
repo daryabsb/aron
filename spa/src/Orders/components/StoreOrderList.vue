@@ -1,10 +1,10 @@
 <template>
   <div>
     <store-order-top-buttons></store-order-top-buttons>
-    <div class="overflow-hidden scrollbar w-full px-2">
+    <div class="overflow-hidden scrollbar w-full">
       <div
-        v-if="useActiveOrder.items.length === 0"
-        class="flex-1 w-full p-4 select-none flex flex-col flex-wrap content-center justify-center"
+        v-if="activeOrder.items.length === 0"
+        class="flex-1 w-full select-none flex flex-col flex-wrap content-center justify-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@
       <!-- <span class="text-sm text-aronium-green"
         >" {{ useActiveOrder.number }} "</span
       > -->
-      <template v-for="item in useActiveOrder.items" :key="item.id">
+      <template v-for="item in activeOrder.items" :key="item.id">
         <order-item
           v-if="item"
           :item="item"
@@ -39,7 +39,9 @@
 </template>
 
 <script setup>
-import { ref, defineAsyncComponent } from "vue";
+import { ref, computed, defineAsyncComponent } from "vue";
+import { useRoute } from "vue-router";
+
 import { useOrderStore } from "@/Orders/ordersStore";
 import StoreOrderTopButtons from "@/Orders/components/StoreOrderTopButtons.vue";
 import OrderItem from "@/Orders/components/OrderItem.vue";
@@ -50,15 +52,17 @@ const id = ref(null);
 //   import("@/components/store/orders/OrderItem.vue")
 // );
 const store = useOrderStore();
-const activeNumber = ref(store.activeNumber);
-const useActiveOrder = ref(store.useActiveOrder);
+const route = useRoute();
+const activeNumber = computed(() => store.activeNumber);
 
+// const activeOrder = computed(() => store.useActiveOrder);
+const activeOrder = computed(() => store.useActiveOrder.value);
 const selectItem = (itm) => {
-  for (let item of useActiveOrder.value.items) {
-    // if (!item.isActive) continue;
-    // if(item.id==itm.id) continue;
-    item.isActive = false;
-  }
+  // for (let item of activeOrder.value.items) {
+  //   // if (!item.isActive) continue;
+  //   // if(item.id==itm.id) continue;
+  //   item.isActive = false;
+  // }
   itm.isActive = !itm.isActive;
 };
 </script>

@@ -56,7 +56,7 @@ export default {
     onMounted(useFetchUserDispatch);
     const addNewCart = () => {
       store.createCart();
-      router.push("/store");
+      router.push("/store/order");
     };
     const key = ref("");
     const navigateToPage = () => {
