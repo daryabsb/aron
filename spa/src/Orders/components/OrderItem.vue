@@ -41,7 +41,7 @@
         }}{{ props.item.discountType == 0 ? "%" : "$" }}</span
       >
     </div>
-    <div class="ml-4 flex flex-shrink-0 space-x-4">
+    <div v-if="!isPayment" class="ml-4 flex flex-shrink-0 space-x-4">
       <button
         type="button"
         class="font-medium hover:text-pink-500 outline-none focus:ring-pink-500 ring-0"
@@ -78,5 +78,6 @@ const addQty = store.addQty;
 
 const props = defineProps({
   item: { type: Object, required: true },
+  isPayment: { type: Boolean, default: false },
 });
 </script>

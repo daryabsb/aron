@@ -80,7 +80,7 @@ export default {
 
         if (DIGITS.includes(key)) calculate.addDigit(key);
         if (OPERATORS.includes(key)) calculate.addOperator(key);
-        if (RESULT_KEYS.includes(key)) calculate.calculateResult();
+        // if (RESULT_KEYS.includes(key)) calculate.calculateResult();
         if (ERASE_KEYS.includes(key)) calculate.eraseLast();
         if (CLEAR_KEYS.includes(key)) calculate.clear();
       });

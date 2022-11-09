@@ -12,7 +12,7 @@
       />
       <img
         v-else-if="isBack"
-        class="mx-auto h-32 w-32 flex-shrink-0 rounded-sm"
+        class="animate-pulse mx-auto h-32 w-32 flex-shrink-0 rounded-sm"
         src="http://127.0.0.1:8000/media/uploads/product/home.jpg"
         alt=""
       />
@@ -55,7 +55,7 @@
       <div v-else class="-mt-px flex divide-x divide-aronium-500">
         <div
           v-if="isBack"
-          class="flex w-0 flex-1 text-aronium-white hover:text-pink-700"
+          class="animate-pulse flex w-0 flex-1 text-aronium-white hover:text-pink-700"
           @click="$emit('back', item.id)"
         >
           <a

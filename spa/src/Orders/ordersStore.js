@@ -92,7 +92,7 @@ export const useOrderStore = defineStore("orders", {
       this.updateChange();
     },
     updateChange() {
-      this.change = this.cash - this.totalPrice;
+      this.change = this.cash - this.totalPrice.value;
     },
     getItemTotalPrice(item) {
       return computed(() => item.price * item.quantity);

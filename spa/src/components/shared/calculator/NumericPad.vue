@@ -127,6 +127,7 @@ export default {
     };
 
     const calculateResult = () => {
+      alert("hooray");
       context.emit("close");
       // clear();
     };

@@ -40,8 +40,9 @@
       <div class="w-full flex justify-center mt-6 text-xl">
         <input
           :id="selectedItem.id"
-          value="0"
+          :value="itemInputValue"
           type="text"
+          disabled
           class="relative bg-inherit border-0 border-b-2 text-right pb-3 pr-10 items-center focus:outline-none focus:ring-0"
         />
         <!-- @input="addItemDiscount(id)" -->

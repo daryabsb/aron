@@ -29,9 +29,10 @@
     </div>
     <div class="flex justify-center relative mt-6 text-xl w-full">
       <input
-        value="0"
+        :value="cartInputValue"
         id="cart-discount-input"
         type="text"
+        disabled
         class="relative bg-inherit border-0 border-b-2 text-right pb-3 pr-10 items-center focus:outline-none focus:ring-0"
       />
 
