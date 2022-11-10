@@ -1,5 +1,11 @@
 const vetur = require("@volar-plugins/vetur");
 
 module.exports = {
-  plugins: [vetur()],
+    plugins: [volarPrettierPlugin({
+        languages: ['html', 'css', 'scss', 'typescript', 'javascript'],
+        html: {
+            breakContentsFromTags: true,
+        },
+        useVscodeIndentation: true,
+    }), ],
 };

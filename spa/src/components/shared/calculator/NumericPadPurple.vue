@@ -55,10 +55,17 @@
                     class="mx-auto p-2 overflow-hidden mt-3 shadow-lg mb-2 border border-aronium-500 rounded-sm w-fit"
                   >
                     <div
-                      ref="value"
+                      ref="valve"
                       class="p-3 flex justify-end items-center text-white text-right text-3xl border border-aronium-500 bg-aronium-800"
                     >
-                      {{ current || itemPrice }}
+                    <input 
+                    :value="current || itemPrice" 
+                    type="text" 
+                    class="bg-aronium-900 text-aronium-white" 
+                    ref="input"
+                    disabled
+                    />
+                      <!-- {{ current || itemPrice }} -->
                     </div>
 
                     <NumPad
@@ -95,7 +102,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, nextTick, onMounted } from "vue";
 
 import {
   Dialog,
@@ -111,17 +118,26 @@ import NumPad from "./NumPad.vue";
 
 const open = ref(true);
 const previous = ref(null);
-const itemPrice = ref((180).toString());
+const itemPrice = ref((7655544).toString());
 
-const value = ref(null);
-const selectText = () => {
-  value.value.focus();
+const valve = ref(null);
+const input = ref(null);
+const selectText = async () => {
+  // input.value = 185;
+  console.log(valve.value);
+  await valve.value.focus();
+  // current.value = 185;
+  // input.value = 185;
   // const calcValue = document.getElementById(selectedItem.value.id);
   // if (!itemDiscountInput) return;
   // itemDiscountInput.focus();
   // itemDiscountInput.setSelectionRange(0, 3);
 };
-onMounted(selectText);
+onMounted(async () => {
+  await nextTick()
+  await input.value.focus()
+  await input.value.setSelectionRange(0, itemPrice.value.length);
+});
 
 const current = ref("");
 let operator = null;

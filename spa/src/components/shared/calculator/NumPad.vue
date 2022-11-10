@@ -151,16 +151,18 @@ const emit = defineEmits([
   "equal",
 ]);
 const keyboard = useKeyboard();
-const addDigit = (number) => emit("append");
+const addDigit = (number) => emit("append",`${number}`);
+const eraseLast = () => emit("remove")
+const clear = ()=> emit("clear")
 onMounted(() => {
   keyboard.addListener((e) => {
     const key = e.key === "," ? "." : e.key;
 
-    if (DIGITS.includes(key)) calculate.addDigit(key);
-    if (OPERATORS.includes(key)) calculate.addOperator(key);
+    if (DIGITS.includes(key)) addDigit(key);
+    // if (OPERATORS.includes(key)) calculate.addOperator(key);
     // if (RESULT_KEYS.includes(key)) calculate.calculateResult();
-    if (ERASE_KEYS.includes(key)) calculate.eraseLast();
-    if (CLEAR_KEYS.includes(key)) calculate.clear();
+    if (ERASE_KEYS.includes(key)) eraseLast();
+    if (CLEAR_KEYS.includes(key)) clear();
   });
 });
 </script>
