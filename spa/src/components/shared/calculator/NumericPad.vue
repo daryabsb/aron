@@ -39,6 +39,7 @@
       {{ number }}
     </Button>
     <Button
+      id="enter-button"
       variant="transparent"
       class="row-start-3 col-start-4 inset-0 col-span-1 row-span-2"
       @click="calculateResult"
