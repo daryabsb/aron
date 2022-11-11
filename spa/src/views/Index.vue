@@ -317,6 +317,7 @@
       </div>
       <main class="flex-1 pb-8">
         <!-- Page header -->
+        <Suspense>
         <div class="bg-aronium-900 shadow">
           <div class="px-4 sm:px-6 lg:mx-auto lg:max-w-6xl lg:px-8">
             <div
@@ -324,33 +325,34 @@
             >
               <div class="min-w-0 flex-1">
                 <!-- Profile -->
-                <div class="flex items-center">
+                <div v-if="user" class="flex items-center">
                   <img
                     class="hidden h-16 w-16 rounded-full sm:block"
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.6&w=256&h=256&q=80"
+                    :src="user.image"
                     alt=""
                   />
                   <div>
-                    <div class="flex items-center">
-                      <img
-                        class="h-16 w-16 rounded-full sm:hidden"
-                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.6&w=256&h=256&q=80"
-                        alt=""
-                      />
-                      <h1
-                        class="ml-3 text-2xl font-bold leading-7 text-aronium-white sm:truncate sm:leading-9"
-                      >
-                        Good morning, Emilia Birch
-                      </h1>
-                    </div>
-                    <dl
+                      <div  class="flex items-center">
+                        <img
+                          class="h-16 w-16 rounded-full sm:hidden"
+                          :src="user.image"
+                          alt=""
+                        />
+                        <h1
+                          class="ml-3 text-2xl font-bold leading-7 text-aronium-white sm:truncate sm:leading-9"
+                        >
+                          Good morning, {{ user.name }}
+                          <!-- Good morning, Emilia Birch -->
+                        </h1>
+                      </div>
+                      <dl
                       class="mt-6 flex flex-col sm:ml-3 sm:mt-1 sm:flex-row sm:flex-wrap"
                     >
-                      <dt class="sr-only">Company</dt>
-                      <dd
+                    <dt class="sr-only">Company</dt>
+                    <dd
                         class="flex items-center text-sm font-medium capitalize text-aronium-white sm:mr-6"
                       >
-                        <BuildingOfficeIcon
+                      <BuildingOfficeIcon
                           class="mr-1.5 h-5 w-5 flex-shrink-0 text-aronium-white"
                           aria-hidden="true"
                         />
@@ -360,7 +362,7 @@
                       <dd
                         class="mt-3 flex items-center text-sm font-medium capitalize text-gray-500 sm:mr-6 sm:mt-0"
                       >
-                        <CheckCircleIcon
+                      <CheckCircleIcon
                           class="mr-1.5 h-5 w-5 flex-shrink-0 text-green-400"
                           aria-hidden="true"
                         />
@@ -375,24 +377,28 @@
                   type="button"
                   class="inline-flex items-center rounded-sm bg-pink-600 px-4 py-2 text-sm font-medium text-aronium-white shadow-sm hover:bg-pink-500 focus:outline-none focus:ring-2"
                 >
-                  Add money
-                </button>
-                <button
+                Add money
+              </button>
+              <button
                   type="button"
                   class="inline-flex items-center rounded-sm border border-aronium-500 bg-aronium-800 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-aronium-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
                 >
-                  Send money
-                </button>
-              </div>
+                Send money
+              </button>
             </div>
           </div>
         </div>
-
-        <div class="mt-8 overflow-auto scrollbar">
-          <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <h2 class="text-lg font-medium leading-6 text-aronium-white">
-              Overview
-            </h2>
+      </div>
+      <template #fallback>
+        Profile is coming....
+      </template>
+    </Suspense>
+      
+      <div class="mt-8 overflow-auto scrollbar">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-lg font-medium leading-6 text-aronium-white">
+            Overview
+          </h2>
             <div
               class="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
             >
@@ -459,7 +465,7 @@
               >
                 <!-- :href="order.href" -->
                 <a
-                  :href="`/store/orders/${order.number}`"
+                  :href="`/store/order/${order.number}`"
                   class="block bg-aronium-900 border border-aronium-500 px-4 py-4 hover:bg-aronium-700"
                 >
                   <span class="flex items-center space-x-4">
@@ -600,7 +606,7 @@
                           class="whitespace-nowrap px-6 py-4 text-right text-sm text-gray-500"
                         >
                           <time :datetime="order.datetime">{{
-                            order.created
+                            $filters.dateMoment(order.created)
                           }}</time>
                         </td>
                       </tr>
@@ -652,8 +658,11 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, defineAsyncComponent } from "vue";
 import userAPI from "@/services/usersAPI";
+import ordersAPI from "@/services/ordersAPI"
+import { useOrderStore } from "@/Orders/ordersStore";
+import moment from "moment";
 import {
   Dialog,
   DialogPanel,
@@ -678,6 +687,7 @@ import {
   UserGroupIcon,
   XMarkIcon,
 } from "@heroicons/vue/24/outline";
+
 import {
   BanknotesIcon,
   BuildingOfficeIcon,
@@ -686,8 +696,22 @@ import {
   ChevronRightIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/vue/20/solid";
+const store = useOrderStore()
+const user = ref(null);
+const orders = ref(null)
+const loadUserData = async () => {
+  try {
+    const userResponse = await userAPI.getLoggedInUser();
+    const ordersResponse = await ordersAPI.getOrders()
+    user.value = userResponse.data;
+    orders.value = ordersResponse.data
+    store.cart.push(...orders.value)
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-
+onMounted(loadUserData);
 
 const navigation = [
   { name: "Home", href: "#", icon: HomeIcon, current: true },
@@ -713,39 +737,39 @@ const cards = [
   { name: "Pending orders", href: "#", icon: ScaleIcon, amount: "$30,659.45" },
   // More items...
 ];
-const orders = [
-  {
-    id: 1,
-    number: "1110202218843",
-    discount: 0,
-    discount_type: 0,
-    total: 0.0,
-    status: true,
-    created: "Oct 10, 2022",
-    items: [],
-  },
-  {
-    id: 2,
-    number: "1110202243959",
-    discount: 0,
-    discount_type: 0,
-    total: 0.0,
-    status: false,
-    created: "Oct 10, 2022",
-    items: [],
-  },
-  {
-    id: 3,
-    number: "1110202247440",
-    discount: 0,
-    discount_type: 0,
-    total: 0.0,
-    status: true,
-    created: "Oct 10, 2022",
+// const orders = [
+//   {
+//     id: 1,
+//     number: "1110202218843",
+//     discount: 0,
+//     discount_type: 0,
+//     total: 0.0,
+//     status: true,
+//     created: "Oct 10, 2022",
+//     items: [],
+//   },
+//   {
+//     id: 2,
+//     number: "1110202243959",
+//     discount: 0,
+//     discount_type: 0,
+//     total: 0.0,
+//     status: false,
+//     created: "Oct 10, 2022",
+//     items: [],
+//   },
+//   {
+//     id: 3,
+//     number: "1110202247440",
+//     discount: 0,
+//     discount_type: 0,
+//     total: 0.0,
+//     status: true,
+//     created: "Oct 10, 2022",
 
-    items: [],
-  },
-];
+//     items: [],
+//   },
+// ];
 const statusStyles = {
   true: "bg-green-100 text-green-800",
   processing: "bg-yellow-100 text-yellow-800",

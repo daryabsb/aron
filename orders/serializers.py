@@ -17,6 +17,6 @@ class PosOrderSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = PosOrder
-        fields = ('id', 'number', 'discount',
-                  'discount_type', 'total', 'items')
+        fields = ('id', 'number', 'discount', 'discount_type',
+                  'total', 'status', 'items', 'created', 'updated')
         read_only_Fields = ('id')
