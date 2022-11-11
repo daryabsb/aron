@@ -388,7 +388,7 @@
           </div>
         </div>
 
-        <div class="mt-8">
+        <div class="mt-8 overflow-auto scrollbar">
           <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <h2 class="text-lg font-medium leading-6 text-aronium-white">
               Overview
@@ -400,7 +400,7 @@
               <div
                 v-for="card in cards"
                 :key="card.name"
-                class="overflow-hidden rounded-sm bg-aronium-500 shadow"
+                class="overflow-hidden rounded-sm bg-aronium-500 shadow border border-aronium-500"
               >
                 <div class="p-5">
                   <div class="flex items-center">
@@ -427,11 +427,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="bg-gray-50 px-5 py-3">
+                <div class="bg-aronium-700 px-5 py-3">
                   <div class="text-sm">
                     <a
                       :href="card.href"
-                      class="font-medium text-cyan-700 hover:text-cyan-900"
+                      class="font-medium text-pink-700 hover:text-pink-500"
                       >View all</a
                     >
                   </div>
@@ -441,7 +441,7 @@
           </div>
 
           <h2
-            class="mx-auto mt-8 max-w-6xl px-4 text-lg font-medium leading-6 text-gray-900 sm:px-6 lg:px-8"
+            class="mx-auto mt-8 max-w-6xl px-4 text-lg font-medium leading-6 text-aronium-white sm:px-6 lg:px-8"
           >
             Recent activity
           </h2>
@@ -450,7 +450,7 @@
           <div class="shadow sm:hidden">
             <ul
               role="list"
-              class="mt-2 divide-y divide-gray-200 overflow-hidden shadow sm:hidden"
+              class="mt-2 divide-y divide-aronium-500 overflow-hidden shadow sm:hidden"
             >
               <li
                 v-for="order in orders"
@@ -460,7 +460,7 @@
                 <!-- :href="order.href" -->
                 <a
                   :href="`/store/orders/${order.number}`"
-                  class="block bg-white px-4 py-4 hover:bg-gray-50"
+                  class="block bg-aronium-900 border border-aronium-500 px-4 py-4 hover:bg-aronium-700"
                 >
                   <span class="flex items-center space-x-4">
                     <span class="flex flex-1 space-x-2 truncate">
@@ -653,6 +653,7 @@
 
 <script setup>
 import { ref } from "vue";
+import userAPI from "@/services/usersAPI";
 import {
   Dialog,
   DialogPanel,
@@ -685,6 +686,8 @@ import {
   ChevronRightIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/vue/20/solid";
+
+
 
 const navigation = [
   { name: "Home", href: "#", icon: HomeIcon, current: true },
