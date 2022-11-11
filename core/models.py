@@ -460,6 +460,7 @@ class PosOrder(models.Model):
     discount = models.SmallIntegerField(default=0)
     discount_type = models.SmallIntegerField(default=0)
     total = models.FloatField(default=0)
+    status = models.BooleanField(default=False)
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -467,7 +468,9 @@ class PosOrder(models.Model):
     objects = OrderManager()
 
     def __str__(self):
-        return f"{self.number}: {self.total}"
+        return f"{self.number}:" + \
+            f" [{self.total}]" + \
+            f" ({'Completed' if self.status else 'Pending'})"
 
 
 class PosOrderItem(models.Model):

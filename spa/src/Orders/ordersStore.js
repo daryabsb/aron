@@ -6,7 +6,32 @@ import { moment } from "moment";
 export const useOrderStore = defineStore("orders", {
   state: () => {
     return {
-      cart: [],
+      cart: [
+        {
+          number: "1110202218843",
+          discount: 0,
+          discountType: 0,
+          items: [],
+          tax: 0,
+          total: 0,
+        },
+        {
+          number: "1110202243959",
+          discount: 0,
+          discountType: 0,
+          items: [],
+          tax: 0,
+          total: 0,
+        },
+        {
+          number: "1110202247440",
+          discount: 0,
+          discountType: 0,
+          items: [],
+          tax: 0,
+          total: 0,
+        },
+      ],
       activeNumber: ref(""),
       cash: 0,
       change: 0,

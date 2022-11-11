@@ -5,7 +5,8 @@ export default class OrderItem {
     _quantity = 1,
     _discount = 0,
     _discountType = 0,
-    _tax = 0
+    _tax = 0,
+    _status = false
   ) {
     this.product = _product;
     this.id = this.product.id;
@@ -14,7 +15,7 @@ export default class OrderItem {
     this.discountType = _discountType;
     this.discount = _discount;
     this.tax = _tax;
-    this.isActive = false;
+    this.status = _status;
   }
 
   /*

@@ -11,7 +11,7 @@
         leave-to="opacity-0"
       >
         <div
-          class="fixed inset-0 bg-aronium-500 bg-opacity-75 transition-opacity"
+          class="fixed inset-0 bg-aronium-900 bg-opacity-75 transition-opacity"
         />
       </TransitionChild>
 
@@ -29,7 +29,7 @@
             leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
             <DialogPanel
-              class="relative transform overflow-hidden rounded-sm bg-aronium-800 px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6"
+              class="relative transform overflow-hidden rounded-sm border border-aronium-500 bg-aronium-800 px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6"
             >
               <div>
                 <!-- <div
@@ -56,15 +56,25 @@
                   >
                     <div
                       ref="valve"
-                      class="p-3 flex justify-end items-center text-white text-right text-3xl border border-aronium-500 bg-aronium-800"
+                      class="p-3 flex justify-end items-center bg-aronium-800"
                     >
-                    <input 
-                    :value="current || itemPrice" 
-                    type="text" 
-                    class="bg-aronium-900 text-aronium-white" 
-                    ref="input"
-                    disabled
-                    />
+                      <input
+                        v-if="!current"
+                        id="input-1"
+                        :value="itemPrice"
+                        type="text"
+                        class="w-full h-full bg-transparent text-aronium-white text-center text-2xl font-bold focus:ring-0 focus:outline-0 focus:border-pink-700"
+                        ref="input"
+                      />
+                      <input
+                        v-else
+                        id="input-2"
+                        v-model="current"
+                        type="text"
+                        class="w-full h-full bg-transparent text-aronium-white text-center text-2xl font-bold focus:ring-0 focus:outline-0 focus:border-pink-700"
+                        ref="input2"
+                        disabled
+                      />
                       <!-- {{ current || itemPrice }} -->
                     </div>
 
@@ -118,7 +128,7 @@ import NumPad from "./NumPad.vue";
 
 const open = ref(true);
 const previous = ref(null);
-const itemPrice = ref((7655544).toString());
+const itemPrice = ref((180).toString());
 
 const valve = ref(null);
 const input = ref(null);
@@ -134,8 +144,9 @@ const selectText = async () => {
   // itemDiscountInput.setSelectionRange(0, 3);
 };
 onMounted(async () => {
-  await nextTick()
-  await input.value.focus()
+  // current.value = itemPrice.value;
+  await nextTick();
+  await input.value.focus();
   await input.value.setSelectionRange(0, itemPrice.value.length);
 });
 

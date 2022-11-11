@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PurpleCalculator />
+    <PurpleCalculator v-if="isCalculator" />
     <CashPopper v-if="isCashModal" @close="cashModal" />
     <PaymentPopper v-if="isPayment" @close="paymentModal" @cash-out="cashOut" />
     <search-panel v-if="isSearchModal" @close="searchModal"></search-panel>
@@ -43,6 +43,7 @@ const isSearchModal = store.isSearchModal;
 const isPayment = ref(store.isPaymentModal);
 const isCashModal = ref(store.isCashModal);
 const isDiscount = ref(store.isStoreOrderDiscount);
+const isCalculator = ref(store.isCalculatorModal);
 const searchModal = () => {
   store.searchModal = !store.searchModal;
 };
