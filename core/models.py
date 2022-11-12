@@ -467,6 +467,9 @@ class PosOrder(models.Model):
 
     objects = OrderManager()
 
+    class Meta:
+        ordering = ['-created']
+
     def __str__(self):
         return f"{self.number}:" + \
             f" [{self.total}]" + \

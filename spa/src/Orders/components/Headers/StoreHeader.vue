@@ -218,9 +218,9 @@ const pos = useOrderStore();
 const route = useRoute();
 const cart = pos.cart;
 const changeActiveOrderNumber = pos.changeActiveOrderNumber;
-console.log(cart);
+console.log(route.params.number);
+const activeNumber = computed(() => route.params.number || pos.activeNumber);
 const activeOrder = pos.useActiveOrder;
-const activeNumber = computed(() => route.params.number);
 
 const paymentModal = () => (store.openPaymentModal = true);
 const cashModal = () => (store.openCashModal = true);

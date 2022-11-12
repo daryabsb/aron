@@ -1,25 +1,34 @@
 <template>
-  <div class="flex flex-col inset-0">
-    {{$route.params.number}}
-    <h1 class="text-6xl text-red-700">DARYA</h1>
-    <!-- <div class="flex flex-grow divide-x-1 divide-aronium-500 inset-0 h-[60rem]">
-      <div
-        class="phone:w-1/2 md:w-1/3 p-3 overflow-auto scrollbar border-r border-aronium-500"
-      >
-        <store-order-list></store-order-list>
-      </div>
-
-      <div class="phone:w-1/2 md:w-2/3 py-3 overflow-auto scrollbar">
-        <store-groups-list></store-groups-list>
-      </div>
-    </div> -->
+  <div
+    class="phone:w-1/2 md:w-1/3 p-3 overflow-auto scrollbar border-r border-aronium-500"
+  >
+    <store-order-list></store-order-list>
   </div>
 </template>
 <script setup>
-// import { computed, defineProps, defineAsyncComponent } from "vue";
+import { computed, onMounted, defineProps, defineAsyncComponent } from "vue";
+import { useRouter, useRoute } from "vue-router";
+import StoreOrderList from "@/Orders/components/StoreOrderList.vue";
+import { useOrderStore } from "@/Orders/ordersStore";
+
+const { cart, createCart } = useOrderStore();
+const router = useRouter();
+const route = useRoute();
+const store = useOrderStore();
+
 // import { useOrderStore } from "@/Orders/ordersStore";
-// import StoreOrderList from "@/Orders/components/StoreOrderList.vue";
-// import StoreGroupsList from "@/Orders/components/StoreGroupsList.vue";
+// const
+onMounted(() => {
+  if (cart.length === 0 && !route.params.number) {
+    createCart();
+    console.log(cart);
+  }
+  store.activeNumber = cart.find(
+    (order) => order.number === route.params.number
+  );
+  router.push(`/store/order/${store.activeNumber}`);
+});
+
 // const StoreOrderTopButtons = defineAsyncComponent(() =>
 //   import("@/Orders/components/StoreOrderTopButtons.vue")
 // );

@@ -318,21 +318,21 @@
       <main class="flex-1 pb-8">
         <!-- Page header -->
         <Suspense>
-        <div class="bg-aronium-900 shadow">
-          <div class="px-4 sm:px-6 lg:mx-auto lg:max-w-6xl lg:px-8">
-            <div
-              class="py-6 md:flex md:items-center md:justify-between lg:border-t lg:border-gray-200"
-            >
-              <div class="min-w-0 flex-1">
-                <!-- Profile -->
-                <div v-if="user" class="flex items-center">
-                  <img
-                    class="hidden h-16 w-16 rounded-full sm:block"
-                    :src="user.image"
-                    alt=""
-                  />
-                  <div>
-                      <div  class="flex items-center">
+          <div class="bg-aronium-900 shadow">
+            <div class="px-4 sm:px-6 lg:mx-auto lg:max-w-6xl lg:px-8">
+              <div
+                class="py-6 md:flex md:items-center md:justify-between lg:border-t lg:border-gray-200"
+              >
+                <div class="min-w-0 flex-1">
+                  <!-- Profile -->
+                  <div v-if="user" class="flex items-center">
+                    <img
+                      class="hidden h-16 w-16 rounded-full sm:block"
+                      :src="user.image"
+                      alt=""
+                    />
+                    <div>
+                      <div class="flex items-center">
                         <img
                           class="h-16 w-16 rounded-full sm:hidden"
                           :src="user.image"
@@ -346,59 +346,61 @@
                         </h1>
                       </div>
                       <dl
-                      class="mt-6 flex flex-col sm:ml-3 sm:mt-1 sm:flex-row sm:flex-wrap"
-                    >
-                    <dt class="sr-only">Company</dt>
-                    <dd
-                        class="flex items-center text-sm font-medium capitalize text-aronium-white sm:mr-6"
+                        class="mt-6 flex flex-col sm:ml-3 sm:mt-1 sm:flex-row sm:flex-wrap"
                       >
-                      <BuildingOfficeIcon
-                          class="mr-1.5 h-5 w-5 flex-shrink-0 text-aronium-white"
-                          aria-hidden="true"
-                        />
-                        Duke street studio
-                      </dd>
-                      <dt class="sr-only">Account status</dt>
-                      <dd
-                        class="mt-3 flex items-center text-sm font-medium capitalize text-gray-500 sm:mr-6 sm:mt-0"
-                      >
-                      <CheckCircleIcon
-                          class="mr-1.5 h-5 w-5 flex-shrink-0 text-green-400"
-                          aria-hidden="true"
-                        />
-                        Verified account
-                      </dd>
-                    </dl>
+                        <dt class="sr-only">Company</dt>
+                        <dd
+                          class="flex items-center text-sm font-medium capitalize text-aronium-white sm:mr-6"
+                        >
+                          <BuildingOfficeIcon
+                            class="mr-1.5 h-5 w-5 flex-shrink-0 text-aronium-white"
+                            aria-hidden="true"
+                          />
+                          Duke street studio
+                        </dd>
+                        <dt class="sr-only">Account status</dt>
+                        <dd
+                          class="mt-3 flex items-center text-sm font-medium capitalize text-gray-500 sm:mr-6 sm:mt-0"
+                        >
+                          <CheckCircleIcon
+                            class="mr-1.5 h-5 w-5 flex-shrink-0 text-green-400"
+                            aria-hidden="true"
+                          />
+                          Verified account
+                        </dd>
+                      </dl>
+                    </div>
                   </div>
                 </div>
+                <div class="mt-6 flex space-x-3 md:mt-0 md:ml-4">
+                  <button
+                    type="button"
+                    class="inline-flex items-center rounded-sm bg-pink-600 px-4 py-2 text-sm font-medium text-aronium-white shadow-sm hover:bg-pink-500 focus:outline-none focus:ring-2"
+                  >
+                    <router-link to="/store/order">
+                      Go to Store
+                    </router-link>
+                  </button>
+                  <button
+                    type="button"
+                    class="inline-flex items-center rounded-sm border border-aronium-500 bg-aronium-800 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-aronium-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
+                  >
+                    Send money
+                  </button>
+                </div>
               </div>
-              <div class="mt-6 flex space-x-3 md:mt-0 md:ml-4">
-                <button
-                  type="button"
-                  class="inline-flex items-center rounded-sm bg-pink-600 px-4 py-2 text-sm font-medium text-aronium-white shadow-sm hover:bg-pink-500 focus:outline-none focus:ring-2"
-                >
-                Add money
-              </button>
-              <button
-                  type="button"
-                  class="inline-flex items-center rounded-sm border border-aronium-500 bg-aronium-800 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-aronium-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
-                >
-                Send money
-              </button>
             </div>
           </div>
-        </div>
-      </div>
-      <template #fallback>
-        Profile is coming....
-      </template>
-    </Suspense>
-      
-      <div class="mt-8 overflow-auto scrollbar">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 class="text-lg font-medium leading-6 text-aronium-white">
-            Overview
-          </h2>
+          <template #fallback>
+            Profile is coming....
+          </template>
+        </Suspense>
+
+        <div class="mt-8 overflow-auto scrollbar">
+          <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <h2 class="text-lg font-medium leading-6 text-aronium-white">
+              Overview
+            </h2>
             <div
               class="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
             >
@@ -567,7 +569,7 @@
                             <!-- :href="order.href" -->
 
                             <a
-                              :href="`/store/orders/${order.number}`"
+                              :href="`/store/order/${order.number}`"
                               class="group inline-flex space-x-2 truncate text-sm"
                             >
                               <BanknotesIcon
@@ -660,7 +662,7 @@
 <script setup>
 import { ref, onMounted, defineAsyncComponent } from "vue";
 import userAPI from "@/services/usersAPI";
-import ordersAPI from "@/services/ordersAPI"
+import ordersAPI from "@/services/ordersAPI";
 import { useOrderStore } from "@/Orders/ordersStore";
 import moment from "moment";
 import {
@@ -696,16 +698,17 @@ import {
   ChevronRightIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/vue/20/solid";
-const store = useOrderStore()
+const store = useOrderStore();
 const user = ref(null);
-const orders = ref(null)
+const orders = ref(null);
 const loadUserData = async () => {
   try {
     const userResponse = await userAPI.getLoggedInUser();
-    const ordersResponse = await ordersAPI.getOrders()
+    const ordersResponse = await ordersAPI.getOrders();
     user.value = userResponse.data;
-    orders.value = ordersResponse.data
-    store.cart.push(...orders.value)
+    orders.value = ordersResponse.data;
+    store.cart.push(...orders.value);
+    // store.activeNumber = store.cart[0].number;
   } catch (error) {
     console.log(error);
   }

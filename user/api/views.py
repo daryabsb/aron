@@ -21,9 +21,6 @@ class CreateTokenView(ObtainAuthToken):
     serializer_class = AuthTokenSerializer
     renderer_classes = api_settings.DEFAULT_RENDERER_CLASSES
 
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.test import APIClient
-
 
 class ManageUserView(generics.RetrieveUpdateAPIView):
     # Manage authenticated user
@@ -36,6 +33,11 @@ class ManageUserView(generics.RetrieveUpdateAPIView):
 
     def get_object(self):
         # Retrieve and return authenticated user
+        with open('current.txt', 'w') as f:
+            f.write('Save user for later use...')
+        print(self.request.session['_auth_user_hash'])
+        self.request.session['fav_color'] = 'blue'
+        self.request.session['email'] = self.request.user.email
         return self.request.user
 
 

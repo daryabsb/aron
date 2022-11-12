@@ -29,6 +29,7 @@ def my_test(request):
 
 
 def logout_view(request):
+    request.session['fav_color'] = 'blue'
     logout(request)
     # Redirect to a success page.
     return redirect('login')
