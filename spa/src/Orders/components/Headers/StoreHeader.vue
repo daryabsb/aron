@@ -130,8 +130,8 @@
         <!-- {{
           activeOrder.items.length === 0
         }} -->
+        <!-- :disabled="activeOrder.items.length === 0" -->
         <li
-          :disabled="activeOrder.items.length === 0"
           class="font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0 disabled:opacity-30 disabled:hover:text-aronium-600 disabled:cursor-auto"
           @click="cashModal"
         >
@@ -212,15 +212,16 @@ import { useOrderStore } from "@/Orders/ordersStore";
 
 import UserDropdown from "@/Users/components/UserDropdown.vue";
 import MainMenuPopper from "@/Orders/components/Modals/MainMenuPopper.vue";
-
+const { cart, createCart } = useOrderStore();
 const store = useModals();
 const pos = useOrderStore();
 const route = useRoute();
-const cart = pos.cart;
 const changeActiveOrderNumber = pos.changeActiveOrderNumber;
 console.log(route.params.number);
-const activeNumber = computed(() => route.params.number || pos.activeNumber);
-const activeOrder = pos.useActiveOrder;
+const activeNumber = computed(() =>
+  route.params.number ? route.params.number : pos.activeNumber
+);
+const activeOrder = computed(() => pos.useActiveOrder);
 
 const paymentModal = () => (store.openPaymentModal = true);
 const cashModal = () => (store.openCashModal = true);

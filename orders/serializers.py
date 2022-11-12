@@ -1,8 +1,11 @@
 from rest_framework import serializers
 from core.models import PosOrder, PosOrderItem
+from products.serializers import ProductSerializer
 
 
 class PosOrderItemSerializer(serializers.ModelSerializer):
+
+    product = ProductSerializer()
 
     class Meta:
         model = PosOrderItem

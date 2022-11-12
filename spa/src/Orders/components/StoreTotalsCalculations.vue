@@ -68,7 +68,6 @@ const activeOrder = store.useActiveOrder.value;
 const totalBeforeTax = computed(() => store.subTotalBeforeTax);
 const totalBeforeDiscount = computed(() => store.subTotalBeforeDiscount);
 const total = computed(() => store.totalPrice);
-const totalTax = activeOrder.tax;
 
 const isDiscount = computed(
   () => activeOrder.discount || totalBeforeDiscount.value < totalBeforeTax.value

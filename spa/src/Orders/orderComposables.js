@@ -1,6 +1,33 @@
 import { computed } from "vue";
 import { useModals } from "@/stores/modals";
+import { useOrderStore } from "@/Orders/ordersStore";
+import { useUser } from "@/Users/userStore";
+import usersAPI from "@/services/usersAPI";
+import ordersAPI from "@/services/ordersAPI";
 const store = useModals();
+const orders = useOrderStore();
+const users = useUser();
+
+export const loadUserData = async () => {
+  if (!users.user) {
+    try {
+      const userResponse = await usersAPI.getLoggedInUser();
+      users.user = userResponse.data;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  if (orders.cart.length === 0) {
+    try {
+      const ordersResponse = await ordersAPI.getOrders();
+
+      orders.cart.push(...ordersResponse.data);
+      // store.activeNumber = store.cart[0].number;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+};
 
 export const numberFormat = (number) => {
   return number.toString();

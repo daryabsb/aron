@@ -1,45 +1,84 @@
 <template>
-  <div
-    class="phone:w-1/2 md:w-1/3 p-3 overflow-auto scrollbar border-r border-aronium-500"
-  >
-    <store-order-list></store-order-list>
+  <div class="">
+    <store-order-top-buttons></store-order-top-buttons>
+    <suspense>
+      <div class="overflow-hidden scrollbar w-full">
+        <div
+          v-if="activeOrder.items"
+          class="flex-1 w-full select-none flex flex-col flex-wrap content-center justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-16 inline-block"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+            />
+          </svg>
+          <p>
+            CART EMPTY
+          </p>
+        </div>
+
+        <h1 class="text-white text-2xl">{{ activeOrder.items }}</h1>
+
+        <template v-for="item in activeOrder.items" :key="item.id">
+          <order-item
+            v-if="item"
+            :item="item"
+            @click="selectItem(item)"
+          ></order-item>
+        </template>
+      </div>
+      <template #fallbak>
+        Loading
+      </template>
+    </suspense>
   </div>
 </template>
-<script setup>
-import { computed, onMounted, defineProps, defineAsyncComponent } from "vue";
-import { useRouter, useRoute } from "vue-router";
-import StoreOrderList from "@/Orders/components/StoreOrderList.vue";
-import { useOrderStore } from "@/Orders/ordersStore";
 
-const { cart, createCart } = useOrderStore();
-const router = useRouter();
-const route = useRoute();
+<script setup>
+import {
+  ref,
+  computed,
+  onMounted,
+  defineProps,
+  defineAsyncComponent,
+} from "vue";
+import { useRoute } from "vue-router";
+
+import { useOrderStore } from "@/Orders/ordersStore";
+import StoreOrderTopButtons from "@/Orders/components/StoreOrderTopButtons.vue";
+import OrderItem from "@/Orders/components/OrderItem.vue";
+const props = defineProps({
+  number: String,
+});
+// const OrderItem = defineAsyncComponent(() =>
+//   import("@/components/store/orders/OrderItem.vue")
+// );
 const store = useOrderStore();
 
-// import { useOrderStore } from "@/Orders/ordersStore";
-// const
 onMounted(() => {
-  if (cart.length === 0 && !route.params.number) {
-    createCart();
-    console.log(cart);
-  }
-  store.activeNumber = cart.find(
-    (order) => order.number === route.params.number
-  );
-  router.push(`/store/order/${store.activeNumber}`);
+  store.changeActiveOrderNumber(props.number);
 });
 
-// const StoreOrderTopButtons = defineAsyncComponent(() =>
-//   import("@/Orders/components/StoreOrderTopButtons.vue")
-// );
-// const SearchInput = defineAsyncComponent(() =>
-//   import("@/components/shared/SearchInput.vue")
-// );
-// const props = defineProps({
-//   number: { type: String, required: true },
-// });
-// const store = useOrderStore();
-// const activeOrder = computed(() => {
-//   return store.cart.find((order) => order.number === props.number);
-// });
+// const activeOrder = computed(() => store.useActiveOrder);
+
+const activeOrder = computed(() => store.useActiveOrder);
+
+console.log(activeOrder.value);
+const selectItem = (itm) => {
+  // for (let item of activeOrder.value.items) {
+  //   // if (!item.isActive) continue;
+  //   // if(item.id==itm.id) continue;
+  //   item.isActive = false;
+  // }
+  itm.isActive = !itm.isActive;
+};
 </script>

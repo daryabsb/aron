@@ -661,7 +661,7 @@
 
 <script setup>
 import { ref, onMounted, defineAsyncComponent } from "vue";
-import userAPI from "@/services/usersAPI";
+import usersAPI from "@/services/usersAPI";
 import ordersAPI from "@/services/ordersAPI";
 import { useOrderStore } from "@/Orders/ordersStore";
 import moment from "moment";
@@ -703,7 +703,7 @@ const user = ref(null);
 const orders = ref(null);
 const loadUserData = async () => {
   try {
-    const userResponse = await userAPI.getLoggedInUser();
+    const userResponse = await usersAPI.getLoggedInUser();
     const ordersResponse = await ordersAPI.getOrders();
     user.value = userResponse.data;
     orders.value = ordersResponse.data;

@@ -15,7 +15,9 @@
       <div
         class="flex flex-grow divide-x-1 divide-aronium-500 inset-0 h-[60rem]"
       >
-        <router-view></router-view>
+        <div class="phone:w-1/2 md:w-1/3 p-2 border-r border-aronium-500">
+          <router-view></router-view>
+        </div>
 
         <div class="phone:w-1/2 md:w-2/3 py-3 overflow-auto scrollbar">
           <StoreGroupsList />
@@ -26,23 +28,32 @@
     <div
       class="fixed bottom-0 w-full h-fit bg-aronium-900 px-2 flex justify-between items-center border border-aronium-500"
     >
-      <StoreTotalsCalculations />
+      <!-- <StoreTotalsCalculations /> -->
     </div>
   </div>
 </template>
 <script setup>
-import { computed, onMounted, defineAsyncComponent } from "vue";
+import { ref, watchEffect, watch, onMounted, defineAsyncComponent } from "vue";
 import { useRouter, useRoute } from "vue-router";
+import { loadUserData } from "@/Orders/orderComposables";
 
 import { useOrderStore } from "@/Orders/ordersStore";
 
 import StoreHeader from "@/Orders/components/Headers/StoreHeader.vue";
 
-const { cart, createCart } = useOrderStore();
-console.log(cart);
-const router = useRouter();
-const route = useRoute();
-const store = useOrderStore();
+const { activeOrderNumber, cart, createCart } = useOrderStore();
+// const router = useRouter();
+const number = ref(activeOrderNumber);
+onMounted(async () => {
+  console.log(cart.length);
+  if (cart.length === 0) await loadUserData();
+  createCart();
+});
+
+// if (!activeNumber) createCart();
+// onMounted(()=>{
+// if(cart.length === 0)
+// })
 
 const StoreSearch = defineAsyncComponent(() =>
   import("@/Orders/components/StoreSearch.vue")
