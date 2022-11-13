@@ -8,6 +8,8 @@ const store = useModals();
 const orders = useOrderStore();
 const users = useUser();
 
+export const useCart = computed(() => orders.cart);
+
 export const loadUserData = async () => {
   if (!users.user) {
     try {

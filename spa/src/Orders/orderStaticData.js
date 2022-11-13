@@ -1,5 +1,6 @@
 import { useOrderStore } from "@/Orders/ordersStore";
 import { useModals } from "@/stores/modals";
+import { useRouter } from "vue-router";
 
 const mods = useModals();
 const store = useOrderStore();
@@ -49,8 +50,10 @@ export const storeHeaderItems = [
     id: 6,
     title: "Order",
     icon: "fa fa-person",
-    submit: (emit, title) => {
-      emit("open", title);
+    submit: (emit, router) => {
+      console.log(router);
+      router.push("/store");
+      // emit("open", title);
     },
   },
   {

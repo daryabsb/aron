@@ -43,10 +43,10 @@ import { useOrderStore } from "@/Orders/ordersStore";
 const router = useRouter();
 const { activeOrderNumber, cart, createCart } = useOrderStore();
 
-onMounted(async () => {
-  if (cart.length === 0) await loadUserData();
-  if (!activeOrderNumber) createCart();
-});
+// onMounted(async () => {
+//   if (cart.length === 0) await loadUserData();
+//   if (!activeOrderNumber) createCart();
+// });
 
 watchEffect(() => router.push(`/store/order/${activeOrderNumber}`));
 

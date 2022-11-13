@@ -1,3 +1,4 @@
+// import { useCart } from "@/Orders/orderComposables";
 const routes = [
   {
     path: "/store",
@@ -29,8 +30,14 @@ const routes = [
         /* webpackChunkName: "store" */
         "@/Orders/views/StoreOrderDetail.vue"
       ),
+
+    beforeEnter: (to, from, next) => {
+      if (to.params.number) console.log("useCart");
+      next();
+    },
     // props: (route) => ({ number: parseInt(route.params.number) }),
     props: true,
   },
 ];
+
 export default routes;

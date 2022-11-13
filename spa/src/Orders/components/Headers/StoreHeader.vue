@@ -81,7 +81,7 @@
           v-for="item in storeHeaderItems"
           :key="item.id"
           class="font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0"
-          @click="item.submit($emit, item.title)"
+          @click="item.submit($emit, $router)"
         >
           <div
             class="flex flex-col items-center border border-aronium-500 py-1"
@@ -147,7 +147,6 @@
         </li>
       </ul>
     </div>
-    <a href="/store/order/1110202218843/">1310202235422</a>
     <Popper arrow>
       <div
         class="h-full font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0 disabled:opacity-30 disabled:hover:text-aronium-600 disabled:cursor-auto"
@@ -155,7 +154,7 @@
         <div
           class="py-4 inset-y-0 px-10 flex flex-col items-center border border-aronium-500"
         >
-          <span class="text-center font-semibold">{{ activeOrderNumber }}</span>
+          <span class="text-center font-semibold">{{ activeNumber }}</span>
         </div>
       </div>
       <template #content="{ close }">

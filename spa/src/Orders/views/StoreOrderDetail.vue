@@ -18,9 +18,20 @@
         <div class="phone:w-1/2 md:w-1/3 p-2 border-r border-aronium-500">
           <div class="">
             <store-order-top-buttons></store-order-top-buttons>
-            <div class="overflow-hidden scrollbar w-full">
+            <div v-if="activeOrder" class="overflow-hidden scrollbar w-full">
               <!-- v-if="activeOrder.status" -->
+
+              <div v-if="activeOrder.items">
+                <template v-for="item in activeOrder.items" :key="item.id">
+                  <order-item
+                    v-if="activeOrder.items"
+                    :item="item"
+                    @click="selectItem(item)"
+                  ></order-item>
+                </template>
+              </div>
               <div
+                v-else
                 class="flex-1 w-full select-none flex flex-col flex-wrap content-center justify-center"
               >
                 <svg
@@ -41,18 +52,6 @@
                   CART EMPTY
                 </p>
               </div>
-              <Suspense>
-                <template v-for="item in activeOrder.items" :key="item.id">
-                  <order-item
-                    v-if="item"
-                    :item="item"
-                    @click="selectItem(item)"
-                  ></order-item>
-                </template>
-                <template #fallback>
-                  Loading...
-                </template>
-              </Suspense>
             </div>
           </div>
         </div>
@@ -88,32 +87,28 @@ import OrderItem from "@/Orders/components/OrderItem.vue";
 import StoreHeader from "@/Orders/components/Headers/StoreHeader.vue";
 
 import { loadUserData } from "@/Orders/orderComposables";
-const { activeOrderNumber, cart, createCart } = useOrderStore();
+const { cart } = useOrderStore();
 const props = defineProps({
   number: String,
 });
-const store = useOrderStore();
-// watch(activeOrderNumber, () => (store.activeNumber = props.number));
-const activeNumber = computed(() => activeOrderNumber.value);
-const router = useRouter();
-// const activeOrder = computed(() => store.useActiveOrder);
+
 const activeOrder = ref(null);
 
 onMounted(async () => {
   // if (!props.number) createCart();
+  console.log("check cart length before: ", cart.length === 0);
+  console.log("check cart length before: ", cart.length);
+  if (cart.length === 0) await loadUserData();
+  console.log("check cart length after: ", cart.length === 0);
+  console.log("check cart length after: ", cart.length);
+  activeOrder.value = computed(() =>
+    cart.find((o) => o.number == props.number)
+  );
 });
 
-watchEffect(
-  async () => {
-    if (cart.length === 0) await loadUserData();
-
-    console.log("this is cart: ", cart);
-    activeOrder.value = cart.find((o) => o.number == props.number);
-  },
-  {
-    flush: "post",
-  }
-);
+watchEffect(async () => {}, {
+  flush: "post",
+});
 
 console.log(activeOrder.value);
 const selectItem = (itm) => {
