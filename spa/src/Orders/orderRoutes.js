@@ -19,19 +19,18 @@ const routes = [
         /* webpackChunkName: "store" */
         "@/Orders/views/StoreOrder.vue"
       ),
-    children: [
-      {
-        path: "/store/order/:number",
-        name: "StoreOrder",
-        component: () =>
-          import(
-            /* webpackChunkName: "store" */
-            "@/Orders/views/StoreOrderDetail.vue"
-          ),
-        // props: (route) => ({ number: parseInt(route.params.number) }),
-        props: true,
-      },
-    ],
+    children: [],
+  },
+  {
+    path: "/store/order/:number",
+    name: "StoreOrder",
+    component: () =>
+      import(
+        /* webpackChunkName: "store" */
+        "@/Orders/views/StoreOrderDetail.vue"
+      ),
+    // props: (route) => ({ number: parseInt(route.params.number) }),
+    props: true,
   },
 ];
 export default routes;

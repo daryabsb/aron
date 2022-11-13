@@ -5,7 +5,7 @@
     <div
       class="h-20 py-1 w-full px-2 flex items-center border border-aronium-500 bg-transparent"
     >
-      <store-header></store-header>
+      <store-header :cart="cart"></store-header>
     </div>
 
     <div class="relative w-full inset-0">
@@ -37,23 +37,18 @@ import { ref, watchEffect, watch, onMounted, defineAsyncComponent } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { loadUserData } from "@/Orders/orderComposables";
 
+import StoreHeader from "@/Orders/components/Headers/StoreHeader.vue";
 import { useOrderStore } from "@/Orders/ordersStore";
 
-import StoreHeader from "@/Orders/components/Headers/StoreHeader.vue";
-
+const router = useRouter();
 const { activeOrderNumber, cart, createCart } = useOrderStore();
-// const router = useRouter();
-const number = ref(activeOrderNumber);
+
 onMounted(async () => {
-  console.log(cart.length);
   if (cart.length === 0) await loadUserData();
-  createCart();
+  if (!activeOrderNumber) createCart();
 });
 
-// if (!activeNumber) createCart();
-// onMounted(()=>{
-// if(cart.length === 0)
-// })
+watchEffect(() => router.push(`/store/order/${activeOrderNumber}`));
 
 const StoreSearch = defineAsyncComponent(() =>
   import("@/Orders/components/StoreSearch.vue")

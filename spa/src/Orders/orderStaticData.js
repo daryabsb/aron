@@ -47,6 +47,14 @@ export const storeHeaderItems = [
   },
   {
     id: 6,
+    title: "Order",
+    icon: "fa fa-person",
+    submit: (emit, title) => {
+      emit("open", title);
+    },
+  },
+  {
+    id: 7,
     title: "Cash drawer",
     icon: "fa fa-cash-register",
     submit: (emit, title) => {

@@ -107,9 +107,9 @@
             class="px-8 flex flex-col items-center border border-aronium-500 py-1"
           >
             <!-- @click="broadcastFunction(item)" -->
-            <span class="mb-1 text-xl"
-              ><h1 class="font-bold drop-shadow-lg">F7</h1></span
-            >
+            <span class="mb-1 text-xl">
+              <h1 class="font-bold drop-shadow-lg">F7</h1>
+            </span>
             <span class="text-center xl:w-20">Save sale</span>
           </div>
         </li>
@@ -121,9 +121,9 @@
             class="px-10 flex flex-col items-center border border-aronium-500 py-1"
           >
             <!-- @click="broadcastFunction(item)" -->
-            <span class="mb-1 text-xl"
-              ><h1 class="font-bold drop-shadow-lg">F8</h1></span
-            >
+            <span class="mb-1 text-xl">
+              <h1 class="font-bold drop-shadow-lg">F8</h1>
+            </span>
             <span class="text-center xl:w-20">Payment</span>
           </div>
         </li>
@@ -139,14 +139,15 @@
             class="px-10 flex flex-col items-center border border-aronium-500 py-1"
           >
             <!-- @click="broadcastFunction(item)" -->
-            <span class="mb-1 text-xl"
-              ><h1 class="font-bold drop-shadow-lg">F9</h1></span
-            >
+            <span class="mb-1 text-xl">
+              <h1 class="font-bold drop-shadow-lg">F9</h1>
+            </span>
             <span class="text-center xl:w-20">Cash</span>
           </div>
         </li>
       </ul>
     </div>
+    <a href="/store/order/1110202218843/">1310202235422</a>
     <Popper arrow>
       <div
         class="h-full font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0 disabled:opacity-30 disabled:hover:text-aronium-600 disabled:cursor-auto"
@@ -154,7 +155,7 @@
         <div
           class="py-4 inset-y-0 px-10 flex flex-col items-center border border-aronium-500"
         >
-          <span class="text-center font-semibold">{{ activeNumber }}</span>
+          <span class="text-center font-semibold">{{ activeOrderNumber }}</span>
         </div>
       </div>
       <template #content="{ close }">
@@ -163,7 +164,7 @@
           @click="close"
         >
           <router-link
-            v-for="order in $filters.reverse(cart)"
+            v-for="order in cart"
             v-slot="{ href, navigate, isActive }"
             :key="order.number"
             :to="`/store/order/${order.number}`"
@@ -204,7 +205,7 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { ref, computed, watch, defineProps } from "vue";
 import { useRoute } from "vue-router";
 import { storeHeaderItems } from "@/Orders/orderStaticData";
 import { useModals } from "@/stores/modals";
@@ -212,15 +213,15 @@ import { useOrderStore } from "@/Orders/ordersStore";
 
 import UserDropdown from "@/Users/components/UserDropdown.vue";
 import MainMenuPopper from "@/Orders/components/Modals/MainMenuPopper.vue";
-const { cart, createCart } = useOrderStore();
+const { activeOrderNumber, cart, createCart } = useOrderStore();
 const store = useModals();
 const pos = useOrderStore();
 const route = useRoute();
+// const props = defineProps({ cart: Array });
+
 const changeActiveOrderNumber = pos.changeActiveOrderNumber;
-console.log(route.params.number);
-const activeNumber = computed(() =>
-  route.params.number ? route.params.number : pos.activeNumber
-);
+
+const activeNumber = computed(() => pos.activeOrderNumber);
 const activeOrder = computed(() => pos.useActiveOrder);
 
 const paymentModal = () => (store.openPaymentModal = true);
