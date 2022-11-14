@@ -1,20 +1,24 @@
-export default class OrderItem {
-  constructor(
-    _number = "",
-    _discount = 0,
-    _discount_type = 0,
-    _total = 0,
-    _items = [],
-    _status = false,
-    _created = new Date()
-  ) {
-    this.number = _number ? _number : this.generateUID();
-    this.discount = _discount;
-    this.discount_type = _discount_type;
-    this.total = _total;
-    this.items = _items;
-    this.status = _status;
-    this.created = _created;
+export default class Order {
+  constructor({
+    id = this.generateUID(),
+    number = this.generateUID(),
+    discount = 0,
+    discount_type = 0,
+    items = [],
+    total = 0,
+    status = false,
+    created = new Date(),
+    updated = new Date(),
+  } = {}) {
+    this.id = parseInt(id);
+    this.number = number;
+    this.discount = discount;
+    this.discount_type = discount_type;
+    this.items = items;
+    this.total = total;
+    this.status = status;
+    this.created = created;
+    this.updated = updated;
   }
 
   generateUID() {

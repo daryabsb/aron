@@ -51,7 +51,6 @@ export const storeHeaderItems = [
     title: "Order",
     icon: "fa fa-person",
     submit: (emit, router) => {
-      console.log(router);
       router.push("/store");
       // emit("open", title);
     },

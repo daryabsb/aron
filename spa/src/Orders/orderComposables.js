@@ -4,6 +4,8 @@ import { useOrderStore } from "@/Orders/ordersStore";
 import { useUser } from "@/Users/userStore";
 import usersAPI from "@/services/usersAPI";
 import ordersAPI from "@/services/ordersAPI";
+import Order from "@/Orders/orderTemplates/Order";
+
 const store = useModals();
 const orders = useOrderStore();
 const users = useUser();
@@ -22,8 +24,11 @@ export const loadUserData = async () => {
   if (orders.cart.length === 0) {
     try {
       const ordersResponse = await ordersAPI.getOrders();
+      const newOrders = ordersResponse.data.map(
+        (order) => (order = new Order(order))
+      );
 
-      orders.cart.push(...ordersResponse.data);
+      orders.cart.push(...newOrders);
       // store.activeNumber = store.cart[0].number;
     } catch (error) {
       console.log(error);

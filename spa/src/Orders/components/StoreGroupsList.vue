@@ -49,7 +49,7 @@
 
 <script setup>
 import { ref, computed, onMounted, onUpdated, defineAsyncComponent } from "vue";
-import OrderItem from "@/Orders/OrderItem";
+import OrderItem from "@/Orders/orderTemplates/OrderItem";
 import NumericPad from "@/components/shared/calculator/NumericPad.vue";
 
 import productsGroupsAPI from "@/services/productsGroupsAPI";

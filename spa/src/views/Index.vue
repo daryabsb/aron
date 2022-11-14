@@ -698,6 +698,7 @@ import {
   ChevronRightIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/vue/20/solid";
+import Order from "@/Orders/orderTemplates/Order";
 const store = useOrderStore();
 const user = ref(null);
 const orders = ref(null);
@@ -707,7 +708,10 @@ const loadUserData = async () => {
     const ordersResponse = await ordersAPI.getOrders();
     user.value = userResponse.data;
     orders.value = ordersResponse.data;
-    store.cart.push(...orders.value);
+
+    const newOrders = orders.value.map((order) => (order = new Order(order)));
+    console.log(newOrders);
+    store.cart.push(...newOrders);
     // store.activeNumber = store.cart[0].number;
   } catch (error) {
     console.log(error);

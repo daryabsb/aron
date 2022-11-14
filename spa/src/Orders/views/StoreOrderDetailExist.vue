@@ -1,34 +1,40 @@
 <template>
-  <div
-    class="relative w-full h-screen flex flex-col justify-start text-aronium-white bg-aronium-900 z-10"
-  >
-    <div
-      class="h-20 py-1 w-full px-2 flex items-center border border-aronium-500 bg-transparent"
-    >
-      <store-header></store-header>
-    </div>
+  <div class="">
+    <store-order-top-buttons></store-order-top-buttons>
+    <div v-if="activeOrder" class="overflow-hidden scrollbar w-full">
+      <!-- v-if="activeOrder.status" -->
 
-    <div class="relative w-full inset-0">
-      <StoreSearch />
-    </div>
-    <div class="flex flex-col inset-0">
-      <div
-        class="flex flex-grow divide-x-1 divide-aronium-500 inset-0 h-[60rem]"
-      >
-        <div class="phone:w-1/2 md:w-1/3 p-2 border-r border-aronium-500">
-          <router-view></router-view>
-        </div>
-
-        <div class="phone:w-1/2 md:w-2/3 py-3 overflow-auto scrollbar">
-          <StoreGroupsList />
-        </div>
+      <div v-if="activeOrder.items">
+        <template v-for="item in activeOrder.items" :key="item.id">
+          <order-item
+            v-if="activeOrder.items"
+            :item="item"
+            @click="selectItem(item)"
+          ></order-item>
+        </template>
       </div>
-    </div>
-
-    <div
-      class="fixed bottom-0 w-full h-fit bg-aronium-900 px-2 flex justify-between items-center border border-aronium-500"
-    >
-      <!-- <StoreTotalsCalculations /> -->
+      <div
+        v-else
+        class="flex-1 w-full select-none flex flex-col flex-wrap content-center justify-center"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-16 inline-block"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+          />
+        </svg>
+        <p>
+          CART EMPTY
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -52,9 +58,11 @@ import StoreHeader from "@/Orders/components/Headers/StoreHeader.vue";
 
 import { loadUserData } from "@/Orders/orderComposables";
 const { cart } = useOrderStore();
-// const props = defineProps({
-//   number: String,
-// });
+const props = defineProps({
+  number: String,
+  create: Boolean,
+});
+// console.log(props.create);
 
 const activeOrder = ref(null);
 
@@ -65,17 +73,18 @@ onMounted(async () => {
   // console.log("check cart length after: ", cart.length === 0);
   // console.log("check cart length after: ", cart.length);
 });
-// watchEffect(
-//   async () => {
-//     if (cart.length === 0) await loadUserData();
-//     console.log(cart);
-//     activeOrder.value = await cart.find((o) => o.number == props.number);
-//   },
-//   {
-//     flush: "post",
-//   }
-// );
+watchEffect(
+  async () => {
+    if (cart.length === 0) await loadUserData();
+    // console.log(cart);
+    activeOrder.value = await cart.find((o) => o.number == props.number);
+  },
+  {
+    flush: "post",
+  }
+);
 
+// console.log(activeOrder.value);
 const selectItem = (itm) => {
   // for (let item of activeOrder.value.items) {
   //   // if (!item.isActive) continue;

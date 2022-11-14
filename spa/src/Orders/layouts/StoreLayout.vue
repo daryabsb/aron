@@ -17,8 +17,8 @@
                 class="mx-auto w-full px-24 sm:max-w-2xl sm:px-6 sm:text-center lg:flex lg:flex-col lg:items-center lg:px-0 lg:text-left"
               >
                 <div class="lg:p-24">
+                  <!-- :to="{ name: 'StoreOrderCreate', params: { create: true } }" -->
                   <h1
-                    to="/store/order/"
                     class="inline-flex items-center rounded-sm font-semibold cursor-pointer bg-black p-1 pr-2 text-white hover:text-aronium-500 sm:text-base lg:text-sm xl:text-base"
                     @click="addNewOrder"
                   >
@@ -31,6 +31,15 @@
                       class="ml-2 h-5 w-5 text-gray-500"
                       aria-hidden="true"
                     />
+                    <span v-if="spin">
+                      <div
+                        class="relative w-10 h-10 animate-spin rounded-full bg-gradient-to-r from-purple-400 via-blue-500 to-red-400"
+                      >
+                        <div
+                          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-black rounded-full border-2 border-white"
+                        ></div>
+                      </div>
+                    </span>
                   </h1>
 
                   <div class="w-[45rem] mt-10 sm:mt-12">
@@ -159,7 +168,7 @@
   </div>
 </template>
 <script setup>
-import { ref, onMounted, defineAsyncComponent } from "vue";
+import { ref, computed, onMounted, defineAsyncComponent } from "vue";
 import { useOrderStore } from "@/Orders/ordersStore";
 import { loadUserData } from "@/Orders/orderComposables";
 
@@ -169,17 +178,23 @@ import { useRouter } from "vue-router";
 
 import { BanknotesIcon } from "@heroicons/vue/24/outline";
 import { ChevronRightIcon } from "@heroicons/vue/20/solid";
-const { cart, activeOrderNumber, createCart, clearCash } = useOrderStore();
+const { cart, activeNumber, createCart, clearCash } = useOrderStore();
 
 const router = useRouter();
-const number = ref(activeOrderNumber);
+const number = computed(() => activeNumber);
 onMounted(async () => {
   if (cart.length === 0) await loadUserData();
 });
-
+const spin = ref(false);
 const addNewOrder = () => {
+  spin.value = true;
   createCart();
-  router.push(`/store/order/${number.value}`);
+  setTimeout(() => {
+    console.log(`/store/order/${number.value}`);
+    router.push(`/store/order/${activeNumber}`);
+    //your code to be executed after 1 second
+  }, 5000);
+  spin.value = false;
 };
 
 const StoreOrderDiscount = defineAsyncComponent(() =>

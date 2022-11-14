@@ -5,7 +5,7 @@
     <div
       class="h-20 py-1 w-full px-2 flex items-center border border-aronium-500 bg-transparent"
     >
-      <store-header></store-header>
+      <store-header :cart="cart"></store-header>
     </div>
 
     <div class="relative w-full inset-0">
@@ -32,58 +32,24 @@
     </div>
   </div>
 </template>
-
 <script setup>
-import {
-  ref,
-  watch,
-  watchEffect,
-  computed,
-  onMounted,
-  defineProps,
-  defineAsyncComponent,
-} from "vue";
-import { useRoute, useRouter } from "vue-router";
-
-import { useOrderStore } from "@/Orders/ordersStore";
-import StoreOrderTopButtons from "@/Orders/components/StoreOrderTopButtons.vue";
-import OrderItem from "@/Orders/components/OrderItem.vue";
-import StoreHeader from "@/Orders/components/Headers/StoreHeader.vue";
-
+import { ref, watchEffect, watch, onMounted, defineAsyncComponent } from "vue";
+import { useRouter, useRoute } from "vue-router";
 import { loadUserData } from "@/Orders/orderComposables";
-const { cart } = useOrderStore();
-// const props = defineProps({
-//   number: String,
+
+import StoreHeader from "@/Orders/components/Headers/StoreHeader.vue";
+import { useOrderStore } from "@/Orders/ordersStore";
+
+const router = useRouter();
+const { activeOrderNumber, cart, createCart } = useOrderStore();
+
+// onMounted(async () => {
+//   if (cart.length === 0) await loadUserData();
+//   if (!activeOrderNumber) createCart();
 // });
 
-const activeOrder = ref(null);
+watchEffect(() => router.push(`/store/order/${activeOrderNumber}`));
 
-onMounted(async () => {
-  // if (!props.number) createCart();
-  // console.log("check cart length before: ", cart.length === 0);
-  // console.log("check cart length before: ", cart.length);
-  // console.log("check cart length after: ", cart.length === 0);
-  // console.log("check cart length after: ", cart.length);
-});
-// watchEffect(
-//   async () => {
-//     if (cart.length === 0) await loadUserData();
-//     console.log(cart);
-//     activeOrder.value = await cart.find((o) => o.number == props.number);
-//   },
-//   {
-//     flush: "post",
-//   }
-// );
-
-const selectItem = (itm) => {
-  // for (let item of activeOrder.value.items) {
-  //   // if (!item.isActive) continue;
-  //   // if(item.id==itm.id) continue;
-  //   item.isActive = false;
-  // }
-  itm.isActive = !itm.isActive;
-};
 const StoreSearch = defineAsyncComponent(() =>
   import("@/Orders/components/StoreSearch.vue")
 );
