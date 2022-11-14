@@ -32,7 +32,7 @@ const routes = [
           ),
 
         beforeEnter: (to, from, next) => {
-          console.log(to.params);
+          // console.log(to.params);
           next();
         },
         // props: (route) => ({ number: parseInt(route.params.number) }),

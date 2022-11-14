@@ -42,65 +42,35 @@
 <script setup>
 import {
   ref,
-  watch,
-  watchEffect,
   computed,
   onMounted,
   defineProps,
   defineAsyncComponent,
 } from "vue";
-import { useRoute, useRouter } from "vue-router";
 
 import { useOrderStore } from "@/Orders/ordersStore";
 import StoreOrderTopButtons from "@/Orders/components/StoreOrderTopButtons.vue";
-import OrderItem from "@/Orders/components/OrderItem.vue";
-import StoreHeader from "@/Orders/components/Headers/StoreHeader.vue";
 
 import { loadUserData } from "@/Orders/orderComposables";
-const { cart } = useOrderStore();
+const { activeNumber, useActiveOrder, cart } = useOrderStore();
+const store = useOrderStore();
 const props = defineProps({
-  number: String,
-  create: Boolean,
+  number: { type: String, required: true },
 });
-// console.log(props.create);
 
 const activeOrder = ref(null);
 
 onMounted(async () => {
-  // if (!props.number) createCart();
-  // console.log("check cart length before: ", cart.length === 0);
-  // console.log("check cart length before: ", cart.length);
-  // console.log("check cart length after: ", cart.length === 0);
-  // console.log("check cart length after: ", cart.length);
+  store.activeNumber = props.number;
+  if (cart.length === 0) await loadUserData();
 });
-watchEffect(
-  async () => {
-    if (cart.length === 0) await loadUserData();
-    // console.log(cart);
-    activeOrder.value = await cart.find((o) => o.number == props.number);
-  },
-  {
-    flush: "post",
-  }
-);
+activeOrder.value = computed(() => useActiveOrder);
 
 // console.log(activeOrder.value);
 const selectItem = (itm) => {
-  // for (let item of activeOrder.value.items) {
-  //   // if (!item.isActive) continue;
-  //   // if(item.id==itm.id) continue;
-  //   item.isActive = false;
-  // }
   itm.isActive = !itm.isActive;
 };
-const StoreSearch = defineAsyncComponent(() =>
-  import("@/Orders/components/StoreSearch.vue")
-);
-const StoreTotalsCalculations = defineAsyncComponent(() =>
-  import("@/Orders/components/StoreTotalsCalculations.vue")
-);
-// import StoreGroupsList from "@/Orders/components/StoreGroupsList.vue";
-const StoreGroupsList = defineAsyncComponent(() =>
-  import("@/Orders/components/StoreGroupsList.vue")
-);
+const OrderItem = defineAsyncComponent(() => {
+  import("@/Orders/components/OrderItem.vue");
+});
 </script>

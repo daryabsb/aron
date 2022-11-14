@@ -23,6 +23,7 @@ export const useOrderStore = defineStore("orders", {
       const order = new Order();
       this.cart = [order, ...this.cart];
       this.changeActiveOrderNumber(order.number);
+      return order.number;
     },
     changeActiveOrderNumber(number) {
       this.activeNumber = number;

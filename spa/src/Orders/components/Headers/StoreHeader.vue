@@ -220,8 +220,9 @@ const route = useRoute();
 
 const changeActiveOrderNumber = pos.changeActiveOrderNumber;
 
-const activeNumber = computed(() => pos.activeOrderNumber);
-const activeOrder = computed(() => pos.useActiveOrder);
+const activeNumber = computed(() => activeOrderNumber);
+console.log(activeNumber.value);
+// const activeOrder = computed(() => pos.useActiveOrder);
 
 const paymentModal = () => (store.openPaymentModal = true);
 const cashModal = () => (store.openCashModal = true);
