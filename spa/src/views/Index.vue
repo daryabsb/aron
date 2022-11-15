@@ -705,17 +705,13 @@ const orders = ref(null);
 const loadUserData = async () => {
   try {
     const userResponse = await usersAPI.getLoggedInUser();
-    const ordersResponse = await ordersAPI.getOrders();
-    user.value = userResponse.data;
-    orders.value = ordersResponse.data;
 
-    const newOrders = orders.value.map((order) => (order = new Order(order)));
-    console.log(newOrders);
-    store.cart.push(...newOrders);
-    // store.activeNumber = store.cart[0].number;
+    user.value = userResponse.data;
   } catch (error) {
     console.log(error);
   }
+  orders.value = await store.createCartFromAPI();
+  console.log(orders.value);
 };
 
 onMounted(loadUserData);
@@ -726,7 +722,7 @@ const navigation = [
   { name: "Balances", href: "#", icon: ScaleIcon, current: false },
   { name: "Cards", href: "#", icon: CreditCardIcon, current: false },
   { name: "Recipients", href: "#", icon: UserGroupIcon, current: false },
-  { name: "Reports", href: "#", icon: DocumentChartBarIcon, current: false },
+  { name: "Store", href: "/store", icon: DocumentChartBarIcon, current: false },
 ];
 const secondaryNavigation = [
   { name: "Settings", href: "#", icon: CogIcon },

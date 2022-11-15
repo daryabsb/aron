@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 import { moment } from "moment";
+import ordersAPI from "@/services/ordersAPI";
 import Order from "@/Orders/orderTemplates/Order";
 
 export const useOrderStore = defineStore("orders", {
@@ -22,8 +23,23 @@ export const useOrderStore = defineStore("orders", {
     createCart() {
       const order = new Order();
       this.cart = [order, ...this.cart];
-      this.changeActiveOrderNumber(order.number);
-      return order.number;
+      // this.activeNumber = order.number;
+      return order;
+    },
+    async createCartFromAPI() {
+      let newOrders = [];
+      try {
+        const ordersResponse = await ordersAPI.getOrders();
+        newOrders = ordersResponse.data.map(
+          (order) => (order = new Order(order))
+        );
+        this.cart = [...newOrders, ...this.cart];
+        // store.activeNumber = store.cart[0].number;
+      } catch (error) {
+        console.log(error);
+      }
+
+      return newOrders;
     },
     changeActiveOrderNumber(number) {
       this.activeNumber = number;

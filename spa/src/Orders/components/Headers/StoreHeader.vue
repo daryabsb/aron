@@ -163,7 +163,7 @@
           @click="close"
         >
           <router-link
-            v-for="order in cart"
+            v-for="order in pos.cart.filter((o) => !o.status)"
             v-slot="{ href, navigate, isActive }"
             :key="order.number"
             :to="`/store/order/${order.number}`"
@@ -204,7 +204,7 @@
 </template>
 
 <script setup>
-import { ref, computed, watch, defineProps } from "vue";
+import { ref, computed, watchEffect, defineProps } from "vue";
 import { useRoute } from "vue-router";
 import { storeHeaderItems } from "@/Orders/orderStaticData";
 import { useModals } from "@/stores/modals";
@@ -212,15 +212,18 @@ import { useOrderStore } from "@/Orders/ordersStore";
 
 import UserDropdown from "@/Users/components/UserDropdown.vue";
 import MainMenuPopper from "@/Orders/components/Modals/MainMenuPopper.vue";
-const { activeOrderNumber, cart, createCart } = useOrderStore();
 const store = useModals();
 const pos = useOrderStore();
 const route = useRoute();
 // const props = defineProps({ cart: Array });
+const activeNumber = ref(null);
 
 const changeActiveOrderNumber = pos.changeActiveOrderNumber;
 
-const activeNumber = computed(() => activeOrderNumber);
+watchEffect(() => {
+  activeNumber.value = pos.activeNumber;
+});
+
 console.log(activeNumber.value);
 // const activeOrder = computed(() => pos.useActiveOrder);
 

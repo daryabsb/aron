@@ -13,6 +13,7 @@ const users = useUser();
 export const useCart = computed(() => orders.cart);
 
 export const loadUserData = async () => {
+  let fetchedOrders = [];
   if (!users.user) {
     try {
       const userResponse = await usersAPI.getLoggedInUser();
@@ -21,19 +22,16 @@ export const loadUserData = async () => {
       console.log(error);
     }
   }
+  console.log("Cart length = ", orders.cart.length);
   if (orders.cart.length === 0) {
     try {
-      const ordersResponse = await ordersAPI.getOrders();
-      const newOrders = ordersResponse.data.map(
-        (order) => (order = new Order(order))
-      );
-
-      orders.cart.push(...newOrders);
-      // store.activeNumber = store.cart[0].number;
+      fetchedOrders = await orders.createCartFromAPI();
+      console.log("fetchedOrders = ", fetchedOrders);
     } catch (error) {
       console.log(error);
     }
   }
+  return [users.user, fetchedOrders];
 };
 
 export const numberFormat = (number) => {

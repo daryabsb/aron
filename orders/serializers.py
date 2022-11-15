@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from core.models import PosOrder, PosOrderItem
+from core.models import PosOrder, PosOrderItem,Product
 from products.serializers import ProductSerializer
 
 
@@ -15,7 +15,7 @@ class PosOrderItemSerializer(serializers.ModelSerializer):
 
 class PosOrderSerializer(serializers.ModelSerializer):
 
-    items = PosOrderItemSerializer(many=True, required=False)
+    items = PosOrderItemSerializer(many=True)
     number = serializers.CharField(required=False)
 
     class Meta:

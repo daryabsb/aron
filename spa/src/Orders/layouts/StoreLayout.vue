@@ -112,7 +112,9 @@
                               </th> -->
                                 </tr>
                               </thead>
+
                               <tbody
+                                v-if="cart.length > 0"
                                 class="divide-y divide-aronium-500 text-aronium-white"
                               >
                                 <tr
@@ -127,9 +129,10 @@
                                     <div class="flex">
                                       <!-- :href="order.href" -->
 
-                                      <router-link
-                                        :to="`/store/order/${order.number}`"
+                                      <!-- :to="`/store/order/${order.number}`" -->
+                                      <span
                                         class="group inline-flex space-x-2 truncate text-sm"
+                                        @click="openOrder(order)"
                                       >
                                         <BanknotesIcon
                                           class="h-5 w-5 flex-shrink-0 group-hover:text-gray-500"
@@ -140,7 +143,7 @@
                                         >
                                           {{ order.number }}
                                         </p>
-                                      </router-link>
+                                      </span>
                                     </div>
                                   </td>
 
@@ -202,25 +205,33 @@ import { useRouter } from "vue-router";
 
 import { BanknotesIcon } from "@heroicons/vue/24/outline";
 import { ChevronRightIcon } from "@heroicons/vue/20/solid";
-const { cart, activeNumber, createCart, clearCash } = useOrderStore();
+const { activeNumber, createCart, clearCash } = useOrderStore();
 const orders = useOrderStore();
 const router = useRouter();
-onMounted(async () => {
-  if (cart.length === 0) await loadUserData();
-});
 
+onMounted(async () => {
+  if (orders.cart.length === 0) await loadUserData();
+});
+const cart = computed(() => orders.cart);
 const spin = ref(false);
 const addNewOrder = () => {
   spin.value = true;
-  const number = createCart();
-  orders.activeNumber = number;
+  const order = createCart();
+  orders.activeNumber = order.number;
+  // orders.activeOrder = order.activeOrder;
   setTimeout(() => {
     // console.log(`/store/order/${number.value}`);
     console.log("your code to be executed after 3 second");
     spin.value = false;
-    router.push(`/store/order/${number}`);
-    console.log(`/store/order/${number}`);
+    router.push(`/store/order/${order.number}`);
+    console.log(`/store/order/${order.number}`);
   }, 1000);
+};
+const openOrder = async (order) => {
+  console.log(order.hasItems);
+  await setTimeout(() => {
+    router.push(`/store/order/${order.number}`);
+  }, 3000);
 };
 
 const StoreOrderDiscount = defineAsyncComponent(() =>
