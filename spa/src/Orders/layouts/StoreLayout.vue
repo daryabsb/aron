@@ -119,7 +119,7 @@
                               >
                                 <tr
                                   v-for="order in cart
-                                    .filter((o) => o.status === false)
+                                    .filter((o) => !o.status)
                                     .slice(0, 5)"
                                   :key="order.id"
                                 >
@@ -129,8 +129,8 @@
                                     <div class="flex">
                                       <!-- :href="order.href" -->
 
-                                      <!-- :to="`/store/order/${order.number}`" -->
-                                      <span
+                                      <router-link
+                                        :to="`/store/order/${order.number}`"
                                         class="group inline-flex space-x-2 truncate text-sm"
                                         @click="openOrder(order)"
                                       >
@@ -143,7 +143,7 @@
                                         >
                                           {{ order.number }}
                                         </p>
-                                      </span>
+                                      </router-link>
                                     </div>
                                   </td>
 

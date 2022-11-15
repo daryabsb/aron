@@ -1,10 +1,7 @@
 <template>
-  <div>
+  <div class="overflow-auto scrollbar">
     <store-order-top-buttons></store-order-top-buttons>
-    <div
-      v-if="store.useActiveOrder.items"
-      class="overflow-auto scrollbar w-full"
-    >
+    <div v-if="store.useActiveOrder" class="overflow-auto scrollbar w-full">
       <template v-for="item in store.useActiveOrder.items" :key="item.id">
         <Suspense>
           <order-item :item="item" @click="selectItem(item)"></order-item>
@@ -61,8 +58,11 @@ const props = defineProps({
 });
 
 onMounted(async () => {
-  if (store.cart.length === 0) await loadUserData();
   store.activeNumber = props.number;
+  if (store.cart.length === 0) {
+    // store.cart = JSON.parse(localStorage.getItem("cart"));
+    if (store.cart.length === 0) await loadUserData();
+  }
 });
 
 // console.log(activeOrder.value);

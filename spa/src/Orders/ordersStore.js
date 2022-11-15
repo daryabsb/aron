@@ -2,6 +2,7 @@ import { defineStore } from "pinia";
 import { moment } from "moment";
 import ordersAPI from "@/services/ordersAPI";
 import Order from "@/Orders/orderTemplates/Order";
+import OrderItem from "@/Orders/orderTemplates/OrderItem";
 
 export const useOrderStore = defineStore("orders", {
   state: () => {
@@ -23,6 +24,7 @@ export const useOrderStore = defineStore("orders", {
     createCart() {
       const order = new Order();
       this.cart = [order, ...this.cart];
+      // localStorage.setItem("cart", JSON.stringify(this.cart));
       // this.activeNumber = order.number;
       return order;
     },
@@ -33,7 +35,22 @@ export const useOrderStore = defineStore("orders", {
         newOrders = ordersResponse.data.map(
           (order) => (order = new Order(order))
         );
+        // console.log("From orderStore: ", newOrders);
+
+        // All Items shoulld be converted to local  items
+        newOrders.forEach((order) => {
+          if (order.items.length > 0) {
+            order.items.map((item) => {
+              console.log("itemitem");
+              // NEED TO BE CHECKED
+              new OrderItem(item);
+            });
+          }
+        });
+
         this.cart = [...newOrders, ...this.cart];
+        // localStorage.setItem("cart", JSON.stringify(this.cart));
+
         // store.activeNumber = store.cart[0].number;
       } catch (error) {
         console.log(error);
@@ -52,6 +69,8 @@ export const useOrderStore = defineStore("orders", {
       return firstPart + secondPart;
     },
     useOrderItemIndex(product) {
+      console.log(this.useActiveOrder);
+      console.log(product);
       return this.useActiveOrder.items.findIndex(
         (item) => item.id === product.id
       );

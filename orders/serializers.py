@@ -1,6 +1,10 @@
 from rest_framework import serializers
-from core.models import PosOrder, PosOrderItem,Product
+from core.models import PosOrder, PosOrderItem
 from products.serializers import ProductSerializer
+
+
+class GenerateNumberSerializer(serializers.Serializer):
+    number = serializers.IntegerField()
 
 
 class PosOrderItemSerializer(serializers.ModelSerializer):

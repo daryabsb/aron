@@ -124,7 +124,9 @@ const close = () => (isNumpadOpen.value = false);
 // PREPARE PRODUCT TO ORDER
 // 1. Add the clicked item to the created OrderItem
 const createOrder = (item) => {
-  order.value = new OrderItem(item);
+  // HERE NEED TO BE CHECKED
+  order.value = new OrderItem({ product: item });
+
   checkPrice(item);
 };
 
@@ -148,6 +150,7 @@ const getPrice = (value) => {
 
 // 4. Check the is default quantity on the item
 const checkQuantiy = () => {
+  console.log("from StoreGroupList 152", order.value);
   if (!order.value.product.is_using_default_quantity) {
     isDefaultQtyOpen.value = true;
     return;

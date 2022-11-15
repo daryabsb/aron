@@ -10,7 +10,7 @@
       <a href="#" class="focus:outline-none text-aronium-white">
         <p class="text-sm font-medium">{{ props.item.product.name }}</p>
         <p class="truncate text-sm">
-          {{ props.item.product.price }} /
+          {{ props.item.product.price + " " + props.item.currency }} /
           <span
             :class="[
               props.item.discount
@@ -18,11 +18,11 @@
                 : 'text-aronium-white',
             ]"
           >
-            {{ props.item.itemTotalPrice }}
+            {{ props.item.itemTotalPrice + " " + props.item.currency }}
           </span>
           <span v-if="props.item.discount">
             {{ " " }}
-            {{ props.item.totalWithDsicount }}</span
+            {{ props.item.totalWithDsicount + " " + props.item.currency }}</span
           >
         </p>
       </a>
@@ -45,7 +45,7 @@
         <MinusIcon class="h-5 w-5 flex-shrink-0" aria-hidden="true"></MinusIcon>
       </button>
       <span class="text-aronium-white" aria-hidden="true">{{
-        props.item.quantity
+        props.item.quantity + " " + props.item.measurementUnit
       }}</span>
       <button
         type="button"

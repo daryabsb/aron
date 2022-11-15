@@ -1,4 +1,3 @@
-import ordersAPI from "@/services/ordersAPI";
 export default class Order {
   constructor({
     id = this.generateUID(),
@@ -29,6 +28,13 @@ export default class Order {
     firstPart = `${firstPart.getDate()}${firstPart.getMonth()}${firstPart.getFullYear()}`;
     secondPart = secondPart.toString();
     return firstPart + secondPart;
+  }
+
+  get itemsTotal() {
+    return this.items.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
   }
 
   get hasItems() {

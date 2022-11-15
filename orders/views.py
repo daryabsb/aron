@@ -1,7 +1,13 @@
 import uuid
+import random
+from datetime import date
 from rest_framework import permissions, viewsets
 from .serializers import PosOrderItemSerializer, PosOrderSerializer
+
 from core.models import PosOrder, PosOrderItem
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 
 class PosOrderViewset(viewsets.ModelViewSet):
@@ -27,3 +33,29 @@ class PosOrderItemViewset(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         """Create a new order item"""
         serializer.save(user=self.request.user)
+
+
+class GenerateNumberView(APIView):
+    # serializer_class = GenerateNumberSerializer
+    # permission_classes = (permissions.IsAuthenticated,)
+
+    def get(self, request, format=None):
+        min = 100
+        max = 3999
+        digits = str(random.randint(min, max))
+        digits = (len(str(max))-len(digits))*'0'+digits
+
+        target = request.query_params.get('target', None)
+        # print(request.user.id)
+        # print(date.today().strftime("%A %d. %B %Y"))
+        # print(date.today().strftime("%d%m%Y"))
+        print(digits)
+        number = f'{request.user.id}-{date.today().strftime("%d%m%Y")}-01-{digits}'
+        if target:
+            if target == 'order':
+                number = "order-"+number
+            elif target == 'item':
+                number = 'item-'+number
+            response = {'created_number': number}
+            return Response(response)
+        return Response({'created_number': 'not found'})
