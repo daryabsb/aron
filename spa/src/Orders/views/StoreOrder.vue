@@ -47,7 +47,6 @@ import { useRoute, useRouter } from "vue-router";
 
 import { useOrderStore } from "@/Orders/ordersStore";
 import StoreOrderTopButtons from "@/Orders/components/StoreOrderTopButtons.vue";
-import OrderItem from "@/Orders/components/OrderItem.vue";
 import StoreHeader from "@/Orders/components/Headers/StoreHeader.vue";
 
 import { loadUserData } from "@/Orders/orderComposables";

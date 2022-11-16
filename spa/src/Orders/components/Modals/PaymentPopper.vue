@@ -68,11 +68,11 @@
                                 :key="item.id"
                                 class="w-0 sm:w-72"
                               >
-                                <order-item
+                                <orders-item
                                   :item="item"
                                   @click="selectItem(item)"
                                   :is-payment="true"
-                                ></order-item>
+                                ></orders-item>
                                 <!-- :is-payment="true" -->
                               </div>
                               <template #fallback>
@@ -311,8 +311,8 @@ const isShowItems = ref(true);
 const totalBeforeDiscount = computed(() => store.subTotalBeforeDiscount);
 const total = computed(() => store.totalPrice);
 
-const OrderItem = defineAsyncComponent(() =>
-  import("@/Orders/components/OrderItem.vue")
+const OrdersItem = defineAsyncComponent(() =>
+  import("@/Orders/components/OrdersItem.vue")
 );
 const StoreOrderDiscount = defineAsyncComponent(() =>
   import("@/Orders/components/StoreOrderDiscount.vue")

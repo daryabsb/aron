@@ -149,12 +149,12 @@
     </div>
     <Popper arrow>
       <div
-        class="h-full font-light hover:text-pink-700 cursor-pointer mr-2 last:mr-0 disabled:opacity-30 disabled:hover:text-aronium-600 disabled:cursor-auto"
+        class="h-full font-light hover:text-pink-700 cursor-pointer mr-2 disabled:opacity-30 disabled:hover:text-aronium-600 disabled:cursor-auto"
       >
         <div
-          class="py-4 inset-y-0 px-10 flex flex-col items-center border border-aronium-500"
+          class="py-4 inset-y-0 px-6 flex flex-col items-center border border-aronium-500"
         >
-          <span class="text-center font-semibold">{{ activeNumber }}</span>
+          <span class="truncate text-center text-sm">{{ activeNumber }}</span>
         </div>
       </div>
       <template #content="{ close }">
@@ -223,9 +223,6 @@ const changeActiveOrderNumber = pos.changeActiveOrderNumber;
 watchEffect(() => {
   activeNumber.value = pos.activeNumber;
 });
-
-console.log(activeNumber.value);
-// const activeOrder = computed(() => pos.useActiveOrder);
 
 const paymentModal = () => (store.openPaymentModal = true);
 const cashModal = () => (store.openCashModal = true);

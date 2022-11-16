@@ -27,7 +27,7 @@
       <!-- <span class="text-sm text-aronium-green"
         >" {{ useActiveOrder.number }} "</span
       > -->
-      <template v-for="item in activeOrder.items" :key="item.id">
+      <template v-for="item in activeOrder.items" :key="item.number">
         <order-item
           v-if="item"
           :item="item"

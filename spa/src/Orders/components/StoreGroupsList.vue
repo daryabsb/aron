@@ -34,12 +34,12 @@
             @select-item="selectGroup(group.id)"
           />
           <StoreGroupListItem
-            v-for="group in selectedGroupProducts"
-            :key="group.id"
-            :item="group"
-            @add-to-cart="createOrder(group)"
+            v-for="product in selectedGroupProducts"
+            :key="product.id"
+            :item="product"
+            @add-to-cart="createOrder(product)"
             @back="removeId"
-            @select-item="selectGroup(group.id)"
+            @select-item="selectGroup(product.id)"
           />
         </template>
       </ul>
@@ -49,12 +49,18 @@
 
 <script setup>
 import { ref, computed, onMounted, onUpdated, defineAsyncComponent } from "vue";
+import axios from "axios";
 import OrderItem from "@/Orders/orderTemplates/OrderItem";
+import { useUser } from "@/Users/userStore";
 import NumericPad from "@/components/shared/calculator/NumericPad.vue";
 
 import productsGroupsAPI from "@/services/productsGroupsAPI";
 import { useOrderStore } from "@/Orders/ordersStore";
-import { priceFormat, numberFormat } from "@/Orders/orderComposables";
+import {
+  priceFormat,
+  numberFormat,
+  loadUserData,
+} from "@/Orders/orderComposables";
 
 import { useFetch } from "@/stores/fetch";
 import {
@@ -65,6 +71,7 @@ import {
 } from "@heroicons/vue/20/solid";
 
 const pos = useOrderStore();
+const userStore = useUser();
 const addToCart = pos.addToCart;
 
 const ProductSingleItem = defineAsyncComponent(() =>
@@ -89,7 +96,10 @@ const loadProductGroups = async () => {
     console.log(error);
   }
 };
-onMounted(loadProductGroups);
+onMounted(async () => {
+  await loadProductGroups();
+  if (!userStore.user) await loadUserData();
+});
 const id = computed(() => ids.value[ids.value.length - 1]);
 
 const loadProductsByGroupId = async () => {
@@ -122,12 +132,30 @@ const order = ref(null);
 const close = () => (isNumpadOpen.value = false);
 
 // PREPARE PRODUCT TO ORDER
+const generateItemNumber = async () => {
+  try {
+    const numberResponse = await axios.get(
+      "http://127.0.0.1:8000/api/orders/number/?target=item"
+    );
+    return numberResponse.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
 // 1. Add the clicked item to the created OrderItem
-const createOrder = (item) => {
+const createOrder = async (item) => {
   // HERE NEED TO BE CHECKED
-  order.value = new OrderItem({ product: item });
 
+  const number = await generateItemNumber();
+
+  order.value = new OrderItem(
+    item,
+    number.created_number,
+    pos.activeOrderNumber,
+    userStore.user.id
+  );
   checkPrice(item);
+  return;
 };
 
 // 2. Check the change price on the product
@@ -150,7 +178,6 @@ const getPrice = (value) => {
 
 // 4. Check the is default quantity on the item
 const checkQuantiy = () => {
-  console.log("from StoreGroupList 152", order.value);
   if (!order.value.product.is_using_default_quantity) {
     isDefaultQtyOpen.value = true;
     return;
@@ -182,7 +209,7 @@ const getValue = (value) => {
 };
 
 const selectItem = (item) => {
-  ids.value.push(item.id);
+  ids.value.push(item.number);
   loadProductsByGroupId();
 };
 </script>

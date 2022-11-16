@@ -2,11 +2,11 @@
   <div class="overflow-auto scrollbar">
     <store-order-top-buttons></store-order-top-buttons>
     <div v-if="store.useActiveOrder" class="overflow-auto scrollbar w-full">
-      <template v-for="item in store.useActiveOrder.items" :key="item.id">
+      <template v-for="item in store.useActiveOrder.items" :key="item.number">
         <Suspense>
-          <order-item :item="item" @click="selectItem(item)"></order-item>
+          <OrdersItem :item="item" @click="selectItem(item)"></OrdersItem>
           <template #fallback>
-            <order-item-skeleton></order-item-skeleton>
+            <OrderItemSkeleton></OrderItemSkeleton>
           </template>
         </Suspense>
       </template>
@@ -41,35 +41,55 @@
 import {
   ref,
   computed,
+  watch,
   onMounted,
   defineProps,
-  // defineAsyncComponent,
+  defineAsyncComponent,
 } from "vue";
 
 import { useOrderStore } from "@/Orders/ordersStore";
-import OrderItem from "@/Orders/components/OrderItem.vue";
+import OrdersItem from "@/Orders/components/OrdersItem.vue";
+import OrderItem from "@/Orders/orderTemplates/OrderItem";
 import StoreOrderTopButtons from "@/Orders/components/StoreOrderTopButtons.vue";
 import OrderItemSkeleton from "../components/OrderItemSkeleton.vue";
 
 import { loadUserData } from "@/Orders/orderComposables";
+import Order from "../orderTemplates/Order";
+
 const store = useOrderStore();
 const props = defineProps({
   number: { type: String, required: true },
 });
 
+const convertItemToOrder = (item) => {
+  const { product, number, order, user } = item;
+  return new OrderItem(product, number, order, user);
+};
+
 onMounted(async () => {
   store.activeNumber = props.number;
   if (store.cart.length === 0) {
-    // store.cart = JSON.parse(localStorage.getItem("cart"));
-    if (store.cart.length === 0) await loadUserData();
+    store.cart = JSON.parse(localStorage.getItem("cart"));
   }
 });
 
-// console.log(activeOrder.value);
 const selectItem = (itm) => {
   itm.isActive = !itm.isActive;
 };
-// const OrderItem = defineAsyncComponent(() => {
-//   import("@/Orders/components/OrderItem.vue");
-// });
+
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [4, 5, 6, 7, 8];
+Array.prototype.unique = function () {
+  var a = this.concat();
+  for (var i = 0; i < a.length; ++i) {
+    for (var j = i + 1; j < a.length; ++j) {
+      if (a[i] === a[j]) a.splice(j--, 1);
+    }
+  }
+
+  return a;
+};
+const arr3 = [...arr1, ...arr2].unique();
+
+console.log(arr3);
 </script>

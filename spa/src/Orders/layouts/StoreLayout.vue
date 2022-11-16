@@ -205,7 +205,7 @@ import { useRouter } from "vue-router";
 
 import { BanknotesIcon } from "@heroicons/vue/24/outline";
 import { ChevronRightIcon } from "@heroicons/vue/20/solid";
-const { activeNumber, createCart, clearCash } = useOrderStore();
+const { activeNumber, generateNumber, createCart, clearCash } = useOrderStore();
 const orders = useOrderStore();
 const router = useRouter();
 
@@ -214,22 +214,23 @@ onMounted(async () => {
 });
 const cart = computed(() => orders.cart);
 const spin = ref(false);
-const addNewOrder = () => {
+const addNewOrder = async () => {
   spin.value = true;
-  const order = createCart();
-  orders.activeNumber = order.number;
+  const number = await generateNumber("order");
+  console.log("generated", number.created_number);
+  const order = await createCart(`${number.created_number}`);
+  orders.activeNumber = await number.created_number;
   // orders.activeOrder = order.activeOrder;
   setTimeout(() => {
     // console.log(`/store/order/${number.value}`);
     console.log("your code to be executed after 3 second");
     spin.value = false;
-    router.push(`/store/order/${order.number}`);
-    console.log(`/store/order/${order.number}`);
+    router.push(`/store/order/${number.created_number}`);
+    console.log(`/store/order/${number.created_number}`);
   }, 1000);
 };
-const openOrder = async (order) => {
-  console.log(order.hasItems);
-  await setTimeout(() => {
+const openOrder = (order) => {
+  setTimeout(() => {
     router.push(`/store/order/${order.number}`);
   }, 3000);
 };

@@ -4,6 +4,17 @@ import ordersAPI from "@/services/ordersAPI";
 import Order from "@/Orders/orderTemplates/Order";
 import OrderItem from "@/Orders/orderTemplates/OrderItem";
 
+Array.prototype.unique = function () {
+  var a = this.concat();
+  for (var i = 0; i < a.length; ++i) {
+    for (var j = i + 1; j < a.length; ++j) {
+      if (a[i] === a[j]) a.splice(j--, 1);
+    }
+  }
+
+  return a;
+};
+
 export const useOrderStore = defineStore("orders", {
   state: () => {
     return {
@@ -21,35 +32,45 @@ export const useOrderStore = defineStore("orders", {
   },
 
   actions: {
-    createCart() {
-      const order = new Order();
+    async generateNumber(target) {
+      try {
+        const response = await ordersAPI.getNumber(target);
+
+        return response.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async createCart(number) {
+      const order = new Order({ number: number });
+      console.log("from create cart: ", order);
       this.cart = [order, ...this.cart];
-      // localStorage.setItem("cart", JSON.stringify(this.cart));
+      localStorage.setItem("cart", JSON.stringify(this.cart));
       // this.activeNumber = order.number;
       return order;
     },
     async createCartFromAPI() {
+      const storageCart = JSON.parse(localStorage.getItem("cart"));
       let newOrders = [];
       try {
         const ordersResponse = await ordersAPI.getOrders();
         newOrders = ordersResponse.data.map(
           (order) => (order = new Order(order))
         );
-        // console.log("From orderStore: ", newOrders);
 
         // All Items shoulld be converted to local  items
         newOrders.forEach((order) => {
           if (order.items.length > 0) {
             order.items.map((item) => {
-              console.log("itemitem");
               // NEED TO BE CHECKED
               new OrderItem(item);
             });
           }
         });
-
-        this.cart = [...newOrders, ...this.cart];
-        // localStorage.setItem("cart", JSON.stringify(this.cart));
+        if (storageCart && storageCart.length > 0) {
+          this.cart = [...newOrders, ...storageCart].unique();
+        } else this.cart = [...newOrders];
+        localStorage.setItem("cart", JSON.stringify(this.cart));
 
         // store.activeNumber = store.cart[0].number;
       } catch (error) {
@@ -68,23 +89,21 @@ export const useOrderStore = defineStore("orders", {
       secondPart = secondPart.toString();
       return firstPart + secondPart;
     },
-    useOrderItemIndex(product) {
-      console.log(this.useActiveOrder);
-      console.log(product);
+    useOrderItemIndex(orderItem) {
       return this.useActiveOrder.items.findIndex(
-        (item) => item.id === product.id
+        (item) => item.product.id === orderItem.product.id
       );
     },
 
     addToCart(orderItem) {
       const index = this.useOrderItemIndex(orderItem.value);
-
       if (index === -1) {
         this.useActiveOrder.items.push(orderItem.value);
       } else {
         this.addQty(orderItem.value, (orderItem.value.quantity = 1), index);
       }
 
+      this.updateLocalStorage();
       this.beep();
       this.updateChange();
     },
@@ -99,7 +118,17 @@ export const useOrderStore = defineStore("orders", {
         item.quantity = afterAdd;
         this.beep();
       }
+      this.updateLocalStorage();
       this.updateChange();
+    },
+    updateLocalStorage() {
+      const storageCart = JSON.parse(localStorage.getItem("cart"));
+      const activeOrderIndex = storageCart.findIndex(
+        (order) => order.number === this.useActiveOrder.number
+      );
+
+      storageCart[activeOrderIndex].items = this.useActiveOrder.items;
+      localStorage.setItem("cart", JSON.stringify(storageCart));
     },
     getItemSubTotal(item) {
       item.price * item.quantity;

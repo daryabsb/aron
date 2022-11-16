@@ -1,45 +1,50 @@
 export default class OrderItem {
   constructor(
-    item
     // _product,
     // id,
-    // _quantity = 1,
-    // _price = 0.0,
-    // _is_locked = false,
-    // _discount = 0.0,
-    // _discount_type = 0.0,
-    // _is_featured = false,
-    // _voide_by = 0,
-    // _comment = "",
-    // _bundle = "",
-    // _created = new Date(),
-    // _updated = new Date(),
-    // _user = null,
-    // _order = null
+    product,
+    number,
+    user,
+    order,
+    _quantity = 1,
+    _price = 0.0,
+    _is_locked = false,
+    _discount = 0.0,
+    _discount_type = 0.0,
+    _is_featured = false,
+    _voide_by = 0,
+    _comment = "",
+    _bundle = "",
+    _created = new Date(),
+    _updated = new Date()
   ) {
-    console.log("from OrderItem class: ", item.id);
-    this.product = item.product;
-    this.id = item.id;
-    this.quantity = item.quantity;
-    this.price = item.price;
-    this.is_locked = item.is_locked;
-    this.discount = item.discount;
-    this.discount_type = item.discount_type;
-    this.is_locked = item.is_featured;
-    this.voide_by = item.voide_by;
-    this.comment = item.comment;
-    this.bundle = item.bundle;
-    this.created = item.created;
-    this.updated = item.updated;
-    this.user = item.user ?? null;
-    this.order = item.order ?? null;
+    // console.log("from OrderItem class: ", item.number);
+    this.product = product;
+    this.number = number;
+    this.order = order;
+    this.user = user;
+    this.quantity = _quantity;
+    this.measurementUnit = this.product.meqsurement_unit;
+    this.price = _price;
+    this.is_locked = _is_locked;
+    this.discount = _discount;
+    this.discount_type = _discount_type;
+    this.is_locked = _is_featured;
+    this.voide_by = _voide_by;
+    this.comment = _comment;
+    this.bundle = _bundle;
+    this.created = _created;
+    this.updated = _updated;
   }
   currencyStr(currency) {
     return currency === 1 ? "IQD" : "$";
   }
-  get measurementUnit() {
-    return this.product.measurement_unit;
+  get isReloaded() {
+    return false;
   }
+  // get measurementUnit() {
+  //   return this.product.measurement_unit;
+  // }
   get currency() {
     return this.currencyStr(this.product.currency);
   }

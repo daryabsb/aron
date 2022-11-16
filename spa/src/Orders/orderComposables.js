@@ -22,11 +22,9 @@ export const loadUserData = async () => {
       console.log(error);
     }
   }
-  console.log("Cart length = ", orders.cart.length);
   if (orders.cart.length === 0) {
     try {
       fetchedOrders = await orders.createCartFromAPI();
-      console.log("fetchedOrders = ", fetchedOrders);
     } catch (error) {
       console.log(error);
     }
