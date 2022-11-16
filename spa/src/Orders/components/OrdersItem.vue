@@ -8,33 +8,32 @@
 
     <div class="min-w-0 flex-1">
       <a href="#" class="focus:outline-none text-aronium-white">
-        <p class="text-sm font-medium">{{ props.item.product.name }}</p>
+        <p class="text-sm font-medium">{{ item.product.name }}</p>
         <p class="truncate text-sm">
-          {{ props.item.product.price + " IQD" }}
+          {{ item.product.price + " IQD" }}
           /
           <span
             :class="[
-              props.item.discount
+              item.discount
                 ? 'line-through text-aronium-danger'
                 : 'text-aronium-white',
             ]"
           >
-            {{ total + " IQD" }}
+            {{ item.totalWithTax() + " IQD" }}
           </span>
-          <span v-if="props.item.discount">
+          <span v-if="item.discount">
             {{ " " }}
-            {{ total + " IQD" }}</span
+            {{ item.orderItemTotal() + " IQD" }}</span
           >
         </p>
       </a>
     </div>
     <div
-      v-if="props.item.discount"
+      v-if="item.discount"
       class="p-2 h-9 w-9 rounded-full bg-aronium-danger relative"
     >
       <span class="absolute top-2 left-1 text-xs"
-        >{{ props.item.discount
-        }}{{ props.item.discountType == 0 ? "%" : "$" }}</span
+        >{{ item.discount }}{{ item.discountType == 0 ? "%" : "$" }}</span
       >
     </div>
     <div v-if="!isPayment" class="ml-4 flex flex-shrink-0 space-x-4">
@@ -46,7 +45,7 @@
         <MinusIcon class="h-5 w-5 flex-shrink-0" aria-hidden="true"></MinusIcon>
       </button>
       <span class="text-aronium-white" aria-hidden="true">{{
-        props.item.quantity + " " + props.item.product.measurement_unit
+        item.quantity + " " + item.measurementUnit()
       }}</span>
       <button
         type="button"
@@ -65,18 +64,20 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch } from "vue";
+import { ref, toRefs, computed, onMounted, watch } from "vue";
 import { useOrderStore } from "@/Orders/ordersStore";
 import { defineProps } from "vue";
 import ordersAPI from "@/services/ordersAPI";
 import productsAPI from "@/services/productsAPI";
 import { PlusIcon, MinusIcon } from "@heroicons/vue/20/solid";
+import { useOrderItem } from "@/Orders/orderComposables/orderItemProperties";
 
 const store = useOrderStore();
 const addQty = store.addQty;
 const props = defineProps({
-  item: { type: Object, required: true },
+  orderitem: { type: Object, required: true },
   isPayment: { type: Boolean, default: false },
 });
-const total = computed(() => props.item.product.price * props.item.quantity);
+
+const item = computed(() => useOrderItem(props.orderitem));
 </script>

@@ -36,48 +36,48 @@ export default class OrderItem {
     this.created = _created;
     this.updated = _updated;
   }
-  currencyStr(currency) {
-    return currency === 1 ? "IQD" : "$";
-  }
-  get isReloaded() {
-    return false;
-  }
-  // get measurementUnit() {
-  //   return this.product.measurement_unit;
+  // currencyStr(currency) {
+  //   return currency === 1 ? "IQD" : "$";
   // }
-  get currency() {
-    return this.currencyStr(this.product.currency);
-  }
-  get priceChangeAllowed() {
-    return this.product.is_price_change_allowed;
-  }
-  // get unitPrice() {
+  // get isReloaded() {
+  //   return false;
+  // }
+  // // get measurementUnit() {
+  // //   return this.product.measurement_unit;
+  // // }
+  // get currency() {
   //   return this.currencyStr(this.product.currency);
   // }
-  get isService() {
-    return this.product.is_service;
-  }
-  get isUsingDefaultQuantity() {
-    return this.product.is_using_default_quantity;
-  }
-  get lastBuyingPrice() {
-    return this.product.last_purchase_price;
-  }
+  // get priceChangeAllowed() {
+  //   return this.product.is_price_change_allowed;
+  // }
+  // // get unitPrice() {
+  // //   return this.currencyStr(this.product.currency);
+  // // }
+  // get isService() {
+  //   return this.product.is_service;
+  // }
+  // get isUsingDefaultQuantity() {
+  //   return this.product.is_using_default_quantity;
+  // }
+  // get lastBuyingPrice() {
+  //   return this.product.last_purchase_price;
+  // }
 
-  /*  margin has a setter, to calculate selling price
-      by adding the margin rate to cost price */
-  get margin() {
-    return this.product.margin;
-  }
-  set margin(margin) {
-    this.price = this.product.cost + margin;
-  }
-  get marginStr() {
-    return this.product.margin + "%";
-  }
-  get stockQuantity() {
-    return this.product.stock_quantity;
-  }
+  // /*  margin has a setter, to calculate selling price
+  //     by adding the margin rate to cost price */
+  // get margin() {
+  //   return this.product.margin;
+  // }
+  // set margin(margin) {
+  //   this.price = this.product.cost + margin;
+  // }
+  // get marginStr() {
+  //   return this.product.margin + "%";
+  // }
+  // get stockQuantity() {
+  //   return this.product.stock_quantity;
+  // }
 
   /*
 PRODUCT PROPERTIES
@@ -112,24 +112,24 @@ isTaxOnItemTotal    Bool
 
 */
 
-  get itemTotalPrice() {
-    if (!this.product) return 0;
-    return this.product.price * this.quantity;
-  }
-  get totalWithTax() {
-    if (!this.tax) return this.itemTotalPrice;
-    let taxRate = this.tax / 100;
-    return this.itemTotalPrice * taxRate + this.itemTotalPrice;
-  }
-  get totalWithDsicount() {
-    if (!this.discount) return this.totalWithTax;
-    if (this.discountType === 0) {
-      let discountRate = (this.totalWithTax * this.discount) / 100;
-      return this.totalWithTax - discountRate;
-    }
-    return this.totalWithTax - this.discount;
-  }
-  get orderItemTotal() {
-    return this.totalWithDsicount;
-  }
+  // get itemTotalPrice() {
+  //   if (!this.product) return 0;
+  //   return this.product.price * this.quantity;
+  // }
+  // get totalWithTax() {
+  //   if (!this.tax) return this.itemTotalPrice;
+  //   let taxRate = this.tax / 100;
+  //   return this.itemTotalPrice * taxRate + this.itemTotalPrice;
+  // }
+  // get totalWithDsicount() {
+  //   if (!this.discount) return this.totalWithTax;
+  //   if (this.discountType === 0) {
+  //     let discountRate = (this.totalWithTax * this.discount) / 100;
+  //     return this.totalWithTax - discountRate;
+  //   }
+  //   return this.totalWithTax - this.discount;
+  // }
+  // get orderItemTotal() {
+  //   return this.totalWithDsicount;
+  // }
 }

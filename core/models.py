@@ -455,7 +455,8 @@ POS RELATED
 
 class PosOrder(models.Model):
 
-    number = models.CharField(max_length=100,primary_key=True,db_index=True, unique=True)
+    number = models.CharField(
+        max_length=100, primary_key=True, db_index=True, unique=True)
     user = models.ForeignKey(
         "User", on_delete=models.CASCADE, related_name="orders")
     discount = models.SmallIntegerField(default=0)
@@ -478,7 +479,8 @@ class PosOrder(models.Model):
 
 
 class PosOrderItem(models.Model):
-    number = models.CharField(max_length=100,primary_key=True, db_index=True, unique=True)
+    number = models.CharField(
+        max_length=100, primary_key=True, db_index=True, unique=True)
     user = models.ForeignKey(
         "User", on_delete=models.CASCADE, related_name="order_items"
     )
@@ -502,9 +504,8 @@ class PosOrderItem(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
-    # def __str__(self):
-        # return f"Order#:{self.order.number}: {self.quantity}"
-        # return f"Order#:{self.number}: {self.quantity}"
+    def __str__(self):
+        return f"{self.number}: {self.quantity}{self.product.measurement_unit}"
 
 
 class PosPrinterSelection(models.Model):

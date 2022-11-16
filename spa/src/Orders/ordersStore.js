@@ -8,7 +8,7 @@ Array.prototype.unique = function () {
   var a = this.concat();
   for (var i = 0; i < a.length; ++i) {
     for (var j = i + 1; j < a.length; ++j) {
-      if (a[i] === a[j]) a.splice(j--, 1);
+      if (a[i].number === a[j].number) a.splice(j--, 1);
     }
   }
 
@@ -67,6 +67,14 @@ export const useOrderStore = defineStore("orders", {
             });
           }
         });
+
+        const arr1 = [1, 2, 3, 4, 5];
+        const arr2 = [4, 5, 6, 7, 8];
+
+        const arr3 = [...arr1, ...arr2].unique();
+
+        console.log("arr3", arr3);
+
         if (storageCart && storageCart.length > 0) {
           this.cart = [...newOrders, ...storageCart].unique();
         } else this.cart = [...newOrders];
@@ -77,7 +85,7 @@ export const useOrderStore = defineStore("orders", {
         console.log(error);
       }
 
-      return newOrders;
+      // return newOrders;
     },
     changeActiveOrderNumber(number) {
       this.activeNumber = number;
@@ -152,7 +160,7 @@ export const useOrderStore = defineStore("orders", {
       this.change = this.cash - this.totalPrice;
     },
     getItemTotalPrice(item) {
-      return item.price * item.quantity;
+      return item.product.price * item.quantity;
     },
 
     clear() {
@@ -210,8 +218,9 @@ export const useOrderStore = defineStore("orders", {
     subTotalBeforeTax() {
       if (!this.isActiveNumber) return 0;
       if (!this.isActiveOrderItems) return 0;
+
       return this.useActiveOrder.items.reduce(
-        (total, item) => total + item.itemTotalPrice,
+        (total, item) => total + this.getItemTotalPrice(item),
         0
       );
     },
@@ -219,7 +228,7 @@ export const useOrderStore = defineStore("orders", {
       if (!this.isActiveNumber) return 0;
       if (!this.isActiveOrderItems) return 0;
       return this.useActiveOrder.items.reduce(
-        (total, item) => total + item.totalWithDsicount,
+        (total, item) => total + this.getItemTotalPrice(item),
         0
       );
     },

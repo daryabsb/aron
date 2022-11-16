@@ -4,7 +4,7 @@
     <div v-if="store.useActiveOrder" class="overflow-auto scrollbar w-full">
       <template v-for="item in store.useActiveOrder.items" :key="item.number">
         <Suspense>
-          <OrdersItem :item="item" @click="selectItem(item)"></OrdersItem>
+          <OrdersItem :orderitem="item" @click="selectItem(item)"></OrdersItem>
           <template #fallback>
             <OrderItemSkeleton></OrderItemSkeleton>
           </template>
@@ -76,20 +76,4 @@ onMounted(async () => {
 const selectItem = (itm) => {
   itm.isActive = !itm.isActive;
 };
-
-const arr1 = [1, 2, 3, 4, 5];
-const arr2 = [4, 5, 6, 7, 8];
-Array.prototype.unique = function () {
-  var a = this.concat();
-  for (var i = 0; i < a.length; ++i) {
-    for (var j = i + 1; j < a.length; ++j) {
-      if (a[i] === a[j]) a.splice(j--, 1);
-    }
-  }
-
-  return a;
-};
-const arr3 = [...arr1, ...arr2].unique();
-
-console.log(arr3);
 </script>
