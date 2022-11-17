@@ -20,14 +20,6 @@ export default class Order {
     // this.hasItems = this.items.length > 0;
   }
 
-  generateUID() {
-    let firstPart = new Date();
-    let secondPart = (Math.random() * (49999 - 101) + 101) | 0;
-    firstPart = `${firstPart.getDate()}${firstPart.getMonth()}${firstPart.getFullYear()}`;
-    secondPart = secondPart.toString();
-    return firstPart + secondPart;
-  }
-
   get itemsTotal() {
     return this.items.reduce(
       (total, item) => total + item.price * item.quantity,

@@ -294,7 +294,7 @@ const navigation = [
     current: false,
   },
   { name: "Reports", href: "/pos/store", icon: InboxIcon, current: false },
-  { name: "Store", href: "/store/order", icon: ChartBarIcon, current: false },
+  { name: "Store", href: "/store", icon: ChartBarIcon, current: false },
 ];
 const userNavigation = [
   { name: "Your Profile", href: "#" },

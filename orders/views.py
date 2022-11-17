@@ -1,7 +1,7 @@
 import uuid
 import random
 from datetime import date
-from rest_framework import permissions, viewsets
+from rest_framework import permissions, viewsets,status
 from .serializers import PosOrderItemSerializer, PosOrderSerializer
 
 from core.models import PosOrder, PosOrderItem
@@ -50,12 +50,9 @@ class GenerateNumberView(APIView):
         # print(date.today().strftime("%A %d. %B %Y"))
         # print(date.today().strftime("%d%m%Y"))
         print(digits)
-        number = f'{request.user.id}-{date.today().strftime("%d%m%Y")}-01-{digits}'
         if target:
-            if target == 'order':
-                number = "order-"+number
-            elif target == 'item':
-                number = 'item-'+number
-            response = {'created_number': number}
+            number = f'{target}-{request.user.id}-{date.today().strftime("%d%m%Y")}-01-{digits}'
+            
+            response = {number}
             return Response(response)
-        return Response({'created_number': 'not found'})
+        return Response('not found',status=status.HTTP_204_NO_CONTENT)

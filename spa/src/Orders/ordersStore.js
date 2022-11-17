@@ -44,7 +44,7 @@ export const useOrderStore = defineStore("orders", {
     async createCart(number) {
       const order = new Order({ number: number });
       console.log("from create cart: ", order);
-      this.cart = [order, ...this.cart];
+      this.cart = [order, ...this.cart].unique();
       localStorage.setItem("cart", JSON.stringify(this.cart));
       // this.activeNumber = order.number;
       return order;
@@ -207,10 +207,11 @@ export const useOrderStore = defineStore("orders", {
     },
 
     isActiveNumber(state) {
-      return state.activeNumber !== "";
+      return state.activeNumber != "";
     },
     isActiveOrderItems() {
       if (!this.isActiveNumber) return false;
+      if (!this.useActiveOrder) return false;
 
       return this.useActiveOrder.items.length !== 0;
     },
@@ -237,7 +238,7 @@ export const useOrderStore = defineStore("orders", {
       if (!this.isActiveOrderItems) return 0;
 
       const total = this.useActiveOrder.items.reduce(
-        (total, item) => total + item.totalWithDsicount,
+        (total, item) => total + this.getItemTotalPrice(item),
         0
       );
 
