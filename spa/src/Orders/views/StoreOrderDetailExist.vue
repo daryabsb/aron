@@ -2,7 +2,10 @@
   <div class="overflow-auto scrollbar">
     <store-order-top-buttons></store-order-top-buttons>
     <div v-if="store.useActiveOrder" class="overflow-auto scrollbar w-full">
-      <template v-for="item in store.useActiveOrder.items" :key="item.number">
+      <template
+        v-for="item in store.useActiveOrder.value.items"
+        :key="item.number"
+      >
         <Suspense>
           <OrdersItem :orderitem="item" @click="selectItem(item)"></OrdersItem>
           <template #fallback>
@@ -34,6 +37,7 @@
         CART EMPTY
       </p>
     </div>
+    <pre>{{ store.useActiveOrder.total }}</pre>
   </div>
 </template>
 
@@ -52,6 +56,7 @@ import OrdersItem from "@/Orders/components/OrdersItem.vue";
 import OrderItem from "@/Orders/orderTemplates/OrderItem";
 import StoreOrderTopButtons from "@/Orders/components/StoreOrderTopButtons.vue";
 import OrderItemSkeleton from "../components/OrderItemSkeleton.vue";
+import { useOrder } from "@/Orders/orderComposables/orderProperties";
 
 import { loadUserData } from "@/Orders/orderComposables";
 import Order from "../orderTemplates/Order";
@@ -60,7 +65,6 @@ const store = useOrderStore();
 const props = defineProps({
   number: { type: String, required: true },
 });
-
 const convertItemToOrder = (item) => {
   const { product, number, order, user } = item;
   return new OrderItem(product, number, order, user);

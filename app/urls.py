@@ -28,13 +28,14 @@ urlpatterns = [
     ),
     path("signup/", signup, name="signup"),
     path("logout/", logout_view),
-    path("api/core/", include("core.api.urls")),
+    # path("api/core/", include("core.api.urls")),
+    path("api/", include("core.api.urls")),
     path("admin/", admin.site.urls),
     path('printers/', PrinterNamesList.as_view()),
     path("api/user/", include("user.api.urls")),
-    path("api/product/", include("products.urls")),
-    path("api/customers/", include("customers.urls")),
-    path("api/orders/", include("orders.urls")),
+    # path("api/product/", include("products.urls")),
+    # path("api/customers/", include("customers.urls")),
+    # path("api/orders/", include("orders.urls")),
     # path("accounts/", include("django.contrib.auth.urls")),
 ]
 

@@ -1,8 +1,10 @@
+import { computed } from "vue";
 import { defineStore } from "pinia";
 import { moment } from "moment";
 import ordersAPI from "@/services/ordersAPI";
 import Order from "@/Orders/orderTemplates/Order";
 import OrderItem from "@/Orders/orderTemplates/OrderItem";
+import { useOrder } from "@/Orders/orderComposables/orderProperties";
 
 Array.prototype.unique = function () {
   var a = this.concat();
@@ -98,7 +100,7 @@ export const useOrderStore = defineStore("orders", {
       return firstPart + secondPart;
     },
     useOrderItemIndex(orderItem) {
-      return this.useActiveOrder.items.findIndex(
+      return this.useActiveOrder.value.items.findIndex(
         (item) => item.product.id === orderItem.product.id
       );
     },
@@ -106,7 +108,7 @@ export const useOrderStore = defineStore("orders", {
     addToCart(orderItem) {
       const index = this.useOrderItemIndex(orderItem.value);
       if (index === -1) {
-        this.useActiveOrder.items.push(orderItem.value);
+        this.useActiveOrder.value.items.push(orderItem.value);
       } else {
         this.addQty(orderItem.value, (orderItem.value.quantity = 1), index);
       }
@@ -117,10 +119,10 @@ export const useOrderStore = defineStore("orders", {
     },
     addQty(orderItem, quantity, index) {
       if (!index) index = this.useOrderItemIndex(orderItem);
-      const item = this.useActiveOrder.items[index];
+      const item = this.useActiveOrder.value.items[index];
       const afterAdd = item.quantity + quantity;
       if (afterAdd === 0) {
-        this.useActiveOrder.items.splice(index, 1);
+        this.useActiveOrder.value.items.splice(index, 1);
         this.clearSound();
       } else {
         item.quantity = afterAdd;
@@ -132,10 +134,10 @@ export const useOrderStore = defineStore("orders", {
     updateLocalStorage() {
       const storageCart = JSON.parse(localStorage.getItem("cart"));
       const activeOrderIndex = storageCart.findIndex(
-        (order) => order.number === this.useActiveOrder.number
+        (order) => order.number === this.useActiveOrder.value.number
       );
 
-      storageCart[activeOrderIndex].items = this.useActiveOrder.items;
+      storageCart[activeOrderIndex].items = this.useActiveOrder.value.items;
       localStorage.setItem("cart", JSON.stringify(storageCart));
     },
     getItemSubTotal(item) {
@@ -190,10 +192,10 @@ export const useOrderStore = defineStore("orders", {
       this.playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
     },
     calculateActiveOrderDiscount(total) {
-      if (this.useActiveOrder.discountType === 0) {
-        return (this.useActiveOrder.discount * total) / 100;
+      if (this.useActiveOrder.value.discountType === 0) {
+        return (this.useActiveOrder.value.discount * total) / 100;
       } else {
-        return this.useActiveOrder.discount;
+        return this.useActiveOrder.value.discount;
       }
     },
   },
@@ -203,7 +205,10 @@ export const useOrderStore = defineStore("orders", {
       return state.moneys;
     },
     useActiveOrder: (state) => {
-      return state.cart.find((item) => item.number === state.activeNumber);
+      const order = state.cart.find(
+        (item) => item.number === state.activeNumber
+      );
+      return computed(() => useOrder(order));
     },
 
     isActiveNumber(state) {
@@ -213,14 +218,14 @@ export const useOrderStore = defineStore("orders", {
       if (!this.isActiveNumber) return false;
       if (!this.useActiveOrder) return false;
 
-      return this.useActiveOrder.items.length !== 0;
+      return this.useActiveOrder.value.items.length !== 0;
     },
 
     subTotalBeforeTax() {
       if (!this.isActiveNumber) return 0;
       if (!this.isActiveOrderItems) return 0;
 
-      return this.useActiveOrder.items.reduce(
+      return this.useActiveOrder.value.items.reduce(
         (total, item) => total + this.getItemTotalPrice(item),
         0
       );
@@ -228,7 +233,7 @@ export const useOrderStore = defineStore("orders", {
     subTotalBeforeDiscount() {
       if (!this.isActiveNumber) return 0;
       if (!this.isActiveOrderItems) return 0;
-      return this.useActiveOrder.items.reduce(
+      return this.useActiveOrder.value.items.reduce(
         (total, item) => total + this.getItemTotalPrice(item),
         0
       );
@@ -237,7 +242,7 @@ export const useOrderStore = defineStore("orders", {
       if (!this.isActiveNumber) return 0;
       if (!this.isActiveOrderItems) return 0;
 
-      const total = this.useActiveOrder.items.reduce(
+      const total = this.useActiveOrder.value.items.reduce(
         (total, item) => total + this.getItemTotalPrice(item),
         0
       );

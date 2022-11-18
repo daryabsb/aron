@@ -1,11 +1,13 @@
 from rest_framework import serializers
 from core.models import Barcode, Product, ProductGroup, Stock, Warehouse
+from taxes.serializers import ProductTaxSerializer
 from django.shortcuts import get_object_or_404
 
 
 class ProductSerializer(serializers.ModelSerializer):
     stock_quantity = serializers.SerializerMethodField()
 
+    productTaxes = ProductTaxSerializer(many=True, read_only=True)
     class Meta:
         model = Product
         fields = ("id", "name", "code", "description", "age_restriction",
@@ -13,7 +15,7 @@ class ProductSerializer(serializers.ModelSerializer):
                   "is_service", "is_using_default_quantity", "cost", "margin",
                   "image", "color", "is_enabled", "measurement_unit", "plu",
                   "last_purchase_price", "rank", "user", "parent_group",
-                  "is_product", "currency", "stock_quantity", "created",
+                  "is_product", "currency", "stock_quantity","productTaxes", "created",
                   "updated")
         read_only_fields = ("id",)
 

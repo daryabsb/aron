@@ -1,6 +1,6 @@
 import { ref, toRefs, reactive, computed, onMounted, watch } from "vue";
 
-export const useOrderItem = (order) => {
+export const useOrder = (order) => {
   //   item = item;
   //   const {
   //     product,
@@ -19,90 +19,53 @@ export const useOrderItem = (order) => {
   //     updated,
   //   } = item;
 
-  const currencyStr = (currency) => {
-    return currency === 1 ? "IQD" : "$";
-  };
-  const isReloaded = () => {
-    return false;
-  };
-  const measurementUnit = () => {
-    return item.product.measurement_unit;
-  };
-  const currency = () => {
-    return currencyStr(item.product.currency);
-  };
-  const priceChangeAllowed = () => {
-    return item.product.is_price_change_allowed;
-  };
-  // get unitPrice() {
-  //   return item.currencyStr(item.product.currency);
-  // }
-  const isService = () => {
-    return item.product.is_service;
-  };
-  const isUsingDefaultQuantity = () => {
-    return item.product.is_using_default_quantity;
-  };
-  const lastBuyingPrice = () => {
-    return item.product.last_purchase_price;
+  const discountStr = () => {
+    return order.discount_type === 0 ? "%" : "$";
   };
 
-  /*  margin has a setter, to calculate selling price
-          by adding the margin rate to cost price */
-  const margin = () => {
-    return item.product.margin;
-  };
-  const setMargin = (margin) => {
-    item.price = item.product.cost + margin;
-  };
-  const marginStr = () => {
-    return item.product.margin + "%";
-  };
-  const stockQuantity = () => {
-    return item.product.stock_quantity;
-  };
-
-  const itemTotalPrice = () => {
-    if (!item.product) return 0;
-    return item.product.price * item.quantity;
-  };
-  const totalWithTax = () => {
-    if (!item.tax) return itemTotalPrice();
-    let taxRate = item.tax / 100;
-    return itemTotalPrice() * taxRate + itemTotalPrice();
-  };
-  const totalWithDsicount = () => {
-    if (!item.discount) return totalWithTax();
-    if (item.discountType === 0) {
-      let discountRate = (totalWithTax() * item.discount) / 100;
-      return totalWithTax() - discountRate;
-    }
-    return totalWithTax() - item.discount;
-  };
-  const orderItemTotal = () => {
-    return totalWithDsicount();
+  // const itemTotalPrice = () => {
+  //   if (!item.product) return 0;
+  //   return item.product.price * item.quantity;
+  // };
+  // const totalWithTax = () => {
+  //   if (!item.tax) return itemTotalPrice();
+  //   let taxRate = item.tax / 100;
+  //   return itemTotalPrice() * taxRate + itemTotalPrice();
+  // };
+  // const totalWithDsicount = () => {
+  //   if (!item.discount) return totalWithTax();
+  //   if (item.discountType === 0) {
+  //     let discountRate = (totalWithTax() * item.discount) / 100;
+  //     return totalWithTax() - discountRate;
+  //   }
+  //   return totalWithTax() - item.discount;
+  // };
+  const totalPrice = () => {
+    if (!order) return 0;
+    console.log(order.total);
+    return order.total;
   };
 
   return {
     // memory: readonly(memory),
     // error: readonly(error),
     ...order,
-    currencyStr,
-    measurementUnit,
-    isReloaded,
-    currency,
-    priceChangeAllowed,
-    isService,
-    isUsingDefaultQuantity,
-    lastBuyingPrice,
-    margin,
-    setMargin,
-    marginStr,
-    stockQuantity,
-    itemTotalPrice,
-    totalWithTax,
-    totalWithDsicount,
-    orderItemTotal,
+    discountStr,
+    // measurementUnit,
+    // isReloaded,
+    // currency,
+    // priceChangeAllowed,
+    // isService,
+    // isUsingDefaultQuantity,
+    // lastBuyingPrice,
+    // margin,
+    // setMargin,
+    // marginStr,
+    // stockQuantity,
+    // itemTotalPrice,
+    // totalWithTax,
+    // totalWithDsicount,
+    totalPrice,
   };
 };
 

@@ -848,7 +848,7 @@ class Tax(models.Model):
         "User", on_delete=models.CASCADE, related_name="taxes")
     name = models.CharField(max_length=30)
     rate = models.DecimalField(max_digits=18, decimal_places=4, default=0)
-    code = models.CharField(max_length=10, null=True, blank=True)
+    code = models.CharField(max_length=100, null=True, blank=True)
     is_fixed = models.BooleanField(default=False)
     is_tax_on_total = models.BooleanField(default=False)
     is_enabled = models.BooleanField(default=False)
