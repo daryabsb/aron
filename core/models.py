@@ -2,6 +2,8 @@ from django.db import models
 import uuid
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
+from django.db.models.signals import pre_delete, post_save
+from django.dispatch import receiver
 
 from .managers import OrderManager, UserManager
 
@@ -731,7 +733,7 @@ class Product(models.Model):
     plu = models.IntegerField(null=True, blank=True)
     measurement_unit = models.CharField(max_length=10, null=True, blank=True)
 
-    price = models.FloatField(default=0)
+    price = models.DecimalField(default=0, decimal_places=3, max_digits=11)
 
     is_tax_inclusive_price = models.BooleanField(default=False)
 
@@ -742,14 +744,16 @@ class Product(models.Model):
     is_service = models.BooleanField(default=False)
     is_using_default_quantity = models.BooleanField(default=True)
     is_product = models.BooleanField(default=True)
-    cost = models.FloatField(default=0, null=True, blank=True)
+    cost = models.DecimalField(
+        default=0, null=True, blank=True, decimal_places=3, max_digits=11)
     margin = models.DecimalField(max_digits=18, decimal_places=3, default=0)
     image = models.ImageField(null=True, blank=True,
                               upload_to=upload_image_file_path)
     color = models.CharField(max_length=50, default="Transparent")
     is_enabled = models.BooleanField(default=True)
     age_restriction = models.SmallIntegerField(null=True, blank=True)
-    last_purchase_price = models.FloatField(default=0)
+    last_purchase_price = models.DecimalField(
+        default=0, decimal_places=3, max_digits=11)
     rank = models.SmallIntegerField(default=0)
 
     created = models.DateTimeField(auto_now_add=True)
@@ -757,6 +761,26 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        # if self.id is not None:
+        if ProductTax.objects.filter(product=self).exists():
+            rate = 0
+            # pt = ProductTax.objects.filter(product=self)
+            pts = ProductTax.objects.filter(product=self)
+            for pt in pts:
+                rate += pt.tax.rate
+
+            rate = rate / 100
+            print(rate)
+
+        # if self.is_tax_inclusive_price:
+        #     self.cost -= rate * self.cost
+            # self.cost -= rate
+        # if self.productTaxes is not None:
+        # print(self.productTaxes)
+        # super(Product, self).save(*args, **kwargs)
+        super(Product, self).save(*args, **kwargs)
 
 
 class Barcode(models.Model):
@@ -876,7 +900,7 @@ class ProductTax(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        unique_together = ('product', 'tax',)
+        # unique_together = ('product', 'tax',)
         constraints = [
             models.UniqueConstraint(
                 fields=["product", "tax"], name="unique_product_taxes"
@@ -886,6 +910,31 @@ class ProductTax(models.Model):
     def __str__(self):
         return f"{self.product.name} @ {self.tax.rate}"
 
+
+# @receiver(pre_save, sender=ProductTax)
+def update_product_cost(sender, instance, **kwargs):
+    print(sender)
+    product = Product.objects.get(id=instance.product.id)
+    rate = instance.tax.rate / 100
+    if product.is_tax_inclusive_price:
+        product.cost += rate
+        print(product.cost)
+        product.save()
+
+
+# @receiver(post_save, sender=ProductTax)
+def update_product_tax_rate(sender, instance, created, **kwargs):
+    if created:
+        product = Product.objects.get(id=instance.product.id)
+        rate = instance.tax.rate / 100
+        if product.is_tax_inclusive_price:
+            product.cost -= rate
+            print(product.cost)
+            product.save()
+
+
+pre_delete.connect(update_product_cost, sender=ProductTax)
+post_save.connect(update_product_tax_rate, sender=ProductTax)
 
 """
 PROMOTION RELATED

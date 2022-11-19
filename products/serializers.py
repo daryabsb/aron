@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from core.models import (Barcode, Product, ProductGroup, Stock, 
-                    Warehouse, ProductTax,Tax,)
+from core.models import (Barcode, Product, ProductGroup, Stock,
+                         Warehouse, ProductTax, Tax,)
 from taxes.serializers import ProductTaxSerializer
 from core.modules import rate
 # from django.shortcuts import get_object_or_404
@@ -41,9 +41,9 @@ class ProductSerializer(serializers.ModelSerializer):
             elif obj.is_tax_inclusive_price and tax.is_enabled:
                 tax_rate = obj.price * rate(tax.rate) + tax.amount
                 return {
-                    'rate':tax.rate,
-                    'amount':tax.amount,
-                    'total':tax_rate
+                    'rate': tax.rate,
+                    'amount': tax.amount,
+                    'total': tax_rate
                 }
         return 0
 
