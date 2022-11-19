@@ -876,6 +876,7 @@ class ProductTax(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
+        unique_together = ('product', 'tax',)
         constraints = [
             models.UniqueConstraint(
                 fields=["product", "tax"], name="unique_product_taxes"

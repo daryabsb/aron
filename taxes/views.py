@@ -10,6 +10,17 @@ class TaxViewset(viewsets.ModelViewSet):
     queryset = Tax.objects.all()
     permission_classes = (permissions.IsAuthenticated,)
 
+    def get_queryset(self):
+        
+        queryset = Tax.objects.all()
+
+        keyword = self.request.query_params.get("key",None)
+
+        if keyword:
+            queryset = Tax.objects.filter(name="VAT")
+        
+        return queryset
+
 
 class ProductTaxViewset(viewsets.ModelViewSet):
     serializer_class = ProductTaxSerializer

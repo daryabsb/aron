@@ -8,7 +8,15 @@
 
     <div class="min-w-0 flex-1">
       <a href="#" class="focus:outline-none text-aronium-white">
-        <p class="text-sm font-medium">{{ item.product.name }}</p>
+        <p class="flex text-sm font-medium">
+          <span>{{ item.product.name }}</span>
+          <span
+            v-if="item.product.tax"
+            class="ml-6 shadow-sm px-6 shadow-aronium-500 text-aronium-danger font-semibold"
+          >
+            + TAX {{ item.product.tax.rate }}%
+          </span>
+        </p>
         <p class="truncate text-sm">
           {{ item.product.price + " IQD" }}
           /
@@ -66,10 +74,12 @@
 <script setup>
 import { ref, toRefs, computed, onMounted, watch } from "vue";
 import { useOrderStore } from "@/Orders/ordersStore";
+// import { useActiveOrderStore } from "@/Orders/ordersStore/useActiveOrder";
 import { defineProps } from "vue";
 import ordersAPI from "@/services/ordersAPI";
 import productsAPI from "@/services/productsAPI";
 import { PlusIcon, MinusIcon } from "@heroicons/vue/20/solid";
+import { useActiveOrder } from "@/Orders/ordersStore/useActiveOrderStore";
 import { useOrderItem } from "@/Orders/orderComposables/orderItemProperties";
 
 const store = useOrderStore();

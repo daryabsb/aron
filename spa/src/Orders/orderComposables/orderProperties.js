@@ -22,6 +22,26 @@ export const useOrder = (order) => {
   const discountStr = () => {
     return order.discount_type === 0 ? "%" : "$";
   };
+  const getItemTotalPrice = (item) => {
+    return item.product.price * item.quantity;
+  };
+
+  const subTotalBeforeTax = () => {
+    if (!order.items) return 0;
+
+    return order.items.reduce(
+      (total, item) => total + getItemTotalPrice(item),
+      0
+    );
+  };
+  const subTotalWithTax = () => {
+    if (!order.items) return 0;
+
+    return order.items.reduce(
+      (total, item) => total + getItemTotalPrice(item),
+      0
+    );
+  };
 
   // const itemTotalPrice = () => {
   //   if (!item.product) return 0;
@@ -51,6 +71,8 @@ export const useOrder = (order) => {
     // error: readonly(error),
     ...order,
     discountStr,
+    subTotalBeforeTax,
+    subTotalWithTax,
     // measurementUnit,
     // isReloaded,
     // currency,

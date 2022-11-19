@@ -43,6 +43,9 @@ def upload_file_file_path(instance, filename):
     return os.path.join('uploads/files/', filename)
 
 
+def rate(rate):
+    return int(rate) / 100
+
 # def pdf_page_count(link):
 #     # Load the pdf to the PdfFileReader object with default settings
 #     with open(link, "rb") as pdf_file:

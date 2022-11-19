@@ -1,10 +1,7 @@
-import { computed } from "vue";
 import { defineStore } from "pinia";
-import { moment } from "moment";
 import ordersAPI from "@/services/ordersAPI";
 import Order from "@/Orders/orderTemplates/Order";
 import OrderItem from "@/Orders/orderTemplates/OrderItem";
-import { useOrder } from "@/Orders/orderComposables/orderProperties";
 
 Array.prototype.unique = function () {
   var a = this.concat();
@@ -22,14 +19,6 @@ export const useOrderStore = defineStore("orders", {
     return {
       cart: [],
       activeNumber: "",
-      cash: 0,
-      change: 0,
-      moneys: [250, 500, 1000, 5000, 10000, 25000, 50000, 100000],
-
-      receiptNo: null,
-      receiptDate: null,
-
-      isShowModalReceipt: false,
     };
   },
 
@@ -140,125 +129,13 @@ export const useOrderStore = defineStore("orders", {
       storageCart[activeOrderIndex].items = this.useActiveOrder.value.items;
       localStorage.setItem("cart", JSON.stringify(storageCart));
     },
-    getItemSubTotal(item) {
-      item.price * item.quantity;
-    },
-    addCash(amount) {
-      this.cash += amount || 0;
-
-      this.updateChange();
-      this.beep();
-    },
-    clearCash() {
-      this.cash = 0;
-      this.change = 0;
-      this.clearSound();
-    },
-    updateCash(value) {
-      this.cash = parseFloat(value.replace(/[^0-9]+/g, ""));
-      this.updateChange();
-    },
-    updateChange() {
-      this.change = this.cash - this.totalPrice;
-    },
-    getItemTotalPrice(item) {
-      return item.product.price * item.quantity;
-    },
-
-    clear() {
-      this.cash = 0;
-      this.cart = [];
-      this.receiptNo = null;
-      this.receiptDate = null;
-      this.updateChange();
-      this.clearSound();
-    },
-    submit: (state) => {
-      const time = new Date();
-      state.isShowModalReceipt = true;
-      state.receiptNo = `ARONPOS-KS-${Math.round(time.getTime() / 1000)}`;
-      state.receiptDate = moment(time);
-    },
-    playSound(src) {
-      if (src) {
-        const sound = new Audio(src);
-        sound.play();
-      }
-    },
-    beep() {
-      this.playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
-    },
-    clearSound() {
-      this.playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
-    },
-    calculateActiveOrderDiscount(total) {
-      if (this.useActiveOrder.value.discountType === 0) {
-        return (this.useActiveOrder.value.discount * total) / 100;
-      } else {
-        return this.useActiveOrder.value.discount;
-      }
-    },
   },
   getters: {
-    activeOrderNumber: (state) => state.activeNumber,
-    useMoneys(state) {
-      return state.moneys;
-    },
-    useActiveOrder: (state) => {
-      const order = state.cart.find(
-        (item) => item.number === state.activeNumber
-      );
-      return computed(() => useOrder(order));
-    },
-
-    isActiveNumber(state) {
-      return state.activeNumber != "";
-    },
-    isActiveOrderItems() {
-      if (!this.isActiveNumber) return false;
-      if (!this.useActiveOrder) return false;
-
-      return this.useActiveOrder.value.items.length !== 0;
-    },
-
-    subTotalBeforeTax() {
-      if (!this.isActiveNumber) return 0;
-      if (!this.isActiveOrderItems) return 0;
-
-      return this.useActiveOrder.value.items.reduce(
-        (total, item) => total + this.getItemTotalPrice(item),
-        0
-      );
-    },
-    subTotalBeforeDiscount() {
-      if (!this.isActiveNumber) return 0;
-      if (!this.isActiveOrderItems) return 0;
-      return this.useActiveOrder.value.items.reduce(
-        (total, item) => total + this.getItemTotalPrice(item),
-        0
-      );
-    },
-    totalPrice() {
-      if (!this.isActiveNumber) return 0;
-      if (!this.isActiveOrderItems) return 0;
-
-      const total = this.useActiveOrder.value.items.reduce(
-        (total, item) => total + this.getItemTotalPrice(item),
-        0
-      );
-
-      this.useActiveOrder.total =
-        total - this.calculateActiveOrderDiscount(total);
-      return this.useActiveOrder.total;
-    },
-    submitable(state) {
-      return state.change >= 0 && state.cart.length > 0;
-    },
-    useCash(state) {
-      return state.cash;
-    },
-    useChange(state) {
-      return state.change;
-    },
+    // useActiveOrder: (state) => {
+    //   const order = state.cart.find(
+    //     (item) => item.number === state.activeNumber
+    //   );
+    //   return computed(() => useOrder(order));
+    // },
   },
 });

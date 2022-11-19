@@ -68,9 +68,9 @@ export const useOrderItem = (item) => {
     return item.product.price * item.quantity;
   };
   const totalWithTax = () => {
-    if (!item.tax) return itemTotalPrice();
-    let taxRate = item.tax / 100;
-    return itemTotalPrice() * taxRate + itemTotalPrice();
+    if (!item.product.tax) return itemTotalPrice();
+
+    return parseInt(itemTotalPrice()) + item.product.tax.total;
   };
   const totalWithDsicount = () => {
     if (!item.discount) return totalWithTax();

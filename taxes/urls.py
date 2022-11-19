@@ -10,7 +10,7 @@ from .views import (
 
 router = routers.DefaultRouter()
 
-router.register("taxes", TaxViewset)
+router.register("all", TaxViewset)
 router.register("product-taxes", ProductTaxViewset)
 router.register("document-item-taxes", DocumentItemTaxViewset)
 

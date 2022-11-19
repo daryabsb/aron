@@ -1,13 +1,17 @@
 from rest_framework import serializers
-from core.models import Barcode, Product, ProductGroup, Stock, Warehouse
+from core.models import (Barcode, Product, ProductGroup, Stock, 
+                    Warehouse, ProductTax,Tax,)
 from taxes.serializers import ProductTaxSerializer
-from django.shortcuts import get_object_or_404
+from core.modules import rate
+# from django.shortcuts import get_object_or_404
 
 
 class ProductSerializer(serializers.ModelSerializer):
-    stock_quantity = serializers.SerializerMethodField()
 
+    stock_quantity = serializers.SerializerMethodField()
+    tax = serializers.SerializerMethodField()
     productTaxes = ProductTaxSerializer(many=True, read_only=True)
+
     class Meta:
         model = Product
         fields = ("id", "name", "code", "description", "age_restriction",
@@ -15,8 +19,8 @@ class ProductSerializer(serializers.ModelSerializer):
                   "is_service", "is_using_default_quantity", "cost", "margin",
                   "image", "color", "is_enabled", "measurement_unit", "plu",
                   "last_purchase_price", "rank", "user", "parent_group",
-                  "is_product", "currency", "stock_quantity","productTaxes", "created",
-                  "updated")
+                  "is_product", "currency", "stock_quantity", "tax",
+                  "productTaxes", "created", "updated")
         read_only_fields = ("id",)
 
     def get_stock_quantity(self, obj):
@@ -25,6 +29,22 @@ class ProductSerializer(serializers.ModelSerializer):
             # print(stock)
         # if stock:
             return stock.quantity
+        return 0
+
+    def get_tax(self, obj):
+        if ProductTax.objects.filter(product=obj.id).exists():
+            product_tax = ProductTax.objects.get(product=obj.id)
+            # if tax.tax is not None:
+            tax = Tax.objects.get(id=product_tax.tax.id)
+            if tax.is_tax_on_total:
+                return 0
+            elif obj.is_tax_inclusive_price and tax.is_enabled:
+                tax_rate = obj.price * rate(tax.rate) + tax.amount
+                return {
+                    'rate':tax.rate,
+                    'amount':tax.amount,
+                    'total':tax_rate
+                }
         return 0
 
 
