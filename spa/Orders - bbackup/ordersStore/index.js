@@ -26,13 +26,87 @@ export const useOrderStore = defineStore("orders", {
       isShowModalReceipt: false,
     };
   },
+
   getters: {
     useActiveOrder(state) {
       const order = state.cart.find(
         (item) => item.number === state.activeNumber
       );
-      return order;
+      return useOrder(order);
     },
+    activeOrderNumber: (state) => state.activeNumber,
+
+    isActiveNumber(state) {
+      return state.activeNumber != "";
+    },
+    isActiveOrderItems() {
+      if (!this.isActiveNumber) return false;
+      if (!this.useActiveOrder) return false;
+
+      return this.useActiveOrder.items.length !== 0;
+    },
+
+    totalTax() {
+      if (!this.isActiveNumber) return 0;
+      if (!this.isActiveOrderItems) return 0;
+      const taxes = this.useActiveOrder.items.map(
+        (item) => item.product.tax.total * item.quantity
+      );
+      const taxTotal = taxes.reduce((total, item) => (total += item), 0);
+      return taxTotal.toFixed(3);
+    },
+
+    subTotalBeforeTax() {
+      if (!this.isActiveNumber) return 0;
+      if (!this.isActiveOrderItems) return 0;
+
+      return this.useActiveOrder.items.reduce(
+        (total, item) => total + this.getItemTotalPrice(item),
+        0
+      );
+    },
+    subTotalWithTax() {
+      if (!this.isActiveNumber) return 0;
+      if (!this.isActiveOrderItems) return 0;
+
+      return +this.subTotalBeforeTax + +this.totalTax;
+    },
+    subTotalBeforeDiscount() {
+      if (!this.isActiveNumber) return 0;
+      if (!this.isActiveOrderItems) return 0;
+      return this.useActiveOrder.items.reduce(
+        (total, item) => total + this.getItemTotalPrice(item),
+        0
+      );
+    },
+    totalPrice() {
+      if (!this.isActiveNumber) return 0;
+      if (!this.isActiveOrderItems) return 0;
+
+      const total = this.useActiveOrder.items.reduce(
+        (total, item) => total + this.getItemTotalPrice(item),
+        0
+      );
+      console.log(
+        "total for calculations",
+        this.calculateActiveOrderDiscount(total)
+      );
+      this.useActiveOrder.total =
+        total - this.calculateActiveOrderDiscount(total);
+      return this.useActiveOrder.total;
+    },
+    // useMoneys(state) {
+    //   return state.moneys;
+    // },
+    // submitable(state) {
+    //   return state.change >= 0 && state.cart.length > 0;
+    // },
+    // useCash(state) {
+    //   return state.cash;
+    // },
+    // useChange(state) {
+    //   return state.change;
+    // },
   },
   actions: {
     async generateNumber(target) {

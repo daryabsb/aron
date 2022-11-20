@@ -22,39 +22,12 @@ export const useOrder = (order) => {
   const discountStr = () => {
     return order.discount_type === 0 ? "%" : "$";
   };
-  const calculateActiveOrderDiscount = (total) => {
-    if (order.discount_type === 0) {
-      return (total * order.discount) / 100;
-    } else {
-      return order.discount;
-    }
-  };
   const getItemTotalPrice = (item) => {
     return item.product.price * item.quantity;
   };
 
-  const isActiveNumber = () => {
-    if (!order) return false;
-    return order.number != "";
-  };
-  const isActiveOrderItems = () => {
-    if (!isActiveNumber) return false;
-
-    return this.useActiveOrder.items.length !== 0;
-  };
-
-  const totalTax = () => {
-    if (!isActiveNumber()) return 0;
-    if (!isActiveOrderItems) return 0;
-    const taxes = order.items.map(
-      (item) => item.product.tax.total * item.quantity
-    );
-    const taxTotal = taxes.reduce((total, item) => (total += item), 0);
-    return taxTotal.toFixed(3);
-  };
-
   const subTotalBeforeTax = () => {
-    if (!order) return 0;
+    if (!order.items) return 0;
 
     return order.items.reduce(
       (total, item) => total + getItemTotalPrice(item),
@@ -62,24 +35,36 @@ export const useOrder = (order) => {
     );
   };
   const subTotalWithTax = () => {
-    if (!isActiveNumber) return 0;
-    if (!isActiveOrderItems) return 0;
+    if (!order.items) return 0;
 
-    return +subTotalBeforeTax() + +totalTax();
+    return order.items.reduce(
+      (total, item) => total + getItemTotalPrice(item),
+      0
+    );
   };
 
-  const subTotalWithDiscount = () => {
-    if (!isActiveNumber) return 0;
-    if (!isActiveOrderItems) return 0;
-
-    return subTotalWithTax() - calculateActiveOrderDiscount(subTotalWithTax());
+  // const itemTotalPrice = () => {
+  //   if (!item.product) return 0;
+  //   return item.product.price * item.quantity;
+  // };
+  // const totalWithTax = () => {
+  //   if (!item.tax) return itemTotalPrice();
+  //   let taxRate = item.tax / 100;
+  //   return itemTotalPrice() * taxRate + itemTotalPrice();
+  // };
+  // const totalWithDsicount = () => {
+  //   if (!item.discount) return totalWithTax();
+  //   if (item.discountType === 0) {
+  //     let discountRate = (totalWithTax() * item.discount) / 100;
+  //     return totalWithTax() - discountRate;
+  //   }
+  //   return totalWithTax() - item.discount;
+  // };
+  const totalPrice = () => {
+    if (!order) return 0;
+    console.log(order.total);
+    return order.total;
   };
-
-  if (order) {
-    order.total = subTotalWithDiscount();
-  }
-
-  const totalPrice = () => subTotalWithDiscount();
 
   return {
     // memory: readonly(memory),
@@ -88,8 +73,20 @@ export const useOrder = (order) => {
     discountStr,
     subTotalBeforeTax,
     subTotalWithTax,
-    subTotalWithDiscount,
-    totalTax,
+    // measurementUnit,
+    // isReloaded,
+    // currency,
+    // priceChangeAllowed,
+    // isService,
+    // isUsingDefaultQuantity,
+    // lastBuyingPrice,
+    // margin,
+    // setMargin,
+    // marginStr,
+    // stockQuantity,
+    // itemTotalPrice,
+    // totalWithTax,
+    // totalWithDsicount,
     totalPrice,
   };
 };

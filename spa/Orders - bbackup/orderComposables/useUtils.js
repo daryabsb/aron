@@ -34,7 +34,7 @@ export const useUtils = () => {
     updateChange();
   };
   const updateChange = () => {
-    change.value = cash.value - store.useActiveOrder.total;
+    change.value = cash.value - store.totalPrice;
   };
   const clear = () => {
     cash.value = 0;

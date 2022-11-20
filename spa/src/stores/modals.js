@@ -13,19 +13,19 @@ export const useModals = defineStore("modals", {
   },
   getters: {
     isSearchModal(state) {
-      return computed(() => state.searchModal);
+      return state.searchModal;
     },
     isPaymentModal(state) {
-      return computed(() => state.openPaymentModal);
+      return state.openPaymentModal;
     },
     isCashModal(state) {
-      return computed(() => state.openCashModal);
+      return state.openCashModal;
     },
     isStoreOrderDiscount(state) {
-      return computed(() => state.openOrderDiscountModal);
+      return state.openOrderDiscountModal;
     },
     isCalculatorModal(state) {
-      return computed(() => state.openCalculatorModal);
+      return state.openCalculatorModal;
     },
   },
 });

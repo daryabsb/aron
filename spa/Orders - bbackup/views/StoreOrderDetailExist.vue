@@ -1,12 +1,13 @@
 <template>
   <div class="overflow-auto scrollbar">
-    <StoreOrderTopButtons />
+    <store-order-top-buttons></store-order-top-buttons>
     <div v-if="useActiveOrder" class="overflow-auto scrollbar w-full">
+      <!-- {{ useActiveOrder }} -->
       <template v-for="item in useActiveOrder.items" :key="item.number">
         <Suspense>
           <OrdersItem :orderitem="item" @click="selectItem(item)"></OrdersItem>
           <template #fallback>
-            <OrderItemSkeleton />
+            <OrderItemSkeleton></OrderItemSkeleton>
           </template>
         </Suspense>
       </template>
@@ -29,12 +30,20 @@ import {
   computed,
   onMounted,
   defineProps,
-  defineAsyncComponent,
 } from "vue";
-import OrdersItem from "@/Orders/components/OrdersItem.vue";
-import { useOrderStore } from "@/Orders/ordersStore";
-import { useOrder } from "@/Orders/orderComposables/orderProperties";
 
+import { useOrderStore } from "@/Orders/ordersStore";
+import OrdersItem from "@/Orders/components/OrdersItem.vue";
+import StoreOrderTopButtons from "@/Orders/components/StoreOrderTopButtons.vue";
+import OrderItemSkeleton from "../components/OrderItemSkeleton.vue";
+
+
+const store = useOrderStore();
+const props = defineProps({
+  number: { type: String, required: true },
+});
+
+const useActiveOrder = computed(() => store.useActiveOrder)
 
 onMounted(async () => {
   store.activeNumber = props.number;
@@ -42,15 +51,6 @@ onMounted(async () => {
     store.cart = JSON.parse(localStorage.getItem("cart"));
   }
 });
-
-const props = defineProps({
-  number: { type: String, required: true },
-});
-const StoreOrderTopButtons = defineAsyncComponent(() => import("@/Orders/components/StoreOrderTopButtons.vue"))
-const OrderItemSkeleton = defineAsyncComponent(() => import("@/Orders/components/OrderItemSkeleton.vue"))
-
-const store = useOrderStore();
-const useActiveOrder = computed(() => useOrder(store.useActiveOrder))
 
 const selectItem = (itm) => {
   itm.isActive = !itm.isActive;

@@ -8,7 +8,7 @@
       </dt>
       <dd class="mt-1 flex items-baseline justify-between md:block lg:flex">
         <div class="flex items-baseline text-green-700 text-2xl font-semibold text-aronium-white">
-          {{ useActiveOrder.subTotalBeforeTax() }}
+          {{ totalBeforeTax }}
         </div>
       </dd>
     </div>
@@ -18,7 +18,7 @@
       </dt>
       <dd class="mt-1 flex items-baseline justify-between md:block lg:flex">
         <div class="flex items-baseline text-green-700 text-2xl font-semibold text-aronium-white">
-          {{ useActiveOrder.totalTax() }}
+          {{ totalTax }}
         </div>
       </dd>
     </div>
@@ -32,7 +32,7 @@
             ? 'line-through text-aronium-danger'
             : 'text-green-700 font-semibold',
         ]">
-          {{ useActiveOrder.subTotalWithTax() }}
+          {{ totalWithTax }}
         </div>
       </dd>
     </div>
@@ -40,7 +40,7 @@
       <dt class="text-base font-normal text-aronium-white">Final Price</dt>
       <dd class="mt-1 flex items-baseline justify-between md:block lg:flex">
         <div class="flex items-baseline text-green-700 text-2xl font-semibold text-aronium-white">
-          {{ useActiveOrder.total }}
+          {{ total }}
         </div>
       </dd>
     </div>
@@ -49,15 +49,21 @@
 </template>
 
 <script setup>
-import { computed, watchEffect } from "@vue/runtime-core"
-import { useOrderStore } from "@/Orders/ordersStore"
-import { useOrder } from "@/Orders/orderComposables/orderProperties";
+import { computed } from "vue";
+import { useOrderStore } from "@/Orders/ordersStore";
+const store = useOrderStore();
 
+const activeOrder = computed(() => store.useActiveOrder);
 
-const store = useOrderStore()
+const totalTax = computed(() => store.totalTax)
+const totalBeforeTax = computed(() => store.subTotalBeforeTax);
+const totalWithTax = computed(() => store.subTotalWithTax);
+const totalBeforeDiscount = computed(() => store.subTotalBeforeDiscount);
+const total = computed(() => activeOrder.value.total);
 
-const useActiveOrder = computed(() => useOrder(store.useActiveOrder))
-watchEffect(() => console.log(useActiveOrder.value.total))
-const isDiscount = computed(() => useActiveOrder.value.discount)
+console.log("tbd<tbt", activeOrder.value.discount);
 
+const isDiscount = computed(
+  () => activeOrder.value.discount || totalBeforeDiscount.value < totalBeforeTax.value
+);
 </script>
