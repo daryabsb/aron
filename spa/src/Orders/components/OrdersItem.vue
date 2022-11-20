@@ -67,19 +67,15 @@
         ></PlusIcon>
       </button>
     </div>
-    <!-- -->
   </div>
 </template>
 
 <script setup>
-import { ref, toRefs, computed, onMounted, watch } from "vue";
+import { computed } from "vue";
 import { useOrderStore } from "@/Orders/ordersStore";
 // import { useActiveOrderStore } from "@/Orders/ordersStore/useActiveOrder";
 import { defineProps } from "vue";
-import ordersAPI from "@/services/ordersAPI";
-import productsAPI from "@/services/productsAPI";
 import { PlusIcon, MinusIcon } from "@heroicons/vue/20/solid";
-import { useActiveOrder } from "@/Orders/ordersStore/useActiveOrderStore";
 import { useOrderItem } from "@/Orders/orderComposables/orderItemProperties";
 
 const store = useOrderStore();

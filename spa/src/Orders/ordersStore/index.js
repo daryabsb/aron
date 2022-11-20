@@ -2,9 +2,10 @@ import { computed } from "vue";
 import { defineStore } from "pinia";
 import ordersAPI from "@/services/ordersAPI";
 import { useUtils } from "@/Orders/orderComposables/useUtils";
+import { modals } from "@/Orders/orderComposables/useModals";
 import Order from "@/Orders/orderTemplates/Order";
 import OrderItem from "@/Orders/orderTemplates/OrderItem";
-import { useOrder } from "@/Orders/orderComposables/orderProperties";
+// import { useOrder } from "@/Orders/orderComposables/orderProperties";
 
 Array.prototype.unique = function () {
   var a = this.concat();
@@ -13,7 +14,6 @@ Array.prototype.unique = function () {
       if (a[i].number === a[j].number) a.splice(j--, 1);
     }
   }
-
   return a;
 };
 
@@ -23,7 +23,7 @@ export const useOrderStore = defineStore("orders", {
       cart: [],
       activeNumber: "",
       ...useUtils(),
-      isShowModalReceipt: false,
+      ...modals,
     };
   },
   getters: {
@@ -46,10 +46,9 @@ export const useOrderStore = defineStore("orders", {
     },
     async createCart(number) {
       const order = new Order({ number: number });
-      console.log("from create cart: ", order);
       this.cart = [order, ...this.cart].unique();
       localStorage.setItem("cart", JSON.stringify(this.cart));
-      // this.activeNumber = order.number;
+      this.updateChange();
       return order;
     },
     async createCartFromAPI() {
@@ -80,7 +79,7 @@ export const useOrderStore = defineStore("orders", {
       } catch (error) {
         console.log(error);
       }
-
+      this.updateChange();
       // return newOrders;
     },
     changeActiveOrderNumber(number) {

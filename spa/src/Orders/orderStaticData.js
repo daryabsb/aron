@@ -1,8 +1,6 @@
 import { useOrderStore } from "@/Orders/ordersStore";
-import { useModals } from "@/stores/modals";
 import { useRouter } from "vue-router";
 
-const mods = useModals();
 const store = useOrderStore();
 
 export const storeHeaderItems = [
@@ -11,7 +9,7 @@ export const storeHeaderItems = [
     title: "Search",
     icon: " fa fa-search",
     submit: () => {
-      mods.searchModal = true;
+      store.searchModal = true;
     },
   },
   {
@@ -27,7 +25,7 @@ export const storeHeaderItems = [
     title: "Discount",
     icon: "fa fa-percent",
     submit: () => {
-      mods.openOrderDiscountModal = true;
+      store.orderDiscountModal = true;
     },
   },
   {

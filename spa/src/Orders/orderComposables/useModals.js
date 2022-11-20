@@ -4,4 +4,5 @@ export const modals = {
   openCashModal: false,
   openOrderDiscountModal: false,
   openCalculatorModal: false,
+  isShowModalReceipt: false,
 };

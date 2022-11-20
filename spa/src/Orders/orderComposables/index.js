@@ -6,11 +6,10 @@ import usersAPI from "@/services/usersAPI";
 import ordersAPI from "@/services/ordersAPI";
 import Order from "@/Orders/orderTemplates/Order";
 
-const store = useModals();
-const orders = useOrderStore();
+const store = useOrderStore();
 const users = useUser();
 
-export const useCart = computed(() => orders.cart);
+export const useCart = computed(() => store.cart);
 
 export const loadUserData = async () => {
   let fetchedOrders = [];
@@ -22,9 +21,9 @@ export const loadUserData = async () => {
       console.log(error);
     }
   }
-  if (orders.cart.length === 0) {
+  if (store.cart.length === 0) {
     try {
-      fetchedOrders = await orders.createCartFromAPI();
+      fetchedOrders = await store.createCartFromAPI();
     } catch (error) {
       console.log(error);
     }
@@ -65,13 +64,13 @@ export const getEvt = (key) => {
   const myKeys = {
     [F8]: () => (store.openPaymentModal = true),
     [F9]: () => (store.openCashModal = true),
-    [F4]: () => (store.openOrderDiscountModal = true),
+    [F4]: () => (store.orderDiscountModal = true),
     [Control]: () => (store.searchModal = !store.searchModal),
     [Escape]: () => {
-      store.openCashModal = false;
-      store.openPaymentModal = false;
+      store.cashModal = false;
+      store.paymentModal = false;
       store.searchModal = false;
-      store.openOrderDiscountModal = false;
+      store.orderDiscountModal = false;
     },
     [defaultKey]: () => {
       "none";

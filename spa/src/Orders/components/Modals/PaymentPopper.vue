@@ -64,7 +64,7 @@
 
                             <Suspense>
                               <div
-                                v-for="item in activeOrder.items"
+                                v-for="item in useActiveOrder.items"
                                 :key="item.id"
                                 class="w-0 sm:w-72"
                               >
@@ -213,20 +213,24 @@
                                     <span
                                       class="text-2xl ml-auto"
                                       :class="[
-                                        totalBeforeDiscount > total.value
+                                        useActiveOrder.subTotalWithTax() >
+                                        useActiveOrder.total
                                           ? 'line-through text-aronium-danger'
                                           : 'text-aronium-sky-500 font-semibold',
                                       ]"
-                                      >{{ totalBeforeDiscount }}
+                                      >{{ useActiveOrder.subTotalWithTax() }}
                                       <span
                                         class="prose prose-invert lg:prose-xl"
                                         >IQD</span
                                       >
                                     </span>
                                     <span
-                                      v-if="totalBeforeDiscount > total.value"
+                                      v-if="
+                                        useActiveOrder.subTotalWithTax() >
+                                        useActiveOrder.total
+                                      "
                                       class="font-semibold text-2xl text-aronium-sky-500 ml-auto"
-                                      >/ {{ total }} IQD</span
+                                      >/ {{ useActiveOrder.total }} IQD</span
                                     >
                                   </div>
                                 </div>
@@ -235,7 +239,7 @@
                                   Total:
                                   <input
                                     ref="input"
-                                    v-model="cash"
+                                    v-model="store.cash"
                                     type="text"
                                     class="grow font-semibold text-3xl bg-inherit text-end focus:ring-0 border-0 border-b border-aronium-500 focus:border-aronium-sky-500"
                                   />
@@ -249,7 +253,7 @@
                                   Change:
                                   <span
                                     class="font-semibold text-2xl text-aronium-sky-500 ml-auto"
-                                    >{{ change }} IQD</span
+                                    >{{ store.change }} IQD</span
                                   >
                                 </div>
                                 <div
@@ -278,7 +282,7 @@
 <script setup>
 import {
   ref,
-  toRefs,
+  watchEffect,
   computed,
   defineEmits,
   defineProps,
@@ -299,27 +303,18 @@ import Calculator from "@/components/shared/calculator/Calculator.vue";
 import Moneys from "@/Orders/components/Cards/Moneys.vue";
 import PaymentPopperDiscount from "@/Orders/components/Modals/PaymentPopperDiscount.vue";
 
+import { useOrder } from "@/Orders/orderComposables/orderProperties";
+
 defineEmits(["close", "cashOut"]);
 defineProps({
   open: { type: Boolean, default: true },
 });
-const modals = useModals();
-const {
-  cart,
-  cash,
-  change,
-  addCash,
-  useActiveOrder,
-  totalPrice,
-  subTotalBeforeDiscount,
-} = toRefs(useOrderStore());
-// const cart = store.cart;
-// const cash = store.useCash;
-// const change = store.useChange;
 const isShowItems = ref(true);
-// const moneys = store.useMoneys;
-const totalBeforeDiscount = computed(() => subTotalBeforeDiscount);
-const total = computed(() => totalPrice);
+const store = useOrderStore();
+
+const useActiveOrder = computed(() => useOrder(store.useActiveOrder));
+watchEffect(() => store.updateChange());
+const { cart, addCash } = useOrderStore();
 
 const OrdersItem = defineAsyncComponent(() =>
   import("@/Orders/components/OrdersItem.vue")
@@ -328,13 +323,12 @@ const StoreOrderDiscount = defineAsyncComponent(() =>
   import("@/Orders/components/StoreOrderDiscount.vue")
 );
 
-const activeOrder = useActiveOrder;
 const inputMoney = ref(0);
 
 const isDiscount = ref(false);
 
 const openDiscountPopper = () => {
-  modals.openOrderDiscountModal = true;
+  store.openOrderDiscountModal = true;
 };
 const closeDiscountPopper = () => {
   ID.value = null;
@@ -354,7 +348,7 @@ const ID = ref(null);
 const cartItem = ref(null);
 
 const orderDiscountModal = () => {
-  modals.openOrderDiscountModal = false;
+  store.openOrderDiscountModal = false;
 };
 
 const selectItem = (item) => {

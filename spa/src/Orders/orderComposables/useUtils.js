@@ -1,6 +1,7 @@
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { MONEYS } from "./constants";
 import { moment } from "moment";
+import { useOrder } from "@/Orders/orderComposables/orderProperties";
 
 import { useOrderStore } from "../ordersStore";
 
@@ -11,6 +12,7 @@ export const useUtils = () => {
   const receiptDate = ref(null);
 
   const store = useOrderStore();
+  const useActiveOrder = computed(() => useOrder(store.useActiveOrder));
 
   const submitable = () => change.value >= 0 && store.cart.length > 0;
   const useMoneys = () => MONEYS;
@@ -18,6 +20,9 @@ export const useUtils = () => {
   const useCash = () => cash;
   const useChange = () => change;
 
+  const updateChange = () => {
+    change.value = cash.value - useActiveOrder.value.total;
+  };
   const addCash = (amount) => {
     cash.value += amount || 0;
 
@@ -32,9 +37,6 @@ export const useUtils = () => {
   const updateCash = (value) => {
     cash.value = parseFloat(value.replace(/[^0-9]+/g, ""));
     updateChange();
-  };
-  const updateChange = () => {
-    change.value = cash.value - store.useActiveOrder.total;
   };
   const clear = () => {
     cash.value = 0;
