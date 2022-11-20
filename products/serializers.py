@@ -32,20 +32,18 @@ class ProductSerializer(serializers.ModelSerializer):
         return 0
 
     def get_tax(self, obj):
-        if ProductTax.objects.filter(product=obj.id).exists():
-            product_tax = ProductTax.objects.get(product=obj.id)
-            # if tax.tax is not None:
-            tax = Tax.objects.get(id=product_tax.tax.id)
-            if tax.is_tax_on_total:
-                return 0
-            elif obj.is_tax_inclusive_price and tax.is_enabled:
-                tax_rate = obj.price * rate(tax.rate) + tax.amount
-                return {
-                    'rate': tax.rate,
-                    'amount': tax.amount,
-                    'total': tax_rate
-                }
-        return 0
+        if ProductTax.objects.filter(product=obj).exists():
+            product_tax = ProductTax.objects.filter(product=obj)
+            tv, tm, total = 0, 0, 0
+            for t in product_tax:
+                if t.tax.is_tax_on_total and not obj.is_tax_inclusive_price:
+                    total += (rate(t.tax.rate) *
+                              float(obj.price)) + t.tax.amount
+                elif not obj.is_tax_inclusive_price:
+                    tv += t.tax.rate
+                    tm += t.tax.amount
+            return {'rate': tv, 'amount': tm, 'total': total}
+        return {'rate': 0, 'amount': 0, 'total': 0}
 
 
 class BarcodeSerializer(serializers.ModelSerializer):

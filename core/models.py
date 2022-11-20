@@ -763,23 +763,17 @@ class Product(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
-        # if self.id is not None:
-        if ProductTax.objects.filter(product=self).exists():
-            rate = 0
-            # pt = ProductTax.objects.filter(product=self)
-            pts = ProductTax.objects.filter(product=self)
-            for pt in pts:
-                rate += pt.tax.rate
+        rate = 0
+        rate = rate / 100
+        print('price: ',self.price)
+        print('markup: ',self.margin)
 
-            rate = rate / 100
-            print(rate)
-
-        # if self.is_tax_inclusive_price:
-        #     self.cost -= rate * self.cost
-            # self.cost -= rate
-        # if self.productTaxes is not None:
-        # print(self.productTaxes)
-        # super(Product, self).save(*args, **kwargs)
+        if self.price == 0 and self.margin is not None:
+            markup = self.cost * self.margin / 100
+            self.price = self.cost + markup
+        else:
+            delta = self.price - self.cost
+            self.margin = delta / self.price * 100
         super(Product, self).save(*args, **kwargs)
 
 

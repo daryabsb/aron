@@ -1,7 +1,11 @@
+import { computed } from "vue";
 import { defineStore } from "pinia";
 import ordersAPI from "@/services/ordersAPI";
+import { moment } from "moment";
+import { useUtils } from "@/Orders/orderComposables/useUtils";
 import Order from "@/Orders/orderTemplates/Order";
 import OrderItem from "@/Orders/orderTemplates/OrderItem";
+import { useOrder } from "@/Orders/orderComposables/orderProperties";
 
 Array.prototype.unique = function () {
   var a = this.concat();
@@ -19,9 +23,97 @@ export const useOrderStore = defineStore("orders", {
     return {
       cart: [],
       activeNumber: "",
+      utils: useUtils(),
+      // cash: 0,
+      // change: 0,
+      // moneys: [250, 500, 1000, 5000, 10000, 25000, 50000, 100000],
+
+      // receiptNo: null,
+      // receiptDate: null,
+
+      isShowModalReceipt: false,
     };
   },
 
+  getters: {
+    useActiveOrder(state) {
+      const order = state.cart.find(
+        (item) => item.number === state.activeNumber
+      );
+      return computed(() => useOrder(order));
+    },
+    activeOrderNumber: (state) => state.activeNumber,
+
+    isActiveNumber(state) {
+      return state.activeNumber != "";
+    },
+    isActiveOrderItems() {
+      if (!this.isActiveNumber) return false;
+      if (!this.useActiveOrder) return false;
+
+      return this.useActiveOrder.value.items.length !== 0;
+    },
+
+    totalTax() {
+      if (!this.isActiveNumber) return 0;
+      if (!this.isActiveOrderItems) return 0;
+      const taxes = this.useActiveOrder.value.items.map(
+        (item) => item.product.tax.total
+      );
+      const taxTotal = taxes.reduce((total, item) => (total += item), 0);
+      console.log("totalTax()", taxTotal);
+      return taxTotal;
+    },
+
+    // subTotalBeforeTax() {
+    //   if (!this.isActiveNumber) return 0;
+    //   if (!this.isActiveOrderItems) return 0;
+
+    //   return this.useActiveOrder.value.items.reduce(
+    //     (total, item) => total + this.getItemTotalPrice(item),
+    //     0
+    //   );
+    // },
+    // subTotalWithTax() {
+    //   if (!this.isActiveNumber) return 0;
+    //   if (!this.isActiveOrderItems) return 0;
+
+    //   return this.subTotalBeforeTax + this.vatRate(this.subTotalBeforeTax);
+    // },
+    // subTotalBeforeDiscount() {
+    //   if (!this.isActiveNumber) return 0;
+    //   if (!this.isActiveOrderItems) return 0;
+    //   return this.useActiveOrder.value.items.reduce(
+    //     (total, item) => total + this.getItemTotalPrice(item),
+    //     0
+    //   );
+    // },
+    totalPrice() {
+      if (!this.isActiveNumber) return 0;
+      if (!this.isActiveOrderItems) return 0;
+
+      const total = this.useActiveOrder.value.items.reduce(
+        (total, item) => total + this.getItemTotalPrice(item),
+        0
+      );
+
+      this.useActiveOrder.total =
+        total - this.calculateActiveOrderDiscount(total);
+      return this.useActiveOrder.total;
+    },
+    // useMoneys(state) {
+    //   return state.moneys;
+    // },
+    // submitable(state) {
+    //   return state.change >= 0 && state.cart.length > 0;
+    // },
+    // useCash(state) {
+    //   return state.cash;
+    // },
+    // useChange(state) {
+    //   return state.change;
+    // },
+  },
   actions: {
     async generateNumber(target) {
       try {
@@ -58,13 +150,6 @@ export const useOrderStore = defineStore("orders", {
             });
           }
         });
-
-        const arr1 = [1, 2, 3, 4, 5];
-        const arr2 = [4, 5, 6, 7, 8];
-
-        const arr3 = [...arr1, ...arr2].unique();
-
-        console.log("arr3", arr3);
 
         if (storageCart && storageCart.length > 0) {
           this.cart = [...newOrders, ...storageCart].unique();
@@ -103,8 +188,8 @@ export const useOrderStore = defineStore("orders", {
       }
 
       this.updateLocalStorage();
-      this.beep();
-      this.updateChange();
+      this.utils.beep();
+      this.utils.updateChange();
     },
     addQty(orderItem, quantity, index) {
       if (!index) index = this.useOrderItemIndex(orderItem);
@@ -112,13 +197,13 @@ export const useOrderStore = defineStore("orders", {
       const afterAdd = item.quantity + quantity;
       if (afterAdd === 0) {
         this.useActiveOrder.value.items.splice(index, 1);
-        this.clearSound();
+        this.utils.clearSound();
       } else {
         item.quantity = afterAdd;
-        this.beep();
+        this.utils.beep();
       }
       this.updateLocalStorage();
-      this.updateChange();
+      this.utils.updateChange();
     },
     updateLocalStorage() {
       const storageCart = JSON.parse(localStorage.getItem("cart"));
@@ -129,13 +214,64 @@ export const useOrderStore = defineStore("orders", {
       storageCart[activeOrderIndex].items = this.useActiveOrder.value.items;
       localStorage.setItem("cart", JSON.stringify(storageCart));
     },
-  },
-  getters: {
-    // useActiveOrder: (state) => {
-    //   const order = state.cart.find(
-    //     (item) => item.number === state.activeNumber
-    //   );
-    //   return computed(() => useOrder(order));
+    getItemSubTotal(item) {
+      item.price * item.quantity;
+    },
+
+    getItemTotalPrice(item) {
+      return item.product.price * item.quantity;
+    },
+
+    calculateActiveOrderDiscount(total) {
+      if (this.useActiveOrder.value.discountType === 0) {
+        return (this.useActiveOrder.value.discount * total) / 100;
+      } else {
+        return this.useActiveOrder.value.discount;
+      }
+    },
+    // addCash(amount) {
+    //   this.cash += amount || 0;
+
+    //   this.updateChange();
+    //   this.beep();
+    // },
+    // clearCash() {
+    //   this.cash = 0;
+    //   this.change = 0;
+    //   this.clearSound();
+    // },
+    // updateCash(value) {
+    //   this.cash = parseFloat(value.replace(/[^0-9]+/g, ""));
+    //   this.updateChange();
+    // },
+    // updateChange() {
+    //   this.change = this.cash - this.totalPrice;
+    // },
+    // clear() {
+    //   this.cash = 0;
+    //   this.cart = [];
+    //   this.receiptNo = null;
+    //   this.receiptDate = null;
+    //   this.updateChange();
+    //   this.clearSound();
+    // },
+    // playSound(src) {
+    //   if (src) {
+    //     const sound = new Audio(src);
+    //     sound.play();
+    //   }
+    // },
+    // beep() {
+    //   this.playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
+    // },
+    // clearSound() {
+    //   this.playSound("http://127.0.0.1:8000/media/sound/beep-29.mp3");
+    // },
+    // submit: (state) => {
+    //   const time = new Date();
+    //   state.isShowModalReceipt = true;
+    //   state.receiptNo = `ARONPOS-KS-${Math.round(time.getTime() / 1000)}`;
+    //   state.receiptDate = moment(time);
     // },
   },
 });
