@@ -25,7 +25,7 @@ export const storeHeaderItems = [
     title: "Discount",
     icon: "fa fa-percent",
     submit: () => {
-      store.orderDiscountModal = true;
+      store.openOrderDiscountModal = true;
     },
   },
   {

@@ -64,7 +64,7 @@ export const getEvt = (key) => {
   const myKeys = {
     [F8]: () => (store.openPaymentModal = true),
     [F9]: () => (store.openCashModal = true),
-    [F4]: () => (store.orderDiscountModal = true),
+    [F4]: () => (store.openOrderDiscountModal = true),
     [Control]: () => (store.searchModal = !store.searchModal),
     [Escape]: () => {
       store.cashModal = false;

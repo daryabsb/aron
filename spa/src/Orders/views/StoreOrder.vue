@@ -1,24 +1,10 @@
 <template>
-  <PaymentPopper
-    v-if="store.openPaymentModal"
-    @close="togglePaymentModal"
-    @cash-out="cashOut"
-  />
+  <PaymentPopper v-if="store.openPaymentModal" @close="togglePaymentModal" @cash-out="cashOut" />
   <CashPopper v-if="store.openCashModal" @close="toggleCashModal" />
-  <search-panel
-    v-if="store.searchModal"
-    @close="toggleSearchModal"
-  ></search-panel>
-  <StoreOrderDiscount
-    v-if="store.orderDiscountModal"
-    @close="toggleOrderDiscountModal"
-  />
-  <div
-    class="relative w-full h-screen flex flex-col justify-start text-aronium-white bg-aronium-900 z-10"
-  >
-    <div
-      class="h-20 py-1 w-full px-2 flex items-center border border-aronium-500 bg-transparent"
-    >
+  <search-panel v-if="store.searchModal" @close="toggleSearchModal"></search-panel>
+  <StoreOrderDiscount v-if="store.openOrderDiscountModal" @close="toggleOrderDiscountModal" />
+  <div class="relative w-full h-screen flex flex-col justify-start text-aronium-white bg-aronium-900 z-10">
+    <div class="h-20 py-1 w-full px-2 flex items-center border border-aronium-500 bg-transparent">
       <StoreHeader />
     </div>
 
@@ -26,9 +12,7 @@
       <StoreSearch />
     </div>
     <div class="flex flex-col inset-0">
-      <div
-        class="flex flex-grow divide-x-1 divide-aronium-500 inset-0 h-[60rem]"
-      >
+      <div class="flex flex-grow divide-x-1 divide-aronium-500 inset-0 h-[60rem]">
         <div class="phone:w-1/2 md:w-1/3 p-2 border-r border-aronium-500">
           <router-view></router-view>
         </div>
@@ -40,8 +24,7 @@
     </div>
 
     <div
-      class="fixed bottom-0 w-full h-fit bg-aronium-900 px-2 flex justify-between items-center border border-aronium-500"
-    >
+      class="fixed bottom-0 w-full h-fit bg-aronium-900 px-2 flex justify-between items-center border border-aronium-500">
       <StoreTotalsCalculations />
     </div>
   </div>
