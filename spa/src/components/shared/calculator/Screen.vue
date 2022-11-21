@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex justify-end items-center px-5 rounded-lg bg-gray-800"
+    class="relative h-16 flex justify-end items-center px-5 rounded-sm bg-gray-800"
   >
     <div class="flex justify-between overflow-hidden text-right">
       <!-- <span>Add {{ header }}:</span> -->

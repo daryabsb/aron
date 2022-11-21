@@ -1,7 +1,8 @@
 <template>
   <li
     role="button"
-    class="col-span-1 flex flex-col divide-y divide-aronium-500 rounded-sm bg-aronium-700 border border-aronium-500 text-center shadow"
+    class="col-span-1 flex flex-col divide-y divide-aronium-500 rounded-sm bg-aronium-700 border border-aronium-500 text-center shadow hover:animate-pulse"
+    @click="takeAction(item)"
   >
     <div class="flex flex-1 flex-col p-4">
       <img
@@ -29,8 +30,8 @@
       </h3>
       <dl class="mt-1 flex flex-grow flex-col justify-between">
         <dt class="sr-only">Title</dt>
-        <dd class="text-sm text-gray-500">
-          {{ item.price ? `${item.price}  IQD` : "" }}
+        <dd class="text-sm text-aronium-300">
+          {{ item.price ? `${priceFormat(item.price)}` : "" }}
         </dd>
       </dl>
     </div>
@@ -85,15 +86,23 @@
 </template>
 
 <script setup>
-import { ref, computed, defineProps, defineEmits } from "vue";
-
+import { defineProps, defineEmits } from "vue";
+import { useOrderStore } from "@/Orders/ordersStore";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/vue/20/solid";
-
-defineEmits(["back", "addToCart", "selectItem"]);
-defineProps({
+const { priceFormat } = useOrderStore();
+const emit = defineEmits(["back", "addToCart", "selectItem"]);
+const props = defineProps({
   item: { type: Object, required: true },
   isBack: { type: Boolean, default: false },
 });
+
+const takeAction = (item) => {
+  if (item.is_product) {
+    emit("addToCart", item);
+  } else if (!props.isBack) {
+    emit("selectItem");
+  } else emit("back", item.id);
+};
 
 // const close = () => (isNumpadOpen.value = false);
 </script>

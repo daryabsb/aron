@@ -1,6 +1,12 @@
 <template>
   <div
-    class="max-h-16 relative flex items-center space-x-3 rounded-sm border border-aronium-500 bg-aronium-700 px-6 py-2 mb-1 shadow-sm focus-within:ring-2 focus-within:ring-pink-700 focus-within:ring-offset-0 hover:border-pink-500"
+    :class="[
+      'relative max-h-16 flex items-center space-x-3 rounded-sm',
+      'bg-aronium-700 border border-aronium-500 px-6 py-2 first:mt-1 my-2 mx-1 shadow-sm',
+      'focus-within:ring-2 focus-within:ring-pink-700 focus-within:ring-offset-0',
+      'focus-within:bg-pink-700 focus-within:bg-opacity-10',
+      'hover:border-pink-500',
+    ]"
   >
     <div class="flex-shrink-0">
       <img class="h-10 w-10 rounded-full" :src="item.product.image" alt="" />
@@ -11,14 +17,15 @@
         <p class="flex text-sm font-medium">
           <span>{{ item.product.name }}</span>
           <span
-            v-if="item.product.tax"
+            v-if="item.product.tax.rate"
             class="ml-6 shadow-sm px-6 shadow-aronium-500 text-aronium-danger font-semibold"
           >
             + TAX {{ item.product.tax.rate }}%
           </span>
         </p>
         <p class="truncate text-sm">
-          {{ item.product.price + " IQD" }}
+          <!-- {{ parseInt(item.product.price).toFixed(0) + " IQD" }} -->
+          {{ priceFormat(item.product.price) }}
           /
           <span
             :class="[
@@ -27,11 +34,11 @@
                 : 'text-aronium-white',
             ]"
           >
-            {{ item.totalWithTax() + " IQD" }}
+            {{ priceFormat(item.totalWithTax()) }}
           </span>
           <span v-if="item.discount">
             {{ " " }}
-            {{ item.orderItemTotal() + " IQD" }}</span
+            {{ priceFormat(item.orderItemTotal()) }}</span
           >
         </p>
       </a>
@@ -80,6 +87,7 @@ import { useOrderItem } from "@/Orders/orderComposables/orderItemProperties";
 
 const store = useOrderStore();
 const addQty = store.addQty;
+const priceFormat = store.priceFormat;
 const props = defineProps({
   orderitem: { type: Object, required: true },
   isPayment: { type: Boolean, default: false },

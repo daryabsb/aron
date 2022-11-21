@@ -19,7 +19,7 @@
         <template v-if="ids.length === 0">
           <StoreGroupListItem
             v-for="group in productGroups"
-            :key="group.id"
+            :key="group"
             :item="group"
             @select-item="selectGroup(group.id)"
           />
@@ -98,7 +98,6 @@ const loadProductGroups = async () => {
 };
 onMounted(async () => {
   await loadProductGroups();
-  if (!userStore.user) await loadUserData();
 });
 const id = computed(() => ids.value[ids.value.length - 1]);
 

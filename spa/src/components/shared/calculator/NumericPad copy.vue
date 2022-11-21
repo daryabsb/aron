@@ -1,12 +1,12 @@
 <template>
   <Grid
-    rows="5"
+    rows="4"
     cols="4"
     gap="2"
-    class="w-full sm:max-w-md sm:h-auto sm:my-3 p-3 bg-inherit"
+    class="h-full w-full text-aronium-white sm:my-4 p-2 pt-2 sm:rounded-sm bg-inherit border border-aronium-500"
   >
-    <!-- class="h-full w-full text-aronium-white sm:my-4 p-2 pt-2 sm:rounded-sm bg-inherit border border-aronium-500" -->
-    <Screen :text="memory" :error="error" class="col-span-4" />
+    <!-- class="shadow-2xl w-full sm:max-w-md sm:h-auto sm:my-3 p-3 pt-12 sm:rounded-sm bg-inherit border border-aronium-500" -->
+    <!-- <Screen :text="memory" :error="error" class="col-span-6" /> -->
 
     <!-- <Button variant="transRed" class="col-span-2" @click="clear">Clear</Button> -->
 
@@ -41,7 +41,7 @@
     <Button
       id="enter-button"
       variant="transparent"
-      class="row-start-4 col-start-4 inset-0 col-span-1 row-span-2"
+      class="row-start-3 col-start-4 inset-0 col-span-1 row-span-2"
       @click="calculateResult"
       >Ent</Button
     >
