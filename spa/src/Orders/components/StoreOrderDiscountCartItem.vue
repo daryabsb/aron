@@ -96,9 +96,10 @@ const discountValue = (payload) => {
 
 const submitResults = () => {
   console.log("B", selectedItem.value)
-  selectedItem.value.discountType = discountType.value;
-  selectedItem.value.discount = +itemInputValue.value;
-  selectedItem.value.isActive = false;
+  store.appllyItemDiscount(selectedItem.value, discountType.value, +itemInputValue.value)
+  // selectedItem.value.discountType = discountType.value;
+  // selectedItem.value.discount = +itemInputValue.value;
+  // selectedItem.value.isActive = false;
   store.openOrderDiscountModal = false
   console.log("a", selectedItem.value)
 };

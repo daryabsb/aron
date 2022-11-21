@@ -84,9 +84,10 @@ const discountValue = (payload) => {
 
 
 const submitResults = () => {
-  useActiveOrder.discountType = discountType.value;
-  useActiveOrder.discount = +cartInputValue.value;
-  store.updateChange();
+  store.appllyCartDiscount(useActiveOrder, discountType.value, +cartInputValue.value)
+  // useActiveOrder.discountType = discountType.value;
+  // useActiveOrder.discount = +cartInputValue.value;
+
   // console.log("done");
   store.openOrderDiscountModal = false
 };

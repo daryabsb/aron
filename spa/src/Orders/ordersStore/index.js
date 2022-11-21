@@ -124,6 +124,31 @@ export const useOrderStore = defineStore("orders", {
       this.updateLocalStorage();
       this.updateChange();
     },
+    appllyItemDiscount(orderItem, discountType, discount) {
+      const cartOrderItem = this.useActiveOrder.items.find(
+        (item) => item.number === orderItem.number
+      );
+      try {
+        cartOrderItem.discount = discount;
+        cartOrderItem.discountType = discountType;
+        this.updateLocalStorage();
+        this.updateChange();
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    appllyCartDiscount(order, discountType, discount) {
+      const cartItem = this.cart.find((item) => item.number === order.number);
+      console.log(cartItem);
+      try {
+        cartItem.discount = discount;
+        cartItem.discountType = discountType;
+        this.updateLocalStorage();
+        this.updateChange();
+      } catch (error) {
+        console.log(error);
+      }
+    },
     updateLocalStorage() {
       const storageCart = JSON.parse(localStorage.getItem("cart"));
       const activeOrderIndex = storageCart.findIndex(

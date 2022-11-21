@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="menu"
+      @click="show"
+      v-click-outside="hide"
+      v-bind:class="{active: isActive}"
+    >
+      <script>
+        Vue.directive("click-outside", {
+          bind: function (el, binding, vnode) {
+            this.event = function (event) {
+              if (!(el == event.target || el.contains(event.target))) {
+                vnode.context[binding.expression](event);
+              }
+            };
+            document.body.addEventListener("click", this.event);
+          },
+          unbind: function (el) {
+            document.body.removeEventListener("click", this.event);
+          },
+        });
+
+        new Vue({
+          el: "#menu",
+          data: {
+            isActive: true,
+          },
+          methods: {
+            show: function () {
+              this.isActive = true;
+            },
+            hide: function () {
+              this.isActive = false;
+            },
+          },
+        });
+      </script>
+      <div>
+        click outside me
+      </div>
+    </div>
+  </body>
+</html>
