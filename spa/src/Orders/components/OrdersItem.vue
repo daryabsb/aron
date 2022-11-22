@@ -1,5 +1,5 @@
 <template>
-  <div
+  <!-- <div
     :class="[
       'relative max-h-16 flex items-center space-x-3 rounded-sm',
       'bg-aronium-700 border border-aronium-500 px-6 py-2 first:mt-1 my-2 mx-1 shadow-sm',
@@ -24,7 +24,6 @@
           </span>
         </p>
         <p class="truncate text-sm">
-          <!-- {{ parseInt(item.product.price).toFixed(0) + " IQD" }} -->
           {{ priceFormat(item.product.price) }}
           /
           <span
@@ -74,16 +73,92 @@
         ></PlusIcon>
       </button>
     </div>
-  </div>
+  </div> -->
+
+  <RadioGroup v-model="selectedOrderItem">
+    <div class="border-b border-aronium-500">
+      <RadioGroupOption
+        as="template"
+        :value="item"
+        v-slot="{ checked, active }"
+      >
+        <div
+          :class="[
+            checked ? 'border-transparent' : 'border-aronium-500',
+            active ? 'border-pink-500 ring ring-pink-400' : '',
+            'relative flex items-center cursor-pointer rounded-sm px-2 my-1 shadow-sm focus:outline-none',
+          ]"
+        >
+          <CheckCircleIcon
+            :class="[!false ? 'invisible' : '', 'h-5 w-5 text-pink-400 mr-2']"
+            aria-hidden="true"
+          />
+          <span
+            :class="[
+              active ? 'border' : 'border-2',
+              checked ? 'border-indigo-500' : 'border-transparent',
+              'pointer-events-none absolute -inset-px rounded-sm',
+            ]"
+            aria-hidden="true"
+          />
+          <span class="flex flex-1">
+            <span class="flex flex-col">
+              <RadioGroupLabel
+                as="span"
+                class="block text-sm font-medium text-aronium-white"
+                >{{ item.product.name }}</RadioGroupLabel
+              >
+              <RadioGroupDescription
+                as="span"
+                class="mt-1 flex items-center text-sm text-aronium-400"
+                >{{ item.product.price }}</RadioGroupDescription
+              >
+            </span>
+          </span>
+        </div>
+      </RadioGroupOption>
+    </div>
+  </RadioGroup>
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { ref, computed } from "vue";
 import { useOrderStore } from "@/Orders/ordersStore";
 // import { useActiveOrderStore } from "@/Orders/ordersStore/useActiveOrder";
 import { defineProps } from "vue";
 import { PlusIcon, MinusIcon } from "@heroicons/vue/20/solid";
 import { useOrderItem } from "@/Orders/orderComposables/orderItemProperties";
+
+import {
+  RadioGroup,
+  RadioGroupDescription,
+  RadioGroupLabel,
+  RadioGroupOption,
+} from "@headlessui/vue";
+import { CheckCircleIcon } from "@heroicons/vue/20/solid";
+
+const mailingLists = [
+  {
+    id: 1,
+    title: "Newsletter",
+    description: "Last message sent an hour ago",
+    users: "621 users",
+  },
+  {
+    id: 2,
+    title: "Existing Customers",
+    description: "Last message sent 2 weeks ago",
+    users: "1200 users",
+  },
+  {
+    id: 3,
+    title: "Trial Users",
+    description: "Last message sent 4 days ago",
+    users: "2740 users",
+  },
+];
+
+const selectedOrderItem = null;
 
 const store = useOrderStore();
 const addQty = store.addQty;

@@ -38,22 +38,6 @@ const routes = [
         // props: (route) => ({ number: parseInt(route.params.number) }),
         props: true,
       },
-      {
-        path: "/store/order/:create",
-        name: "StoreOrderCreate",
-        component: () =>
-          import(
-            /* webpackChunkName: "store" */
-            "@/Orders/views/StoreOrderDetailCreate.vue"
-          ),
-
-        beforeEnter: (to, from, next) => {
-          console.log("useCart");
-          next();
-        },
-        // props: (route) => ({ number: parseInt(route.params.number) }),
-        props: { default: true },
-      },
     ],
   },
 ];

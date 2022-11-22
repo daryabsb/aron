@@ -6,12 +6,10 @@
 
 @layer base {
   html {
-    background-color: #333333;
-    height: 100%;
+    @apply h-screen bg-aronium-900;
   }
   body {
-    height: 100%;
-    overflow: hidden;
+    @apply h-full overflow-hidden;
   }
 }
 
