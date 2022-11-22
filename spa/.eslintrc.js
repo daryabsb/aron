@@ -18,6 +18,13 @@ module.exports = {
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : 0,
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : 0,
+    "vue/first-attribute-linebreak": [
+      "warn",
+      {
+        singleline: "ignore",
+        multiline: "ignore",
+      },
+    ],
     "vue/multi-word-component-names": "off",
     // "vue/multi-word-component-names": [
     //   "warn",

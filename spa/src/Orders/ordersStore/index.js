@@ -5,7 +5,7 @@ import { useUtils } from "@/Orders/orderComposables/useUtils";
 import { modals } from "@/Orders/orderComposables/useModals";
 import Order from "@/Orders/orderTemplates/Order";
 import OrderItem from "@/Orders/orderTemplates/OrderItem";
-// import { useOrder } from "@/Orders/orderComposables/orderProperties";
+import { useOrderItem } from "@/Orders/orderComposables/orderItemProperties";
 
 Array.prototype.unique = function () {
   var a = this.concat();
@@ -22,6 +22,7 @@ export const useOrderStore = defineStore("orders", {
     return {
       cart: [],
       activeNumber: "",
+      activeItem: Object,
       ...useUtils(),
       ...modals,
     };
@@ -32,6 +33,21 @@ export const useOrderStore = defineStore("orders", {
         (item) => item.number === state.activeNumber
       );
       return order;
+    },
+    useActiveOrderItems(state) {
+      const order = state.cart.find(
+        (item) => item.number === state.activeNumber
+      );
+      let items = [];
+      if (order) {
+        items = order.items.map((item) => (item = useOrderItem(item)));
+      }
+      return items;
+    },
+    useActiveItem(state) {
+      return state.useActiveOrder.items.find(
+        (item) => item.number == this.activeItem.number
+      );
     },
   },
   actions: {
@@ -84,6 +100,9 @@ export const useOrderStore = defineStore("orders", {
     },
     changeActiveOrderNumber(number) {
       this.activeNumber = number;
+    },
+    setActiveItem(item) {
+      this.activeItem = item;
     },
     generateUID: () => {
       let firstPart = new Date();
@@ -148,6 +167,12 @@ export const useOrderStore = defineStore("orders", {
       } catch (error) {
         console.log(error);
       }
+    },
+    applyRound(price, round) {
+      const remainder = price % round;
+      return remainder < round / 2
+        ? price - remainder
+        : price - remainder + round;
     },
     updateLocalStorage() {
       const storageCart = JSON.parse(localStorage.getItem("cart"));
