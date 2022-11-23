@@ -2,7 +2,7 @@ export default class OrderItem {
   constructor(
     // _product,
     // id,
-    _product,
+    product,
     number,
     order,
     user,
@@ -19,7 +19,7 @@ export default class OrderItem {
     _updated = new Date()
   ) {
     // console.log("from OrderItem class: ", item.number);
-    this.product = _product;
+    this.product = product;
     this.number = number;
     this.order = order;
     this.user = user;
@@ -44,7 +44,6 @@ export default class OrderItem {
   }
 
   get measurementUnit() {
-    console.log(this.product.tax);
     return this.product.measurement_unit;
   }
   get currency() {

@@ -31,6 +31,18 @@ export const loadUserData = async () => {
   return [users.user, fetchedOrders];
 };
 
+export const loadOrdersData = async () => {
+  let fetchedOrders = [];
+  if (store.cart.length === 0) {
+    try {
+      fetchedOrders = await store.createCartFromAPI();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  return fetchedOrders;
+};
+
 export const numberFormat = (number) => {
   return number.toString();
   // .replace(/^0|\./g)

@@ -117,7 +117,7 @@ export const useOrderStore = defineStore("orders", {
       if (index === -1) {
         const newItem = new OrderItem(orderItem.value);
         // PROBLEM PROBLEM PROBLEM
-        this.useActiveOrder.items.push(newItem);
+        this.useActiveOrder.items.push(orderItem.value);
       } else {
         this.addQty(orderItem.value, (orderItem.value.quantity = 1), index);
       }

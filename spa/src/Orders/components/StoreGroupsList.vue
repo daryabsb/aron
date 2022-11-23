@@ -1,46 +1,21 @@
 <template>
   <div class="pb-24">
     <!-- <numeric-pad @close="close" @get-value="getValue"></numeric-pad> -->
-    <numeric-pad
-      v-if="isCheckPriceOpen"
-      @close="close"
-      @get-value="getPrice"
-    ></numeric-pad>
-    <numeric-pad
-      v-if="isDefaultQtyOpen"
-      @close="close"
-      @get-value="getQuantity"
-    ></numeric-pad>
+    <numeric-pad v-if="isCheckPriceOpen" @close="close" @get-value="getPrice"></numeric-pad>
+    <numeric-pad v-if="isDefaultQtyOpen" @close="close" @get-value="getQuantity"></numeric-pad>
     <div class="overflow-auto scrollbar px-3">
-      <ul
-        role="list"
-        class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
-      >
+      <ul role="list" class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         <template v-if="ids.length === 0">
-          <StoreGroupListItem
-            v-for="(group, index) in productGroups"
-            :key="index"
-            :item="group"
-            @select-item="selectGroup(group.id)"
-          />
+          <StoreGroupListItem v-for="(group, index) in productGroups" :key="index" :item="group"
+            @select-item="selectGroup(group.id)" />
         </template>
         <template v-else>
           <!-- v-for="group in selectedGroupProducts"
           :key="group.id" -->
-          <StoreGroupListItem
-            :item="selectedGroupProducts"
-            :is-back="true"
-            @back="removeId"
-            @select-item="selectGroup(group.id)"
-          />
-          <StoreGroupListItem
-            v-for="product in selectedGroupProducts"
-            :key="product.id"
-            :item="product"
-            @add-to-cart="createOrder(product)"
-            @back="removeId"
-            @select-item="selectGroup(product.id)"
-          />
+          <StoreGroupListItem :item="selectedGroupProducts" :is-back="true" @back="removeId"
+            @select-item="selectGroup(group.id)" />
+          <StoreGroupListItem v-for="product in selectedGroupProducts" :key="product.id" :item="product"
+            @add-to-cart="createOrder(product)" @back="removeId" @select-item="selectGroup(product.id)" />
         </template>
       </ul>
     </div>
@@ -147,7 +122,6 @@ const createOrder = async (item) => {
   // HERE NEED TO BE CHECKED
 
   const number = await generateItemNumber();
-
   order.value = new OrderItem(
     item,
     `${number}`,
