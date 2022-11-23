@@ -1,21 +1,46 @@
 <template>
   <div class="pb-24">
     <!-- <numeric-pad @close="close" @get-value="getValue"></numeric-pad> -->
-    <numeric-pad v-if="isCheckPriceOpen" @close="close" @get-value="getPrice"></numeric-pad>
-    <numeric-pad v-if="isDefaultQtyOpen" @close="close" @get-value="getQuantity"></numeric-pad>
+    <numeric-pad
+      v-if="isCheckPriceOpen"
+      @close="close"
+      @get-value="getPrice"
+    ></numeric-pad>
+    <numeric-pad
+      v-if="isDefaultQtyOpen"
+      @close="close"
+      @get-value="getQuantity"
+    ></numeric-pad>
     <div class="overflow-auto scrollbar px-3">
-      <ul role="list" class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+      <ul
+        role="list"
+        class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
+      >
         <template v-if="ids.length === 0">
-          <StoreGroupListItem v-for="group in productGroups" :key="group" :item="group"
-            @select-item="selectGroup(group.id)" />
+          <StoreGroupListItem
+            v-for="(group, index) in productGroups"
+            :key="index"
+            :item="group"
+            @select-item="selectGroup(group.id)"
+          />
         </template>
         <template v-else>
           <!-- v-for="group in selectedGroupProducts"
           :key="group.id" -->
-          <StoreGroupListItem :item="selectedGroupProducts" :is-back="true" @back="removeId"
-            @select-item="selectGroup(group.id)" />
-          <StoreGroupListItem v-for="product in selectedGroupProducts" :key="product.id" :item="product"
-            @add-to-cart="createOrder(product)" @back="removeId" @select-item="selectGroup(product.id)" />
+          <StoreGroupListItem
+            :item="selectedGroupProducts"
+            :is-back="true"
+            @back="removeId"
+            @select-item="selectGroup(group.id)"
+          />
+          <StoreGroupListItem
+            v-for="product in selectedGroupProducts"
+            :key="product.id"
+            :item="product"
+            @add-to-cart="createOrder(product)"
+            @back="removeId"
+            @select-item="selectGroup(product.id)"
+          />
         </template>
       </ul>
     </div>
@@ -37,7 +62,7 @@ import {
   loadUserData,
 } from "@/Orders/orderComposables";
 
-import { useFetch } from "@/stores/fetch";
+// import { useFetch } from "@/stores/fetch";
 import {
   EnvelopeIcon,
   PhoneIcon,
@@ -45,9 +70,9 @@ import {
   ArrowRightIcon,
 } from "@heroicons/vue/20/solid";
 
-const pos = useOrderStore();
+const store = useOrderStore();
 const userStore = useUser();
-const addToCart = pos.addToCart;
+const addToCart = store.addToCart;
 
 const ProductSingleItem = defineAsyncComponent(() =>
   import("@/Orders/components/Cards/PosSingleProduct.vue")
@@ -57,7 +82,7 @@ const StoreGroupListItem = defineAsyncComponent(() =>
   import("@/Orders/components/StoreGroupsListItem.vue")
 );
 
-const store = useFetch();
+// const fetch = useFetch();
 const productGroups = ref([]);
 const selectedGroupProducts = ref([]);
 
@@ -125,10 +150,11 @@ const createOrder = async (item) => {
 
   order.value = new OrderItem(
     item,
-    number.created_number,
-    pos.activeOrderNumber,
+    `${number}`,
+    store.activeNumber,
     userStore.user.id
   );
+
   checkPrice(item);
   return;
 };
@@ -153,6 +179,8 @@ const getPrice = (value) => {
 
 // 4. Check the is default quantity on the item
 const checkQuantiy = () => {
+  // console.log(order.value);
+  // return;
   if (!order.value.product.is_using_default_quantity) {
     isDefaultQtyOpen.value = true;
     return;

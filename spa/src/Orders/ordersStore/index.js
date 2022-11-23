@@ -34,20 +34,12 @@ export const useOrderStore = defineStore("orders", {
       );
       return order;
     },
-    useActiveOrderItems(state) {
-      const order = state.cart.find(
-        (item) => item.number === state.activeNumber
-      );
-      let items = [];
-      if (order) {
-        items = order.items.map((item) => (item = useOrderItem(item)));
-      }
-      return items;
-    },
     useActiveItem(state) {
-      return state.useActiveOrder.items.find(
-        (item) => item.number == this.activeItem.number
-      );
+      if (state.useActiveOrder) {
+        return state.useActiveOrder.items.find(
+          (item) => item.number == this.activeItem.number
+        );
+      }
     },
   },
   actions: {
@@ -79,10 +71,9 @@ export const useOrderStore = defineStore("orders", {
         // All Items shoulld be converted to local  items
         newOrders.forEach((order) => {
           if (order.items.length > 0) {
-            order.items.map((item) => {
-              // NEED TO BE CHECKED
-              new OrderItem(item);
-            });
+            order.items.map(
+              (item) => (item = useOrderItem(new OrderItem(item)))
+            );
           }
         });
 
@@ -104,6 +95,10 @@ export const useOrderStore = defineStore("orders", {
     setActiveItem(item) {
       this.activeItem = item;
     },
+    orderItems(order) {
+      console.log(order);
+      return order.items.map((item) => (item = new OrderItem(item)));
+    },
     generateUID: () => {
       let firstPart = new Date();
       let secondPart = (Math.random() * (49999 - 101) + 101) | 0;
@@ -120,7 +115,9 @@ export const useOrderStore = defineStore("orders", {
     addToCart(orderItem) {
       const index = this.useOrderItemIndex(orderItem.value);
       if (index === -1) {
-        this.useActiveOrder.items.push(orderItem.value);
+        const newItem = new OrderItem(orderItem.value);
+        // PROBLEM PROBLEM PROBLEM
+        this.useActiveOrder.items.push(newItem);
       } else {
         this.addQty(orderItem.value, (orderItem.value.quantity = 1), index);
       }

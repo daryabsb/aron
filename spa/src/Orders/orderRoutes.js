@@ -28,7 +28,7 @@ const routes = [
         component: () =>
           import(
             /* webpackChunkName: "store" */
-            "@/Orders/views/StoreOrderDetailExist.vue"
+            "@/Orders/views/OrderItemsList.vue"
           ),
 
         beforeEnter: (to, from, next) => {
