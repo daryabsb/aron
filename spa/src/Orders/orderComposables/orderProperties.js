@@ -53,7 +53,7 @@ export const useOrder = (order) => {
     return taxTotal.toFixed(3);
   };
 
-  const subTotalBeforeTax = () => {
+  const subTotalBeforeDiscount = () => {
     if (!order) return 0;
 
     return order.items.reduce(
@@ -61,32 +61,50 @@ export const useOrder = (order) => {
       0
     );
   };
-  const subTotalWithTax = () => {
-    if (!isActiveNumber) return 0;
-    if (!isActiveOrderItems) return 0;
-
-    return +subTotalBeforeTax() + +totalTax();
-  };
 
   const subTotalWithDiscount = () => {
     if (!isActiveNumber) return 0;
     if (!isActiveOrderItems) return 0;
 
-    return subTotalWithTax() - calculateActiveOrderDiscount(subTotalWithTax());
+    return (
+      subTotalBeforeDiscount() -
+      calculateActiveOrderDiscount(subTotalBeforeDiscount())
+    );
+  };
+  // const subTotalBeforeTax = () => {
+  //   if (!order) return 0;
+
+  //   return order.items.reduce(
+  //     (total, item) => total + getItemTotalPrice(item),
+  //     0
+  //   );
+  // };
+  const subTotalWithTax = () => {
+    if (!isActiveNumber) return 0;
+    if (!isActiveOrderItems) return 0;
+
+    return +subTotalWithDiscount() + +totalTax();
   };
 
+  // const subTotalWithDiscount = () => {
+  //   if (!isActiveNumber) return 0;
+  //   if (!isActiveOrderItems) return 0;
+
+  //   return subTotalWithTax() - calculateActiveOrderDiscount(subTotalWithTax());
+  // };
+
   if (order) {
-    order.total = subTotalWithDiscount();
+    order.total = subTotalWithTax();
   }
 
-  const totalPrice = () => subTotalWithDiscount();
+  const totalPrice = () => subTotalWithTax();
 
   return {
     // memory: readonly(memory),
     // error: readonly(error),
     ...order,
     discountStr,
-    subTotalBeforeTax,
+    subTotalBeforeDiscount,
     subTotalWithTax,
     subTotalWithDiscount,
     totalTax,

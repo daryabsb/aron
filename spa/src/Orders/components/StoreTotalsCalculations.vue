@@ -10,7 +10,7 @@
         <div
           class="flex items-baseline text-aronium-green-400 text-2xl font-semibold text-aronium-white"
         >
-          {{ priceFormat(useActiveOrder.subTotalBeforeTax()) }}
+          {{ priceFormat(useActiveOrder.subTotalBeforeDiscount()) }}
         </div>
       </dd>
     </div>
