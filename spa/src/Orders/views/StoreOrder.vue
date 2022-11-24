@@ -191,7 +191,7 @@
                 type="button"
                 class="flex items-center md:h-full my-1 px-1 md:px-6 justify-center rounded-full md:rounded-sm bg-aronium-green p-1 text-aronium-900 shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
-                <CashIcon class="h-6 w-6" aria-hidden="true" />
+                <PlusIcon class="h-6 w-6" aria-hidden="true" />
                 <span class="hidden md:block">Payment</span>
               </button>
               <!-- Profile dropdown -->
