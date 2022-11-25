@@ -83,7 +83,7 @@
                     <!-- Right buttons -->
                     <nav aria-label="Pagination flex mx-1  items-center ">
                       <span
-                        class="isolate flex flex-col justify-center items-center"
+                        class="isolate select-none flex flex-col justify-center items-center"
                       >
                         <span
                           class="relative inline-flex items-center -mb-2"
@@ -92,12 +92,10 @@
                           <span class="sr-only">Add</span>
                           <ChevronUpIcon
                             class="text-aronium-400 font-semibold h-6 w-8 hover:text-pink-400"
-                            aria-hidden="true"
                           />
                         </span>
                         <span
-                          class="font-bold text-aronium-white mx-2"
-                          aria-hidden="true"
+                          class="font-bold text-aronium-white mx-2 z-10 select-none"
                           >{{
                             convertedItem(item).quantity +
                             " " +
@@ -111,7 +109,6 @@
                           <span class="sr-only">Previous</span>
                           <ChevronDownIcon
                             class="text-aronium-400 font-bold h-6 w-8 hover:text-pink-400"
-                            aria-hidden="true"
                           />
                         </span>
                       </span>

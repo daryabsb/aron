@@ -271,7 +271,6 @@ import {
   Bars3BottomLeftIcon,
   CogIcon,
   HomeIcon,
-  CashIcon,
   PhotoIcon,
   GiftIcon,
   PlusIcon,

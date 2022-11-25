@@ -10,7 +10,7 @@
         <div
           class="flex items-baseline text-aronium-green-400 text-2xl font-semibold text-aronium-white"
         >
-          {{ priceFormat(useActiveOrder.subTotalBeforeDiscount()) }}
+          {{ priceFormat(store.useActiveOrder.subTotalBeforeDiscount) }}
         </div>
       </dd>
     </div>
@@ -22,7 +22,7 @@
         <div
           class="flex items-baseline text-orange-400 shadow-md text-xl font-semibold text-aronium-white"
         >
-          {{ priceFormat(useActiveOrder.totalTax()) }}
+          {{ priceFormat(store.useActiveOrder.totalTax) }}
         </div>
       </dd>
     </div>
@@ -30,7 +30,13 @@
       <dt class="text-xl font-normal text-aronium-white h-6">
         Total
       </dt>
-      <dd class="mt-1 flex items-baseline justify-between lg:flex">
+
+      <dd class="mt-1 flex items-center justify-between lg:flex">
+        <div class="text-aronium-green text-sm font-semibold flex items-start">
+          {{ store.useActiveOrder.discount
+          }}{{ store.useActiveOrder.discountStr }}
+          <ArrowDownIcon class="font-bold h-6 w-8 hover:text-pink-400" />
+        </div>
         <div
           :class="[
             isDiscount
@@ -39,7 +45,7 @@
             'flex items-baseline text-2xl ',
           ]"
         >
-          {{ priceFormat(useActiveOrder.subTotalWithTax()) }}
+          {{ priceFormat(store.useActiveOrder.subTotalWithDiscount) }}
         </div>
       </dd>
     </div>
@@ -52,7 +58,7 @@
         <div
           class="flex items-baseline text-aronium-green-400 text-2xl font-semibold text-aronium-white"
         >
-          {{ priceFormat(useActiveOrder.total) }}
+          {{ priceFormat(store.useActiveOrder.total) }}
         </div>
       </dd>
     </div>
@@ -60,14 +66,19 @@
 </template>
 
 <script setup>
-import { computed, watchEffect } from "@vue/runtime-core";
+import { computed, watchEffect } from "vue";
+import { storeToRefs } from "pinia";
 import { useOrderStore } from "@/Orders/ordersStore";
+import { useUtils } from "@/Orders/orderComposables/useUtils";
 import { useOrder } from "@/Orders/orderComposables/orderProperties";
+import { ArrowDownIcon } from "@heroicons/vue/20/solid";
 
 const store = useOrderStore();
-const priceFormat = store.priceFormat;
+const utils = useUtils();
+const priceFormat = utils.priceFormat;
+const useActiveOrder = store.useActiveOrder;
+// const useActiveOrder = store.useActiveOrder;
+const isDiscount = computed(() => store.useActiveOrder.discount);
 
-const useActiveOrder = computed(() => useOrder(store.useActiveOrder));
-watchEffect(() => useActiveOrder);
-const isDiscount = computed(() => useActiveOrder.value.discount);
+console.log(store.useActiveOrder);
 </script>

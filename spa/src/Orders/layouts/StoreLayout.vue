@@ -174,7 +174,6 @@ const router = useRouter();
 
 onMounted(async () => {
   if (store.cart.length === 0) {
-    console.log("check cart on store layout", store.cart.length);
     await loadOrdersData();
   }
 });

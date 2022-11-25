@@ -82,8 +82,9 @@ export const useOrder = (order) => {
   const subTotalWithTax = () => {
     if (!isActiveNumber) return 0;
     if (!isActiveOrderItems) return 0;
+    order.total = +subTotalWithDiscount() + +totalTax();
 
-    return +subTotalWithDiscount() + +totalTax();
+    return order.total;
   };
 
   // const subTotalWithDiscount = () => {
