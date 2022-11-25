@@ -151,9 +151,13 @@ export const useOrderStore = defineStore("orders", () => {
   };
   const appllyCartDiscount = (order, discountType, discount) => {
     const cartItem = cart.value.find((item) => item.number === order.number);
+    console.log("cartItem", cartItem);
     try {
       cartItem.discount = discount;
-      cartItem.discountType = discountType;
+      cartItem.discount_type = discountType;
+
+      console.log("cartItem.discount", cartItem.discount);
+      console.log("cartItem.cartItem.discount_type", cartItem.discount_type);
       updateLocalStorage();
       updateChange();
     } catch (error) {
