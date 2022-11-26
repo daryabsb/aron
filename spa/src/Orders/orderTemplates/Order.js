@@ -1,3 +1,4 @@
+import OrderItem from "@/Orders/orderTemplates/OrderItem";
 export default class Order {
   constructor({
     number,
@@ -31,9 +32,53 @@ export default class Order {
     return this.items.length > 0;
   }
 
-  // get items() {
-  //   return this.items;
-  // }
+  get itemsList() {
+    return this.items.map((item) => new OrderItem(item));
+  }
+  get totalPriceFromItems() {
+    return this.items.reduce(
+      (total, item) => total + this.getItemTotalPrice(item),
+      0
+    );
+  }
+  itemsPercentageFromTotal(itemPrice, totalPrice) {
+    return itemPrice / totalPrice;
+  }
+  itemPrice(item) {
+    return item.product.price;
+  }
+  itemTax(item) {
+    return item.product.tax.total;
+    // / this.getItemTotalPrice(item);
+  }
+
+  getItemTotalPrice(item) {
+    return item.product.price * item.quantity;
+  }
+
+  itemTotalPrice(item) {
+    // return this.getItemTotalPrice(item);
+    return (
+      this.getItemTotalPrice(item) -
+      this.itemsPercentageFromTotal(
+        this.itemPrice(item),
+        this.totalPriceFromItems
+      ) *
+        // THIS SHOULD BE CALCULATED BASED ON PERCENTAGE OF THE DISCOUNT
+        // THEN SUBTRACT WITH THE ITEM'S DISCOUNT
+        (this.calculateActiveOrderDiscount(this.totalPriceFromItems) +
+          this.calculateItemDiscount(item))
+    );
+    //     +
+    // this.itemTax(item)
+  }
+
+  get totalPrice() {
+    return this.items.reduce(
+      (total, item) => total + this.itemTotalPrice(item),
+      0
+    );
+  }
   // set items(items)
 
   /*
@@ -61,13 +106,15 @@ export default class Order {
   get discountStr() {
     return this.discount_type === 0 ? "%" : "$";
   }
+  calculateItemDiscount(item) {
+    return item.discount_type == 0
+      ? (this.itemTotalPrice(item) * item.discount) / 100
+      : item.discount;
+  }
   calculateActiveOrderDiscount(total) {
     return this.discount_type == 0
       ? (total * this.discount) / 100
       : this.discount;
-  }
-  getItemTotalPrice(item) {
-    return item.product.price * item.quantity;
   }
 
   isActiveNumber() {
@@ -126,8 +173,4 @@ export default class Order {
 
   //   return subTotalWithTax() - calculateActiveOrderDiscount(subTotalWithTax());
   // };
-
-  get totalPrice() {
-    return this.subTotalWithTax;
-  }
 }

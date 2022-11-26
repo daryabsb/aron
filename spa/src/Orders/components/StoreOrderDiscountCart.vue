@@ -99,12 +99,7 @@ const submitResults = () => {
     discountType.value,
     +cartInputValue.value
   );
-  console.log(discountType.value);
-  console.log(cartInputValue.value);
-  // useActiveOrder.discountType = discountType.value;
-  // useActiveOrder.discount = +cartInputValue.value;
 
-  // console.log("done");
   store.openOrderDiscountModal = false;
 };
 </script>
