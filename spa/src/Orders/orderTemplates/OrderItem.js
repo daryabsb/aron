@@ -97,6 +97,7 @@ export default class OrderItem {
     }
     return this.totalWithTax - this.discount;
   }
+
   get orderItemTotal() {
     return this.totalWithDsicount;
   }

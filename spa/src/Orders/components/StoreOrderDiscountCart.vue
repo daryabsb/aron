@@ -3,36 +3,24 @@
     Applly cart discount
     <div class="flex flex-col items-center">
       <div class="flex justify-center mt-4 w-full height-16">
-        <button
-          class="rounded-l-lg w-20 bg-inherit border border-aronium-500"
-          :class="
-            discountType === 0
-              ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
-              : 'bg-inherit  border-aronium-500'
-          "
-          @click="toggleDiscountType(0)"
-        >
+        <button class="rounded-l-lg w-20 bg-inherit border border-aronium-500" :class="
+          discountType === 0
+            ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
+            : 'bg-inherit  border-aronium-500'
+        " @click="toggleDiscountType(0)">
           %
         </button>
-        <button
-          class="rounded-r-lg w-20 border"
-          :class="
-            discountType === 1
-              ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
-              : 'bg-inherit  border-aronium-500'
-          "
-          @click="toggleDiscountType(1)"
-        >
+        <button class="rounded-r-lg w-20 border" :class="
+          discountType === 1
+            ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
+            : 'bg-inherit  border-aronium-500'
+        " @click="toggleDiscountType(1)">
           $
         </button>
       </div>
     </div>
-    <NumericPad
-      v-model="cartInputValue"
-      :symbol="discountType == 0 ? '%' : '$'"
-      @update:calc-memory="updateCartInput"
-      @close="submitResults"
-    />
+    <NumericPad v-model="cartInputValue" :symbol="discountType == 0 ? '%' : '$'" @update:calc-memory="updateCartInput"
+      @close="submitResults" />
     <div class="flex justify-center relative mt-6 text-xl w-full">
       <!-- <input
         :value="cartInputValue"
@@ -95,7 +83,7 @@ const discountValue = (payload) => {
 
 const submitResults = () => {
   store.appllyCartDiscount(
-    useActiveOrder,
+
     discountType.value,
     +cartInputValue.value
   );

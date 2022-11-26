@@ -75,51 +75,34 @@
     </div>
   </div> -->
 
-  <div
-    :class="[
-      checked
-        ? 'border-transparent ring-1 ring-pink-500'
-        : 'border-aronium-500',
-      active ? 'border-pink-500 ring-1 ring-pink-400' : '',
-      'flex justify-between items-center   rounded-sm m-1 shadow-sm focus:outline-none',
-    ]"
-  >
+  <div :class="[
+    checked
+      ? 'border-transparent ring-1 ring-pink-500'
+      : 'border-aronium-500',
+    active ? 'border-pink-500 ring-1 ring-pink-400' : '',
+    'flex justify-between items-center   rounded-sm m-1 shadow-sm focus:outline-none',
+  ]">
     <div class="relative flex items-center cursor-pointer">
-      <CheckCircleIcon
-        :class="[!false ? 'invisible' : '', 'h-5 w-5 text-pink-400 mr-2']"
-        aria-hidden="true"
-      />
-      <span
-        :class="['pointer-events-none absolute -inset-px rounded-sm']"
-        aria-hidden="true"
-      />
+      <CheckCircleIcon :class="[!false ? 'invisible' : '', 'h-5 w-5 text-pink-400 mr-2']" aria-hidden="true" />
+      <span :class="['pointer-events-none absolute -inset-px rounded-sm']" aria-hidden="true" />
       <span class="flex flex-1">
         <span class="flex flex-col">
-          <RadioGroupLabel
-            as="span"
-            class="block text-sm font-medium text-aronium-white"
-            >{{ item.product.name }}
+          <RadioGroupLabel as="span" class="block text-sm font-medium text-aronium-white">{{ item.product.name }}
           </RadioGroupLabel>
-          <RadioGroupDescription
-            as="span"
-            class="mt-1 flex items-center text-sm text-aronium-400"
-          >
+          <RadioGroupDescription as="span" class="mt-1 flex items-center text-sm text-aronium-400">
             <p class="truncate text-sm">
               {{ priceFormat(item.product.price) }}
               /
-              <span
-                :class="[
-                  item.discount
-                    ? 'line-through text-aronium-danger'
-                    : 'text-aronium-white',
-                ]"
-              >
+              <span :class="[
+                item.discount
+                  ? 'line-through text-aronium-danger'
+                  : 'text-aronium-white',
+              ]">
                 {{ priceFormat(item.totalWithTax()) }}
               </span>
               <span v-if="item.discount">
                 {{ " " }}
-                {{ priceFormat(item.orderItemTotal()) }}</span
-              >
+                {{ priceFormat(item.orderItemTotal()) }}</span>
             </p>
           </RadioGroupDescription>
         </span>
@@ -129,28 +112,16 @@
       <!-- Right buttons -->
       <nav aria-label="Pagination flex mx-1  items-center ">
         <span class="isolate flex flex-col justify-center items-center">
-          <span
-            class="relative inline-flex items-center -mb-2"
-            @click="addQty(item, 1)"
-          >
+          <span class="relative inline-flex items-center -mb-2" @click="addQty(item, 1)">
             <span class="sr-only">Next</span>
-            <ChevronUpIcon
-              class="text-aronium-white font-bold h-6 w-8 hover:text-pink-400"
-              aria-hidden="true"
-            />
+            <ChevronUpIcon class="text-aronium-white font-bold h-6 w-8 hover:text-pink-400" aria-hidden="true" />
           </span>
           <span class="text-aronium-white mx-2" aria-hidden="true">{{
-            item.quantity + " " + item.measurementUnit()
+              item.quantity + " " + item.measurementUnit()
           }}</span>
-          <span
-            class="relative inline-flex items-center -mt-2"
-            @click="addQty(item, -1)"
-          >
+          <span class="relative inline-flex items-center -mt-2" @click="addQty(item, -1)">
             <span class="sr-only">Previous</span>
-            <ChevronDownIcon
-              class="text-aronium-white font-bold h-6 w-8 hover:text-pink-400"
-              aria-hidden="true"
-            />
+            <ChevronDownIcon class="text-aronium-white font-bold h-6 w-8 hover:text-pink-400" aria-hidden="true" />
           </span>
         </span>
       </nav>
@@ -181,7 +152,7 @@ import {
 
 const store = useOrderStore();
 const useActiveOrder = store.useActiveOrder;
-console.log("check inside active order", useActiveOrder);
+
 const addQty = store.addQty;
 const priceFormat = store.priceFormat;
 const props = defineProps({

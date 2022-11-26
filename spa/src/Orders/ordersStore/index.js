@@ -143,14 +143,17 @@ export const useOrderStore = defineStore("orders", () => {
     try {
       activeItem.value.discount = discount;
       activeItem.value.discountType = discountType;
+      console.log({ discount, discountType });
       updateLocalStorage();
       updateChange();
     } catch (error) {
       console.log(error);
     }
   };
-  const appllyCartDiscount = (order, discountType, discount) => {
-    const cartItem = cart.value.find((item) => item.number === order.number);
+  const appllyCartDiscount = (discountType, discount) => {
+    const cartItem = cart.value.find(
+      (item) => item.number === useActiveOrder.value.number
+    );
     try {
       cartItem.discount = discount;
       cartItem.discount_type = discountType;
@@ -173,7 +176,7 @@ export const useOrderStore = defineStore("orders", () => {
       (order) => order.number === useActiveOrder.value.number
     );
 
-    storageCart[activeOrderIndex].items = useActiveOrder.value.items;
+    storageCart[activeOrderIndex] = useActiveOrder.value;
     localStorage.setItem("cart", JSON.stringify(storageCart));
   };
   const getItemSubTotal = (item) => {

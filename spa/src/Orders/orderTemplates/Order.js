@@ -56,18 +56,43 @@ export default class Order {
   itemPercent(item) {
     return this.itemTotal(item) / this.totalPriceFromItems;
   }
+
   itemDiscountPerItem(item) {
     return (
       this.itemPercent(item) *
       this.calculateActiveOrderDiscount(this.totalPriceFromItems)
     );
   }
+  calculateItemDiscount(item) {
+    if (item.discount_type == 0) {
+      return (this.itemTotal(item) * item.discount) / 100;
+    }
+    return item.discount;
+  }
+
+  itemTotalWithItemDiscount(item) {
+    return (
+      this.itemTotal(item) - this.calculateItemDiscount(item)
+
+      //
+    );
+  }
+
   itemTotalWithDiscount(item) {
-    return this.itemTotal(item) - this.itemDiscountPerItem(item);
+    return (
+      this.itemTotal(item) -
+      (this.itemDiscountPerItem(item) + this.calculateItemDiscount(item))
+
+      //
+    );
   }
   itemTax(item) {
     return item.product.tax.total_rate * this.itemTotalWithDiscount(item);
     // / this.getItemTotalPrice(item);
+  }
+
+  itemTotalBeforeDiscountWithTax(item) {
+    return this.itemTotal(item) + this.itemTax(item);
   }
 
   itemTotalWithTax(item) {
@@ -79,11 +104,38 @@ export default class Order {
     return this.itemTotalWithTax(item);
   }
 
+  get totalTax() {
+    return this.items.reduce((total, item) => total + this.itemTax(item), 0);
+  }
+
+  get totalBeforeDiscountWithTax() {
+    return this.items.reduce(
+      (total, item) => total + this.itemTotalBeforeDiscountWithTax(item),
+      0
+    );
+  }
+
+  get totalFirstDraft() {
+    return this.items.reduce(
+      (total, item) => total + this.itemTotalWithItemDiscount(item),
+      0
+    );
+  }
+  get totalWithDiscount() {
+    return this.items.reduce(
+      (total, item) => total + this.itemTotalWithDiscount(item),
+      0
+    );
+  }
+
   get totalPrice() {
     return this.items.reduce(
       (total, item) => total + this.itemTotalPrice(item),
       0
     );
+  }
+  get totalOrderDiscount() {
+    return this.totalPrice * this.calculateActiveOrderDiscount(this.totalPrice);
   }
   // set items(items)
 
@@ -112,11 +164,7 @@ export default class Order {
   get discountStr() {
     return this.discount_type === 0 ? "%" : "$";
   }
-  calculateItemDiscount(item) {
-    return item.discount_type == 0
-      ? (this.itemTotalPrice(item) * item.discount) / 100
-      : item.discount;
-  }
+
   calculateActiveOrderDiscount(total) {
     return this.discount_type == 0
       ? (total * this.discount) / 100
@@ -132,15 +180,15 @@ export default class Order {
     return this.items.length !== 0;
   }
 
-  get totalTax() {
-    if (!this.isActiveNumber()) return 0;
-    if (!this.isActiveOrderItems()) return 0;
-    const taxes = this.items.map(
-      (item) => item.product.tax.total * item.quantity
-    );
-    const taxTotal = taxes.reduce((total, item) => (total += item), 0);
-    return taxTotal.toFixed(3);
-  }
+  // get totalTax() {
+  //   if (!this.isActiveNumber()) return 0;
+  //   if (!this.isActiveOrderItems()) return 0;
+  //   const taxes = this.items.map(
+  //     (item) => item.product.tax.total * item.quantity
+  //   );
+  //   const taxTotal = taxes.reduce((total, item) => (total += item), 0);
+  //   return taxTotal.toFixed(3);
+  // }
 
   get subTotalBeforeDiscount() {
     return this.items.reduce(
