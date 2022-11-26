@@ -79,7 +79,8 @@
                       </span>
                     </span>
                   </div>
-                  <div class="w-20">
+                  <div class="w-20 text-aronium-white">
+                    {{ store.useActiveOrder.itemTotalPrice(item) }}
                     <!-- Right buttons -->
                     <nav aria-label="Pagination flex mx-1  items-center ">
                       <span

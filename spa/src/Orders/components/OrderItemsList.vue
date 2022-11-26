@@ -63,7 +63,8 @@
                               ]"
                             >
                               {{
-                                priceFormat(convertedItem(item).totalWithTax())
+                                // itemTotalPrice(item)
+                                // priceFormat(convertedItem(item).totalWithTax())
                               }}
                             </span>
                             <span v-if="item.discount">

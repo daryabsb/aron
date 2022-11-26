@@ -35,42 +35,48 @@ export default class Order {
   get itemsList() {
     return this.items.map((item) => new OrderItem(item));
   }
-  get totalPriceFromItems() {
-    return this.items.reduce(
-      (total, item) => total + this.getItemTotalPrice(item),
-      0
-    );
-  }
   itemsPercentageFromTotal(itemPrice, totalPrice) {
     return itemPrice / totalPrice;
   }
   itemPrice(item) {
     return item.product.price;
   }
-  itemTax(item) {
-    return item.product.tax.total;
-    // / this.getItemTotalPrice(item);
-  }
 
   getItemTotalPrice(item) {
     return item.product.price * item.quantity;
   }
 
+  itemTotal(item) {
+    return item.product.price * item.quantity;
+  }
+  get totalPriceFromItems() {
+    return this.items.reduce((total, item) => total + this.itemTotal(item), 0);
+  }
+
+  itemPercent(item) {
+    return this.itemTotal(item) / this.totalPriceFromItems;
+  }
+  itemDiscountPerItem(item) {
+    return (
+      this.itemPercent(item) *
+      this.calculateActiveOrderDiscount(this.totalPriceFromItems)
+    );
+  }
+  itemTotalWithDiscount(item) {
+    return this.itemTotal(item) - this.itemDiscountPerItem(item);
+  }
+  itemTax(item) {
+    return item.product.tax.total_rate * this.itemTotalWithDiscount(item);
+    // / this.getItemTotalPrice(item);
+  }
+
+  itemTotalWithTax(item) {
+    return this.itemTotalWithDiscount(item) + this.itemTax(item);
+  }
+
   itemTotalPrice(item) {
     // return this.getItemTotalPrice(item);
-    return (
-      this.getItemTotalPrice(item) -
-      this.itemsPercentageFromTotal(
-        this.itemPrice(item),
-        this.totalPriceFromItems
-      ) *
-        // THIS SHOULD BE CALCULATED BASED ON PERCENTAGE OF THE DISCOUNT
-        // THEN SUBTRACT WITH THE ITEM'S DISCOUNT
-        (this.calculateActiveOrderDiscount(this.totalPriceFromItems) +
-          this.calculateItemDiscount(item))
-    );
-    //     +
-    // this.itemTax(item)
+    return this.itemTotalWithTax(item);
   }
 
   get totalPrice() {

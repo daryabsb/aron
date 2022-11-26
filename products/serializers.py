@@ -34,15 +34,17 @@ class ProductSerializer(serializers.ModelSerializer):
     def get_tax(self, obj):
         if ProductTax.objects.filter(product=obj).exists():
             product_tax = ProductTax.objects.filter(product=obj)
-            tv, tm, total = 0, 0, 0
+            tv, tm, total, total_rate = 0, 0, 0, 0
             for t in product_tax:
                 if t.tax.is_tax_on_total:
+                    total_rate += rate(float(t.tax.rate)) + \
+                        t.tax.amount / float(obj.price)
                     total += (rate(float(t.tax.rate)) *
                               float(obj.price)) + t.tax.amount
                 else:
                     tv += t.tax.rate
                     tm += t.tax.amount
-            return {'rate': tv, 'amount': tm, 'total': total}
+            return {'rate': tv, 'amount': tm, 'total_rate': total_rate, 'total': total}
         return {'rate': 0, 'amount': 0, 'total': 0}
 
 
