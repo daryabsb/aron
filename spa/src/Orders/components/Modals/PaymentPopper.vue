@@ -197,7 +197,7 @@
                                   Payment
                                 </h1>
 
-                                <div class="flex justify-between w-full">
+                                <div v-if="isDiscount" class="flex justify-between w-full">
                                   Subtotal:
                                   <div>
                                     <span class="text-2xl ml-auto" :class="[
@@ -210,7 +210,7 @@
 
                                   </div>
                                 </div>
-                                <div class="flex justify-between w-full">
+                                <div v-if="isDiscount" class="flex justify-between w-full">
                                   Tax (VAT):
                                   <div>
 
@@ -240,8 +240,10 @@
                                 </div>
                                 <div class="flex justify-between w-full text-aronium-danger">
                                   Change:
-                                  <span class="font-semibold text-2xl text-aronium-sky-500 ml-auto">{{ store.change }}
-                                    IQD</span>
+                                  <span class="font-semibold text-2xl text-aronium-sky-500 ml-auto">{{
+                                      priceFormat(store.change)
+                                  }}
+                                  </span>
                                 </div>
                                 <div class="flex justify-around w-full h-full bottom-0">
                                   <moneys></moneys>

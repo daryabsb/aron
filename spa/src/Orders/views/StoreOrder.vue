@@ -145,6 +145,9 @@
         </main>
       </div>
     </div>
+    <div id="print-area" class="print-area">
+      <InvoiceTemplate />
+    </div>
   </div>
 
   <!-- <StoreHeader />
@@ -161,6 +164,7 @@ import { loadUserData } from "@/Orders/orderComposables";
 import { useUser } from "@/Users/userStore";
 import { getEvt } from "@/Orders/orderComposables";
 import StoreHeader from "@/Orders/components/Headers/StoreHeader.vue";
+import InvoiceTemplate from "@/Orders/components/Invoices/InvoiceTemplate.vue";
 // import UserMenu from "@/Users/components/UserMenu.vue"
 
 import {

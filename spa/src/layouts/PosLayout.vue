@@ -3,34 +3,20 @@
     <!-- <modal-calculator></modal-calculator> -->
     <!-- noprint-area -->
     <div class="hide-print">
-      <cash-popper
-        v-if="openCashModal"
-        class="w-full"
-        @close="cashModal"
-      ></cash-popper>
-      <payment-popper
-        v-if="openPaymentModal"
-        class="w-full"
-        @close="paymentModal"
-        @cash-out="cashOut"
-      ></payment-popper>
+      <cash-popper v-if="openCashModal" class="w-full" @close="cashModal"></cash-popper>
+      <payment-popper v-if="openPaymentModal" class="w-full" @close="paymentModal" @cash-out="cashOut"></payment-popper>
 
       <!-- <header-search-popper
         v-show="isSearchModal"
         @close="searchModal"
       ></header-search-popper> -->
 
-      <div
-        class="grid grid-cols-8 grid-rows-12 text-aronium-white h-screen w-full overflow-auto"
-      >
+      <div class="grid grid-cols-8 grid-rows-12 text-aronium-white h-screen w-full overflow-auto">
         <!-- left sidebar -->
         <!-- <pos-left-nav></pos-left-nav> -->
 
         <div class="col-span-8 row-span-1 px-1 h-min my-3">
-          <pos-header
-            @cash-modal="cashModal"
-            @payment-modal="paymentModal"
-          ></pos-header>
+          <pos-header @cash-modal="cashModal" @payment-modal="paymentModal"></pos-header>
         </div>
         <div class="col-span-8 grid grid-cols-12 row-span-10">
           <div class="mr-2 col-span-3 row-span-11">
@@ -53,7 +39,7 @@
       </div>
     </div>
     <!-- end of noprint-area -->
-    <div id="print-area" class="print-area"></div>
+
   </div>
 </template>
 
