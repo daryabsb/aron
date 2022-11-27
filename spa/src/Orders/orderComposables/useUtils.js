@@ -12,7 +12,6 @@ export const useUtils = () => {
   const receiptDate = ref(null);
 
   const store = useOrderStore();
-  const useActiveOrder = computed(() => useOrder(store.useActiveOrder));
 
   const submitable = () => change.value >= 0 && store.cart.length > 0;
   const useMoneys = () => MONEYS;
@@ -21,7 +20,7 @@ export const useUtils = () => {
   const useChange = () => change;
 
   const updateChange = () => {
-    change.value = cash.value - useActiveOrder.value.total;
+    change.value = cash.value - store.useActiveOrder.totalPrice;
   };
   const addCash = (amount) => {
     cash.value += amount || 0;

@@ -126,6 +126,13 @@ export default class Order {
     );
   }
 
+  get totalWithTax() {
+    return this.items.reduce(
+      (total, item) => total + this.itemTotalWithTax(item),
+      0
+    );
+  }
+
   get totalPrice() {
     return this.items.reduce(
       (total, item) => total + this.itemTotalPrice(item),
