@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="!selectedItem" class="text-xl font-light w-full h-full">
+    <div v-if="!store.activeItem" class="text-xl font-light w-full h-full">
       <h1 class="text-xl text-aronium-white my-16">
         Please select an item to add Item discount
       </h1>
@@ -9,39 +9,27 @@
       </div>
     </div>
     <div v-else class="text-xl text-aronium-white font-light w-full h-full">
-      This is a discount for " {{ selectedItem.product.name }} "
+      This is a discount for " {{ store.activeItem.product.name }} "
       <div class="flex flex-col items-center">
         <div class="flex justify-center mt-4 w-full height-16">
-          <button
-            class="rounded-l-lg w-20 bg-inherit border border-aronium-500"
-            :class="
-              discountType === 0
-                ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
-                : 'bg-inherit  border-aronium-500'
-            "
-            @click="toggleDiscountType(0)"
-          >
+          <button class="rounded-l-lg w-20 bg-inherit border border-aronium-500" :class="
+            discountType === 0
+              ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
+              : 'bg-inherit  border-aronium-500'
+          " @click="toggleDiscountType(0)">
             %
           </button>
-          <button
-            class="rounded-r-lg w-20 border"
-            :class="
-              discountType === 1
-                ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
-                : 'bg-inherit  border-aronium-500'
-            "
-            @click="toggleDiscountType(1)"
-          >
+          <button class="rounded-r-lg w-20 border" :class="
+            discountType === 1
+              ? 'bg-aronium-sky text-aronium-white border-aronium-sky'
+              : 'bg-inherit  border-aronium-500'
+          " @click="toggleDiscountType(1)">
             $
           </button>
         </div>
       </div>
-      <NumericPad
-        v-model="itemInputValue"
-        :symbol="discountType == 0 ? '%' : '$'"
-        @update:calc-memory="updateItemInput"
-        @close="submitResults"
-      />
+      <NumericPad v-model="itemInputValue" :symbol="discountType == 0 ? '%' : '$'" @update:calc-memory="updateItemInput"
+        @close="submitResults" />
 
       <div class="w-full flex justify-center mt-6 text-xl">
         <!-- <input
@@ -72,7 +60,7 @@ import EmptyNumericPad from "@/components/shared/calculator/EmptyNumericPad.vue"
 const emit = defineEmits(["close"]);
 
 const store = useOrderStore();
-const selectedItem = store.useActiveItem;
+// const selectedItem = store.useActiveItem;
 
 // const selectedItem = computed({
 //   get() {
@@ -89,7 +77,7 @@ const selectItemInputText = () => {
   // itemDiscountInput.setSelectionRange(0, 3);
 };
 onMounted(() => {
-  if (selectedItem.value) selectItemInputText();
+  // if (selectedItem.value) selectItemInputText();
 });
 
 const discountType = ref(0);
@@ -110,6 +98,7 @@ const submitResults = () => {
   // selectedItem.value.discountType = discountType.value;
   // selectedItem.value.discount = +itemInputValue.value;
   // selectedItem.value.isActive = false;
+  store.activeItem = null
   store.openOrderDiscountModal = false;
 };
 </script>

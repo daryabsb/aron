@@ -322,14 +322,14 @@
                           <div class="flex">
                             <!-- :href="order.href" -->
 
-                            <a :href="`/store/order/${order.number}`"
+                            <router-link :to="`/store/order/${order.number}`"
                               class="group inline-flex space-x-2 truncate text-sm">
                               <BanknotesIcon class="h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                                 aria-hidden="true" />
                               <p class="truncate text-gray-500 group-hover:text-gray-900">
                                 {{ order.number }}
                               </p>
-                            </a>
+                            </router-link>
                           </div>
                         </td>
                         <td class="whitespace-nowrap px-6 py-4 text-right text-sm text-gray-500">
@@ -435,7 +435,8 @@ const store = useOrderStore();
 const user = ref(null);
 const loadUnfinishedOrdersData = async () => {
   try {
-    await store.createCartFromAPI();
+    if (store.cart.length === 0) await store.createCartFromAPI()
+
 
   } catch (error) {
     console.log(error);

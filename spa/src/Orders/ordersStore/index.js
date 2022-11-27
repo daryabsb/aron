@@ -33,7 +33,8 @@ export const useOrderStore = defineStore("orders", () => {
     return new Order(order);
   });
   const useActiveItem = computed(() => {
-    if (!useActiveOrder.value) return;
+    if (!useActiveOrder.value) return null;
+    if (!useActiveItem.value) return null;
     return useActiveOrder.value.items.find(
       (item) => item.number == activeItem.value.number
     );
