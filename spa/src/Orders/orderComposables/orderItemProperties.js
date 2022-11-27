@@ -74,7 +74,7 @@ export const useOrderItem = (item) => {
   };
   const totalWithDsicount = () => {
     if (!item.discount) return totalWithTax();
-    if (item.discountType === 0) {
+    if (item.discount_type === 0) {
       let discountRate = (totalWithTax() * item.discount) / 100;
       return totalWithTax() - discountRate;
     }

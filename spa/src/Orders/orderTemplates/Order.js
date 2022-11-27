@@ -63,8 +63,8 @@ export default class Order {
       this.calculateActiveOrderDiscount(this.totalPriceFromItems)
     );
   }
-  calculateItemDiscount(item) {
-    if (item.discount_type == 0) {
+  itemDiscount(item) {
+    if (item.discount_type === 0) {
       return (this.itemTotal(item) * item.discount) / 100;
     }
     return item.discount;
@@ -72,7 +72,7 @@ export default class Order {
 
   itemTotalWithItemDiscount(item) {
     return (
-      this.itemTotal(item) - this.calculateItemDiscount(item)
+      this.itemTotal(item) - this.itemDiscount(item)
 
       //
     );
@@ -81,9 +81,7 @@ export default class Order {
   itemTotalWithDiscount(item) {
     return (
       this.itemTotal(item) -
-      (this.itemDiscountPerItem(item) + this.calculateItemDiscount(item))
-
-      //
+      (this.itemDiscountPerItem(item) + this.itemDiscount(item))
     );
   }
   itemTax(item) {

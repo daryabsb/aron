@@ -202,7 +202,7 @@
                               <div class="flex items-center h-full">
                                 <button
                                   class="flex bg-aronium-inherit border border-aronium-500 py-4 px-12 mr-1"
-                                  @click="openDiscountPopper"
+                                  @click="store.openOrderDiscountModal = true"
                                 >
                                   <span class="mr-2"
                                     ><i class="fa fa-percent"></i

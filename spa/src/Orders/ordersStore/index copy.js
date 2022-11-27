@@ -146,7 +146,7 @@ export const useOrderStore = defineStore("orders", {
       );
       try {
         cartOrderItem.discount = discount;
-        cartOrderItem.discountType = discountType;
+        cartOrderItem.discount_type = discountType;
         this.updateLocalStorage();
         this.updateChange();
       } catch (error) {
