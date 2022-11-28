@@ -173,7 +173,7 @@
                                 <button
                                   class="flex bg-aronium-inherit border border-aronium-500 py-4 w-44 justify-center text-sm my-1"
                                   @click="$emit('close')">
-                                  Check
+                                  Cheque
                                 </button>
                                 <button
                                   class="flex bg-aronium-inherit border border-aronium-500 w-44 justify-center py-4 text-sm my-1"
