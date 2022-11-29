@@ -15,17 +15,16 @@
         <span
           v-for="item in sidebarNavigation"
           :key="item.name"
-          @click="submit(item.submit)"
-          :class="[
-            item.current
-              ? 'bg-aronium-900 text-white'
-              : 'text-aronium-white hover:bg-aronium-700 hover:text-pink-400',
-            'group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium',
-          ]"
-          :aria-current="item.current ? 'page' : undefined"
+          class="text-aronium-white hover:bg-aronium-700 hover:text-pink-400 group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium"
         >
-          <component :is="item.icon" :class="['h-6 w-6']" aria-hidden="true" />
-          <span class="mt-2">{{ item.name }}</span>
+          <span @click="submit(item.submit)">
+            <component
+              :is="item.icon"
+              :class="['h-6 w-6']"
+              aria-hidden="true"
+            />
+            <span class="mt-2">{{ item.name }}</span>
+          </span>
         </span>
       </div>
     </div>
@@ -33,6 +32,10 @@
 </template>
 
 <script setup>
+import { nextTick } from "vue";
 import { sidebarNavigation } from "@/composables/staticData";
-const submit = (submit) => submit();
+const submit = async (submit) => {
+  await nextTick();
+  await submit();
+};
 </script>

@@ -195,6 +195,12 @@ export const useOrderStore = defineStore("orders", () => {
     }
   };
 
+  const openDiscountModal = () => {
+    console.log("we are here", modals.openOrderDiscountModal);
+    modals.openOrderDiscountModal = true;
+    console.log("this is modals", modals.openOrderDiscountModal);
+  };
+
   return {
     cart,
     activeNumber,
@@ -219,5 +225,6 @@ export const useOrderStore = defineStore("orders", () => {
     getItemSubTotal,
     getItemTotalPrice,
     calculateActiveOrderDiscount,
+    openDiscountModal,
   };
 });

@@ -43,7 +43,7 @@ export const sidebarNavigation = [
     name: "Discount",
     href: "#",
     submit() {
-      store.openOrderDiscountModal = true;
+      store.openDiscountModal();
       // sidebarNavigation[2].current = true;
     },
     ref: "discountButton",
