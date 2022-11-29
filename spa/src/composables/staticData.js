@@ -1,8 +1,77 @@
 import { ref } from "vue";
 import dataLabels from "chartjs-plugin-datalabels";
-import { useModals } from "@/stores/modals";
+import { useOrderStore } from "@/Orders/ordersStore";
+import {
+  Bars3BottomLeftIcon,
+  CogIcon,
+  HomeIcon,
+  PhotoIcon,
+  GiftIcon,
+  PlusIcon,
+  RectangleStackIcon,
+  Squares2X2Icon,
+  UserGroupIcon,
+  XMarkIcon,
+} from "@heroicons/vue/24/outline";
+import { MagnifyingGlassIcon, CheckCircleIcon } from "@heroicons/vue/20/solid";
 
-const store = useModals();
+const store = useOrderStore();
+
+export const sidebarNavigation = [
+  {
+    name: "Home",
+    href: "/",
+    submit() {
+      console.log("router");
+      // router.push("/");
+    },
+    icon: HomeIcon,
+    current: false,
+  },
+  {
+    name: "Search",
+    href: "#",
+    submit: () => {
+      // const store = useOrderStore();
+      store.searchModal = true;
+    },
+    icon: MagnifyingGlassIcon,
+    current: false,
+  },
+  {
+    id: "discount",
+    name: "Discount",
+    href: "#",
+    submit() {
+      store.openOrderDiscountModal = true;
+      // sidebarNavigation[2].current = true;
+    },
+    ref: "discountButton",
+    icon: GiftIcon,
+    current: false,
+  },
+  {
+    name: "Shared",
+    href: "#",
+    submit: () => console.log("Hooray"),
+    icon: UserGroupIcon,
+    current: false,
+  },
+  {
+    name: "Save",
+    href: "#",
+    submit: () => console.log("Hooray"),
+    icon: CheckCircleIcon,
+    current: false,
+  },
+  {
+    name: "Settings",
+    href: "#",
+    submit: () => console.log("Hooray"),
+    icon: CogIcon,
+    current: false,
+  },
+];
 
 export const sideBarNavItems = [
   {
@@ -149,7 +218,7 @@ export const posHeaderItems = [
     title: "Search",
     icon: " fa fa-search",
     submit: (title, item) => {
-      const store = useModals();
+      const store = useOrderStore();
       console.log(store.searchModal);
       store.searchModal = true;
       console.log(store.searchModal);
