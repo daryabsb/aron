@@ -8,19 +8,14 @@
         <Suspense>
           <RadioGroup ref="orderList" v-model="selectedOrderItem">
             <div class="border-b border-aronium-500 divide-y divide-aronium-500 overflow-y-auto scrollbar">
-              <RadioGroupOption v-for="item in store.useActiveOrder.items" :key="item" as="template"
-                v-slot="{ checked, active }" :value="item" @click="isActive(checked, item)">
-                <div :class="[
-                  checked
-                    ? 'border-transparent ring-1 ring-pink-500'
-                    : 'border-aronium-500',
-                  active ? 'border-pink-500 ring-1 ring-pink-400' : '',
-                  'flex justify-between items-center   rounded-sm m-1 shadow-sm focus:outline-none',
-                ]">
+              <RadioGroupOption v-for="item in store.useActiveOrder.items" :key="item" as="template" :value="item">
+                <div :class="[store.activeItem === item ? 'border-transparent ring-1 ring-pink-500'
+                : 'border-aronium-500', 'flex justify-between items-center rounded-sm m-1'
+                , ' shadow-sm focus:outline-none']">
                   <div class="relative flex items-center cursor-pointer">
                     <CheckCircleIcon :class="[
-                      !false ? 'invisible' : '',
-                      'h-5 w-5 text-pink-400 mr-2',
+                      store.activeItem === item ? '' : 'invisible',
+                      'h-5 w-5 text-pink-400 mx-2',
                     ]" aria-hidden="true" />
 
                     <span :class="[
@@ -151,6 +146,7 @@ const StoreOrderTopButtons = defineAsyncComponent(() =>
 
 onMounted(async () => {
   store.activeNumber = props.number;
+  store.activeItem = null
   if (store.cart.length === 0) {
     store.cart = JSON.parse(localStorage.getItem("cart"));
   }
@@ -158,15 +154,27 @@ onMounted(async () => {
     const nav = document.getElementById("sideNav")
     if (e.composedPath().includes(orderList.value.el)) {
       setItem()
-    } else if (!e.composedPath().includes(orderList.value.el) && !e.composedPath().includes(nav)) store.activeItem = null
-    console.log(e.composedPath().includes(nav));
-    console.log(nav);
+    } else if (!e.composedPath().includes(nav)) {
+      setNull()
+      store.activeItem = null
+    }
+    // console.log(e.composedPath().includes(nav));
+    // console.log(nav);
   });
 });
 const isActive = () => {
 }
 const setItem = () => {
-  store.setActiveItem(selectedOrderItem.value)
+  console.log("called");
+  if (selectedOrderItem.value) {
+    store.activeItem = selectedOrderItem.value
+  }
+}
+const setNull = () => {
+  console.log("called");
+  if (!selectedOrderItem.value) {
+    store.activeItem = null
+  }
 }
 const selectedOrderItem = ref(null);
 // watch(selectedOrderItem, () => store.setActiveItem(selectedOrderItem.value));

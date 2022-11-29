@@ -93,6 +93,7 @@ const discountValue = (payload) => {
   itemInputValue.value = payload.value;
 };
 
+
 const submitResults = () => {
   store.appllyItemDiscount(discountType.value, +itemInputValue.value);
   // selectedItem.value.discountType = discountType.value;

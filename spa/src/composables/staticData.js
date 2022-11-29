@@ -42,9 +42,9 @@ export const sidebarNavigation = [
     id: "discount",
     name: "Discount",
     href: "#",
-    submit() {
-      store.openDiscountModal();
-      // sidebarNavigation[2].current = true;
+    submit: () => {
+      // const store = useOrderStore();
+      store.openOrderDiscountModal = true;
     },
     ref: "discountButton",
     icon: GiftIcon,

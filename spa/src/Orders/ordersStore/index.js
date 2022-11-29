@@ -1,10 +1,9 @@
-import { ref, reactive, computed } from "vue";
+import { ref, computed } from "vue";
 import { defineStore } from "pinia";
 import ordersAPI from "@/services/ordersAPI";
 import { useUtils } from "@/Orders/orderComposables/useUtils";
 import { modals } from "@/Orders/orderComposables/useModals";
 import Order from "@/Orders/orderTemplates/Order";
-import { useOrder } from "@/Orders/orderComposables/orderProperties";
 
 import OrderItem from "@/Orders/orderTemplates/OrderItem";
 import { useOrderItem } from "@/Orders/orderComposables/orderItemProperties";
@@ -195,7 +194,7 @@ export const useOrderStore = defineStore("orders", () => {
     }
   };
 
-  const openDiscountModal = () => {
+  const openDiscountModal = async () => {
     console.log("we are here", modals.openOrderDiscountModal);
     modals.openOrderDiscountModal = true;
     console.log("this is modals", modals.openOrderDiscountModal);
