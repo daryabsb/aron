@@ -68,7 +68,12 @@
         <aside class="flex flex-col justify-between w-full md:w-112 border-r border-aronium-500">
           <!-- Your content -->
           <div class="overflow-auto scrollbar">
-            <router-view></router-view>
+            <router-view v-slot="{ Component }">
+              <transition name="fade">
+                
+                <component :is="Component" />
+              </transition>
+            </router-view>
           </div>
           <div>
             <StoreTotalsCalculations />
