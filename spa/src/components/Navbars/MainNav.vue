@@ -1,6 +1,6 @@
 <template>
   <!-- Top navigation -->
-  <div class="bg-gray-900">
+  <div class="bg-gray-900 py-2 z-50">
     <div
       class="mx-auto flex h-10 max-w-full items-center justify-between px-4 sm:px-6 lg:px-8"
     >
@@ -33,18 +33,17 @@
       </form>
 
       <div class="flex items-center space-x-6">
-        <a href="#" class="text-sm font-medium text-white hover:text-gray-100"
-          >Sign in</a
-        >
-        <a href="#" class="text-sm font-medium text-white hover:text-gray-100"
-          >Create an account</a
-        >
+        <UserMenu />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { defineAsyncComponent } from "vue";
 import { ChevronDownIcon } from "@heroicons/vue/20/solid";
+const UserMenu = defineAsyncComponent(() =>
+  import("@/Users/components/UserMenu.vue")
+);
 const currencies = ["CAD", "USD", "AUD", "EUR", "GBP"];
 </script>

@@ -3,7 +3,7 @@
     <Dialog
       as="div"
       class="relative z-20 md:hidden"
-      @close="mobileMenuOpen = false"
+      @close="$emit('update:mobileMenuOpen', false)"
     >
       <TransitionChild
         as="template"
@@ -43,7 +43,7 @@
                 <button
                   type="button"
                   class="flex h-12 w-12 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-white"
-                  @click="mobileMenuOpen = false"
+                  @click="$emit('update:mobileMenuOpen', false)"
                 >
                   <XMarkIcon class="h-6 w-6 text-white" aria-hidden="true" />
                   <span class="sr-only">Close sidebar</span>
@@ -63,12 +63,14 @@
                   <span
                     v-for="item in sidebarNavigation"
                     :key="item.name"
-                    :ref="item.ref"
-                    @click="item.submit"
+                    @click="
+                      item.submit(
+                        $router,
+                        $emit('update:mobileMenuOpen', false)
+                      )
+                    "
                     :class="[
-                      item.current
-                        ? 'bg-aronium-900 text-white'
-                        : 'text-aronium-white hover:bg-aronium-900 hover:text-pink-500',
+                      'text-aronium-white hover:bg-aronium-900 hover:text-pink-500',
                       'group py-2 px-3 rounded-md flex items-center text-sm font-medium',
                     ]"
                     :aria-current="item.current ? 'page' : undefined"
@@ -94,30 +96,21 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { defineProps } from "vue";
 import { sidebarNavigation } from "@/composables/staticData";
 import {
   Dialog,
   DialogPanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
   TransitionChild,
   TransitionRoot,
 } from "@headlessui/vue";
-import {
-  Bars3BottomLeftIcon,
-  CogIcon,
-  HomeIcon,
-  PhotoIcon,
-  GiftIcon,
-  PlusIcon,
-  RectangleStackIcon,
-  Squares2X2Icon,
-  UserGroupIcon,
-  XMarkIcon,
-} from "@heroicons/vue/24/outline";
-import { MagnifyingGlassIcon, CheckCircleIcon } from "@heroicons/vue/20/solid";
-const mobileMenuOpen = ref(false);
+import { XMarkIcon } from "@heroicons/vue/24/outline";
+defineProps({
+  mobileMenuOpen: { type: Boolean, default: false },
+});
+// const submit = async (submit, emit) => {
+//   await emit();
+//   await submit();
+// };
+// const mobileMenuOpen = ref(false);
 </script>
