@@ -34,16 +34,31 @@
 
       <div class="flex items-center space-x-6">
         <UserMenu />
+
+        <!-- Management menu -->
+        <button
+          type="button"
+          class="px-4 text-aronium-white"
+          @click="managementMenuOpen = true"
+        >
+          <span class="sr-only">Open sidebar</span>
+          <Bars3BottomRightIcon class="h-6 w-6" aria-hidden="true" />
+        </button>
       </div>
+      <ManagementMenu v-model:managementMenuOpen="managementMenuOpen" />
     </div>
   </div>
 </template>
 
 <script setup>
-import { defineAsyncComponent } from "vue";
-import { ChevronDownIcon } from "@heroicons/vue/20/solid";
+import { ref, defineAsyncComponent } from "vue";
+import { Bars3BottomRightIcon, ChevronDownIcon } from "@heroicons/vue/20/solid";
 const UserMenu = defineAsyncComponent(() =>
   import("@/Users/components/UserMenu.vue")
 );
+const ManagementMenu = defineAsyncComponent(() =>
+  import("@/components/Navbars/ManagementMenu.vue")
+);
 const currencies = ["CAD", "USD", "AUD", "EUR", "GBP"];
+const managementMenuOpen = ref(false);
 </script>

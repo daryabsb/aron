@@ -15,7 +15,7 @@
         "@fortawesome/free-solid-svg-icons": "^6.1.2",
         "@fortawesome/vue-fontawesome": "^3.0.0-5",
         "@headlessui/vue": "^1.7.3",
-        "@heroicons/vue": "^2.0.12",
+        "@heroicons/vue": "^2.0.13",
         "@j-t-mcc/vue3-chartjs": "^1.3.0",
         "@popperjs/core": "^2.11.6",
         "@tailwindcss/aspect-ratio": "^0.4.2",

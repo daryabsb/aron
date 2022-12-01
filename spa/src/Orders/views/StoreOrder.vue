@@ -69,10 +69,10 @@
                 </div>
               </form>
             </div>
-            <div class="ml-2 flex items-center space-x-4 sm:ml-3 sm:space-x-6">
+            <div class="mx-4 flex items-center space-x-4 sm:mx-6 sm:space-x-6">
               <nav aria-label="Global" class="flex space-x-10">
                 <span
-                  class="flex items-center md:w-32 md:h-full py-2 px-1 md:px-2 justify-center rounded-full md:rounded-sm bg-aronium-green p-1 text-aronium-900 shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  class="flex items-center md:w-28 md:h-full py-2 px-1 md:px-2 justify-center rounded-full md:rounded-sm bg-aronium-800 p-1 text-aronium-white shadow-sm hover:bg-gray-700 cursor-pointer"
                 >
                   <PlusIcon class="h-6 w-8" />
                   <span class="hidden md:block">
@@ -80,17 +80,17 @@
                   </span>
                 </span>
                 <span
-                  class="flex items-center md:w-32 md:h-full py-2 px-1 md:px-2 justify-center rounded-full md:rounded-sm bg-aronium-green p-1 text-aronium-900 shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  class="flex items-center md:w-28 md:h-full py-2 px-1 md:px-2 justify-center rounded-full md:rounded-sm bg-aronium-800 p-1 text-aronium-white shadow-sm hover:bg-gray-700 cursor-pointer"
                 >
-                  <PlusIcon class="h-6 w-8" />
+                  <ReceiptPercentIcon class="h-6 w-8" />
                   <span class="hidden md:block">
                     Payment
                   </span>
                 </span>
                 <span
-                  class="flex items-center md:w-32 md:h-full py-2 px-1 md:px-2 justify-center rounded-full md:rounded-sm bg-aronium-green p-1 text-aronium-900 shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  class="flex items-center md:w-28 md:h-full py-2 px-1 md:px-2 justify-center rounded-full md:rounded-sm bg-aronium-800 p-1 text-aronium-white shadow-sm hover:bg-gray-700 cursor-pointer"
                 >
-                  <PlusIcon class="h-6 w-8" />
+                  <BanknotesIcon class="h-6 w-8" />
                   <span class="hidden md:block">
                     Cash
                   </span>
@@ -108,6 +108,7 @@
                 </span>
               </div>
             </div>
+
             <!-- <div
               class="ml-2 py-2 flex items-center space-x-4 sm:ml-6 sm:space-x-6"
             >
@@ -204,6 +205,7 @@ import {
 } from "@headlessui/vue";
 import {
   Bars3BottomLeftIcon,
+  Bars3BottomRightIcon,
   CogIcon,
   HomeIcon,
   PhotoIcon,
@@ -214,6 +216,8 @@ import {
   BellIcon,
   UserGroupIcon,
   XMarkIcon,
+  ReceiptPercentIcon,
+  BanknotesIcon,
 } from "@heroicons/vue/24/outline";
 import { MagnifyingGlassIcon, CheckCircleIcon } from "@heroicons/vue/20/solid";
 
