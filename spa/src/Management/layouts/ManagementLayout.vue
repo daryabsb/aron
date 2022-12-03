@@ -100,9 +100,19 @@
       <div
         class="flex flex-grow flex-col overflow-y-auto border-r border-aronium-500 bg-aronium-900 pt-5"
       >
-        <div class="flex flex-shrink-0 items-center px-4">
-          <h1 class="text-2xl font-semibold text-aronium-white">
-            {{ $route.name }}
+        <div class="flex flex-shrink-0 items-center px-2">
+          <h1
+            class="flex items-center text-sm font-semibold text-aronium-white"
+          >
+            <span>
+              <ArrowLeftIcon class="bg-transparent h-5 w-5 mx-2" />
+            </span>
+            Management
+            <span
+              ><StopIcon
+                class="bg-transparent h-3 w-3 mx-2"
+                aria-hidden="true" /></span
+            >{{ $route.name }}
           </h1>
         </div>
         <div class="mt-5 h-0 flex-1 overflow-y-auto px-2">
@@ -245,6 +255,7 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRoute } from "vue-router";
 import {
   Dialog,
   DialogPanel,
@@ -266,7 +277,13 @@ import {
   UsersIcon,
   XMarkIcon,
 } from "@heroicons/vue/24/outline";
-import { MagnifyingGlassIcon } from "@heroicons/vue/20/solid";
+import {
+  MagnifyingGlassIcon,
+  StopIcon,
+  ArrowLeftIcon,
+} from "@heroicons/vue/20/solid";
+
+const route = useRoute();
 
 const navigation = [
   {

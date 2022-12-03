@@ -1,10 +1,12 @@
 import uuid
 import random
 from datetime import date
-from rest_framework import permissions, viewsets,status
-from .serializers import PosOrderItemSerializer, PosOrderSerializer
+from rest_framework import permissions, viewsets, status
+from .serializers import (PosOrderItemSerializer, PosOrderSerializer,
+                            PaymentTypeSerializer, CashRegisterSerializer)
 
-from core.models import PosOrder, PosOrderItem
+from core.models import (PosOrder, PosOrderItem, PaymentType,
+                            CashRegister,)
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -52,7 +54,27 @@ class GenerateNumberView(APIView):
         print(digits)
         if target:
             number = f'{target}-{request.user.id}-{date.today().strftime("%d%m%Y")}-01-{digits}'
-            
+
             response = {number}
             return Response(response)
-        return Response('not found',status=status.HTTP_204_NO_CONTENT)
+        return Response('not found', status=status.HTTP_204_NO_CONTENT)
+
+
+class PaymentTypeViewset(viewsets.ModelViewSet):
+    serializer_class = PaymentTypeSerializer
+    queryset = PaymentType.objects.all()
+    permission_classes = (permissions.IsAuthenticated,)
+
+    def perform_create(self, serializer):
+        """Create a new payment type"""
+        serializer.save(user=self.request.user)
+
+
+class CashRegisterViewset(viewsets.ModelViewSet):
+    serializer_class = CashRegisterSerializer
+    queryset = CashRegister.objects.all()
+    permission_classes = (permissions.IsAuthenticated,)
+
+    def perform_create(self, serializer):
+        """Create a new payment type"""
+        serializer.save(user=self.request.user)

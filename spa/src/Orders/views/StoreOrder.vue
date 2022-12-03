@@ -25,7 +25,6 @@
     <NarrowSideBar />
 
     <!-- Mobile menu -->
-    <MobileMenu v-model:mobileMenuOpen="mobileMenuOpen" />
 
     <!-- Content area -->
     <div class="flex flex-1 inset-0 flex-col overflow-hidden">
@@ -34,103 +33,8 @@
         <div
           class="relative z-10 flex h-16 flex-shrink-0 border-b border-aronium-500 bg-aronium-300 shadow-sm"
         >
-          <button
-            type="button"
-            class="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden"
-            @click="mobileMenuOpen = true"
-          >
-            <span class="sr-only">Open sidebar</span>
-            <Bars3BottomLeftIcon class="h-6 w-6" aria-hidden="true" />
-          </button>
-          <div class="flex flex-1 justify-between px-4 sm:px-6">
-            <div class="flex flex-1">
-              <form class="flex w-full md:ml-0" action="#" method="GET">
-                <label for="search-field" class="sr-only"
-                  >Search all files</label
-                >
-                <div
-                  class="relative w-full text-gray-800 focus-within:text-aronium-900"
-                >
-                  <div
-                    class="pointer-events-none absolute inset-y-0 left-0 flex items-center"
-                  >
-                    <MagnifyingGlassIcon
-                      class="h-5 w-5 flex-shrink-0"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <input
-                    name="search-field"
-                    id="search-field"
-                    class="h-full w-full border-transparent bg-transparent py-2 pl-8 pr-3 text-base text-aronium-900 placeholder-aronium-500 focus:border-transparent focus:placeholder-aronium-600 focus:outline-none focus:ring-0"
-                    placeholder="Search"
-                    type="search"
-                  />
-                </div>
-              </form>
-            </div>
-            <div class="mx-4 flex items-center space-x-4 sm:mx-6 sm:space-x-6">
-              <nav aria-label="Global" class="flex space-x-10">
-                <span
-                  class="flex items-center md:w-28 md:h-full py-2 px-1 md:px-2 justify-center rounded-full md:rounded-sm bg-aronium-800 p-1 text-aronium-white shadow-sm hover:bg-gray-700 cursor-pointer"
-                >
-                  <PlusIcon class="h-6 w-8" />
-                  <span class="hidden md:block">
-                    Save slae
-                  </span>
-                </span>
-                <span
-                  class="flex items-center md:w-28 md:h-full py-2 px-1 md:px-2 justify-center rounded-full md:rounded-sm bg-aronium-800 p-1 text-aronium-white shadow-sm hover:bg-gray-700 cursor-pointer"
-                >
-                  <ReceiptPercentIcon class="h-6 w-8" />
-                  <span class="hidden md:block">
-                    Payment
-                  </span>
-                </span>
-                <span
-                  class="flex items-center md:w-28 md:h-full py-2 px-1 md:px-2 justify-center rounded-full md:rounded-sm bg-aronium-800 p-1 text-aronium-white shadow-sm hover:bg-gray-700 cursor-pointer"
-                >
-                  <BanknotesIcon class="h-6 w-8" />
-                  <span class="hidden md:block">
-                    Cash
-                  </span>
-                </span>
-              </nav>
-              <div class="flex items-center space-x-8">
-                <span class="inline-flex">
-                  <a
-                    href="#"
-                    class="-mx-1 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500"
-                  >
-                    <span class="sr-only">View notifications</span>
-                    <BellIcon class="h-6 w-6" aria-hidden="true" />
-                  </a>
-                </span>
-              </div>
-            </div>
-
-            <!-- <div
-              class="ml-2 py-2 flex items-center space-x-4 sm:ml-6 sm:space-x-6"
-            >
-              <button
-                type="button"
-                class="flex items-center md:h-full my-1 px-1 md:px-6 justify-center rounded-full md:rounded-sm bg-aronium-green p-1 text-aronium-900 shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              >
-                <PlusIcon class="h-6 w-6" aria-hidden="true" />
-                <span class="hidden md:block">Payment</span>
-              </button>
-            
-              <UserMenu />
-
-              <button
-                type="button"
-                class="flex items-center justify-center rounded-full bg-indigo-600 p-1 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              >
-                <PlusIcon class="h-6 w-6" aria-hidden="true" />
-                <span class="sr-only">Add file</span>
-              </button>
-            </div> -->
-          </div>
+          <!-- Main Searchbar -->
+          <SearchBarVue />
         </div>
       </header>
 
@@ -188,9 +92,10 @@ import { getEvt } from "@/Orders/orderComposables";
 import StoreHeader from "@/Orders/components/Headers/StoreHeader.vue";
 import NarrowSideBar from "@/components/Navbars/NarrowSideBar.vue";
 import MainNav from "@/components/Navbars/MainNav.vue";
+import SearchBarVue from "@/Orders/components/Headers/SearchBar.vue";
 
 import InvoiceTemplate from "@/Orders/components/Invoices/InvoiceTemplate.vue";
-import MobileMenu from "@/components/Navbars/MobileMenu.vue";
+
 // import UserMenu from "@/Users/components/UserMenu.vue"
 
 import {
@@ -230,9 +135,7 @@ window.onkeydown = (evt) => {
   return getEvt(evt.key)();
 };
 
-// onMounted(async () => {
-//   await loadUserData();
-// });
+onMounted(store.loadPaymentTypes);
 
 // const userStore = useUser();
 // const user = userStore.user;
@@ -334,6 +237,4 @@ const userNavigation = [
   { name: "Your Profile", href: "#" },
   { name: "Sign out", href: "/logout/" },
 ];
-
-const mobileMenuOpen = ref(false);
 </script>

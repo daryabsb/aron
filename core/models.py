@@ -28,6 +28,10 @@ class User(PermissionsMixin, AbstractBaseUser):
     # Custom user model supports email instead of username
     email = models.EmailField(max_length=255, unique=True)
     name = models.CharField(max_length=255, null=True, blank=True)
+    access_level = models.ForeignKey(
+        "SecurityKey", on_delete=models.CASCADE,
+        null=True, blank=True, related_name="levels"
+    )
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     image = models.ImageField(null=True, blank=True,
@@ -52,6 +56,17 @@ class ApplicationProperty(models.Model):
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+
+# MACHINE ID WILL BE THE ID FOR THE CASH REGISTER
+
+
+class CashRegister(models.Model):
+    number = models.CharField(
+        max_length=100, primary_key=True, db_index=True, unique=True)
+    name = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
@@ -235,7 +250,8 @@ class DocumentType(models.Model):
         related_name="document_types",
     )
     warehouse = models.ForeignKey(
-        "Warehouse", on_delete=models.SET_NULL, null=True, related_name="document_types"
+        "Warehouse", on_delete=models.SET_NULL,
+        null=True, related_name="document_types"
     )
     stock_direction = models.SmallIntegerField(default=0)
     editor_type = models.SmallIntegerField(default=0)
@@ -251,31 +267,39 @@ class DocumentType(models.Model):
 
 
 class Document(models.Model):
+    number = models.CharField(max_length=30, unique=True)
     user = models.ForeignKey(
         "User", on_delete=models.CASCADE, related_name="documents")
-    number = models.CharField(max_length=30, unique=True)
     customer = models.ForeignKey(
-        "Customer", on_delete=models.DO_NOTHING, null=True, related_name="documents"
+        "Customer", on_delete=models.DO_NOTHING,
+        null=True, blank=True, related_name="documents"
     )
-    order_number = models.CharField(max_length=30, unique=True)
-    date = models.DateTimeField(auto_now_add=True)
-    stock_date = models.DateTimeField(auto_now_add=True)
-    total = models.FloatField(default=0)
-    is_clocked_out = models.BooleanField(default=False)
+    cash_register = models.ForeignKey(
+        "CashRegister", on_delete=models.SET_NULL,
+        null=True, blank=True, related_name="documents"
+    )
+    order = models.ForeignKey(
+        "PosOrder", on_delete=models.SET_NULL,
+        null=True, blank=True, related_name="documents")
     document_type = models.ForeignKey(
         "DocumentType", on_delete=models.DO_NOTHING, related_name="documents"
     )
     warehouse = models.ForeignKey(
-        "Warehouse", null=True, on_delete=models.DO_NOTHING, related_name="documents"
+        "Warehouse", null=True, on_delete=models.DO_NOTHING,
+        related_name="documents"
     )
+    date = models.DateTimeField(auto_now_add=True)
     reference_document_number = models.CharField(max_length=100, unique=True)
     internal_note = models.TextField(null=True, blank=True)
     note = models.TextField(null=True, blank=True)
     due_date = models.DateTimeField(auto_now_add=True)
     discount = models.SmallIntegerField(default=0)
     discount_type = models.SmallIntegerField(default=0)
-    paid_status = models.BooleanField(default=False)
     discount_apply_rule = models.SmallIntegerField(default=0)
+    paid_status = models.BooleanField(default=False)
+    stock_date = models.DateTimeField(auto_now_add=True)
+    total = models.FloatField(default=0)
+    is_clocked_out = models.BooleanField(default=False)
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -286,7 +310,8 @@ class Document(models.Model):
 
 class DocumentItem(models.Model):
     user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="document_items"
+        "User", on_delete=models.CASCADE,
+        related_name="document_items"
     )
     document = models.ForeignKey(
         "Document", on_delete=models.CASCADE, null=True, related_name="document_items"
@@ -301,7 +326,7 @@ class DocumentItem(models.Model):
     discount = models.FloatField(default=0)
     discount_type = models.FloatField(default=0)
     product_cost = models.FloatField(default=0)
-    price_before_tax_after_descount = models.FloatField(default=0)
+    price_before_tax_after_discount = models.FloatField(default=0)
     price_after_descount = models.FloatField(default=0)
     total = models.FloatField(default=0)
     total_after_document_discount = models.FloatField(default=0)
@@ -362,11 +387,12 @@ class PaymentType(models.Model):
     )
     name = models.CharField(max_length=100)
     code = models.CharField(max_length=100, null=True, blank=True)
+
     is_customer_required = models.BooleanField(default=False)
     is_fiscal = models.BooleanField(default=False)
     is_slip_required = models.BooleanField(default=False)
     is_change_allowed = models.BooleanField(default=True)
-    ordinal = models.BooleanField(default=False)
+    ordinal = models.SmallIntegerField(unique=True)
     is_enabled = models.BooleanField(default=True)
     is_quick_payment = models.BooleanField(default=True)
     open_cash_drawer = models.BooleanField(default=False)
@@ -377,7 +403,10 @@ class PaymentType(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.name} - {self.code}"
+        return f"{self.ordinal}: {self.name}"
+
+    class Meta:
+        ordering = ('ordinal',)
 
 
 class Payment(models.Model):
@@ -386,6 +415,7 @@ class Payment(models.Model):
     document = models.ForeignKey(
         "Document",
         on_delete=models.CASCADE,
+        db_index=True,
         null=True,
         related_name="payments",
     )
@@ -399,6 +429,9 @@ class Payment(models.Model):
 
     def __str__(self):
         return f"Document:{self.document}= Amount ({self.amount})"
+
+    class Meta:
+        ordering = ['document']
 
 
 class FiscalItem(models.Model):
@@ -492,14 +525,16 @@ class PosOrderItem(models.Model):
     product = models.ForeignKey(
         "Product", on_delete=models.DO_NOTHING, related_name="order_items"
     )
+    round_number = models.DecimalField(
+        decimal_places=3, max_digits=4, default=0)
     quantity = models.SmallIntegerField(default=1)
-    price = models.FloatField(default=0)
+    price = models.DecimalField(decimal_places=3,  max_digits=9, default=0)
     is_locked = models.BooleanField(default=False)
     discount = models.FloatField(default=0)
     discount_type = models.FloatField(default=0)
     is_featured = models.BooleanField(default=False)
     # voide by = not comparable
-    voide_by = models.SmallIntegerField(default=0)
+    voided_by = models.SmallIntegerField(default=0)
     comment = models.TextField(null=True, blank=True)
     bundle = models.TextField(null=True, blank=True)
 
@@ -507,11 +542,18 @@ class PosOrderItem(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.number}: {self.quantity}{self.product.measurement_unit}"
+        return f"{self.product.name}: {self.quantity}{self.product.measurement_unit}"
 
 
 class PosPrinterSelection(models.Model):
+    user = models.ForeignKey(
+        "User", on_delete=models.CASCADE, related_name="PosPrinterSelections"
+    )
     key = models.CharField(max_length=30, unique=True)
+    cash_register = models.ForeignKey(
+        "CashRegister", on_delete=models.SET_NULL,
+        null=True, blank=True, related_name="PosPrinterSelections"
+    )
     printer_name = models.CharField(max_length=100)
     is_enabled = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
@@ -520,16 +562,19 @@ class PosPrinterSelection(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=["id", "key"], name="unique_printer_keys")
+                # ADD CASH REGISTER KEY AS UNIQUE TOGETHER WITH KEY
+                fields=["key", "cash_register"], name="unique_printer_keys")
         ]
 
     def __str__(self):
-        return f"{self.printer_name}: {self.key}" + f"| IsEnabled= {self.is_enabled}"
+        return f"{self.printer_name}: {self.key}" \
+            + f"| IsEnabled= {self.is_enabled}"
 
 
 class PosPrinterSelectionSettings(models.Model):
     user = models.ForeignKey(
-        "User", on_delete=models.CASCADE, related_name="pos_printer_selection_settings"
+        "User", on_delete=models.CASCADE,
+        related_name="pos_printer_selection_settings"
     )
     pos_printer_selection = models.ForeignKey(
         "PosPrinterSelection",
@@ -541,9 +586,9 @@ class PosPrinterSelectionSettings(models.Model):
     header = models.CharField(max_length=100)
     footer = models.CharField(max_length=100)
     feed_lines = models.SmallIntegerField(default=0)
-    cut_paper = models.SmallIntegerField(default=1)
+    cut_paper = models.BooleanField(default=0)
     print_bitmap = models.SmallIntegerField(default=0)
-    open_cash_drawer = models.SmallIntegerField(default=1)
+    open_cash_drawer = models.BooleanField(default=1)
     cash_drawer_command = models.CharField(max_length=100)
     header_alignment = models.SmallIntegerField(default=0)
     footer_alignment = models.SmallIntegerField(default=0)
@@ -734,12 +779,10 @@ class Product(models.Model):
     measurement_unit = models.CharField(max_length=10, null=True, blank=True)
 
     price = models.DecimalField(default=0, decimal_places=3, max_digits=11)
-
-    is_tax_inclusive_price = models.BooleanField(default=False)
-
     currency = models.ForeignKey(
         "Currency", on_delete=models.CASCADE, related_name="products"
     )
+    is_tax_inclusive_price = models.BooleanField(default=False)
     is_price_change_allowed = models.BooleanField(default=False)
     is_service = models.BooleanField(default=False)
     is_using_default_quantity = models.BooleanField(default=True)
@@ -765,8 +808,8 @@ class Product(models.Model):
     def save(self, *args, **kwargs):
         rate = 0
         rate = rate / 100
-        print('price: ',self.price)
-        print('markup: ',self.margin)
+        print('price: ', self.price)
+        print('markup: ', self.margin)
 
         if self.price == 0 and self.margin is not None:
             markup = self.cost * self.margin / 100
@@ -798,7 +841,7 @@ class ProductComment(models.Model):
     product = models.ForeignKey(
         "Product", on_delete=models.CASCADE, related_name="comments"
     )
-    value = models.CharField(max_length=300)
+    comment = models.CharField(max_length=300)
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -990,6 +1033,10 @@ class StartingCash(models.Model):
     user = models.ForeignKey(
         "User", on_delete=models.CASCADE, related_name="starting_cashes"
     )
+    cash_register = models.ForeignKey(
+        "CashRegister", on_delete=models.SET_NULL,
+        null=True, blank=True, related_name="cash"
+    )
     amount = models.FloatField(default=0)
     description = models.TextField(null=True, blank=True)
     starting_cash_type = models.SmallIntegerField(default=0)
@@ -1011,6 +1058,10 @@ class StartingCash(models.Model):
 class ZReport(models.Model):
     user = models.ForeignKey(
         "User", on_delete=models.CASCADE, related_name="reports")
+    cash_register = models.ForeignKey(
+        "CashRegister", on_delete=models.SET_NULL,
+        null=True, blank=True, related_name="z_reports"
+    )
     number = models.SmallIntegerField()
     from_document = models.ForeignKey(
         "Document", on_delete=models.CASCADE, related_name="from_documents"

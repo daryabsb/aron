@@ -10,8 +10,8 @@ from .models import (
     PosOrderItem, PosPrinterSelection, PosPrinterSelectionSettings,
     PosPrinterSettings, PrintStation, PrintStationPosPrinterSelection,
     ProductComment, ProductGroupPrintStation, ProductPrintStation, ProductTax,
-    Promotion, PromotionItem, SecurityKey, StartingCash, Stock, StockControl, Tax, User,
-    ProductGroup, Product, Warehouse, Counter, ZReport
+    Promotion, PromotionItem, SecurityKey, StartingCash, Stock, StockControl,
+    Tax, User, CashRegister, ProductGroup, Product, Warehouse, Counter, ZReport
 )
 
 
@@ -38,6 +38,7 @@ class UserAdmin(BaseUserAdmin):
 
 admin.site.register(User, UserAdmin)
 admin.site.register(ApplicationProperty)
+admin.site.register(CashRegister)
 admin.site.register(Barcode)
 admin.site.register(Company)
 admin.site.register(Counter)

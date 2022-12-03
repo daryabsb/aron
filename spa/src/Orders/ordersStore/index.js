@@ -25,6 +25,7 @@ export const useOrderStore = defineStore("orders", () => {
   const cart = ref([]);
   const activeNumber = ref("");
   const activeItem = ref({});
+  const paymentTypes = ref([]);
 
   // GETTERS
   const useActiveOrder = computed(() => {
@@ -38,6 +39,7 @@ export const useOrderStore = defineStore("orders", () => {
       (item) => item.number == activeItem.value.number
     );
   });
+  const usePaymentTypes = computed(() => paymentTypes.value);
 
   // ACTIONS
   const generateNumber = async (target) => {
@@ -55,6 +57,57 @@ export const useOrderStore = defineStore("orders", () => {
     localStorage.setItem("cart", JSON.stringify(cart.value));
     updateChange();
     return order;
+  };
+  const submitOrder = async (data) => {
+    // TASKS:
+    // submit an order to the API
+    // const order = cart.value.find(
+    //   (cort) => cort.number === useActiveOrder.value.number
+    // );
+
+    const orderPayload = {
+      number: useActiveOrder.value.number,
+      discount: useActiveOrder.value.discount,
+      discount_type: useActiveOrder.value.discount_type,
+      status: true,
+      total: useActiveOrder.value.totalPrice,
+    };
+
+    const ordersResponse = await ordersAPI.submitOrder(orderPayload);
+    console.log("Order is done");
+    useActiveOrder.value.items.forEach(async (item) => {
+      const product = item.product.id;
+      const price = useActiveOrder.value.itemTotal(item);
+      const itemPayload = {
+        number: item.number,
+        round_number: 0,
+        quantity: item.quantity,
+        price: price,
+        is_locked: false,
+        discount: item.discount,
+        discount_type: item.discount_type,
+        is_featured: false,
+        voided_by: 0,
+        comment: "",
+        bundle: "",
+        user: 1,
+        order: useActiveOrder.value.number,
+        product: product,
+      };
+      console.log("itemPayload", itemPayload);
+
+      const orderItemResponse = await ordersAPI.submitOrderItem(itemPayload);
+    });
+
+    console.log(ordersResponse);
+  };
+  const loadPaymentTypes = async () => {
+    try {
+      const ptResponse = await ordersAPI.getPaymentTypes();
+      paymentTypes.value = await ptResponse.data;
+    } catch (error) {
+      console.log("loadPaymentTypes error", error);
+    }
   };
   const createCartFromAPI = async () => {
     const storageCart = JSON.parse(localStorage.getItem("cart"));
@@ -206,11 +259,15 @@ export const useOrderStore = defineStore("orders", () => {
     activeItem,
     ...useUtils(),
     ...modals,
+    paymentTypes,
     useActiveOrder,
     useActiveItem,
+    usePaymentTypes,
+    loadPaymentTypes,
     generateNumber,
     createCart,
     createCartFromAPI,
+    submitOrder,
     changeActiveOrderNumber,
     setActiveItem,
     orderItems,

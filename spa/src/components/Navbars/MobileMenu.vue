@@ -2,7 +2,7 @@
   <TransitionRoot as="template" :show="mobileMenuOpen">
     <Dialog
       as="div"
-      class="relative z-20 md:hidden"
+      class="relative z-50 md:hidden"
       @close="$emit('update:mobileMenuOpen', false)"
     >
       <TransitionChild
@@ -17,7 +17,7 @@
         <div class="fixed inset-0 bg-gray-600 bg-opacity-75" />
       </TransitionChild>
 
-      <div class="fixed inset-0 z-40 flex">
+      <div class="fixed inset-0 flex">
         <TransitionChild
           as="template"
           enter="transition ease-in-out duration-300 transform"
@@ -28,7 +28,7 @@
           leave-to="-translate-x-full"
         >
           <DialogPanel
-            class="relative flex w-full max-w-xs flex-1 flex-col bg-aronium-800 pt-5 pb-4"
+            class="relative flex w-full max-w-xs flex-1 flex-col bg-aronium-800 pt-5 pb-4 z-50"
           >
             <TransitionChild
               as="template"
