@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from core.models import (PosOrder, PosOrderItem, PaymentType,
-                            CashRegister,)
+                         CashRegister,)
 from products.serializers import ProductSerializer
 
 
@@ -16,7 +16,8 @@ class PosOrderItemSerializer(serializers.ModelSerializer):
         model = PosOrderItem
         fields = '__all__'
         # read_only_Fields = ('id')
-        required_fields = ('number','product','order','discount','discount_type','quantity','price')
+        required_fields = ('number', 'product', 'order',
+                           'discount', 'discount_type', 'quantity', 'price')
 
 
 class PosOrderSerializer(serializers.ModelSerializer):
@@ -30,11 +31,11 @@ class PosOrderSerializer(serializers.ModelSerializer):
                   'total', 'status', 'items', 'created', 'updated')
         # read_only_Fields = ('id')
 
-    def create(self, validated_data):
-        print("validated_data",validated_data)
-        order = PosOrder.objects.create(**validated_data)
-       
-        return order
+    # def create(self, validated_data):
+
+    #     order = PosOrder.objects.create(**validated_data)
+
+    #     return "order"
 
 
 class PaymentTypeSerializer(serializers.ModelSerializer):

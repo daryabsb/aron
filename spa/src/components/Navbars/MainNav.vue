@@ -1,15 +1,9 @@
 <template>
   <!-- Top navigation -->
   <div class="bg-aronium-900 py-2 z-30">
-    <div
-      class="mx-auto flex h-10 max-w-full items-center justify-between px-4 sm:px-6 lg:px-8"
-    >
+    <div class="mx-auto flex h-10 max-w-full items-center justify-between px-4 sm:px-6 lg:px-8">
       <MobileMenu v-model:mobileMenuOpen="mobileMenuOpen" />
-      <button
-        type="button"
-        class="px-4 text-aronium-white"
-        @click="mobileMenuOpen = true"
-      >
+      <button type="button" class="px-4 text-aronium-white" @click="mobileMenuOpen = true">
         <span class="sr-only">Open sidebar</span>
         <Bars3BottomLeftIcon class="h-6 w-6" aria-hidden="true" />
       </button>
@@ -18,39 +12,26 @@
         <div>
           <label for="desktop-currency" class="sr-only">Currency</label>
           <div class="relative bg-aronium-800 text-aronium-white">
-            <select
-              id="desktop-currency"
-              name="currency"
-              class="relative -ml-2 pl-3 pr-4 bg-aronium-900 border-transparent"
-            >
+            <select id="desktop-currency" name="currency"
+              class="relative -ml-2 pl-3 pr-4 bg-aronium-900 border-transparent">
               <option v-for="currency in currencies" :key="currency">{{
-                currency
+                  currency
               }}</option>
             </select>
-            <div
-              class="pointer-events-none absolute inset-y-0 right-0 flex items-center"
-            >
-              <ChevronDownIcon
-                class="h-5 w-5 text-gray-300"
-                aria-hidden="true"
-              />
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center">
+              <ChevronDownIcon class="h-5 w-5 text-gray-300" aria-hidden="true" />
             </div>
           </div>
         </div>
       </form>
-      <Suspense>
-        <CashRegister />
-        <template #fallback>Loading---</template>
-      </Suspense>
+
+      <CashRegister />
+
       <div class="flex items-center space-x-6">
         <UserMenu />
 
         <!-- Management menu -->
-        <button
-          type="button"
-          class="px-4 text-aronium-white"
-          @click="managementMenuOpen = true"
-        >
+        <button type="button" class="px-4 text-aronium-white" @click="managementMenuOpen = true">
           <span class="sr-only">Open sidebar</span>
           <Bars3BottomRightIcon class="h-6 w-6" aria-hidden="true" />
         </button>

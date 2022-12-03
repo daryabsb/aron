@@ -1,4 +1,4 @@
-import { createApp } from "vue";
+import { createApp, markRaw } from "vue";
 import router from "@/router";
 import store from "@/store";
 import { createPinia } from "pinia";
@@ -50,11 +50,17 @@ app.config.globalProperties.$filters = {
     return items.slice().reverse();
   },
 };
+
+const pinia = createPinia();
+pinia.use(({ store }) => {
+  store.router = markRaw(router);
+});
 app
   .component("Popper", Popper)
   // .component("myUpload", myUpload)
   .use(store)
-  .use(createPinia())
+  // .use(createPinia())
+  .use(pinia)
   .use(router)
   .use(VueCookies)
   // .use(UUID)

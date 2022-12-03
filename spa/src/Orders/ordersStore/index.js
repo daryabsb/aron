@@ -7,7 +7,6 @@ import Order from "@/Orders/orderTemplates/Order";
 
 import OrderItem from "@/Orders/orderTemplates/OrderItem";
 import { useOrderItem } from "@/Orders/orderComposables/orderItemProperties";
-
 Array.prototype.unique = function () {
   var a = this.concat();
   for (var i = 0; i < a.length; ++i) {
@@ -61,45 +60,55 @@ export const useOrderStore = defineStore("orders", () => {
   const submitOrder = async (data) => {
     // TASKS:
     // submit an order to the API
-    // const order = cart.value.find(
-    //   (cort) => cort.number === useActiveOrder.value.number
-    // );
+    try {
+      const orderPayload = {
+        number: useActiveOrder.value.number,
+        discount: useActiveOrder.value.discount,
+        discount_type: useActiveOrder.value.discount_type,
 
-    const orderPayload = {
-      number: useActiveOrder.value.number,
-      discount: useActiveOrder.value.discount,
-      discount_type: useActiveOrder.value.discount_type,
-      status: true,
-      total: useActiveOrder.value.totalPrice,
-    };
-
-    const ordersResponse = await ordersAPI.submitOrder(orderPayload);
-    console.log("Order is done");
-    useActiveOrder.value.items.forEach(async (item) => {
-      const product = item.product.id;
-      const price = useActiveOrder.value.itemTotal(item);
-      const itemPayload = {
-        number: item.number,
-        round_number: 0,
-        quantity: item.quantity,
-        price: price,
-        is_locked: false,
-        discount: item.discount,
-        discount_type: item.discount_type,
-        is_featured: false,
-        voided_by: 0,
-        comment: "",
-        bundle: "",
-        user: 1,
-        order: useActiveOrder.value.number,
-        product: product,
+        orderItems: ["useActiveOrder.value.items", "and there it is"],
+        status: true,
+        total: useActiveOrder.value.totalPrice,
       };
-      console.log("itemPayload", itemPayload);
+      const ordersResponse = await ordersAPI.submitOrder(orderPayload);
+      console.log("Order is done");
+    } catch (error) {
+      console.log("submitOrderError", error);
+    }
 
-      const orderItemResponse = await ordersAPI.submitOrderItem(itemPayload);
-    });
-
-    console.log(ordersResponse);
+    try {
+      useActiveOrder.value.items.forEach(async (item) => {
+        const product = item.product.id;
+        const price = useActiveOrder.value.itemTotal(item);
+        const itemPayload = {
+          number: item.number,
+          round_number: 0,
+          quantity: item.quantity,
+          price: price,
+          is_locked: false,
+          discount: item.discount,
+          discount_type: item.discount_type,
+          is_featured: false,
+          voided_by: 0,
+          comment: "",
+          bundle: "",
+          user: 1,
+          order: useActiveOrder.value.number,
+          product: product,
+        };
+        const orderItemResponse = await ordersAPI.submitOrderItem(itemPayload);
+      });
+      console.log("Items is done");
+    } catch (error) {
+      console.log("submitOrderItemsError", error);
+    }
+    const number = await generateNumber("order");
+    const orderedIndex = cart.value.findIndex(
+      (i) => i.number === useActiveOrder.value.number
+    );
+    cart.value.splice(orderedIndex, 1);
+    const newOrder = await createCart(`${number}`);
+    return newOrder;
   };
   const loadPaymentTypes = async () => {
     try {
