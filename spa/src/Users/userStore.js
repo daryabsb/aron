@@ -23,8 +23,8 @@ export const useUser = defineStore("user", {
   getters: {
     useCashRegister(state) {
       return state.register.find(
-        // (counter) => counter.number === process.env.MACHINE_ID
-        (counter) => counter.number === "AF139EB9-A13E-31D6-213D-04D4C401AA89"
+        (counter) => counter.number === process.env.MACHINE_ID
+        // (counter) => counter.number === "AF139EB9-A13E-31D6-213D-04D4C401AA89"
       );
     },
   },
