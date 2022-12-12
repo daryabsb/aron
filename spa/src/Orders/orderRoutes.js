@@ -15,7 +15,7 @@ const routes = [
   {
     path: "/store/order",
     name: "StoreProducts",
-    redirect: { name: "StoreOrderExist" },
+    redirect: { name: "OrderItemsList" },
     component: () =>
       import(
         /* webpackChunkName: "store" */
@@ -24,7 +24,7 @@ const routes = [
     children: [
       {
         path: "/store/order/:number",
-        name: "StoreOrderExist",
+        name: "OrderItemsList",
         component: () =>
           import(
             /* webpackChunkName: "store" */
