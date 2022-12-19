@@ -1,0 +1,6 @@
+Genshi==0.7.5
+lxml==4.6.3
+Pillow==9.3
+qrcode==7.3.1
+relatorio==0.9.2
+six==1.16.0

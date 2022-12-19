@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "taxes",
     "orders",
     "customers",
+    'prints',
 ]
 
 

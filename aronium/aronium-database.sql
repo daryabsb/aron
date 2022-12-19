@@ -729,3 +729,48 @@ CREATE VIEW DocumentItemPriceView AS SELECT
     AS Price
 FROM     DocumentItem DI INNER JOIN
          Document D ON D.Id = DI.DocumentId;
+
+
+
+-- ------------------------------
+-- SELECT FOR INVOICE FROM
+-- ------------------------------
+
+CREATE VIEW PaymentsView AS
+SELECT  
+		P.Name,        
+		DI.Quantity,        
+		P.MeasurementUnit,       
+		DI.Price,       
+		DI.PriceBeforeTax,        
+		DI.PriceBeforeTaxAfterDiscount,       
+		DI.Total,     
+		Taxes = STUFF((          
+			SELECT ',' + CAST(CAST(T.Rate AS FLOAT) AS VARCHAR(10)) + CASE WHEN T.IsFixed = 0 THEN '%' ELSE '' END
+			            
+FROM DocumentItemTax DIT INNER JOIN Tax T ON T.Id = DIT.TaxId
+            
+WHERE DIT.DocumentItemId = DI.Id
+            
+FOR XML PATH(''), TYPE).value('.', 'VARCHAR(50)'), 1, 1, ''),       
+	DI.Quantity * DI.PriceBeforeTax AS TotalBeforeTax,       
+	DI.Discount,
+	DI.DiscountType,       
+	DI.TotalAfterDocumentDiscount,     
+	DI.TotalAfterDocumentDiscount - SUM(ISNULL(DIT.Amount,0)) 
+AS TotalBeforeTaxAfterDocumentDiscount&#13;&#10;
+FROM    DocumentItem DI        
+INNER JOIN Product P ON P.Id = DI.ProductId       
+LEFT JOIN DocumentItemTax DIT ON DIT.DocumentItemId = DI.Id      
+LEFT JOIN Tax T ON T.Id = DIT.TaxId
+WHERE   DI.DocumentId=@Id
+GROUP BY 
+	DI.Id, P.Name,       
+	DI.Quantity,        
+	P.MeasurementUnit,        
+	DI.Price,        
+	DI.PriceBeforeTax,       
+	DI.PriceBeforeTaxAfterDiscount,        
+	DI.Total, DI.Discount,        
+	DI.DiscountType,         
+	TotalAfterDocumentDiscount
