@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="tr" name="Türkçe">
+  <CustomerDisplay>
+    <Total Text="Toplam:"></Total>
+    <Change Text="Para üstü:"></Change>
+    <Paid Text="Ödenen:"></Paid>
+    <WelcomeMessage Text="HOŞGELDİNİZ!"></WelcomeMessage>
+    <Settings Text="Müşteri ekranı">
+      <Enabled Text="Aktif"></Enabled>
+      <Port Text="COM port">
+        <Settings>
+          <BaudRate Text="Bits per second" />
+          <DataBits Text="Data bits" />
+          <StopBits Text="Stop bits" />
+          <Parity Text="Parity" />
+          <FlowControl Text="Flow control" />
+          <Show Text="Port Ayarlarını Göster" />
+          <Hide Text="Port Ayarlarını Gizle" />
+          <ResetToDefaults Text="Varsayılanları geri yükle" />
+        </Settings>
+      </Port>
+      <CharactersPerLine Text="Karakter sayısı"></CharactersPerLine>
+      <WelcomeMessage Text="Hoşgeldin mesajı">
+        <TopLine Text="Üst çizgi"></TopLine>
+        <BottomLine Text="Alt çizgi"></BottomLine>
+      </WelcomeMessage>
+      <Test Text="Ekran testi"></Test>
+    </Settings>
+    <Error>
+      <InvalidPortSettings Text="Müşteri ekranı başlatılırken hata oluştu.\nLütfen bağlantı noktası ayarlarını kontrol edin." />
+    </Error>
+  </CustomerDisplay>
+</Language>

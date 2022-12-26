@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="it" name="Italian">
+  <ReceiptPrinter Text="Stampante ricevute">
+    <PrintReceipt Text="Stampa ricevuta" />
+    <Receipt>
+      <PrinterNotFound Text="Stampante ricevute non slezionata o disabilitata. Controlla le impostazioni e risprova." />
+      <PaymentTypes>
+        <PrintDisabled Text="La stampa della ricevuta è disabilitata per i tipi di pagamento selezionati.\nSi prega di abilitare la stampa della ricevuta per i tipi di pagamento selezionati prima di stampare una ricevuta." />
+      </PaymentTypes>
+      <Company>
+        <TaxNumber Text="P.IVA" />
+      </Company>
+      <Customer Text="Cliente">
+        <Address Text="Indirizzo" />
+        <TaxNumber Text="P.IVA" />
+        <Code Text="Codice" />
+        <PhoneNumber Text="Telefono" />
+        <Email Text="Email" />
+      </Customer>
+      <Number Text="Ricevuta N." />
+      <RefundNumber Text="Rimborso N." />
+      <OrderNumber Text="Ordine N." />
+      <ItemsCount Text="Conteggio articoli" />
+      <Subtotal Text="Totale parziale" />
+      <Tax Text="IVA" />
+      <Discount Text="Sconto carrello" />
+      <Total Text="TOTALE" />
+      <PaidAmount Text="Importo pagato" />
+      <AmountDue Text="Importo dovuto" />
+      <DueDate Text="Scadenza" />
+      <User Text="Utente" />
+      <Change Text="Resto" />
+      <Customize Text="Personalizza la ricevuta">
+        <UseSystemCurrency Text="Usa il formato di valuta del sistema" />
+        <NumberOfDecimalPlaces Text="Decimali" />
+        <PrintTaxes Text="Stampa l'IVA totale" />
+        <PrintItemsCount Text="Stampa conteggio degli articoli" />
+        <PrintOrderNumber Text="Stampa il numero di ordine" />
+        <ShortReceiptNumber Text="Numero di ricevuta breve" />
+        <Counter Text="Contatore delle ricevute">
+          <Edit Text="Premere per modificare il contatore del numero di ricevuta" />
+        </Counter>
+        <Localize Text="Localizza il testo della ricevuta">
+          <Info Text="Usa questo modulo per tradurre o modificare le etichette stampate sulle ricevute." />
+          <Company>
+            <TaxNumber Text="P IVA dell'azienda" />
+          </Company>
+          <CustomerDetails Text="Dettagli del cliente">
+            <Info Text="Scegli come vengono stampati i dettagli del cliente nella ricevuta. Se desideri non stampare un'etichetta nella ricevuta, deseleziona l'opzione di seguito.\nQuesta sezione si riferisce solo alle etichette, non ai dettagli reali dei clienti stampati sulla ricevuta." />
+          </CustomerDetails>
+          <Customer Text="Cliente">
+            <Address Text="Indirizzo" />
+            <TaxNumber Text="P.IVA / Cod Fiscale" />
+            <Code Text="Codice" />
+            <PhoneNumber Text="Telefono" />
+            <Email Text="Email" />
+          </Customer>
+          <ReceiptNumber Text="Ricevuta N." />
+          <RefundNumber Text="Rimborso N." />
+          <OrderNumber Text="Ordine N." />
+          <ItemsCount Text="Conteggio articoli" />
+          <Discount Text="Sconto" />
+          <Subtotal Text="Totale parziale" />
+          <Tax Text="Aliquota fiscale" />
+          <Total Text="Totale" />
+          <PaidAmount Text="Importo pagato" />
+          <AmountDue Text="Importo dovuto" />
+          <DueDate Text="Scadenza" />
+          <User Text="Utente" />
+          <Change Text="Resto" />
+        </Localize>
+        <CustomerDetails Text="Dettagli cliente">
+          <Info Text="Scegli quali dati del cliente vengono stampati nella ricevuta" />
+          <Name Text="Nome" />
+          <Code Text="Codice" />
+          <TaxNumber Text="P.IVA / Cod. Fiscale" />
+          <Address Text="Indirizzo" />
+          <PhoneNumber Text="Telefono" />
+          <Email Text="Email" />
+        </CustomerDetails>
+      </Customize>
+    </Receipt>
+    <DailyReport>
+      <ZReport Text="Z REPORT" />
+      <XReport Text="X REPORT" />
+      <Date Text="Data:" />
+      <Time Text="Ora:" />
+      <ReportNumber Text="Report #:" />
+      <FromDocument Text="Dal documento:" />
+      <ToDocument Text="Al documento:" />
+      <CashIn Text="Incasso:" />
+      <CashOut Text="Resto:" />
+      <UserSales Text="Vendite degli utenti:" />
+      <PaymentTypes Text="Tipi di gara:">
+        <Total Text="Complessivo offerto:" />
+      </PaymentTypes>
+      <Refunds Text="Ritorni:">
+        <Total Text="Totale ritorni:" />
+      </Refunds>
+      <TaxCollected Text="Imposta prelevata:" />
+      <TaxableTotal Text="Totale imponibile:" />
+      <Tax Text="IVA:" />
+      <Total Text="Totale:" />
+      <TotalBalance Text="Saldo totale:" />
+      <Items Text="REPORT ARTICOLI">
+        <ReportNumber Text="Report #:" />
+        <Products Text="PRODOTTI" />
+        <Groups Text="GRUPPI PRODOTTO" />
+      </Items>
+      <DiscountsGranted Text="Sconto concesso:" />
+    </DailyReport>
+    <CashDrawer Text="Cassetto contanti">
+      <OpenCashDrawer Text="Cassetto contanti aperto">
+        <AuthorizationRequired Text="Aprire il cassetto contanti richiede l'autorizzazione.\nInserire la password per aprire il cassetto contanti." />
+      </OpenCashDrawer>
+      <Command Text="Comando cassetto contanti">
+        <LearnMore Text="Cos'è questo?" />
+      </Command>
+      <Error>
+        <CommandNotSet Text="Comando cassetto contanti non impostato.\nImposta il comando del cassetto contanti per continuare." />
+        <PrinterNotSet Text="Stampante delle ricevute non impostata.\nConfigura la stampante delle ricevute per continuare." />
+      </Error>
+      <Test Text="Cassetto di prova">
+        <InvalidCommand Text="Inserisci un comando per il cassetto contanti per le prove." />
+      </Test>
+    </CashDrawer>
+  </ReceiptPrinter>
+  <FiscalPrinter>
+    <Check Text="Lettura della stampante delle ricevute...">
+      <Status Text="Controllo dello stato della stampante" />
+    </Check>
+    <CloseFiscalDay Text="Stampa rapporti di chiusura">
+      <Info Text="Seleziona il report da stampare. Controlla che la stampante sia disponibile e in funzione" />
+      <DailyReport Text="Stampa il report Z">
+        <InProgress Text="Stampa del report Z... Attendere...." />
+      </DailyReport>
+      <SubReport Text="Stampa report X">
+        <InProgress Text="Stampa del report X.... Attendere...." />
+      </SubReport>
+      <ItemsReport Text="Stampa il report degli articoli">
+        <InProgress Text="Stampa del report degli articoli.... Attendere...." />
+      </ItemsReport>
+      <PrinterDisabled Text="La stampante è disabilitata o non selezionata. I report non possono essere stampati." />
+    </CloseFiscalDay>
+  </FiscalPrinter>
+</Language>

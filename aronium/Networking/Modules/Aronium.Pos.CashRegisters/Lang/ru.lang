@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <CashRegisters Text="Кассы">
+    <New Text="Добавить кассу" />
+    <Edit Text="Редактировать &quot;{0}&quot;" />
+    <CashRegister Text="Кассы">
+      <Id Text="ID" />
+      <Name Text="Название" />
+    </CashRegister>
+    <Delete>
+      <Confirmation Text="Вы уверены, что хотите удалить &quot;{0}&quot;?" />
+      <Title Text="Удалить кассу" />
+    </Delete>
+    <Saved>
+      <Created Text="Касса успешно создана" />
+      <Updated Text="Касса успешно обновлена" />
+    </Saved>
+  </CashRegisters>
+</Language>

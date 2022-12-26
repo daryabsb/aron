@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="is" name="Icelandic">
+  <Networking>
+    <Connect>
+      <ConnectionProperties Text="Gagnagrunns Tenging Stilling" />
+      <Server Text="Þjónn">
+        <Load Text="Sækja Þjón" />
+      </Server>
+      <Database Text="Gagnagrunnur">
+        <Load Text="Sækja Gagnagrunn" />
+      </Database>
+      <CashRegister Text="Kassa Kerfi">
+        <Load Text="Sækja Kassa Kerfi" />
+      </CashRegister>
+    </Connect>
+    <Settings Text="Gagnagrunnur">
+      <Connection Text="Gagnagrunnur Tenging Stillingar" />
+      <RestartRequired Text="Til að breyta eiginleikum tenginga eða velja aðra búðarkassa þarf að endurræsa forrit til að breytingar verði virkar." />
+    </Settings>
+    <License>
+      <Expiring Text="Leyfið Þitt fyrir Met Útgáfu Rennur Út eftir {0} Dag(a).\n\nVinsamlegast Keyptu Leyfi til að tryggja að þú haldir áfram eftir {1}">
+        <Title Text="Leyfið er Útrunnið" />
+      </Expiring>
+      <GracePeriod Text="Leyfi þitt fyrir netútgáfu er útrunnið. Forrit hættir að virka eftir {0}\nVinsamlegast keyptu leyfi til að tryggja áframhaldandi aðgang.">
+        <LicenseAlreadyPurchased Text="Ef þú hefur þegar keypt leyfi geturðu hunsað þessi skilaboð þar til við fáum greiðsluna og leyfið þitt er uppfært." />
+        <Hide Text="Fela þessi skilaboð í 30 daga" />
+      </GracePeriod>
+      <Expired Text="Leyfi þitt fyrir netútgáfu er útrunnið.\nNú er hægt að nota Aronium í Lesa Einungis Móti og þú munt ekki geta búið til nýjar eða breytt núverandi viðskiptum.">
+        <Title Text="Leyfi Útrunnið!" />
+        <Renew Text="Vinsamlegast endurnýjaðu Leifið á" />
+      </Expired>
+      <ReadOnly Text="Leyfið er Útrunnið.\nÞú getur einungis notað Aronium í Lesa Einungis Móti." />
+    </License>
+  </Networking>
+</Language>

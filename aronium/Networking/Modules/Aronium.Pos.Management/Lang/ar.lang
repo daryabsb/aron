@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ar" name="Arabic">
+  <Management Text="إدارة">
+    <Products Text="منتجات">
+      <Loading Text="تحميل المنتجات ..." />
+      <LearnMore Text="تعرف على المزيد حول المنتجات" />
+      <Taxes Text="معدلات الضرائب">
+        <LearnMore Text="تعرف على المزيد حول معدلات الضرائب" />
+        <New Text="معدل الضريبة الجديد" />
+        <Switch Text="تبديل الضرائب">
+          <OldTax Text="الضريبة القديمة" />
+          <NewTax Text="ضريبة جديدة" />
+          <Tooltip Text="استبدال الضرائب لجميع المنتجات" />
+          <Info Text="استخدم هذا النموذج لاستبدال الضرائب لجميع المنتجات.\n\nحدد الضريبة القديمة التي ترغب في استبدالها بضريبة جديدة وانقر فوق الزر &quot;استبدال&quot; أدناه." />
+          <Replace Text="يحل محل" />
+          <Error Text="حدث خطأ أثناء محاولة استبدال الضرائب.\nرسالة النظام: {0}" />
+          <Success Text="تم استبدال الضرائب بنجاح!" />
+        </Switch>
+        <Edit>
+          <Title Text="تحرير الضريبة &quot;{0}&quot;" />
+        </Edit>
+        <Delete>
+          <Title Text="حذف معدل الضريبة" />
+          <Confirmation Text="هل تريد بالتأكيد حذف معدل الضريبة &quot;{0}&quot;؟" />
+          <Error Text="حدث خطأ أثناء محاولة حذف معدل الضريبة. تأكد من أن معدل الضريبة ليس قيد الاستخدام وحاول مرة أخرى." />
+        </Delete>
+        <Tax>
+          <ReadOnly Text="الضريبة المحددة موجودة في المستندات ولا يمكن تعديلها" />
+          <Code Text="الشفرة" />
+          <Name Text="اسم" />
+          <Rate Text="معدل" />
+          <Fixed Text="ثابت" />
+          <TaxOnTotal Text="الضريبة على المجموع" />
+          <Enabled Text="ممكن" />
+        </Tax>
+        <Onboarding>
+          <Title Text="معدلات الضرائب" />
+          <Info Text="أدخل معدلات الضرائب المستخدمة لتعريفات المنتجات ، إن وجدت.\nيجب أن يكون هناك معدل ضريبة واحد على الأقل في النظام." />
+          <AddMore Text="حفظ وإضافة المزيد">
+            <Error Text="حدث خطأ أثناء إضافة معدل ضريبة جديد. تحقق من البيانات الخاصة بك وحاول مرة أخرى" />
+            <Name Text="الاسم الضريبي (مثل &quot;بدون ضريبة&quot;)" />
+          </AddMore>
+          <Existing Text="معدلات الضرائب الحالية">
+            <NoItems Text="لم يتم تحديد معدلات الضرائب. أضف معدل ضريبة واحدًا على الأقل لتتمكن من إضافة منتجات جديدة.">
+              <AddDefault Text="أضف معدل الضريبة الافتراضي" />
+            </NoItems>
+          </Existing>
+        </Onboarding>
+        <NoTaxes Text="لا ضرائب">
+          <Add Text="أضف ضريبة جديدة" />
+        </NoTaxes>
+      </Taxes>
+      <New Text="منتج جديد">
+        <Product Text="أضف منتج جديد" />
+        <Or Text="أو" />
+        <Group Text="مجموعة منتجات جديدة" />
+      </New>
+      <Delete Text="حذف المنتج" />
+      <Edit Text="تحرير المنتج" />
+      <Search Text="البحث عن المنتجات">
+        <Result Text="نتيجة" />
+        <Empty Text="لا نتائج" />
+      </Search>
+      <Groups Text="مجموعات المنتجات">
+        <Root Text="منتجات" />
+        <Empty Text="المجموعة المحددة لا تحتوي على منتجات">
+          <Info Text="إضافة المنتج إلى المجموعة المختارة" />
+        </Empty>
+      </Groups>
+      <Group>
+        <New Text="مجموعة جديدة" />
+        <Edit Text="تحرير المجموعة">
+          <Title Text="تحرير المجموعة &quot;{0}&quot;" />
+          <Error>
+            <InvalidParentGroup Text="مجموعة رئيسية غير صالحة" />
+          </Error>
+        </Edit>
+        <Name Text="اسم" />
+        <Color Text="اللون" />
+        <Image Text="صورة">
+          <Browse Text="تصفح">
+            <Info Text="حدد صورة مجموعة المنتجات من جهاز الكمبيوتر الخاص بك" />
+          </Browse>
+          <Clear Text="ازالة">
+            <Info Text="إزالة صورة مجموعة المنتجات" />
+          </Clear>
+        </Image>
+        <Delete Text="حذف المجموعة">
+          <Title Text="حذف مجموعة المنتجات" />
+          <Confirmation Text="هل أنت متأكد أنك تريد حذف المجموعة &quot;{0}&quot;؟" />
+          <Error Text="حدث خطأ أثناء محاولة حذف المجموعة.\nرسالة النظام: {0}">
+            <DataViolation Text="لا يمكن حذف المجموعة المحددة.\n\nتأكد من عدم وجود المنتج الفرعي في المستندات أو العروض الترويجية أو أي مبيعات وحاول مرة أخرى." />
+          </Error>
+        </Delete>
+        <Saved Text="تم حفظ المجموعة بنجاح" />
+      </Group>
+      <Product>
+        <Edit Text="تحرير المنتج &quot;{0}&quot;" />
+        <Details Text="تفاصيل المنتج" />
+        <Name Text="اسم" />
+        <Code Text="الشفرة" />
+        <Barcode Text="باركود">
+          <Generate Text="توليد الباركود" />
+        </Barcode>
+        <MeasurementUnit Text="وحدة قياس" />
+        <Taxes Text="الضرائب">
+          <Add Text="أضف ضريبة على المنتج">
+            <Tooltip Text="أضف معدل الضريبة إلى المنتج" />
+          </Add>
+          <Remove>
+            <Tooltip Text="قم بإزالة معدل الضريبة هذا" />
+          </Remove>
+          <NoTaxes>
+            <Info Text="لم يتم العثور على ضرائب.\nأضف ضرائب حتى تتمكن من تخصيص واحدة لمنتج" />
+          </NoTaxes>
+        </Taxes>
+        <SalePriceBeforeTax Text="سعر البيع قبل الضريبة" />
+        <SalePrice Text="سعر البيع" />
+        <IsTaxIncluded Text="السعر يشمل الضريبة" />
+        <Group Text="مجموعة" />
+        <IsEnabled Text="نشيط" />
+        <IsService Text="الخدمة (لا تستخدم المخزون)" />
+        <IsDiscountAllowed Text="الخصم متاح" />
+        <IsPriceChangeAllowed Text="يسمح بتغيير السعر" />
+        <IsUsingDefaultQuantity Text="الكمية الافتراضية" />
+        <AgeRestriction Text="شرط العمر أو السن">
+          <Tooltip Text="الحد الأدنى للعمر المطلوب لشراء هذا المنتج" />
+          <Years Text="سنوات" />
+          <Validation>
+            <Message Text="هذا المنتج هو منتج مقيد بالفئة العمرية.\nيرجى تأكيد أن العميل مسموح له بشراء العنصر.">
+              <Title Text="منتج مقيد بالفئة العمرية" />
+              <BornBefore Text="ولد في أو قبل:" />
+            </Message>
+            <Confirm Text="تأكيد" />
+          </Validation>
+        </AgeRestriction>
+        <Description Text="وصف" />
+        <Prices Text="السعر والضرائب" />
+        <Cost Text="كلفة" />
+        <Markup Text="وضع علامة على" />
+        <ImageAndColor Text="الصورة واللون">
+          <Image Text="صورة">
+            <Browse Text="تصفح">
+              <Info Text="حدد صورة المنتج من جهاز الكمبيوتر الخاص بك" />
+            </Browse>
+            <Clear Text="ازالة">
+              <Info Text="إزالة صورة المنتج" />
+            </Clear>
+          </Image>
+          <Color Text="اللون" />
+        </ImageAndColor>
+        <Comments Text="تعليقات">
+          <Info Text="ستتم طباعة التعليقات على تذاكر المطبخ." />
+          <Note Text="أدخل ملاحظة ..." />
+          <Add Text="اضف ملاحظة" />
+          <Error>
+            <ExistingComment Text="الملاحظة موجودة بالفعل" />
+          </Error>
+        </Comments>
+        <DateCreated Text="انشأت" />
+        <DateUpdated Text="محدث" />
+        <Saved>
+          <Created Text="تم إنشاء المنتج بنجاح" />
+          <Updated Text="تم تغيير المنتج بنجاح" />
+        </Saved>
+        <Delete Text="حذف المنتج">
+          <Confirmation Text="هل أنت متأكد من أنك تريد حذف المنتج &quot;{0}&quot;؟" />
+          <Error Text="حدث خطأ أثناء محاولة حذف المنتج.\nرسالة النظام: {0}" />
+          <DataViolation Text="تعذر حذف المنتج.\nتأكد من عدم وجود المنتج في المستندات وحاول مرة أخرى." />
+        </Delete>
+        <Error>
+          <Code Text="المنتج بالرمز المحدد موجود بالفعل (&quot;{0}&quot;).\nأدخل رمز منتج فريد وحاول مرة أخرى." />
+          <Barcode Text="المنتج بالرمز الشريطي المحدد موجود بالفعل (&quot;{0}&quot;).\nأدخل الرموز الشريطية الفريدة وحاول مرة أخرى." />
+          <Taxes Text="تم العثور على ضرائب مكررة. الاسم الضريبي (&quot;{0}&quot;).\nيرجى تحديد الضرائب الصالحة والمحاولة مرة أخرى." />
+        </Error>
+      </Product>
+      <Export Text="تصدير">
+        <NoServices Text="لا توجد خدمات تصدير متاحة." />
+        <Success Text="اكتمل التصدير بنجاح." />
+        <Error Text="حدث خطأ. حاول مرة اخرى." />
+        <Select Text="حدد نوع التصدير" />
+      </Export>
+      <Onboarding>
+        <Import Text="استيراد المنتجات من ملف CSV">
+          <SelectFile Text="حدد الملف">
+            <Description Text="حدد ملف CSV الذي يحتوي على منتجاتك." />
+          </SelectFile>
+          <Validate Text="تحقق">
+            <Description Text="التحقق من صحة محتوى CSV والمنتجات للاستيراد." />
+            <Error Text="خطأ في التحقق من صحة ملف CSV. تحقق من البيانات الخاصة بك وحاول مرة أخرى." />
+            <Success Text="المنتجات جاهزة للاستيراد. عدد المنتجات: {0}" />
+          </Validate>
+          <ImportProducts Text="استيراد">
+            <Description Text="انقر لاستيراد المنتجات من ملف CSV المحدد." />
+          </ImportProducts>
+          <NoItems Text="لا شيء للاستيراد" />
+          <Completed Text="اكتمل الاستيراد بنجاح!">
+            <Result>
+              <Created Text="العناصر التي تم إنشاؤها:" />
+              <Updated Text="العناصر المحدثة:" />
+              <DocumentNumber Text="تم إنشاء المستند:" />
+            </Result>
+            <Restart Text="أعد تشغيل الاستيراد" />
+          </Completed>
+          <Importing Text="جاري استيراد المنتجات ... الرجاء الانتظار ..." />
+        </Import>
+      </Onboarding>
+      <Count Text="عدد المنتجات:" />
+      <ChangeGroup Text="تم نقل المنتج &quot;{0}&quot; إلى &quot;{1}&quot;" />
+      <Guide>
+        <Title Text="فتح المنتجات" />
+        <Content Text="انقر هنا لفتح قسم المنتجات وإضافة بعض المنتجات إلى متجرك" />
+        <Add>
+          <Title Text="إضافة منتج" />
+          <Content Text="انقر فوق الزر &quot;منتج جديد&quot; لبدء إضافة منتجات جديدة" />
+          <Name>
+            <Title Text="اسم المنتج" />
+            <Content Text="أضف اسم المنتج وتفاصيل المنتج المستخدمة للبيع" />
+          </Name>
+          <Prices>
+            <Title Text="سعر المنتج" />
+            <Content Text="انقر هنا لتحديد سعر المنتج" />
+            <SalePrice>
+              <Title Text="سعر المبيعات" />
+              <Content Text="قم بتعيين سعر بيع المنتج بحيث يظهر في شاشة المبيعات" />
+            </SalePrice>
+          </Prices>
+          <Save>
+            <Title Text="احفظ التغييرات" />
+            <Content Text="انقر فوق الزر &quot;حفظ&quot; لحفظ التغييرات وإضافة منتج جديد" />
+          </Save>
+        </Add>
+      </Guide>
+      <Settings Text="منتجات">
+        <Title Text="افتراضيات المنتج" />
+        <PriceIncludesTax Text="السعر يشمل الضريبة">
+          <Tooltip Text="إذا تم تحديدها ، سيكون للمنتجات الجديدة سعر مع فحص الضريبة بشكل افتراضي" />
+        </PriceIncludesTax>
+        <DefaultTax Text="معدل الضريبة الافتراضي">
+          <NoTaxes Text="الضرائب غير موجودة. الرجاء إضافة معدلات الضرائب في قسم الإدارة." />
+        </DefaultTax>
+        <MarkupOption Text="الترميز على أساس سعر التكلفة">
+          <Tooltip Text="إذا تم تحديده ، فسيؤدي تغيير سعر التكلفة إلى تحديث الترميز بدلاً من سعر البيع" />
+        </MarkupOption>
+      </Settings>
+      <Import Text="استيراد">
+        <LearnMore Text="تعرف على المزيد حول استيراد ملف CSV" />
+        <Basic Text="الأساسي">
+          <Description Text="يمكنك استخدام الاستيراد الأساسي باتباع دليلنا لإنشاء ملف CSV على">
+            <Link Text="مركز الدعم لدينا" />
+            <Formatting Text="إذا كنت تستخدم ملف CSV مُجهزًا ، فيرجى التأكد من قراءة ملف">
+              <Link Text="تنسيق البرنامج التعليمي لملف CSV" />
+            </Formatting>
+            <Exported Text="أيضًا ، يمكنك استخدام هذا الاستيراد الأساسي لاستيراد المنتجات التي تم تصديرها مسبقًا باستخدام وظيفة Aronium للتصدير." />
+          </Description>
+        </Basic>
+        <Csv Text="المتقدمة">
+          <Description Text="استخدم الاستيراد المتقدم لتحميل المنتجات باستخدام ملف CSV المخصص أو ملف CSV الذي تم تصديره من تطبيق آخر.\nيمكنك قراءة المزيد حول الاستيراد المتقدم في">
+            <Link Text="مركز الدعم لدينا" />
+          </Description>
+          <SelectFile Text="حدد الملف" />
+          <Fields>
+            <Name Text="اسم" />
+            <ProductGroup Text="مجموعة المنتج" />
+            <SKU Text="SKU" />
+            <Barcode Text="باركود" />
+            <MeasurementUnit Text="وحدة قياس" />
+            <Cost Text="كلفة" />
+            <Markup Text="وضع علامة على" />
+            <Price Text="السعر" />
+            <Tax Text="نسبة الضريبة" />
+            <IsTaxInclusivePrice Text="السعر شامل الضريبة" />
+            <IsPriceChangeAllowed Text="يسمح بتغيير السعر" />
+            <IsUsingDefaultQuantity Text="Using default quantity" />
+            <IsService Text="الخدمة (لا تستخدم المخزون)" />
+            <IsEnabled Text="ممكن" />
+            <Description Text="وصف" />
+            <Quantity Text="كمية" />
+            <Clear Text="قيمة واضحة" />
+          </Fields>
+          <Duplicates Text="ماذا يحدث إذا تم العثور على التكرارات؟">
+            <Skip Text="تخطي التكرارات" />
+            <Merge Text="دمج التكرارات" />
+          </Duplicates>
+          <RequiredField Text="يشير إلى الحقل المطلوب" />
+          <Import Text="استيراد" />
+          <Preview Text="معاينة">
+            <ProductsCount Text="عدد المنتجات المراد استيرادها:" />
+          </Preview>
+          <Error>
+            <RequiredFields Text="الحقول المطلوبة مفقودة. يرجى تحديد جميع الحقول المطلوبة قبل الاستيراد." />
+            <InvalidContent Text="خطأ في تحليل ملف CSV. يرجى التحقق من المحتوى الخاص بك وحاول مرة أخرى.\nرسالة الخطأ: {0}" />
+            <InvalidField Text="إدخال غير صالح للحقل &quot;{0}&quot;. من فضلك ، تأكد من محتويات الملف وحاول مرة أخرى." />
+            <FileNotSelected Text="لم يتم تحديد ملف CSV. الرجاء تحديد ملف للمتابعة." />
+            <DuplicateSKU Text="تم اكتشاف رموز منتجات مكررة. اسم المنتج: &quot;{0}&quot;. رمز مكرر: &quot;{1}&quot;" />
+            <DuplicateName Text="تم اكتشاف اسم منتج مكرر. اسم المنتج: &quot;{0}&quot;." />
+          </Error>
+        </Csv>
+        <Xml Text="XML">
+          <Description Text="استخدم استيراد Xml لتحميل المنتجات المصدرة من مثيل Aronium آخر.\nسيحافظ استيراد Xml على جميع الخصائص ، بما في ذلك تسلسل هرمي للصور والمنتجات." />
+          <SelectFile Text="حدد الملف" />
+          <Import Text="استيراد" />
+        </Xml>
+      </Import>
+      <PriceTags Text="بطاقات الأسعار">
+        <Loading Text="جارٍ تحميل قالب بطاقات الأسعار ... يُرجى الانتظار ..." />
+        <Layout Text="التنسيق">
+          <Columns Text="الأعمدة" />
+          <RowHeight Text="ارتفاع الصف" />
+        </Layout>
+        <Display Text="عرض">
+          <Barcode Text="باركود">
+            <Type Text="نوع الباركود" />
+          </Barcode>
+          <Code Text="كود (SKU)" />
+          <PriceIncludesTax Text="السعر شامل الضريبة" />
+        </Display>
+        <Products Text="منتجات">
+          <All Text="جميع المنتجات" />
+          <Product Text="المنتج" />
+          <NumberOfCopies Text="عدد النسخ" />
+        </Products>
+      </PriceTags>
+    </Products>
+    <Customers Text="العملاء والموردين">
+      <Search Text="البحث عن العملاء والموردين" />
+      <LearnMore Text="تعرف على المزيد حول العملاء والموردين" />
+      <New Text="عميل / مورد جديد" />
+      <Delete Text="حذف">
+        <Confirmation Text="هل أنت متأكد أنك تريد حذف &quot;{0}&quot;؟" />
+        <Error Text="خطأ في حذف العميل. لا يمكن حذف العميل.\nرسالة النظام: {0}" />
+      </Delete>
+      <Customer>
+        <Edit Text="تحرير &quot;{0}&quot;" />
+        <General Text="عام">
+          <Title Text="معلومات عامة" />
+          <Code Text="كود" />
+          <Name Text="اسم" />
+          <Address Text="عنوان" />
+          <PostalCode Text="ZIP code" />
+          <City Text="مدينة" />
+          <Country Text="الدولة" />
+          <TaxNumber Text="الرقم الضريبي" />
+          <RabatePercent Text="خصم" />
+          <Email Text="البريد الإلكتروني" />
+          <PhoneNumber Text="رقم الهاتف" />
+          <IsEnabled Text="نشيط" />
+          <IsCustomer Text="الزبون" />
+          <IsSupplier Text="المورد" />
+        </General>
+        <Loyalty>
+          <Discounts Text="الخصومات">
+            <Title Text="تعيين خصومات العملاء للمنتجات أو مجموعات المنتجات" />
+            <Info Text="تعيين الخصم للعنصر المحدد" />
+            <NoItems Text="لا خصومات" />
+            <Existing Text="الخصم على &quot;{0}&quot; موجود بالفعل." />
+            <Clear Text="امسح كل الخصومات" />
+          </Discounts>
+          <Cards Text="كروت الولاء">
+            <Title Text="أدخل بطاقات ولاء العملاء" />
+            <CardNumber Text="رقم البطاقة" />
+            <Add Text="إضافة بطاقة" />
+            <Duplicate Text="بطاقة الولاء موجودة بالفعل" />
+          </Cards>
+        </Loyalty>
+        <Saved>
+          <Created Text="تم إنشاء عميل جديد بنجاح." />
+          <Updated Text="تم تغيير العميل بنجاح." />
+        </Saved>
+        <Existing Text="الزبون الحالي">
+          <Warning Text="العميل المماثل موجود بالفعل: &quot;{0}&quot;.\nالحقول المكررة: {1}.\n\nهل تريد حفظ العميل على أي حال؟" />
+        </Existing>
+        <PaymentTerms Text="شروط الدفع">
+          <DueDatePeriod Text="فترة تاريخ الاستحقاق">
+            <Info Text="استخدم فترة تاريخ الاستحقاق لتعيين عدد الأيام قبل وجوب دفع المعاملة لكل عملية بيع غير مدفوعة تم تعيينها لهذا العميل" />
+            <Days Text="أيام" />
+          </DueDatePeriod>
+        </PaymentTerms>
+        <Default>
+          <Warning Text="هذا هو العميل الافتراضي المستخدم لجميع المبيعات حيث لم يتم تعيين العميل بشكل صريح.\n\nنقترح بشدة عدم تعديل هذا العميل." />
+        </Default>
+      </Customer>
+      <Guide>
+        <Title Text="العملاء والموردين" />
+        <Content Text="انقر هنا لفتح قسم العملاء والموردين" />
+        <Add>
+          <Title Text="أضف العميل أو المورد" />
+          <Content Text="انقر هنا لإنشاء عميل أو مورد جديد" />
+          <Name>
+            <Title Text="أدخل الاسم" />
+            <Content Text="أدخل اسم العميل أو المورد" />
+          </Name>
+          <Save>
+            <Title Text="احفظ التغييرات" />
+            <Content Text="بمجرد إدخال جميع التفاصيل ، انقر فوق الزر &quot;حفظ&quot; لحفظ التغييرات" />
+          </Save>
+        </Add>
+      </Guide>
+      <Import Text="استيراد">
+        <Title Text="استيراد عملاء" />
+        <Description Text="استخدم استيراد العملاء لتحميل قائمة العملاء باستخدام ملف CSV المخصص أو ملف CSV الذي تم تصديره من تطبيق آخر.\nيمكنك قراءة المزيد حول استيراد العملاء في">
+          <Link Text="مركز الدعم لدينا" />
+        </Description>
+        <Fields>
+          <Name Text="اسم" />
+          <Code Text="كود" />
+          <TaxNumber Text="الرقم الضريبي" />
+          <Address Text="عنوان" />
+          <ZIP Text="ZIP" />
+          <City Text="مدينة" />
+          <Country Text="الدولة" />
+          <Email Text="البريد الإلكتروني" />
+          <Phone Text="هاتف" />
+          <IsEnabled Text="ممكن" />
+          <IsCustomer Text="الزبون" />
+          <Clear Text="ازالة القيمة" />
+        </Fields>
+        <Import Text="استيراد" />
+        <Preview Text="معاينة">
+          <CustomersCount Text="عدد العملاء المراد استيرادهم:" />
+        </Preview>
+        <RequiredField Text="يشير إلى الحقل المطلوب" />
+        <Importing Text="جاري استيراد العملاء ... الرجاء الانتظار ..." />
+        <Error>
+          <RequiredFields Text="الحقول المطلوبة مفقودة. يرجى تحديد جميع الحقول المطلوبة قبل الاستيراد." />
+          <InvalidContent Text="خطأ في تحليل ملف CSV. يرجى التحقق من المحتوى الخاص بك وحاول مرة أخرى.\nرسالة الخطأ: {0}" />
+          <InvalidField Text="إدخال غير صالح للحقل &quot;{0}&quot;. من فضلك ، تأكد من محتويات الملف وحاول مرة أخرى." />
+          <FileNotSelected Text="لم يتم تحديد ملف CSV. الرجاء تحديد ملف للمتابعة." />
+          <DuplicateName Text="تم اكتشاف اسم مكرر للعميل. اسم العميل: &quot;{0}&quot;." />
+        </Error>
+        <Completed Text="تم استيراد العملاء بنجاح!" />
+      </Import>
+      <Export Text="تصدير">
+        <Completed Text="تم تصدير العملاء بنجاح!\nاسم الملف: &quot;{0}&quot;" />
+      </Export>
+    </Customers>
+    <PaymentTypes Text="أنواع الدفع">
+      <LearnMore Text="تعرف على المزيد حول أنواع الدفع" />
+      <New Text="نوع دفع جديد" />
+      <Edit Text="تحرير نوع الدفع &quot;{0}&quot;" />
+      <Delete Text="حذف نوع الدفع">
+        <Confirmation Text="هل أنت متأكد أنك تريد حذف &quot;{0}&quot;؟" />
+        <Error Text="خطأ في حذف نوع الدفع. لا يمكن حذف نوع الدفع المحدد.\nرسالة النظام: {0}" />
+        <DataViolation Text="تعذر حذف نوع الدفع المحدد. تأكد من عدم استخدام نوع الدفع في المستندات وحاول مرة أخرى." />
+      </Delete>
+      <PaymentType>
+        <Name Text="اسم" />
+        <Code Text="كود" />
+        <IsCustomerRequired Text="الزبون مطلوب" />
+        <IsFiscal Text="اطبع الايصال" />
+        <IsChangeAllowed Text="التغيير مسموح به" />
+        <Ordinal Text="موضع" />
+        <IsEnabled Text="ممكن" />
+        <IsQuickPayment Text="دفع سريع" />
+        <OpenCashDrawer Text="فتح درج النقود" />
+        <ShortcutKey Text="مفتاح الاختصار" />
+        <MarkAsPaid Text="وضع علامة على المعاملة على أنها مدفوعة" />
+        <Saved>
+          <Created Text="تم إنشاء نوع الدفع بنجاح." />
+          <Updated Text="تم تغيير نوع الدفع بنجاح." />
+        </Saved>
+        <Error Text="خطأ">
+          <ExistingShortcutKey Text="مفتاح الاختصار المحدد معيَّن بالفعل لنوع الدفع &quot;{0}&quot;.\nيجب أن تكون مفاتيح الاختصار فريدة.\nالرجاء تحديد مفتاح اختصار مختلف وحاول مرة أخرى.">
+            <Title Text="تم اكتشاف مفتاح اختصار مكرر" />
+          </ExistingShortcutKey>
+        </Error>
+      </PaymentType>
+      <Onboarding>
+        <Title Text="أنواع الدفع" />
+        <Info Text="أدخل أنواع الدفع المستخدمة للبيع في متجرك." />
+        <AddMore Text="حفظ وإضافة المزيد">
+          <Error Text="حدث خطأ أثناء إضافة نوع دفع جديد.\nتحقق من المدخلات الخاصة بك وحاول مرة أخرى" />
+        </AddMore>
+        <Existing Text="أنواع الدفع الحالية" />
+      </Onboarding>
+    </PaymentTypes>
+    <Documents Text="مستندات">
+      <View Text="عرض المستندات" />
+      <Search Text="ابحث عن الفواتير">
+        <Customer Text="عميل">
+          <All Text="كل العملاء" />
+        </Customer>
+        <Product Text="المنتج">
+          <All Text="جميع المنتجات" />
+        </Product>
+        <Period Text="الفترة">
+          <Tip Text="انقر لتحديد فترة البحث" />
+        </Period>
+        <DocumentType Text="نوع الفاتورة">
+          <All Text="جميع الفواتير" />
+        </DocumentType>
+        <User Text="المستخدم">
+          <All Text="جميع المستخدمين" />
+        </User>
+        <PaidStatus Text="حالة الدفع">
+          <None Text="كل التعاملات" />
+          <Paid Text="مدفوعه" />
+          <Unpaid Text="غير مدفوعه" />
+        </PaidStatus>
+        <DocumentNumber Text="رقم الفاتورة" />
+        <ReferenceDocumentNumber Text="فاتوره خارجية" />
+        <CashRegister Text="تسجيل النقدية">
+          <All Text="جميع السجلات النقدية" />
+        </CashRegister>
+        <Clear Text="مسح كافة عوامل التصفية" />
+      </Search>
+      <Document>
+        <Save>
+          <Saved Text="تم حفظ الفاتورة بنجاح" />
+          <Error Text="خطأ في حفظ الفاتورة. لم يتم حفظ التغييرات.\nرسالة النظام: {0}">
+            <InvalidPayments Text="مبلغ الدفع غير صالح">
+              <Info Text="يجب أن يكون مبلغ المدفوعات مساويًا لإجمالي الفاتورة. من فضلك ، أصلح مدفوعات الفاتورة وحاول مرة أخرى.\n\nإجمالي الفاتورة: {0}. مبلغ المدفوعات: {1}." />
+            </InvalidPayments>
+          </Error>
+        </Save>
+        <UnsavedChanges Text="التغييرات غير محفوظة">
+          <Confirmation Text="المستند &quot;{0}&quot; يحتوي على تغييرات غير محفوظة.\n\nهل تريد حفظ المستند قبل الإغلاق؟" />
+        </UnsavedChanges>
+        <StockDate Text="حدد تاريخ تغيير المخزون">
+          <Description Text="أدخل التاريخ الذي تم فيه تسجيل تغيير المخزون بواسطة هذا المستند" />
+          <Invalid Text="تاريخ المخزون غير صالح">
+            <Description Text="الإجراء المحدد غير مسموح به.\n\nتم العثور على جرد المخزون الحالي. تم إنشاء المستند &quot;{0}&quot; في {1}.\n\nتحقق من تاريخ مخزون المستند وحاول مرة أخرى." />
+            <Message Text="تاريخ المخزون المحدد غير مسموح به.\nتم إنشاء عدد المخزون {0} في {1}" />
+            <InvalidTime Text="لا يمكن أن يكون وقت الجرد في المستقبل" />
+          </Invalid>
+        </StockDate>
+        <Note Text="ملحوظة" />
+        <InternalNote Text="مذكرة داخلية" />
+        <PaidStatus>
+          <Changed Text="تم تغيير الحالة مدفوعة بنجاح" />
+        </PaidStatus>
+        <Items>
+          <CostPrice>
+            <Settings>
+              <AutoUpdate Text="تحديث سعر التكلفة تلقائيًا عند الشراء" />
+            </Settings>
+            <Update Text="تحديث سعر التكلفة">
+              <Info Text="تغيير تكلفة الأصناف. حدد العناصر التي ترغب في تغيير سعر التكلفة لها." />
+              <Confirmation Text="هل ترغب في تحديث سعر التكلفة للأصناف المحددة؟" />
+              <Success Text="تم تحديث أسعار التكلفة بنجاح" />
+            </Update>
+          </CostPrice>
+          <Missing Text="المنتج المحدد غير موجود." />
+        </Items>
+        <Payments>
+          <AutomaticallyModified Text="يتم تحديث المدفوعات والمبالغ الحالية لتتناسب مع إجمالي المدفوعات" />
+          <MarkPaid Text="يتم الآن دفع جميع مدفوعات الائتمان. هل تريد وضع علامة على المستند كمدفوع؟">
+            <Title Text="تحديث حالة المستند" />
+          </MarkPaid>
+          <Status Text="الحالة">
+            <Paid Text="مدفوعه" />
+            <Unpaid Text="غير مدفوع" />
+          </Status>
+        </Payments>
+      </Document>
+      <New>
+        <SelectDocumentType Text="حدد نوع الفاتورة" />
+      </New>
+      <NoDocument Text="المستند المطلوب غير موجود." />
+      <Inventory>
+        <Date Text="حدد تاريخ المخزون">
+          <Description Text="أدخل التاريخ الذي تم فيه إنشاء قائمة الجرد." />
+        </Date>
+        <Document>
+          <Item>
+            <Expected Text="متوقع" />
+            <Counted Text="معدود" />
+            <ChangeQuantity Text="تغيير الكمية" />
+          </Item>
+          <ExistingItem Text="العنصر المحدد مضاف بالفعل إلى هذه الفاتورة." />
+          <Service Text="محاولة إضافة خدمة إلى جرد المخزون">
+            <Info Text="تم تمييز العنصر المحدد &quot;{0}&quot; كخدمة. هل أنت متأكد أنك تريد إضافة خدمة إلى جرد المخزون؟" />
+          </Service>
+          <AddGroup Text="إضافة عناصر المجموعة إلى الفاتورة">
+            <Confirmation Text="هل أنت متأكد من أنك تريد إضافة جميع المنتجات من المجموعة &quot;{0}&quot; إلى جرد المخزون؟" />
+          </AddGroup>
+        </Document>
+      </Inventory>
+      <Guide>
+        <Title Text="افتح الفواتير" />
+        <Content Text="انقر هنا لفتح قسم الفواتير وإضافة مشترياتك الأولى" />
+        <Add>
+          <Title Text="إنشاء فاتورة" />
+          <Content Text="انقر هنا لإنشاء عملية شراء جديدة ووضع العناصر في المخزون" />
+          <Customer>
+            <Title Text="حدد العميل" />
+            <Content Text="حدد العميل لهذه الفاتورة" />
+          </Customer>
+          <Supplier>
+            <Title Text="حدد المورد" />
+            <Content Text="حدد المورد لهذه الفاتورة" />
+          </Supplier>
+          <Product>
+            <Title Text="حدد المنتج" />
+            <Content Text="انقر نقرًا مزدوجًا فوق المنتج الذي ترغب في إضافته إلى الفاتورة" />
+          </Product>
+          <Item>
+            <Quantity>
+              <Title Text="أدخل الكمية" />
+              <Content Text="أدخل الكمية المشتراة. سيتم وضع هذه الكمية في المخزون" />
+            </Quantity>
+            <Price>
+              <Title Text="السعر" />
+              <Content Text="أدخل سعر الصنف" />
+            </Price>
+            <Save>
+              <Title Text="احفظ التغييرات" />
+              <Content Text="انقر فوق الزر &quot;حفظ&quot; لحفظ التغييرات وإضافة هذا العنصر إلى الفاتورة" />
+            </Save>
+          </Item>
+          <Save>
+            <Title Text="احفظ الفاتورة" />
+            <Content Text="انقر فوق الزر &quot;حفظ&quot; لحفظ الفاتورة" />
+          </Save>
+        </Add>
+      </Guide>
+    </Documents>
+    <Countries Text="بلدان">
+      <New Text="بلد جديد" />
+      <Delete>
+        <Title Text="حذف البلد" />
+        <Confirmation Text="هل أنت متأكد أنك تريد حذف البلد &quot;{0}&quot;؟" />
+      </Delete>
+      <Country>
+        <Edit Text="تعديل البلد &quot;{0}&quot;" />
+        <Name Text="اسم" />
+        <Code Text="كود" />
+        <Saved>
+          <Created Text="تم إنشاء البلد بنجاح" />
+          <Updated Text="تم تعديل البلد بنجاح" />
+        </Saved>
+      </Country>
+    </Countries>
+    <Company Text="شركتي">
+      <LearnMore Text="تعلم المزيد عن تفاصيل الشركة" />
+      <Details Text="بيانات شركتي">
+        <Title Text="بيانات الشركة" />
+        <Logo Text="شعار الشركة">
+          <Add Text="تصفح" />
+          <Remove Text="ازالة" />
+        </Logo>
+        <BankAccount Text="حساب البنك">
+          <Number Text="حساب البنك. رقم" />
+          <BankDetails Text="تفاصيل البنك" />
+        </BankAccount>
+      </Details>
+      <Saved Text="تم حفظ بيانات الشركة بنجاح" />
+      <Onboarding>
+        <Title Text="تفاصيل الشركة" />
+        <Info Text="أدخل تفاصيل شركتك. تُستخدم تفاصيل الشركة للإيصالات والفواتير" />
+      </Onboarding>
+      <Reset Text="إعادة تعيين قاعدة البيانات">
+        <Info Text="سيؤدي تشغيل هذه العملية إلى فقد البيانات بالكامل.\n\nستؤدي إعادة تعيين قاعدة البيانات إلى مسح جميع المعاملات والعملاء والمنتجات وإعادة تعيين جميع قيم العداد." />
+        <AdminPassword Text="أدخل كلمة مرور المسؤول" />
+        <Backup>
+          <Info Text="سيتم إجراء نسخ احتياطي لقاعدة البيانات قبل إعادة التعيين.\nيمكنك تغيير وجهة النسخ الاحتياطي الافتراضية باستخدام الحقول أدناه." />
+          <Path Text="مسار قاعدة البيانات الاحتياطية">
+            <Select Text="حدد الوجهة حيث سيتم حفظ نسخة احتياطية لقاعدة البيانات قبل إجراء إعادة التعيين." />
+          </Path>
+          <Completed Text="اكتمل النسخ الاحتياطي لقاعدة البيانات" />
+        </Backup>
+        <PerformReset Text="إعادة تعيين قاعدة البيانات">
+          <Confirmation Text="هل أنت متأكد من رغبتك في إعادة تعيين قاعدة البيانات ومسح جميع البيانات؟">
+            <Title Text="إعادة تعيين قاعدة البيانات قيد التقدم" />
+          </Confirmation>
+        </PerformReset>
+        <Completed Text="تمت إعادة تعيين قاعدة البيانات بنجاح. سيتم إعادة تشغيل Aronium الآن." />
+      </Reset>
+    </Company>
+    <NoItems Text="لا توجد وحدات إدارة متاحة للمستخدم {0}.\nالرجاء تسجيل الدخول مع مستخدم لديه حق الوصول إلى وحدة إدارة واحدة على الأقل للمتابعة." />
+    <Dashboard Text="لوحة القيادة">
+      <NoData Text="لا توجد بيانات لعرض" />
+      <MonthlySales Text="المبيعات الشهرية">
+        <Description Text="بيانات المبيعات مجمعة حسب الشهر" />
+        <Month Text="شهر" />
+        <Legend Text="عنوان تفسيري" />
+        <CurrentYear Text="السنة الحالية" />
+        <TotalSales Text="إجمالي المبيعات">
+          <TopMonth Text="الشهر الأفضل أداءً:" />
+        </TotalSales>
+        <Year Text="عام">
+          <Previous Text="السنة الماضية" />
+          <Next Text="العام القادم" />
+        </Year>
+      </MonthlySales>
+      <HourlySales Text="المبيعات بالساعة">
+        <Description Text="بيانات المبيعات مجمعة حسب الساعات" />
+        <Hour Text="ساعة" />
+        <Options>
+          <Amount Text="كمية" />
+          <Count Text="العد" />
+        </Options>
+      </HourlySales>
+      <TopProducts Text="أهم المنتجات">
+        <Product Text="المنتج" />
+        <Total Text="مجموع" />
+      </TopProducts>
+      <TopProductGroups Text="أهم مجموعات المنتجات">
+        <Description Text="مجموعات المنتجات الأكثر مبيعًا في الفترة المحددة" />
+        <Group Text="مجموعة المنتج" />
+      </TopProductGroups>
+      <TopCustomers Text="كبار العملاء">
+        <Description Text="العملاء الرئيسيون في الفترة المحددة (أعلى 5)" />
+      </TopCustomers>
+      <PeriodicReports Text="التقارير الدورية">
+        <SelectPeriod Text="حدد فترة التقرير" />
+      </PeriodicReports>
+    </Dashboard>
+    <Guide>
+      <Title Text="إدارة" />
+      <Content Text="انقر هنا لفتح قسم الإدارة وإضافة المنتجات والعملاء" />
+    </Guide>
+    <Authorization>
+      <Title Text="الرجاء إدخال كلمة المرور للوصول إلى قسم الإدارة" />
+    </Authorization>
+  </Management>
+</Language>

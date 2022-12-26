@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <Loyalty Text="Loyaliteit">
+    <Promotions Text="Promoties en acties">
+      <New Text="Voeg promotie toe">
+        <Title Text="Nieuwe promotie" />
+      </New>
+      <Delete Text="Promotie verwijderen">
+        <Confirmation Text="Weet je zeker dat je promotie &quot;{0}&quot; wilt verwijderen?" />
+        <Error Text="Er is een fout opgetreden bij het verwijderen van de promotie." />
+      </Delete>
+      <View>
+        <Enabled Text="Ingeschakeld" />
+        <Name Text="Naam" />
+        <DaysOfWeek Text="Dagen van de week" />
+        <StartDate Text="Begin datum" />
+        <StartTime Text="Starttijd" />
+        <EndDate Text="Einddatum" />
+        <EndTime Text="Eindtijd" />
+      </View>
+      <Promotion>
+        <Empty Text="Geen items toegevoegd aan promotie." />
+        <Name Text="Naam promotie" />
+        <Active Text="Actief" />
+        <DaysOfWeek>
+          <All Text="Alle dagen">
+            <ShortName Text="Alle" />
+          </All>
+          <Monday Text="Maandag">
+            <ShortName Text="Ma" />
+          </Monday>
+          <Tuesday Text="Dinsdag">
+            <ShortName Text="Di" />
+          </Tuesday>
+          <Wednesday Text="Woensdag">
+            <ShortName Text="Wo" />
+          </Wednesday>
+          <Thursday Text="Donderdag">
+            <ShortName Text="Do" />
+          </Thursday>
+          <Friday Text="Vrijdag">
+            <ShortName Text="Vrij" />
+          </Friday>
+          <Saturday Text="Zaterdag">
+            <ShortName Text="Za" />
+          </Saturday>
+          <Sunday Text="Zondag">
+            <ShortName Text="Zon" />
+          </Sunday>
+        </DaysOfWeek>
+        <Duration>
+          <Start Text="Start" />
+          <End Text="Einde" />
+        </Duration>
+        <Item>
+          <PriceType>
+            <Discount Text="Korting" />
+            <FixedPrice Text="Vaste prijs" />
+          </PriceType>
+          <Condition Text="Voorwaardelijk">
+            <Title Text="Hoeveelheidsvoorwaarde" />
+            <ApplyToAll Text="Toepassen op alles" />
+            <LimitToNext Text="Beperk tot volgende" />
+            <CopyToAll Text="Kopieer conditie naar alle items">
+              <Completed Text="Voorwaardelijke waarden gekopieerd naar alle promotie-items" />
+            </CopyToAll>
+          </Condition>
+          <InvalidValue Text="Ongeldige waarde" />
+          <Errors>
+            <Existing Text="Item &quot;{0}&quot; bestaat al in deze promotie." />
+          </Errors>
+        </Item>
+        <Saved Text="Promotie succesvol opgeslagen." />
+        <InvalidItems Text="Kan promotie niet opslaan. Sommige items bevatten fouten. Controleer uw gegevens en probeer het opnieuw." />
+      </Promotion>
+      <LearnMore Text="Meer informatie over promoties en happy hour" />
+    </Promotions>
+  </Loyalty>
+</Language>

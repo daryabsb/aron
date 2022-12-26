@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="08/16/2017 01:41:33" ReportInfo.Modified="10/14/2021 15:47:04" ReportInfo.CreatorVersion="2018.4.0.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+    private void OnBarcodeBeforePrint(object sender, EventArgs e)
+    {
+      Barcode1.Left = (Data1.Width / 2) - (Barcode1.Width / 2) + (TextCode.Visible ? TextCode.Width : 0);
+      Barcode1.Top = Data1.Height - Barcode1.Height;
+    }
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <TableDataSource Name="Product" ReferenceName="ProductsDataSet.Product" DataType="System.Int32" Enabled="true" TableName="Product">
+      <Column Name="Id" DataType="System.Object"/>
+      <Column Name="Name" DataType="System.String"/>
+      <Column Name="MeasurementUnit" DataType="System.String"/>
+      <Column Name="Code" DataType="System.String"/>
+      <Column Name="Barcode" DataType="System.String"/>
+      <Column Name="Price" DataType="System.Decimal"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" RawPaperSize="9">
+    <DataBand Name="Data1" Width="718.2" Height="236.25" Border.Lines="All" Border.Color="Gray" Border.Style="Dash" AfterLayoutEvent="OnBarcodeBeforePrint" DataSource="Product" Columns.Count="1">
+      <TextObject Name="TextCode" Left="699.3" Width="18.9" Height="236.25" Dock="Right" Text="SKU: [Product.Code]" HorzAlign="Center" VertAlign="Bottom" Angle="270" RightToLeft="true" Font="Arial, 8pt"/>
+      <TextObject Name="TextName" Width="699.3" Height="28.35" Dock="Top" CanGrow="true" CanShrink="true" Text="[Product.Name]" Padding="2, 5, 2, 0" HorzAlign="Center" VertAlign="Center" RightToLeft="true"/>
+      <TextObject Name="TextPrice" Top="28.35" Width="699.3" Height="47.25" Dock="Top" CanGrow="true" CanShrink="true" Text="[Product.Price]" Padding="2, 5, 2, 0" Format="Currency" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" RightToLeft="true" Font="Arial, 16pt, style=Bold"/>
+      <BarcodeObject Name="Barcode1" Left="285.28" Top="122.85" Width="128.75" Height="75.6" Anchor="None" DataColumn="Product.Barcode" Padding="0, 0, 0, 5" Barcode="EAN13"/>
+    </DataBand>
+  </ReportPage>
+</Report>

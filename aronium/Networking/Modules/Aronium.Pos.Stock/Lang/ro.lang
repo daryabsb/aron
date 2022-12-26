@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ro" name="Romanian">
+  <Stock Text="Stocul">
+    <Items>
+      <Item>
+        <Product>
+          <Id Text="Id" />
+          <Code Text="Cod" />
+          <Name Text="Nume" />
+          <MeasurementUnit Text="U/M" />
+        </Product>
+        <Quantity Text="Cantitate" />
+        <NegativeQuantity Text="Cantitatea negativa din stoc" />
+        <TotalBeforeTax Text="Valoarea" />
+        <TotalAfterTax Text="Valoarea cu TVA" />
+      </Item>
+      <Filter>
+        <NegativeQuantity Text="Cantitatea negativa">
+          <Info Text="Arata doar produsele cu cantitatea negativa" />
+        </NegativeQuantity>
+        <NonZeroQuantity Text="Cantitatea diferita de zero">
+          <Info Text="Arata doar produsele cu cantitatea diferita de zero" />
+        </NonZeroQuantity>
+      </Filter>
+      <Summary>
+        <NegativeCount Text="Totalul elementelor din stoc cu cantitatea negativa" />
+        <ZeroCount Text="Totalul elementelor din stoc cu cantitatea zero" />
+        <PositiveCount Text="Totalul elementelor din stoc cu cantitatea pozitiva" />
+        <TotalBeforeTax Text="Cantitatea totala:" />
+        <TotalIncludingTax Text="Total cu TVA:" />
+      </Summary>
+    </Items>
+    <Reset Text="Recalculeaza cantitatile din stoc">
+      <Completed Text="Recalcularea cantitatilor din stoc s-a terminat cu succes." />
+    </Reset>
+    <History Text="Istoricul stocului">
+      <Start Text="Start" />
+      <End Text="Sfarsit" />
+      <Document Text="Document">
+        <DocumentType Text="Tipul documentului" />
+        <Customer Text="Clientul" />
+        <Date Text="Data" />
+        <StockDate Text="Data stocului" />
+      </Document>
+      <ChangeQuantity Text="Cantitatea" />
+      <InStock Text="In stoc" />
+      <MeasurementUnit Text="U/M" />
+    </History>
+    <Print>
+      <Report Text="Raport de inventar" />
+    </Print>
+    <ProductDetails>
+      <OnHand Text="Cantitatea existenta" />
+    </ProductDetails>
+    <Control>
+      <Settings>
+        <PreventNegativeQuantities Text="Previne stocul negativ" />
+      </Settings>
+      <NegativeQuantity Text="Vanzare cu cantitate zero in stoc">
+        <Confirmation Text="Nu exista cantitate suficienta in stoc pentru aveasta vanzare. Vanzarea acestui element va duce la cantitate negativa in stoc.\n\nCantitate in stoc: {0}\nCantitate necesara: {1}\n\nEsti sigur ca vrei sa adaugi acest element in vanzarea curenta?" />
+        <Title Text="Cantitatea din stoc lipseste" />
+        <PermissionDenied Text="Nu ai nivelul de acces suficient pentru a vinde elemente cu cantitate zero in stoc. Te rog consulta-te cu administratorul." />
+        <Authorization>
+          <Title Text="Controlul stocului e activ.\nTe rog, introdu parola pentru vanzarea elementelor cu cantitate zero in stoc pentru a continua." />
+        </Authorization>
+        <AllowMultiple>
+          <NotAllowed Text="Repetarea rundei nu e permisa cand controlul stocului e activat." />
+        </AllowMultiple>
+      </NegativeQuantity>
+    </Control>
+    <QuickInventory Text="Stoc rapid">
+      <Description Text="Modifica cantitatea din stoc pentru elementul selectat" />
+      <Title Text="Actualizeaza cantitatea din stoc" />
+      <Subtitle Text="Seteaza cantitatea din stoc pentru produsul selectat.\nDocumentul Inventar va fi creat automat." />
+      <Success Text="Cantitatea din stoc a fost modificata cu succes.\nDocumentul {0} a fost creat." />
+    </QuickInventory>
+    <LearnMore Text="Invata mai multe despre stoc si inventar" />
+  </Stock>
+</Language>

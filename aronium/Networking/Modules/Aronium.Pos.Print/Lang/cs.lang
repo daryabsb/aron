@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Print>
+    <Labels>
+      <Documents>
+        <InventoryCount Text="Počet zásob">
+          <Counted Text="Počítáno" />
+          <CountedValue Text="Spočítaná hodnota" />
+          <CreatedBy Text="Vytvořil" />
+          <DiffMinus Text="Rozd -" />
+          <DiffPlus Text="Rozd +" />
+          <Expected Text="Očekávaný" />
+          <Time Text="Čas" />
+          <NegativeAmount Text="Částka -" />
+          <PositiveAmount Text="Částka +" />
+        </InventoryCount>
+        <Invoice Text="Faktura">
+          <AmountDue Text="Dlužná částka" />
+          <BankAccountNumber Text="Bankovní přísl. číslo" />
+          <BankDetails Text="Bankovní detaily" />
+          <BillTo Text="Účtovat " />
+          <InvoiceNumber Text="Faktura č." />
+          <Item Text="Položka" />
+          <ItemsCount Text="Počty položek" />
+          <PaidAmount Text="Zaplacená částka" />
+          <PaymentMethod Text="Způsob platby" />
+          <PaymentStatus Text="Status platby">
+            <Paid Text="Zaplaceno" />
+            <Unpaid Text="Nezaplaceno" />
+          </PaymentStatus>
+        </Invoice>
+        <LossAndDamage Text="Ztráta a poškození" />
+        <ProformaInvoice Text="Proforma" />
+        <Purchase Text="Příjem zboží" />
+        <Refund Text="Refundace">
+          <ReceiptNumber Text="Číslo účtenky" />
+          <RefundNumber Text="Refundace č." />
+        </Refund>
+        <StockReturn Text="Vrácení zboží" />
+      </Documents>
+      <General>
+        <CashRegister Text="Pokladna" />
+        <Code Text="Kód" />
+        <Company Text="Společnost">
+          <Address Text="Adresa" />
+        </Company>
+        <Cost Text="Náklady" />
+        <Customer Text="Zákazník" />
+        <Date Text="Datum" />
+        <Description Text="Popis" />
+        <Discount Text="Sleva" />
+        <DiscountGranted Text="Sleva poskytnuta" />
+        <Document Text="Dokument" />
+        <DocumentNumber Text="Číslo dokumentu" />
+        <DueDate Text="Datum splatnosti" />
+        <Email Text="Email" />
+        <ExternalDocument Text="Externí dokument" />
+        <Margin Text="Okraj" />
+        <Name Text="Název" />
+        <Numbering Text="#" />
+        <Page Text="Stránka" />
+        <Period Text="Období" />
+        <Phone Text="Telefon" />
+        <Product Text="Produkt" />
+        <ProductGroup Text="Skupina produktů" />
+        <ProductName Text="Název položky" />
+        <Products Text="Položky" />
+        <Profit Text="Profit" />
+        <PurchaseNumber Text="Číslo nákupu" />
+        <TaxNumber Text="Daňové č." />
+        <Qty Text="Množ." />
+        <Quantity Text="Množství" />
+        <Subtotal Text="Mezisoučet" />
+        <Supplier Text="Dodavatel" />
+        <Tax Text="Daně" />
+        <TaxName Text="Daňové jméno" />
+        <Total Text="Celkem" />
+        <TotalAfterDiscount Text="Celkem po odpojení" />
+        <TotalBeforeDiscount Text="Celkem před odpojením" />
+        <TotalBeforeTax Text="Celkem před zdaněním" />
+        <TotalDiscount Text="Celková sleva" />
+        <TotalPaid Text="Celkem zaplaceno" />
+        <TotalUnpaid Text="Celkem nezaplaceno" />
+        <UnitOfMeasurement Text="Měrná jednotka" />
+        <UnitPrice Text="Jednotková cena" />
+        <User Text="Uživatel" />
+      </General>
+      <Reports>
+        <DailySales Text="Denní prodej" />
+        <DiscountsGranted Text="Poskytnuté slevy">
+          <BeforeTax Text="(před zdaněním)" />
+          <AfterTax Text="(po zdanění)" />
+          <NumberOfDiscounts Text="Počet zlevněných objednávek" />
+          <TotalDiscounted Text="Celkem zlevněné" />
+        </DiscountsGranted>
+        <InventoryCount Text="Zpráva o počtu zásob" />
+        <Invoices Text="Faktury" />
+        <ItemsDiscounts Text="Slevy na zboží" />
+        <LossAndDamageByProduct Text="Ztráta a poškození produktem" />
+        <PaymentTypesByCustomer Text="Typy plateb podle zákazníků" />
+        <PaymentTypesByUser Text="Typy plateb podle uživatelů" />
+        <ProfitAndMargin Text="Profit" />
+        <PurcahsedItemsDiscounts Text="Slevy na zakoupené zboží" />
+        <PurchaseByProduct Text="Nákup podle produktu" />
+        <PurchaseBySupplier Text="Nákup podle dodavatele" />
+        <PurchaseDiscounts Text="Nákupní slevy" />
+        <PurchaseInvoices Text="Nákupní faktury" />
+        <Refunds Text="Refundace" />
+        <SalesByCustomer Text="Prodej podle zákazníka" />
+        <SalesByPaymentType Text="Prodej podle typů plateb" />
+        <SalesByProduct Text="Prodej podle produktu" />
+        <SalesByProductGroups Text="Prodej podle produktových skupin" />
+        <SalesByUser Text="Prodej podle uživatelů" />
+        <StartingCashEntries Text="Počáteční hotovostní vstupy">
+          <ZReport Text="Zpráva Z" />
+          <Open Text="Otevřít" />
+        </StartingCashEntries>
+        <Stock Text="Skladová zpráva">
+          <CostPrice Text="Pořizovací cena" />
+          <CostBeforeTax Text="Cena před zdaněním" />
+          <CostIncludingTax Text="Cena včetně daně" />
+          <History Text="Historie akcií">
+            <CustomerOrSupplier Text="Zákazník / Dodavatel" />
+            <DocumentNumber Text="Číslo dok." />
+            <DocumentType Text="Typ dok." />
+            <QuantityOnHand Text="Množ. v ruce" />
+            <StockDate Text="Datum skladu" />
+            <CostPrice Text="Pořizovací cena" />
+          </History>
+        </Stock>
+        <StockMovement Text="Pohyb zásob">
+          <AverageNumberOfSalesPerItem Text="Průměrný počet prodejů na položku" />
+          <FastMoving Text="Rychle se pohybující" />
+          <SlowMoving Text="Pomalý pohyb" />
+          <NonMoving Text="Bez pohybu" />
+          <NumberOfSales Text="Čísla prodejů" />
+          <TotalNumberOfSales Text="Celkový počet prodejů" />
+        </StockMovement>
+        <Taxes Text="DAŇ" />
+        <UnpaidPurchases Text="Nezaplacený nákup" />
+        <UnpaidSales Text="ezaplacené prodeje" />
+      </Reports>
+    </Labels>
+  </Print>
+</Language>

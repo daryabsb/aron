@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Users Text="Uživatelé a zabezpečení">
+    <View Text="Uživatelé">
+      <Disabled Text="Zobrazit neaktivní uživatele" />
+    </View>
+    <New Text="Přidat uživatele" />
+    <ResetPassword Text="Obnovit heslo">
+      <Success Text="Heslo úspěšně změněno" />
+    </ResetPassword>
+    <LearnMore Text="Další informace o správě uživatelů" />
+    <User>
+      <FirstName Text="Jméno" />
+      <LastName Text="Příjmení" />
+      <Email Text="Email" />
+      <Password Text="Heslo" />
+      <PasswordConfirmation Text="Potvrzení hesla" />
+      <AccessLevel Text="Úroveň přístupu" />
+      <IsEnabled Text="Aktivní" />
+      <Error>
+        <PasswordConfirmationMatch Text="Heslo a potvrzení hesla se musí shodovat." />
+        <InvalidPassword Text="Uživatel se stejným heslem již existuje.&#xA;Zadejte jedinečné heslo a zkuste to znovu." />
+        <Disable>
+          <OpenOrders Text="Zakázání uživatele mu zabrání v uzavření otevřeného prodeje.&#xA;Před deaktivací tohoto uživatele prosím zavřete všechny otevřené objednávky vlastněné tímto uživatelem.">
+            <Title Text="Uživatele s otevřeným prodejem nelze zakázat" />
+          </OpenOrders>
+        </Disable>
+        <DuplicateEmail Text="Tento e-mail je již přijat.&#xA;Použijte prosím jinou e-mailovou adresu." />
+      </Error>
+      <Saved Text="Údaje uživatele byly úspěšně změněny." />
+    </User>
+    <Delete Text="Smazat uživatele">
+      <Confirmation Text="Opravdu chcete smazat „{0}“?" />
+      <Error>
+        <CurrentUser Text="Nemůžete se smazat!" />
+        <DataViolation Text="Uživatele nelze smazat.&#xA;Uživatel obsahuje dokumenty nebo jiné související položky." />
+      </Error>
+    </Delete>
+    <Security Text="Bezpečnost">
+      <Title Text="Nastavte úroveň přístupu pro předdefinované operace" />
+      <Description Text="Vyberte úroveň přístupu pro každou akci, abyste nastavili požadovaná uživatelská oprávnění." />
+      <LearnMore Text="Další informace o úrovních přístupu a zabezpečení" />
+      <MaximumAccessLevelWarning Text="roveň přístupu nastavená nad nejvyšší hodnotou přiřazenou kterémukoli uživateli." />
+      <Save>
+        <Success Text="rovně zabezpečení byly úspěšně uloženy" />
+        <AccessLevelViolation Text="Porušení úrovně přístupu">
+          <Info Text="Úrovně přístupu lze nastavit na maximální hodnotu přiřazenou kterémukoli uživateli. V opačném případě možná nebudete mít přístup k omezené části.&#xA;Upravte položky chybně a zkuste to znovu." />
+        </AccessLevelViolation>
+      </Save>
+      <Group>
+        <Sales Text="Prodeje" />
+        <General Text="šeobecné" />
+      </Group>
+    </Security>
+  </Users>
+</Language>

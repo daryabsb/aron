@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Reports Text="Aruandlus">
+    <Filter Text="Filter">
+      <User Text="Kasutaja">
+        <All Text="Kõik" />
+      </User>
+      <Customer Text="Kliendid ja tarnijad">
+        <All Text="Kõik" />
+      </Customer>
+      <Product Text="Toode">
+        <All Text="Kõik" />
+      </Product>
+      <CashRegister Text="Kassa">
+        <All Text="Kõik" />
+      </CashRegister>
+      <Period>
+        <Tip Text="Klõpsake aruandeperioodi muutmiseks" />
+      </Period>
+      <NotAvailable Text="Valitud aruande puhul ei kehti" />
+      <ProductGroup Text="Tooterühm">
+        <IncludeSubgroups Text="Kaasa alamrühmad" />
+      </ProductGroup>
+    </Filter>
+    <Report>
+      <Select Text="Valige aruanne">
+        <Title Text="Valige aruanne vaatamiseks või printimiseks" />
+      </Select>
+      <Show Text="Kuva aruanne" />
+      <NotFound Text="Aruande mall puudub." />
+    </Report>
+    <Sales Text="Müük">
+      <Products Text="Tooted" />
+      <ProductGroups Text="Tootegrupid" />
+      <PaymentTypes Text="Makseviisid" />
+      <PaymentTypesUsers Text="Makseviisid kasutajate kaupa" />
+      <PaymentTypesCustomers Text="Maksetüübid klientide kaupa" />
+      <TaxRates Text="Maksumäärad" />
+      <Customers Text="Kliendid" />
+      <Users Text="Kasutajad" />
+      <Refunds Text="Tagasimaksed" />
+      <InvoiceList Text="Arvete loend" />
+      <Profit Text="Kasum ja marginaal" />
+      <Daily Text="Igapäevane müük" />
+      <Unpaid Text="Tasumata müük" />
+      <StartingCash Text="Sularaha liikumised" />
+      <Discounts Text="Antavad allahindlused" />
+      <ItemDiscounts Text="Toodete allahindlused" />
+      <StockMovement Text="Toodete liikumine" />
+      <Hourly Text="Tunnimüük" />
+      <HourlyByProductGroup Text="Tunnimüük tooterühmade kaupa" />
+    </Sales>
+    <Purchase Text="Sisseost">
+      <Suppliers Text="Tarnijad" />
+      <Products Text="Tooted" />
+      <Unpaid Text="Tasumata hanked" />
+      <Discounts Text="Sisseostu allahindlused" />
+      <ItemDiscounts Text="Ostetud toodete allahindlused" />
+      <PurchaseInvoiceList Text="Ostuarvete loend" />
+    </Purchase>
+    <LossAndDamage Text="Kaod ja mahakandmised">
+      <Products Text="Tooted" />
+    </LossAndDamage>
+    <Favorites Text="Lemmikud">
+      <Add Text="Lisa lemmikutesse" />
+      <Remove Text="Eemalda lemmikutest" />
+      <Clear Text="Tühjenda lemmikute loend" />
+    </Favorites>
+  </Reports>
+  <ReceiptPrinter Text="Kviitungi printer" />
+</Language>

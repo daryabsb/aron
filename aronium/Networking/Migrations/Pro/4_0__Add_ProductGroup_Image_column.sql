@@ -1,0 +1,1 @@
+ALTER TABLE ProductGroup ADD [Image] IMAGE;

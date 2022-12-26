@@ -1,0 +1,718 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="tr" name="Türkçe">
+  <Management Text="Yönetim">
+    <NoItems Text="{0} kullanıcısı için kullanılabilir yönetim modülü yok.\nLütfen devam etmek için en az bir yönetim modülüne erişimi olan bir kullanıcıyla giriş yapın."></NoItems>
+    <Dashboard Text="Panel">
+      <NoData Text="Görüntülenecek veri yok"></NoData>
+      <MonthlySales Text="Aylık Satış">
+        <Description Text="Aya göre gruplandırılmış satış verileri"></Description>
+        <Month Text="Ay"></Month>
+        <Legend Text="Açıklama göster"></Legend>
+        <CurrentYear Text="Cari yıl"></CurrentYear>
+        <TotalSales Text="Toplam Satış">
+          <TopMonth Text="En yüksek performanslı ay:"></TopMonth>
+        </TotalSales>
+        <Year Text="Yıl">
+          <Previous Text="Önceki yıl"></Previous>
+          <Next Text="Gelecek yıl"></Next>
+        </Year>
+      </MonthlySales>
+      <HourlySales Text="Saatlik satışlar">
+        <Description Text="Satış verileri, saatlere göre gruplanır"></Description>
+        <Hour Text="Saat"></Hour>
+        <Options>
+          <Amount Text="Tutar"></Amount>
+          <Count Text="Sayı"></Count>
+        </Options>
+      </HourlySales>
+      <TopProducts Text="Favori Ürünler">
+        <Product Text="Ürün"></Product>
+        <Total Text="Toplam"></Total>
+      </TopProducts>
+      <TopProductGroups Text="Favori Ürün Grupları">
+        <Description Text="Seçilen dönemin en çok satan ürün grupları "></Description>
+        <Group Text="Ürün grubu"></Group>
+      </TopProductGroups>
+      <TopCustomers Text="Favori Müşteriler">
+        <Description Text="Seçtiğiniz dönemin lider müşteri (ilk 5)"></Description>
+      </TopCustomers>
+      <PeriodicReports Text="Periyodik Raporlar">
+        <SelectPeriod Text="Seçili raporlama dönemi"></SelectPeriod>
+      </PeriodicReports>
+    </Dashboard>
+    <Products Text="Ürünler">
+      <Loading Text="Ürün yükleniyor..."></Loading>
+      <LearnMore Text="Ürünler hakkında daha fazla bilgi edinin"></LearnMore>
+      <Taxes Text="Vergi Oranları">
+        <LearnMore Text="Vergi oranları hakkında daha fazla bilgi edinin"></LearnMore>
+        <New Text="Yeni vergi oranı"></New>
+        <Edit>
+          <Title Text="Vergi düzenlemesi &quot;{0}&quot;"></Title>
+        </Edit>
+        <Delete>
+          <Title Text="Vergi ücretini sil"></Title>
+          <Confirmation Text="&quot;{0}&quot; vergi oranını silmek istediğinizden emin misiniz?"></Confirmation>
+          <Error Text="Vergi oranını silmeye çalışırken hata oluştu. Vergi oranının kullanımda olmadığından emin olun ve tekrar deneyin."></Error>
+        </Delete>
+        <Tax>
+          <Code Text="Kod"></Code>
+          <Name Text="Ad"></Name>
+          <Rate Text="Oran"></Rate>
+          <ReadOnly Text="Seçilen vergi belgelerde var ve değişitilemez." />
+          <Fixed Text="Sabit" />
+          <TaxOnTotal Text="Toplam vergi" />
+          <Enabled Text="Aktif" />
+        </Tax>
+        <Onboarding>
+          <Title Text="Vergi oranları"></Title>
+          <Info Text="Varsa ürün tanımları için kullanılan vergi oranlarını girin. \nSistemde en az bir vergi oranı olmalı."></Info>
+          <AddMore Text="Kaydet ve daha fazla ekle">
+            <Error Text="Yeni vergi oranı eklenirken hata oluştu. Verilerinizi kontrol edip tekrar deneyin"></Error>
+            <Name Text="Vergi adı (ör. &quot;Vergi yok&quot;)"></Name>
+          </AddMore>
+          <Existing Text="Mevcut vergi oranları">
+            <NoItems Text="Vergi oranları tanımlanmadı. Yeni ürünler ekleyebilmek için en az bir vergi oranı ekleyin.">
+              <AddDefault Text="Varsayılan vergi oranı ekle"></AddDefault>
+            </NoItems>
+          </Existing>
+        </Onboarding>
+        <Switch Text="Vergi değiştir">
+          <OldTax Text="Eski vergi" />
+          <NewTax Text="Yeni vergi" />
+          <Tooltip Text="Tüm ürünler için vergi değiştir" />
+          <Info Text="Tüm ürünlerin vergi oranlarını değiştirmek için bu formu kullanın.\n\nYeni vergi ile değiştirmek istediğiniz eski vergi seçin ve &quot;Değiştir&quot; butonuna basın." />
+          <Replace Text="Değiştir" />
+          <Error Text="Vergileri değiştirirken hata oluştu.\nSistem uyarısı: {0}" />
+          <Success Text="Vergiler başarıyla değiştirildi." />
+        </Switch>
+        <NoTaxes Text="Vergi Yok">
+          <Add Text="Yeni vergi ekle" />
+        </NoTaxes>
+      </Taxes>
+      <New Text="Yeni ürün">
+        <Product Text="Yeni ürün ekle"></Product>
+        <Or Text="veya"></Or>
+        <Group Text="yeni ürün grubu"></Group>
+      </New>
+      <Delete Text="Ürünü sil"></Delete>
+      <Edit Text="Ürünü düzenle"></Edit>
+      <Search Text="Ürünleri ara">
+        <Result Text="Sonuç"></Result>
+        <Empty Text="Sonuç yok"></Empty>
+      </Search>
+      <Groups Text="Ürün grupları">
+        <Root Text="Ürünler"></Root>
+        <Empty Text="Seçilen grup ürün içermiyor">
+          <Info Text="Seçilen gruba ürün ekle"></Info>
+        </Empty>
+      </Groups>
+      <Group>
+        <New Text="Yeni grup"></New>
+        <Edit Text="Grubu düzenle">
+          <Title Text="&quot;{0}&quot; grubunu düzenle"></Title>
+          <Error>
+            <InvalidParentGroup Text="Geçersiz ana grup"></InvalidParentGroup>
+          </Error>
+        </Edit>
+        <Name Text="Ad"></Name>
+        <Color Text="Renk"></Color>
+        <Delete Text="Grubu sil">
+          <Title Text="Ürün grubunu sil"></Title>
+          <Confirmation Text="&quot;{0}&quot; grubunu silmek istediğinizden emin misiniz?"></Confirmation>
+          <Error Text="Grubu silmeye çalışırken hata oluştu.\nSistem Mesaj: {0}">
+            <DataViolation Text="Seçilen grup silinemiyor.\nAlt ürününün dokümanlarda, promosyonlarda veya satışlarda bulunmadığından emin olun ve tekrar deneyin."></DataViolation>
+          </Error>
+        </Delete>
+        <Saved Text="Grup başarıyla kaydedildi"></Saved>
+        <Image Text="Resim">
+          <Browse Text="Göz At">
+            <Info Text="Bilgisayarınızdan ürün grubu resmini seçin" />
+          </Browse>
+          <Clear Text="Temizle">
+            <Info Text="Ürün Grup Resmini Kaldır" />
+          </Clear>
+        </Image>
+      </Group>
+      <Product>
+        <Edit Text="&quot;{0}&quot; ürününü düzenle"></Edit>
+        <Details Text="Ürün detayları"></Details>
+        <Name Text="İsim"></Name>
+        <Code Text="Kod"></Code>
+        <Barcode Text="Barkod">
+          <Generate Text="Barkod oluştur"></Generate>
+        </Barcode>
+        <MeasurementUnit Text="Ölçü birimi"></MeasurementUnit>
+        <VATRate Text="Vergi"></VATRate>
+        <SalePrice Text="Satış fiyatı"></SalePrice>
+        <IsVATIncluded Text="Fiyat vergiyi içerir"></IsVATIncluded>
+        <Group Text="Grup"></Group>
+        <IsEnabled Text="Aktif"></IsEnabled>
+        <IsService Text="Servis (stok kullanmayan)"></IsService>
+        <IsDiscountAllowed Text="İndirim iznli"></IsDiscountAllowed>
+        <IsPriceChangeAllowed Text="Fiyat değişikliği izin verilen"></IsPriceChangeAllowed>
+        <IsUsingDefaultQuantity Text="Varsayılan miktar"></IsUsingDefaultQuantity>
+        <Description Text="Açıklama"></Description>
+        <Prices Text="Fiyat &amp; Vergi"></Prices>
+        <Cost Text="Maliyet"></Cost>
+        <Markup Text="Fiyat artışı"></Markup>
+        <ImageAndColor Text="Resim ve Renk">
+          <Image Text="Resim">
+            <Browse Text="Ara">
+              <Info Text="Bilgisayarınızdan ürün resmini seçin"></Info>
+            </Browse>
+            <Clear Text="Temizle">
+              <Info Text="Ürün resmini kaldır"></Info>
+            </Clear>
+          </Image>
+          <Color Text="Renk"></Color>
+        </ImageAndColor>
+        <Comments Text="Yorumlar">
+          <Info Text="Açıklamalar mutfak adisyonuna basılacaktır."></Info>
+          <Note Text="Not girin..."></Note>
+          <Add Text="Not ekle"></Add>
+          <Error>
+            <ExistingComment Text="Not zaten var"></ExistingComment>
+          </Error>
+        </Comments>
+        <DateCreated Text="Oluşturuldu"></DateCreated>
+        <DateUpdated Text="Güncellendi"></DateUpdated>
+        <Saved>
+          <Created Text="Ürün başarıyla oluşturuldu"></Created>
+          <Updated Text="Ürün başarıyla değiştirildi"></Updated>
+        </Saved>
+        <Delete Text="Ürün silme">
+          <Confirmation Text="&quot;{0}&quot; ürününü silmek istediğinizden emin misiniz?"></Confirmation>
+          <Error Text="Ürünü silmeye çalışırken hata oluştu.\nSistem Mesaj: {0}"></Error>
+          <DataViolation Text="Ürün silinemiyor.\nÜrünün dokümanlarda bulunmadığından emin olun ve tekrar deneyin."></DataViolation>
+        </Delete>
+        <Error>
+          <Code Text="Belirtilen kod içeren ürün zaten mevcut (&quot;{0}&quot;).\nÖzel ürün kodu girin ve tekrar deneyin."></Code>
+          <Barcode Text="Belirtilen barkodlu ürün zaten mevcut (&quot;{0}&quot;).\nÖzel barkodları tekrar girin ve tekrar deneyin."></Barcode>
+          <Taxes Text="Çakışan vergi buludu. Vergi adı (&quot;{0}&quot;).\nLütfen geçerli bir vergi seçin ve tekrar deneyin." />
+        </Error>
+        <Taxes Text="Vergiler">
+          <Add Text="Ürüne vergi ekle">
+            <Tooltip Text="Ürüne vergi oranı ekle" />
+          </Add>
+          <Remove>
+            <Tooltip Text="Bu vergi oranını kaldır" />
+          </Remove>
+          <NoTaxes>
+            <Info Text="Vergi bulunamadı.\nBir ürüne atayabilmek için vergi ekleyin" />
+          </NoTaxes>
+        </Taxes>
+        <IsTaxIncluded Text="Ürüne vergi dahil" />
+        <SalePriceBeforeTax Text="Vergi Öncesi Satış Fiyatı" />
+        <AgeRestriction Text="Yaş Sınırlaması">
+          <Tooltip Text="Bu ürünü satınalmak için en düşük yaş" />
+          <Years Text="yaş" />
+          <Validation>
+            <Message Text="Bu ürün yaş sınırlaması olan bir üründür.\nLütfen müşterinin ürünü satın almasına izin verildiğini onaylayın.">
+              <Title Text="Yaş Kısıtlamalı Ürün" />
+              <BornBefore Text="Doğum Tarihi:" />
+            </Message>
+            <Confirm Text="Onay" />
+          </Validation>
+        </AgeRestriction>
+      </Product>
+      <Export Text="Dışa aktar">
+        <NoServices Text="Dışa aktarma servisi yok."></NoServices>
+        <Success Text="Dışa aktarma başarıyla tamamlandı."></Success>
+        <Error Text="Hata oluştu. Lütfen tekrar deneyin."></Error>
+        <Select Text="Dışa aktarma türünü seç"></Select>
+      </Export>
+      <Onboarding>
+        <Import Text="CSV dosyasından ürünleri içe aktar">
+          <SelectFile Text="Dosya seç">
+            <Description Text="Ürünlerinizi içeren CSV dosyasını seçin."></Description>
+          </SelectFile>
+          <Validate Text="Doğrula">
+            <Description Text="İçe aktarma için CSV içeriğini ve ürünlerini doğrulayın."></Description>
+            <Error Text="CSV dosyasını doğrulama hatası. Verilerinizi kontrol edip tekrar deneyin."></Error>
+            <Success Text="Ürünler içe aktarmak için hazır. Ürün sayısı: {0}"></Success>
+          </Validate>
+          <ImportProducts Text="İçeri aktar">
+            <Description Text="Seçilen CSV dosyasından ürün almak için tıklayın."></Description>
+          </ImportProducts>
+          <NoItems Text="İçe aktarılacak hiçbir şey yok"></NoItems>
+          <Completed Text="İçeri aktarma başarıyla tamamlandı!">
+            <Result>
+              <Created Text="Oluşturulan öğeler:"></Created>
+              <Updated Text="Güncellenen öğeler:"></Updated>
+              <DocumentNumber Text="Belge oluşturuldu:"></DocumentNumber>
+            </Result>
+            <Restart Text="İçeri aktarmayı yeniden başlat"></Restart>
+          </Completed>
+          <Importing Text="Ürünler içeri aktarılıyor... Lütfen bekleyin..."></Importing>
+        </Import>
+      </Onboarding>
+      <Count Text="Ürün sayısı:"></Count>
+      <ChangeGroup Text="Ürün &quot;{0}&quot; dan &quot;{1}&quot; konumuna taşındı"></ChangeGroup>
+      <Guide>
+        <Title Text="Açık ürünler"></Title>
+        <Content Text="Ürünler bölümünü açmak ve mağazanıza bazı ürünler eklemek için burayı tıklayın"></Content>
+        <Add>
+          <Title Text="Ürün ekleme"></Title>
+          <Content Text="Yeni ürünler eklemeye başlamak için &quot;Yeni ürün&quot; düğmesine tıklayın."></Content>
+          <Name>
+            <Title Text="Ürün adı"></Title>
+            <Content Text="Ürün adı ekle Satışa sunulan ürün detayları"></Content>
+          </Name>
+          <Prices>
+            <Title Text="Ürün fiyatı"></Title>
+            <Content Text="Ürün fiyatını ayarlamak için buraya tıklayın"></Content>
+            <SalePrice>
+              <Title Text="Satış fiyatı"></Title>
+              <Content Text="Ürün satış fiyatını, satış ekranında görünecek şekilde ayarla"></Content>
+            </SalePrice>
+          </Prices>
+          <Save>
+            <Title Text="Değişiklikleri kaydet"></Title>
+            <Content Text="Değişikliklerinizi kaydetmek ve yeni ürün eklemek için &quot;Kaydet&quot; butonuna tıklayın."></Content>
+          </Save>
+        </Add>
+      </Guide>
+      <Settings Text="Ürünler">
+        <Title Text="Ürün ayarları"></Title>
+        <PriceIncludesTax Text="Vergi dahil fiyat">
+          <Tooltip Text="Seçilirse, yeni ürünler, vergi ile birlikte fiyatın kontrol edilmesini sağlar"></Tooltip>
+        </PriceIncludesTax>
+        <DefaultTax Text="Varsayılan vergi oranı">
+          <NoTaxes Text="Vergi bulunmuyor. Lütfen yönetim bölümünden yeni vergi ekleyin. " />
+        </DefaultTax>
+        <MarkupOption Text="Maliyet fiyatı temelli işaretleme">
+          <Tooltip Text="Seçilirse, maliyet fiyatının değiştirilmesi, satış fiyatı yerine markayı günceller"></Tooltip>
+        </MarkupOption>
+      </Settings>
+      <Import Text="İçeri aktar">
+        <LearnMore Text="CSV'den içeri aktarma hakkında daha fazla bilgi edinin"></LearnMore>
+        <Basic Text="Temel">
+          <Description Text="CSV dosyası oluşturma kılavuzumuzu takip ederek temel içeri aktarmayı kullanabilirsiniz">
+            <Link Text="destek merkezimiz"></Link>
+            <Formatting Text="Hazırlanan CSV dosyasını kullanıyorsanız, lütfen okuduğunuzdan emin olun">
+              <Link Text="CSV dosyası biçimlendirme örneği"></Link>
+            </Formatting>
+            <Exported Text="Ayrıca, Aronium dışa aktarma işlevi kullanılarak daha önce dışa aktarılan ürünleri almak için bu temel içe aktarmayı kullanabilirsiniz."></Exported>
+          </Description>
+        </Basic>
+        <Csv Text="Gelişmiş">
+          <Description Text="Özel CSV dosyanızı veya diğer uygulamalardan dışa aktarılan bir CSV'yi kullanarak ürün yüklemek için gelişmiş içe aktarma özelliğini kullanın.\nDeğiştirilen içe aktarma hakkında daha fazla bilgiyi şu adresten okuyabilirsiniz:">
+            <Link Text="destek merkezimiz"></Link>
+          </Description>
+          <SelectFile Text="Dosya seç"></SelectFile>
+          <Fields>
+            <Name Text="Ad"></Name>
+            <ProductGroup Text="Ürün grubu"></ProductGroup>
+            <SKU Text="SKU"></SKU>
+            <Barcode Text="Barkod"></Barcode>
+            <MeasurementUnit Text="Ölçü birimi"></MeasurementUnit>
+            <Cost Text="Maliyet"></Cost>
+            <Markup Text="Fiyat artışı"></Markup>
+            <Price Text="Fiyat"></Price>
+            <Tax Text="Vergi"></Tax>
+            <IsTaxInclusivePrice Text="Vergi dahil fiyat"></IsTaxInclusivePrice>
+            <IsPriceChangeAllowed Text="Fiyat değişikliğine izin ver"></IsPriceChangeAllowed>
+            <IsUsingDefaultQuantity Text="Varsayılan miktarı kullan"></IsUsingDefaultQuantity>
+            <IsService Text="Servis (stok kullanmayan)"></IsService>
+            <IsEnabled Text="Etkin"></IsEnabled>
+            <Description Text="Açıklama"></Description>
+            <Quantity Text="Miktar"></Quantity>
+            <Clear Text="Değeri temizle"></Clear>
+          </Fields>
+          <RequiredField Text="Gerekli alanı belirtir"></RequiredField>
+          <Import Text="İçeri aktar"></Import>
+          <Preview Text="Önizleme">
+            <ProductsCount Text="İçeri aktarılacak ürün sayısı:"></ProductsCount>
+          </Preview>
+          <Error>
+            <RequiredFields Text="Gerekli alanlar eksik. Lütfen, içeri aktarmadan önce tüm gerekli alanları seçin."></RequiredFields>
+            <InvalidContent Text="CSV dosyası ayrıştırılırken hata oluştu. Lütfen içeriğinizi kontrol edip tekrar deneyin. \nHata mesajı: {0}"></InvalidContent>
+            <InvalidField Text="&quot;{0}&quot; alanı için geçersiz giriş. Lütfen dosya içeriğini çift kontrol edin ve tekrar deneyin."></InvalidField>
+            <FileNotSelected Text="CSV dosyası seçilmemiş. Devam etmek için lütfen dosyayı seçiniz."></FileNotSelected>
+            <DuplicateSKU Text="Yinelenen ürün kodları tespit edildi. Ürün adı: &quot;{0}&quot;. Çoğaltılmış kod: &quot;{1}&quot;"></DuplicateSKU>
+            <DuplicateName Text="Yinelenen ürün adı tespit edildi. Ürün adı: &quot;{0}&quot;."></DuplicateName>
+          </Error>
+          <Duplicates Text="Tekrarlanan bulurnursa ne yapılsın ?">
+            <Skip Text="Tekrarlananı atla" />
+            <Merge Text="Tekrarlananları birleştir" />
+          </Duplicates>
+        </Csv>
+        <Xml Text="XML">
+          <Description Text="Başka bir Aronium örneğinden dışa aktarılan ürünleri yüklemek için Xml içe aktarımını kullanın.\nXml içe aktarma, resimler ve ürünler hiyerarşisi dahil olmak üzere tüm özellikleri koruyacaktır."></Description>
+          <SelectFile Text="Dosya seç"></SelectFile>
+          <Import Text="İçeri aktar"></Import>
+        </Xml>
+      </Import>
+      <PriceTags Text="Fiyat etiketleri">
+        <Loading Text="Fiyat etiketleri şablon yükleniyor... Lütfen bekleyin..."></Loading>
+        <Layout Text="Yerleşim">
+          <Columns Text="Sütunlar"></Columns>
+          <RowHeight Text="Satır yüksekliği"></RowHeight>
+        </Layout>
+        <Display Text="Ekran">
+          <Barcode Text="Barkod">
+            <Type Text="Barkod tipi"></Type>
+          </Barcode>
+          <Code Text="Kod (SKU)"></Code>
+          <PriceIncludesTax Text="Vergi Dahil Fiyat" />
+        </Display>
+        <Products Text="Ürünler">
+          <All Text="Tüm ürünler"></All>
+          <Product Text="Ürün"></Product>
+          <NumberOfCopies Text="Kopya sayısı"></NumberOfCopies>
+        </Products>
+      </PriceTags>
+    </Products>
+    <Customers Text="Müşteriler &amp; Tedarikçiler">
+      <Search Text="Müşterileri &amp; tedarikçileri arayın"></Search>
+      <LearnMore Text="Müşteriler ve tedarikçiler hakkında daha fazla bilgi edinin"></LearnMore>
+      <New Text="Yeni müşteri / tedarikçi"></New>
+      <Delete Text="Sil">
+        <Confirmation Text="&quot;{0}&quot; ifadesini silmek istediğinizden emin misiniz?"></Confirmation>
+        <Error Text="Müşteri silme hatası. Müşteri silinemedi.\nSistem İletisi: {0}"></Error>
+      </Delete>
+      <Customer>
+        <Edit Text="&quot;{0}&quot; Düzenle"></Edit>
+        <General Text="Genel">
+          <Title Text="Genel bilgi"></Title>
+          <Code Text="Kod"></Code>
+          <Name Text="İsim"></Name>
+          <Address Text="Adres"></Address>
+          <PostalCode Text="Posta kodu"></PostalCode>
+          <City Text="Şehir"></City>
+          <Country Text="Ülke"></Country>
+          <TaxNumber Text="Vergi numarası"></TaxNumber>
+          <RabatePercent Text="İndirim"></RabatePercent>
+          <Email Text="Email"></Email>
+          <PhoneNumber Text="Telefon numarası"></PhoneNumber>
+          <IsEnabled Text="Aktif"></IsEnabled>
+          <IsCustomer Text="Müşteri"></IsCustomer>
+          <IsSupplier Text="Tedarikçi"></IsSupplier>
+        </General>
+        <Loyalty>
+          <Discounts Text="İndirimler">
+            <Title Text="Ürünler veya ürün grupları için müşteri indirimlerini ayarla"></Title>
+            <Info Text="Seçili ürün için indirim ayarla"></Info>
+            <NoItems Text="İndirim yok"></NoItems>
+            <Existing Text="&quot;{0}&quot; için indirim zaten mevcut."></Existing>
+            <Clear Text="Tüm indirimleri temizle"></Clear>
+          </Discounts>
+          <Cards Text="Sadakat kartları">
+            <Title Text="Müşteri sadakat kartlarını girin"></Title>
+            <CardNumber Text="Kart numarası"></CardNumber>
+            <Add Text="Kart ekle"></Add>
+            <Duplicate Text="Sadakat kartı zaten var"></Duplicate>
+          </Cards>
+        </Loyalty>
+        <Saved>
+          <Created Text="Yeni müşteri başarıyla oluşturuldu."></Created>
+          <Updated Text="Müşteri başarıyla değiştirildi."></Updated>
+        </Saved>
+        <Existing Text="Mevcut müşteri">
+          <Warning Text="Benzer müşteri zaten mevcut: &quot;{0}&quot;.\nİçerik alanları: {1}.\nÜretiminizi yine de kaydetmek istiyor musunuz?"></Warning>
+        </Existing>
+        <PaymentTerms Text="Ödeme koşulları">
+          <DueDatePeriod Text="Son ödeme tarihi">
+            <Info Text="Bu müşteriye ödenmemiş her bir satış için işlemin ödenmesinden önce gün sayısını belirlemek için vade tarihini kullanın"></Info>
+            <Days Text="günler"></Days>
+          </DueDatePeriod>
+        </PaymentTerms>
+        <Default>
+          <Warning Text="Bu, müşterinin açıkça atanmadığı tüm satışlar için kullanılan varsayılan müşteridir.\n\nBu müşteriyi değiştirmemenizi şiddetle tavsiye ederiz." />
+        </Default>
+      </Customer>
+      <Guide>
+        <Title Text="Müşteriler ve tedarikçiler"></Title>
+        <Content Text="Müşteri ve tedarikçiler açmak için burayı tıklayın bölüm"></Content>
+        <Add>
+          <Title Text="Müşteri veya tedarikçi ekle"></Title>
+          <Content Text="Yeni müşteri veya tedarikçi oluşturmak için buraya tıklayın"></Content>
+          <Name>
+            <Title Text="İsim girin"></Title>
+            <Content Text="Müşteri veya tedarikçi adını girin"></Content>
+          </Name>
+          <Save>
+            <Title Text="Değişiklikleri kaydet"></Title>
+            <Content Text="Tüm detayları girdikten sonra, değişiklikleri kaydetmek için &quot;Kaydet&quot; butonuna tıklayın."></Content>
+          </Save>
+        </Add>
+      </Guide>
+      <Import Text="İçe aktar">
+        <Title Text="Müşterileri içeri aktar"></Title>
+        <Description Text="Özel CSV dosyanızı veya başka bir uygulamadan dışa aktarılan bir CSV'yi kullanarak müşterilerin listesini yüklemek için müşterilerin içe aktarımını kullanın.\nMüşterilerin içe aktarma hakkında daha fazla bilgi edinebilirsiniz.">
+          <Link Text="destek merkezimiz"></Link>
+        </Description>
+        <Fields>
+          <Name Text="Ad"></Name>
+          <Code Text="Kod"></Code>
+          <TaxNumber Text="Vergi numarası"></TaxNumber>
+          <Address Text="Adres"></Address>
+          <ZIP Text="ZIP"></ZIP>
+          <City Text="Şehir"></City>
+          <Country Text="Ülke"></Country>
+          <Email Text="Email"></Email>
+          <Phone Text="Telefon"></Phone>
+          <IsEnabled Text="İzin verildi"></IsEnabled>
+          <IsCustomer Text="Müşteri"></IsCustomer>
+          <Clear Text="Değeri temizle"></Clear>
+        </Fields>
+        <Import Text="İçeri aktar"></Import>
+        <Preview Text="Önizleme">
+          <CustomersCount Text="İçeri aktarılıcak müşteri miktarı:"></CustomersCount>
+        </Preview>
+        <RequiredField Text="Gerekli alanı belirtir"></RequiredField>
+        <Importing Text="Müşteriler içeri aktarılıyor... Lütfen bekleyin..."></Importing>
+        <Error>
+          <RequiredFields Text="Gerekli alanlar eksik. Lütfen, içeri aktarmadan önce tüm gerekli alanları seçin."></RequiredFields>
+          <InvalidContent Text="CSV dosyası ayrıştırılırken hata oluştu. Lütfen içeriğinizi kontrol edip tekrar deneyin. \nHata mesajı: {0}"></InvalidContent>
+          <InvalidField Text="&quot;{0}&quot; alanı için geçersiz giriş. Lütfen dosya içeriğini çift kontrol edin ve tekrar deneyin."></InvalidField>
+          <FileNotSelected Text="CSV dosyası seçilmemiş. Devam etmek için lütfen dosyayı seçiniz."></FileNotSelected>
+          <DuplicateName Text="Çakışan müşteri adı tespit edildi. Müşteri adı: &quot;{0}&quot;."></DuplicateName>
+        </Error>
+        <Completed Text="Müşteriler başarıyla içeri aktarıldı!"></Completed>
+      </Import>
+      <Export Text="Dışa Aktar">
+        <Completed Text="Müşteriler başarıyla verildi! \nDosya adı: &quot;{0}&quot;"></Completed>
+      </Export>
+    </Customers>
+    <PaymentTypes Text="Ödeme Türleri">
+      <LearnMore Text="Ödeme türleri hakkında daha fazla bilgi edinin"></LearnMore>
+      <New Text="Yeni ödeme türü"></New>
+      <Edit Text="Ödeme türünü düzenle &quot;{0}&quot;"></Edit>
+      <Delete Text="Ödeme türünü sil">
+        <Confirmation Text="&quot;{0}&quot; ifadesini silmek istediğinizden emin misiniz?"></Confirmation>
+        <Error Text="Ödeme türünü silme hatası. Seçilen ödeme türü silinemez. \nSistem İletisi: {0}"></Error>
+        <DataViolation Text="Seçilen ödeme türü silinemiyor. Ödeme türünün belgelerde kullanılmadığından emin olun ve tekrar deneyin."></DataViolation>
+      </Delete>
+      <PaymentType>
+        <Name Text="Ad"></Name>
+        <Code Text="Kod"></Code>
+        <IsCustomerRequired Text="Müşteri gerekli"></IsCustomerRequired>
+        <IsFiscal Text="Makbuz yazdır"></IsFiscal>
+        <IsChangeAllowed Text="İzin değiştir"></IsChangeAllowed>
+        <Ordinal Text="Pozisyon"></Ordinal>
+        <IsEnabled Text="Etkin"></IsEnabled>
+        <IsQuickPayment Text="Hızlı ödeme"></IsQuickPayment>
+        <OpenCashDrawer Text="Yazar kasayı aç"></OpenCashDrawer>
+        <ShortcutKey Text="Kısayol tuşu"></ShortcutKey>
+        <MarkAsPaid Text="Ödendi olarak işaretle"></MarkAsPaid>
+        <Saved>
+          <Created Text="Ödeme şekli başarıyla oluşturuldu."></Created>
+          <Updated Text="Ödeme şekli başarıyla değiştirildi."></Updated>
+        </Saved>
+        <Error Text="Hata">
+          <ExistingShortcutKey Text="Belirtilen kısayol tuşu zaten &quot;{0}&quot; ödeme türüne atanmıştır.\nKısayol tuşları benzersiz olmalıdır.\nLütfen farklı kısayol tuşlarını belirtin ve tekrar deneyin.">
+            <Title Text="Yinelenen kısayol tuşu algılandı"></Title>
+          </ExistingShortcutKey>
+        </Error>
+      </PaymentType>
+      <Onboarding>
+        <Title Text="Ödeme türleri"></Title>
+        <Info Text="Mağazanızda satılık ödeme türlerini girin."></Info>
+        <AddMore Text="Kaydet ve daha fazlasını ekle">
+          <Error Text="Yeni ödeme türü eklenirken hata oluştu.\nCihazınızı kontrol edin ve tekrar deneyin"></Error>
+        </AddMore>
+        <Existing Text="Mevcut ödeme türleri"></Existing>
+      </Onboarding>
+    </PaymentTypes>
+    <Documents Text="Belgeler">
+      <View Text="Belgeleri görüntüle"></View>
+      <Search Text="Belgeleri ara">
+        <Customer Text="Müşteri">
+          <All Text="Tüm müşteriler"></All>
+        </Customer>
+        <Product Text="Ürün">
+          <All Text="Tüm ürünler"></All>
+        </Product>
+        <Period Text="Dönem">
+          <Tip Text="Arama dönemini seçmek için tıklayın"></Tip>
+        </Period>
+        <DocumentType Text="Belge türü">
+          <All Text="Tüm belge türleri"></All>
+        </DocumentType>
+        <User Text="Kullanıcı">
+          <All Text="Tüm kullanıcılar"></All>
+        </User>
+        <PaidStatus Text="Ödeme durumu">
+          <None Text="Tüm işlemler"></None>
+          <Paid Text="Ödenmiş"></Paid>
+          <Unpaid Text="Ödenmemiş"></Unpaid>
+        </PaidStatus>
+        <DocumentNumber Text="Belge numarası"></DocumentNumber>
+        <ReferenceDocumentNumber Text="Harici belge"></ReferenceDocumentNumber>
+        <Clear Text="Tüm filtreleri temizle"></Clear>
+        <CashRegister Text="Yazar kasa">
+          <All Text="Tüm yazar kasalar" />
+        </CashRegister>
+      </Search>
+      <Document>
+        <Save>
+          <Saved Text="Belge başarıyla kaydedildi"></Saved>
+          <Error Text="Belgeyi kaydederken hata oluştu. Değişiklikler kaydedilmez.\nSistem Mesaj: {0}">
+            <InvalidPayments Text="Geçersiz ödeme tutarı">
+              <Info Text="Ödeme tutarı, toplam dokümana eşit olmalıdır. Lütfen belge ödemelerini düzeltin ve tekrar deneyin.\nDoküman toplamı: {0}. Ödeme tutarı: {1}."></Info>
+            </InvalidPayments>
+          </Error>
+        </Save>
+        <UnsavedChanges Text="Kaydedilmemiş değişiklikler">
+          <Confirmation Text="&quot;{0}&quot; dokümanı kaydedilmemiş değişiklikler içeriyor.\nDevam etmeden önce belgeyi kaydetmek istiyor musunuz?"></Confirmation>
+        </UnsavedChanges>
+        <StockDate Text="Stok değişim tarihini seç">
+          <Description Text="Bu belgede stok değişikliğinin kaydedildiği tarihi girin"></Description>
+          <Invalid Text="Geçersiz stok tarihi">
+            <Description Text="Seçilen eyleme izin verilmiyor. \nMevcut stok sayısı bulundu. {1} tarihinde oluşturulan &quot;{0}&quot; dokümanı. \nStoku tarihini kontrol edin ve tekrar deneyin."></Description>
+            <Message Text="Seçilen stok tarihine izin verilmiyor.\nEnvanter sayısı {0} {1} tarihinde oluşturuldu"></Message>
+            <InvalidTime Text="Envanter zamanı gelecekte olamaz"></InvalidTime>
+          </Invalid>
+        </StockDate>
+        <Note Text="Not"></Note>
+        <InternalNote Text="Dahili not"></InternalNote>
+        <PaidStatus>
+          <Changed Text="Ödenmiş durum başarıyla değiştirildi"></Changed>
+        </PaidStatus>
+        <Items>
+          <CostPrice>
+            <Settings>
+              <AutoUpdate Text="Satın alma işleminde maliyet fiyatını otomatik güncelle"></AutoUpdate>
+            </Settings>
+            <Update Text="Maliyet fiyatını güncelle">
+              <Info Text="Ürün maliyeti değişti. Maliyet fiyatını değiştirmek istediğiniz ürünleri seçin."></Info>
+              <Confirmation Text="Seçilen ürünler için maliyet fiyatını güncellemek ister misiniz?"></Confirmation>
+              <Success Text="Maliyet fiyatları başarıyla güncellendi"></Success>
+            </Update>
+          </CostPrice>
+          <Missing Text="Seçilen ürün mevcut değil."></Missing>
+        </Items>
+        <Payments>
+          <AutomaticallyModified Text="Ödemeler ve mevcut tutarlar, toplam ödemelerle eşleşecek şekilde güncellenir" />
+          <MarkPaid Text="Tüm kredi ödemeleri artık ödenmiştir. Belgeyi ödendi olarak işaretlemek istiyor musunuz?">
+            <Title Text="Belge durumunu Güncelle" />
+          </MarkPaid>
+          <Status Text="Durum">
+            <Paid Text="Ödenmiş" />
+            <Unpaid Text="Ödenmemiş" />
+          </Status>
+        </Payments>
+      </Document>
+      <New>
+        <SelectDocumentType Text="Belge türünü seç"></SelectDocumentType>
+      </New>
+      <NoDocument Text="İstenen belge mevcut değil."></NoDocument>
+      <Inventory>
+        <Date Text="Envanter tarihini seçin">
+          <Description Text="Envanter listesinin oluşturulduğu tarihi girin."></Description>
+        </Date>
+        <Document>
+          <Item>
+            <Expected Text="Beklenen"></Expected>
+            <Counted Text="Sayılan"></Counted>
+            <ChangeQuantity Text="Değişim miktarı"></ChangeQuantity>
+          </Item>
+          <ExistingItem Text="Seçilen doküman bu belgeye zaten eklenmiş."></ExistingItem>
+          <Service Text="Stok sayısına hizmet ekleme deneniyor">
+            <Info Text="Seçilen öğe &quot;{0}&quot; bir hizmet olarak işaretlenmiştir. Envanter sayısına hizmet eklemek istediğinizden emin misiniz?"></Info>
+          </Service>
+          <AddGroup Text="Belge için grup öğeleri ekle">
+            <Confirmation Text="&quot;{0}&quot; grubundan tüm ürünleri envanter sayısına eklemek istediğinizden emin misiniz?"></Confirmation>
+          </AddGroup>
+        </Document>
+      </Inventory>
+      <Guide>
+        <Title Text="Açık belgeler"></Title>
+        <Content Text="Belge bölümünü açmak ve ilk satın alımınızı eklemek için buraya tıklayın."></Content>
+        <Add>
+          <Title Text="Belge oluştur"></Title>
+          <Content Text="Yeni satın alımlar oluşturmak ve ürüne stok eklemek için burayı tıklayın"></Content>
+          <Customer>
+            <Title Text="Müşteri seçin"></Title>
+            <Content Text="Bu belge için müşteri seçin"></Content>
+          </Customer>
+          <Supplier>
+            <Title Text="Tedarikçiyi seçin"></Title>
+            <Content Text="Bu belge için tedarikçi seçin"></Content>
+          </Supplier>
+          <Product>
+            <Title Text="Ürün seç"></Title>
+            <Content Text="Dökümana eklemek istediğiniz ürüne çift tıklayın."></Content>
+          </Product>
+          <Item>
+            <Quantity>
+              <Title Text="Miktarı girin"></Title>
+              <Content Text="Satın alınan miktarı girin. Bu miktar stok üzerine konacaktır"></Content>
+            </Quantity>
+            <Price>
+              <Title Text="Fiyat"></Title>
+              <Content Text="Girilen fiyat"></Content>
+            </Price>
+            <Save>
+              <Title Text="Değişiklikleri kaydet"></Title>
+              <Content Text="Değişiklikleri kaydetmek için &quot;Kaydet&quot; butonuna tıkla ve bu maddeyi belgeye ekle"></Content>
+            </Save>
+          </Item>
+          <Save>
+            <Title Text="Belgeyi kaydet"></Title>
+            <Content Text="Belgeyi kaydetmek için &quot;Kaydet&quot; butonuna basın"></Content>
+          </Save>
+        </Add>
+      </Guide>
+    </Documents>
+    <Countries Text="Ülkeler">
+      <New Text="Yeni ülke"></New>
+      <Delete>
+        <Title Text="Ülke sil"></Title>
+        <Confirmation Text="&quot;{0}&quot; ülkesini silmek istediğinizden emin misiniz?"></Confirmation>
+      </Delete>
+      <Country>
+        <Edit Text="Ülke Düzenle &quot;{0}&quot;"></Edit>
+        <Name Text="Ad"></Name>
+        <Code Text="Kod"></Code>
+        <Saved>
+          <Created Text="Ülke başarıyla oluşturuldu"></Created>
+          <Updated Text="Ülke başarıyla düzenlendi"></Updated>
+        </Saved>
+      </Country>
+    </Countries>
+    <Company Text="Şirketim">
+      <LearnMore Text="Şirket bilgileri hakkında daha fazla bilgi edinin"></LearnMore>
+      <Details Text="Şirket verileri">
+        <Title Text="Şirket verileri"></Title>
+        <Logo Text="Logo">
+          <Add Text="Göz at"></Add>
+          <Remove Text="Temizle"></Remove>
+        </Logo>
+        <BankAccount Text="Banka hesabı">
+          <Number Text="Banka acc. number"></Number>
+          <BankDetails Text="Banka bilgileri"></BankDetails>
+        </BankAccount>
+      </Details>
+      <Saved Text="Şirket verileri başarıyla kaydedildi"></Saved>
+      <Onboarding>
+        <Title Text="Şirket bilgileri"></Title>
+        <Info Text="Şirket bilgilerinizi girin. Şirket bilgileri makbuzlar ve faturalar için kullanılır"></Info>
+      </Onboarding>
+      <Reset Text="Veritabanını sıfırla">
+        <AdminPassword Text="Yönetici şifresini girin"></AdminPassword>
+        <Backup>
+          <Info Text="Sıfırlamadan önce veritabanı yedekleme işlemi gerçekleştirilecek.\nAşağıdaki alanları kullanarak varsayılan yedekleme hedefini değiştirebilirsiniz."></Info>
+          <Path Text="Yedek veritabanı yolu">
+            <Select Text="Sıfırlama gerçekleştirilmeden önce veritabanı yedeklemesinin kaydedileceği hedefi seçin."></Select>
+          </Path>
+          <Completed Text="Veritabanı yedeklemesi tamamlandı"></Completed>
+        </Backup>
+        <PerformReset Text="Veritabanını sıfırla">
+          <Confirmation Text="Veritabanını sıfırlamak ve tüm verileri silmek istediğinizden emin misiniz?">
+            <Title Text="Veritabanı sıfırlama işlemi devam ediyor"></Title>
+          </Confirmation>
+        </PerformReset>
+        <Completed Text="Veritabanı sıfırlama işlemi başarıyla tamamlandı. Aronium şimdi yeniden başlayacak."></Completed>
+      </Reset>
+    </Company>
+    <Guide>
+      <Title Text="Yönetim"></Title>
+      <Content Text="Yönetim bölümünü açmak ve ürün ve müşteri eklemek için burayı tıklayın"></Content>
+    </Guide>
+    <Authorization>
+      <Title Text="Lütfen yönetim bölümüne erişmek için şifre giriniz"></Title>
+    </Authorization>
+  </Management>
+</Language>

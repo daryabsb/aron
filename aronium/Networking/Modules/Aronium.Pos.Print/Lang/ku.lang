@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ku" name="kurdish">
+  <Print>
+    <Labels>
+      <Documents>
+        <InventoryCount Text="جەردی کۆگا">
+          <Counted Text="ژمێردراو" />
+          <CountedValue Text="نرخی ژمێردراو" />
+          <CreatedBy Text="دروستکراوە لە لایەن" />
+          <DiffMinus Text="جیاوازی -" />
+          <DiffPlus Text="جیاوازی+" />
+          <Expected Text="چاوەڕوانکراو" />
+          <Time Text="کات" />
+          <NegativeAmount Text="بڕ -" />
+          <PositiveAmount Text="بڕ +" />
+        </InventoryCount>
+        <Invoice Text="حیساب">
+          <AmountDue Text="بڕی پارەی نەدراو" />
+          <BankAccountNumber Text="ژمارەی حیسابی بانکی" />
+          <BankDetails Text="زانیاری بانک" />
+          <BillTo Text="وەسڵ بڕین بۆ" />
+          <InvoiceNumber Text="ژمارەی حیساب" />
+          <Item Text="کاڵا" />
+          <ItemsCount Text="ژمارەی کاڵا" />
+          <PaidAmount Text="پارەی دراو" />
+          <PaymentMethod Text="جۆری پارەدان" />
+          <PaymentStatus Text="دۆخی پارەدان">
+            <Paid Text="پارە دراوە" />
+            <Unpaid Text="پارە نەدراوە" />
+          </PaymentStatus>
+        </Invoice>
+        <LossAndDamage Text="زەرەر و زیان" />
+        <ProformaInvoice Text="حیسابی دیاریکراو" />
+        <Purchase Text="وەصڵی بەرهەمەکان" />
+        <Refund Text="پارە گەڕاندنەوە">
+          <ReceiptNumber Text="ژمارەی وەصڵ" />
+          <RefundNumber Text="ژمارەی پارە گەڕاندنەوە" />
+        </Refund>
+        <StockReturn Text="پارەی گەڕاوەی بەرهەمەکان" />
+      </Documents>
+      <General>
+        <Company Text="کۆمپانیا">
+          <Address Text="ناونیشان" />
+        </Company>
+        <Cost Text="تێچوو" />
+        <Customer Text="کڕیار" />
+        <Date Text="بەروار" />
+        <Description Text="باس" />
+        <Discount Text="داشکاندن" />
+        <DiscountGranted Text="داشکاندنی پێدرا" />
+        <Document Text="ڕاپۆرت" />
+        <DocumentNumber Text="ژمارەی ڕاپۆرت" />
+        <DueDate Text="ماوەی دانی پارە" />
+        <Email Text="ئیمەیڵ" />
+        <ExternalDocument Text="ڕاپۆرتی دەرەکی" />
+        <CashRegister Text="کاشێر" />
+        <Code Text="کۆد" />
+        <Margin Text="ڕێژەی قازانج" />
+        <Name Text="ناو" />
+        <Numbering Text="#" />
+        <Page Text="پەڕە" />
+        <Period Text="ماوە" />
+        <Phone Text="ژمارەی تەلەفون" />
+        <Product Text="بەرهەم" />
+        <ProductGroup Text="گروپی بەرهەم" />
+        <ProductName Text="ناوی بەرهەم" />
+        <Products Text="بەرهەمەکان" />
+        <Profit Text="قازانج" />
+        <PurchaseNumber Text="ژمارەی کڕین" />
+        <TaxNumber Text="ژمارەی باج" />
+        <Qty Text="ژ.م" />
+        <Quantity Text="ژمارە" />
+        <Subtotal Text="پێش کۆی گشتی" />
+        <Supplier Text="دابینکار" />
+        <Tax Text="باج" />
+        <TaxName Text="ناوی باج" />
+        <Total Text="کۆی گشتی" />
+        <TotalAfterDiscount Text="کۆی گشتی دوای داشکاندن" />
+        <TotalBeforeDiscount Text="کۆی گشتی پێش داشکاندن" />
+        <TotalBeforeTax Text="کۆی گشتی پێش باج" />
+        <TotalDiscount Text="کۆی گشتی داشکاندن" />
+        <TotalPaid Text="کۆی گشتی پارەی دراو" />
+        <TotalUnpaid Text="کۆی گشتی پارەی نەدراو" />
+        <UnitOfMeasurement Text="یەکەی پێوانە" />
+        <UnitPrice Text="نرخی ئەکەیەک" />
+        <User Text="بەکارهێنەر" />
+      </General>
+      <Reports>
+        <DailySales Text="فرۆشی ڕۆژانە" />
+        <DiscountsGranted Text="داشکاندنی کراو">
+          <BeforeTax Text="پێش باج" />
+          <AfterTax Text="دوای باج" />
+          <NumberOfDiscounts Text="ژمارەی ئەو داواکاریانەی داشکاندنیان بۆ کراوە" />
+          <TotalDiscounted Text="کۆی گشتی داشکاندن" />
+        </DiscountsGranted>
+        <InventoryCount Text="ڕاپۆرتی جەردی کۆگا" />
+        <Invoices Text="وەصڵەکان" />
+        <ItemsDiscounts Text="داشکاندنی کاڵاکان" />
+        <LossAndDamageByProduct Text="زەرەر و زیان بەپێی بەرهەم" />
+        <PaymentTypesByCustomer Text="جۆری پارەدان بەپێی کڕیار" />
+        <PaymentTypesByUser Text="جۆری پارەدان بەپێی بەکارهێنەر" />
+        <ProfitAndMargin Text="قازانج" />
+        <PurcahsedItemsDiscounts Text="داشکاندنەکانی کاڵا کڕاوەکان" />
+        <PurchaseByProduct Text="کڕین بەپێی بەرهەم" />
+        <PurchaseBySupplier Text="کڕین بەپێی دابینکار" />
+        <PurchaseDiscounts Text="داشکاندنی کڕینەکان" />
+        <PurchaseInvoices Text="وەصڵی کڕینەکان" />
+        <Refunds Text="پارە گەڕاندنەوەکان" />
+        <SalesByCustomer Text="فرۆشەکان بەپێی کڕیار" />
+        <SalesByPaymentType Text="فرۆشەکان بەپێی جۆری پارەدان" />
+        <SalesByProduct Text="فرۆشەکان بەپێی بەرهەم" />
+        <SalesByProductGroups Text="فرۆشەکان بەپێی گروپی بەرهەم" />
+        <SalesByUser Text="فرۆشەکان بەپێی بەکارهێنەرەکان" />
+        <StartingCashEntries Text="پارەی دەستپێکی داغڵکراو">
+          <ZReport Text="z ڕاپۆرتی" />
+          <Open Text="کراوە" />
+        </StartingCashEntries>
+        <Stock Text="ڕاپۆرتی کۆگا">
+          <CostIncludingTax Text="تێچوو لەگەڵ باج" />
+          <History Text="مێژوو لە کۆگا">
+            <CustomerOrSupplier Text="کڕیار / دابینکار" />
+            <DocumentNumber Text="ژمارەی ڕاپۆرت" />
+            <DocumentType Text="جۆری ڕاپۆرت" />
+            <QuantityOnHand Text="بڕی بەردەست" />
+            <StockDate Text="بەرواری کۆگاکردن" />
+          </History>
+        </Stock>
+        <StockMovement Text="جوڵەی کۆگا">
+          <AverageNumberOfSalesPerItem Text="ڕێژەی ناوەندی فرۆش بەپێی کاڵا" />
+          <FastMoving Text="جوڵەی خێرا" />
+          <SlowMoving Text="جوڵەی خاو" />
+          <NonMoving Text="ناجوڵێت" />
+          <NumberOfSales Text="ژمارەی فرۆشەکان" />
+          <TotalNumberOfSales Text="کۆی گشتی ژمارەی فرۆشەکان" />
+        </StockMovement>
+        <Taxes Text="باج" />
+        <UnpaidPurchases Text="پارەی نەدراوی کڕینەکان" />
+        <UnpaidSales Text="پارەی نەدراوەی فرۆشەکان" />
+      </Reports>
+    </Labels>
+  </Print>
+</Language>

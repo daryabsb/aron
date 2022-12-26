@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Print>
+    <Labels>
+      <Documents>
+        <Invoice Text="Rechnung">
+          <BillTo Text="Kunde/Zahler" />
+          <InvoiceNumber Text="Rechnungsnummer" />
+          <Item Text="Artikel" />
+          <PaymentStatus Text="Zahlungsstatus">
+            <Unpaid Text="Unbezahlt" />
+            <Paid Text="Bezahlt" />
+          </PaymentStatus>
+          <PaymentMethod Text="Bezahlverfahren" />
+          <AmountDue Text="Fälliger Betrag" />
+          <BankAccountNumber Text="Konto-Nr." />
+          <BankDetails Text="Bankdaten" />
+          <ItemsCount Text="Artikel zählen" />
+          <PaidAmount Text="Gezahlter Betrag" />
+        </Invoice>
+        <InventoryCount Text="Zählung der Bestände">
+          <Counted Text="Gezählt" />
+          <CountedValue Text="Gezählter Wert" />
+          <CreatedBy Text="Erstellt von" />
+          <DiffMinus Text="Differenz -" />
+          <DiffPlus Text="Differenz +" />
+          <Expected Text="Erwartet" />
+          <Time Text="Zeit" />
+          <NegativeAmount Text="Betrag -" />
+          <PositiveAmount Text="Betrag +" />
+        </InventoryCount>
+        <LossAndDamage Text="Verlust und Beschädigung" />
+        <ProformaInvoice Text="Proforma" />
+        <Purchase Text="Wareneingang" />
+        <Refund Text="Rückerstattung">
+          <ReceiptNumber Text="Belegnummer" />
+          <RefundNumber Text="Erstattungs-Nr." />
+        </Refund>
+        <StockReturn Text="Warenrücksendung" />
+      </Documents>
+      <General>
+        <Numbering Text="#" />
+        <Quantity Text="Menge" />
+        <UnitPrice Text="Einzelpreis" />
+        <Tax Text="MwSt" />
+        <Discount Text="Rabatt" />
+        <Date Text="Datum" />
+        <DueDate Text="Fälligkeitsdatum" />
+        <Total Text="Gesamt" />
+        <Subtotal Text="Zwischensumme" />
+        <CashRegister Text="Registrierkasse" />
+        <Code Text="Code" />
+        <Company Text="Firma">
+          <Address Text="Adresse" />
+        </Company>
+        <Cost Text="Kosten" />
+        <Customer Text="Kunde" />
+        <Description Text="Beschreibung" />
+        <DiscountGranted Text="Gewährter Rabatt" />
+        <Document Text="Dokument" />
+        <DocumentNumber Text="Dokumenten-Nr." />
+        <Email Text="E-Mail" />
+        <ExternalDocument Text="Externes Dokument" />
+        <Margin Text="Gewinnspanne" />
+        <Name Text="Name" />
+        <Page Text="Seite" />
+        <Period Text="Zeitraum" />
+        <Phone Text="Telefon" />
+        <Product Text="Produkt" />
+        <ProductGroup Text="Produkt Gruppe" />
+        <ProductName Text="Produkt Name" />
+        <Products Text="Produkte" />
+        <Profit Text="Gewinn" />
+        <PurchaseNumber Text="Einkaufsnummer" />
+        <TaxNumber Text="Steuer-Nr." />
+        <Qty Text="Menge." />
+        <Supplier Text="Lieferant" />
+        <TaxName Text="Steuerbezeichnung" />
+        <TotalAfterDiscount Text="Gesamtbetrag nach Rabatt" />
+        <TotalBeforeDiscount Text="Gesamtbetrag vor Rabatt" />
+        <TotalBeforeTax Text="Gesamt vor Steuern" />
+        <TotalDiscount Text="Rabatt insgesamt" />
+        <TotalPaid Text="Total bezahlt" />
+        <TotalUnpaid Text="Total Unbezahlt" />
+        <UnitOfMeasurement Text="Maßeinheit" />
+        <User Text="Benutzer" />
+      </General>
+      <Reports>
+        <StockMovement Text="Bewegung der Lagerbestände">
+          <AverageNumberOfSalesPerItem Text="Durchschnittliche Anzahl von Verkäufen pro Artikel" />
+          <FastMoving Text="Schnell bewegend" />
+          <SlowMoving Text="Langsam bewegend" />
+          <NonMoving Text="Keine Bewegung" />
+          <NumberOfSales Text="Anzahl der Verkäufe" />
+          <TotalNumberOfSales Text="Gesamtanzahl der Verkäufe" />
+        </StockMovement>
+        <Taxes Text="Steuer" />
+        <UnpaidPurchases Text="Unbezahlter Einkauf" />
+        <UnpaidSales Text="Unbezahlte Verkäufe" />
+        <DailySales Text="Tägliche Verkäufe" />
+        <DiscountsGranted Text="Gewährte Rabatte">
+          <BeforeTax Text="(before tax)" />
+          <AfterTax Text="(nach Steuern)" />
+          <NumberOfDiscounts Text="Anzahl der rabattierten Aufträge" />
+          <TotalDiscounted Text="Insgesamt  ermäßigt" />
+        </DiscountsGranted>
+        <InventoryCount Text="Bericht über die Inventurzählung" />
+        <Invoices Text="Rechnungen" />
+        <ItemsDiscounts Text="Artikel-Rabatte" />
+        <LossAndDamageByProduct Text="Verlust und Beschädigung nach Produkten" />
+        <PaymentTypesByCustomer Text="Zahlungsarten nach Kunden" />
+        <PaymentTypesByUser Text="Zahlungsarten nach Nutzern" />
+        <ProfitAndMargin Text="Gewinn" />
+        <PurcahsedItemsDiscounts Text="Rabatte auf gekaufte Artikel" />
+        <PurchaseByProduct Text="Kauf nach Produkt" />
+        <PurchaseBySupplier Text="Kauf durch Lieferanten" />
+        <PurchaseDiscounts Text="Einkaufsrabatte" />
+        <PurchaseInvoices Text="Einkaufsrechnungen" />
+        <Refunds Text="Rückerstattungen" />
+        <SalesByCustomer Text="Verkäufe nach Kunden" />
+        <SalesByPaymentType Text="Verkäufe nach Zahlungsarten" />
+        <SalesByProduct Text="Verkäufe nach Produkten" />
+        <SalesByProductGroups Text="Verkäufe nach Produktgruppen" />
+        <SalesByUser Text="Verkäufe nach Verbrauchern" />
+        <StartingCashEntries Text="Start der Kassenbuchungen">
+          <ZReport Text="Z Bericht" />
+          <Open Text="Offen" />
+        </StartingCashEntries>
+        <Stock Text="Lagerbericht">
+          <CostIncludingTax Text="Kosten inkl. Steuer" />
+          <History Text="Bestandsentwicklung">
+            <CustomerOrSupplier Text="Kunde / Lieferant" />
+            <DocumentNumber Text="Doku-Nummer" />
+            <DocumentType Text="Dokumenttyp" />
+            <QuantityOnHand Text="Vorhandene Menge" />
+            <CostPrice Text="Anschaffungspreis" />
+            <StockDate Text="Lagerdatum" />
+          </History>
+        </Stock>
+      </Reports>
+    </Labels>
+  </Print>
+</Language>

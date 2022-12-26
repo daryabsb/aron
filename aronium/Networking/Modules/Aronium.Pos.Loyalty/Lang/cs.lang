@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Loyalty Text="Věrnost">
+    <Promotions Text="Propagační akce a akce">
+      <New Text="Přidat propagaci">
+        <Title Text="Nová propagace" />
+      </New>
+      <Edit>
+        <Title Text="Upravit propagaci „{0}“" />
+      </Edit>
+      <Delete Text="Smazat propagaci">
+        <Confirmation Text="Opravdu chcete smazat propagaci „{0}“?" />
+        <Error Text="Při pokusu o smazání propagace došlo k chybě." />
+      </Delete>
+      <View>
+        <Enabled Text="Povoleno" />
+        <Name Text="Jméno" />
+        <DaysOfWeek Text="Dny v týdnu" />
+        <StartDate Text="Počáteční datum" />
+        <StartTime Text="Čas spuštění" />
+        <EndDate Text="Datum ukončení" />
+        <EndTime Text="Čas ukončení" />
+      </View>
+      <Promotion>
+        <Empty Text="Do propagace nebyly přidány žádné položky." />
+        <Name Text="Název propagace" />
+        <Active Text="Aktivní" />
+        <DaysOfWeek>
+          <All Text="Všechny dny">
+            <ShortName Text="Vše" />
+          </All>
+          <Monday Text="Pondělí">
+            <ShortName Text="Po" />
+          </Monday>
+          <Tuesday Text="Úterý">
+            <ShortName Text="Út" />
+          </Tuesday>
+          <Wednesday Text="Středa">
+            <ShortName Text="Stř" />
+          </Wednesday>
+          <Thursday Text="Čtvrtek">
+            <ShortName Text="Čtv" />
+          </Thursday>
+          <Friday Text="Pátek">
+            <ShortName Text="Pá" />
+          </Friday>
+          <Saturday Text="Sobota">
+            <ShortName Text="So" />
+          </Saturday>
+          <Sunday Text="Neděle">
+            <ShortName Text="Ne" />
+          </Sunday>
+        </DaysOfWeek>
+        <Duration>
+          <Start Text="Start" />
+          <End Text="Konec" />
+        </Duration>
+        <Item>
+          <PriceType>
+            <Discount Text="Sleva" />
+            <FixedPrice Text="Pevná cena" />
+          </PriceType>
+          <Condition Text="Podmínka">
+            <Title Text="Podmínka množství" />
+            <ApplyToAll Text="Aplikovat na všechno" />
+            <Quantity>
+              <Description Text="Zadejte požadované množství pro tuto akci" />
+            </Quantity>
+            <LimitToNext Text="Použít na další">
+              <Description Text="Zadejte množstevní limit, který se použije po dosažení požadovaného množství pro tuto akci" />
+            </LimitToNext>
+            <CopyToAll Text="Zkopírujte stav do všech položek">
+              <Completed Text="Hodnoty stavu zkopírovány do všech propagačních předmětů" />
+            </CopyToAll>
+          </Condition>
+          <InvalidValue Text="neplatná hodnota" />
+          <Errors>
+            <Existing Text="Položka „{0}“ již v této promoakci existuje." />
+          </Errors>
+        </Item>
+        <Saved Text="Propagace byla úspěšně uložena." />
+        <InvalidItems Text="Propagaci nelze uložit. Některé položky obsahují chybu. Zkontrolujte prosím svá data a zkuste to znovu." />
+      </Promotion>
+      <NoPromotions Text="Žádné propagace">
+        <Add Text="Vytvořit novou propagaci" />
+      </NoPromotions>
+      <LearnMore Text="Zjistěte více o akcích a happy hour" />
+    </Promotions>
+  </Loyalty>
+</Language>

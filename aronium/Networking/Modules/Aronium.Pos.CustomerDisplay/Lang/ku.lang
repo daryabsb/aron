@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <CustomerDisplay>
+    <Total Text="کۆی گشتی:" />
+    <Change Text="باقی:" />
+    <Paid Text="پارەی دراو:" />
+    <WelcomeMessage Text="بەخێربێن" />
+    <Settings Text="شاشەی کڕیار">
+      <Enabled Text="لەکاردایە" />
+      <Port Text="" />
+      <CharactersPerLine Text="ژمارەی پێتەکان" />
+      <WelcomeMessage Text="نامەی پێشوازی">
+        <TopLine Text="ڕیزی سەرەوە" />
+        <BottomLine Text="ڕیزی خوارەوە" />
+      </WelcomeMessage>
+      <Test Text="تاقیکردنەوەی شاشە" />
+    </Settings>
+    <Error>
+      <InvalidPortSettings Text="هەڵە ڕویدا لەکاتی ئیشپێکردنی شاشەی کڕیار\nتکایە ڕێکبەندیەکان بپشکنە" />
+    </Error>
+  </CustomerDisplay>
+</Language>

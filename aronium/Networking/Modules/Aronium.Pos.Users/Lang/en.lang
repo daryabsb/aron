@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <Users Text="Users &amp; security">
+    <View Text="Users">
+      <Disabled Text="Show inactive users" />
+    </View>
+    <New Text="Add user" />
+    <ResetPassword Text="Reset password">
+      <Success Text="Password successfully changed" />
+    </ResetPassword>
+    <LearnMore Text="Learn more about users management" />
+    <User>
+      <FirstName Text="First name" />
+      <LastName Text="Last name" />
+      <Email Text="Email" />
+      <Password Text="Password" />
+      <PasswordConfirmation Text="Confirm password" />
+      <AccessLevel Text="Access level" />
+      <IsEnabled Text="Active" />
+      <Error>
+        <PasswordConfirmationMatch Text="Password and password confirmation must match." />
+        <InvalidPassword Text="User with the same password already exists.\nPlease enter unique password and try again." />
+        <Disable>
+          <OpenOrders Text="Disabling user will prevent him from closing open sales.\nPlease close all open orders owned by this user before disabling him.">
+            <Title Text="Unable to disable user with open sales" />
+          </OpenOrders>
+        </Disable>
+        <DuplicateEmail Text="This email is already taken.\nPlease use different email address." />
+      </Error>
+      <Saved Text="User details successfully changed." />
+    </User>
+    <Delete Text="Delete user">
+      <Confirmation Text="Are you sure you want to delete &quot;{0}&quot;?" />
+      <Error>
+        <CurrentUser Text="You can not delete yourself!" />
+        <DataViolation Text="Unable to delete user.\nUser contains documents or other related items." />
+      </Error>
+    </Delete>
+    <Security Text="Security">
+      <Title Text="Set access level for predefined operations" />
+      <Description Text="Select access level for each action in order to set required user permissions." />
+      <LearnMore Text="Learn more about access levels and security" />
+      <MaximumAccessLevelWarning Text="Access level set above the highest value assigned to any user." />
+      <Save>
+        <Success Text="Security levels saved successfully" />
+        <AccessLevelViolation Text="Access level violation">
+          <Info Text="Access levels can be set to a maximum value assigned to any user. Otherwise, you may not be able to access restricted section.\nPlease adjust items in error and try again." />
+        </AccessLevelViolation>
+      </Save>
+      <Group>
+        <General Text="General" />
+        <Sales Text="Sales" />
+      </Group>
+    </Security>
+  </Users>
+</Language>

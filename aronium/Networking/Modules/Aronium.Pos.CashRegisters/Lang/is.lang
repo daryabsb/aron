@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="is" name="Icelandic">
+  <CashRegisters Text="Kassa Kerfi">
+    <New Text="Nýtt Kassa Kerfi" />
+    <Edit Text="Breyta &quot;{0}&quot;" />
+    <CashRegister Text="Kassa Kerfi">
+      <Id Text="ID" />
+      <Name Text="Nafn" />
+    </CashRegister>
+    <Delete>
+      <Confirmation Text="Ertu viss um að þú viljir Eyða &quot;{0}&quot;?" />
+      <Title Text="Eyða Kassa Kerfi" />
+    </Delete>
+    <Saved>
+      <Created Text="Kassa Kerfið Er Tilbúið" />
+      <Updated Text="Kassa Kerfið Hefur Verið Uppfært" />
+    </Saved>
+  </CashRegisters>
+</Language>

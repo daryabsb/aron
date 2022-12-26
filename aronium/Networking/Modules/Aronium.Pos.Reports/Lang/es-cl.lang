@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="es-cl" name="Español (Chile)">
+  <Reports Text="Informes">
+    <Filter Text="Filtro">
+      <User Text="Usuario">
+        <All Text="Todos los usuarios" />
+      </User>
+      <Customer Text="Clientes &amp; proveedores">
+        <All Text="Todos los clientes &amp; proveedores" />
+      </Customer>
+      <Product Text="Producto">
+        <All Text="Todos los productos" />
+      </Product>
+      <Period>
+        <Tip Text="Click para cambiar el periódo del reporte" />
+      </Period>
+      <NotAvailable Text="No aplicable para el informe seleccionado." />
+    </Filter>
+    <Report>
+      <Select Text="Seleccionar informe">
+        <Title Text="Seleccione el informe para ver o imprimir" />
+      </Select>
+      <Show Text="Mostrar reporte" />
+      <NotFound Text="Falta la plantilla de informe." />
+    </Report>
+    <Sales Text="Ventas">
+      <Products Text="Productos" />
+      <PaymentTypes Text="Formas de pago" />
+      <PaymentTypesUsers Text="Tipos de pago por los usuarios" />
+      <TaxRates Text="Tasas de impuestos" />
+      <Customers Text="Clientes" />
+      <Users Text="Usuarios" />
+      <Refunds Text="Devoluciones" />
+      <InvoiceList Text="Lista de facturas" />
+      <Profit Text="Margen de beneficio" />
+      <Daily Text="Ventas diarias" />
+      <PaymentTypesCustomers Text="Tipos de pago por clientes" />
+      <Unpaid Text="Ventas no pagadas" />
+      <StartingCash Text="Inicio de caja - efectivo" />
+      <ProductGroups Text="Grupos de productos" />
+    </Sales>
+    <Purchase Text="Compra">
+      <Suppliers Text="Proveedores" />
+      <Products Text="Productos" />
+      <Unpaid Text="Compra no pagada" />
+    </Purchase>
+  </Reports>
+</Language>

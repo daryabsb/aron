@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Stock Text="Sklad">
+    <Items>
+      <Item>
+        <Product>
+          <Id Text="Id" />
+          <Code Text="Kód" />
+          <Name Text="Název" />
+          <MeasurementUnit Text="Měrná jednotka" />
+          <CostPrice Text="Nákupní cena" />
+        </Product>
+        <Quantity Text="Množství" />
+        <NegativeQuantity Text="Záporné skladové množství" />
+        <TotalCostBeforeTax Text="Náklady" />
+        <TotalCost Text="Náklady vč. daně" />
+        <TotalBeforeTax Text="Hodnota" />
+        <TotalAfterTax Text="Hodnota vč. daně" />
+      </Item>
+      <Filter>
+        <NegativeQuantity Text="Záporné množství">
+          <Info Text="Zobrazit pouze produkty se záporným množstvím" />
+        </NegativeQuantity>
+        <NonZeroQuantity Text="Nenulové množství">
+          <Info Text="Zobrazit pouze produkty s nenulovým množstvím" />
+        </NonZeroQuantity>
+        <ZeroQuantity Text="Nulové množství">
+          <Info Text="Zobrazit produkty pouze s nulovým množstvím" />
+        </ZeroQuantity>
+      </Filter>
+      <Summary>
+        <NegativeCount Text="Celkový počet položek se záporným množstvím na skladě" />
+        <ZeroCount Text="Celkový počet položek s nulovým množstvím na skladě" />
+        <PositiveCount Text="Celkový počet položek s kladným množstvím na skladě" />
+        <TotalBeforeTax Text="Celkem:" />
+        <TotalIncludingTax Text="Celkem vč. daně:" />
+        <SellPrice Text="Prodejní cena" />
+        <CostPrice Text="Nákupní cena">
+          <TotalCostBeforeTax Text="Celkové náklady:" />
+          <TotalCostAfterTax Text="Celkové náklady vč. daně:" />
+        </CostPrice>
+      </Summary>
+    </Items>
+    <Reset Text="Přepočítat množství na skladě">
+      <Completed Text="Výpočet zásob úspěšně dokončen." />
+    </Reset>
+    <History Text="Historie zásob">
+      <Start Text="Start" />
+      <End Text="Konec" />
+      <Document Text="Dokument">
+        <DocumentType Text="Typ dokumentu" />
+        <Customer Text="Zákazník" />
+        <Date Text="Datum" />
+        <StockDate Text="Skladové datum" />
+      </Document>
+      <ChangeQuantity Text="Množství" />
+      <InStock Text="Na skladě" />
+      <MeasurementUnit Text="Měrná jednotka" />
+      <CostPrice Text="Pořizovací cena" />
+    </History>
+    <Print>
+      <Report Text="Zpráva o počtu zásob" />
+    </Print>
+    <ProductDetails>
+      <OnHand Text="Množství po ruce" />
+    </ProductDetails>
+    <Control>
+      <Settings>
+        <PreventNegativeQuantities Text="Zabránit záporným zásobám" />
+      </Settings>
+      <NegativeQuantity Text="Prodej nulového skladového množství.">
+        <Confirmation Text="Nemáte k dispozici dostatečné množství k prodeji této položky. Prodej této položky může mít za následek záporné množství na skladě.\n\nMnožství na skladě: {0}\nPožadované množství: {1}\n\nOpravdu chcete přidat tuto položku do aktuálního výprodeje?" />
+        <Title Text="Chybí skladové množství" />
+        <PermissionDenied Text="Nemáte dostatečná oprávnění prodávat položky s nulovým množstvím. Poraďte se prosím s administrátorem." />
+        <Authorization>
+          <Title Text="Řízení zásob je povoleno.\nChcete-li pokračovat, zadejte heslo pro prodej položky s nulovým skladovým množstvím" />
+        </Authorization>
+        <AllowMultiple>
+          <NotAllowed Text="Opakované kolo není povoleno, pokud je povolena kontrola zásob." />
+        </AllowMultiple>
+        <Security>
+          <Description Text="Řídí, zda je uživatel schopen prodat položky se záporným množstvím" />
+        </Security>
+      </NegativeQuantity>
+    </Control>
+    <QuickInventory Text="Rychlá inventura">
+      <Description Text="Změnit skladové množství u vybrané položky" />
+      <Title Text="Aktualizujte skladové množství" />
+      <Subtitle Text="Nastavte skladová množství pro vybraný produkt.\nDoklad inventarizace se vytvoří automaticky." />
+      <Success Text="Skladové množství úspěšně změněno.\nDokument {0} byl vytvořen." />
+      <Unauthorized Text="Nemáte oprávnění používat rychlý inventář." />
+    </QuickInventory>
+    <LearnMore Text="Zjistěte více o zásobách a skladových zásobách" />
+    <SearchResults Text="Výsledek hledání" />
+    <ShowCostPrices Text="Zobrazit nákladové ceny">
+      <Description Text="Kontroluje, zda se v zobrazení skladu zobrazují nákladové ceny." />
+    </ShowCostPrices>
+  </Stock>
+</Language>

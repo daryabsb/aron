@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Print>
+    <Labels>
+      <Documents>
+        <InventoryCount Text="Varude inventuur">
+          <Counted Text="Loendatud kogus" />
+          <CountedValue Text="Loendatud väärtus" />
+          <CreatedBy Text="Koostas" />
+          <DiffMinus Text="Muutus -" />
+          <DiffPlus Text="Muutus +" />
+          <Expected Text="Eeldatav kogus" />
+          <Time Text="Aeg" />
+          <NegativeAmount Text="Summa -" />
+          <PositiveAmount Text="Summa +" />
+        </InventoryCount>
+        <Invoice Text="Arve">
+          <AmountDue Text="Tasumisele kuulub" />
+          <BankAccountNumber Text="Arveldusarve number" />
+          <BankDetails Text="Pangarekvisiidid" />
+          <BillTo Text="Arve saaja" />
+          <InvoiceNumber Text="Arve nr." />
+          <Item Text="Nimetus" />
+          <ItemsCount Text="Ühikuid" />
+          <PaidAmount Text="Tasutud summa" />
+          <PaymentMethod Text="Makseviis" />
+          <PaymentStatus Text="Makse staatus">
+            <Paid Text="Tasutud" />
+            <Unpaid Text="Tasumata" />
+          </PaymentStatus>
+        </Invoice>
+        <LossAndDamage Text="Mahakandmised" />
+        <ProformaInvoice Text="Ettemaks" />
+        <Purchase Text="Kauba kättesaamine" />
+        <Refund Text="Tagastus">
+          <ReceiptNumber Text="Kviitungi number" />
+          <RefundNumber Text="Tagastuse nr." />
+        </Refund>
+        <StockReturn Text="Kauba tagastamine" />
+      </Documents>
+      <General>
+        <CashRegister Text="Kassa" />
+        <Code Text="Kood" />
+        <Company Text="Asutus">
+          <Address Text="Aadress" />
+        </Company>
+        <Cost Text="Maksumus" />
+        <Customer Text="Klient" />
+        <Date Text="Kuupäev" />
+        <Description Text="Kirjeldus" />
+        <Discount Text="Allahindlus" />
+        <DiscountGranted Text="Allahindluse summa" />
+        <Document Text="Dokument" />
+        <DocumentNumber Text="Dokumendi number" />
+        <DueDate Text="Maksetähtaeg" />
+        <Email Text="E-post" />
+        <ExternalDocument Text="Väline dokument" />
+        <Margin Text="Marginaal" />
+        <Name Text="Nimetus" />
+        <Numbering Text="#" />
+        <Page Text="Lehekülg" />
+        <Period Text="Periood" />
+        <Phone Text="Telefon" />
+        <Product Text="Toode" />
+        <ProductGroup Text="Tootegrupp" />
+        <ProductName Text="Toote nimetus" />
+        <Products Text="Tooted" />
+        <Profit Text="Kasum" />
+        <PurchaseNumber Text="Ostuarve number" />
+        <TaxNumber Text="Reg. nr." />
+        <Qty Text="Kogus" />
+        <Quantity Text="Kogus" />
+        <Subtotal Text="Vahesumma" />
+        <Supplier Text="Tarnija" />
+        <Tax Text="Maks" />
+        <TaxName Text="Maksumäära nimetus" />
+        <Total Text="Kokku" />
+        <TotalAfterDiscount Text="Summa peale allahindlust" />
+        <TotalBeforeDiscount Text="Summa enne allahindlust" />
+        <TotalBeforeTax Text="Kokku enne maksustamist" />
+        <TotalDiscount Text="Allahindlus kokku" />
+        <TotalPaid Text="Kokku makstud" />
+        <TotalUnpaid Text="Kokku tasumata" />
+        <UnitOfMeasurement Text="Mõõtühik" />
+        <UnitPrice Text="Ühiku hind" />
+        <User Text="Kasutaja" />
+      </General>
+      <Reports>
+        <DailySales Text="Igapäevane müük" />
+        <DiscountsGranted Text="Rakendatud allahindlused">
+          <BeforeTax Text="(enne maksumäära)" />
+          <AfterTax Text="(peale maksumäära)" />
+          <NumberOfDiscounts Text="Allahindlusega tellimuste arv" />
+          <TotalDiscounted Text="Allahindlusi kokku" />
+        </DiscountsGranted>
+        <InventoryCount Text="Varude loendamise aruanne" />
+        <Invoices Text="Arved" />
+        <ItemsDiscounts Text="Toodete allahindlused" />
+        <LossAndDamageByProduct Text="Hävinud ja mahakantud tooted" />
+        <PaymentTypesByCustomer Text="Maksetüübid klientide kaupa" />
+        <PaymentTypesByUser Text="Maksetüübid kasutajate kaupa" />
+        <ProfitAndMargin Text="Kasum" />
+        <PurcahsedItemsDiscounts Text="Ostetud toodete allahindlused" />
+        <PurchaseByProduct Text="Ostud toodete kaupa" />
+        <PurchaseBySupplier Text="Ostud tarnija poolt" />
+        <PurchaseDiscounts Text="Ostusoodustused" />
+        <PurchaseInvoices Text="Ostuarved" />
+        <Refunds Text="Tagasimaksed" />
+        <SalesByCustomer Text="Müük kliendi kaupa" />
+        <SalesByPaymentType Text="Müük makseliikide kaupa" />
+        <SalesByProduct Text="Müük toodete kaupa" />
+        <SalesByProductGroups Text="Müük tootergruppide kaupa" />
+        <SalesByUser Text="Müük kasutajate kaupa" />
+        <StartingCashEntries Text="Sularaha liikumine">
+          <ZReport Text="Z aruanne" />
+          <Open Text="Ava" />
+        </StartingCashEntries>
+        <Stock Text="Laovarude aruanne">
+          <CostIncludingTax Text="Hinnad koos maksudega" />
+          <History Text="Laovarude ajalugu">
+            <CustomerOrSupplier Text="Klient / Tarnija" />
+            <DocumentNumber Text="Dok. number" />
+            <DocumentType Text="Dok. liik" />
+            <QuantityOnHand Text="Koguse jääk" />
+            <StockDate Text="Ladustamise kuupäev" />
+            <CostPrice Text="Sisseostuhind" />
+          </History>
+          <CostPrice Text="Sisseostuhind" />
+          <CostBeforeTax Text="Sisseostuhind enne maksustamist" />
+        </Stock>
+        <StockMovement Text="Varude liikumine">
+          <AverageNumberOfSalesPerItem Text="Keskmine müükide arv toote kohta" />
+          <FastMoving Text="Enim ostetud tooted" />
+          <SlowMoving Text="Vähem ostetud tooted" />
+          <NonMoving Text="Seisvad tooted" />
+          <NumberOfSales Text="Müükide arv" />
+          <TotalNumberOfSales Text="Kogu müükide arv" />
+        </StockMovement>
+        <Taxes Text="MAKSUD" />
+        <UnpaidPurchases Text="Tasumata ost" />
+        <UnpaidSales Text="Tasumata müük" />
+        <HourlySales Text="Tunnimüük">
+          <Hours Text="Tunnid" />
+          <TotalSales Text="Müük kokku" />
+          <SalesCount Text="Müükide arv" />
+          <AverageSale Text="Keskmine müük" />
+          <Chart>
+            <Total Text="Müük kokku" />
+            <Count Text="Müükide arv" />
+          </Chart>
+        </HourlySales>
+        <HourlySalesByGroups Text="Tunnipõhine müük tooterühmade kaupa" />
+      </Reports>
+    </Labels>
+  </Print>
+</Language>

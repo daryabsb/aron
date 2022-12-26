@@ -1,0 +1,82 @@
+<Workflow>
+  <Name>Aronium.Pos.Document.Update</Name>
+  <Action>Update</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="d4dfd4d8-c538-4b38-aa4c-4779920a8177" name="Start">
+      <Transitions>
+        <DefaultTransition id="9be19b87-282b-4fd4-8bb3-6bc8b93435b0" name="Get document">
+          <Target>457c60ba-c71f-4821-881d-97186dfd194c</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="2007907f-49d6-4dfd-957d-9984faca65e9" name="Update document">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Documents.CreateDocumentTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="39453da5-633e-48a7-bb24-d542cfb8dfdc" name="Success">
+          <Target>22febe6f-ee95-44a7-82e0-4bd47e612244</Target>
+        </DefaultTransition>
+        <ErrorTransition id="834080b2-cdf1-4712-959d-aa6d04b2b2a4" name="Error">
+          <Target>2a14ddf6-1676-4079-a876-35c6e4324a56</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <EndTask id="49db50da-9366-44bc-866d-15cb1d67c65b" name="End" />
+    <ExternalTask id="b5d46df5-9229-40ae-984b-d8465becb33e" name="Manufacture">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Documents.CreateManufacturesTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="d08f3790-58c2-451d-ab77-9b5eccf20390" name="Completed">
+          <Target>3ba17930-2724-4d80-aefb-a97cf2a9de86</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <RouterTask id="22febe6f-ee95-44a7-82e0-4bd47e612244" name="Auto manufacture">
+      <IsExclusive>False</IsExclusive>
+      <Transitions>
+        <ErrorTransition id="32238dcf-8ff2-4051-a79e-06e70b835203" name="No manufacture">
+          <Target>3ba17930-2724-4d80-aefb-a97cf2a9de86</Target>
+        </ErrorTransition>
+        <SuccessTransition id="5fe2706d-5534-49ca-b5c4-01bebca8140a" name="Manufacture">
+          <Target>b5d46df5-9229-40ae-984b-d8465becb33e</Target>
+        </SuccessTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Document.DocumentType.IsAutoManufactureEnabled">True</Variable>
+      </Variables>
+    </RouterTask>
+    <AbortTask id="2a14ddf6-1676-4079-a876-35c6e4324a56" name="Abort" />
+    <ExternalTask id="3ba17930-2724-4d80-aefb-a97cf2a9de86" name="Update stock quantities">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Documents.UpdateStockQuantitiesTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="740062ee-77df-4895-8993-4114cc64ad05" name="Average price">
+          <Target>f6b700f6-e7b9-48ea-903a-bc07ccaef38c</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="f6b700f6-e7b9-48ea-903a-bc07ccaef38c" name="Set average price">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Documents.UpdateAveragePriceTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="33fe872f-78b1-49d9-a583-791afe44dfb1" name="End">
+          <Target>49db50da-9366-44bc-866d-15cb1d67c65b</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="457c60ba-c71f-4821-881d-97186dfd194c" name="Get existing document">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Documents.GetExistingDocumentTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="6a3ad865-cfdc-4e4b-8128-bbf8c8435011" name="Update">
+          <Target>2007907f-49d6-4dfd-957d-9984faca65e9</Target>
+        </DefaultTransition>
+        <ErrorTransition id="5cf7dd19-0a76-4a3b-9c6f-a5fa1ca8fb94" name="Abort">
+          <Target>2a14ddf6-1676-4079-a876-35c6e4324a56</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+  </Tasks>
+</Workflow>

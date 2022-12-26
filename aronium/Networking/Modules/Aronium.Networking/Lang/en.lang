@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <Networking>
+    <Connect>
+      <ConnectionProperties Text="Database connection properties" />
+      <Server Text="Server">
+        <Load Text="Load servers" />
+      </Server>
+      <Database Text="Database">
+        <Load Text="Load databases" />
+      </Database>
+      <CashRegister Text="Cash register">
+        <Load Text="Load cash registers" />
+      </CashRegister>
+    </Connect>
+    <Settings Text="Database">
+      <Connection Text="Database connection properties" />
+      <RestartRequired Text="Modifying connection properties or selecting different cash register requires application restart for changes to become active." />
+    </Settings>
+    <License>
+      <Expiring Text="Your license for networking version will expire in {0} day(s).\n\nPlease purchase a license to ensure continued access after {1}">
+        <Title Text="Your license is expiring"/>
+      </Expiring>
+      <GracePeriod Text="Your license for networking version has expired. Application will stop working after {0}\nPlease purchase a license to ensure continued access.">
+        <LicenseAlreadyPurchased Text="If you have already purchased a license, you can ignore this message until we receive the payment and your license is updated." />
+        <Hide Text="Hide this message for 30 days" />
+      </GracePeriod>
+      <Expired Text="Your license for networking version has expired.\nAronium can now be used in read only mode and you will not be able to create new or edit existing transactions.">
+        <Title Text="License expired!"/>
+        <Renew Text="Please renew your license at"/>
+      </Expired>
+      <ReadOnly Text="Your license is expired.\nAronium can be used in read only mode." />
+    </License>
+    <Validation>
+      <Product>
+        <Comments>
+          <MaxLength>
+            <Error Text="Comment &quot;{0}&quot; is too long. The maximum allowed length is {1} character(s)." />
+          </MaxLength>
+        </Comments>
+        <Barcodes>
+          <MaxLength>
+            <Error Text="Barcode &quot;{0}&quot; is too long. The maximum allowed length is {1} character(s)." />
+          </MaxLength>
+        </Barcodes>
+      </Product>
+    </Validation>
+  </Networking>
+</Language>

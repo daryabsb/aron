@@ -1,0 +1,44 @@
+<Workflow>
+  <Name>Aronium.Pos.Customer.New</Name>
+  <Action>Create</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="d1b0c51c-e3f7-48d6-a360-498ff0ccf110" name="Start">
+      <Transitions>
+        <DefaultTransition id="8f806aa6-3aba-412a-8698-91af322a877c" name="Add Customer">
+          <Target>d2ce9f7f-24a6-4252-b947-fa1aa7b84b18</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="d2ce9f7f-24a6-4252-b947-fa1aa7b84b18" name="Add Customer">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <ErrorTransition id="707c5b0d-ac1e-4570-a2f9-9c9102233ca0" name="Cancel">
+          <Target>d8a495b1-14e9-4be5-a15d-125afdbc900c</Target>
+        </ErrorTransition>
+        <DefaultTransition id="e8215f2a-b0f1-4332-a852-b1a15fb570e5" name="Save">
+          <Target>517fecfc-beb7-4a06-a74b-b5e1cf7a0ee5</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Payment/AddCustomer.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <EndTask id="f9ecf463-f1fb-4c39-adfe-52f65aa34d9c" name="End" />
+    <AbortTask id="d8a495b1-14e9-4be5-a15d-125afdbc900c" name="Abort" />
+    <ExternalTask id="517fecfc-beb7-4a06-a74b-b5e1cf7a0ee5" name="Save">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.SaveCustomer</ClassName>
+      <Transitions>
+        <DefaultTransition id="0c972057-9ccd-42c2-a447-04c3a63de930" name="End">
+          <Target>f9ecf463-f1fb-4c39-adfe-52f65aa34d9c</Target>
+        </DefaultTransition>
+        <ErrorTransition id="39b1a513-3585-44c7-b7d9-dce5509e220f" name="Error">
+          <Target>d2ce9f7f-24a6-4252-b947-fa1aa7b84b18</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+  </Tasks>
+</Workflow>

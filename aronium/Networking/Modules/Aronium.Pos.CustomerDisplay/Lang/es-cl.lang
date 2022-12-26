@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="es-cl" name="Español (Chile)">
+  <CustomerDisplay>
+    <Total Text="Total:" />
+    <Change Text="Cambio:" />
+    <Paid Text="Pago:" />
+    <WelcomeMessage Text="¡BIENVENIDA!" />
+    <Settings Text="Pantalla del cliente">
+      <Enabled Text="Activada" />
+      <Port Text="Puerto COM" />
+      <CharactersPerLine Text="Número de carácteres" />
+      <WelcomeMessage Text="Mensaje de bienvenida">
+        <TopLine Text="Linea superior" />
+        <BottomLine Text="Linea inferior" />
+      </WelcomeMessage>
+      <Test Text="Probar pantalla" />
+    </Settings>
+  </CustomerDisplay>
+</Language>

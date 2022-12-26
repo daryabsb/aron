@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <CustomerDisplay>
+    <Total Text="Total:" />
+    <Change Text="Change:" />
+    <Paid Text="Paid:" />
+    <WelcomeMessage Text="WELCOME!" />
+    <Settings Text="Customer display">
+      <Enabled Text="Enabled" />
+      <Port Text="COM port">
+        <Settings>
+          <BaudRate Text="Bits per second" />
+          <DataBits Text="Data bits" />
+          <StopBits Text="Stop bits" />
+          <Parity Text="Parity" />
+          <FlowControl Text="Flow control" />
+          <Show Text="Show port settings"/>
+          <Hide Text="Hide port settings" />
+          <ResetToDefaults Text="Restore defaults" />
+        </Settings>
+      </Port>
+      <CharactersPerLine Text="Number of characters" />
+      <WelcomeMessage Text="Welcome message">
+        <TopLine Text="Top line" />
+        <BottomLine Text="Bottom line" />
+      </WelcomeMessage>
+      <Test Text="Test display" />
+    </Settings>
+    <Error>
+      <InvalidPortSettings Text="Error initializing customer display.\nPlease check port settings." />
+    </Error>
+  </CustomerDisplay>
+</Language>

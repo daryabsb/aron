@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="es_mx" name="Español (México)">
+  <ReceiptPrinter Text="Impresora de recibos">
+    <Receipt>
+      <PrinterNotFound Text="La impresora de recibos no está seleccionada o deshabilitada. Verifique la configuración de la impresora e intente de nuevo." />
+      <Company>
+        <TaxNumber Text="RFC:" />
+      </Company>
+      <Customer Text="Cliente">
+        <Address Text="Dirección" />
+        <TaxNumber Text="RFC" />
+        <Code Text="Código" />
+        <PhoneNumber Text="Teléfono" />
+        <Email Text="Correo electrónico" />
+      </Customer>
+      <Number Text="Recibo No." />
+      <RefundNumber Text="Reembolso No." />
+      <ItemsCount Text="Conteo de artículos" />
+      <Subtotal Text="Subtotal" />
+      <Tax Text="IVA" />
+      <Discount Text="Descuento al carro" />
+      <Total Text="TOTAL" />
+      <PaidAmount Text="Cantidad pagada" />
+      <Change Text="Cambio" />
+      <Customize Text="Personalizar recibo">
+        <UseSystemCurrency Text="Usar formato de moneda del sistema" />
+        <NumberOfDecimalPlaces Text="Lugares decimales" />
+        <PrintTaxes Text="Imprimir totales de impuestos" />
+        <PrintItemsCount Text="Imprimir conteo de artículos" />
+        <Localize Text="Localizar texto de recibo">
+          <Company>
+            <TaxNumber Text="RFC de la empresa" />
+          </Company>
+          <Customer Text="Cliente">
+            <Address Text="Dirección del cliente" />
+            <TaxNumber Text="RFC del cliente" />
+            <Code Text="Código" />
+            <PhoneNumber Text="Teléfono" />
+            <Email Text="Correo electrónico" />
+          </Customer>
+          <ReceiptNumber Text="Número de recibo" />
+          <RefundNumber Text="Número de devolución" />
+          <ItemsCount Text="Conteo de artículos" />
+          <Discount Text="Descuento" />
+          <Subtotal Text="Subtotal" />
+          <Tax Text="Impuestos" />
+          <Total Text="Total" />
+          <PaidAmount Text="Cantidad pagada" />
+          <Change Text="Cambio" />
+          <OrderNumber Text="Número de orden" />
+          <Info Text="Use esta forma para traducir o modificar las etiquetas impresas en los recibos." />
+          <CustomerDetails Text="Detalles del cliente">
+            <Info Text="Elija cómo son impresos los detalles del cliente en el recibo. So desea no imprimir alguna etiqueta en el recibo, deseleccione la opción debajo.\nEsta sección se relaciona sólo a etiquetas, no a la información del cliente impresa en el recibo." />
+          </CustomerDetails>
+          <AmountDue Text="Cantidad en deuda" />
+          <DueDate Text="Fecha límite de pago" />
+          <User Text="Usuario" />
+        </Localize>
+        <PrintOrderNumber Text="Imprimir número de orden" />
+        <ShortReceiptNumber Text="Número de orden corto" />
+        <Counter Text="Contador de recibo">
+          <Edit Text="Haga clic para editar el número del contador de recibos" />
+        </Counter>
+        <CustomerDetails Text="Detalles del cliente">
+          <Info Text="Elija qué detalles del cliente son impresos en el recibo" />
+          <Name Text="Nombre" />
+          <Code Text="Código" />
+          <TaxNumber Text="RFC" />
+          <Address Text="Dirección" />
+          <PhoneNumber Text="Teléfono" />
+          <Email Text="Correo electrónico" />
+        </CustomerDetails>
+      </Customize>
+      <OrderNumber Text="Orden No." />
+      <PaymentTypes>
+        <PrintDisabled Text="Imprimir recibo está desactivado para algunos tipos de pago seleccionados.\nPor favor, active la impresión de recibos para tipos de pago seleccionados antes de imprimir un recibo." />
+      </PaymentTypes>
+      <AmountDue Text="Cantidad requerida" />
+      <DueDate Text="Fecha requerida" />
+      <User Text="Usuario" />
+    </Receipt>
+    <DailyReport>
+      <ZReport Text="Reporte Z" />
+      <XReport Text="Reporte X" />
+      <Date Text="Fecha:" />
+      <Time Text="Hora:" />
+      <ReportNumber Text="Reporte #:" />
+      <FromDocument Text="Del documento:" />
+      <ToDocument Text="Al Documento:" />
+      <UserSales Text="Ventas de usuario:" />
+      <PaymentTypes Text="Tipos de pago:">
+        <Total Text="Total pagado:" />
+      </PaymentTypes>
+      <Refunds Text="Devoluciones:">
+        <Total Text="Devoluciones totales:" />
+      </Refunds>
+      <TaxCollected Text="Impuestos recaudados:" />
+      <TaxableTotal Text="Total sujeto a impuestos:" />
+      <Tax Text="Impuesto:" />
+      <Total Text="Total:" />
+      <Items Text="REPORTE DE ARTICULOS">
+        <ReportNumber Text="Reporte #:" />
+        <Products Text="PRODUCTOS" />
+        <Groups Text="GRUPOS DE PRODUCTOS" />
+      </Items>
+      <CashIn Text="Depósito:" />
+      <CashOut Text="Retiro" />
+      <TotalBalance Text="Balance total:" />
+    </DailyReport>
+    <CashDrawer Text="Cajón de dinero">
+      <OpenCashDrawer Text="Abra el cajón de efectivo ">
+        <AuthorizationRequired Text="Abrir cajón de efectivo requiere autorización.\nIngrese la contraseña requerida para abrir el cajón de efectivo." />
+      </OpenCashDrawer>
+      <Command Text="Comando cajón de efectivo">
+        <LearnMore Text="¿Qué es esto?" />
+      </Command>
+      <Error>
+        <CommandNotSet Text="El comando de cajón de efectivo no está configurado.\nEstablezca el comando de cajón de efectivo para continuar." />
+        <PrinterNotSet Text="La impresora de recibos no está configurada.\nConfigure la impresora de recibos para continuar." />
+      </Error>
+      <Test Text="Probar cajón">
+        <InvalidCommand Text="Introdusca un comando de cajón válido para probar." />
+      </Test>
+    </CashDrawer>
+    <PrintReceipt Text="Imprimir recibo" />
+  </ReceiptPrinter>
+  <FiscalPrinter>
+    <Check Text="Cargando impresora de recibos...">
+      <Status Text="Comprobación del estado de la impresora" />
+    </Check>
+    <CloseFiscalDay Text="Imprimir informes de cierre">
+      <Info Text="Seleccione los informes para imprimir. Asegúrese de que su impresora esté disponible y operativa." />
+      <DailyReport Text="Imprimir reporte Z">
+        <InProgress Text="Impresión del informe Z... Espere..." />
+      </DailyReport>
+      <SubReport Text="Imprimir informe X">
+        <InProgress Text="Impresión del informe X... Espere..." />
+      </SubReport>
+      <ItemsReport Text="Impresión de informe de artículos">
+        <InProgress Text="Imprimiendo el informes de artículos... Espere..." />
+      </ItemsReport>
+      <PrinterDisabled Text="La impresora está deshabilitada o no seleccionada. Es posible que los informes no se impriman." />
+    </CloseFiscalDay>
+  </FiscalPrinter>
+</Language>

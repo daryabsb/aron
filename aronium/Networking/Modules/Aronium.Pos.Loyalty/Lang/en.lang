@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <Loyalty Text="Loyalty">
+    <Promotions Text="Promotions &amp; actions">
+      <New Text="Add promotion">
+        <Title Text="New promotion" />
+      </New>
+      <Edit>
+        <Title Text="Edit promotion &quot;{0}&quot;" />
+      </Edit>
+      <Delete Text="Delete promotion">
+        <Confirmation Text="Are you sure you want to delete promotion &quot;{0}&quot;?" />
+        <Error Text="Error occurred while trying to delete promotion." />
+      </Delete>
+      <View>
+        <Enabled Text="Enabled" />
+        <Name Text="Name" />
+        <DaysOfWeek Text="Days of week" />
+        <StartDate Text="Start date" />
+        <StartTime Text="Start time" />
+        <EndDate Text="End date" />
+        <EndTime Text="End time" />
+      </View>
+      <Promotion>
+        <Empty Text="No items added to promotion." />
+        <Name Text="Promotion name" />
+        <Active Text="Active" />
+        <DaysOfWeek>
+          <All Text="All days">
+            <ShortName Text="All" />
+          </All>
+          <Monday Text="Monday">
+            <ShortName Text="Mon" />
+          </Monday>
+          <Tuesday Text="Tuesday">
+            <ShortName Text="Tue" />
+          </Tuesday>
+          <Wednesday Text="Wednesday">
+            <ShortName Text="Wed" />
+          </Wednesday>
+          <Thursday Text="Thursday">
+            <ShortName Text="Thu" />
+          </Thursday>
+          <Friday Text="Friday">
+            <ShortName Text="Fri" />
+          </Friday>
+          <Saturday Text="Saturday">
+            <ShortName Text="Sat" />
+          </Saturday>
+          <Sunday Text="Sunday">
+            <ShortName Text="Sun" />
+          </Sunday>
+        </DaysOfWeek>
+        <Duration>
+          <Start Text="Start" />
+          <End Text="End" />
+        </Duration>
+        <Item>
+          <PriceType>
+            <Discount Text="Discount" />
+            <FixedPrice Text="Fixed price" />
+          </PriceType>
+          <Condition Text="Conditional">
+            <Title Text="Quantity condition" />
+            <ApplyToAll Text="Apply to all" />
+            <Quantity>
+              <Description Text="Enter required quantity for this promotion" />
+            </Quantity>
+            <LimitToNext Text="Apply to next">
+              <Description Text="Enter qantity limit to apply once required quantity for this promotion is reached" />
+            </LimitToNext>
+            <CopyToAll Text="Copy condition to all items">
+              <Completed Text="Condition values copied to all promotion items" />
+            </CopyToAll>
+          </Condition>
+          <InvalidValue Text="Invalid value" />
+          <Errors>
+            <Existing Text="Item &quot;{0}&quot; already exists in this promotion." />
+          </Errors>
+        </Item>
+        <Saved Text="Promotion successfully saved." />
+        <InvalidItems Text="Unable to save promotion. Some items contains error. Please, check your data and try again." />
+      </Promotion>
+      <NoPromotions Text="No promotions">
+        <Add Text="Create new promotion" />
+      </NoPromotions>
+      <LearnMore Text="Learn more about promotions and happy hour" />
+    </Promotions>
+  </Loyalty>
+</Language>

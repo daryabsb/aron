@@ -1,0 +1,29 @@
+<Workflow>
+  <Name>Aronium.Pos.Document</Name>
+  <Action>Create</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="d4dfd4d8-c538-4b38-aa4c-4779920a8177" name="Start">
+      <Transitions>
+        <DefaultTransition id="3896a94d-25b3-4694-ad16-e65a55814a16" name="Create">
+          <Target>c7d27c50-b7d7-4adb-bf3a-33f0fcc005c4</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="c7d27c50-b7d7-4adb-bf3a-33f0fcc005c4" name="Create document">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Documents.PosDocumentTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="94b3f9a6-702c-41ed-ab9a-c3e759e6064f" name="End">
+          <Target>49db50da-9366-44bc-866d-15cb1d67c65b</Target>
+        </DefaultTransition>
+        <ErrorTransition id="6da9c6cc-6525-406e-9ab9-4d8928a528a8" name="Error">
+          <Target>2a14ddf6-1676-4079-a876-35c6e4324a56</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <AbortTask id="2a14ddf6-1676-4079-a876-35c6e4324a56" name="Abort" />
+    <EndTask id="49db50da-9366-44bc-866d-15cb1d67c65b" name="End" />
+  </Tasks>
+</Workflow>

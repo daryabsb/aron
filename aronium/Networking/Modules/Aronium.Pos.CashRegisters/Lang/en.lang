@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <CashRegisters Text="Cash Registers">
+    <New Text="Add cash register" />
+    <Edit Text="Edit &quot;{0}&quot;" />
+    <CashRegister Text="Cash register">
+      <Id Text="ID" />
+      <Name Text="Name" />
+    </CashRegister>
+    <Delete>
+      <Confirmation Text="Are you sure you wish to delete &quot;{0}&quot;?" />
+      <Title Text="Delete cash register" />
+    </Delete>
+    <Saved>
+      <Created Text="Cash register created successfully" />
+      <Updated Text="Cash register updated successfully" />
+    </Saved>
+  </CashRegisters>
+</Language>

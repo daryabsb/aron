@@ -1,0 +1,28 @@
+<Workflow>
+  <Name>Aronium.Pos.Item.Comment</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="f23f3bef-f5ba-4bb1-b681-e156987badf9" name="Start">
+      <Transitions>
+        <DefaultTransition id="596eb6aa-4971-45a9-a5b5-7256e84fa276" name="Add comment">
+          <Target>995aec55-92ec-479e-b909-0f0ed39a32fa</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="995aec55-92ec-479e-b909-0f0ed39a32fa" name="Add comment">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="76c3529f-0470-418a-97fb-398513497346" name="End">
+          <Target>9143df2e-25de-4bd7-9ce2-504f6071332f</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/AddComment.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <EndTask id="9143df2e-25de-4bd7-9ce2-504f6071332f" name="End" />
+  </Tasks>
+</Workflow>

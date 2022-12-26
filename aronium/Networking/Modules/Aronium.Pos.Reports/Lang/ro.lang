@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ro" name="Romanian">
+  <Reports Text="Rapoarte">
+    <Filter Text="Filtru">
+      <User Text="Utilizator">
+        <All Text="Toti utilizatorii" />
+      </User>
+      <Customer Text="Clientii &amp; distribuitorii">
+        <All Text="Toti clientii &amp; distribuitorii" />
+      </Customer>
+      <Product Text="Produs">
+        <All Text="Toate produsele" />
+      </Product>
+      <Period>
+        <Tip Text="Apasa pentru a modifica perioada de raportare" />
+      </Period>
+      <NotAvailable Text="Nu se aplica raportului selectat" />
+    </Filter>
+    <Report>
+      <Select Text="Selecteaza raportul">
+        <Title Text="Selecteaza raportul pentru vizualizare sau tiparire" />
+      </Select>
+      <Show Text="Arata raportul" />
+      <NotFound Text="Raportul sablon lipseste." />
+    </Report>
+    <Sales Text="Vanzari">
+      <Products Text="Produse" />
+      <PaymentTypes Text="Modalitati de plata" />
+      <PaymentTypesUsers Text="Modalitati de plata dupa utilizatori" />
+      <TaxRates Text="TVA" />
+      <Customers Text="Clienti" />
+      <Users Text="Utilizatori" />
+      <Refunds Text="Retururi" />
+      <InvoiceList Text="Lista facturilor" />
+      <Profit Text="Profit &amp; adaos" />
+      <Daily Text="Vanzari zilnice" />
+      <PaymentTypesCustomers Text="Modalitati de plata dupa clienti" />
+      <Unpaid Text="Vanzari neplatite" />
+    </Sales>
+    <Purchase Text="Cumparare">
+      <Suppliers Text="Distribuitori" />
+      <Products Text="Produse" />
+      <Unpaid Text="Cumparari neplatite" />
+    </Purchase>
+  </Reports>
+</Language>

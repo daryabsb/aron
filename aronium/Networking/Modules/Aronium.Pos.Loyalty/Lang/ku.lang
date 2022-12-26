@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ku" name="Kurdish">
+  <Loyalty Text="دڵسۆزی">
+    <Promotions Text="ڕیکلام و کردارەکان">
+      <New Text="ڕیکلامی نوێ زیادبکە">
+        <Title Text="ڕیکلامی نوێ" />
+      </New>
+      <Edit>
+        <Title Text="لە ڕیکلامی &quot;{0}&quot; گۆڕانکاریبکە" />
+      </Edit>
+      <Delete Text="سڕینەوەی ڕیکلام">
+        <Confirmation Text="دڵنیایت دەتەوێت ڕیکلامی &quot;{0}&quot; بسڕیتەوە؟" />
+        <Error Text="هەڵە ڕوویدا لە سڕینەوەی ڕیکلام" />
+      </Delete>
+      <View>
+        <Enabled Text="لەکاردایە" />
+        <Name Text="ناو" />
+        <DaysOfWeek Text="ڕۆژانی هەفتە" />
+        <StartDate Text="بەرواری دەستپێکردن" />
+        <StartTime Text="کاتی دەتپێکردن" />
+        <EndDate Text="بەرواری کۆتایی" />
+        <EndTime Text="کاتی کۆتایی" />
+      </View>
+      <Promotion>
+        <Empty Text="هیچ بەرهەمێک زیادنەکراوە بۆ ڕیکلام" />
+        <Name Text="ناوی ڕیکلام" />
+        <Active Text="لەکاردایە" />
+        <DaysOfWeek>
+          <All Text="هەموو ڕۆژەکان">
+            <ShortName Text="هەموو" />
+          </All>
+          <Monday Text="دووشەممە">
+            <ShortName Text="دووشەممە" />
+          </Monday>
+          <Tuesday Text="سێشەممە">
+            <ShortName Text="سێشەممە" />
+          </Tuesday>
+          <Wednesday Text="چوارشەممە">
+            <ShortName Text="چوارشەممە" />
+          </Wednesday>
+          <Thursday Text="پێنجشەممە">
+            <ShortName Text="پێنجشەممە" />
+          </Thursday>
+          <Friday Text="هەینی">
+            <ShortName Text="هەینی" />
+          </Friday>
+          <Saturday Text="شەممە">
+            <ShortName Text="شەممە" />
+          </Saturday>
+          <Sunday Text="یەکشەممە">
+            <ShortName Text="یەکشەممە" />
+          </Sunday>
+        </DaysOfWeek>
+        <Duration>
+          <Start Text="دەستپێک" />
+          <End Text="کۆتا" />
+        </Duration>
+        <Item>
+          <PriceType>
+            <Discount Text="داشکاندن" />
+            <FixedPrice Text="بڕی پارەی دیاریکراو" />
+          </PriceType>
+          <Condition Text="مەرجدار">
+            <Title Text="مەرجی ژمارە" />
+            <ApplyToAll Text="بەسەر هەموو کاڵاکان بیسەپێنە" />
+            <Quantity>
+              <Description Text="ژمارەی کاڵای پێویست بنووسە بۆ ئەم ڕیکلامە" />
+            </Quantity>
+            <LimitToNext Text="بیسەپێنە بەسەر کاڵای دواتر">
+              <Description Text="سنووری ژمارەی ئەو کاڵایانە بنووسە دوای مەرجی ژمارەی کاڵای پێویست بۆ ئەم ڕیکلامە بەردەستبوو" />
+            </LimitToNext>
+            <CopyToAll Text="ئەم مەرجە کۆپی بکە بۆ هەموو کاڵاکان">
+              <Completed Text="مەرجەکان کۆپیکران بۆ هەموو کاڵاکان" />
+            </CopyToAll>
+          </Condition>
+          <InvalidValue Text="بەهاکە هەڵەیە" />
+          <Errors>
+            <Existing Text="کاڵای &quot;{0}&quot;  بوونی هەیە لەم ڕیکلامەدا" />
+          </Errors>
+        </Item>
+        <Saved Text="ڕیکلامەکە بە سەرکەوتووی خەزنکرا" />
+        <InvalidItems Text="نەتوانرا ڕیکلامەکە خەزنبکرێت. هەندێک کاڵا هەڵەی تێدایە. تکایە زانیاریەکانت بپشکنە و دووبارە هەوڵبدەرەوە" />
+      </Promotion>
+      <NoPromotions Text="هیچ ڕیکلامێک بوونی نیە">
+        <Add Text="ڕیکلامی نوێ دروستبکە" />
+      </NoPromotions>
+      <LearnMore Text="زانیاری زیاتر وەربگرە لەسەر ڕیکلام" />
+    </Promotions>
+  </Loyalty>
+</Language>

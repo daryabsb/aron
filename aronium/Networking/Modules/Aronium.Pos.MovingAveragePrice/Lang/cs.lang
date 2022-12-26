@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <MovingAveragePrice>
+    <Recalculate Text="Pohyb. prům. cena">
+      <Title Text="Pohyblivá průměrná cena" />
+      <Info Text="Vyberte produkty nebo skupiny produktů, pro které chcete přepočítat klouzavou průměrnou cenu. Vypočítá se klouzavý průměr ceny a aktualizuje všechny doklady ve zvoleném období.&#xA;Tato operace může nějakou dobu trvat v závislosti na počtu produktů a zvoleném časovém období." />
+      <Selection>
+        <ProductGroups Text="Skupiny produktů" />
+        <Products Text="produkty" />
+        <NoItems Text="Nejsou vybrány žádné produkty" />
+      </Selection>
+      <SelectedPeriod Text="Vybrané období" />
+      <PeriodStart Text="Začátek období" />
+      <PeriodEnd Text="Konec období" />
+      <Start Text="Start" />
+      <Stop Text="Stop" />
+      <Product Text="Produkt: {0}" />
+      <OverallProgress Text="Celkový postup" />
+      <Complete Text="Cena klouzavého průměru byla úspěšně přepočítána." />
+      <Disabled Text="Pohyblivá průměrná cena je zakázána. Povolte klouzavou průměrnou cenu a začněte automaticky sledovat nákladové ceny.">
+        <Enable Text="Kliknutím sem povolíte pohyblivou průměrnou cenu" />
+      </Disabled>
+    </Recalculate>
+    <Settings>
+      <Title Text="Pohyblivá průměrná cena" />
+      <Enabled Text="Povolit pohyblivou průměrnou cenu" />
+    </Settings>
+  </MovingAveragePrice>
+</Language>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="es-cl" name="Español (Chile)">
+  <Users Text="Usuario &amp; Seguridad">
+    <View Text="Usuarios">
+      <Disabled Text="Mostrar usuarios inactivos" />
+    </View>
+    <New Text="Agregar usuario" />
+    <ResetPassword Text="Reiniciar contraseña">
+      <Success Text="Contraseña cambiada correctamente" />
+    </ResetPassword>
+    <LearnMore Text="Obtenga más información sobre la gestión de usuarios." />
+    <User>
+      <FirstName Text="Nombre" />
+      <LastName Text="Apellido" />
+      <Password Text="Contraseña" />
+      <PasswordConfirmation Text="Confirmar contraseña" />
+      <AccessLevel Text="Nivel de acceso" />
+      <IsEnabled Text="Activo" />
+      <Error>
+        <PasswordConfirmationMatch Text="La confirmación de contraseña y contraseña debe coincidir." />
+        <InvalidPassword Text="El usuario con la misma contraseña ya existe.\nIngrese una contraseña única e intente nuevamente." />
+        <Disable>
+          <OpenOrders Text="La inhabilitación del usuario le impedirá cerrar las ventas abiertas.\nCierre todas las órdenes abiertas que posea este usuario antes de desactivarlo.">
+            <Title Text="No se puede deshabilitar al usuario con ventas abiertas." />
+          </OpenOrders>
+        </Disable>
+        <DuplicateEmail Text="Este correo electrónico ya está en uso.\nUtilice una dirección de correo electrónico diferente." />
+      </Error>
+      <Saved Text="Los datos del usuario han cambiado con éxito." />
+      <Email Text="Email" />
+    </User>
+    <Delete Text="Eliminar usuario">
+      <Confirmation Text="¿Estás seguro de que quieres eliminar &quot;{0}&quot;?" />
+      <Error>
+        <CurrentUser Text="¡No puedes borrarte a ti mismo!" />
+        <DataViolation Text="No se puede eliminar el usuario.\nEl usuario contiene documentos u otros elementos relacionados." />
+      </Error>
+    </Delete>
+    <Security Text="Seguridad">
+      <Title Text="Establezca el nivel de acceso para operaciones predefinidas" />
+      <Description Text="Seleccione el nivel de acceso para cada acción para establecer los permisos de usuario necesarios." />
+      <LearnMore Text="Obtenga más información sobre niveles de acceso y seguridad" />
+      <MaximumAccessLevelWarning Text="Nivel de acceso establecido por encima del valor más alto asignado a cualquier usuario." />
+      <Save>
+        <Success Text="Los niveles de seguridad se guardaron con éxito" />
+        <AccessLevelViolation Text="Violación de nivel de acceso">
+          <Info Text="Los niveles de acceso se pueden establecer en un valor máximo asignado a cualquier usuario. De lo contrario, es posible que no puedas acceder a la sección restringida.\nAjuste los elementos por error y vuelva a intentarlo." />
+        </AccessLevelViolation>
+      </Save>
+    </Security>
+  </Users>
+</Language>

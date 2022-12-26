@@ -1,0 +1,1213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="id" name="Indonesian">
+  <Buttons>
+    <Yes Text="Ya" />
+    <Ok Text="Oke" />
+    <No Text="Tidak" />
+    <Cancel Text="Batal" />
+    <Save Text="Simpan" />
+    <Close Text="Tutup" />
+    <Add Text="Tambah" />
+    <New Text="Baru" />
+    <Edit Text="Edit" />
+    <Cut Text="Potong" />
+    <Copy Text="Salin" />
+    <Paste Text="Tempe;" />
+    <Delete Text="Hapus" />
+    <Refresh Text="Segarkan" />
+    <Login Text="MASUK" />
+    <Logout Text="Keluar" />
+    <Print Text="Cetak" />
+    <SavePdf Text="Simpan PDF" />
+    <Excel Text="Excel" />
+    <Hide Text="Sembunyikan" />
+    <FirstPage Text="Halaman Pertama" />
+    <LastPage Text="Halaman Terakhir" />
+    <NextPage Text="Halaman Selanjutnya" />
+    <PreviousPage Text="Halaman Sebelumya" />
+    <Continue Text="Lanjutkan" />
+    <Clear Text="Bersihkan" />
+    <Exit Text="Keluar" />
+    <Search Text="Cari" />
+    <Ignore Text="Abaikan" />
+    <Retry Text="Coba Lagi" />
+    <DeleteAll Text="Hapus Semua" />
+    <Skip Text="Lewati" />
+    <Restart Text="Ulangi" />
+    <SaveAndClose Text="Simpan &amp; Tutup" />
+    <Help Text="Bantuan" />
+    <Back Text="Kembali" />
+    <LearnMore Text="Pelajari Lebih Lanjut" />
+    <Done Text="Selesai" />
+    <Send Text="Kirim" />
+    <WhatsThis Text="Apa Ini?" />
+  </Buttons>
+  <Bootstrap>
+    <Initializing Text="Inisialisasi aplikasi ..." />
+    <Load>
+      <Components Text="Memuat Komponen Aplikasi..." />
+      <Modules Text="Memuat dan Inisialisasi modul..." />
+      <Products Text="Memuat Produk">
+        <Error Text="Gagal Memuat Produk">
+          <Info Text="Beberapa produk mungkin tidak memenuhi syarat untuk dijual. Periksa produk yang gagal dan coba lagi." />
+          <DuplicateBarcode Text="Duplikat barkode &quot;{0}&quot;" />
+          <DuplicateCode Text="Duplikat kode &quot;{0}&quot;" />
+          <Copy Text="Menyalin ke clipboard" />
+        </Error>
+      </Products>
+      <CashRegister Text="Memuat data cash register ...." />
+      <ScanTypes Text="Memindai Tipe..." />
+    </Load>
+    <Connect Text="Menghubungkan ke database ....">
+      <NoDataProvider Text="Modul untuk menghubungkan ke database tidak tersedia.\nSilakan hubungi administrator atau dealer Anda." />
+    </Connect>
+    <Error Text="Kesalahan terjadi saat mencoba memulai aplikasi. Silakan hubungi administrator sistem." />
+    <Completed Text="Memulai aplikasi" />
+    <BackupDatabase Text="Memvalidasi versi basis data ..." />
+    <Migrations Text="Memeriksa database ..." />
+    <RestartRequired Text="Diperlukan restart aplikasi agar perubahan diterapkan.\nKlik tombol di bawah ini untuk memulai ulang aplikasi." />
+  </Bootstrap>
+  <Onboarding>
+    <Welcome Text="Selamat Datang">
+      <Info Text="Mari siapkan Toko dan Dasar data aplikasi.\nProses orientasi hanya akan memakan waktu beberapa menit untuk diselesaikan." />
+      <Start Text="MULAI" />
+    </Welcome>
+    <Back Text="Kembali" />
+    <Skip Text="Lewati orientasi" />
+    <Hide Text="Jangan perlihatkan ini lagi" />
+    <Next Text="Lewati" />
+    <Continue Text="Simpan &amp; Lanjutkan" />
+    <Layout Text="Pilih Layout">
+      <LearnMore Text="Pelajari lebih lanjut tentang tata letak dan ruang kerja" />
+      <Standard Text="Standar">
+        <Description Text="Gunakan tata letak ini jika Anda menggunakan barkode atau memiliki keyboard fisik yang terpasang ke komputer Anda." />
+      </Standard>
+      <TouchScreen Text="Visual">
+        <Description Text="Gunakan tata letak ini jika Anda ingin menampilkan produk dan grup Anda secara visual di layar penjualan." />
+      </TouchScreen>
+      <EnableVirtualKeyboard Text="Aktifkan keyboard virtual" />
+    </Layout>
+    <Registration Text="Registrasi">
+      <Info Text="Silakan, masukkan alamat email Anda, sehingga kami dapat memberikan dukungan yang lebih disesuaikan untuk Anda.">
+        <Email Text="Email ini akan diatur ke akun admin default dan dapat digunakan untuk mereset kata sandi. Anda dapat mengubah alamat email ini kapan saja." />
+      </Info>
+      <Email Text="Alamat email anda">
+        <Privacy Text="Email Anda dijaga sangat rahasia. Kami akan menggunakan email Anda untuk memberikan dukungan personalisasi  yang lebih dan mengirimi Anda pembaruan terbaru, hanya jika Anda menginginkannya.\nKami juga membenci &quot;spam&quot;." />
+      </Email>
+    </Registration>
+    <UserProfile>
+      <Title Text="Mari setel akun pribadi Anda" />
+      <Info Text="Masukkan nama dan kredensial masuk Anda yang digunakan untuk akses admin." />
+      <LearnMore Text="Pelajari lebih lanjut tentang pengguna dan kredensial default" />
+      <FirstName Text="Nama depan" />
+      <LastName Text="Nama Belakang" />
+      <Email Text="Email">
+        <Info Text="Email ini akan digunakan sebagai email pemulihan untuk akun Anda.\nPastikan Anda telah memasukkan alamat email yang valid sehingga Anda dapat mengatur ulang kata sandi melalui email." />
+      </Email>
+      <Password Text="Kata sandi">
+        <Errors>
+          <Empty Text="Kata sandi tidak memenuhi kriteria yang diperlukan. Kata sandi harus diatur dan setidaknya 4 karakter" />
+          <ConfirmationError Text="Konfirmasi kata sandi tidak cocok. Masukkan kata sandi  yang sama di bidang konfirmasi kata sandi." />
+        </Errors>
+      </Password>
+      <ConfirmPassword Text="Konfirmasi sandi" />
+    </UserProfile>
+    <Completed Text="Orientasi selesai">
+      <Info Text="Selamat! Anda sudah siap.\nSelanjutnya, buka bagian &quot;Manajemen&quot; untuk menambahkan beberapa produk dan mulai menjual." />
+      <Finish Text="Tutup &amp; Lanjutkan" />
+    </Completed>
+  </Onboarding>
+  <BusinessDay>
+    <Close>
+      <Authorization>
+        <Title Text="Silakan masukkan kata sandi untuk menutup hari kerja" />
+      </Authorization>
+    </Close>
+    <Select Text="Pilih hari kerja">
+      <EnableSelection Text="(Klik pada tanggal untuk mengubah hari kerja)" />
+    </Select>
+  </BusinessDay>
+  <Application>
+    <Close Text="Keluar dari aplikasi">
+      <Info Text="Anda yakin ingin keluar dari aplikasi?" />
+      <ShutDown Text="Keluar dari aplikasi" />
+      <Restart Text="Mulai ulang aplikasi" />
+    </Close>
+    <FullScreen Text="Layar Penuh" />
+    <Exit Text="Keluar Aplikasi" />
+    <Menu Text="Menu" />
+    <RestartRequired Text="Mulai ulang diperlukan">
+      <Info Text="Diperlukan restart aplikasi agar perubahan diterapkan. Apakah Anda ingin me-restart aplikasi sekarang?" />
+    </RestartRequired>
+    <ReloadProducts Text="Muat ulang produk">
+      <Info Text="Produk diubah. Apakah Anda ingin memuat ulang produk sekarang?" />
+    </ReloadProducts>
+  </Application>
+  <Period Text="Periode">
+    <Start Text="Awal" />
+    <End Text="Akhir" />
+    <Preset Text="Periode yang telah ditentukan">
+      <Today Text="Hari Ini" />
+      <Yesterday Text="Kemarin" />
+      <ThisWeek Text="Minggu ini" />
+      <LastWeek Text="Minggu lalu" />
+      <ThisMonth Text="Bulan ini" />
+      <LastMonth Text="Bulan lalu" />
+      <ThisYear Text="Tahun ini" />
+      <LastYear Text="Tahun Lalu" />
+    </Preset>
+  </Period>
+  <Login Text="Masuk">
+    <Password Text="Kata sandi">
+      <Forgot Text="Lupa kata sandi?" />
+    </Password>
+    <Error Text="Gagal masuk. Periksa kata sandi Anda dan coba lagi." />
+    <Authentication Text="Login pengguna">
+      <Failed Text="Pengguna tidak ditemukan. Periksa kata sandi Anda dan coba lagi." />
+    </Authentication>
+    <Reset Text="Setel ulang kata sandi">
+      <LearnMore Text="Pelajari lebih lanjut tentang mengatur ulang kata sandi Anda" />
+      <Email Text="Masukkan alamat email">
+        <Info Text="Masukkan alamat email yang terkait dengan pengguna yang ingin Anda atur ulang kata sandi.\nKami akan mengirimkan Anda kode verifikasi ke email yang Anda masukkan di bawah ini." />
+        <Required Text="Email diperlukan" />
+        <EmailAddress Text="Alamat email">
+          <Tooltip Text="Masukkan alamat email Anda" />
+        </EmailAddress>
+      </Email>
+      <Code Text="Kode verifikasi">
+        <Info Text="Periksa email Anda\nkami mengirimi Anda kode otorisasi yang harus Anda masukkan ke kotak di bawah ini.\nJika Anda tidak menerima email dengan kode otorisasi, periksa folder spam Anda atau coba kirim email lagi." />
+        <Email Text="Kode otorisasi dikirim ke {0}." />
+        <AuthorizationCode Text="Kode otorisasi">
+          <Tooltip Text="Masukkan kode otorisasi di sini ..." />
+        </AuthorizationCode>
+        <Verify Text="Kode verifikasi" />
+      </Code>
+      <Password Text="Masukan kata sandi baru">
+        <Info Text="Masukkan kata sandi dan kata sandi baru untuk akun lokal Anda.\nKata sandi baru dan bidang konfirmasi kata sandi baru harus cocok.\n\nSetelah Anda selesai, klik tombol &quot;OK&quot; untuk mereset kata sandi Anda." />
+        <NewPassword Text="Kata sandi baru" />
+        <NewPasswordConfirmation Text="Konfirmasi kata sandi baru" />
+        <InUse Text="Sandi yang ditentukan sudah digunakan. Silakan masukkan kata sandi yang berbeda dan coba lagi." />
+        <User Text="Pengguna: {0}" />
+        <SetPassword Text="Atur kata sandi baru Anda" />
+        <Success Text="Kata sandi berhasil diubah" />
+      </Password>
+      <Error>
+        <Expired Text="Kode otorisasi Anda telah kedaluwarsa.\nSilakan minta kode otorisasi baru." />
+        <InvalidCode Text="Kode salah. Harap masukkan kode yang valid dan coba lagi." />
+        <NoSuchUser Text="Pengguna dengan email yang ditentukan &quot;{0}&quot; tidak ada.\nHarap masukkan email yang valid dan coba lagi." />
+        <InvalidEmailAddress Text="Alamat email tidak valid. Harap masukkan alamat email yang valid dan coba lagi." />
+        <LimitReached Text="Anda telah mencapai batas permintaan kata sandi reset.\nAnda dapat mencoba lagi dalam 24 jam." />
+        <GeneralError Text="Kesalahan terjadi saat mencoba mengirim permintaan kata sandi reset.\nSilakan coba lagi nanti." />
+      </Error>
+    </Reset>
+  </Login>
+  <Order>
+    <List Text="Buka daftar pesanan">
+      <Select Text="Pilih pesanan" />
+    </List>
+    <New Text="Penjualan baru" />
+    <Estimate Text="Lock">
+      <Authorization>
+        <Title Text="Silakan masukkan kata sandi untuk mengunci penjualan" />
+      </Authorization>
+      <Created Text="Penjualan Terkunci" />
+      <Clear Text="Buka kunci penjualan ini">
+        <Authorization>
+          <Title Text="Silakan masukkan kata sandi untuk membuka kunci penjualan" />
+        </Authorization>
+        <Success Text="Penjualan terbuka" />
+      </Clear>
+      <Locked Text="Penjualan terkunci">
+        <Info Text="Mengedit penjualan yang dikunci tidak diizinkan." />
+      </Locked>
+      <Issued Text="Penjualan ini sudah dikunci.\nMengedit penjualan yang dikunci tidak diizinkan." />
+      <NoItems Text="Tidak ada barang untuk dikunci." />
+    </Estimate>
+    <Transfer Text="Transfer">
+      <Authorization>
+        <Title Text="Silakan masukkan kata sandi untuk mengakses opsi transfer" />
+      </Authorization>
+      <All Text="Transfer semua pesanan">
+        <Confirmation Text="Mentransfer semua pesanan ke pengguna lain tidak dapat diubah!\n\nAnda yakin ingin mentransfer semua pesanan Anda ke {0}?" />
+        <Success Text="Semua pesanan berhasil ditransfer." />
+        <Error Text="Error terjadi saat mentransfer pesanan ke pengguna yang dipilih.\nSilakan coba lagi. berhasil dipindahkan." />
+      </All>
+      <Orders Text="Buka pesanan" />
+      <OrderNumber Text="Nomor Pesanan">
+        <Select Text="Pilih Pesanan" />
+      </OrderNumber>
+      <Quantity Text="Pilih jumlah untuk ditransfer" />
+      <User Text="Pengguna">
+        <Current Text="Pengguna yang dipilih sudah menjadi pemegang pesanan.\nProduk akan ditransfer ke pengguna yang sama." />
+      </User>
+      <Rounds Text="Mentransfer putaran">
+        <Summary Text="Item Pemesanan" />
+        <Selection Text="Pilih putaran untuk ditransfer" />
+      </Rounds>
+      <Items Text="Pesanan barang">
+        <Selected Text="Item yang dipilih untuk transfer">
+          <NoItems Text="Pilih item untuk transfer" />
+        </Selected>
+        <All Text="Transfer semua" />
+        <Back Text="Menghapus semua" />
+        <InvalidQuantity Text="Transfer barang yang dipilih tidak diperbolehkan">
+          <Info Text="Jumlah total barang yang dipilih kurang dari kuantitas yang dipilih untuk transfer.\nPeriksa jumlah transfer, hapus item dan coba lagi." />
+        </InvalidQuantity>
+        <BundledQuantity Text="Perubahan kuantitas tidak diizinkan" />
+      </Items>
+      <CurrentOrder Text="Mentransfer ke urutan yang sama">
+        <Confirmation Text="Anda telah memilih untuk mentransfer item ke urutan yang sama.\nAnda yakin ingin mentransfer item ke urutan yang sama?" />
+      </CurrentOrder>
+      <Failed Text="Kesalahan mentransfer item">
+        <Info Text="Terjadi kesalahan saat mencoba mentransfer item. Silakan coba lagi." />
+      </Failed>
+      <Completed Text="Transfer selesai dengan sukses" />
+      <NoItems Text="Tidak ada item untuk ditransfer" />
+    </Transfer>
+    <Void Text="Hapus">
+      <Authorization>
+        <Title Text="Silakan masukkan kata sandi untuk Hapus pesanan ini" />
+      </Authorization>
+      <Confirm Text="Hapus Pesanan">
+        <Info Text="Anda yakin ingin menghapus pesananan ini?" />
+      </Confirm>
+      <Completed Text="Pesanan dihapus dengan sukses" />
+      <NoItems Text="Tidak ada item yang dihapus" />
+    </Void>
+    <Rounds>
+      <Repeat Text="Ulangi putaran">
+        <NoItems Text="Tidak ada barang dalam pesanan.\nUlangi putaran dapat dilakukan hanya jika putaran ada." />
+        <NoQuantities Text="Pada putaran yang dipilih # {0} tidak ada item dengan jumlah yang cukup untuk diulang" />
+        <Bundle Text="Item milik grup" />
+      </Repeat>
+      <New Text="Putaran Baru">
+        <NoItems Text="Tidak ada item dalam pesanan Anda untuk membuat putaran baru.\nTambahkan item untuk dipesan dan coba lagi." />
+        <NoUnsavedItems Text="Semua item dalam pesanan disimpan. Babak baru dimulai." />
+      </New>
+      <SelectAll Text="Pilih Semua" />
+      <SelectNone Text="Bubarkan semua" />
+      <Total Text="Total:" />
+      <NoItems Text="Tidak ada item yang dipilih" />
+    </Rounds>
+    <Comment Text="Komentar">
+      <Add Text="Pilih yang ada atau tulis komentar Anda untuk item &quot;{0}&quot;" />
+      <Insert Text="Tulis komentar di sini ..." />
+      <Change Text="Tambahkan komentar">
+        <Forbidden Text="Mengedit item yang dipilih tidak diizinkan">
+          <Info Text="Item &quot;{0}&quot; dipesan dan dikonfirmasi.\nMengedit item yang dikonfirmasi tidak diizinkan." />
+        </Forbidden>
+        <NoItem Text="Tidak ada item yang dipilih.\nPilih item yang ingin Anda tambahkan komentar dan coba lagi." />
+      </Change>
+    </Comment>
+    <Subtotal Text="Subtotal" />
+    <Tax Text="Tax" />
+    <Total Text="TOTAL" />
+    <Checkout Text="Bayar" />
+    <Save Text="Simpan penjualan" />
+    <Refund Text="Pengembalian dana">
+      <Authorization Text="Kata sandi diperlukan untuk operasi pengembalian uang" />
+      <Title Text="Mengembalikan barang" />
+      <Total Text=" JUMLAH TOTAL PENGEMBALIAN" />
+      <ReceiptNumber Text="Nomor Resi" />
+      <PaymentType Text="Jenis Pengembalian pembayaran" />
+      <Description Text="Masukkan nomor resi dan jenis pembayaran untuk mengonfirmasi pengembalian uang" />
+      <Print>
+        <PrinterNotFound Text="Printer pengembalian belum dipilih" />
+      </Print>
+      <MultyplePaymentTypes Text="Dokumen yang dipilih berisi beberapa jenis pembayaran. Pilih opsi di bawah ini untuk menyalin jenis pembayaran ke pengembalian uang ini.">
+        <PartialRefund Text="Menggunakan beberapa jenis pembayaran dari dokumen penjualan asli tidak tersedia untuk pengembalian sebagian." />
+        <Copy Text="Salin jenis pembayaran dari dokumen asli" />
+      </MultyplePaymentTypes>
+    </Refund>
+    <Items>
+      <Name Text="Nama Produk" />
+      <Quantity Text="Kuantitas">
+        <Change Text="Ubah kuantitas">
+          <Info Text="Masukkan kuantitas untuk item berikutnya" />
+          <Item Text="Item &quot;{0}&quot;" />
+          <Forbidden Text="Perubahan kuantitas tidak diizinkan">
+            <Info Text="Item &quot;{0}&quot; dikonfirmasi.\nMengedit item yang dikonfirmasi tidak diizinkan." />
+          </Forbidden>
+          <Product Text="Produk &quot;{0}&quot;\nKuantitas default: {1:#,#.000}" />
+          <Bundled Text="Perubahan kuantitas tidak diizinkan">
+            <Info Text="Quantity change on bundled items is not allowed." />
+          </Bundled>
+        </Change>
+        <Invalid Text="Kuantitas tidak valid. Masukkan jumlah yang valid dan coba lagi." />
+      </Quantity>
+      <Price Text="Harga">
+        <Change Text="Ubah harga">
+          <Product Text="Produk &quot;{0}&quot;\nHarga: {1:#,#.00}" />
+        </Change>
+      </Price>
+      <Total Text="Jumlah" />
+      <Empty Text="Tidak item">
+        <Info Text="Tambahkan produk menggunakan barkode, kode atau pencarian dengan menekan tombol F3" />
+      </Empty>
+      <Start Text="Mulai" />
+      <Page Text="Halaman" />
+      <Add>
+        <Error Text="Kesalahan menambahkan item. Data item tidak valid.\nPeriksa harga dan kuantitas barang dan coba lagi." />
+      </Add>
+      <Void>
+        <NoItems Text="Membatalkan item &quot;{0}&quot; tidak diperbolehkan. Kuantitas tidak mencukupi." />
+        <Bundle Text="Item milik grup. Menghapus item ini akan menghapus semua item dalam grup yang sama.\n\nAnda yakin ingin menghapus semua item dalam grup ini?">
+          <Title Text="Menghapus item grup" />
+        </Bundle>
+      </Void>
+    </Items>
+    <Print>
+      <User Text="Pengguna: {0}" />
+      <Time Text="Waktu: {0}" />
+      <Number Text="Nomor pesanan: {0}" />
+      <Estimate Text="MEMPERKIRAKAN">
+        <Discount Text="Diskon" />
+        <Total Text="TOTAL:" />
+        <Footer Text="Ini bukan resi.\nHarap tunggu resi terakhir." />
+      </Estimate>
+      <Kitchen>
+        <NumberAndRound Text="Table: {0}. Round: {1}" />
+      </Kitchen>
+      <Dialog>
+        <Title Text="Cara Anda Memberikan Resi?" />
+        <Change Text="Kembalian" />
+        <Receipt Text="Cetak Resi" />
+        <Invoice Text="Cetak faktur" />
+        <Email Text="Kirim email">
+          <Recipient Text="Penerima email">
+            <Title Text="Masukkan detail pesan email dan klik tombol &quot;Kirim&quot; untuk melanjutkan" />
+            <EmailAddress Text="Alamat penerima">
+              <Description Text="Masukkan alamat email pelanggan" />
+              <AddCustomer Text="Tambahkan pelanggan" />
+            </EmailAddress>
+            <Subject Text="Subyek">
+              <Description Text="Masukkan baris subjek" />
+              <Default Text="Resi {0}" />
+            </Subject>
+            <Message Text="Pesan">
+              <Description Text="Masukkan pesan untuk pelanggan" />
+              <Default Text="Pelanggan yang terhormat,\n\nTemukan tanda terima terlampir.\n\nTanggal penerimaan: {0}\nTotal: {1}" />
+            </Message>
+            <CopySelf Text="Kirim salinan ke saya sendiri" />
+            <Error>
+              <EmailFormat Text="Alamat email tidak diformat dengan benar.\nSilakan periksa alamat email dan coba lagi." />
+            </Error>
+          </Recipient>
+          <Sending Text="Mengirim email ... Mohon tunggu ..." />
+          <Sent Text="Resi Dikirim Ke {0}" />
+        </Email>
+        <Hide Text="Jangan perlihatkan ini lagi" />
+      </Dialog>
+    </Print>
+    <Products>
+      <Search Text="Cari">
+        <Name Text="Nama Produk">
+          <Tooltip Text="Cari produk berdasarkan nama" />
+          <NotFound Text="Tidak ada hasil untuk &quot;{0}&quot;">
+            <Info Text="Silakan periksa parameter pencarian Anda dan coba lagi" />
+          </NotFound>
+        </Name>
+        <Barcode Text="Barkode">
+          <Tooltip Text="Cari produk berdasarkan barkode" />
+          <NotFound Text="Barkode tidak ditemukan" />
+        </Barcode>
+        <Code Text="Kode Produk">
+          <Tooltip Text="Cari produk berdasarkan kode" />
+          <NotFound Text="Kode tidak ditemukan" />
+        </Code>
+        <NoItems Text="No product selected">
+          <Info Text="Cari produk berdasarkan nama atau kode untuk melanjutkan" />
+        </NoItems>
+        <Selection>
+          <Price Text="Harga" />
+          <Description Text="Description" />
+        </Selection>
+        <NoResults Text="Tidak ada hasil" />
+      </Search>
+      <NoProducts Text="Tidak ada produk yang tersedia">
+        <Info Text="Tolong, tambahkan produk atau tetapkan harga jual ke yang sudah ada untuk melanjutkan" />
+      </NoProducts>
+    </Products>
+    <Lock Text="Kunci" />
+    <Unlock Text="Buka Kunci" />
+    <Item>
+      <Void>
+        <Authorization>
+          <Title Text="Silakan masukkan kata sandi untuk membatalkan item yang dipilih" />
+        </Authorization>
+      </Void>
+    </Item>
+    <QuickPayment Text="Pembayaran cepat">
+      <Confirmation Text="Anda telah memilih &quot;{0}&quot; sebagai jenis pembayaran untuk penjualan saat ini.\n\nApakah Anda ingin terus menggunakan jenis pembayaran terpilih?" />
+    </QuickPayment>
+    <Discount Text="Diskon">
+      <Authorization Text="Silakan masukkan kata sandi untuk menerapkan diskon" />
+      <Cart>
+        <Invalid Text="Diskon keranjang tidak valid">
+          <GreaterThenTotal Text="Total diskon tidak bisa lebih besar\ndari total pesanan." />
+        </Invalid>
+        <Cleared Text="Keranjang Diskon dibersihkan!" />
+      </Cart>
+      <Item>
+        <NotSelected Text="Item tidak dipilih.\nUntuk menerapkan diskon untuk satu item, pilih satu dari daftar penjualan sebelum membuka dialog ini" />
+        <Invalid Text="Diskon item tidak valid">
+          <GreaterThenTotal Text="Jumlah tetap tidak bisa lebih besar\ndari total item" />
+        </Invalid>
+      </Item>
+    </Discount>
+  </Order>
+  <Closing Text="Akhiri Hari Ini">
+    <Users Text="Buka transaksi">
+      <User>
+        <Total Text="TOTAL:" />
+      </User>
+      <Summary Text="Buka transaksi" />
+      <NoReports Text="Tidak ada transaksi terbuka" />
+    </Users>
+    <Option Text="Pilih opsi uang tunai">
+      <NotSelected Text="Pilihan uang tunai tidak dipilih">
+        <Info Text="Pilih salah satu opsi yang tercantum di atas untuk melanjutkan" />
+      </NotSelected>
+    </Option>
+    <User Text="Kas keluar">
+      <Completed Text="{0} berhasil diuangkan." />
+    </User>
+    <Shift Text="Kas keluar semua pengguna">
+      <Closed Text="Semua pengguna berhasil mencairkan uang" />
+    </Shift>
+    <BusinessDay Text="Tutup daftar">
+      <Income Text="Total hari" />
+      <Closed Text="Daftar berhasil ditutup" />
+      <Report Text="MELAPORKAN" />
+      <CashIn Text="Kas" />
+      <CashOut Text="Kas keluar" />
+    </BusinessDay>
+    <Error>
+      <OpenOrders Text="Buka pesanan">
+        <Users Text="Ada pengguna dengan pesanan terbuka!\nAnda harus menutup semua pesanan sebelum menutup hari." />
+      </OpenOrders>
+    </Error>
+    <Print>
+      <User>
+        <Report>
+          <Total Text="JUMLAH TOTAL" />
+          <User Text="Pengguna">
+            <ClosedBy Text="Diterima" />
+          </User>
+          <Header Text="USER CASH OUT" />
+        </Report>
+      </User>
+      <DayClose>
+        <Report>
+          <Header Text="HARI PENUTUPAN" />
+          <User>
+            <Total Text="TOTAL" />
+          </User>
+          <Summary Text="SUMMARY" />
+          <Total Text="TOTAL" />
+        </Report>
+      </DayClose>
+    </Print>
+    <History Text="Riwayat">
+      <Info Text="Gunakan daftar di bawah ini untuk memilih dan mencetak salinan dari setiap laporan yang dihasilkan sebelumnya." />
+      <List>
+        <Reports Text="Laporan" />
+        <Number Text="Nomor" />
+        <Date Text="Tanggal" />
+      </List>
+      <Print Text="Cetak laporan yang dipilih">
+        <Unsupported Text="Operasi tidak didukung" />
+      </Print>
+    </History>
+  </Closing>
+  <User Text="Pengguna">
+    <Profile Text="Info Pengguna">
+      <Info Text="Profil" />
+      <Edit Text="Ubah profil atau kata sandi" />
+      <Data>
+        <FirstName Text="Nama depan" />
+        <LastName Text="Nama belakang" />
+        <Email Text="Email" />
+        <Password Text="Kata Sandi">
+          <Change Text="Ubah Kata Sandi">
+            <Password Text="Kata Sandi" />
+            <Confirm Text="Konfirmasi Kata Sandi" />
+            <ConfirmationFailed Text="Bidang untuk kata sandi dan kata sandi konfirmasi tidak cocok.\nPeriksa kata sandi dan coba lagi." />
+            <InvalidPassword Text="Kata sandi sudah digunakan. Silakan gunakan kata sandi yang berbeda." />
+          </Change>
+        </Password>
+        <Saved Text="Profil berhasil diubah" />
+      </Data>
+      <ShiftReport Text="Laporan Kasir">
+        <Report Text="Laporan kasir">
+          <NoData Text="Tidak ada transaksi" />
+          <Total Text="TOTAL" />
+        </Report>
+        <ClockOut Text="Kas keluar" />
+      </ShiftReport>
+    </Profile>
+  </User>
+  <Security>
+    <Authorize Text="Otentikasi pengguna" />
+    <Level Text="Tingkat akses">
+      <Change Text="Ubah tingkat akses untuk tindakan yang dipilih">
+        <AccessDenied Text="Anda tidak memiliki hak yang cukup untuk mengubah tingkat akses untuk operasi ini.\n\nTingkat akses dapat disesuaikan oleh pengguna dengan tingkat akses yang diperlukan untuk melakukan operasi yang dipilih." />
+      </Change>
+    </Level>
+    <AccessDenied Text="Akses ditolak">
+      <Info Text="Anda tidak memiliki hak yang cukup untuk operasi yang dipilih." />
+    </AccessDenied>
+    <Key>
+      <Management Text="Manajemen">
+        <Description Text="Mengontrol akses ke bagian manajemen" />
+      </Management>
+      <Settings Text="Pengaturan">
+        <Description Text="Mengontrol akses ke pengaturan" />
+      </Settings>
+      <VoidOrder Text="Pesanan tidak berlaku">
+        <Description Text="Mengontrol apakah pengguna diizinkan untuk membatalkan pesanan lengkap" />
+      </VoidOrder>
+      <VoidItem Text="Item Void">
+        <Description Text="Mengontrol apakah pengguna diizinkan untuk membatalkan item tunggal dalam urutan terbuka" />
+      </VoidItem>
+      <LockSale Text="Kunci penjualan" />
+      <UnlockSale Text="Buka kunci penjualan" />
+      <SplitOrder Text="Bagi pesanan">
+        <Description Text="Memungkinkan pengguna untuk mentransfer lengkap atau sebagian dari pesanan ke pengguna atau tabel lain (nomor pesanan)" />
+      </SplitOrder>
+      <Discount Text="Terapkan diskon" />
+      <DeleteDocument Text="Hapus dokumen" />
+      <ClosingDay Text="Akhir hari">
+        <Description Text="Mengontrol akses ke bagian hari penutupan" />
+      </ClosingDay>
+      <Refund Text="Pengembalian dana">
+        <Description Text="Memungkinkan pengguna untuk mengembalikan penjualan yang dibuat sebelumnya.\nIni akan membuat dokumen baru &quot;Refund&quot; dan akan mengembalikan jumlah stok secara otomatis." />
+      </Refund>
+      <OpenOrders Text="Lihat semua pesanan terbuka">
+        <Description Text="Mengontrol apakah pengguna diizinkan untuk melihat semua pesanan terbuka.\nOpsi ini tersedia dengan rencana lantai diaktifkan." />
+      </OpenOrders>
+      <SalesHistory Text="Riwayat penjualan" />
+      <StartingCash Text="mulai kas">
+        <Description Text="Mengontrol akses ke bagian awal kas" />
+      </StartingCash>
+      <UserProfile Text="Profil pengguna" />
+    </Key>
+  </Security>
+  <Payment>
+    <Details>
+      <Summary Text="Item" />
+      <Actions Text="Tindakan">
+        <ShowItems Text="Tampilkan item" />
+      </Actions>
+      <Discount Text="Diskon">
+        <Options Text="Pilihan diskon">
+          <DisallowedItems Text="Ada beberapa item yang tidak dapat secara langsung ditetapkan untuk diskon." />
+        </Options>
+        <Type>
+          <Percent Text="Terapkan diskon dalam persentase" />
+          <Fixed Text="Terapkan diskon dalam jumlah tetap" />
+        </Type>
+        <Target>
+          <Item Text="Diskon barang">
+            <NotSelected Text="Tidak ada item yang dipilih.\nSilakan pilih item di sebelah kiri untuk menerapkan diskon." />
+            <NotAllowed Text="Discount is not allowed for voided items" />
+            <Info Text="Terapkan diskon ke &quot;{0}&quot;" />
+          </Item>
+          <Cart Text="Keranjang Diskon " />
+        </Target>
+        <Total Text="Total:" />
+        <Subtotal Text="Subtotal:" />
+        <TotalDiscount Text="Total diskon" />
+        <Clear Text="Hapus Diskon ">
+          <Completed Text="Semua diskon dihapus" />
+        </Clear>
+      </Discount>
+      <Split Text="Dibulatkan">
+        <Rounds Text="Pilih pembayaran untuk dibulatkan">
+          <RoundNumber Text="Dibulatkan:" />
+          <RoundTotal Text="Jumlah:" />
+          <SelectAll Text="Pilih Semua" />
+          <SelectNone Text="Bubarkan semua" />
+        </Rounds>
+      </Split>
+      <Customer Text="Pelanggan" />
+      <Total Text="Total:" />
+      <TotalWithoutDiscount Text="Total tanpa diskon:" />
+      <Money Text="Pembayaran">
+        <Paid Text="Bayar:">
+          <Hint>
+            <TypeAmount Text="Ketik jumlah yang dibayarkan" />
+            <TapToChange Text="Ketuk di sini untuk memasukkan jumlah yang dibayarkan" />
+          </Hint>
+        </Paid>
+        <Change Text="Kembalian:" />
+        <Balance Text="Saldo:" />
+      </Money>
+      <PaymentTypes Text="Tipe pembayaran">
+        <Other Text="Tambah pembayaran" />
+        <Invalid Text="Jenis pembayaran tidak diizinkan">
+          <Fiscal Text="Jenis pembayaran yang dipilih berisi kombinasi tidak valid dari jenis pembayaran fiskal dan non-fiskal.\n\nTidak diperbolehkan menggabungkan jenis pembayaran fiskal dan non-fiskal." />
+        </Invalid>
+      </PaymentTypes>
+      <NoItems Text="Tidak ada item" />
+    </Details>
+    <NoPaymentSelected Text="Jenis pembayaran tidak dipilih" />
+    <Add Text="Tambahkan jenis pembayaran">
+      <Info Text="Pilih jenis pembayaran dan jumlah yang diperlukan untuk penjualan saat ini" />
+      <Amount Text="Jumlah pembayaran &quot;{0}&quot;" />
+    </Add>
+    <Selected Text="Jenis pembayaran yang dipilih" />
+    <Customer>
+      <Required Text="Pelanggan Diwajibkan">
+        <Info Text="Jenis pembayaran &quot;{0}&quot; mengharuskan pelanggan untuk dipilih. Silakan pilih pelanggan untuk melanjutkan." />
+      </Required>
+    </Customer>
+    <PaymentTypes>
+      <Validation>
+        <Change>
+          <Missing Text="Jumlah yang salah">
+            <Info Text="Jenis pembayaran ini tidak memungkinkan perubahan. Masukkan jumlah yang benar atau pilih jenis pembayaran lain." />
+          </Missing>
+        </Change>
+      </Validation>
+    </PaymentTypes>
+  </Payment>
+  <Customer>
+    <Search Text="Cari pelanggan">
+      <Name Text="Nama" />
+      <PIN Text="Nomor pajak" />
+      <LoyaltyCard Text="Kartu loyalitas" />
+      <Email Text="Email" />
+    </Search>
+    <Selection Text="Pelanggan yang dipilih">
+      <Details>
+        <PIN Text="Nomor pajak:" />
+        <Address Text="Alamat:" />
+        <Email Text="E-mail:" />
+        <PhoneNumber Text="Nomor telepon:" />
+      </Details>
+      <None Text="Pelanggan tidak dipilih">
+        <Info Text="Pilih pelanggan dari daftar" />
+      </None>
+      <Clear Text="Hapus pelanggan terpilih" />
+    </Selection>
+    <New Text="New customer">
+      <Add Text="Tambahkan pelanggan baru" />
+      <Name Text="Nama" />
+      <TaxNumber Text="Nomor pajak" />
+      <Address Text="Alamat" />
+      <City Text="Kota" />
+      <PostalCode Text="Kode Pos" />
+      <Country Text="Negara" />
+      <PhoneNumber Text="Nomor telepon" />
+      <Email Text="Email" />
+    </New>
+  </Customer>
+  <Navigation>
+    <Back>
+      <NotAllowed Text="Operasi yang dipilih tidak diizinkan." />
+    </Back>
+  </Navigation>
+  <FloorPlans>
+    <Options Text="Pilihan">
+      <Design Text="Denah lantai / Pengaturan meja">
+        <FloorPlan>
+          <Add Text="Tambahkan denah lantai baru" />
+          <Delete Text="Hapus denah lantai" />
+          <Rename Text="Ganti nama denah lantai" />
+        </FloorPlan>
+        <Table>
+          <Add Text="Tambahkan meja" />
+          <Delete Text="Hapus Meja yang dipilih" />
+          <Name Text="Nama" />
+          <Height Text="Tinggi" />
+          <Width Text="Lebar" />
+          <Size Text="UKURAN" />
+        </Table>
+      </Design>
+      <View>
+        <Orders Text="Tampilkan pesanan">
+          <Title Text="Buka pesanan" />
+          <Order>
+            <Number Text="Nomor Resi" />
+            <Total Text="Total" />
+          </Order>
+          <NoOrders Text="Tidak ada pesanan terbuka. Buat pesanan baru menggunakan denah lantai." />
+        </Orders>
+        <FloorPlans Text="Tampilkan denah lantai" />
+      </View>
+    </Options>
+    <Save>
+      <Success Text="Perubahan berhasil disimpan." />
+      <Error Text="Kesalahan terjadi saat menyimpan\nData tidak dipertahankan.\nPesan Sistem: {0}">
+        <Duplicates Text="Nama meja duplikat ditemukan.\n\n{0}\n\nNama meja harus unik. Harap perbaiki nama meja dan coba lagi.">
+          <Title Text="Duplikat ditemukan" />
+        </Duplicates>
+      </Error>
+    </Save>
+  </FloorPlans>
+  <Settings Text="Pengaturan">
+    <General Text="Pengaturan dasar">
+      <Language Text="Bahasa" />
+      <Style Text="Gaya aplikasi">
+        <ColorScheme Text="Skema warna" />
+      </Style>
+      <Layout Text="Layout">
+        <TouchScreen Text="Visual" />
+        <Keyboard Text="Standar" />
+      </Layout>
+      <VirtualKeyboard Text="Aktifkan keyboard virtual" />
+      <ProductSearch>
+        <Barcode Text="Barcode" />
+        <Code Text="Kode" />
+        <Name Text="Nama" />
+      </ProductSearch>
+      <ColorScheme>
+        <Dark Text="Gelap" />
+        <Light Text="Terang" />
+      </ColorScheme>
+      <NotificationPosition>
+        <Top Text="Atas" />
+        <Bottom Text="Bawah" />
+      </NotificationPosition>
+      <Notifications Text="Pesan">
+        <ShowClose Text="Tampilkan tombol &quot;Tutup&quot;" />
+        <ClickToClose Text="Klik untuk menutup" />
+        <SlideIn Text="Geser masuk" />
+        <Duration Text="Durasi pesan (detik)" />
+        <Position Text="Posisi" />
+      </Notifications>
+      <StartingCash Text="Tampilkan kas masuk saat memulai aplikasi" />
+      <BusinessDay Text="Hari kerja">
+        <SelecBusinessDay Text="Pilih hari kerja saat memulai aplikasi" />
+      </BusinessDay>
+      <ButtonBar Text="Bilah tombol">
+        <Info Text="Pilih tindakan untuk muncul di bilah tombol atas">
+          <VisualLayoutOnly Text="Berlaku untuk tata letak &quot;Visual&quot; saja" />
+        </Info>
+        <IsCommentVisible Text="Komentar" />
+        <IsDiscountVisible Text="Diskon" />
+        <IsNewSaleVisible Text="Penjualan baru" />
+        <IsRefundVisible Text="Pengembalian dana" />
+        <IsSearchVisible Text="Pencarian" />
+        <IsTransferVisible Text="Transfer" />
+      </ButtonBar>
+    </General>
+    <Order Text="Order &amp; Pembayaran">
+      <Standard Text="Operasi dasar">
+        <AutoOrderNumber Text="Gunakan denah lantai" />
+        <PlaySound Text="Suara" />
+        <ProductGrid Text="Angka atau baris / kolom" />
+      </Standard>
+      <Users Text="Pengguna">
+        <SingleUser Text="Pengguna tunggal" />
+      </Users>
+      <Products Text="Item">
+        <DefaultQuantity Text="Kuantitas standar" />
+        <DefaultSearch Text="Pencarian default">
+          <Options Text="Tampilkan opsi pencarian" />
+        </DefaultSearch>
+        <DefaultDiscountType Text="Jenis diskon default">
+          <Percent Text="Persentase" />
+          <Fixed Text="Tetap" />
+        </DefaultDiscountType>
+        <RowPerItem Text="Baris terpisah untuk setiap item" />
+      </Products>
+      <Payment Text="Pembayaran">
+        <ShowSummary Text="Tampilkan item pada formulir pembayaran" />
+        <FixedRows Text="Jumlah baris jenis pembayaran" />
+        <IsSingleItemDiscountAllowed Text="Diskon item tunggal diperbolehkan" />
+        <QuickPaymentConfirmation Text="Konfirmasi shortcut pembayaran" />
+        <ShowPrintReceiptDialog Text="Tampilkan dialog cetak resi" />
+        <DefaultDueDate Text="Tanggal jatuh tempo default">
+          <Days Text="hari" />
+        </DefaultDueDate>
+        <MergeItemsOnPayment Text="Gabungkan item pada Resi" />
+      </Payment>
+      <Advanced>
+        <Show Text="Tampilkan pengaturan lanjutan" />
+        <Hide Text="Sembunyikan pengaturan lanjutan" />
+        <ResetOrderNumber Text="Setel ulang nomor pesanan" />
+      </Advanced>
+    </Order>
+    <Print Text="Opsi cetak">
+      <PrinterSelection Text="Pemilihan printer">
+        <Tour>
+          <Title Text="Sesuaikan pengaturan printer" />
+          <Content Text="Klik tombol &quot;Pengaturan printer&quot;\nuntuk mengatur dan menyesuaikan printer Anda" />
+        </Tour>
+      </PrinterSelection>
+      <Printers>
+        <KitchenTicket Text="Printer dapur">
+          <Operation Text="Cetak tiket dapur" />
+        </KitchenTicket>
+        <Service Text="Printer layanan">
+          <Operation Text="Cetak pesan layanan" />
+        </Service>
+        <Estimate Text="Printer penjualan terkunci">
+          <Operation Text="Cetak penjualan terkunci" />
+        </Estimate>
+        <OrderSummary Text="Print Pesanan" />
+      </Printers>
+      <PrinterOptions Text="Pengaturan printer">
+        <Tooltip Text="Sesuaikan pengaturan printer" />
+        <PrinterType Text="Jenis printer">
+          <A4 Text="A4" />
+          <EscPos Text="ESC/POS" />
+          <POS58 Text="POS 58" />
+          <POS58Rtl Text="POS 58 RTL" />
+          <POS80 Text="POS 80" />
+          <POS80Rtl Text="POS 80 RTL" />
+        </PrinterType>
+        <NumberOfCopies Text="Jumlah salinan" />
+        <PaperWidth Text="Karakter per baris" />
+        <Header Text="Header" />
+        <Footer Text="Footer" />
+        <FeedLines Text="Garis umpan" />
+        <CutPaper Text="Potong kertas" />
+        <PrintBitmap Text="Cetak bitmap" />
+        <RichFormatting Text="Pemformatan kaya" />
+        <Alignment>
+          <Left Text="Rata kiri" />
+          <Center Text="Rata Tengah" />
+        </Alignment>
+        <Revert Text="Kembalikan perubahan">
+          <Completed Text="Pengaturan yang disimpan sebelumnya diterapkan" />
+        </Revert>
+        <PrintTestPage Text="Cetak halaman uji" />
+        <Advanced Text="lanjutan">
+          <CodePage Text="Halaman kode" />
+          <CharacterSet Text="Set karakter">
+            <None Text="None (Printer default)" />
+            <USA Text="USA" />
+            <France Text="USA" />
+            <Germany Text="Germany" />
+            <UK Text="United Kingdom" />
+            <DenmarkI Text="Denmark I" />
+            <Sweden Text="Sweden" />
+            <Italy Text="Italy" />
+            <SpainI Text="Spain I" />
+            <Japan Text="Japan" />
+            <Norway Text="Norway" />
+            <DenmarkII Text="Denmark II" />
+            <SpainII Text="Spain II" />
+            <LatinAmerica Text="Latin America" />
+            <Korea Text="Korea" />
+            <SloveniaCroatia Text="Slovenia / Croatia" />
+            <China Text="China" />
+            <Vietnam Text="Vietnam" />
+            <Arabia Text="Arabia" />
+          </CharacterSet>
+        </Advanced>
+        <Unavailable Text="Opsi tambahan tidak tersedia untuk jenis printer yang dipilih.\nUntuk melihat opsi printer tambahan, pilih jenis printer yang berbeda.">
+          <Info Text="Pelajari lebih lanjut tentang memilih jenis printer dan menyiapkan printer penerimaan." />
+        </Unavailable>
+        <Margin Text="Margin (dalam milimeter)">
+          <Top Text="Atasn" />
+          <Right Text="Kanan" />
+          <Bottom Text="Bawah" />
+          <Left Text="Kiri" />
+        </Margin>
+      </PrinterOptions>
+    </Print>
+    <AddOns Text="Modul yang terdaftar">
+      <Modules Text="Modul" />
+      <Plugins Text="Plugin" />
+    </AddOns>
+    <WeighingScale Text="Pengaturan Barcode">
+      <VariableMeasureBarcode Text="Timbangan barcode">
+        <Enabled Text="Aktifkan penimbangan skala barcode" />
+        <Prefix Text="Dua digit pertama / awalan" />
+        <ProductCodeLength Text="Jumlah digit untuk kode produk" />
+        <DecimalPlaces Text="Jumlah tempat desimal" />
+        <TrimZeros Text="Hapus nol dari kode produk (nol trim)" />
+        <IsUsingPriceBarcode Text="Skala harga cetak bukan kuantitas">
+          <Info Text="Beberapa timbangan harga total dan bukan kuantitas yang diukur. Jika opsi ini diaktifkan, kuantitas akan didasarkan pada harga produk dan jumlah total dari skala." />
+        </IsUsingPriceBarcode>
+      </VariableMeasureBarcode>
+    </WeighingScale>
+    <Email Text="Pengaturan email">
+      <General>
+        <Host Text="Host" />
+        <Port Text="Port" />
+        <EmailAddress Text="Alamat email" />
+        <DisplayName Text="Nama tampilan" />
+        <Password Text="Kata sandi" />
+        <SSL Text="SSL diaktifkan" />
+        <Defaults Text="Nilai pesan email default">
+          <Subject Text="Subyek" />
+          <Message Text="Pesan" />
+          <Description Text="Jika Anda memutuskan untuk membiarkan bidang ini kosong, maka subjek dan pesan yang dibuat secara otomatis untuk pelanggan akan digunakan. Anda dapat mengubahnya sebelum pesan dikirim." />
+        </Defaults>
+      </General>
+    </Email>
+    <About Text="About">
+      <HelpCenter Text="Buka pusat bantuan">
+        <Info Text="Buka help.aronium.com untuk membuka permintaan dukungan." />
+      </HelpCenter>
+      <ApplicationDirectory Text="Direktori data aplikasi">
+        <Info Text="Lokasi tempat pengaturan aplikasi, file log dan item terkait aplikasi lainnya disimpan." />
+        <Open Text="Buka direktori data aplikasi" />
+      </ApplicationDirectory>
+      <Database Text="Database">
+        <Open Text="Buka lokasi basis data" />
+        <Backup Text="Cadangankan Basis data">
+          <Success Text="Pencadangan basis data berhasil diselesaikan." />
+        </Backup>
+      </Database>
+      <Update>
+        <AutoUpdate Text="Pembaruan otomatis" />
+        <SendUsageData Text="Bantu kami meningkatkan dengan mengirimkan data penggunaan anonim" />
+        <Check Text="Periksa pembaruan">
+          <Checking Text="Memeriksa pembaruan ... Harap tunggu ..." />
+          <Downloading Text="Mengunduh pembaruan ... Harap tunggu ..." />
+          <UpToDate Text="Aronium sudah up to date." />
+          <Available Text="Versi baru tersedia.">
+            <Run Text="Klik di sini untuk menginstal sekarang." />
+          </Available>
+          <Error>
+            <NoConnection Text="Tidak dapat terhubung ke server.\nSilakan periksa koneksi internet Anda dan coba lagi." />
+          </Error>
+        </Check>
+        <Ready Text="Pembaruan tersedia">
+          <Install Text="Klik di sini untuk menginstal versi baru" />
+          <Description Text="Versi baru siap dipasang.\nUntuk informasi lebih lanjut, kunjungi halaman catatan rilis dengan mengklik &quot;Apa yang baru?&quot; tombol dibawah.">
+            <Install Text="Klik tombol &quot;Instal&quot; untuk menginstal pembaruan terbaru." />
+          </Description>
+          <Versions>
+            <Current Text="Versi sekarang:" />
+            <New Text="Versi baru:" />
+          </Versions>
+          <Ignore Text="Abaikan pembaruan ini" />
+          <ReleaseNotes Text="Apa yang baru?" />
+          <Postpone Text="Tidak sekarang" />
+          <Run Text="Memasang" />
+        </Ready>
+      </Update>
+      <Account Text="Akun">
+        <Email Text="Masukkan alamat email Anda" />
+        <Change Text="Mengubah" />
+      </Account>
+    </About>
+    <Authorization>
+      <Title Text="Silakan masukkan kata sandi untuk mengakses pengaturan aplikasi" />
+    </Authorization>
+  </Settings>
+  <Document>
+    <Create>
+      <Error Text="Ada kesalahan dalam membuat dokumen.\nSilakan coba lagi." />
+    </Create>
+  </Document>
+  <Invoices Text="Riwayat penjualan">
+    <Title Text="Riwayat penjualan" />
+    <Documents Text="Dokumen">
+      <Customer Text="Pelanggan">
+        <Change Text="Ubah pelanggan">
+          <Success Text="Pelanggan berhasil diubah." />
+        </Change>
+      </Customer>
+      <Print Text="Mencetak">
+        <CashReceipt Text="Resi">
+          <PrinterNotFound Text="Printer servis tidak dipilih atau dinonaktifkan. Periksa pengaturan printer dan coba lagi." />
+          <Address Text="Alamat" />
+          <VatNumber Text="Nomor pajak" />
+          <Date Text="Tanggal" />
+          <ReceiptNumber Text="Nomor Tanda Terima" />
+          <Customer Text="Pelanggan" />
+          <Total Text="Total" />
+          <Tax Text="Pajak" />
+          <TotalAmount Text="TOTAL" />
+          <FiscalReceiptNumber Text="Nomor resi fiskal" />
+          <Signature Text="Tanda tangan" />
+          <Stamp Text="P.S." />
+        </CashReceipt>
+        <Pdf Text="Simpan sebagai PDF">
+          <Success Text="Dokumen &quot;{0}&quot; disimpan" />
+        </Pdf>
+        <Error Text="Error printing document">
+          <NoService Text="Layanan pencetakan tidak terdaftar" />
+        </Error>
+        <Refund Text="Pengembalian dana" />
+        <Preview Text="Pratinjau Print" />
+      </Print>
+      <Delete Text="Menghapus">
+        <Confirmation>
+          <Title Text="Delete document" />
+          <Message Text="Anda yakin ingin menghapus dokumen &quot;{0}&quot;?" />
+        </Confirmation>
+        <Unauthorized Text="Anda tidak memiliki izin untuk menghapus dokumen." />
+      </Delete>
+      <List Text="Dokumen">
+        <Document>
+          <Number Text="Nomor" />
+          <DocumentType Text="Tipe dokumen" />
+          <Warehouse Text="Gudang" />
+          <Customer Text="Pelanggan">
+            <Refresh Text="Segarkan daftar pelanggan">
+              <Complete Text="Pelanggan mengisi ulang" />
+            </Refresh>
+          </Customer>
+          <Vendor Text="Vendor">
+            <Refresh Text="Segarkan daftar pemasok">
+              <Complete Text="Pemasok dimuat ulang" />
+            </Refresh>
+          </Vendor>
+          <ExternalDocument Text="Dokumen eksternal" />
+          <Date Text="Tanggal" />
+          <DueDate Text="Batas tanggal terakhir" />
+          <StockDate Text="Tanggal persediaan" />
+          <DateCreated Text="Dibuat" />
+          <DateUpdated Text="Diperbarui" />
+          <CashRegister Text="POS" />
+          <OrderNumber Text="Nomor pesanan" />
+          <User Text="Pengguna" />
+          <PaymentType Text="Tipe pembayaran" />
+          <Discount Text="Diskon" />
+          <Paid Text="dibayar" />
+          <Unpaid Text="Tidak dibayar" />
+          <Total Text="Total">
+            <Summary>
+              <TotalBeforeTax Text="Total sebelum pajak:" />
+              <Tax Text="Pajak:" />
+              <Total Text="Total:" />
+              <Discount Text="Diskon:">
+                <DiscountType Text="Jenis diskon:" />
+              </Discount>
+            </Summary>
+          </Total>
+          <Payments Text="Pembayaran">
+            <Add Text="Tambahkan pembayaran" />
+            <PaymentType Text="Tipe pembayaran" />
+            <Amount Text="Jumlah" />
+            <Date Text="Tanggal" />
+            <NewPayment Text="Pembayaran baru" />
+            <Delete Text="Hapus pembayaran">
+              <Confirmation Text="Are you sure you want to delete payment &quot;{0}&quot;?" />
+            </Delete>
+            <Totals>
+              <PaymentsTotal Text="Total pembayaran:" />
+              <DocumentTotal Text="Total dokumen:" />
+            </Totals>
+          </Payments>
+          <Items Text="Item dokumen">
+            <Item>
+              <ProductCode Text="Kode" />
+              <Product Text="Nama" />
+              <MeasurementUnit Text="Satuan ukuran" />
+              <Quantity Text="Kuantitas" />
+              <PriceNoTax Text="Harga sebelum pajak" />
+              <Price Text="Harga" />
+              <Tax Text="Pajak %" />
+              <Discount Text="Diskon">
+                <DiscountType Text="Jenis diskon">
+                  <Percent Text="Persentase" />
+                  <Fixed Text="Fixed" />
+                </DiscountType>
+              </Discount>
+              <TotalBeforeTax Text="total sebelum pajak" />
+              <Total Text="Total" />
+              <TotalBeforeDiscount Text="Total sebelum diskon" />
+            </Item>
+            <Delete Text="Hapus dokumen">
+              <Confirmation Text="Are you sure you want to delete &quot;{0}&quot;?" />
+            </Delete>
+          </Items>
+          <Print>
+            <UnsavedChanges Text="Dokumen berisi perubahan yang belum disimpan. Apakah Anda ingin menyimpan perubahan sebelum dicetak?">
+              <Title Text="Perubahan tidak disimpan" />
+            </UnsavedChanges>
+          </Print>
+        </Document>
+      </List>
+      <Count Text="Jumlah dokumen:" />
+      <Total Text="Jumlah total:" />
+      <AllUsers Text="Tampilkan semua pengguna" />
+    </Documents>
+    <Reports Text="Laporan">
+      <Date Text="Tanggal laporan" />
+      <Print Text="Cetak" />
+      <Pdf Text="Simpan sebagai PDF">
+        <Success Text="Laporan &quot;{0}&quot; berhasil disimpan." />
+      </Pdf>
+      <List>
+        <Products Text="Ringkasan produk" />
+        <Customers Text="Ringkasan pelanggan" />
+        <PaymentTypes Text="Ringkasan jenis pembayaran" />
+        <VATRates Text="Ringkasan tarif pajak" />
+      </List>
+    </Reports>
+  </Invoices>
+  <CashRegister>
+    <Select Text="Pilih mesin kasir" />
+  </CashRegister>
+  <Feedback Text="Umpan balik">
+    <Title Text="Bantu kami meningkatkan Aronium" />
+    <Description Text="Terima kasih telah meluangkan waktu untuk memberikan saran.\nTanggapan Anda membantu kami membuat aplikasi Aronium lebih baik.">
+      <Contact Text="Jangan sungkan untuk menghubungi kami kapan saja di" />
+    </Description>
+    <Message>
+      <Name Text="Namamu" />
+      <Email Text="Alamat email" />
+      <Subject Text="Subyek" />
+      <Message Text="Pesan" />
+      <Rating Text="Peringkat keseluruhan" />
+    </Message>
+    <Send Text="Kirim umpan balik" />
+    <Confirmation>
+      <Title Text="Terima kasih!" />
+      <Message Text="Umpan balik Anda dikirim. Kami akan menggunakannya untuk membuat Aronium lebih baik." />
+    </Confirmation>
+  </Feedback>
+  <Guide>
+    <Menu>
+      <Title Text="Buka menu utama" />
+      <Content Text="Klik di sini untuk membuka menu utama dan bagian manajemen akses" />
+    </Menu>
+    <Layout>
+      <SearchBox Text="Cari produk berdasarkan nama, Barkode atau kode.">
+        <Title Text="Product search" />
+      </SearchBox>
+    </Layout>
+    <Dismiss>
+      <Title Text="Tutup tur terpandu" />
+      <Confirmation Text="Anda yakin ingin menyembunyikan kiat-kiat ini?" />
+    </Dismiss>
+  </Guide>
+  <Layout>
+    <Visual>
+      <Item>
+        <Edit Text="Edit tampilan visual">
+          <Color Text="Warna" />
+          <Image Text="Gambar">
+            <Select Text="Pilih gambar" />
+            <Clear Text="Hapus gambar" />
+          </Image>
+        </Edit>
+      </Item>
+    </Visual>
+  </Layout>
+  <OpenOrders Text="Lihat penjualan terbuka">
+    <Total Text="JUMLAH TOTAL" />
+    <NoOrders Text="Tidak ada penjualan terbuka" />
+    <Authorization>
+      <Title Text="Harap masukkan kata sandi untuk mengakses penjualan terbuka" />
+    </Authorization>
+  </OpenOrders>
+  <StartingCash Text="Uang Masuk / Keluar">
+    <Type>
+      <CashIn Text="Tambahkan uang tunai" />
+      <CashOut Text="Hapus uang tunai" />
+    </Type>
+    <Amount Text="Jumlah">
+      <Reason Text="Deskripsi">
+        <Tooltip Text="Masukkan alasan untuk menambahkan atau menghapus uang tunai ..." />
+      </Reason>
+    </Amount>
+    <Hide Text="Jangan perlihatkan ini lagi" />
+    <Entries Text="Entri uang tunai">
+      <NoDescription Text="&lt;Tidak ada deskripsi&gt;" />
+      <NoEntries Text="Tidak ada catatan" />
+    </Entries>
+    <Saved Text="Mulai uang tunai berhasil disimpan" />
+  </StartingCash>
+</Language>

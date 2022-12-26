@@ -1,0 +1,25 @@
+<Workflow>
+  <Name>Aronium.Pos.Order.Estimate.Clear</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="a998fc51-d1e4-4c22-b2cf-8e00e6f36f5a" name="Start">
+      <Transitions>
+        <DefaultTransition id="640acad7-b899-4f8d-87f4-74fa39c4ce28" name="Create">
+          <Target>909a1ffc-869c-46cf-904e-16a8d1216043</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="909a1ffc-869c-46cf-904e-16a8d1216043" name="Clear estimate">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Estimate.EstimateClear</ClassName>
+      <Transitions>
+        <DefaultTransition id="96c839d4-26d6-4f91-80b2-e7476a9a83f4" name="End">
+          <Target>85a6157b-982a-46e3-8315-e52e42cdc610</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <EndTask id="85a6157b-982a-46e3-8315-e52e42cdc610" name="End" />
+  </Tasks>
+</Workflow>

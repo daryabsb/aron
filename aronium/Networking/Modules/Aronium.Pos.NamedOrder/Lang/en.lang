@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <FloorPlans>
+    <Options>
+      <View>
+        <Orders>
+          <Order>
+            <Number Text="Order / Customer name" />
+          </Order>
+        </Orders>
+      </View>
+    </Options>
+  </FloorPlans>
+  <Order>
+    <Name Text="Order name">
+      <Title Text="Order or customer name" />
+      <Info Text="Enter order name or number" />
+      <Validation>
+        <Duplicate Text="Order with the same name already exists. Please enter different name to continue." />
+        <Empty Text="Order name or number cannot be empty for existing orders." />
+        <Required Text="Order name or number cannot be empty." />
+      </Validation>
+      <Settings>
+        <Enabled Text="Enable custom order name" />
+        <Required Text="Order name required" />
+        <RequestOrderName Text="Request order name automatically" />
+      </Settings>
+    </Name>
+  </Order>
+</Language>

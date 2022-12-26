@@ -1,0 +1,692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="iw" name="Hebrew">
+  <Management Text="ניהול">
+    <NoItems Text="אין מודולי ניהול זמינים למשתמש {0}.\nאנא התחבר\י עם משתמש שיש לו\ה גישה למודול ניהול אחד לפחות כדי להמשיך." />
+    <Dashboard Text="לוח בקרה">
+      <NoData Text="אין מידע להצגה" />
+      <MonthlySales Text="מכירות חודשיות">
+        <Description Text="נתוני מכירות מקובצים לפי חודש" />
+        <Month Text="חודש" />
+        <Legend Text="מקרא" />
+        <CurrentYear Text="השנה הנוכחית" />
+        <TotalSales Text="מכירות חודשיות">
+          <TopMonth Text="החודש המוצלך ביותר:" />
+        </TotalSales>
+        <Year Text="שנה">
+          <Previous Text="שנה שעברה" />
+          <Next Text="שנה הבאה" />
+        </Year>
+      </MonthlySales>
+      <HourlySales Text="מכירות שעתי">
+        <Description Text="נתוני מכירות מקובצים לפי שעות" />
+        <Hour Text="שעה" />
+        <Options>
+          <Amount Text="כמות" />
+          <Count Text="ספירה" />
+        </Options>
+      </HourlySales>
+      <TopProducts Text="המוצרים המובילים">
+        <Product Text="מוצר" />
+        <Total Text="סה''כ" />
+      </TopProducts>
+      <TopProductGroups Text="קבוצות מוצרים מובילות">
+        <Description Text="קבוצות המוצרים הנמכרות ביותר בתקופה שנבחרה" />
+        <Group Text="קבוצת מוצרים" />
+      </TopProductGroups>
+      <TopCustomers Text="לקוחות מובילים">
+        <Description Text="לקוחות מובילים בתקופה שנבחרה (5 הראשונים)" />
+      </TopCustomers>
+      <PeriodicReports Text="דוחות תקופתיים">
+        <SelectPeriod Text="בחר תקופת דיווח" />
+      </PeriodicReports>
+    </Dashboard>
+    <Products Text="מוצרים">
+      <Loading Text="טוען מוצרים ..." />
+      <LearnMore Text="למידע נוסף על מוצרים" />
+      <Taxes Text="גובה מס">
+        <LearnMore Text="למידע נוסף על שיעורי מס" />
+        <New Text="שיעור מס חדש" />
+        <Switch Text="החלף מס">
+          <OldTax Text="מס ישן" />
+          <NewTax Text="מס חדש" />
+          <Tooltip Text="החלף מסך לכל הפריטים" />
+          <Info Text="השתמש\י בטופס זה כדי להחליף מיסים על כל המוצרים.\n\nבחר\י מס ישן שברצונך להחליף במס חדש ולחץ\י על הלחצן &quot;החלף&quot; למטה." />
+          <Replace Text="החלף" />
+          <Error Text="אירעה שגיאה במהלך ניסיון להחליף מיסים.\nהודעת מערכת: {0}" />
+          <Success Text="מיסים הוחלפו בהצלחה!" />
+        </Switch>
+        <Edit>
+          <Title Text="ערוך מס &quot;{0}&quot;" />
+        </Edit>
+        <Delete>
+          <Title Text="מחק את שיעור המס" />
+          <Confirmation Text="האם למחוק את שיעור המס &quot;{0}&quot;?" />
+          <Error Text="אירעה שגיאה במהלך ניסיון למחוק את שיעור המס. ודא\י ששיעור המס אינו בשימוש ונסה שוב." />
+        </Delete>
+        <Tax>
+          <ReadOnly Text="המס שנבחר קיים במסמכים ולא ניתן לשנות אותו" />
+          <Code Text="קוד" />
+          <Name Text="שם" />
+          <Rate Text="גובה מס" />
+          <Fixed Text="בש''ח" />
+          <TaxOnTotal Text="סה''כ מס" />
+          <Enabled Text="אפשר" />
+        </Tax>
+        <Onboarding>
+          <Title Text="גובה מס" />
+          <Info Text="הזן שיעורי מס המשמשים להגדרות מוצרים, אם בכלל.\nחייבים להיות לפחות מס אחד במערכת." />
+          <AddMore Text="שמור והוסף עוד">
+            <Error Text="אירעה שגיאה בעת הוספת שיעור מס חדש. בדוק\י את הנתונים שלך ונסה שוב" />
+            <Name Text="שם מס (למשל &quot;אין מס&quot;)" />
+          </AddMore>
+          <Existing Text="שיעורי מס קיימים">
+            <NoItems Text="לא הוגדרו שיעורי מס. הוסף\י שיעור מס אחד לפחות כדי שתוכל\י להוסיף מוצרים חדשים.">
+              <AddDefault Text="הוסף מס ברירת מחדל" />
+            </NoItems>
+          </Existing>
+        </Onboarding>
+        <NoTaxes Text="אין מס">
+          <Add Text="הוסף מס חדש" />
+        </NoTaxes>
+      </Taxes>
+      <New Text="מוצר חדש">
+        <Product Text="הוסף מוצר חדש" />
+        <Or Text="או " />
+        <Group Text="קבוצת מוצרים חדשה" />
+      </New>
+      <Delete Text="מחק מוצר" />
+      <Edit Text="ערוך מוצר" />
+      <Search Text="חיפוש מוצר">
+        <Result Text="תוצאה" />
+        <Empty Text="אין תוצאה" />
+      </Search>
+      <Groups Text="קבוצות מוצר">
+        <Root Text="מוצרים" />
+        <Empty Text="הקבוצה שנבחרה אינה מכילה מוצרים">
+          <Info Text="הוסף מוצר לקבוצה שנבחרה" />
+        </Empty>
+      </Groups>
+      <Group>
+        <New Text="קבוצה חדשה" />
+        <Edit Text="ערוך קבוצה">
+          <Title Text="ערוך את קבוצה &quot;{0}&quot;" />
+          <Error>
+            <InvalidParentGroup Text="קבוצת הורים לא חוקית" />
+          </Error>
+        </Edit>
+        <Name Text="שם" />
+        <Color Text="צבע" />
+        <Image Text="תמונה">
+          <Browse Text="סייר">
+            <Info Text="בחר\י תמונה של קבוצת מוצרים מהמחשב שלך" />
+          </Browse>
+          <Clear Text="מחק">
+            <Info Text="הסר את תמונת קבוצת המוצרים" />
+          </Clear>
+        </Image>
+        <Delete Text="מחק קבוצה">
+          <Title Text="מחק את קבוצת המוצרים" />
+          <Confirmation Text="האם למחוק את הקבוצה &quot;{0}&quot;?" />
+          <Error Text="אירעה שגיאה במהלך ניסיון למחוק את הקבוצה.\nהודעת מערכת: {0}">
+            <DataViolation Text="לא ניתן למחוק את הקבוצה שנבחרה.\n\nודא\י שמוצר בן אינו קיים במסמכים, מבצעים או מכירות כלשהו ונסה\י שוב." />
+          </Error>
+        </Delete>
+        <Saved Text="הקבוצה נשמרה בהצלחה" />
+      </Group>
+      <Product>
+        <Edit Text="ערוך את המוצר &quot;{0}&quot;" />
+        <Details Text="פרטי מוצר" />
+        <Name Text="שם" />
+        <Code Text="קוד" />
+        <Barcode Text="ברקוד">
+          <Generate Text="ייצור ברקוד" />
+        </Barcode>
+        <MeasurementUnit Text="יח מדידה" />
+        <Taxes Text="מיסים">
+          <Add Text="הוסף מס למוצר">
+            <Tooltip Text="הוסף שיעור מס למוצר" />
+          </Add>
+          <Remove>
+            <Tooltip Text="הסר את שיעור המס הזה" />
+          </Remove>
+          <NoTaxes>
+            <Info Text="לא נמצאו מיסים.\nהוסף מיסים כדי שתוכל להקצות אחד למוצר" />
+          </NoTaxes>
+        </Taxes>
+        <SalePriceBeforeTax Text="מחיר מכירה לפני מס" />
+        <SalePrice Text="מחיר מכירה" />
+        <IsTaxIncluded Text="מחיר כולל מס" />
+        <Group Text="קבוצה" />
+        <IsEnabled Text="פעיל" />
+        <IsService Text="שירות (לא מנוהל במלאי)" />
+        <IsDiscountAllowed Text="הנחה מותרת" />
+        <IsPriceChangeAllowed Text="שינוי מחיר מותר" />
+        <IsUsingDefaultQuantity Text="כמות ברירת מחדל" />
+        <Description Text="פירוט" />
+        <Prices Text="מחיר ומס" />
+        <Cost Text="עלות" />
+        <Markup Text="סימון" />
+        <ImageAndColor Text="תמונה וצבע">
+          <Image Text="תמונה">
+            <Browse Text="סייר">
+              <Info Text="בחר\י תמונת מוצר מהמחשב שלך" />
+            </Browse>
+            <Clear Text="נקה">
+              <Info Text="נקוי תמונת מוצר" />
+            </Clear>
+          </Image>
+          <Color Text="צבע" />
+        </ImageAndColor>
+        <Comments Text="הערות">
+          <Info Text="ההערות יודפסו על בהדפסות המטבח." />
+          <Note Text="כתיבת הערה" />
+          <Add Text="הוספת הערה" />
+          <Error>
+            <ExistingComment Text="הערה כבר קיימת" />
+          </Error>
+        </Comments>
+        <DateCreated Text="נוצר" />
+        <DateUpdated Text="מעודכן" />
+        <Saved>
+          <Created Text="המוצר נוצר בהצלחה" />
+          <Updated Text="המוצר השתנה בהצלחה" />
+        </Saved>
+        <Delete Text="מוחק מוצר">
+          <Confirmation Text="האם את\ה בטוח\ה שברצונך למחוק את המוצר &quot;{0}&quot;?" />
+          <Error Text="אירעה שגיאה במהלך ניסיון למחוק את המוצר.\nהודעת מערכת: {0}" />
+          <DataViolation Text="לא ניתן למחוק את המוצר.\nודא\י שהמוצר לא קיים במסמכים ונסה שוב." />
+        </Delete>
+        <Error>
+          <Code Text="מוצר עם קוד שצוין כבר קיים (&quot;{0}&quot;).\nהזן\י קוד מוצר ייחודי ונסה\י שוב." />
+          <Barcode Text="מוצר עם ברקוד שצוין כבר קיים (&quot;{0}&quot;).\nהזן\י ברקודים ייחודיים ונסה\י שוב." />
+          <Taxes Text="נמצאו מיסים כפולים. שם מס (&quot;{0}&quot;).\nבחר\י מיסים תקפים ונסה\י שוב." />
+        </Error>
+      </Product>
+      <Export Text="ייצוא">
+        <NoServices Text="אין שירותי ייצוא זמינים." />
+        <Success Text="הייצוא הושלם בהצלחה." />
+        <Error Text="אירעה שגיאה. נסה\י שוב." />
+        <Select Text="בחר סוג ייצוא" />
+      </Export>
+      <Onboarding>
+        <Import Text="ייבא מוצרים מקובץ CSV">
+          <SelectFile Text="בחר קובץ">
+            <Description Text="בחר\י קובץ CSV המכיל את המוצרים שלך." />
+          </SelectFile>
+          <Validate Text="אמת">
+            <Description Text="אמת תכנים ומוצרים של CSV לייבוא." />
+            <Error Text="שגיאה באימות קובץ CSV. בדוק\י את הנתונים שלך ונסה שוב." />
+            <Success Text="המוצרים מוכנים לייבוא. ספירת מוצרים: {0}" />
+          </Validate>
+          <ImportProducts Text="ייבוא">
+            <Description Text="לחץ\י כדי לייבא מוצרים מקובץ CSV שנבחר." />
+          </ImportProducts>
+          <NoItems Text="אין מה לייבא" />
+          <Completed Text="היבוא הושלם בהצלחה!">
+            <Result>
+              <Created Text="פריטים שנוצרו:" />
+              <Updated Text="פריטים שהועלו:" />
+              <DocumentNumber Text="המסמך שנוצר:" />
+            </Result>
+            <Restart Text="אתחל ייבוא" />
+          </Completed>
+          <Importing Text="מייבא מוצרים ... נא להמתין ..." />
+        </Import>
+      </Onboarding>
+      <Count Text="ספירת מוצרים:" />
+      <ChangeGroup Text="המוצר &quot;{0}&quot; עבר ל&quot; {1} &quot;" />
+      <Guide>
+        <Title Text="פתח מוצרים" />
+        <Content Text="לחץ\י כאן כדי לפתוח את המוצרים ולהוסיף כמה מוצרים לחנות שלך" />
+        <Add>
+          <Title Text="הוסף מוצר" />
+          <Content Text="לחץ\י על כפתור &quot;מוצר חדש&quot; כדי להתחיל להוסיף מוצרים חדשים" />
+          <Name>
+            <Title Text="שם מוצר" />
+            <Content Text="הוסף\י שם מוצר ופרטי מוצרים המשמשים למכירה" />
+          </Name>
+          <Prices>
+            <Title Text="מחיר מוצר" />
+            <Content Text="לחץ\י כאן כדי לקבוע מחיר למוצר" />
+            <SalePrice>
+              <Title Text="מחיר מכירה" />
+              <Content Text="הגדר\י את מחיר מכירת המוצר כך שהוא יופיע במסך המכירות" />
+            </SalePrice>
+          </Prices>
+          <Save>
+            <Title Text="שמור שינויים" />
+            <Content Text="לחץ\י על כפתור &quot;שמור&quot; כדי לשמור את השינויים שלך ולהוסיף מוצר חדש" />
+          </Save>
+        </Add>
+      </Guide>
+      <Settings Text="מוצרים">
+        <Title Text="ברירת מחדל למוצר" />
+        <PriceIncludesTax Text="מחיר כולל מס">
+          <Tooltip Text="אם ייבחר, במוצרים חדשים יהיה מחיר עם מס שנבדק כברירת מחדל" />
+        </PriceIncludesTax>
+        <DefaultTax Text="שיעור ברירת מחדל למס">
+          <NoTaxes Text="מיסים לא נמצאו. נא להוסיף שיעורי מס בסעיף הניהול." />
+        </DefaultTax>
+        <MarkupOption Text="סימון מבוסס עלות מחיר">
+          <Tooltip Text="אם ייבחר, שינוי מחיר העלות יעודכן את הסימון במקום מחיר המכירה" />
+        </MarkupOption>
+      </Settings>
+      <Import Text="יבוא">
+        <LearnMore Text="למידע נוסף על ייבוא CSV" />
+        <Basic Text="בסיס">
+          <Description Text="ניתן להשתמש בייבוא בסיסי על ידי ביצוע ההוראות במדריך שלנו ליצירת קובץ CSV ב-">
+            <Link Text="התמיכה הטכנית שלנו" />
+            <Formatting Text="אם את\ה משתמש\ת בקובץ CSV מוכן, אנא וודא\י שאתה קורא את ה">
+              <Link Text="עיצוב הדרכה לקובצי CSV" />
+            </Formatting>
+            <Exported Text="כמו כן, את\ה יכול\ה להשתמש בייבוא בסיסי זה כדי לייבא מוצרים שיוצאו בעבר באמצעות פונקציונליות ייצוא של Aronium." />
+          </Description>
+        </Basic>
+        <Csv Text="מתקדם">
+          <Description Text="השתמש\י בייבוא מתקדם כדי להעלות מוצרים באמצעות קובץ CSV המותאם אישית שלך או CSV המיוצא מיישום אחר.\nתוכל\י לקרוא עוד על יבוא מתקדם בכתובת">
+            <Link Text="התמיכה הטכנית שלנו" />
+          </Description>
+          <SelectFile Text="בחירת קובץ" />
+          <Fields>
+            <Name Text="שם" />
+            <ProductGroup Text="קבוצת מוצר" />
+            <SKU Text="קוד מוצר SKU" />
+            <Barcode Text="ברקוד" />
+            <MeasurementUnit Text="יחידת מדידה" />
+            <Cost Text="עלות" />
+            <Markup Text="סימון" />
+            <Price Text="מחיר" />
+            <Tax Text="מַס" />
+            <IsTaxInclusivePrice Text="מחיר כולל מס" />
+            <IsPriceChangeAllowed Text="מותר לשנות מחיר" />
+            <IsUsingDefaultQuantity Text="משתמש בכמות ברירת המחדל" />
+            <IsService Text="שירות (לא מנוהל מלאי)" />
+            <IsEnabled Text="מאופשר" />
+            <Description Text="פירוט" />
+            <Quantity Text="יחידות" />
+            <Clear Text="נקה ערכים" />
+          </Fields>
+          <Duplicates Text="מה קורה אם נמצאים כפילויות?">
+            <Skip Text="דלג על כפילויות" />
+            <Merge Text="אחד כפילויות" />
+          </Duplicates>
+          <RequiredField Text="מציין שדה נדרש" />
+          <Import Text="יבוא" />
+          <Preview Text="תצוגה מקדימה">
+            <ProductsCount Text="מספר המוצרים לייבוא:" />
+          </Preview>
+          <Error>
+            <RequiredFields Text="שדות חובה חסרים. אנא בחר\י את כל השדות הדרושים לפני הייבוא." />
+            <InvalidContent Text="שגיאה בניתוח קובץ CSV. נא לבדוק את התוכן שלך ונסה\י שוב.\nהודעת שגיאה: {0}" />
+            <InvalidField Text="ערך לא חוקי עבור השדה &quot;{0}&quot;. נא לבדוק שוב את תוכן הקובץ ונסה\י שוב." />
+            <FileNotSelected Text="קובץ CSV לא נבחר. בחר\י קובץ כדי להמשיך." />
+            <DuplicateSKU Text="זוהו קודי מוצר כפולים. שם מוצר: &quot;{0}&quot;. קוד משוכפל: &quot;{1}&quot;" />
+            <DuplicateName Text="זוהו שמות מוצר כפולים. שם מוצר: &quot;{0}&quot;." />
+          </Error>
+        </Csv>
+        <Xml Text="XML">
+          <Description Text="השתמש בייבוא XML כדי לטעון מוצרים שיוצאו מיישום אחר של Aronium.\nייבוא XML ישמור על כל המאפיינים, כולל היררכיית תמונות ומוצרים." />
+          <SelectFile Text="בחר קובץ" />
+          <Import Text="יבוא" />
+        </Xml>
+      </Import>
+      <PriceTags Text="תג מחיר">
+        <Loading Text="טוען תבנית תגי מחירים ... נא להמתין ..." />
+        <Layout Text="פריסה">
+          <Columns Text="עמודות" />
+          <RowHeight Text="גובה שורה" />
+        </Layout>
+        <Display Text="תצוגה">
+          <Barcode Text="ברקוד">
+            <Type Text="סוג ברקוד" />
+          </Barcode>
+          <Code Text="קוד (SKU)" />
+          <PriceIncludesTax Text="מחיר כולל מס" />
+        </Display>
+        <Products Text="מוצרים">
+          <All Text="כל המוצרים" />
+          <Product Text="מוצר" />
+          <NumberOfCopies Text="מספר העתקים" />
+        </Products>
+      </PriceTags>
+    </Products>
+    <Customers Text="לקוחות וספקים">
+      <Search Text="חיפוש לקוח\ספק" />
+      <LearnMore Text="למידע נוסף על לקוחות וספקים" />
+      <New Text="לקוח \ ספק חדש" />
+      <Delete Text="מחק">
+        <Confirmation Text="האם למחוק את &quot;{0}&quot;?" />
+        <Error Text="שגיאה במחיקת הלקוח. לא ניתן היה למחוק את הלקוח.\nהודעת מערכת: {0}" />
+      </Delete>
+      <Customer>
+        <Edit Text="ערוך את &quot;{0}&quot;" />
+        <General Text="כללי">
+          <Title Text="מידע כללי" />
+          <Code Text="קוד" />
+          <Name Text="שם" />
+          <Address Text="כתובת" />
+          <PostalCode Text="מיקוד" />
+          <City Text="עיר" />
+          <Country Text="ארץ" />
+          <TaxNumber Text="מספר מס" />
+          <RabatePercent Text="הנחה" />
+          <Email Text="דוא''ל" />
+          <PhoneNumber Text="מספר טלפון" />
+          <IsEnabled Text="פעיל" />
+          <IsCustomer Text="לקוח" />
+          <IsSupplier Text="ספק" />
+        </General>
+        <Loyalty>
+          <Discounts Text="הנחות">
+            <Title Text="קבע\י הנחות לקוחות עבור מוצרים או קבוצות מוצרים" />
+            <Info Text="קבע\י הנחה למוצרים נבחרים" />
+            <NoItems Text="אין הנחות" />
+            <Existing Text="הנחה עבור &quot;{0}&quot; כבר קיימת." />
+            <Clear Text="נקה את כל ההנחות" />
+          </Discounts>
+          <Cards Text="כרטיס מועדון">
+            <Title Text="הזן\י כרטיסי מועדון לקוחות" />
+            <CardNumber Text="מספר כרטיס" />
+            <Add Text="הוסף כרטיס" />
+            <Duplicate Text="כרטיס מועדון כבר קיים" />
+          </Cards>
+        </Loyalty>
+        <Saved>
+          <Created Text="לקוח חדש נוצר בהצלחה." />
+          <Updated Text="הלקוח השתנה בהצלחה." />
+        </Saved>
+        <Existing Text="לקוח קיים">
+          <Warning Text="לקוח דומה כבר קיים: &quot;{0}&quot;.\nשדות כפולים: {1}.\n\nהאם בכל זאת ברצונך לשמור לקוח?" />
+        </Existing>
+        <PaymentTerms Text="תנאי תשלום">
+          <DueDatePeriod Text="תקופת תאריך יעד">
+            <Info Text="השתמש\י בתקופת תאריך יעד למספר ימים אחרון לתשלום לעסקה פתוחה ללקוח" />
+            <Days Text="ימים" />
+          </DueDatePeriod>
+        </PaymentTerms>
+      </Customer>
+      <Guide>
+        <Title Text="לקוחות וספקים" />
+        <Content Text="לחץ כאן לפתיחת מסך הלקוחות והספקים" />
+        <Add>
+          <Title Text="הוסף לקוח או לספק" />
+          <Content Text="לחץ\י כאן ליצירת לקוח או ספק חדש" />
+          <Name>
+            <Title Text="הכנס\י שם" />
+            <Content Text="הכנס\י שם לקוח או ספק" />
+          </Name>
+          <Save>
+            <Title Text="שמור שינויים" />
+            <Content Text="לאחר שהזנת את כל הפרטים, לחץ\י על כפתור &quot;שמור&quot; כדי לשמור שינויים" />
+          </Save>
+        </Add>
+      </Guide>
+      <Import Text="ייבוא">
+        <Title Text="ייבוא לקוחות" />
+        <Description Text="ייבא נתוני לקוחות מקובץ CSV. מידע נוסף בנושא ייבוא לקוחות ב">
+          <Link Text="תמיכה הטכנית שלנו" />
+        </Description>
+        <Fields>
+          <Name Text="שם" />
+          <Code Text="קוד" />
+          <TaxNumber Text="מספר מס" />
+          <Address Text="כתובת" />
+          <ZIP Text="מיקוד" />
+          <City Text="עיר" />
+          <Country Text="ארץ" />
+          <Email Text="דוא''ל" />
+          <Phone Text="טלפון" />
+          <IsEnabled Text="מאופשר" />
+          <IsCustomer Text="לקוח" />
+          <Clear Text="נקה נתונים" />
+        </Fields>
+        <Import Text="ייבוא" />
+        <Preview Text="תצוגה מקדימה">
+          <CustomersCount Text="מספר הלקוחות לייבוא: " />
+        </Preview>
+        <RequiredField Text="מציין שדה נדרש" />
+        <Importing Text="מייבא לקוחות... נא להמתין" />
+        <Error>
+          <RequiredFields Text="שדות חובה חסרים. אנא בחר\י את כל השדות הדרושים לפני הייבוא." />
+          <InvalidContent Text="שגיאה בניתוח קובץ CSV. אנא בדוק\י את התוכן שלך ונסה\י שוב.\nהודעת שגיאה: {0}" />
+          <InvalidField Text="ערך לא חוקי עבור השדה &quot;{0}&quot;. אנא, בדוק\י שוב את תוכן הקובץ ונסה\י שוב." />
+          <FileNotSelected Text="קובץ CSV לא נבחר. בחר\י קובץ כדי להמשיך." />
+          <DuplicateName Text="זוהה שם לקוח כפול. שם לקוח: &quot;{0}&quot;." />
+        </Error>
+        <Completed Text="לקוחות ייובאו בהצלחה!" />
+      </Import>
+      <Export Text="ייצוא">
+        <Completed Text="הלקוחות ייצאו בהצלחה!\nשם הקובץ: &quot;{0}&quot;" />
+      </Export>
+    </Customers>
+    <PaymentTypes Text="סוגי תשלום">
+      <LearnMore Text="למידע נוסף על סוגי תשלום" />
+      <New Text="סוג תשלום חדש" />
+      <Edit Text="עריכת סוג התשלום &quot;{0}&quot;" />
+      <Delete Text="מחיקת סוג תשלום">
+        <Confirmation Text="האם למחוק את &quot;{0}&quot;?" />
+        <Error Text="שגיאה במחיקת סוג התשלום. לא ניתן למחוק את סוג התשלום שנבחר.\nהודעת מערכת: {0}" />
+        <DataViolation Text="לא ניתן למחוק את סוג התשלום שנבחר. ודא\י שלא נעשה שימוש בסוג התשלום במסמכים ונסה שוב." />
+      </Delete>
+      <PaymentType>
+        <Name Text="שם" />
+        <Code Text="קוד" />
+        <IsCustomerRequired Text="נדרש לקוח" />
+        <IsFiscal Text="הדפס קבלה" />
+        <IsChangeAllowed Text="אפשר שינוי" />
+        <Ordinal Text="מיקום" />
+        <IsEnabled Text="מאופשר" />
+        <IsQuickPayment Text="תשלום מהיר" />
+        <OpenCashDrawer Text="פתח מגירת מוזמן" />
+        <ShortcutKey Text="קיצור מקשים" />
+        <MarkAsPaid Text="סמן תשלום כ&quot;שולם&quot;" />
+        <Saved>
+          <Created Text="סוג התשלום נוצר בהצלחה" />
+          <Updated Text="סוג התשלום התשנה בהצלחה" />
+        </Saved>
+        <Error Text="שגיאה">
+          <ExistingShortcutKey Text="מקש קיצור הדרך שצוין מוקצה כבר לסוג התשלום &quot;{0}&quot;.\nמקשי הקיצור חייבים להיות ייחודיים.\nאנא ציין\י מקש קיצור דרך אחר ונסה שוב.">
+            <Title Text="זוהה מקש קיצור דרך כפול" />
+          </ExistingShortcutKey>
+        </Error>
+      </PaymentType>
+      <Onboarding>
+        <Title Text="סוגי תשלום" />
+        <Info Text="הזן\י את סוגי התשלומים המשמשים למכירה בחנות שלך." />
+        <AddMore Text="שמור והוסף עוד">
+          <Error Text="אירעה שגיאה בעת הוספת סוג תשלום חדש.\nבדוק\י את הקלט ונסה\י שוב" />
+        </AddMore>
+        <Existing Text="Existing payment types" />
+      </Onboarding>
+    </PaymentTypes>
+    <Documents Text="מסמכים">
+      <View Text="הצג מסמכים" />
+      <Search Text="חפש מסמכים">
+        <Customer Text="לקוח">
+          <All Text="כל הלקוחות" />
+        </Customer>
+        <Product Text="מוצר">
+          <All Text="כל המוצרים" />
+        </Product>
+        <Period Text="טווח זמן">
+          <Tip Text="לחץ\י לבחירת תקופת החיפוש" />
+        </Period>
+        <DocumentType Text="סוג מסמך">
+          <All Text="כל סוגי המסמכים" />
+        </DocumentType>
+        <User Text="משתמש">
+          <All Text="כל המשתמשים" />
+        </User>
+        <PaidStatus Text="מצב תשלום">
+          <None Text="כל התשלומים" />
+          <Paid Text="שולם" />
+          <Unpaid Text="לא שולם" />
+        </PaidStatus>
+        <DocumentNumber Text="מספר מסמך" />
+        <ReferenceDocumentNumber Text="מסמך חיצוני" />
+        <CashRegister Text="קופה">
+          <All Text="כל הקופות" />
+        </CashRegister>
+        <Clear Text="נקה את על הסינונים" />
+      </Search>
+      <Document>
+        <Save>
+          <Saved Text="המסמך נשמר בהצלחה" />
+          <Error Text="שגיאה בשמירת המסמך. השינויים לא נשמרים.\nהודעת מערכת: {0}">
+            <InvalidPayments Text="סכום תשלום לא חוקי">
+              <Info Text="סכום התשלומים חייב להיות שווה לסכום המסמך. אנא תקן\י את התשלום ונסה\י שוב.\n\nסך המסמך: {0}. סכום התשלומים: {1}." />
+            </InvalidPayments>
+          </Error>
+        </Save>
+        <UnsavedChanges Text="אל תשמור שינויים">
+          <Confirmation Text="המסמך &quot;{0}&quot; מכיל שינויים שלא נשמרו.\n\nהאם ברצונך לשמור את המסמך לפני הסגירה?" />
+        </UnsavedChanges>
+        <StockDate Text="בחר\י תאריך שינוי מלאי">
+          <Description Text="הזן את התאריך בו נרשם שינוי מלאי על ידי מסמך זה" />
+          <Invalid Text="תאריך מלאי לא חוקי">
+            <Description Text="פעולה שנבחרה אסורה.\n\nנמצאה ספירת מלאי קיימת. המסמך &quot;{0}&quot; נוצר ב- {1}.\n\nבדוק\י את תאריך מלאי המסמך ונסה\י שוב." />
+            <Message Text="תאריך המלאי שנבחר אסור.\nספירת מלאי {0} נוצרה ב- {1}" />
+            <InvalidTime Text="זמן עדכון המלאי לא יכול להיות בעתיד" />
+          </Invalid>
+        </StockDate>
+        <Note Text="הערה" />
+        <InternalNote Text="הערה פנימית" />
+        <PaidStatus>
+          <Changed Text="שינוי תשלום נשמר בהצלחה" />
+        </PaidStatus>
+        <Items>
+          <CostPrice>
+            <Settings>
+              <AutoUpdate Text="עדכן אוטומטית את מחיר העלות ברכישה" />
+            </Settings>
+            <Update Text="עדכן מחיר עלות">
+              <Info Text="עלות הפריטים השתנתה. בחר\י פריטים שעבורם ברצונך לשנות את מחיר העלות." />
+              <Confirmation Text="האם ברצונך לעדכן את מחיר העלות עבור פריטים שנבחרו?" />
+              <Success Text="מחירי עלות התעדכו בהצלחה" />
+            </Update>
+          </CostPrice>
+          <Missing Text="המוצר שנבחר אינו קיים" />
+        </Items>
+      </Document>
+      <New>
+        <SelectDocumentType Text="בחר סוג מסמך" />
+      </New>
+      <NoDocument Text="המסמך המבוקש אינו קיים." />
+      <Inventory>
+        <Date Text="בחר\י תאריך מלאי">
+          <Description Text="הזן\י את התאריך בו נוצרה רשימת המלאי." />
+        </Date>
+        <Document>
+          <Item>
+            <Expected Text="צפיו" />
+            <Counted Text="נספר" />
+            <ChangeQuantity Text="שינוי כמות" />
+          </Item>
+          <ExistingItem Text="פריט שנבחר כבר התווסף למסמך זה." />
+          <Service Text="מנסה להוסיף שירות לספירת המלאי">
+            <Info Text="הפריט שנבחר &quot;{0}&quot; מסומן כשירות. האם את\ה בטוח\ה שברצונך להוסיף שירות לספירת המלאי?" />
+          </Service>
+          <AddGroup Text="הוסף פריטי קבוצה למסמך">
+            <Confirmation Text="האם את\ה בטוח\ה שברצונך להוסיף את כל המוצרים מהקבוצה &quot;{0}&quot; לספירת המלאי?" />
+          </AddGroup>
+        </Document>
+      </Inventory>
+      <Guide>
+        <Title Text="פתח מסמכים" />
+        <Content Text="לחץ\י כאן לפתיחת המסמכים והוספת הרכישה הראשונה שלך" />
+        <Add>
+          <Title Text="צור מסמך" />
+          <Content Text="לחץ\י כאן כדי ליצור רכישה חדשה ולהכניס פריטים למלאי" />
+          <Customer>
+            <Title Text="בחר לקוח" />
+            <Content Text="בחר\י לקוח למסמך זה" />
+          </Customer>
+          <Supplier>
+            <Title Text="בחר\י ספק" />
+            <Content Text="בחר\י ספק עבור מסמך זה" />
+          </Supplier>
+          <Product>
+            <Title Text="בחר\י מוצר" />
+            <Content Text="לחץ\י פעמיים על מוצר שברצונך להוסיף למסמך" />
+          </Product>
+          <Item>
+            <Quantity>
+              <Title Text="הזן\י כמות" />
+              <Content Text="הזן\י כמות שנרכשה. כמות זו תונפק במלאי" />
+            </Quantity>
+            <Price>
+              <Title Text="מחיר" />
+              <Content Text="בחר מחיר פריט" />
+            </Price>
+            <Save>
+              <Title Text="שמור שינויים" />
+              <Content Text="לחץ\י על כפתור &quot;שמור&quot; כדי לשמור שינויים ולהוסיף פריט זה למסמך" />
+            </Save>
+          </Item>
+          <Save>
+            <Title Text="שמור מסמך" />
+            <Content Text="לחץ\י על כפתור &quot;שמור&quot; לשמירת המסמך" />
+          </Save>
+        </Add>
+      </Guide>
+    </Documents>
+    <Countries Text="מדינות">
+      <New Text="מדינה חדשה" />
+      <Delete>
+        <Title Text="מחק מדינה" />
+        <Confirmation Text="האם את\ה בטוח\ה שברצונך למחוק את &quot;{0}&quot;?" />
+      </Delete>
+      <Country>
+        <Edit Text="ערוך\י מדינה &quot;{0}&quot;" />
+        <Name Text="שם" />
+        <Code Text="קוד" />
+        <Saved>
+          <Created Text="מדינה נוצרה בהצלחה" />
+          <Updated Text="הארץ נערכה בהצלחה" />
+        </Saved>
+      </Country>
+    </Countries>
+    <Company Text="החברה שלי">
+      <LearnMore Text="למידע נוסף על פרטי החברה" />
+      <Details Text="נתוני החברה שלי">
+        <Title Text="נתוני חברה" />
+        <Logo Text="לוגו">
+          <Add Text="סייר" />
+          <Remove Text="מחק" />
+        </Logo>
+        <BankAccount Text="חשבון בנק">
+          <Number Text="מספר חשבון בנק" />
+          <BankDetails Text="פרטי בנק" />
+        </BankAccount>
+      </Details>
+      <Saved Text="נתוני החברה נשמרו בהצלחה" />
+      <Onboarding>
+        <Title Text="נתוני חברה" />
+        <Info Text="הזן\י את נתוני החברה שלך להצגתם בחשבונית\קבלה" />
+      </Onboarding>
+      <Reset Text="אפס מסד נתונים">
+        <AdminPassword Text="הזן\י סיסמת מנהל מערכת" />
+        <Backup>
+          <Info Text="גיבוי בסיס הנתונים יבוצע לפני האיפוס.\nניתן לשנות את יעד הגיבוי המוגדר כברירת מחדל באמצעות השדות למטה." />
+          <Path Text="נתיב גיבוי">
+            <Select Text="בחר\י בחרי מיקום לשמירת הגיבוי לפני פעולת האיפוס" />
+          </Path>
+          <Completed Text="גיבוי מסד הנתונים הושלם" />
+        </Backup>
+        <PerformReset Text="אפס נתוני מסד נתונים">
+          <Confirmation Text="האם את\ה בטוח\ה שברצונך לאפס את בסיס הנתונים ולנקות את כל הנתונים?">
+            <Title Text="איפוס הנתונים מתבצע..." />
+          </Confirmation>
+        </PerformReset>
+        <Completed Text="איפוס הנתונים הושלם בהצלחה. היישום יופעל מחדש" />
+      </Reset>
+    </Company>
+    <Guide>
+      <Title Text="ניהול" />
+      <Content Text="לחץ\י כאן לפתיחת הניהול ולהוספת מוצרים ולקוחות" />
+    </Guide>
+    <Authorization>
+      <Title Text="אנא הכנס\י סיסמה לגישה לקטע ניהול" />
+    </Authorization>
+  </Management>
+</Language>

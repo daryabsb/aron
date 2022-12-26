@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Reports Text="ڕاپۆرتەکان">
+    <Filter Text="فلتەر">
+      <User Text="بەکارهێنەر">
+        <All Text="هەموو بەکارهێنەران" />
+      </User>
+      <Customer Text="کڕیار و دابینکار">
+        <All Text="هەموو کڕیار و دابینکارەکان" />
+      </Customer>
+      <Product Text="بەرهەم">
+        <All Text="هەموو بەرهەمەکان" />
+      </Product>
+      <CashRegister Text="کاشێر">
+        <All Text="هەموو کاشێرەکان" />
+      </CashRegister>
+      <Period>
+        <Tip Text="کلیک بکە بۆ گۆڕینی ماوەی ڕاپۆرتەکە" />
+      </Period>
+      <NotAvailable Text="بەردەستنیە بۆ ڕاپۆرتی دیاریکراو" />
+    </Filter>
+    <Report>
+      <Select Text="ڕاپۆرت دیاریبکە">
+        <Title Text="ڕاپۆرت دیاریبکە بۆ پیشاندان یان پرینتکردن" />
+      </Select>
+      <Show Text="ڕاپۆرت پیشانبدە" />
+      <NotFound Text="کڵێشەی ڕاپۆرت بەردەستنیە" />
+    </Report>
+    <Sales Text="فرۆشەکان">
+      <Products Text="بەرهەمەکان" />
+      <ProductGroups Text="گروپی بەرهەمەکان" />
+      <PaymentTypes Text="جۆری پارەدانەکان" />
+      <PaymentTypesUsers Text="جۆرەکانی پارەدان بەپێی بەکارهێنەر" />
+      <PaymentTypesCustomers Text="جۆرەکانی پارەدان بەپێی کڕیار" />
+      <TaxRates Text="ڕێژەی باج" />
+      <Customers Text="کڕیارەکان" />
+      <Users Text="بەکارهێنەران" />
+      <Returns Text="پارەگەڕاندنەوەکان" />
+      <InvoiceList Text="لیستی حیسابەکان" />
+      <Profit Text="قازانج و ڕێژەکەی" />
+      <Daily Text="فرۆشی ڕۆژانە" />
+      <Unpaid Text="ئەو فرۆشانەی پارەی نەدراوە" />
+      <StartingCash Text="پارەی دەستپێک" />
+      <Discounts Text="داشکاندنی کراو" />
+      <ItemDiscounts Text="داشکاندنی کاڵا" />
+      <StockMovement Text="گۆڕانکاری لە کۆگا" />
+    </Sales>
+    <Purchase Text="کڕین">
+      <Suppliers Text="دابینکار" />
+      <Products Text="بەرهەمەکان" />
+      <Unpaid Text="ئەو کڕینانەی پارەی نەدراوە" />
+      <Discounts Text="داشکاندنەکانی کڕین" />
+      <ItemDiscounts Text="داشکاندنەکانی کاڵای کڕاو" />
+      <PurchaseInvoiceList Text="لیستی حیسابی کڕین" />
+    </Purchase>
+    <LossAndDamage Text="زەرەر و زیان">
+      <Products Text="بەرهەمەکان" />
+    </LossAndDamage>
+  </Reports>
+</Language>

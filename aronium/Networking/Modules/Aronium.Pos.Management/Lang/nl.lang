@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <Management Text="Beheer">
+    <Dashboard Text="Dashboard">
+      <NoData Text="Geen gegevens om weer te geven" />
+      <MonthlySales Text="Maandelijkse verkopen">
+        <Description Text="Verkoopgegevens gegroepeerd per maand" />
+        <Month Text="Maand" />
+        <Legend Text="Legende" />
+        <CurrentYear Text="Huidige jaar" />
+        <TotalSales Text="Totale verkoop">
+          <TopMonth Text="Toppresterende maand:" />
+        </TotalSales>
+        <Year Text="Jaar">
+          <Previous Text="Vorig jaar" />
+          <Next Text="Volgend jaar" />
+        </Year>
+      </MonthlySales>
+      <HourlySales Text="Verkoop per uur">
+        <Description Text="Verkoopgegevens gegroepeerd op uren" />
+        <Hour Text="Uur" />
+        <Options>
+          <Amount Text="Bedrag" />
+          <Count Text="Tellen" />
+        </Options>
+      </HourlySales>
+      <TopProducts Text="Topproducten">
+        <Product Text="Artikel" />
+        <Total Text="Totaal" />
+      </TopProducts>
+      <TopProductGroups Text="Top productgroepen">
+        <Description Text="Best verkopende productgroepen in geselecteerde periode" />
+        <Group Text="Product groep" />
+      </TopProductGroups>
+      <TopCustomers Text="Topklanten">
+        <Description Text="Toon klanten in geselecteerde periode (top 5)" />
+      </TopCustomers>
+      <PeriodicReports Text="Periodieke rapporten">
+        <SelectPeriod Text="Selecteer rapportageperiode" />
+      </PeriodicReports>
+    </Dashboard>
+    <Products Text="Producten">
+      <Loading Text="Producten laden ..." />
+      <LearnMore Text="Meer informatie over producten" />
+      <Taxes Text="BTW tarieven">
+        <LearnMore Text="Meer informatie over BTW tarieven" />
+        <New Text="Nieuw BTW tarief" />
+        <Edit>
+          <Title Text="Bewerk BTW &quot;{0}&quot;" />
+        </Edit>
+        <Delete>
+          <Title Text="Wis BTW tarief" />
+          <Confirmation Text="Weet u zeker dat u het BTW &quot;{0}&quot; wilt verwijderen?" />
+          <Error Text="Er is een fout opgetreden bij het verwijderen van het BTW. Controleer of het BTW niet wordt gebruikt en probeer het opnieuw." />
+        </Delete>
+        <Tax>
+          <Code Text="Code" />
+          <Name Text="Naam" />
+          <Rate Text="Tarief" />
+        </Tax>
+        <Onboarding>
+          <Title Text="BTW TARIEVEN" />
+          <Info Text="Voer BTW tarieven in die worden gebruikt voor productdefinities, indien van toepassing.\nEr moet minstens één BTW tarief in het systeem zijn." />
+          <AddMore Text="Opslaan en + toevoegen">
+            <Error Text="Er is een fout opgetreden bij het toevoegen van een nieuw BTW tarief. Controleer uw gegevens en probeer het opnieuw" />
+            <Name Text="BTW naam (bijvoorbeeld 'Geen BTW')" />
+          </AddMore>
+          <Existing Text="Bestaande BTW tarieven">
+            <NoItems Text="Geen BTW tarieven gedefinieerd. Voeg ten minste één BTW tarief toe om nieuwe producten toe te voegen.">
+              <AddDefault Text="Standaard BTW tarief toevoegen" />
+            </NoItems>
+          </Existing>
+        </Onboarding>
+      </Taxes>
+      <New Text="Nieuw product">
+        <Product Text="Voeg nieuw product toe" />
+        <Or Text="of" />
+        <Group Text="nieuwe productgroep" />
+      </New>
+      <Delete Text="Product verwijderen" />
+      <Edit Text="Bewerk product" />
+      <Search Text="Zoek producten">
+        <Result Text="Resultaat" />
+        <Empty Text="Geen resultaten" />
+      </Search>
+      <Groups Text="Productgroepen">
+        <Root Text="Producten" />
+        <Empty Text="Geselecteerde groep bevat geen producten">
+          <Info Text="Voeg product toe aan geselecteerde groep" />
+        </Empty>
+      </Groups>
+      <Group>
+        <New Text="Nieuwe groep" />
+        <Edit Text="Groep bewerken">
+          <Title Text="Bewerk groep &quot;{0}&quot;" />
+          <Error>
+            <InvalidParentGroup Text="Ongeldige bovenliggende groep" />
+          </Error>
+        </Edit>
+        <Name Text="Naam" />
+        <Color Text="Kleur" />
+        <Delete Text="Groep verwijderen">
+          <Title Text="Verwijder productgroep" />
+          <Confirmation Text="Weet je zeker dat je groep &quot;{0}&quot; wilt verwijderen?" />
+          <Error Text="Er is een fout opgetreden bij het verwijderen van de groep.\nSysteembericht: {0}">
+            <DataViolation Text="Geselecteerde groep kan niet worden verwijderd.\n\nZorg ervoor dat het (child) onderliggende product niet bestaat in documenten, promoties of verkopen en probeer het opnieuw." />
+          </Error>
+        </Delete>
+        <Saved Text="De groep is succesvol opgeslagen" />
+      </Group>
+      <Product>
+        <Edit Text="Bewerk product &quot;{0}&quot;" />
+        <Details Text="Product details" />
+        <Name Text="Naam" />
+        <Code Text="Code" />
+        <Barcode Text="Barcode" />
+        <MeasurementUnit Text="Meet eenheid" />
+        <Taxes Text="BTW" />
+        <SalePrice Text="Verkoopprijs" />
+        <IsTaxIncluded Text="Prijs inclusief BTW" />
+        <Group Text="Groep" />
+        <IsEnabled Text="Actief" />
+        <IsService Text="Service (geen gebruik van voorraad)" />
+        <IsDiscountAllowed Text="Korting toegestaan" />
+        <IsPriceChangeAllowed Text="Prijswijziging toegestaan" />
+        <IsUsingDefaultQuantity Text="Standaard hoeveelheid" />
+        <Description Text="Beschrijving" />
+        <Prices Text="Prijs en BTW" />
+        <Cost Text="Kosten" />
+        <Markup Text="Prijsverhoging" />
+        <ImageAndColor Text="Afbeelding en kleur">
+          <Image Text="Beeld">
+            <Browse Text="Blader">
+              <Info Text="Selecteer productafbeelding op uw computer" />
+            </Browse>
+            <Clear Text="Wis">
+              <Info Text="Productafbeelding verwijderen" />
+            </Clear>
+          </Image>
+          <Color Text="Kleur" />
+        </ImageAndColor>
+        <DateCreated Text="Aangemaakt" />
+        <DateUpdated Text="Bijgewerkt" />
+        <Saved>
+          <Created Text="Product is met succes gemaakt" />
+          <Updated Text="Product succesvol gewijzigd" />
+        </Saved>
+        <Delete Text="Product verwijderen">
+          <Confirmation Text="Weet u zeker dat u het product &quot;{0}&quot; wilt verwijderen?" />
+          <Error Text="Er is een fout opgetreden bij het verwijderen van het product.\nSysteembericht: {0}" />
+          <DataViolation Text="Kan product niet verwijderen.\nControleer of het product niet bestaat in documenten en probeer het opnieuw." />
+        </Delete>
+        <Error>
+          <Code Text="Product met opgegeven code bestaat al (&quot;{0}&quot;).\nVoer een unieke productcode in en probeer het opnieuw." />
+          <Barcode Text="Product met opgegeven streepjescode bestaat al (&quot;{0}&quot;).\nVoer unieke streepjescodes in en probeer het opnieuw." />
+        </Error>
+      </Product>
+      <Export Text="Exporteren">
+        <NoServices Text="Geen exportdiensten beschikbaar." />
+        <Success Text="Export voltooid." />
+        <Error Text="Fout opgetreden. Probeer het opnieuw." />
+        <Select Text="Selecteer het exporttype." />
+      </Export>
+      <Onboarding>
+        <Import Text="Producten importeren uit CSV-bestand">
+          <SelectFile Text="Selecteer bestand">
+            <Description Text="Selecteer een CSV-bestand met uw producten." />
+          </SelectFile>
+          <Validate Text="Bevestigen">
+            <Description Text="Bevestig CSV-inhoud en producten voor import." />
+            <Error Text="Fout bij valideren van CSV-bestand. Controleer uw gegevens en probeer het opnieuw." />
+            <Success Text="Producten zijn klaar voor import. Aantal producten: {0}" />
+          </Validate>
+          <ImportProducts Text="Importeren">
+            <Description Text="Klik om producten uit het geselecteerde CSV-bestand te importeren." />
+          </ImportProducts>
+          <NoItems Text="Niets om te importeren" />
+          <Completed Text="Import is succesvol afgerond!">
+            <Result>
+              <Created Text="Gemaakte items:" />
+              <Updated Text="Bijgewerkte items:" />
+              <DocumentNumber Text="Document gecreëerd:" />
+            </Result>
+            <Restart Text="Start de import opnieuw" />
+          </Completed>
+          <Importing Text="Producten importeren ... Even geduld aub ..." />
+        </Import>
+      </Onboarding>
+      <Count Text="Producten tellen:" />
+      <ChangeGroup Text="Product &quot;{0}&quot; verplaatst naar &quot;{1}&quot;" />
+      <Guide>
+        <Title Text="Open producten" />
+        <Content Text="Klik hier om de productensectie te openen en een aantal producten aan uw winkel toe te voegen" />
+        <Add>
+          <Title Text="Een product toevoegen" />
+          <Content Text="Klik op de knop &quot;Nieuw product&quot; om nieuwe producten toe te voegen" />
+          <Name>
+            <Title Text="Productnaam" />
+            <Content Text="Voeg productnaam en productdetails toe die voor verkoop worden gebruikt" />
+          </Name>
+          <Prices>
+            <Title Text="Productprijs" />
+            <Content Text="Klik hier om de productprijs in te stellen" />
+            <SalePrice>
+              <Title Text="Verkoopprijs" />
+              <Content Text="Stel de verkoopprijs van het product in zodat deze op het verkoopscherm verschijnt" />
+            </SalePrice>
+          </Prices>
+          <Save>
+            <Title Text="Wijzigingen opslaan" />
+            <Content Text="Klik op de knop &quot;Opslaan&quot; om uw wijzigingen op te slaan en een nieuw product toe te voegen" />
+          </Save>
+        </Add>
+      </Guide>
+      <Settings Text="Producten">
+        <Title Text="Producten instellingen" />
+        <PriceIncludesTax Text="Prijs is inclusief BTW">
+          <Tooltip Text="Indien geselecteerd, krijgen nieuwe producten standaard een prijs met BTW" />
+        </PriceIncludesTax>
+        <DefaultTax Text="Standaard BTW tarief" />
+        <MarkupOption Text="Kostprijs gebaseerd op verhoging">
+          <Tooltip Text="Indien geselecteerd, wijzigt de kostprijs de prijsverhoging in plaats van de verkoopprijs" />
+        </MarkupOption>
+      </Settings>
+      <Import Text="Importeren">
+        <LearnMore Text="Meer informatie over CSV-import" />
+        <Basic Text="basis">
+          <Description Text="U kunt basisimport gebruiken door onze handleiding voor het maken van CSV-bestanden te volgen op">
+            <Link Text="ons ondersteuningscentrum" />
+            <Formatting Text="Als u een voorbereid CSV-bestand gebruikt, zorg er dan voor dat u de">
+              <Link Text="CSV-bestand zelfstudie opmaken" />
+            </Formatting>
+            <Exported Text="U kunt deze basisimport ook gebruiken om producten te importeren die eerder zijn geëxporteerd met behulp van de Aronium-exportfunctionaliteit." />
+          </Description>
+        </Basic>
+        <Csv Text="Gevorderd">
+          <Description Text="Gebruik geavanceerd importeren om producten te uploaden met uw aangepaste CSV-bestand of een CSV die is geëxporteerd vanuit een andere toepassing.\nU kunt meer lezen over geavanceerde import op">
+            <Link Text="ons ondersteuningscentrum" />
+          </Description>
+          <SelectFile Text="Selecteer bestand" />
+          <Fields>
+            <Name Text="Naam" />
+            <ProductGroup Text="Productgroep" />
+            <SKU Text="SKU" />
+            <Barcode Text="Barcode" />
+            <MeasurementUnit Text="Meeteenheid" />
+            <Cost Text="Kosten" />
+            <Markup Text="Prijsverhoging" />
+            <Price Text="Prijs" />
+            <Tax Text="BTW" />
+            <IsTaxInclusivePrice Text="Prijs inclusief btw" />
+            <IsPriceChangeAllowed Text="Prijswijziging toegestaan" />
+            <IsUsingDefaultQuantity Text="Standaardhoeveelheid gebruiken" />
+            <IsService Text="Service (geen gebruik van voorraad)" />
+            <IsEnabled Text="Ingeschakeld" />
+            <Description Text="Beschrijving" />
+            <Quantity Text="Aantal stuks" />
+            <Clear Text="Wis waarde" />
+          </Fields>
+          <RequiredField Text="Geeft verplicht veld aan" />
+          <Import Text="Importeren" />
+          <Preview Text="Voorbeeld">
+            <ProductsCount Text="Aantal te importeren producten:" />
+          </Preview>
+          <Error>
+            <RequiredFields Text="Vereiste velden ontbreken. Selecteer alstublieft alle vereiste velden voordat u importeert." />
+            <InvalidContent Text="Fout bij parseren van CSV-bestand. Controleer uw inhoud en probeer het opnieuw.\nFoutbericht: {0}" />
+            <InvalidField Text="Ongeldige invoer voor veld &quot;{0}&quot;. Controleer de inhoud van het bestand en probeer het opnieuw." />
+            <FileNotSelected Text="CSV-bestand is niet geselecteerd Selecteer een bestand om verder te gaan." />
+            <DuplicateSKU Text="Dubbele productcodes gedetecteerd. Productnaam: &quot;{0}&quot;. Gedupliceerde code: &quot;{1}&quot;" />
+            <DuplicateName Text="Dubbele productnaam gedetecteerd. Productnaam: &quot;{0}&quot;." />
+          </Error>
+        </Csv>
+      </Import>
+      <PriceTags Text="Prijskaartjes">
+        <Loading Text="Sjabloon voor prijskaartjes laden ... Even geduld ..." />
+        <Layout Text="lay-out">
+          <Columns Text="Kolommen" />
+          <RowHeight Text="Rijhoogte" />
+        </Layout>
+        <Display Text="Weergave">
+          <Barcode Text="Barcode">
+            <Type Text="Type streepjescode" />
+          </Barcode>
+          <Code Text="Code (SKU)" />
+        </Display>
+        <Products Text="Producten">
+          <All Text="Alle producten" />
+          <Product Text="Artikel" />
+          <NumberOfCopies Text="Aantal kopieën" />
+        </Products>
+      </PriceTags>
+    </Products>
+    <Customers Text="Klanten en leveranciers">
+      <Search Text="Zoek klanten en leveranciers" />
+      <LearnMore Text="Meer informatie over klanten en leveranciers" />
+      <New Text="Nieuwe klant / leverancier" />
+      <Delete Text="Verwijder">
+        <Confirmation Text="Weet u zeker dat u &quot;{0}&quot; wilt verwijderen?" />
+        <Error Text="Fout bij verwijderen van klant. De klant kan niet worden verwijderd.\nSysteembericht: {0}" />
+      </Delete>
+      <Customer>
+        <Edit Text="Bewerk &quot;{0}&quot;" />
+        <General Text="Algemeen">
+          <Title Text="Algemene informatie" />
+          <Code Text="Code" />
+          <Name Text="Naam" />
+          <Address Text="Adres" />
+          <PostalCode Text="ZIP code" />
+          <City Text="Stad" />
+          <Country Text="Land" />
+          <TaxNumber Text="Btw nummer" />
+          <RabatePercent Text="Korting" />
+          <Email Text="Email" />
+          <PhoneNumber Text="Telefoonnummer" />
+          <IsEnabled Text="Actief" />
+          <IsCustomer Text="Klant" />
+          <IsSupplier Text="Leverancier" />
+        </General>
+        <Loyalty>
+          <Discounts Text="Kortingen">
+            <Title Text="Stel klantkortingen in voor producten of productgroepen" />
+            <Info Text="Korting instellen voor geselecteerd artikel" />
+            <NoItems Text="Geen kortingen" />
+            <Existing Text="Korting voor &quot;{0}&quot; bestaat al." />
+            <Clear Text="Wis alle kortingen" />
+          </Discounts>
+          <Cards Text="Klantenkaarten">
+            <Title Text="Voer klantenloyaliteitskaarten in" />
+            <CardNumber Text="Kaartnummer" />
+            <Add Text="Voeg een kaart toe" />
+            <Duplicate Text="Klantenkaart bestaat al" />
+          </Cards>
+        </Loyalty>
+        <Saved>
+          <Created Text="Nieuwe klant succesvol aangemaakt." />
+          <Updated Text="Klant succesvol gewijzigd." />
+        </Saved>
+        <Existing Text="Bestaande klant">
+          <Warning Text="Gelijkaardige klant bestaat al: &quot;{0}&quot;.\nDubbele velden: {1}.\n\nWilt u de klant toch opslaan?" />
+        </Existing>
+        <PaymentTerms Text="Betalingsvoorwaarden">
+          <DueDatePeriod Text="Vervaldatum">
+            <Info Text="Gebruik de vervaldatum om het aantal dagen in te stellen voordat de transactie moet worden betaald voor elke niet-betaalde verkoop die aan deze klant is toegewezen" />
+            <Days Text="Dagen" />
+          </DueDatePeriod>
+        </PaymentTerms>
+      </Customer>
+      <Guide>
+        <Title Text="Klanten en leveranciers" />
+        <Content Text="Klik hier om het gedeelte met klanten en leveranciers te openen" />
+        <Add>
+          <Title Text="Voeg klant of leverancier toe" />
+          <Content Text="Klik hier om een nieuwe klant of leverancier te maken" />
+          <Name>
+            <Title Text="Voer naam in" />
+            <Content Text="Voer de klant- of leveranciersnaam in" />
+          </Name>
+          <Save>
+            <Title Text="Wijzigingen opslaan" />
+            <Content Text="Nadat u alle details hebt ingevoerd, klikt u op de knop &quot;Opslaan&quot; om de wijzigingen op te slaan" />
+          </Save>
+        </Add>
+      </Guide>
+      <Import Text="Importeren">
+        <Title Text="Importeer klanten" />
+        <Description Text="Gebruik de import van klanten om een lijst met klanten te uploaden met uw aangepaste CSV-bestand of een CSV geëxporteerd vanuit een andere toepassing.\nU kunt meer lezen over importeren van klanten op">
+          <Link Text="ons ondersteuningscentrum" />
+        </Description>
+        <Fields>
+          <Name Text="Naam" />
+          <Code Text="Code" />
+          <TaxNumber Text="Btw nummer" />
+          <Address Text="Adres" />
+          <ZIP Text="ZIP" />
+          <City Text="Stad" />
+          <Country Text="Land" />
+          <Email Text="Email" />
+          <Phone Text="Telefoon" />
+          <IsEnabled Text="Ingeschakeld" />
+          <IsCustomer Text="Klant" />
+          <Clear Text="Wis waarde" />
+        </Fields>
+        <Import Text="Importeren" />
+        <Preview Text="Voorbeeld" />
+        <RequiredField Text="Geeft verplicht veld aan" />
+        <Importing Text="Klanten importeren ... Even geduld ..." />
+        <Error>
+          <RequiredFields Text="Vereiste velden ontbreken. Selecteer alstublieft alle vereiste velden voordat u importeert." />
+          <InvalidContent Text="Fout bij parseren van CSV-bestand. Controleer uw inhoud en probeer het opnieuw.\nFoutbericht: {0}" />
+          <InvalidField Text="Ongeldige invoer voor veld &quot;{0}&quot;. Controleer de inhoud van het bestand en probeer het opnieuw." />
+          <FileNotSelected Text="CSV-bestand is niet geselecteerd Selecteer een bestand om verder te gaan." />
+          <DuplicateName Text="Dubbele klantnaam gedetecteerd. Klantnaam: &quot;{0}&quot;." />
+        </Error>
+        <Completed Text="Klanten succesvol geïmporteerd!" />
+      </Import>
+      <Export Text="Exporteren">
+        <Completed Text="Klanten succesvol geëxporteerd!\nBestandsnaam: &quot;{0}&quot;" />
+      </Export>
+    </Customers>
+    <PaymentTypes Text="Betalingswijzen">
+      <LearnMore Text="Meer informatie over betalingswijzen" />
+      <New Text="Nieuw betaaltype" />
+      <Edit Text="Bewerk het type betaling &quot;{0}&quot;" />
+      <Delete Text="Verwijder het betalingstype">
+        <Confirmation Text="Weet u zeker dat u &quot;{0}&quot; wilt verwijderen?" />
+        <Error Text="Fout bij het verwijderen van het betalingstype. Het geselecteerde betalingstype kan niet worden verwijderd.\nSysteembericht: {0}" />
+        <DataViolation Text="Kan het geselecteerde betalingstype niet verwijderen. Zorg ervoor dat het betalingstype niet in documenten wordt gebruikt en probeer het opnieuw." />
+      </Delete>
+      <PaymentType>
+        <Name Text="Naam" />
+        <Code Text="Code" />
+        <IsCustomerRequired Text="Klant vereist" />
+        <IsFiscal Text="Print bon" />
+        <IsChangeAllowed Text="Verandering toegestaan" />
+        <Ordinal Text="Positie" />
+        <IsEnabled Text="Ingeschakeld" />
+        <IsQuickPayment Text="Snelle betaling" />
+        <OpenCashDrawer Text="Open de geldlade" />
+        <ShortcutKey Text="Sneltoets" />
+        <MarkAsPaid Text="Markeer transactie als betaald" />
+        <Saved>
+          <Created Text="Type betaling is succesvol aangemaakt." />
+          <Updated Text="Type betaling succesvol gewijzigd" />
+        </Saved>
+        <Error Text="Fout">
+          <ExistingShortcutKey Text="Opgegeven sneltoets is al toegewezen aan betalingstype &quot;{0}&quot;.\nSneltoetsen moeten uniek zijn.\nGeef een andere sneltoets op en probeer het opnieuw.">
+            <Title Text="Dubbele sneltoets gedetecteerd" />
+          </ExistingShortcutKey>
+        </Error>
+      </PaymentType>
+      <Onboarding>
+        <Title Text="Betalingswijzen" />
+        <Info Text="Voer de betaalmethoden in die in uw winkel worden verkocht." />
+        <AddMore Text="Opslaan en meer toevoegen">
+          <Error Text="Er is een fout opgetreden bij het toevoegen van een nieuw betaaltype.\nControleer je invoer en probeer het opnieuw" />
+        </AddMore>
+        <Existing Text="Bestaande betaalwijzen" />
+      </Onboarding>
+    </PaymentTypes>
+    <Documents Text="Documenten">
+      <View Text="Bekijk documenten" />
+      <Search Text="Zoek documenten">
+        <Customer Text="Klant">
+          <All Text="Alle klanten" />
+        </Customer>
+        <Product Text="Artikel">
+          <All Text="Alle producten" />
+        </Product>
+        <Period Text="Periode">
+          <Tip Text="Klik om zoekperiode te selecteren" />
+        </Period>
+        <DocumentType Text="Type document">
+          <All Text="Alle documenttypen" />
+        </DocumentType>
+        <User Text="Gebruiker">
+          <All Text="Alle gebruikers" />
+        </User>
+        <PaidStatus Text="Betaal status">
+          <None Text="Alle transacties" />
+          <Paid Text="Betaald" />
+          <Unpaid Text="Onbetaald" />
+        </PaidStatus>
+        <DocumentNumber Text="Document Nummer" />
+        <ReferenceDocumentNumber Text="Extern document" />
+        <Clear Text="Wis alle filters" />
+      </Search>
+      <Document>
+        <Save>
+          <Saved Text="Document succesvol opgeslagen" />
+          <Error Text="Fout bij het opslaan van het document. De wijzigingen worden niet opgeslagen.\nSysteembericht: {0}">
+            <InvalidPayments Text="Ongeldig betalingsbedrag">
+              <Info Text="Het bedrag van de betaling moet gelijk zijn aan het documenttotaal. Corrigeer documentbetalingen en probeer het opnieuw.\n\nDocumenttotaal: {0}. Betalingen: {1}." />
+            </InvalidPayments>
+          </Error>
+        </Save>
+        <UnsavedChanges Text="Niet-opgeslagen wijzigingen">
+          <Confirmation Text="Document &quot;{0}&quot; bevat niet-opgeslagen wijzigingen.\n\nWilt u het document opslaan voordat het wordt gesloten?" />
+        </UnsavedChanges>
+        <StockDate Text="Selecteer de wijzigingsdatum van de voorraad">
+          <Description Text="Voer de datum in waarop de voorraadwijziging door dit document is geregistreerd" />
+          <Invalid Text="Ongeldige voorraaddatum">
+            <Description Text="Geselecteerde actie is niet toegestaan.\n\nBestaande voorraadtelling gevonden. Document &quot;{0}&quot; gemaakt op {1}.\n\nControleer de datum van de documentvoorraad en probeer het opnieuw." />
+            <Message Text="Geselecteerde stockdatum is niet toegestaan.\nVoorraadtelling {0} gemaakt op {1}" />
+            <InvalidTime Text="Voorraadtijd kan niet in de toekomst liggen" />
+          </Invalid>
+        </StockDate>
+        <Note Text="Notitie" />
+        <InternalNote Text="Interne notitie" />
+        <PaidStatus>
+          <Changed Text="Betaalde status met succes gewijzigd" />
+        </PaidStatus>
+      </Document>
+      <New>
+        <SelectDocumentType Text="Selecteer documenttype" />
+      </New>
+      <NoDocument Text="Gevraagd document bestaat niet." />
+      <Inventory>
+        <Date Text="Selecteer inventarisdatum">
+          <Description Text="Voer de datum in waarop de inventarislijst is gemaakt." />
+        </Date>
+        <Document>
+          <Item>
+            <Expected Text="Verwacht" />
+            <Counted Text="Geteld" />
+            <ChangeQuantity Text="Verander hoeveelheid" />
+          </Item>
+          <ExistingItem Text="Geselecteerd item is al aan dit document toegevoegd." />
+          <Service Text="Poging om service toe te voegen aan voorraadtelling">
+            <Info Text="Geselecteerd item &quot;{0}&quot; wordt gemarkeerd als een service. Weet u zeker dat u service wilt toevoegen aan voorraadtelling?" />
+          </Service>
+          <AddGroup Text="Groepsitems toevoegen aan document">
+            <Confirmation Text="Weet u zeker dat u alle producten uit de groep &quot;{0}&quot; wilt toevoegen aan de voorraadtelling?" />
+          </AddGroup>
+        </Document>
+      </Inventory>
+      <Guide>
+        <Title Text="Open documenten" />
+        <Content Text="Klik hier om het documentengedeelte te openen en uw eerste aankoop toe te voegen" />
+        <Add>
+          <Title Text="Maak een document" />
+          <Content Text="Klik hier om nieuwe artikelen aan te maken en op voorraad te zetten" />
+          <Customer>
+            <Title Text="Selecteer klant" />
+            <Content Text="Selecteer klant voor dit document" />
+          </Customer>
+          <Supplier>
+            <Title Text="Selecteer leverancier" />
+            <Content Text="Selecteer leverancier voor dit document" />
+          </Supplier>
+          <Product>
+            <Title Text="Selecteer product" />
+            <Content Text="Dubbelklik op een product dat u aan het document wilt toevoegen" />
+          </Product>
+          <Item>
+            <Quantity>
+              <Title Text="Voer de hoeveelheid in" />
+              <Content Text="Voer de gekochte hoeveelheid in. Deze hoeveelheid wordt op voorraad gezet" />
+            </Quantity>
+            <Price>
+              <Title Text="Prijs" />
+              <Content Text="Voer de artikelprijs in" />
+            </Price>
+            <Save>
+              <Title Text="Wijzigingen opslaan" />
+              <Content Text="Klik op de knop &quot;Opslaan&quot; om de wijzigingen op te slaan en dit item aan het document toe te voegen" />
+            </Save>
+          </Item>
+          <Save>
+            <Title Text="Bewaar document" />
+            <Content Text="Klik op de knop &quot;Opslaan&quot; om het document op te slaan" />
+          </Save>
+        </Add>
+      </Guide>
+    </Documents>
+    <Countries Text="Landen">
+      <New Text="Nieuw Land" />
+      <Delete>
+        <Title Text="Land verwijderen" />
+        <Confirmation Text="Weet u zeker dat u land &quot;{0}&quot; wilt verwijderen?" />
+      </Delete>
+      <Country>
+        <Edit Text="Land bewerken &quot;{0}&quot;" />
+        <Name Text="Naam" />
+        <Code Text="Code" />
+        <Saved>
+          <Created Text="Land succesvol aangemaakt" />
+          <Updated Text="Land met succes bewerkt" />
+        </Saved>
+      </Country>
+    </Countries>
+    <Company Text="Mijn bedrijf">
+      <LearnMore Text="Meer informatie over bedrijfsgegevens" />
+      <Details Text="Mijn bedrijfsgegevens">
+        <Title Text="Mijn bedrijfsgegevens" />
+        <Logo Text="Logo">
+          <Add Text="Blader" />
+          <Remove Text="Wis" />
+        </Logo>
+        <BankAccount Text="bankrekening">
+          <Number Text="Bank account nummer" />
+          <BankDetails Text="Bankgegevens" />
+        </BankAccount>
+      </Details>
+      <Saved Text="Bedrijfsgegevens succesvol opgeslagen" />
+      <Onboarding>
+        <Title Text="Bedrijfsgegevens" />
+        <Info Text="Voer uw bedrijfsgegevens in. Bedrijfsgegevens worden gebruikt voor ontvangsten en facturen" />
+      </Onboarding>
+      <Reset Text="Stel de database opnieuw in">
+        <AdminPassword Text="Voer het beheerderswachtwoord in" />
+        <Backup>
+          <Info Text="Databaseback-up wordt uitgevoerd vóór de reset.\nU kunt de standaard back-upbestemming wijzigen met behulp van de onderstaande velden." />
+          <Path Text="Back-up databasepad">
+            <Select Text="Selecteer de bestemming waar de databaseback-up wordt opgeslagen voordat de reset wordt uitgevoerd." />
+          </Path>
+          <Completed Text="Database-backup voltooid" />
+        </Backup>
+        <PerformReset Text="Stel de database opnieuw in">
+          <Confirmation Text="Weet je zeker dat je de database wilt resetten en alle gegevens wilt wissen?">
+            <Title Text="Database reset bezig" />
+          </Confirmation>
+        </PerformReset>
+        <Completed Text="Database-reset succesvol afgerond. Aronium zal nu opnieuw opstarten." />
+      </Reset>
+    </Company>
+    <Guide>
+      <Title Text="Beheer" />
+      <Content Text="Klik hier om de beheersectie te openen en producten en klanten toe te voegen" />
+    </Guide>
+    <Authorization>
+      <Title Text="Voer het wachtwoord in voor toegang tot het managementgedeelte" />
+    </Authorization>
+  </Management>
+</Language>

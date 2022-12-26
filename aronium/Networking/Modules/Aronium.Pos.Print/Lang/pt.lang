@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Print>
+    <Labels>
+      <Documents>
+        <InventoryCount Text="Inventário de Produtos">
+          <Counted Text="Contados" />
+          <CountedValue Text="Valor contado" />
+          <CreatedBy Text="Criado por" />
+          <DiffMinus Text="Dif -" />
+          <DiffPlus Text="Dif +" />
+          <Expected Text="Esperado" />
+          <Time Text="Hora" />
+          <PositiveAmount Text="Valor +" />
+          <NegativeAmount Text="Valor -" />
+        </InventoryCount>
+        <Invoice Text="Factura">
+          <AmountDue Text="Valor em falta" />
+          <BankAccountNumber Text="Bank acc. number" />
+          <BankDetails Text="Bank details" />
+          <BillTo Text="Cliente" />
+          <InvoiceNumber Text="Factura Nº" />
+          <Item Text="Artigo" />
+          <PaidAmount Text="Valor pago" />
+          <PaymentMethod Text="Método de pagamento" />
+          <PaymentStatus Text="Estado de pagamento">
+            <Paid Text="Pago" />
+            <Unpaid Text="Não pago" />
+          </PaymentStatus>
+          <ItemsCount Text="Total de artigos" />
+        </Invoice>
+      </Documents>
+      <General>
+        <DocumentNumber Text="Documento nº" />
+        <Total Text="Total" />
+        <Quantity Text="Quantidade" />
+        <UnitPrice Text="Preço Unitário" />
+        <Subtotal Text="Subtotal" />
+        <UnitOfMeasurement Text="UdM" />
+        <Tax Text="Imposto" />
+        <Discount Text="Desconto" />
+        <DueDate Text="Prazo de pagamento" />
+        <User Text="Utilizador" />
+        <Period Text="Período" />
+        <Numbering Text="Nº" />
+        <Name Text="Nome" />
+        <Code Text="Código" />
+        <Company Text="Empresa">
+          <Address Text="Endereço" />
+        </Company>
+        <Cost Text="Custo" />
+        <Margin Text="Margem" />
+        <Profit Text="Lucro" />
+        <Customer Text="Cliente" />
+        <ProductName Text="Nome do produto" />
+        <Date Text="Data" />
+        <TotalBeforeTax Text="Total tributável" />
+        <Supplier Text="Fornecedor" />
+        <TotalPaid Text="Total pago" />
+        <TotalUnpaid Text="Total por pagar" />
+        <Product Text="Produto" />
+        <ProductGroup Text="Grupo de Produto" />
+        <TaxName Text="Nome do Imposto" />
+        <Page Text="Página" />
+        <Qty Text="Qtd." />
+      </General>
+      <Reports>
+        <ProfitAndMargin Text="Lucro &amp; Margem" />
+        <InventoryCount Text="Relatório Contagem Inventário" />
+        <PurchaseByProduct Text="Compras por Produto" />
+        <PurchaseBySupplier Text="Compras por Fornecedor" />
+        <UnpaidPurchases Text="Compras em Dívida" />
+        <SalesByCustomer Text="Vendas por clientes" />
+        <DailySales Text="Vendas Diárias" />
+        <Invoices Text="Facturas" />
+        <SalesByPaymentType Text="Vendas por Tipos de Pagamento" />
+        <SalesByProduct Text="Vendas por Produto" />
+        <Refunds Text="Devoluções" />
+      </Reports>
+    </Labels>
+  </Print>
+</Language>

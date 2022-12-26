@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="is" name="Icelandic">
+  <ReceiptPrinter Text="Kvittunnar Prentari">
+    <PrintReceipt Text="Prenta Kvittannir" />
+    <Receipt>
+      <PrinterNotFound Text="Kvittunnar Prentari er ekki valinn eða óvirkur. Athugað'u Stillingar Prentara og Reyndu Aftur." />
+      <PaymentTypes>
+        <PrintDisabled Text="Prenta Kvittannir er Óvirk fyrir Valda Greiðslu Tegund.\nVinamlegast virkjaðu Kvittunnar Prentara fyrir Valdar GReiðslu Tegundir áður en prentað er kvöttun." />
+      </PaymentTypes>
+      <Company>
+        <TaxNumber Text="Skattur." />
+      </Company>
+      <Customer Text="Viðskiptavinur">
+        <Address Text="Heimilisfang" />
+        <TaxNumber Text="Skattur" />
+        <Code Text="Kóði" />
+        <PhoneNumber Text="Sími" />
+        <Email Text="Netfang" />
+      </Customer>
+      <Number Text="Nóta Númer." />
+      <RefundNumber Text="Endurgreiðsla Númer." />
+      <OrderNumber Text="Pöntun Númer." />
+      <ItemsCount Text="Fjöldi Vara" />
+      <Subtotal Text="Heildar Upphæð" />
+      <Tax Text="VSK" />
+      <Discount Text="Afsláttur Á Körfu" />
+      <Total Text="SAMTALLS" />
+      <PaidAmount Text="Borgað" />
+      <AmountDue Text="Til Baka" />
+      <DueDate Text="Gjalddagi" />
+      <User Text="Notandi" />
+      <Change Text="Til Baka" />
+      <Customize Text="Afrit Viðskiptavinar">
+        <UseSystemCurrency Text="Nota Gjaldmiðil Stýrikerfis">
+          <Info Text="Gjaldmiðils táknið þitt er stillt á „{0}“. Notaðu Windows Control Panel til að breyta gjaldmiðils tákni.">
+            <OpenRegionalSettings Text="Opna regional settings" />
+          </Info>
+        </UseSystemCurrency>
+        <NumberOfDecimalPlaces Text="Auka Stafir" />
+        <PrintTaxes Text="Prenta Heildar VSK" />
+        <PrintItemsCount Text="Prenta Vöru Fjölda">
+          <PrintItemsQuantity Text="Prenta Heildar Magn" />
+        </PrintItemsCount>
+        <PrintOrderNumber Text="Prenta Pöntunar Númer" />
+        <ShortReceiptNumber Text="Stutt Nótu Númer" />
+        <Counter Text="Kvittanna Talningar">
+          <Edit Text="Smelltu til að Breyta Fjölda Kvittanna" />
+        </Counter>
+        <Localize Text="Þýða Kvittunnar Texta">
+          <Info Text="Notaðu þetta ef þú villt setja inn þína Þýðingu á Kvittannir." />
+          <Company>
+            <TaxNumber Text="VSK Númer Fyrirtækis" />
+          </Company>
+          <CustomerDetails Text="Upplýsingar Viðskiptavinar">
+            <Info Text="Hvað á að koma Framm á Kvittun um Viðskiptarvin." />
+          </CustomerDetails>
+          <Customer Text="Viðskiptavinur">
+            <Address Text="Heimilisfang" />
+            <TaxNumber Text="Kennitala" />
+            <Code Text="Kóði" />
+            <PhoneNumber Text="Símanúmer" />
+            <Email Text="Tölvupóstur" />
+          </Customer>
+          <ReceiptNumber Text="Nóta" />
+          <RefundNumber Text="Endurgreiðsla" />
+          <OrderNumber Text="Sala" />
+          <ItemsCount Text="Fjöldi Vara" />
+          <Discount Text="Afsláttur" />
+          <Subtotal Text="Heildar Upphæð" />
+          <Tax Text="VSK" />
+          <Total Text="Samtalls" />
+          <PaidAmount Text="Samtalls Borgað" />
+          <AmountDue Text="Upphæð Til Greiðslu" />
+          <DueDate Text="Gjalddagi" />
+          <User Text="Starfsmaður" />
+          <Change Text="Til Baka" />
+        </Localize>
+        <CustomerDetails Text="Upplýsingar Viðskiptarvins">
+          <Info Text="Hér velurðu hvað á að koma Framm á Kvittunini Um Viðskiptarvin" />
+          <Name Text="Nafn" />
+          <Code Text="Kóði" />
+          <TaxNumber Text="Kennitala" />
+          <Address Text="Heimilisfang" />
+          <PhoneNumber Text="Símanúmer" />
+          <Email Text="Tölvupóstur" />
+        </CustomerDetails>
+        <PrintMeasurementUnit Text="Prent mælingar eining" />
+        <PrintTaxName Text="Prenta Skatt Nafn" />
+      </Customize>
+    </Receipt>
+    <DailyReport>
+      <ZReport Text="Z Skýrsla" />
+      <XReport Text="X Skýrska" />
+      <Date Text="Dagsetning:" />
+      <Time Text="Tími:" />
+      <ReportNumber Text="Skýrsla #:" />
+      <FromDocument Text="Frá Skjali:" />
+      <ToDocument Text="Til Skjals:" />
+      <CashIn Text="Innborgað:" />
+      <CashOut Text="Útborgað:" />
+      <UserSales Text="Sölur Notanda:" />
+      <PaymentTypes Text="Borgað Með:">
+        <Total Text="Samtalls Borgað:" />
+      </PaymentTypes>
+      <Refunds Text="Endurgreiðslur:">
+        <Total Text="Samtalls Endurgreiðslur:" />
+      </Refunds>
+      <TaxCollected Text="VSK Safnað:" />
+      <TaxableTotal Text="VSK SAamtalls:" />
+      <Tax Text="VSK:" />
+      <Total Text="Samtalls:" />
+      <TotalBalance Text="Heildar Upphæð:" />
+      <Items Text="VÖRU UPPGJÖR">
+        <ReportNumber Text="Skýrsla #:" />
+        <Products Text="VÖRUR" />
+        <Groups Text="VÖRU FLOKKAR" />
+        <Count Text="Vöru Talning" />
+      </Items>
+      <DiscountsGranted Text="Heildar Afsláttur:" />
+      <CashRegister Text="KASSI #:" />
+    </DailyReport>
+    <CashDrawer Text="Peninga Skúffa">
+      <OpenCashDrawer Text="Opna Peninga Skúffu">
+        <AuthorizationRequired Text="AÐ Opna Peninga Skúffu Þarfnast Auðkenni.\nSláðu Inn Lykilorð til að Opna Peninga Skúffu." />
+      </OpenCashDrawer>
+      <Command Text="Skipun Peninga Skúffu">
+        <LearnMore Text="Hvað Er Þetta?" />
+      </Command>
+      <Error>
+        <CommandNotSet Text="Skipun Fyrir Peninga Skúffu Ekki Sett.\nSettu inn Skipun til að Halda Áfram." />
+        <PrinterNotSet Text="Kvittunnar Prentari Ekki Virkur.\nStilltu Kvittunnar Prentara Til Að Halda Áfram." />
+      </Error>
+      <Test Text="Prufa Skúffu">
+        <InvalidCommand Text="Sjáðu inn Virka Skipun til að Prófa Peninga Skúffu." />
+      </Test>
+    </CashDrawer>
+  </ReceiptPrinter>
+  <FiscalPrinter>
+    <Check Text="Hleð Kvittunnar Prentara...">
+      <Status Text="Prentara Stöðu Athugun" />
+    </Check>
+    <CloseFiscalDay Text="Prenta Lok Dags Uppgjör">
+      <Info Text="Veldu Skýrsla til að Prenta. Vertu viss um að Prentarinn sé virkur." />
+      <DailyReport Text="Prenta Uppgjör">
+        <InProgress Text="Prenta Uppgjör... Augna Blik..." />
+      </DailyReport>
+      <SubReport Text="Renta Uppgjör">
+        <InProgress Text="Prenta Uppgjör... Augna Blik..." />
+      </SubReport>
+      <ItemsReport Text="Prenta Vöru Skýrslu">
+        <InProgress Text="Prenta Vöru Skýrslu... Augna Blik..." />
+      </ItemsReport>
+      <PrinterDisabled Text="Prentari er ekki virkur eða ekki valinn. Skýrslur voru ekki Prentaðar." />
+    </CloseFiscalDay>
+  </FiscalPrinter>
+</Language>

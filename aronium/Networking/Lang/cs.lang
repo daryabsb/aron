@@ -1,0 +1,1575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="cs" name="Čeština">
+  <Buttons>
+    <Yes Text="Ano" />
+    <Ok Text="OK" />
+    <No Text="Ne" />
+    <Cancel Text="Zrušit" />
+    <Save Text="Uložit" />
+    <Close Text="Zavřít" />
+    <Add Text="Přidat" />
+    <New Text="Nový" />
+    <Edit Text="Upravit" />
+    <Cut Text="Vyjmout" />
+    <Copy Text="Kopírovat" />
+    <Paste Text="Vložit" />
+    <Delete Text="Odstranit" />
+    <Refresh Text="Obnovit" />
+    <Login Text="Přihlásit se" />
+    <Logout Text="Odhlásit se" />
+    <Print Text="Tisknout" />
+    <Pdf Text="PDF" />
+    <SavePdf Text="Uložit jako PDF" />
+    <Excel Text="Excel" />
+    <Hide Text="Schovat" />
+    <FirstPage Text="První Stránka" />
+    <LastPage Text="Poslední Stránka" />
+    <NextPage Text="Další Stránka" />
+    <PreviousPage Text="Předchozí Stránka" />
+    <Continue Text="Pokračovat" />
+    <Clear Text="Vyčistit" />
+    <Exit Text="Odejít" />
+    <Search Text="Hledat" />
+    <Ignore Text="Ignorovat" />
+    <Retry Text="Opakovat" />
+    <DeleteAll Text="Vymazat vše" />
+    <Skip Text="Přeskočit" />
+    <Restart Text="Restartovat" />
+    <SaveAndClose Text="Uložit &amp; zavřít" />
+    <Help Text="Pomoc" />
+    <Back Text="Zpět" />
+    <LearnMore Text="Zjištěte více" />
+    <Done Text="Hotovo" />
+    <Send Text="Poslat" />
+    <WhatsThis Text="Co to je?" />
+    <Maximize Text="Maximalizovat" />
+    <Restore Text="Obnovit" />
+    <Browse Text="Procházet" />
+    <PrintPreview Text="Náhled tisku" />
+  </Buttons>
+  <Bootstrap>
+    <Initializing Text="Inicializace aplikace..." />
+    <Load>
+      <Components Text="Načítání součástí aplikace..." />
+      <Modules Text="Načítání a inicializace modulů..." />
+      <Products Text="Načítání produktů...">
+        <Error Text="Chyba při načítání produktů.">
+          <Info Text="Některé produkty nemusí být způsobilé k prodeji. Zkontrolujte neúspěšné produkty a zkuste to znovu." />
+          <DuplicateBarcode Text="Duplicitní čárový kód „{0}“" />
+          <DuplicateCode Text="Duplicitní kód „{0}“" />
+          <Copy Text="Zkopírovat do schránky" />
+        </Error>
+      </Products>
+      <CashRegister Text="Načítání dat pokladny..." />
+      <ScanTypes Text="Typy skenování..." />
+    </Load>
+    <Connect Text="Připojování k databázi...">
+      <NoDataProvider Text="Modul připojení k databázi není k dispozici.&#xA;Kontaktujte prosím svého správce." />
+    </Connect>
+    <Error Text="Při pokusu o spuštění aplikace došlo k chybě. Kontaktujte prosím správce systému." />
+    <Completed Text="Spouštění aplikace" />
+    <BackupDatabase Text="Ověřování verze databáze..." />
+    <Migrations Text="Kontrola databáze...">
+      <Failed Text="Migrace databáze se nezdařila!" />
+    </Migrations>
+    <RestartRequired Text="Aby se změny projevily, je vyžadován restart aplikace.&#xA;Klepnutím na tlačítko níže restartujte aplikaci." />
+    <ValidateLicense Text="Ověřování licence..." />
+    <Onboarding Text="Zkontrolujte stav registrace..." />
+    <CustomerDisplay Text="Inicializace zákaznického displeje..." />
+    <PrinterStatus Text="Zkontrolujte stav tiskárny..." />
+    <VerifyVersion Text="Ověřování verze aplikace..." />
+  </Bootstrap>
+  <Onboarding>
+    <Welcome Text="Vítejte">
+      <Info Text="Pojďme nastavit váš obchod a základní data aplikace.&#xA;Dokončení procesu registrace bude trvat jen několik minut." />
+      <Start Text="ZAČÍT" />
+    </Welcome>
+    <Back Text="Zpět" />
+    <Skip Text="Přeskočit registraci" />
+    <Hide Text="Už to nezobrazovat" />
+    <Next Text="Přeskočit" />
+    <Continue Text="Uložit a pokračovat" />
+    <PriceDisplay Text="Zobrazení ceny">
+      <Info Text="Vyberte, zda se ceny zobrazí a vytisknou před zdaněním nebo po něm" />
+      <BeforeTax Text="Před zdaněním">
+        <Description Text="Ceny budou zobrazeny a vytištěny na účtence bez daně" />
+      </BeforeTax>
+      <AfterTax Text="Po zdanění">
+        <Description Text="Ceny budou zobrazeny a vytištěny na účtence včetně daně" />
+      </AfterTax>
+      <DiscountApplyRule>
+        <Info Text="Na základě tohoto výběru budou slevy uplatněny před zdaněním nebo po něm. Pravidla slev můžete kdykoli změnit v nastavení." />
+      </DiscountApplyRule>
+    </PriceDisplay>
+    <Layout Text="Vyberte Rozvržení">
+      <LearnMore Text="Zjistěte více o rozložení a pracovním prostoru" />
+      <Standard Text="Standart">
+        <Description Text="Toto rozložení použijte, pokud používáte čárové kódy nebo máte k počítači připojenou fyzickou klávesnici." />
+      </Standard>
+      <TouchScreen Text="Vizuální">
+        <Description Text="Toto rozvržení použijte, pokud chcete vizuálně zobrazit své produkty a skupiny na prodejní obrazovce." />
+      </TouchScreen>
+      <EnableVirtualKeyboard Text="Povolit virtuální klávesnici" />
+    </Layout>
+    <Registration Text="Registrace">
+      <Info Text="Zadejte prosím svou e-mailovou adresu, abychom vám mohli poskytnout více přizpůsobenou podporu.">
+        <Email Text="Tento e-mail bude nastaven jako výchozí účet správce a lze jej použít k obnovení hesla. Tuto e-mailovou adresu můžete kdykoli změnit." />
+      </Info>
+      <Email Text="Vaše emailová adresa">
+        <Privacy Text="Váš e-mail je přísně důvěrný. Váš e-mail použijeme k poskytování personalizovanější podpory a k zasílání nejnovějších aktualizací, pouze pokud si to budete přát.&#xA;Také nesnášíme &quot;spam&quot;." />
+      </Email>
+    </Registration>
+    <UserProfile>
+      <Title Text="Pojďme nastavit váš osobní účet" />
+      <Info Text="Zadejte prosím své jméno a přihlašovací údaje používané pro přístup správce." />
+      <LearnMore Text="Přečtěte si další informace o uživatelích a výchozích přihlašovacích údajích" />
+      <FirstName Text="Jméno" />
+      <LastName Text="Příjmení" />
+      <Email Text="Email">
+        <Info Text="Tento e-mail bude použit jako sekundární e-mail pro váš účet.&#xA;Ujistěte se, že jste zadali platnou e-mailovou adresu, abyste mohli obnovit heslo prostřednictvím e-mailu." />
+        <Missing Text="Pokud nezadáte platnou e-mailovou adresu, vystavujete se riziku zablokování.&#xA;V případě, že zapomenete své heslo, nebude možné jej bez platné e-mailové adresy nijak obnovit.">
+          <Title Text="E-mailová adresa není nastavena" />
+          <Confirmation Text="Chcete pokračovat bez e-mailové adresy?" />
+        </Missing>
+      </Email>
+      <Password Text="Heslo">
+        <Errors>
+          <Empty Text="Heslo nesplňuje požadovaná kritéria. Heslo nemůže být prázdné." />
+          <ConfirmationError Text="Potvrzení hesla se neshoduje. Zadejte prosím stejné hodnoty do polí pro heslo a potvrzení hesla." />
+        </Errors>
+      </Password>
+      <ConfirmPassword Text="Potvrďte heslo" />
+    </UserProfile>
+    <Completed Text="Registrace dokončena">
+      <Info Text="Gratulujeme! Jste připraveni vyrazit.&#xA;Dále otevřete sekci &quot;Správa&quot; a přidejte nějaké produkty a začněte prodávat." />
+      <Finish Text="Zavřít a pokračovat" />
+    </Completed>
+  </Onboarding>
+  <BusinessDay>
+    <Close>
+      <Authorization>
+        <Title Text="Zadejte heslo pro uzavření pracovního dne" />
+      </Authorization>
+    </Close>
+    <Select Text="Vyberte pracovní den">
+      <EnableSelection Text="(Kliknutím na datum změníte pracovní den)" />
+    </Select>
+  </BusinessDay>
+  <Application>
+    <Close Text="Ukončit aplikaci">
+      <Info Text="Opravdu chcete ukončit aplikaci?" />
+      <ShutDown Text="Ukončit aplikaci" />
+      <Restart Text="Restartovat aplikaci" />
+      <TurnOffComputer Text="Vypnout PC" />
+    </Close>
+    <FullScreen Text="Celá obrazovka" />
+    <Exit Text="Ukončit aplikaci" />
+    <Menu Text="Menu" />
+    <RestartRequired Text="Je vyžadován restart">
+      <Info Text="Aby se změny projevily, je vyžadován restart aplikace. Chcete nyní restartovat aplikaci?" />
+    </RestartRequired>
+    <ReloadProducts Text="Znovu načíst produkty">
+      <Info Text="Produkty byli změneny. Chcete nyní znovu načíst produkty?" />
+    </ReloadProducts>
+  </Application>
+  <Period Text="Období">
+    <Start Text="Začít" />
+    <End Text="Ukončit" />
+    <Preset Text="Předdefinované období">
+      <Today Text="Dnes" />
+      <Yesterday Text="Zítra" />
+      <ThisWeek Text="Tento týden" />
+      <LastWeek Text="Minulý týden" />
+      <ThisMonth Text="Tento měsíc" />
+      <LastMonth Text="Minulý měsíc" />
+      <ThisYear Text="Tento rok" />
+      <LastYear Text="Minulý rok" />
+    </Preset>
+  </Period>
+  <Login Text="Přihlášení">
+    <Password Text="Heslo">
+      <Forgot Text="Zapomenuté heslo?" />
+    </Password>
+    <Error Text="Přihlášení selhalo. Zkontrolujte heslo a zkuste to znovu." />
+    <Authentication Text="Uživatelské přihlášení">
+      <Failed Text="Uživatel nenalezen. Zkontrolujte heslo a zkuste to znovu." />
+    </Authentication>
+    <Reset Text="Obnovit heslo">
+      <LearnMore Text="Přečtěte si další informace o obnově hesla" />
+      <Email Text="Vložte e-mailovou adresu">
+        <Info Text="Zadejte e-mailovou adresu spojenou s uživatelem, kterému chcete obnovit heslo.&#xA;Na e-mail, který zadáte níže, vám zašleme ověřovací kód." />
+        <Required Text="Je vyžadován Email" />
+        <EmailAddress Text="Emailová adresa">
+          <Tooltip Text="Vložte svou emailovou adresu" />
+        </EmailAddress>
+        <ExistingCode Text="Mám kód. Vezmi mě k dalšímu kroku." />
+      </Email>
+      <Code Text="Ověřit kód">
+        <Info Text="Zkontrolujte svůj e-mail – zaslali jsme vám autorizační kód, který musíte zadat do pole níže.&#xA;Pokud jste neobdrželi e-mail s autorizačním kódem, zkontrolujte složku se spamem nebo zkuste odeslat e-mail znovu." />
+        <Email Text="Autorizační kód je odeslán na adresu {0}." />
+        <AuthorizationCode Text="Autorizační kód">
+          <Tooltip Text="Zde zadejte autorizační kód..." />
+        </AuthorizationCode>
+        <Verify Text="Ověřit kód" />
+      </Code>
+      <Password Text="Zadejte nové heslo">
+        <Info Text="Zadejte nové heslo a potvrďte heslo pro svůj místní účet.&#xA;Pole pro nové heslo a potvrzení nového hesla se musí shodovat.&#xA;&#xA;Jakmile budete hotovi, klikněte na tlačítko &quot;OK&quot; pro resetování hesla." />
+        <NewPassword Text="Nové heslo" />
+        <NewPasswordConfirmation Text="Potvrďte nové heslo" />
+        <InUse Text="Zadané heslo je již obsazeno. Zadejte prosím jiné heslo a zkuste to znovu." />
+        <User Text="Uživatel: {0}" />
+        <SetPassword Text="Nastavte si nové heslo" />
+        <Success Text="Heslo bylo úspěšně změněno" />
+      </Password>
+      <Error>
+        <Expired Text="Platnost vašeho autorizačního kódu vypršela.&#xA;Vyžádejte si nový autorizační kód." />
+        <InvalidCode Text="Neplatný kód. Zadejte prosím platný kód a zkuste to znovu." />
+        <NoSuchUser Text="Uživatel se zadaným e-mailem „{0}“ neexistuje.&#xA;Zadejte prosím platný e-mail a zkuste to znovu." />
+        <InvalidEmailAddress Text="E-mailová adresa není platná. Zadejte prosím platnou e-mailovou adresu a zkuste to znovu." />
+        <LimitReached Text="Dosáhli jste limitu požadavků na resetování hesla.&#xA;Můžete to zkusit znovu za 24 hodin." />
+        <GeneralError Text="Při pokusu o odeslání požadavku na obnovení hesla došlo k chybě.&#xA;Prosím zkuste to znovu později." />
+      </Error>
+    </Reset>
+  </Login>
+  <Order>
+    <List Text="Otevřete seznam objednávek">
+      <Select Text="Vyberte objednávku" />
+    </List>
+    <New Text="Nový prodej" />
+    <Estimate Text="Zámek">
+      <Authorization>
+        <Title Text="Pro uzamčení prodeje zadejte heslo" />
+      </Authorization>
+      <Created Text="Objednávka byla úspěšně uzamčena" />
+      <Clear Text="Odemknout tento prodej">
+        <Authorization>
+          <Title Text="Pro odemknutí prodeje zadejte heslo" />
+        </Authorization>
+        <Success Text="Prodej je odblokován." />
+      </Clear>
+      <Locked Text="Prodej uzamčen">
+        <Info Text="Úprava uzamčeného prodeje není povolena." />
+      </Locked>
+      <Issued Text="Tento prodej je již zablokován.&#xA;Úprava uzamčeného prodeje není povolena." />
+      <NoItems Text="Žádné položky k uzamčení." />
+    </Estimate>
+    <Transfer Text="Převod">
+      <Authorization>
+        <Title Text="Pro přístup k možnosti přenosu zadejte heslo" />
+      </Authorization>
+      <All Text="Převést všechny objednávky">
+        <Confirmation Text="Převod všech objednávek na jiného uživatele je nevratný!&#xA;&#xA;Opravdu chcete převést všechny své objednávky na {0}?" />
+        <Success Text="Všechny objednávky byly úspěšně převedeny." />
+        <Error Text="Při přenosu objednávek vybranému uživateli došlo k chybě.&#xA;Prosím zkuste to znovu." />
+      </All>
+      <Orders Text="Otevřít objednávky" />
+      <OrderNumber Text="Číslo objednávky">
+        <Select Text="Vybrat objednávku" />
+      </OrderNumber>
+      <Quantity Text="Vyberte množství k převodu" />
+      <User Text="Uživatel">
+        <Current Text="Objednávka již patří vybranému uživateli." />
+      </User>
+      <Rounds Text="Přenést řady">
+        <Summary Text="Objednat položky" />
+        <Selection Text="Vybrat řady k přenosu" />
+      </Rounds>
+      <Items Text="Objednat položky">
+        <Selected Text="Vybrané položky k převodu">
+          <NoItems Text="Vybrat položky k převodu" />
+        </Selected>
+        <All Text="Přenést vše" />
+        <Back Text="Odebrat vše" />
+        <InvalidQuantity Text="Převod vybrané položky není povolen">
+          <Info Text="Celkové množství vybraných položek je menší než množství vybrané pro převod.&#xA;Zkontrolujte množství k převodu, neplatné položky a zkuste to znovu." />
+        </InvalidQuantity>
+        <BundledQuantity Text="Změna množství není povolena">
+          <Info Text="Položka patří do skupiny. Změna množství u skupinových položek není povolena." />
+        </BundledQuantity>
+      </Items>
+      <CurrentOrder Text="Převést na stejnou objednávku">
+        <Confirmation Text="Převádíte položky do stejné objednávky. Nebudou provedeny žádné změny.&#xA;Jste si jistý, že chcete pokračovat?" />
+      </CurrentOrder>
+      <Failed Text="Při přenosu položek došlo k chybě">
+        <Info Text="Při pokusu o přenos položek došlo k chybě. Prosím zkuste to znovu." />
+      </Failed>
+      <Completed Text="Přenos byl úspěšně dokončen" />
+      <NoItems Text="Žádné položky k převodu" />
+      <Discount>
+        <Warning Text="Pevná sleva">
+          <Info Text="Aktuální objednávka má nastavenou pevnou slevu v košíku. Přenesením položek z této objednávky se sleva v košíku odečte.&#xA;&#xA;Chceš pokračovat?" />
+        </Warning>
+      </Discount>
+    </Transfer>
+    <Void Text="Zrušit objednávku">
+      <Authorization>
+        <Title Text="Pro zrušení této objednávky prosím zadejte heslo" />
+      </Authorization>
+      <Confirm Text="Zrušit objednávku">
+        <Info Text="Opravdu chcete zrušit tuto objednávku?" />
+      </Confirm>
+      <Completed Text="Objednávka byla úspěšně zrušena" />
+      <NoItems Text="Žádné položky ke zrušení" />
+    </Void>
+    <Rounds>
+      <Repeat Text="Opakovat">
+        <NoItems Text="Žádné položky v objednávce.&#xA;Opakovat poslední kolo lze pouze v případě, že kolo existuje." />
+        <NoQuantities Text="Ve vybraném kole č. {0} nejsou žádné položky s dostatečným množstvím k opakování" />
+        <Bundle Text="Položky patří do skupiny">
+          <Info Text="Opakovaná operace není u seskupených položek povolena." />
+        </Bundle>
+      </Repeat>
+      <New Text="Nové kolo">
+        <NoItems Text="Ve vaší objednávce nejsou žádné položky k vytvoření nového kola.&#xA;Přidejte položky k objednávce a zkuste to znovu." />
+        <NoUnsavedItems Text="Všechny položky v pořadí uloženy. Začalo nové kolo." />
+      </New>
+      <SelectAll Text="Vybrat vše" />
+      <SelectNone Text="Zrušit vše" />
+      <Total Text="Celkově:" />
+      <NoItems Text="Žádné vybrané položky" />
+    </Rounds>
+    <Comment Text="Komentář">
+      <Add Text="Vyberte existující nebo napište svůj komentář k položce „{0}“" />
+      <Insert Text="Sem napište komentář..." />
+      <Change Text="Přidat komentář">
+        <Forbidden Text="Úprava vybrané položky není povolena">
+          <Info Text="Položka „{0}“ je objednána a potvrzena.&#xA;Úprava potvrzené položky není povolena." />
+        </Forbidden>
+        <NoItem Text="Nejsou vybrány žádné položky.&#xA;Vyberte položku, ke které chcete přidat komentář, a zkuste to znovu." />
+      </Change>
+    </Comment>
+    <Subtotal Text="Mezisoučet" />
+    <Tax Text="Daň" />
+    <Total Text="CELKOVĚ" />
+    <Checkout Text="Způsob platby" />
+    <Save Text="Uložit prodej" />
+    <Refund Text="Vrácení peněz">
+      <Authorization Text="Pro operaci vrácení peněz je vyžadováno heslo" />
+      <Title Text="Vrácení položek" />
+      <CartDiscountApplied Text="Uplatnění slevy v košíku">
+        <Info Text="Sleva košíku je uplatněna a vypočítána celkem.&#xA;Pokud použijete částečnou refundaci, bude sleva v košíku započtena na vrácené položky." />
+      </CartDiscountApplied>
+      <Total Text="CELKOVÁ ČÁSTKA K REFUNDACI" />
+      <ReceiptNumber Text="Číslo účtenky" />
+      <PaymentType Text="Způsob platby refundace" />
+      <Description Text="Pro potvrzení vrácení peněz zadejte číslo účtenky a typ platby" />
+      <SelectAll Text="Vybrat / Zrušit výběr všech" />
+      <Print>
+        <PrinterNotFound Text="Není vybrána tiskárna pro vrácení peněz." />
+      </Print>
+      <MultyplePaymentTypes Text="Vybraný doklad obsahuje více typů plateb. Chcete-li do této refundace zkopírovat typy plateb, vyberte možnost níže.">
+        <PartialRefund Text="Použití více typů plateb z původního prodejního dokladu není k dispozici pro částečnou refundaci." />
+        <Copy Text="Zkopírujte typy plateb z původního dokumentu" />
+      </MultyplePaymentTypes>
+    </Refund>
+    <Items>
+      <Name Text="Jméno výrobku" />
+      <Quantity Text="Množství">
+        <Change Text="Změňte množství">
+          <Info Text="Zadejte množství pro další položku" />
+          <Item Text="Položka „{0}“" />
+          <Forbidden Text="Změna množství není povolena">
+            <Info Text="Položka „{0}“ je potvrzena.&#xA;Úprava potvrzené položky není povolena." />
+          </Forbidden>
+          <Product Text="Produkt „{0}“&#xA;Výchozí množství: {1:#,#.000}" />
+          <Bundled Text="Změna množství není povolena">
+            <Info Text="Změna množství u balených položek není povolena." />
+          </Bundled>
+        </Change>
+        <Invalid Text="Neplatné množství. Zadejte platné množství a zkuste to znovu." />
+      </Quantity>
+      <Price Text="Cena">
+        <Change Text="Změnit cenu">
+          <Product Text="Produkt „{0}“&#xA;Cena: {1:#,#.00}" />
+        </Change>
+      </Price>
+      <Total Text="Množství" />
+      <Empty Text="Žádné položky">
+        <Info Text="Přidejte produkty do účtenky pomocí čárového kódu, kódu nebo vyhledejte stisknutím tlačítka F3" />
+      </Empty>
+      <Start Text="Start" />
+      <Page Text="Strana" />
+      <Add>
+        <Error Text="Chyba při přidávání položky. Neplatná data položky.&#xA;Zkontrolujte cenu a množství položky a zkuste to znovu." />
+      </Add>
+      <Void>
+        <NoItems Text="Zrušení položky „{0}“ není povoleno. Nedostatečné množství." />
+        <Bundle Text="Položka patří do skupiny. Smazáním této položky odstraníte všechny položky ve stejné skupině.&#xA;&#xA;Opravdu chcete odstranit všechny položky v této skupině?">
+          <Title Text="Mazání položky skupiny" />
+        </Bundle>
+      </Void>
+    </Items>
+    <Print>
+      <User Text="Uživatel: {0}" />
+      <Time Text="Čas: {0}" />
+      <Number Text="Číslo objednávky: {0}" />
+      <Table Text="Stůl: {0}" />
+      <Estimate Text="ODHAD">
+        <Discount Text="Sleva" />
+        <Total Text="CELKOVĚ:" />
+        <Footer Text="Toto není účtenka.&#xA;Počkejte prosím na konečnou účtenku." />
+      </Estimate>
+      <Kitchen>
+        <TableAndRound Text="Stůl: {0}. Kolo: {1}" />
+        <NumberAndRound Text="Objednávka: {0}. Kolo: {1}" />
+      </Kitchen>
+      <Dialog>
+        <Title Text="Jak by se zákazníkovi líbila účtenka?" />
+        <Change Text="Změna" />
+        <Receipt Text="Tisknout účtenku" />
+        <Invoice Text="Tisknout fakturu" />
+        <Email Text="Odeslat email">
+          <Recipient Text="Příjemce e-mailu">
+            <Title Text="Zadejte podrobnosti e-mailové zprávy a pokračujte kliknutím na tlačítko &quot;Odeslat&quot;." />
+            <EmailAddress Text="Adresa příjemce">
+              <Description Text="Zadejte e-mailovou adresu zákazníka" />
+              <AddCustomer Text="Přidat zákazníka" />
+            </EmailAddress>
+            <Bcc Text="Bcc">
+              <Description Text="Přidat příjemce skryté kopie" />
+            </Bcc>
+            <Subject Text="Předmět">
+              <Description Text="Zadejte předmět" />
+              <Default Text="Účtenka {0}" />
+            </Subject>
+            <Message Text="Zpráva">
+              <Description Text="Zadejte zprávu pro zákazníka" />
+              <Default Text="Vážený zákazníku,&#xA;&#xA;Najděte v příloze účtenku.&#xA;&#xA;Datum přijetí: {0}&#xA;Celkem: {1}" />
+            </Message>
+            <CopySelf Text="Odeslat sobě kopii" />
+            <Error>
+              <EmailFormat Text="E-mailová adresa nemá správný formát.&#xA;Zkontrolujte e-mailovou adresu a zkuste to znovu." />
+            </Error>
+          </Recipient>
+          <Sending Text="Odesílání e-mailu... Čekejte prosím..." />
+          <Sent Text="Potvrzení odesláno na adresu {0}" />
+        </Email>
+        <Hide Text="Už to nezobrazovat" />
+      </Dialog>
+    </Print>
+    <Products>
+      <Search Text="Hledat">
+        <Name Text="Jméno výrobku">
+          <Tooltip Text="Vyhledejte produkt podle názvu" />
+          <NotFound Text="Žádné výsledky pro „{0}“">
+            <Info Text="Zkontrolujte prosím parametry vyhledávání a zkuste to znovu" />
+          </NotFound>
+        </Name>
+        <Barcode Text="Čárový kód">
+          <Tooltip Text="Vyhledejte produkt podle čárového kódu" />
+          <NotFound Text="Čárový kód nenalezen" />
+        </Barcode>
+        <Code Text="Kód produktu">
+          <Tooltip Text="Vyhledejte produkt podle kódu" />
+          <NotFound Text="Kód nenalezen" />
+        </Code>
+        <NoItems Text="Není vybrán žádný produkt">
+          <Info Text="Chcete-li pokračovat, vyhledejte produkt podle názvu nebo kódu" />
+        </NoItems>
+        <Selection>
+          <Price Text="Cena" />
+          <Description Text="Popis" />
+        </Selection>
+        <NoResults Text="Žádné výsledky" />
+      </Search>
+      <NoProducts Text="Nejsou k dispozici žádné produkty">
+        <Info Text="Chcete-li pokračovat, přidejte produkty nebo nastavte akční cenu ke stávajícím" />
+      </NoProducts>
+    </Products>
+    <Lock Text="Zámek" />
+    <Unlock Text="Odemknout" />
+    <Item>
+      <Void>
+        <Authorization>
+          <Title Text="Pro zrušení vybrané položky prosím zadejte heslo" />
+        </Authorization>
+      </Void>
+      <ChangePrice>
+        <Minimum Text="Minimální hodnota: {0}" />
+      </ChangePrice>
+    </Item>
+    <QuickPayment Text="Rychlá platba">
+      <Confirmation Text="Vybrali jste „{0}“ jako typ platby pro aktuální prodej.&#xA;&#xA;Přejete si nadále používat vybraný typ platby?" />
+    </QuickPayment>
+    <Discount Text="Sleva">
+      <Authorization Text="Pro uplatnění slev zadejte heslo" />
+      <Cart>
+        <Invalid Text="Neplatná sleva v košíku">
+          <GreaterThenTotal Text="Celková částka se slevami nemůže být větší&#xA;než celková objednávka." />
+        </Invalid>
+        <Cleared Text="Sleva v košíku vymazána!">
+          <Info Text="Byl zjištěn neplatný součet a sleva byla z objednávky odstraněna.&#xA;&#xA;Než přistoupíte k platbě, zkontrolujte své položky a znovu uplatněte platnou slevu." />
+        </Cleared>
+      </Cart>
+      <Item>
+        <NotSelected Text="Položka není vybrána.&#xA;Chcete-li uplatnit slevu na jednu položku, vyberte ji ze seznamu prodejů před otevřením tohoto dialogu" />
+        <Invalid Text="Neplatná sleva na položku">
+          <GreaterThenTotal Text="Fixkní částka nemůže být větší\nnež položka celkově" />
+        </Invalid>
+        <Cleared Text="Sleva na položku vymazána">
+          <Info Text="Byl zjištěn neplatný součet položek a dříve použitá sleva byla odstraněna.&#xA;&#xA;Než přistoupíte k platbě, zkontrolujte, zda je na tuto položku třeba uplatnit nějaké slevy." />
+        </Cleared>
+      </Item>
+    </Discount>
+  </Order>
+  <Closing Text="Uzávěrka">
+    <Users Text="Otevřené transakce">
+      <User>
+        <Total Text="CELKOVĚ:" />
+      </User>
+      <Summary Text="Otevřené transakce" />
+      <NoReports Text="ádné otevřené transakce" />
+    </Users>
+    <Option Text="Vyberte možnost výběru peněz">
+      <NotSelected Text="Není vybrána možnost výplaty">
+        <Info Text="Pokračujte výběrem jedné z výše uvedených možností" />
+      </NotSelected>
+    </Option>
+    <User Text="Vyplatit">
+      <Completed Text="{0} úspěšně vyplaceno." />
+    </User>
+    <Shift Text="Vyplatit všechny uživatele">
+      <Closed Text="Všichni uživatelé úspěšně vyplaceni" />
+    </Shift>
+    <BusinessDay Text="Zavřít pokladnu">
+      <Income Text="Celkem den" />
+      <Closed Text="Registrace byla úspěšně uzavřena" />
+      <Report Text="REPORT" />
+      <CashIn Text="Vložit prostředky" />
+      <CashOut Text="Vytáhnout prostředky" />
+    </BusinessDay>
+    <Error>
+      <OpenOrders Text="Otevřené objednávky">
+        <Users Text="Existují uživatelé s otevřenými objednávkami!&#xA;Před zavíracím dnem musíte uzavřít všechny objednávky." />
+      </OpenOrders>
+    </Error>
+    <Print>
+      <User>
+        <Report>
+          <Total Text="CELKEM ČÁSTKA" />
+          <User Text="Uživatel">
+            <ClosedBy Text="Přijato" />
+          </User>
+          <Header Text="VYPLATIT UŽIVATELE" />
+        </Report>
+      </User>
+      <DayClose>
+        <Report>
+          <Header Text="Uzavírací den" />
+          <User>
+            <Total Text="CELKEM" />
+          </User>
+          <Summary Text="SOURHN" />
+          <Total Text="CELKEM" />
+        </Report>
+      </DayClose>
+    </Print>
+    <History Text="Historie">
+      <Info Text="Pomocí níže uvedeného seznamu vyberte a vytiskněte kopii jakékoli dříve vygenerované zprávy Z." />
+      <List>
+        <Reports Text="Reporty" />
+        <Number Text="Číslo" />
+        <Date Text="Datum" />
+      </List>
+      <Print Text="Tisk vybrané sestavy">
+        <Unsupported Text="perace není podporována" />
+      </Print>
+    </History>
+  </Closing>
+  <User Text="Uživatel">
+    <Profile Text="Uživatelské Info">
+      <Info Text="Profil" />
+      <Edit Text="Změňte profil nebo heslo" />
+      <Data>
+        <FirstName Text="Jméno" />
+        <LastName Text="Příjmení" />
+        <Email Text="Email" />
+        <Password Text="Heslo">
+          <Change Text="Změnit Heslo">
+            <Password Text="Heslo" />
+            <Confirm Text="Potvrdit Heslo" />
+            <ConfirmationFailed Text="Pole pro heslo a potvrzení hesla se neshodují.&#xA;Zkontrolujte heslo a zkuste to znovu." />
+            <InvalidPassword Text="Heslo se již používá. Použijte prosím jiné heslo." />
+          </Change>
+        </Password>
+        <Saved Text="Profil byl úspěšně změněn" />
+      </Data>
+      <ShiftReport Text="Uživatelská zpráva">
+        <Report Text="Uživatelský report">
+          <NoData Text="Žádné otevřené transakce" />
+          <Total Text="CELKEM" />
+        </Report>
+        <ClockOut Text="Vyplatit" />
+      </ShiftReport>
+    </Profile>
+  </User>
+  <Security>
+    <Authorize Text="Ověření uživatele" />
+    <Level Text="Úroveň přístupu">
+      <Change Text="Změnit úroveň přístupu pro vybranou akci">
+        <AccessDenied Text="Nemáte dostatečná oprávnění ke změně úrovně přístupu pro tuto operaci.&#xA;&#xA;Úroveň přístupu může uživatel upravit s úrovní přístupu nezbytnou k provedení zvolené operace." />
+      </Change>
+    </Level>
+    <AccessDenied Text="Přístup odepřen">
+      <Info Text="Nemáte dostatečná oprávnění pro vybranou operaci." />
+    </AccessDenied>
+    <Key>
+      <Management Text="Manegement">
+        <Description Text="Řídí přístup do sekce manegementu" />
+      </Management>
+      <Settings Text="Nastavení">
+        <Description Text="Řídí přístup k nastavení" />
+      </Settings>
+      <VoidOrder Text="Neplatná objednávka">
+        <Description Text="Kontroluje, zda má uživatel povolení zrušit kompletní objednávku" />
+      </VoidOrder>
+      <VoidItem Text="Zrušit položku">
+        <Description Text="Kontroluje, zda má uživatel povolení zrušit jednu položku v otevřené objednávce" />
+      </VoidItem>
+      <LockSale Text="Zamknout prodej" />
+      <UnlockSale Text="Odemknout prodej" />
+      <SplitOrder Text="Rozdelit objednávku">
+        <Description Text="Umožňuje uživateli přenést celou objednávku nebo její část na jiného uživatele nebo tabulku (číslo objednávky)" />
+      </SplitOrder>
+      <Discount Text="Uplatnit slevu" />
+      <DeleteDocument Text="Odstranit dokument" />
+      <ClosingDay Text="Uzávěrka">
+        <Description Text="Kontroluje přístup do sekce denní uzávěrky" />
+      </ClosingDay>
+      <Refund Text="Refundace">
+        <Description Text="Umožňuje uživateli vrátit dříve uskutečněný prodej.&#xA;Tím se vytvoří nový doklad „Refundace“ a množství se automaticky vrátí na sklad." />
+      </Refund>
+      <OpenOrders Text="Zobrazit všechny otevřené objednávky">
+        <Description Text="Kontroluje, zda má uživatel povoleno vidět všechny otevřené objednávky.&#xA;Tato možnost je k dispozici, pokud jsou povoleny půdorysy." />
+      </OpenOrders>
+      <SalesHistory Text="Zobrazit historii prodeje">
+        <Receipt Text="Znovu vytiskněte účtenku">
+          <Description Text="Kontroluji, zda má uživatel povoleno tisknout účtenku z historie prodeje." />
+        </Receipt>
+      </SalesHistory>
+      <StartingCash Text="Počáteční hotovost">
+        <Description Text="Kontroluje přístup do sekce startovací hotovosti" />
+      </StartingCash>
+      <UserProfile Text="Uživatelský profil" />
+    </Key>
+  </Security>
+  <Print>
+    <Error Text="Došlo k chybě tisku">
+      <CustomTemplate Text="Byla zjištěna chyba ve vlastní šabloně!&#xA;Chcete-li vyřešit potenciální problémy s vlastní tiskovou šablonou, kontaktujte podporu společnosti Aronium.">
+        <Continue Text="Přejete si pokračovat v tisku pomocí výchozí šablony?" />
+      </CustomTemplate>
+    </Error>
+  </Print>
+  <Payment>
+    <Details>
+      <Summary Text="Položky" />
+      <Actions Text="Akce">
+        <ShowItems Text="Zobrazit položky" />
+      </Actions>
+      <Discount Text="Sleva">
+        <Options Text="Možnosti slev">
+          <DisallowedItems Text="Existují položky, které nelze přímo přiřadit ke slevě." />
+        </Options>
+        <Type>
+          <Percent Text="Uplatněte slevu v procentech" />
+          <Fixed Text="Uplatněte slevu jako pevnou částku" />
+        </Type>
+        <Target>
+          <Item Text="Sleva na položku">
+            <NotSelected Text="Nejsou vybrány žádné položky.&#xA;Pro uplatnění slevy prosím vyberte položku vlevo." />
+            <NotAllowed Text="Sleva není povolena na zrušené položky" />
+            <Info Text="Uplatnit slevu na „{0}“" />
+          </Item>
+          <Cart Text="Sleva na košík">
+            <Info Text="Uplatněte slevu v košíku" />
+          </Cart>
+        </Target>
+        <Total Text="Celkem:" />
+        <Subtotal Text="Mezisoučet:" />
+        <TotalDiscount Text="Sleva celkem:" />
+        <Clear Text="Vyčistit slevy">
+          <Completed Text="Všechny slevy odstraněny" />
+        </Clear>
+      </Discount>
+      <Split Text="Kola">
+        <Rounds Text="Vyberte kolo pro platbu">
+          <RoundNumber Text="Kola:" />
+          <RoundTotal Text="Částka" />
+          <SelectAll Text="Vybrat vše" />
+          <SelectNone Text="Zrušit vše" />
+        </Rounds>
+      </Split>
+      <Customer Text="Zákazník" />
+      <Total Text="Celkem:" />
+      <TotalWithoutDiscount Text="Celkem bez slevy:" />
+      <Money Text="Platba">
+        <Paid Text="Zaplaceno:">
+          <Hint>
+            <TypeAmount Text="Typ zaplacené částky" />
+            <TapToChange Text="Klikni zde k vložení zaplacené částky" />
+          </Hint>
+        </Paid>
+        <Change Text="Změna:" />
+        <Balance Text="Zůstatek:" />
+      </Money>
+      <PaymentTypes Text="Typ platby">
+        <Other Text="Rozdělit platby" />
+        <Invalid Text="Typ platby není povolen">
+          <Fiscal Text="Vybraný typ platby obsahuje neplatnou kombinaci typu fiskální a nefiskální platby.&#xA;&#xA;Není povoleno kombinovat fiskální a nefiskální typy plateb." />
+        </Invalid>
+      </PaymentTypes>
+      <NoItems Text="Žádné položky" />
+    </Details>
+    <NoPaymentSelected Text="Není vybrán typ platby" />
+    <Add Text="Přidat typ platby">
+      <Info Text="Vyberte typy plateb a částky požadované pro aktuální prodej" />
+      <Amount Text="Částka platby „{0}“" />
+    </Add>
+    <Selected Text="Vybraný typ platby" />
+    <Customer>
+      <Required Text="Zákazník vyžadován">
+        <Info Text="Typ platby „{0}“ vyžaduje, aby byl vybrán zákazník. Chcete-li pokračovat, vyberte zákazníka." />
+      </Required>
+    </Customer>
+    <PaymentTypes>
+      <Validation>
+        <Change>
+          <Missing Text="Nesprávná částka">
+            <Info Text="Tento typ platby neumožňuje změnu. Zadejte správnou částku nebo vyberte jiný typ platby." />
+          </Missing>
+        </Change>
+      </Validation>
+    </PaymentTypes>
+  </Payment>
+  <Customer>
+    <Search Text="Vyhledejte zákazníka">
+      <Name Text="Jméno" />
+      <PIN Text="Daňové identifikační číslo" />
+      <LoyaltyCard Text="Věrnostní karta" />
+      <Email Text="Email" />
+      <PhoneNumber Text="Telefonní číslo" />
+    </Search>
+    <Selection Text="Vybraný zákazník">
+      <Details>
+        <PIN Text="Daňové identifikační číslo:" />
+        <Address Text="Adresa:" />
+        <Email Text="Email:" />
+        <PhoneNumber Text="Telefonní číslo:" />
+      </Details>
+      <None Text="Zákazník není vybrán">
+        <Info Text="Vyberte zákazníka ze seznamu" />
+      </None>
+      <Clear Text="Vymazat vybraného zákazníka">
+        <Completed Text="Vybraný zákazník byl odstraněn" />
+      </Clear>
+    </Selection>
+    <New Text="Nový zákazník">
+      <Add Text="Přidat nového zákazníka">
+        <Error Text="Při pokusu o přidání zákazníka došlo k chybě.&#xA;Systémová zpráva: {0}" />
+      </Add>
+      <Name Text="Jméno" />
+      <Code Text="Kód" />
+      <TaxNumber Text="Daňové identifikační číslo" />
+      <Address Text="Adresa" />
+      <City Text="Město" />
+      <PostalCode Text="Poštovní směrovací číslo" />
+      <Country Text="Stát" />
+      <PhoneNumber Text="Telefonní číslo" />
+      <Email Text="Email" />
+    </New>
+  </Customer>
+  <Navigation>
+    <Back>
+      <NotAllowed Text="Vybraná operace není povolena." />
+    </Back>
+  </Navigation>
+  <OpenOrders Text="Zobrazit otevřené prodeje">
+    <Total Text="CELKOVÁ ČÁSTKA" />
+    <NoOrders Text="Žádný otevřený prodej" />
+    <Authorization>
+      <Title Text="Zadejte heslo pro přístup k otevřenému prodeji" />
+    </Authorization>
+  </OpenOrders>
+  <StartingCash Text="Cash In / Out">
+    <Type>
+      <CashIn Text="Přidat hotovost" />
+      <CashOut Text="Odebrat hotovost" />
+    </Type>
+    <Amount Text="Množství">
+      <Reason Text="Popis">
+        <Tooltip Text="Zadejte důvod přidání nebo odebrání hotovosti..." />
+      </Reason>
+    </Amount>
+    <Hide Text="Už to nezobrazovat" />
+    <Entries Text="Hotovostní vstupy">
+      <NoDescription Text="&lt;Žádný popis&gt;" />
+      <NoEntries Text="Žádné záznamy" />
+    </Entries>
+    <Saved Text="Počáteční hotovost byla úspěšně vložena." />
+  </StartingCash>
+  <Account>
+    <FirstName Text="Jméno" />
+    <LastName Text="Příjmení" />
+    <Email Text="Email" />
+    <Password Text="Heslo">
+      <Confirmation Text="Heslo potvrzeno">
+        <Error Text="Heslo a potvrzení hesla se musí shodovat" />
+      </Confirmation>
+    </Password>
+    <License>
+      <ActivationKey Text="Aktivační klíč">
+        <Invalid Text="Váš aktivační klíč se neshoduje s klíčem v licenčním souboru. Pro tuto instalaci použijte platnou licenci." />
+      </ActivationKey>
+      <Info Text="Licence">
+        <Data Text="Licenční údaje">
+          <LicensedTo Text="Licence k" />
+          <Email Text="Email" />
+          <StoreId Text="ID obchodu" />
+          <Id Text="ID licence" />
+        </Data>
+        <Products Text="Produkty">
+          <Id Text="Id" />
+          <Name Text="Jméno" />
+          <ValidUntil Text="Platnost než" />
+          <LicenseType Text="Typ licence" />
+        </Products>
+        <NoLicense>
+          <Info Text="Navštivte www.aronium.com, kde se dozvíte více o prémiových funkcích" />
+        </NoLicense>
+        <Refresh Text="Obnovit licenci">
+          <Success Text="Licence byla úspěšně stažena." />
+        </Refresh>
+        <Copy Text="Zkopírujte licenci do souboru" />
+        <Load Text="Načíst licenci ze souboru" />
+        <UnlicensedProducts Text="Nelicencované produkty" />
+      </Info>
+      <Login Text="Přihlašte se ke svému účtu">
+        <NotRegistered Text="Nejsi registrovaný?">
+          <SignUp Text="Zaregistrujte se nyní!" />
+        </NotRegistered>
+        <SignIn Text="Přihlásit se" />
+      </Login>
+      <Register Text="Zaregistrujte si nový účet">
+        <AlreadyRegistered Text="Již zaregistrované?">
+          <SignIn Text="Přihlašte se nyní!" />
+        </AlreadyRegistered>
+        <CreateAccount Text="Vytvořit účet" />
+        <Store Text="Vytvořte si svůj obchod">
+          <Details Text="Věnujte chvíli nastavení vašeho obchodu.&#xA;Vaše firemní údaje budou aktualizovány a licence bude vygenerována automaticky.">
+            <CompanyName Text="Jméno společnosti" />
+            <Address Text="Adresa" />
+            <ZipCode Text="Poštovní směrovací číslo\n" />
+            <TaxNumber Text="Daňové identifikační číslo" />
+            <City Text="Město" />
+            <Country Text="Stát" />
+          </Details>
+          <Create Text="Vytvořte obchod a vygenerujte licenci" />
+        </Store>
+        <Success Text="Účet byl úspěšně vytvořen" />
+      </Register>
+      <SelectStore Text="Vyberte obchod">
+        <Info Text="Vyberte obchod ze seznamu níže, pro který chcete načíst licenci.">
+          <Register Text="Jakmile vyberete obchod, budete požádáni o registraci všech nelicencovaných produktů pod licencí daného obchodu." />
+        </Info>
+        <NoStores Text="Nebyly nalezeny žádné obchody">
+          <Info Text="Zdá se, že k účtu „{0}“ nejsou přidruženy žádné obchody. Chcete-li aktivovat svou licenci, musíte mít k ní přidružený obchod." />
+          <Reload Text="Nejprve prosím vytvořte obchod a poté pokračujte kliknutím na tlačítko „Obnovit“ níže." />
+          <Add Text="Otevřete My Aronium a vytvořte svůj první obchod" />
+        </NoStores>
+        <Successfull Text="Úspěšně jste se přihlásili">
+          <Info Text="Pokud pro vybraný obchod existuje licence, bude automaticky stažena" />
+        </Successfull>
+      </SelectStore>
+      <StartTrial Text="Spustit zkušební verzi">
+        <Info Text="Chcete-li zahájit zkušební verzi všech nelicencovaných produktů, vyberte možnost níže" />
+        <SelectedStore Text="Vybraný obchod:">
+          <Change Text="Použijte jiný obchod" />
+        </SelectedStore>
+        <Now Text="Zahajte zkušební verzi hned teď" />
+      </StartTrial>
+      <Load Text="Načíst licenci ze souboru">
+        <Successful Text="Licence byla úspěšně načtena" />
+        <Error Text="Chyba při načítání licence">
+          <Unknown Text="Při pokusu o načtení vaší licence došlo k neznámé chybě. Prosím zkuste to znovu později.&#xA;Systémová zpráva: {0}" />
+        </Error>
+      </Load>
+      <InvalidLicense Text="Neplatná nebo chybějící licence">
+        <Info Text="U jednoho nebo více produktů chybí platná licence.">
+          <SignInOrLoadFromFile Text="Přihlašte se ke svému účtu a stáhněte si licenci nebo načtěte existující licenci ze souboru." />
+          <FollowInstructions Text="Pokračujte prosím podle pokynů níže." />
+        </Info>
+        <Hide Text="U těchto produktů to již nezobrazovat" />
+      </InvalidLicense>
+    </License>
+    <Switch Text="Přihlašte se pomocí jiného účtu" />
+    <SignOut Text="Odhlásit se">
+      <Successful Text="Úspěšně jste se odhlásili" />
+    </SignOut>
+    <Error>
+      <ExistingAccount Text="Uživatel se zadanou e-mailovou adresou již existuje." />
+      <Unauthorized Text="Chybné uživatelské jméno nebo heslo. Zkontrolujte prosím své přihlašovací údaje a zkuste to znovu." />
+    </Error>
+  </Account>
+  <Validations>
+    <Info Text="Další podrobnosti a způsob řešení tohoto problému naleznete na">
+      <Community Text="naší komunitě" />
+      <Or Text="nebo" />
+      <ContactSupport Text="kontaktujte naši podporu" />
+    </Info>
+    <Cancel Text="Zavřete aplikaci" />
+    <Confirm Text="Rozumím, pokračujte spuštěním aplikace" />
+    <Print>
+      <Warning>
+        <CustomTemplates Text="Zjistili jsme, že používáte vlastní šablony účtenek nebo faktur. Kvůli změnám ve struktuře databáze v tomto vydání tyto šablony již nemusí fungovat.&#xA;Budete moci používat výchozí šablony, takže vaše každodenní operace nebudou blokovány.&#xA;&#xA;Pokud stále chcete používat staré šablony, měli byste nyní zastavit spouštění aplikace a vrátit se ke staré verzi.">
+          <Title Text="VAROVÁNÍ! VLASTNÍ TISKOVÉ ŠABLONY NEMUSÍ FUNGOVAT!" />
+        </CustomTemplates>
+      </Warning>
+    </Print>
+    <Refund>
+      <Invalid Text="Vrácení peněz není platné" />
+    </Refund>
+    <MaxLength>
+      <Error Text="Pole delší, než je povoleno">
+        <Message Text="Hodnota pole „{0}“ je příliš dlouhá. Maximální povolená délka je {1} znaků." />
+      </Error>
+    </MaxLength>
+    <InvalidValue>
+      <TryAgain Text="Zadejte prosím platné hodnoty a zkuste to znovu." />
+    </InvalidValue>
+  </Validations>
+  <FloorPlans>
+    <Options Text="Nastavení">
+      <Design Text="Plán stolů nastavení">
+        <Grid>
+          <Show Text="Zobrazit mřížku" />
+          <SnapToGrid Text="Přichytit k mřížce" />
+          <Size Text="Velikost mřížky" />
+        </Grid>
+        <FloorPlan>
+          <Add Text="Přidat plán stolů" />
+          <Delete Text="Odstranit plán stolů" />
+          <Rename Text="Přejmenovat plán stolů" />
+          <Name Text="Název" />
+          <Color Text="Plán stolů barvy">
+            <Reset Text="Resetovat do původního nastavení" />
+          </Color>
+        </FloorPlan>
+        <Table>
+          <Add Text="Přidat stůl" />
+          <Delete Text="Odstranit vybraný stůl" />
+          <Name Text="Název" />
+          <Height Text="Výška" />
+          <Width Text="Šířka" />
+          <Size Text="VELIKOST" />
+        </Table>
+      </Design>
+      <View>
+        <Orders Text="Ukázat objednávky">
+          <Title Text="Otevřít objednávky" />
+          <Order>
+            <Number Text="Objednávkové číslo" />
+            <Total Text="Celkem" />
+          </Order>
+          <NoOrders Text="Nejsou zde otevřené objednávky. Vytvořte novou objednávku pomocí plánu stolů." />
+        </Orders>
+        <FloorPlans Text="Ukázat plán stolů" />
+      </View>
+      <NoSelection Text="Pokračovat bez vybrání" />
+    </Options>
+    <Save>
+      <Success Text="Změna proběhla úspěšně." />
+      <Error Text="Při ukládání dojde k chybě&#xA;Data nejsou zachována.&#xA;Systémová zpráva: {0}">
+        <Duplicates Text="Byly nalezeny duplicitní názvy tabulek.&#xA;&#xA;{0}&#xA;&#xA;Názvy tabulek musí být jedinečné. Opravte názvy tabulek a zkuste to znovu.">
+          <Title Text="Nalezeny duplikáty" />
+        </Duplicates>
+      </Error>
+    </Save>
+    <Table>
+      <Unavailable Text="Tabulku „{0}“ přebírá {1}. Pokud budete pokračovat, vytvoříte samostatnou objednávku na stejném stole.&#xA;&#xA;Přejete si přesto pokračovat?">
+        <Title Text="Stůl je již obsazen" />
+      </Unavailable>
+    </Table>
+  </FloorPlans>
+  <Settings Text="Nastavení">
+    <General Text="Základní nastavení">
+      <Language Text="Jazyk" />
+      <WritingDirection Text="Směr textu">
+        <LeftToRight Text="Z leva do prava" />
+        <RightToLeft Text="Z prava do leva" />
+      </WritingDirection>
+      <Style Text="Styl aplikace">
+        <ColorScheme Text="Barevné schéma" />
+      </Style>
+      <Layout Text="Rozložení">
+        <TouchScreen Text="Vizual" />
+        <Keyboard Text="Standart" />
+      </Layout>
+      <Zoom Text="Zoom" />
+      <VirtualKeyboard Text="Povolit virtuální klavesnici" />
+      <ProductSearch>
+        <Barcode Text="Čárový kód" />
+        <Code Text="Kód" />
+        <Name Text="Název" />
+      </ProductSearch>
+      <ColorScheme>
+        <Dark Text="Tmavý" />
+        <Light Text="Světlý" />
+        <Dimmed Text="Ztlumeno" />
+        <HighContrast Text="Vysoký kontrast" />
+        <Gray Text="Šedá" />
+      </ColorScheme>
+      <NotificationPosition>
+        <Top Text="Nahoře" />
+        <Bottom Text="Dole" />
+      </NotificationPosition>
+      <Notifications Text="Zprávy">
+        <ShowClose Text="Zobrazit &quot;Zavřít&quot; tlačítko" />
+        <ClickToClose Text="Kliknutím zavřete" />
+        <SlideIn Text="Zasunout" />
+        <Duration Text="Délka zprávy (s.)" />
+        <Position Text="Pozice" />
+      </Notifications>
+      <StartingCash Text="Ukázat hotovost při zapnutí aplikace" />
+      <BusinessDay Text="Pracovní dny">
+        <SelecBusinessDay Text="Vybrat pracovní dny při zapnutí aplikace" />
+      </BusinessDay>
+      <ButtonBar Text="Lišta s tlačítky">
+        <Info Text="Vyberte akce, které se zobrazí na liště tlačítek">
+          <VisualLayoutOnly Text="Použitelné pouze pro &quot;vizuální&quot; rozvržení" />
+        </Info>
+        <IsCommentVisible Text="Komentář" />
+        <IsDiscountVisible Text="Sleva" />
+        <IsNewSaleVisible Text="Nový prodej" />
+        <IsRefundVisible Text="Vratka" />
+        <IsSearchVisible Text="Hledat" />
+        <IsTransferVisible Text="Přesunout" />
+      </ButtonBar>
+    </General>
+    <Order Text="Objednávky a platby">
+      <Standard Text="Základní operace">
+        <AutoOrderNumber Text="Použít plán stolů" />
+        <PlaySound Text="Zvuky">
+          <SoundSettings>
+            <Navigation Text="Navigační zvuk" />
+            <ItemAdded Text="Zvuk při přidání položky" />
+            <ItemNotFound Text="Zvuk při nenalezení položky" />
+            <Show Text="Zobrazi možnosti zvuků" />
+            <Hide Text="Skrýt možnosti zvuku" />
+          </SoundSettings>
+        </PlaySound>
+        <ProductGrid Text="Číslo nebo řádky / sloupce" />
+      </Standard>
+      <Users Text="Uživatelé">
+        <SingleUser Text="Uživatel" />
+      </Users>
+      <Products Text="Položky">
+        <DefaultQuantity Text="Výchozí množství" />
+        <DefaultSearch Text="Výchoží vyhledávání">
+          <Options Text="Zobrazit možnosti vyhledávání" />
+        </DefaultSearch>
+        <DefaultDiscountType Text="Výchozí typ slevy">
+          <Percent Text="Procenta" />
+          <Fixed Text="Fixní" />
+        </DefaultDiscountType>
+        <RowPerItem Text="Pro každou položku samostatný řádek" />
+      </Products>
+      <Payment Text="Platba">
+        <ShowSummary Text="Zobrazit položky na platebním formuláři" />
+        <FixedRows Text="Počet řádků typu platby" />
+        <IsSingleItemDiscountAllowed Text="Sleva na jednu položku povolena" />
+        <QuickPaymentConfirmation Text="Potvrzení platby pomocí klávesových zkratek" />
+        <ShowPrintReceiptDialog Text="Zobrazit dialogové okno tisku účtenky" />
+        <DefaultDueDate Text="Výchozí datum splatnosti">
+          <Days Text="dny" />
+        </DefaultDueDate>
+        <MergeItemsOnPayment Text="Sloučit položky na účtence" />
+      </Payment>
+      <Advanced>
+        <Show Text="Zobrazit pokročilá nastavení" />
+        <Hide Text="Skrýt pokročilá nastavení" />
+        <ResetOrderNumber Text="Resetovat číslo objednávky v den uzavření" />
+        <ShowAllOccupiedTables Text="Zobrazit všechny obsazené stoly v plánu" />
+      </Advanced>
+    </Order>
+    <Products Text="Nastavení produktů">
+      <TaxInclusivePrice Text="Zobrazit a tisknout položky včetně daně">
+        <Tooltip Text="Pokud je vybráno, položky se zobrazí v prodeji a vytisknou se na účtence s cenou včetně daně." />
+      </TaxInclusivePrice>
+      <DiscountApplyRule Text="Pravidlo uplatnění slevy">
+        <BeforeTax Text="Před daní" />
+        <AfterTax Text="Po dani" />
+      </DiscountApplyRule>
+      <AllowNegativePrices Text="Povolit zápornou cenu">
+        <Tooltip Text="Pokud je vybráno, bude povolena záporná prodejní cena." />
+      </AllowNegativePrices>
+      <Sorting Text="Řazení">
+        <Name Text="Název" />
+        <Code Text="Kód" />
+      </Sorting>
+    </Products>
+    <Print Text="Možnosti tisku">
+      <PrinterSelection Text="Výběr tiskárny">
+        <Tour>
+          <Title Text="Upravte nastavení tiskárny" />
+          <Content Text="Klikněte na tlačítko &quot;Nastavení tiskárny&quot;.&#xA;k nastavení a přizpůsobení tiskárny" />
+        </Tour>
+      </PrinterSelection>
+      <Printers>
+        <KitchenTicket Text="Kuchyňská tiskárna">
+          <Operation Text="Vytiskněte si lístek do kuchyně" />
+        </KitchenTicket>
+        <Service Text="Servisní tiskárna">
+          <Operation Text="Tisk servisních zpráv" />
+        </Service>
+        <Estimate Text="Prodej uzamčené tiskárny">
+          <Operation Text="Tisk uzamčený prodej" />
+        </Estimate>
+        <OrderSummary Text="Tisknout objednávku" />
+      </Printers>
+      <PrinterOptions Text="Nastavení tiskárny">
+        <BasicSettings Text="Základní nastavení" />
+        <Tooltip Text="Upravte nastavení tiskárny" />
+        <PrinterType Text="Typ tiskárny">
+          <WindowsPrinter Text="Tiskárna Windows" />
+          <GenericTextOnly Text="Generic / Text only" />
+        </PrinterType>
+        <PaperSize Text="Velikost papíru">
+          <RollPaper58 Text="58 mm" />
+          <RollPaper80 Text="80 mm" />
+          <A4 Text="A4" />
+        </PaperSize>
+        <RightToLeft Text="Z prava do leva" />
+        <NumberOfCopies Text="Počet kopií" />
+        <PaperWidth Text="Znaky na řádek" />
+        <Header Text="Záhlaví" />
+        <Footer Text="Zápatí" />
+        <FeedLines Text="Feed lines" />
+        <CutPaper Text="Řez papíru" />
+        <PrintBitmap Text="Tisknout bitmapu" />
+        <RichFormatting Text="Rich formatting" />
+        <Alignment>
+          <Left Text="Zarovnat do leva" />
+          <Center Text="Zarovnat na střed" />
+        </Alignment>
+        <Revert Text="Vrátit změny">
+          <Completed Text="Byla použita dříve uložená nastavení" />
+        </Revert>
+        <PrintTestPage Text="Vytiskněte zkušební stránku" />
+        <Advanced Text="Pokročilý">
+          <CodePage Text="Kódová stránka" />
+          <CharacterSet Text="Znaková sada">
+            <None Text="Žádné (výchozí nastavení tiskárny)" />
+            <USA Text="USA" />
+            <France Text="Francie" />
+            <Germany Text="Německo" />
+            <UK Text="Spojené Králoství" />
+            <DenmarkI Text="Dánsko 1" />
+            <Sweden Text="Švédsko" />
+            <Italy Text="Itálie" />
+            <SpainI Text="Španělsko 1" />
+            <Japan Text="Japonsko" />
+            <Norway Text="Norsko" />
+            <DenmarkII Text="Dánsko 2" />
+            <SpainII Text="Španělsko 2" />
+            <LatinAmerica Text="Latinská Amerika" />
+            <Korea Text="Korea" />
+            <SloveniaCroatia Text="Slovinsko / Chorvatsko" />
+            <China Text="Čína" />
+            <Vietnam Text="Vietnam" />
+            <Arabia Text="Arábie" />
+          </CharacterSet>
+        </Advanced>
+        <Unavailable Text="Pro vybraný typ tiskárny nejsou k dispozici další možnosti.&#xA;Chcete-li zobrazit další možnosti tiskárny, vyberte jiný typ tiskárny.">
+          <Info Text="Přečtěte si další informace o výběru typu tiskárny a nastavení tiskárny účtenek." />
+        </Unavailable>
+        <Margin Text="Okraje (v milimetrech)">
+          <Top Text="Nahoře" />
+          <Right Text="V pravo" />
+          <Bottom Text="Dole" />
+          <Left Text="V levo" />
+        </Margin>
+        <PrintBarcode Text="Tisknout čárový kód" />
+        <Font Text="Nastavení fontu">
+          <Family Text="Font family" />
+          <SizePercent Text="Velikost fontu" />
+          <Reset Text="Obnoví výchozí nastavení rodiny písem a nastaví velikost písma na 100 %" />
+        </Font>
+      </PrinterOptions>
+      <Templates Text="Tisk šablon">
+        <Font Text="Font">
+          <Info Text="Zde vybrané písmo bude použito ve fakturách, sestavách a dalších tiskových šablonách. Pokud není vybráno žádné, použije se výchozí písmo." />
+        </Font>
+        <Invoice Text="Nastavení faktur">
+          <Title Text="Nadpis" />
+          <Columns Text="Výběr sloupců">
+            <TaxColumn Text="Sloupec daně" />
+            <DiscountColumn Text="Sloupec slev" />
+          </Columns>
+          <CustomerDetails Text="Podrobnosti o zákazníkovi">
+            <TaxNumber Text="Daňové číslo" />
+            <Code Text="Kód" />
+            <PhoneNumber Text="Telefonní číslo" />
+            <Email Text="Email" />
+          </CustomerDetails>
+          <Other Text="Další nastavení">
+            <PrintPaymentTypes Text="Platební metody" />
+          </Other>
+          <Footer Text="Zápatí" />
+        </Invoice>
+      </Templates>
+    </Print>
+    <AddOns Text="Registrované moduly">
+      <Modules Text="Moduly" />
+      <Plugins Text="Pluginy" />
+    </AddOns>
+    <WeighingScale Text="Váha">
+      <VariableMeasureBarcode Text="Čárový kód vah">
+        <Enabled Text="Povolit čárový kód váhy" />
+        <Prefix Text="První dvě číslice / předčíslí" />
+        <ProductCodeLength Text="Počet číslic pro kód produktu" />
+        <DecimalPlaces Text="Počet desetinných míst" />
+        <TrimZeros Text="Odstraňte nuly z kódu produktu (odstraňtenuly)" />
+        <IsUsingPriceBarcode Text="Měřítko tiskne cenu místo množství">
+          <Info Text="Některé váhy tisknou místo měřeného množství celkovou cenu. Pokud je tato možnost povolena, množství bude založeno na ceně produktu a celkovém množství z váhy." />
+        </IsUsingPriceBarcode>
+      </VariableMeasureBarcode>
+    </WeighingScale>
+    <Email Text="Nastavení emailu">
+      <General Text="Všeobecné">
+        <Host Text="Hostitel" />
+        <Port Text="Port" />
+        <EmailAddress Text="Emailová adresa" />
+        <DisplayName Text="Zobrazit jméno" />
+        <Username Text="Uživatel" />
+        <Password Text="Heslo" />
+        <SSL Text="SSL povoleno" />
+        <Defaults Text="Výchozí hodnoty e-mailových zpráv">
+          <Subject Text="Předmět" />
+          <Message Text="Zprávy" />
+          <Description Text="Pokud se rozhodnete ponechat tato pole prázdná, použije se automaticky generovaný předmět a zpráva pro zákazníka. Před odesláním zprávy je můžete změnit." />
+          <Bcc Text="Bcc recipients" />
+        </Defaults>
+      </General>
+    </Email>
+    <About Text="O aplikaci">
+      <Version Text="Verze" />
+      <ApplicationId Text="ID aplikace" />
+      <HelpCenter Text="Otevřít centrum pomoci">
+        <Info Text="Přejděte na help.aronium.com a otevřete žádost o podporu." />
+      </HelpCenter>
+      <ApplicationDirectory Text="Adresář dat aplikace">
+        <Info Text="Místo, kde jsou uložena nastavení aplikace, soubory protokolu a další položky související s aplikací." />
+        <Open Text="Otevřete datový adresář aplikace" />
+      </ApplicationDirectory>
+      <Database Text="Databáze">
+        <Open Text="Otevřete umístění databáze" />
+        <Backup Text="Záložní databáze">
+          <Success Text="Zálohování databáze bylo úspěšně dokončeno.">
+            <Path Text="Cesta: {0}" />
+            <UnableToCopy Text="Záloha byla vytvořena ve výchozím umístění. Nelze zkopírovat záložní soubor do vybraného adresáře." />
+          </Success>
+          <Error Text="Chyba při vytváření zálohy databáze.&#xA;Další podrobnosti naleznete v protokolech." />
+        </Backup>
+      </Database>
+      <Update>
+        <AutoUpdate Text="Automatická aktualizace" />
+        <SendUsageData Text="Pomozte nám zlepšit se zasíláním anonymních údajů o používání" />
+        <Check Text="Kontrola aktualizací">
+          <Checking Text="Probíhá kontrola aktualizací... Čekejte prosím..." />
+          <Downloading Text="Stahování aktualizace... Čekejte prosím..." />
+          <UpToDate Text="Aronium je aktuální." />
+          <Available Text="K dispozici je nová verze.">
+            <Run Text="Klikněte zde a nainstalujte nyní." />
+          </Available>
+          <Error>
+            <NoConnection Text="Nelze se připojit k serveru.&#xA;Zkontrolujte prosím své internetové připojení a zkuste to znovu." />
+            <InvalidFile Text="Při stahování souboru došlo k chybě. Může být nedostupný nebo poškozený.&#xA;Prosím zkuste to znovu později." />
+          </Error>
+        </Check>
+        <Ready Text="Aktualizace je k dispozici">
+          <Install Text="Kliknutím sem nainstalujete novou verzi" />
+          <Description Text="Nová verze je připravena k instalaci.&#xA;Pro více informací navštivte stránku s poznámkami k vydání kliknutím na &quot;Co je nového?&quot; tlačítko níže.">
+            <Install Text="Klepnutím na tlačítko &quot;Instalovat&quot; nainstalujete nejnovější aktualizace." />
+          </Description>
+          <Versions>
+            <Current Text="Současná verze:" />
+            <New Text="Nová verze:" />
+          </Versions>
+          <Ignore Text="Ignorovat tuto aktualizaci" />
+          <ReleaseNotes Text="Co je nového?" />
+          <Postpone Text="Teď ne" />
+          <Run Text="Instalovat" />
+        </Ready>
+      </Update>
+      <Account Text="Účet">
+        <Email Text="Vložit svou emailovou adresu" />
+        <Change Text="Změnit" />
+      </Account>
+      <TermsOfUse Text="Podmínky použití">
+        <Info Text="Přečtěte si naše &quot;Podmínky o použití&quot; online" />
+      </TermsOfUse>
+    </About>
+    <Authorization>
+      <Title Text="Pro přístup k nastavení aplikace zadejte heslo" />
+    </Authorization>
+    <Database Text="Databáze">
+      <AutoBackup Text="Automatické zálohování">
+        <Enabled Text="Povolit automatické zálohování" />
+        <BackupOnStart Text="Zálohování databáze při spuštění aplikace" />
+        <BackupOnClose Text="Zálohování databáze při zavření aplikace" />
+        <DirectoryPath Text="Umístění zálohy">
+          <Choose Text="Choose backup location" />
+          <Info Text="Vyberte umístění zálohy. Soubory automatického zálohování budou uloženy do vybraného adresáře." />
+        </DirectoryPath>
+        <RemoveOldFiles Text="Odstraňte staré záložní soubory">
+          <DaysToKeep Text="Počet dní pro uchování starých záložních souborů" />
+        </RemoveOldFiles>
+      </AutoBackup>
+    </Database>
+    <RestartRequired Text="Aby se tyto změny projevily, musí být Aronium restartováno.">
+      <Title Text="Je vyžadován restart" />
+    </RestartRequired>
+  </Settings>
+  <Document>
+    <Category>
+      <Expenses Text="Výdaje">
+        <Purchase Text="Nákup" />
+        <StockReturn Text="Návratnost zásob" />
+      </Expenses>
+      <Inventory Text="Inventář">
+        <InventoryCount Text="Počet zásob" />
+      </Inventory>
+      <Loss Text="Ztráty">
+        <LossAndDamage Text="Ztráty a škody" />
+      </Loss>
+      <Sales Text="Prodeje">
+        <Sales Text="Prodeje" />
+        <Refund Text="Refundace" />
+        <Proforma Text="Proforma" />
+      </Sales>
+    </Category>
+    <Create>
+      <Error Text="Při vytváření dokumentu došlo k chybě.\nProsím zkuste to znovu." />
+    </Create>
+  </Document>
+  <Invoices Text="Zobrazit historii prodeje">
+    <Title Text="Historie prodejů" />
+    <Documents Text="Dokumenty">
+      <Customer Text="Zákazník">
+        <Change Text="Změna zákazníka">
+          <Success Text="Zákazník změněn úspěšně." />
+        </Change>
+      </Customer>
+      <CashRegister>
+        <All Text="Všechny pokladny" />
+        <Select Text="Vyberte pokladnu" />
+      </CashRegister>
+      <DocumentNumber Text="Číslo dokumentu">
+        <NotFound Text="Dokument „{0}“ nebyl nalezen" />
+      </DocumentNumber>
+      <Print Text="Tisknout">
+        <CashReceipt Text="Účtenka">
+          <PrinterNotFound Text="Servisní tiskárna není vybrána nebo zakázána. Zkontrolujte nastavení tiskárny a zkuste to znovu." />
+          <Address Text="Adresa" />
+          <VatNumber Text="Daňové číslo" />
+          <Date Text="Datum" />
+          <ReceiptNumber Text="Číslo účtenky" />
+          <Customer Text="Zákazník" />
+          <Total Text="Celkem" />
+          <Tax Text="Daň" />
+          <TotalAmount Text="CELKEM" />
+          <FiscalReceiptNumber Text="Číslo fiskální účtenky" />
+          <Signature Text="Podpis" />
+          <Stamp Text="P.S." />
+          <Authorization>
+            <Title Text="Pro tisk potvrzení zadejte heslo" />
+          </Authorization>
+        </CashReceipt>
+        <Pdf Text="Uložit jako PDF">
+          <Success Text="Dokument „{0}“ byl uložen" />
+        </Pdf>
+        <Error Text="Chyba při tisku dokumentu">
+          <NoService Text="Tisková služba není registrována" />
+        </Error>
+        <Refund Text="Refundace" />
+        <Preview Text="Náhled před tiskem" />
+      </Print>
+      <Delete Text="Vymazat">
+        <Confirmation>
+          <Title Text="Smazat dokument" />
+          <Message Text="Opravdu chcete smazat dokument „{0}“?" />
+        </Confirmation>
+        <Error Text="Při pokusu o smazání dokumentu došlo k chybě. Prosím zkuste to znovu" />
+        <Unauthorized Text="Nemáte oprávnění mazat dokumenty." />
+      </Delete>
+      <List Text="Dokumenty">
+        <Document>
+          <Number Text="Číslo" />
+          <DocumentType Text="Typ dokumentu" />
+          <Warehouse Text="Sklad" />
+          <Customer Text="Zákazník">
+            <Refresh Text="Aktualizujte seznam zákazníků">
+              <Complete Text="Zákazníci znovu načteni" />
+            </Refresh>
+          </Customer>
+          <Vendor Text="Prodejce">
+            <Refresh Text="Aktualizujte seznam dodavatelů">
+              <Complete Text="Dodavatelé znovu načteni" />
+            </Refresh>
+          </Vendor>
+          <ExternalDocument Text="Externí dokument" />
+          <Date Text="Datum" />
+          <DueDate Text="Datum splatnosti" />
+          <StockDate Text="Datum skladu" />
+          <DateCreated Text="Vytvořeno" />
+          <DateUpdated Text="Aktualizováno" />
+          <CashRegister Text="POS" />
+          <OrderNumber Text="Číslo objednávky" />
+          <User Text="Uživatel" />
+          <PaymentType Text="Způsob platby" />
+          <Discount Text="Sleva" />
+          <Paid Text="Zaplaceno" />
+          <Unpaid Text="Nezaplaceno" />
+          <Total Text="Celkem">
+            <Summary>
+              <Subtotal Text="Mezisoučet:" />
+              <TotalBeforeTax Text="Celkem před zdaněním:" />
+              <Tax Text="Daň:" />
+              <Total Text="Celkově:" />
+              <Discount Text="Sleva:">
+                <DiscountApplyRule Text="Uplatněte slevu před nebo po zdanění.\nTento výběr bude použit pro položky a slevy v košíku.">
+                  <BeforeTax Text="Uplatnit slevu před zdaněním" />
+                  <AfterTax Text="Uplatnit slevu po zdanění" />
+                </DiscountApplyRule>
+                <DiscountType Text="Vyberte typ slevy">
+                  <Percent Text="Procentuální sleva" />
+                  <Fixed Text="Částka slevy" />
+                </DiscountType>
+              </Discount>
+            </Summary>
+          </Total>
+          <Payments Text="Platby">
+            <Add Text="Přidat platbu" />
+            <PaymentType Text="Způsob platby" />
+            <Amount Text="Množství" />
+            <Date Text="Datum" />
+            <NewPayment Text="Nová platba" />
+            <Delete Text="Smazat platbu">
+              <Confirmation Text="Opravdu chcete smazat platbu „{0}“?" />
+            </Delete>
+            <Totals>
+              <PaymentsTotal Text="Platby celkem:" />
+              <DocumentTotal Text="Dokument celkem:" />
+            </Totals>
+          </Payments>
+          <Items Text="Položky dokladu">
+            <Item>
+              <ProductCode Text="Kód" />
+              <Product Text="Název" />
+              <MeasurementUnit Text="Měrná jednotka" />
+              <Quantity Text="Množství" />
+              <PriceNoTax Text="Cena před zdaněním" />
+              <Price Text="Cena" />
+              <Tax Text="Daň">
+                <Add Text="Přidejte daně">
+                  <Tooltip Text="Přidat daň k této položce" />
+                </Add>
+                <Remove>
+                  <Tooltip Text="Odebrat daň z této položky" />
+                </Remove>
+              </Tax>
+              <Discount Text="Sleva">
+                <DiscountType Text="Vyberte typ slevy">
+                  <Percent Text="Procentuální sleva" />
+                  <Fixed Text="Částka slevy" />
+                </DiscountType>
+                <DiscountApplyRule>
+                  <BeforeTax Text="před zdaněním" />
+                  <AfterTax Text="po zdanění" />
+                </DiscountApplyRule>
+              </Discount>
+              <TotalBeforeTax Text="Celkem před zdaněním" />
+              <Total Text="Celkem" />
+              <TotalBeforeDiscount Text="Celkem před slevou" />
+              <Error>
+                <Taxes Text="Byly nalezeny duplicitní daně. Daňový název (&quot;{0}&quot;).&#xA;Vyberte prosím platné daně a zkuste to znovu." />
+              </Error>
+            </Item>
+            <Delete Text="Smazat položku dokumentu">
+              <Confirmation Text="Opravdu chcete smazat „{0}“?" />
+            </Delete>
+          </Items>
+          <Print>
+            <UnsavedChanges Text="Dokument obsahuje neuložené změny. Chcete uložit změny před tiskem?">
+              <Title Text="Neuložené změny" />
+            </UnsavedChanges>
+          </Print>
+        </Document>
+      </List>
+      <Count Text="Počet dokumentů:" />
+      <Total Text="Celková částka:" />
+      <AllUsers Text="Zobrazit všechny uživatele" />
+      <BulkActions Text="Hromadné operace">
+        <Delete Text="Smazat vybrané dokumenty">
+          <Confirmation>
+            <Title Text="Smazat vybrané dokumenty" />
+            <Message Text="Opravdu chcete smazat vybrané dokumenty?" />
+          </Confirmation>
+          <Message Text="Odstraňování dokumentů... Čekejte prosím..." />
+        </Delete>
+        <UpdatePaidStatus>
+          <Message Text="Aktualizace placeného stavu... Čekejte prosím..." />
+        </UpdatePaidStatus>
+      </BulkActions>
+    </Documents>
+    <Authorization>
+      <Title Text="Pro přístup k historii prodeje zadejte heslo" />
+    </Authorization>
+  </Invoices>
+  <Feedback Text="Zpětná vazba">
+    <Title Text="Pomozte nám vylepšit Aronium" />
+    <Description Text="Děkujeme, že jste si našli čas na poskytnutí návrhu.\nVaše zpětná vazba nám pomáhá vylepšit aplikaci Aronium.">
+      <Contact Text="Neváhejte nás kdykoli kontaktovat na" />
+    </Description>
+    <Message>
+      <Name Text="Tvé jméno" />
+      <Email Text="Emailová adresa" />
+      <Subject Text="Předmět" />
+      <Message Text="Zpráva" />
+      <Rating Text="Celkové hodnocení" />
+    </Message>
+    <Send Text="Poslat zpětnou vazbu" />
+    <Confirmation>
+      <Title Text="Děkuji!" />
+      <Message Text="Vaše zpětná vazba je odeslána. Použijeme to, aby bylo Aronium lepší." />
+    </Confirmation>
+  </Feedback>
+  <Guide>
+    <Menu>
+      <Title Text="Otevřete hlavní nabídku" />
+      <Content Text="Kliknutím sem otevřete hlavní nabídku a sekci správy přístupu" />
+    </Menu>
+    <Layout>
+      <SearchBox Text="Vyhledávejte produkty podle názvu, čárového kódu nebo kódu.">
+        <Title Text="Vyhledávání produktů" />
+      </SearchBox>
+    </Layout>
+    <Dismiss>
+      <Title Text="Zrušit komentovanou prohlídku" />
+      <Confirmation Text="Opravdu chcete tyto tipy skrýt?" />
+    </Dismiss>
+  </Guide>
+  <Layout>
+    <Visual>
+      <Item>
+        <Edit Text="Upravit vizuální vzhled">
+          <Color Text="Barva" />
+          <Image Text="Obraz">
+            <Select Text="Vyberte obrázek" />
+            <Clear Text="Vyčistit obraz" />
+          </Image>
+        </Edit>
+      </Item>
+    </Visual>
+  </Layout>
+</Language>

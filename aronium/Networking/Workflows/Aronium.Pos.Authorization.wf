@@ -1,0 +1,44 @@
+<Workflow>
+  <Name>Aronium.Pos.Authentication</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="e9fe64f8-060c-4271-82d8-26d90134177e" name="Start">
+      <Transitions>
+        <DefaultTransition id="b56e6fdb-edce-408e-b583-6ccda9966fe7" name="Authenticate">
+          <Target>58227db8-527c-48f2-9586-3ee5df1371db</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="58227db8-527c-48f2-9586-3ee5df1371db" name="Select user">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="261d6d0b-9b63-4336-80e9-3956e20a2a79" name="Continue">
+          <Target>5e7d83ff-93d2-4daa-9f45-cd86352d758b</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/AuthenticateUser.xaml</Variable>
+        <Variable name="Title">Security.Authorize</Variable>
+      </Variables>
+    </ExternalTask>
+    <EndTask id="10649bde-ca17-4ac5-bf30-7d7b440e973b" name="End" />
+    <RouterTask id="5e7d83ff-93d2-4daa-9f45-cd86352d758b" name="Is Authenticated">
+      <IsExclusive>False</IsExclusive>
+      <Transitions>
+        <SuccessTransition id="035f7c18-935d-46d0-b627-b75712ea32a2" name="End">
+          <Target>10649bde-ca17-4ac5-bf30-7d7b440e973b</Target>
+        </SuccessTransition>
+        <ErrorTransition id="10ca8410-570a-43f3-87d5-ec83942b2fc9" name="Cancel">
+          <Target>cc92fd83-4aa5-45fb-a8c0-c9c84ffb4f7f</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="User">{NOT_NULL}</Variable>
+      </Variables>
+    </RouterTask>
+    <AbortTask id="cc92fd83-4aa5-45fb-a8c0-c9c84ffb4f7f" name="Abort" />
+  </Tasks>
+</Workflow>

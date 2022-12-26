@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Networking>
+    <Settings Text="قاعدة البيانات">
+      <Connection Text="خصائص اتصال قاعدة البيانات" />
+    </Settings>
+    <Connect>
+      <ConnectionProperties Text="خصائص اتصال قاعدة البيانات" />
+      <Server Text="الخادم" />
+      <Database Text="قاعدة البيانات" />
+      <CashRegister Text="ماكينة تسجيل المدفوعات النقدية" />
+    </Connect>
+  </Networking>
+</Language>

@@ -1,0 +1,1 @@
+ALTER TABLE FloorPlan ADD Color varchar(100) NOT NULL CONSTRAINT DF_FloorPlan_Color DEFAULT 'Transparent'

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ar" name="Arabic">
+  <Users Text="المستخدمين والامن">
+    <View Text="المستخدمين">
+      <Disabled Text="تظهر للمستخدمين غير نشط" />
+    </View>
+    <New Text="اضافة مستخدم" />
+    <ResetPassword Text="إعادة تعيين كلمة السر">
+      <Success Text="الرقم السري تغير بنجاح" />
+    </ResetPassword>
+    <LearnMore Text="معرفة المزيد حول ادارة المستخدمين" />
+    <User>
+      <FirstName Text="اسم الاول" />
+      <LastName Text="الاسم الاخير" />
+      <Email Text="البريد الالكتروني" />
+      <Password Text="کلمة السر" />
+      <PasswordConfirmation Text="تاكيد كلمة السر" />
+      <AccessLevel Text="مستوى الوصول" />
+      <IsEnabled Text="نشيط" />
+      <Error>
+        <PasswordConfirmationMatch Text="كلمة السر وكلمة السر غير متطابقة." />
+        <InvalidPassword Text="المستخدم الذي له نفس كلمة المرور موجود۔\nالرجاء ادخال كلمة مرور فريدة واعادة المحاولة۔" />
+        <Disable>
+          <OpenOrders Text="سوف تعطيل المستخدم منعه من إغلاق المبيعات المفتوحة۔\nيرجى إغلاق جميع الطلبات المفتوحة عند المستخدم قبل تعطيله۔">
+            <Title Text="يتعذر تعطيل المستخدم بمبيعات مفتوحة" />
+          </OpenOrders>
+        </Disable>
+        <DuplicateEmail Text="هذا البريد الالكتروني مسجل۔\nالرجاء استخدام عنوان بريد إلكتروني مختلف۔" />
+      </Error>
+      <Saved Text="تم تغيير تفاصيل المستخدم بنجاح." />
+    </User>
+    <Delete Text="حذف المستخدم">
+      <Confirmation Text="هل تريد بالتأكيد حذف &quot;{0}&quot;؟" />
+      <Error>
+        <CurrentUser Text="لا يمكنك حذف نفسك!۔" />
+        <DataViolation Text="نتعذر حذف المستخدم۔\nيحتوي المستخدم على مستندات أو عناصر أخرى ذات صلة۔" />
+      </Error>
+    </Delete>
+    <Security Text="الأمان">
+      <Title Text="تعيين مستوى الوصول لعمليات محددة مسبقا" />
+      <Description Text="حدد مستوى الوصول لكل إجراء من أجل تعيين أذونات المستخدم المطلوبة." />
+      <LearnMore Text="معرفة المزيد حول مستويات الوصول والأمن" />
+      <MaximumAccessLevelWarning Text="مستوى الوصول المحدد أعلى أعلى قيمة يتم تعيينها لاي مستخدم." />
+      <Save>
+        <Success Text="تم حفظ مستويات الأمان بنجاح" />
+        <AccessLevelViolation Text="انتهاك مستوى الدخول">
+          <Info Text="يمكن تعيين مستويات الوصول إلى القيمة القصوى المخصصة لأي مستخدم. وإلا، فقد لا تتمكن من الدخول إلى القسم المقيد۔\nيرجى ضبط المنتجات عن طريق الخطأ وإعادة المحاولة۔" />
+        </AccessLevelViolation>
+      </Save>
+    </Security>
+  </Users>
+</Language>

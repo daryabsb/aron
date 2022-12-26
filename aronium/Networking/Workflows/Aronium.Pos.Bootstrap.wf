@@ -1,0 +1,212 @@
+<Workflow>
+  <Name>Aronium.Pos.Bootstrap</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>False</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="da73612c-cac9-4ffa-9830-d93b5d340313" name="Start">
+      <Transitions>
+        <DefaultTransition id="91b33df6-69f6-4ba7-a234-9d4fb573b34e" name="Connect">
+          <Target>97b04164-32a6-4bde-8567-3b298ba4be23</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="b91fc0ca-e6f7-4c6c-8383-5abf3ff7e118" name="Load Products">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Bootstrap.ProductLoader</ClassName>
+      <Transitions>
+        <DefaultTransition id="66aa96c5-3bc3-45f2-aa20-5a64e9a4d382" name="Fiscal printer">
+          <Target>034cb957-e26c-4634-9c43-0433b1b97f47</Target>
+        </DefaultTransition>
+        <ErrorTransition id="c336f37c-bc6b-4b19-8022-25b275c97463" name="Error">
+          <Target>ea990a06-9d14-4f14-bdcc-26b71a3020b7</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <EndTask id="9972f10c-2233-47ac-99a9-e23a99357c29" name="End" />
+    <ExternalTask id="97b04164-32a6-4bde-8567-3b298ba4be23" name="Connect to database">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Bootstrap.Connect</ClassName>
+      <Transitions>
+        <DefaultTransition id="d9165040-5f32-4a0d-807a-82bc42cc662b" name="Connected">
+          <Target>14909b3a-a2f7-42e1-8994-981862b1fd74</Target>
+        </DefaultTransition>
+        <ErrorTransition id="40da5509-d96c-4b7e-a96c-083e95479470" name="Error">
+          <Target>b52fa6fd-170c-49ef-aedf-fa8f23e741d7</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="034cb957-e26c-4634-9c43-0433b1b97f47" name="Fiscal printer status">
+      <AssemblyName>Modules\Aronium.Pos.FiscalPrinter\Aronium.Pos.FiscalPrinter</AssemblyName>
+      <ClassName>Aronium.Pos.FiscalPrinter.Tasks.Bootstrap.CheckStatus</ClassName>
+      <Transitions>
+        <ErrorTransition id="fd7e1088-a901-4652-b65a-008e51d32c2f" name="Error">
+          <Target>e5978c50-6eea-4fbc-a0d5-7a63a418921f</Target>
+        </ErrorTransition>
+        <DefaultTransition id="5ea110fe-088c-4154-81e3-b068af2a5cbd" name="Success">
+          <Target>ad5f74ae-78cd-46a6-8469-de7e6f0a60f8</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <AbortTask id="fe7527ec-3ec6-4063-b469-4cef95a0f00f" name="Abort" />
+    <ExternalTask id="b52fa6fd-170c-49ef-aedf-fa8f23e741d7" name="Database properties">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <ErrorTransition id="4717bd46-12cd-476f-9d08-50fc90c5991c" name="CANCEL">
+          <Target>fe7527ec-3ec6-4063-b469-4cef95a0f00f</Target>
+        </ErrorTransition>
+        <DefaultTransition id="6ec6aa75-31d4-48be-bcd7-c5969f46c28a" name="Connect to database">
+          <Target>97b04164-32a6-4bde-8567-3b298ba4be23</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Bootstrap/DatabaseConnectionView.xaml</Variable>
+        <Variable name="BootstrapCountExclude">True</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="dae2c558-594b-4e18-b02c-a59679f744be" name="Load Cash Register">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Bootstrap.CashRegisterLoader</ClassName>
+      <Transitions>
+        <DefaultTransition id="7208a282-2980-4bb0-9bc4-317d61206635" name="Success">
+          <Target>b91fc0ca-e6f7-4c6c-8383-5abf3ff7e118</Target>
+        </DefaultTransition>
+        <ErrorTransition id="3fea7c1b-d23f-49cd-a633-4f4cd374597e" name="Error">
+          <Target>fe7527ec-3ec6-4063-b469-4cef95a0f00f</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="e5978c50-6eea-4fbc-a0d5-7a63a418921f" name="Resolve error">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <ErrorTransition id="98b16133-e0ca-4a32-86cb-3c8933618620" name="Cancel">
+          <Target>fe7527ec-3ec6-4063-b469-4cef95a0f00f</Target>
+        </ErrorTransition>
+        <DefaultTransition id="9c75782f-1c0e-4aa2-bc52-073fb776b895" name="Retry">
+          <Target>034cb957-e26c-4634-9c43-0433b1b97f47</Target>
+        </DefaultTransition>
+        <DefaultTransition id="89d934ce-a895-4b5f-93d3-39f342f4cbd4" name="Ignore">
+          <Target>de7696ab-c924-47ef-816a-fa4085265d56</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.FiscalPrinter;component/Views/ResolveFiscalPrinterErrors.xaml</Variable>
+        <Variable name="BootstrapCountExclude">True</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="ad5f74ae-78cd-46a6-8469-de7e6f0a60f8" name="Save fiscal items">
+      <AssemblyName>Modules\Aronium.Pos.FiscalPrinter\Aronium.Pos.FiscalPrinter</AssemblyName>
+      <ClassName>Aronium.Pos.FiscalPrinter.Tasks.Bootstrap.ProgrammeFiscalItems</ClassName>
+      <Transitions>
+        <DefaultTransition id="d1b228c6-40b3-4e5f-89a8-a73dfd36a7d7" name="End">
+          <Target>de7696ab-c924-47ef-816a-fa4085265d56</Target>
+        </DefaultTransition>
+        <ErrorTransition id="c5a0a611-80c6-4d94-a9f6-84019fd4f72b" name="Error">
+          <Target>2500e4e3-0d8c-47aa-87d5-62fa17627a2a</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="2500e4e3-0d8c-47aa-87d5-62fa17627a2a" name="Resolve items error">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <ErrorTransition id="790925c9-0285-483f-b30c-8303e014a8b7" name="Cancel">
+          <Target>fe7527ec-3ec6-4063-b469-4cef95a0f00f</Target>
+        </ErrorTransition>
+        <DefaultTransition id="a29245b3-8ea0-4409-9807-3ee7a6942daf" name="Retry">
+          <Target>034cb957-e26c-4634-9c43-0433b1b97f47</Target>
+        </DefaultTransition>
+        <DefaultTransition id="7a973e1c-edec-4dbf-bf84-21eb45b2e2c0" name="Ignore">
+          <Target>de7696ab-c924-47ef-816a-fa4085265d56</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.FiscalPrinter;component/Views/ResolveFiscalItemsErrors.xaml</Variable>
+        <Variable name="BootstrapCountExclude">True</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="b5206b57-95a8-497f-a20d-a32d5c5d7d66" name="Migration">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Bootstrap.MigrationsTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="3c408683-744a-4f6e-91c9-dbdb561e1725" name="Completed">
+          <Target>dae2c558-594b-4e18-b02c-a59679f744be</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="ea990a06-9d14-4f14-bdcc-26b71a3020b7" name="Resolve products errors">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Bootstrap.ProductsErrorTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="2bb1f954-efff-48c7-87e1-93692a2b07af" name="Continue">
+          <Target>034cb957-e26c-4634-9c43-0433b1b97f47</Target>
+        </DefaultTransition>
+        <ErrorTransition id="3cb9e9ab-a5cf-47ea-b056-ae61cc2fcad1" name="Cancel">
+          <Target>fe7527ec-3ec6-4063-b469-4cef95a0f00f</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Bootstrap/LoadProductsErrorView.xaml</Variable>
+        <Variable name="BootstrapCountExclude">True</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="de7696ab-c924-47ef-816a-fa4085265d56" name="Check onboarding">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Bootstrap.Onboarding.CheckOnboarding</ClassName>
+      <Transitions>
+        <DefaultTransition id="1df6f153-a60e-439e-b761-0273329b8aaf" name="End">
+          <Target>a2d27970-9cf4-4e33-9a70-78f3ed3bc81a</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="BootstrapCountExclude">True</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="6f0701b4-b299-4322-a9a8-1b7d365c3b59" name="Backup">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Bootstrap.BackupDatabaseTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="35ae3d4e-78f2-44bf-ad44-5e9f309169d3" name="Completed">
+          <Target>b5206b57-95a8-497f-a20d-a32d5c5d7d66</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="a2d27970-9cf4-4e33-9a70-78f3ed3bc81a" name="Display welcome message">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.DisplayWelcomeMessage</ClassName>
+      <Transitions>
+        <DefaultTransition id="8c473d0f-1ffa-45c4-bc7c-21f318d43234" name="Continue">
+          <Target>fbe14980-b435-424a-af22-de1f8aff6003</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="TopVar">Item.Product.Name</Variable>
+        <Variable name="BottomVar">Item.Product.Price</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="fbe14980-b435-424a-af22-de1f8aff6003" name="Register">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Registration.RegistrationWorkflowRunner</ClassName>
+      <Transitions>
+        <DefaultTransition id="1049027d-44b3-4124-8e40-6c8cef6bc52e" name="Continue">
+          <Target>9972f10c-2233-47ac-99a9-e23a99357c29</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Workflow">Aronium.Pos.Registration</Variable>
+        <Variable name="DisplayMessage">Bootstrap.ValidateLicense</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="14909b3a-a2f7-42e1-8994-981862b1fd74" name="Check version">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Bootstrap.VersionChangeTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="484950a2-a70f-45ab-8f65-d4750fff9442" name="Continue">
+          <Target>6f0701b4-b299-4322-a9a8-1b7d365c3b59</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+  </Tasks>
+</Workflow>

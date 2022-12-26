@@ -1,0 +1,2 @@
+ALTER TABLE Document ADD DiscountApplyRule INT NOT NULL DEFAULT 0;
+ALTER TABLE DocumentItem ADD DiscountApplyRule INT NOT NULL DEFAULT 0;

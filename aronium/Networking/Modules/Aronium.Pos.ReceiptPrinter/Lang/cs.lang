@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <ReceiptPrinter Text="Tiskárna účtenek">
+    <PrintReceipt Text="Tisknout účtenku" />
+    <Receipt>
+      <PrinterNotFound Text="Není vybrána nebo je zakázána tiskárna účtenek. Zkontrolujte nastavení tiskárny a zkuste to znovu." />
+      <PaymentTypes>
+        <PrintDisabled Text="Tisk potvrzení je pro vybrané typy plateb zakázán.&#xA;Před tiskem účtenky prosím povolte tisk účtenky pro vybrané typy plateb." />
+      </PaymentTypes>
+      <Company>
+        <TaxNumber Text="IČO" />
+      </Company>
+      <Customer Text="Zákazník">
+        <Address Text="Adresa" />
+        <TaxNumber Text="Daňové identifikační číslo" />
+        <Code Text="Kód" />
+        <PhoneNumber Text="Telefon" />
+        <Email Text="Email" />
+      </Customer>
+      <Number Text="Číslo účtenky" />
+      <RefundNumber Text="Číslo refundace" />
+      <OrderNumber Text="Číslo objednávky" />
+      <ItemsCount Text="Počet položek" />
+      <Subtotal Text="Mezisoučet" />
+      <Tax Text="Daň" />
+      <Discount Text="Sleva" />
+      <Total Text="Celkem" />
+      <PaidAmount Text="Uhrazená suma" />
+      <AmountDue Text="Dlužná částka" />
+      <DueDate Text="Datum splatnosti" />
+      <User Text="Uživatel" />
+      <Change Text="Změna" />
+      <Customize Text="Přizpůsobte účtenku">
+        <UseSystemCurrency Text="Použijte formát systémové měny">
+          <Info Text="Váš symbol měny je nastaven na „{0}“. Ke změně symbolu měny použijte Ovládací panely Windows.">
+            <OpenRegionalSettings Text="Otevřete místní nastavení" />
+          </Info>
+        </UseSystemCurrency>
+        <NumberOfDecimalPlaces Text="Desetinná místa" />
+        <PrintTaxes Text="Tisk součtu daně" />
+        <PrintItemsCount Text="Počet tiskových položek">
+          <PrintItemsQuantity Text="Tisknout celkové množství" />
+        </PrintItemsCount>
+        <PrintMeasurementUnit Text="Tisk měrné jednotky" />
+        <PrintOrderNumber Text="Tisknout číslo objednávky" />
+        <ShortReceiptNumber Text="Krátké číslo účtenky" />
+        <PrintTaxName Text="Tisknout daňové jméno" />
+        <Counter Text="Počítadlo účtenek">
+          <Edit Text="Kliknutím upravíte počítadlo čísel účtenek" />
+        </Counter>
+        <Localize Text="Lokalizovat text účtenky">
+          <Info Text="Pomocí tohoto formuláře můžete přeložit nebo upravit štítky vytištěné na účtenkách." />
+          <Company>
+            <TaxNumber Text="Daňové identifikační číslo společnosti" />
+          </Company>
+          <CustomerDetails Text="Podrobnosti o zákazníkovi">
+            <Info Text="Zvolte způsob tisku údajů o zákazníkovi na účtence. Pokud si nepřejete tisknout nějaký štítek na účtence, zrušte zaškrtnutí níže uvedené možnosti.&#xA;Tato část se týká pouze štítků, nikoli skutečných údajů o zákazníkovi vytištěných na účtence." />
+          </CustomerDetails>
+          <Customer Text="Zákazník">
+            <Address Text="Adresa" />
+            <TaxNumber Text="Daňové identifikační číslo" />
+            <Code Text="Kód" />
+            <PhoneNumber Text="Telefonní číslo" />
+            <Email Text="Email" />
+          </Customer>
+          <ReceiptNumber Text="Číslo účtenky" />
+          <RefundNumber Text="Číslo refundace" />
+          <OrderNumber Text="Číslo objednávky" />
+          <ItemsCount Text="Počet položek" />
+          <Discount Text="Sleva" />
+          <Subtotal Text="Mezisoučet" />
+          <Tax Text="Sazba daně" />
+          <Total Text="Celkem" />
+          <PaidAmount Text="Zaplacená částka" />
+          <AmountDue Text="Dlužná částka" />
+          <DueDate Text="Datum splatnosti" />
+          <User Text="Zákazník" />
+          <Change Text="Změna" />
+        </Localize>
+        <CustomerDetails Text="Podrobnosti o zákazníkovi">
+          <Info Text="Vyberte, jaké údaje o zákazníkovi se vytisknou na účtence" />
+          <Name Text="Název" />
+          <Code Text="Kód" />
+          <TaxNumber Text="Daňové identifikační číslo" />
+          <Address Text="Adresa" />
+          <PhoneNumber Text="Telefonní číslo" />
+          <Email Text="Email" />
+        </CustomerDetails>
+      </Customize>
+    </Receipt>
+    <DailyReport>
+      <ZReport Text="Z REPORT" />
+      <CashRegister Text="POS #:" />
+      <Date Text="Datum:" />
+      <Time Text="Čas:" />
+      <ReportNumber Text="Report #:" />
+      <FromDocument Text="Z dokumentu:" />
+      <ToDocument Text="Do dokumentu:" />
+      <CashIn Text="Vložit:" />
+      <CashOut Text="Vybrat:" />
+      <UserSales Text="Uživatelské prodeje:" />
+      <PaymentTypes Text="Typy nabídek:">
+        <Total Text="Celkem nabízeno:" />
+      </PaymentTypes>
+      <Refunds Text="Vrácení:">
+        <Total Text="Celková návratnost:" />
+      </Refunds>
+      <TaxCollected Text="Vybraná daň:" />
+      <TaxableTotal Text="Zdanitelná částka:" />
+      <Tax Text="Daň:" />
+      <Total Text="Celkem:" />
+      <TotalBalance Text="Celkový zůstatek:" />
+      <Items Text="PŘEHLED POLOŽEK">
+        <ReportNumber Text="Report #:" />
+        <Products Text="PRODUKTY" />
+        <Groups Text="SKUPINY PRODUKTŮ" />
+        <Count Text="Počet položek" />
+      </Items>
+      <DiscountsGranted Text="Poskytnuté slevy:" />
+      <XReport Text="X REPORT" />
+    </DailyReport>
+    <CashDrawer Text="Pokladna">
+      <OpenCashDrawer Text="Otevřít pokladní zásuvku">
+        <AuthorizationRequired Text="Otevření pokladní zásuvky vyžaduje autorizaci.&#xA;Zadejte heslo požadované k otevření pokladní zásuvky." />
+      </OpenCashDrawer>
+      <Command Text="Příkaz pokladní zásuvky">
+        <LearnMore Text="Co to je" />
+      </Command>
+      <Error>
+        <CommandNotSet Text="Příkaz pokladní zásuvky není nastaven.&#xA;Chcete-li pokračovat, nastavte příkaz pokladní zásuvky." />
+        <PrinterNotSet Text="Není nastavena tiskárna účtenek.&#xA;Chcete-li pokračovat, nakonfigurujte tiskárnu účtenek." />
+      </Error>
+      <Test Text="Otestovat pokladní zásuvku">
+        <InvalidCommand Text="Pro testování zadejte platný příkaz peněžní zásuvky." />
+      </Test>
+    </CashDrawer>
+  </ReceiptPrinter>
+  <FiscalPrinter>
+    <Check Text="Načítání tiskárny účtenek...">
+      <Status Text="Kontrola stavu tiskárny..." />
+    </Check>
+    <CloseFiscalDay Text="Tisk závěrečných zpráv">
+      <Info Text="Vyberte sestavy k tisku. Ujistěte se, že je tiskárna dostupná a funkční." />
+      <DailyReport Text="Tisk zprávy Z">
+        <InProgress Text="Tisk přehledů Z... Čekejte prosím..." />
+      </DailyReport>
+      <SubReport Text="Tisk zprávy X">
+        <InProgress Text="Tisk zprávy X... Čekejte prosím..." />
+      </SubReport>
+      <ItemsReport Text="Tisk sestavy položek">
+        <InProgress Text="Tisk sestavy položek... Čekejte prosím..." />
+      </ItemsReport>
+      <PrinterDisabled Text="Tiskárna je zakázána nebo není vybrána. Zprávy nemusí být vytištěny." />
+    </CloseFiscalDay>
+  </FiscalPrinter>
+</Language>

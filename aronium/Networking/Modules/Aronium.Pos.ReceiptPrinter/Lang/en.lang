@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language name="English" code="en">
+  <ReceiptPrinter Text="Receipt printer">
+    <PrintReceipt Text="Print receipt" />
+    <Receipt>
+      <PrinterNotFound Text="Receipt printer is not selected or disabled. Check printer settings and try again." />
+      <PaymentTypes>
+        <PrintDisabled Text="Print receipt is disabled for selected payment types.\nPlease, enable receipt printing for selected payment types before printing a receipt." />
+      </PaymentTypes>
+      <Company>
+        <TaxNumber Text="Tax No." />
+      </Company>
+      <Customer Text="Customer">
+        <Address Text="Address" />
+        <TaxNumber Text="Tax No." />
+        <Code Text="Code" />
+        <PhoneNumber Text="Phone" />
+        <Email Text="Email" />
+      </Customer>
+      <Number Text="Receipt No." />
+      <RefundNumber Text="Refund No." />
+      <OrderNumber Text="Order No." />
+      <ItemsCount Text="Items count" />
+      <Subtotal Text="Subtotal" />
+      <Tax Text="Tax" />
+      <Discount Text="Cart discount" />
+      <Total Text="TOTAL" />
+      <PaidAmount Text="Paid amount" />
+      <AmountDue Text="Amount due" />
+      <DueDate Text="Due date" />
+      <User Text="User" />
+      <Change Text="Change" />
+      <Customize Text="Customize receipt">
+        <UseSystemCurrency Text="Use system currency format">
+          <Info Text="Your currency symbol is set to &quot;{0}&quot;. Use Windows Control Panel to change currency symbol.">
+            <OpenRegionalSettings Text="Open regional settings"/>
+          </Info>
+        </UseSystemCurrency>
+        <NumberOfDecimalPlaces Text="Decimal places" />
+        <PrintTaxes Text="Print tax totals" />
+        <PrintItemsCount Text="Print items count">
+          <PrintItemsQuantity Text="Print total quantity" />
+        </PrintItemsCount>
+        <PrintMeasurementUnit Text="Print measurement unit" />
+        <PrintOrderNumber Text="Print order number" />
+        <ShortReceiptNumber Text="Short receipt number" />
+        <PrintTaxName Text="Print tax name" />
+        <Counter Text="Receipt counter">
+          <Edit Text="Click to edit receipt number counter" />
+        </Counter>
+        <Localize Text="Localize receipt text">
+          <Info Text="Use this form to translate or modify the labels printed on receipts." />
+          <Company>
+            <TaxNumber Text="Company tax number" />
+          </Company>
+          <CustomerDetails Text="Customer details">
+            <Info Text="Choose how customer details are printed in receipt. If you wish not to print some label in receipt, uncheck the option below.\nThis section relates to labels only, not to actual customer details printed on receipt." />
+          </CustomerDetails>
+          <Customer Text="Customer">
+            <Address Text="Address" />
+            <TaxNumber Text="Tax number" />
+            <Code Text="Code" />
+            <PhoneNumber Text="Phone number" />
+            <Email Text="Email" />
+          </Customer>
+          <ReceiptNumber Text="Receipt number" />
+          <RefundNumber Text="Refund number" />
+          <OrderNumber Text="Order number" />
+          <ItemsCount Text="Items count" /> 
+          <Discount Text="Discount" />
+          <Subtotal Text="Subtotal" />
+          <Tax Text="Tax rate" />
+          <Total Text="Total" />
+          <PaidAmount Text="Paid amount" />
+          <AmountDue Text="Amount due" />
+          <DueDate Text="Due date" />
+          <User Text="User" />
+          <Change Text="Change" />
+        </Localize>
+        <CustomerDetails Text="Customer details">
+          <Info Text="Choose what customer details are printed in receipt" />
+          <Name Text="Name" />
+          <Code Text="Code" />
+          <TaxNumber Text="Tax number" />
+          <Address Text="Address" />
+          <PhoneNumber Text="Phone number" />
+          <Email Text="Email" />
+        </CustomerDetails>
+      </Customize>
+    </Receipt>
+    <DailyReport>
+      <ZReport Text="Z REPORT" />
+      <XReport Text="X REPORT" />
+      <CashRegister Text="POS #:" />
+      <Date Text="Date:" />
+      <Time Text="Time:" />
+      <ReportNumber Text="Report #:" />
+      <FromDocument Text="From document:" />
+      <ToDocument Text="To document:" />
+      <CashIn Text="Cash in:" />
+      <CashOut Text="Cash out:" />
+      <UserSales Text="User sales:" />
+      <PaymentTypes Text="Tender types:">
+        <Total Text="Total tendered:" />
+      </PaymentTypes>
+      <Refunds Text="Returns:">
+        <Total Text="Total returns:" />
+      </Refunds>
+      <TaxCollected Text="Tax collected:" />
+      <TaxableTotal Text="Taxable total:" />
+      <Tax Text="Tax:" />
+      <Total Text="Total:" />
+      <TotalBalance Text="Total balance:" />
+      <Items Text="ITEMS REPORT">
+        <ReportNumber Text="Report #:" />
+        <Products Text="PRODUCTS" />
+        <Groups Text="PRODUCT GROUPS" />
+        <Count Text="Items count" />
+      </Items>
+      <DiscountsGranted Text="Discounts granted:" />
+    </DailyReport>
+    <CashDrawer Text="Cash drawer">
+      <OpenCashDrawer Text="Open cash drawer">
+        <AuthorizationRequired Text="Open cash drawer requires authorization.\nPlease enter password required to open cash drawer." />
+      </OpenCashDrawer>
+      <Command Text="Cash drawer command">
+        <LearnMore Text="What&apos;s this?" />
+      </Command>
+      <Error>
+        <CommandNotSet Text="Cash drawer command not set.\nPlease set cash drawer command to continue." />
+        <PrinterNotSet Text="Receipt printer not set.\nPlease configure receipt printer to continue." />
+      </Error>
+      <Test Text="Test drawer">
+        <InvalidCommand Text="Please enter a valid cash drawer command to test." />
+      </Test>
+    </CashDrawer>
+  </ReceiptPrinter>
+  <FiscalPrinter>
+    <Check Text="Loading receipt printer...">
+      <Status Text="Printer status check..." />
+    </Check>
+    <CloseFiscalDay Text="Print closing reports">
+      <Info Text="Please select reports to print. Make sure your printer is available and operational." />
+      <DailyReport Text="Print Z report">
+        <InProgress Text="Printing Z report... Please wait..." />
+      </DailyReport>
+      <SubReport Text="Print X report">
+        <InProgress Text="Printing X report... Please Wait..." /> 
+      </SubReport>
+      <ItemsReport Text="Print items report">
+        <InProgress Text="Printing items report... Please wait..." />
+      </ItemsReport>
+      <PrinterDisabled Text="Printer is disabled or not selected. Reports may not be printed." />
+    </CloseFiscalDay>
+  </FiscalPrinter>
+</Language>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="de" name="Deutsch">
+  <Loyalty Text="Treue">
+    <Promotions Text="Aktionen">
+      <New Text="Aktion hinzufügen">
+        <Title Text="Neue Aktion" />
+      </New>
+      <Delete Text="Aktion löschen">
+        <Confirmation Text="Möchten Sie die Aktion &quot;{0}&quot; wirklich löschen?" />
+        <Error Text="Beim Versuch, die Aktion zu löschen, ist ein Fehler aufgetreten." />
+      </Delete>
+      <View>
+        <Enabled Text="Aktiviert" />
+        <Name Text="Name" />
+        <DaysOfWeek Text="Wochentage" />
+        <StartDate Text="Startdatum" />
+        <StartTime Text="Startzeit" />
+        <EndDate Text="Enddatum" />
+        <EndTime Text="Endzeit" />
+      </View>
+      <Promotion>
+        <Empty Text="Keine Artikel zur Aktion hinzugefügt." />
+        <Name Text="Aktionsname" />
+        <Active Text="Aktiv" />
+        <DaysOfWeek>
+          <All Text="Jeden Tag">
+            <ShortName Text="Jeden" />
+          </All>
+          <Monday Text="Montag">
+            <ShortName Text="Mon" />
+          </Monday>
+          <Tuesday Text="Dienstag">
+            <ShortName Text="Die" />
+          </Tuesday>
+          <Wednesday Text="Mittwoch">
+            <ShortName Text="Mit" />
+          </Wednesday>
+          <Thursday Text="Donnerstag">
+            <ShortName Text="Don" />
+          </Thursday>
+          <Friday Text="Freitag">
+            <ShortName Text="Fre" />
+          </Friday>
+          <Saturday Text="Samstag">
+            <ShortName Text="Sam" />
+          </Saturday>
+          <Sunday Text="Sonntag">
+            <ShortName Text="Son" />
+          </Sunday>
+        </DaysOfWeek>
+        <Duration>
+          <Start Text="Start" />
+          <End Text="Ende" />
+        </Duration>
+        <Item>
+          <PriceType>
+            <Discount Text="Prozentsatz" />
+            <FixedPrice Text="Fester Betrag" />
+          </PriceType>
+          <Condition Text="Bedingt">
+            <Title Text="Mindestmenge" />
+            <ApplyToAll Text="Anwenden für alle" />
+            <Quantity>
+              <Description Text="Geben Sie die erforderliche Menge für diese Aktion ein" />
+            </Quantity>
+            <LimitToNext Text="Anwenden für die nächsten">
+              <Description Text="Geben Sie das Mengenlimit ein, das angewendet werden soll, sobald die erforderliche Menge für diese Aktion erreicht ist" />
+            </LimitToNext>
+            <CopyToAll Text="Kopiere Bedingung für alle Artikel">
+              <Completed Text="Bedingungswerte wurden auf alle Aktionsartikel kopiert" />
+            </CopyToAll>
+          </Condition>
+          <InvalidValue Text="Ungültiger Wert" />
+          <Errors>
+            <Existing Text="Der Artikel &quot;{0}&quot; ist in dieser Aktion bereits vorhanden." />
+          </Errors>
+        </Item>
+        <Saved Text="Die Aktion wurde erfolgreich gespeichert." />
+        <InvalidItems Text="Aktion kann nicht gespeichert werden. Einige Artikel enthalten Fehler. Bitte überprüfen Sie Ihre Daten und versuchen es erneut." />
+      </Promotion>
+      <NoPromotions Text="Keine Aktionen">
+        <Add Text="Neue Aktion erstellen" />
+      </NoPromotions>
+      <LearnMore Text="Erfahren Sie mehr über Aktionen und Happy Hour" />
+      <Edit>
+        <Title Text="Aktion &quot;{0}&quot; bearbeiten" />
+      </Edit>
+    </Promotions>
+  </Loyalty>
+</Language>

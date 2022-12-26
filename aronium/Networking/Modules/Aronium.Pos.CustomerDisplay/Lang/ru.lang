@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ru" name="Russian">
+  <CustomerDisplay>
+    <Total Text="Итого:" />
+    <Change Text="Сдача:" />
+    <Paid Text="Оплачено:" />
+    <WelcomeMessage Text="ДОБРО ПОЖАЛОВАТЬ!" />
+    <Settings Text="Дисплей покупателя">
+      <Enabled Text="Включено" />
+      <Port Text="COM порт">
+        <Settings>
+          <BaudRate Text="Бит в секунду" />
+          <DataBits Text="Биты данных" />
+          <StopBits Text="Стоповые биты" />
+          <Parity Text="Паритет" />
+          <FlowControl Text="Контроль потоков" />
+          <Show Text="Показать настройки порта" />
+          <Hide Text="Скрыть настройки порта" />
+          <ResetToDefaults Text="Восстановить настройки по умолчанию" />
+        </Settings>
+      </Port>
+      <CharactersPerLine Text="Кол-во символов" />
+      <WelcomeMessage Text="Приветствие">
+        <TopLine Text="Верхняя строчка" />
+        <BottomLine Text="Нижняя строчка" />
+      </WelcomeMessage>
+      <Test Text="Проверить дисплей" />
+    </Settings>
+    <Error>
+      <InvalidPortSettings Text="Ошибка инициализации дисплея покупателя.\nПроверьте настройки порта." />
+    </Error>
+  </CustomerDisplay>
+</Language>

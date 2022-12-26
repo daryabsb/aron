@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <CashRegisters Text="Yazar kasalar">
+    <New Text="Yeni yazar kasa ekle" />
+    <Edit Text="Düzenle &quot;{0}&quot;" />
+    <CashRegister Text="Yazar kasa">
+      <Id Text="No" />
+      <Name Text="Ad" />
+    </CashRegister>
+    <Delete>
+      <Confirmation Text="&quot;{0}&quot; silmek istediğinize eminmisiniz?" />
+      <Title Text="Yazar kasa sil" />
+    </Delete>
+    <Saved>
+      <Created Text="Yazar kasa başarıyla oluşturuldu" />
+      <Updated Text="Yazar kasa başarıyla güncellendi" />
+    </Saved>
+  </CashRegisters>
+</Language>

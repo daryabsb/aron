@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ru" name="Russian">
+  <Stock Text="Склад">
+    <Items>
+      <Item>
+        <Product>
+          <Id Text="ID" />
+          <Code Text="Код" />
+          <Name Text="Название" />
+          <MeasurementUnit Text="Единица измерения" />
+        </Product>
+        <Quantity Text="Количество" />
+        <NegativeQuantity Text="Отрицательное количество" />
+        <TotalCostBeforeTax Text="Стоимость" />
+        <TotalCost Text="Стоимость с уч. налога" />
+        <TotalBeforeTax Text="Цена" />
+        <TotalAfterTax Text="Ценна с уч. налога" />
+      </Item>
+      <Filter>
+        <NegativeQuantity Text="Отрицательно количество">
+          <Info Text="Показать товары только с отрицательным кол-вом" />
+        </NegativeQuantity>
+        <NonZeroQuantity Text="Не нулевое количество">
+          <Info Text="Показать товары с не нулевым кол-вом" />
+        </NonZeroQuantity>
+        <ZeroQuantity Text="Нулевое количество">
+          <Info Text="Показать товары с нулевым кол-вом" />
+        </ZeroQuantity>
+      </Filter>
+      <Summary>
+        <NegativeCount Text="Итого товаров с отрицательным количеством на складе" />
+        <ZeroCount Text="Итого товаров с нулевым количеством на складе" />
+        <PositiveCount Text="Итого товаров с положительным количеством на складе" />
+        <TotalBeforeTax Text="Итог:" />
+        <TotalIncludingTax Text="Итог с уч. налога:" />
+        <SellPrice Text="Цена продажи" />
+        <CostPrice Text="Цена купли">
+          <TotalCostBeforeTax Text="Итог стоимости:" />
+          <TotalCostAfterTax Text="Итог стоимости с уч. налога:" />
+        </CostPrice>
+      </Summary>
+    </Items>
+    <Reset Text="Пересчет складского запаса">
+      <Completed Text="Пересчет складского запаса успешно завершен." />
+    </Reset>
+    <History Text="История">
+      <Start Text="С" />
+      <End Text="По" />
+      <Document Text="Документ">
+        <DocumentType Text="Тип документа" />
+        <Customer Text="Клиент" />
+        <Date Text="Дата" />
+        <StockDate Text="Дата склада" />
+      </Document>
+      <ChangeQuantity Text="Количество" />
+      <InStock Text="На складе" />
+      <MeasurementUnit Text="Единица измерения" />
+    </History>
+    <Print>
+      <Report Text="Отчет инвенторизации" />
+    </Print>
+    <ProductDetails>
+      <OnHand Text="Количество на руках" />
+    </ProductDetails>
+    <Control>
+      <Settings>
+        <PreventNegativeQuantities Text="Предотвращение отрицательных значений на складе" />
+      </Settings>
+      <NegativeQuantity Text="Продажа при нулевом количестве">
+        <Confirmation Text="У вас нет достаточного количества, чтобы продать этот товар. Продажа этого товара может привести к отрицательному количеству на складе.\n\nКоличество: {0}\nТребуемое количество: {1}\n\nВы действительно хотите добавить этот товар в данный заказ?" />
+        <Title Text="Недостаточно запаса на складе" />
+        <PermissionDenied Text="У вас прав для продажи товара при нулевом количестве. Обратитесь к администратору." />
+        <Authorization>
+          <Title Text="Контроль складского запаса включен.\nВведите пароль для продажи товара при нулевом количестве" />
+        </Authorization>
+        <AllowMultiple>
+          <NotAllowed Text="Повтор курса запрещен когда складской учет включен." />
+        </AllowMultiple>
+        <Security>
+          <Description Text="Управляет возможностью продажи с отрицательным значением на складе" />
+        </Security>
+      </NegativeQuantity>
+    </Control>
+    <QuickInventory Text="Быстрая инвенторизация">
+      <Description Text="Изменение количества запасов для выбранного элемента" />
+      <Title Text="Обновить количество складских запасов" />
+      <Subtitle Text="Установите количество запасов для выбранного продукта.\nДокумент инвенторизации будет создан автоматически." />
+      <Success Text="Количество складскогих запасов успешно изменено.\nДокумент {0} создан" />
+      <Unauthorized Text="У вас недостаточно прав для быстрой инвенторизации" />
+    </QuickInventory>
+    <LearnMore Text="Узнать больше о складском учете и инвенторизации" />
+    <SearchResults Text="Результат поиска" />
+    <ShowCostPrices Text="Показать закупочную цену">
+      <Description Text="Управляет возможностью отображения закупочной цены." />
+    </ShowCostPrices>
+  </Stock>
+</Language>

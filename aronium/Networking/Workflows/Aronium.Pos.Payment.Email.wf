@@ -1,0 +1,44 @@
+<Workflow>
+  <Name>Aronium.Pos.Payment.Email</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="eb1597b4-d5fd-4c36-81e1-f0f85bd54703" name="Start">
+      <Transitions>
+        <DefaultTransition id="86fe2fac-6c63-447f-b04b-de20273b02ea" name="Start">
+          <Target>a4f4bebc-4e09-45e6-a968-d32f8e77ce5c</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="a4f4bebc-4e09-45e6-a968-d32f8e77ce5c" name="Recipient">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="23482b69-2a90-4a5c-88ac-21644d172f79" name="Send email">
+          <Target>83a2a01c-0af3-4824-acd3-54a5560a74b8</Target>
+        </DefaultTransition>
+        <ErrorTransition id="b0577812-0561-4321-a2dd-8ed2e5979ed0" name="Cancel">
+          <Target>dbd4cb5b-31ff-4b82-9561-18c4c99397c7</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Email;component/Views/EmailRecipientView.xaml</Variable>
+        <Variable name="Refresh">true</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="83a2a01c-0af3-4824-acd3-54a5560a74b8" name="Send email">
+      <AssemblyName>Modules\Aronium.Pos.Email\Aronium.Pos.Email</AssemblyName>
+      <ClassName>Aronium.Pos.Email.Tasks.SendEmailTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="743f5534-a583-4d40-ac67-d822fcd7fd68" name="Done">
+          <Target>dbd4cb5b-31ff-4b82-9561-18c4c99397c7</Target>
+        </DefaultTransition>
+        <ErrorTransition id="6f47c9b2-1be3-49bd-a4bf-2dac5763b84e" name="Error">
+          <Target>a4f4bebc-4e09-45e6-a968-d32f8e77ce5c</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <EndTask id="dbd4cb5b-31ff-4b82-9561-18c4c99397c7" name="End" />
+  </Tasks>
+</Workflow>

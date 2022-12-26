@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="cs">
+  <Reports Text="Hlášení">
+    <Filter Text="Filtr">
+      <User Text="Uživatel">
+        <All Text="Vše" />
+      </User>
+      <Customer Text="Zákazníci a dodavatelé">
+        <All Text="Vše" />
+      </Customer>
+      <Product Text="Produkty">
+        <All Text="Vše" />
+      </Product>
+      <CashRegister Text="Pokladna">
+        <All Text="Vše" />
+      </CashRegister>
+      <Period>
+        <Tip Text="Kliknutím změníte období přehledu" />
+      </Period>
+      <NotAvailable Text="Nelze použít pro vybraný přehled" />
+    </Filter>
+    <Report>
+      <Select Text="Vyberte přehled">
+        <Title Text="Vyberte zprávu, kterou chcete zobrazit nebo vytisknout" />
+      </Select>
+      <Show Text="Zobrazit zprávu" />
+      <NotFound Text="Chybí šablona přehledu." />
+    </Report>
+    <Sales Text="Prodeje">
+      <Products Text="Produkty" />
+      <ProductGroups Text="Skupiny produktů" />
+      <PaymentTypes Text="Typy plateb" />
+      <PaymentTypesUsers Text="Typy plateb podle uživatelů" />
+      <PaymentTypesCustomers Text="Typy plateb podle zákazníků" />
+      <TaxRates Text="Daňové sazby" />
+      <Customers Text="Zákazníci" />
+      <Users Text="Uživatelé" />
+      <Refunds Text="Refundace" />
+      <InvoiceList Text="Seznam faktur" />
+      <Profit Text="Zisk a marže" />
+      <Daily Text="Denní prodej" />
+      <Unpaid Text="Nezaplacené prodeje" />
+      <StartingCash Text="Počáteční hotovostní vstupy" />
+      <Discounts Text="Poskytnuté slevy" />
+      <ItemDiscounts Text="Slevy na zboží" />
+      <StockMovement Text="Pohyb akcií" />
+    </Sales>
+    <Purchase Text="Nákupy">
+      <Suppliers Text="Dodavatelé" />
+      <Products Text="Produkty" />
+      <Unpaid Text="Nezaplacený nákup" />
+      <Discounts Text="Nákupní slevy" />
+      <ItemDiscounts Text="Slevy na zakoupené zboží" />
+      <PurchaseInvoiceList Text="Seznam nákupních faktur" />
+    </Purchase>
+    <LossAndDamage Text="Ztráta a poškození">
+      <Products Text="Produkty" />
+    </LossAndDamage>
+  </Reports>
+</Language>

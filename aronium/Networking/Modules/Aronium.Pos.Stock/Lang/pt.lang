@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="pt" name="Português">
+  <Stock Text="Stock">
+    <Items>
+      <Item>
+        <Product>
+          <Id Text="Id" />
+          <Code Text="Código" />
+          <Name Text="Nome" />
+          <MeasurementUnit Text="unidade de medida" />
+        </Product>
+        <Quantity Text="Quantidade" />
+        <NegativeQuantity Text="Quantidade negativa de stock" />
+        <TotalCostBeforeTax Text="Custo" />
+        <TotalCost Text="Custo incl. imposto" />
+        <TotalBeforeTax Text="Valor" />
+        <TotalAfterTax Text="Valor incl. imposto" />
+      </Item>
+      <Filter>
+        <NegativeQuantity Text="Quantidade negativa">
+          <Info Text="Mostrar produtos com quantidades negativas apenas" />
+        </NegativeQuantity>
+        <NonZeroQuantity Text="Quantidades não nulas">
+          <Info Text="Mostrar produtos com quantidades não nulas apenas" />
+        </NonZeroQuantity>
+        <ZeroQuantity Text="Quantidade nula">
+          <Info Text="Mostrar produtos com quantidade nula apenas" />
+        </ZeroQuantity>
+      </Filter>
+      <Summary>
+        <NegativeCount Text="Total de artigos com quantidade negativa em stock" />
+        <ZeroCount Text="Total de artigos com quantidade nula em stock" />
+        <PositiveCount Text="Total de artigos com quantidade positiva em stock" />
+        <TotalBeforeTax Text="Total:" />
+        <TotalIncludingTax Text="Total inc. imposto:" />
+        <SellPrice Text="Preço de venda" />
+        <CostPrice Text="Preço de custo">
+          <TotalCostBeforeTax Text="Custo total:" />
+          <TotalCostAfterTax Text="Custo total inc. imposto:" />
+        </CostPrice>
+      </Summary>
+    </Items>
+    <Reset Text="Recalcular quantidades de stock">
+      <Completed Text="Cálculos de stock concluídos com sucesso." />
+    </Reset>
+    <History Text="Histórico de stock">
+      <Start Text="Início" />
+      <End Text="Fim" />
+      <Document Text="Documento">
+        <DocumentType Text="Tipo de documento" />
+        <Customer Text="Cliente" />
+        <Date Text="Data" />
+        <StockDate Text="Data do stock" />
+      </Document>
+      <ChangeQuantity Text="Quantidade" />
+      <InStock Text="Em stock" />
+      <MeasurementUnit Text="Unidade de medida" />
+    </History>
+    <Print>
+      <Report Text="Relatório de contagem de inventário" />
+    </Print>
+    <ProductDetails>
+      <OnHand Text="Quantidade disponível" />
+    </ProductDetails>
+    <Control>
+      <Settings>
+        <PreventNegativeQuantities Text="Prevenir inventário negativo" />
+      </Settings>
+      <NegativeQuantity Text="Venda com stock nulo">
+        <Confirmation Text="Não tem quantidade disponível suficiente para vender este artigo. A venda deste artigo pode resultar em quantidade negativa de stock.\n\nQuantidade disponível: {0}\nQuantidade necessária: {1}\n\nTem a certeza que quer adicionar este artigo à venda actual?" />
+        <Title Text="Quantidade de stock em falta" />
+        <PermissionDenied Text="Não tem previlégios suficientes para vender artigos com quantidades nulas. Por favor contacte o administrador." />
+        <Authorization>
+          <Title Text="Controlo de stock está habilitado.\nPor favor, forneça a password para continuar com a venda de artigo com quantidade nula" />
+        </Authorization>
+        <AllowMultiple>
+          <NotAllowed Text="Ronda repetida não é permitida com o controlo de stock habilitado." />
+        </AllowMultiple>
+      </NegativeQuantity>
+    </Control>
+    <QuickInventory Text="Inventário rápido">
+      <Description Text="Alterar quantidades de stock para artigos seleccionados" />
+      <Title Text="Actualizar quantidades de stock" />
+      <Subtitle Text="Definir quantidades de stock para produtos seleccionados.\nDocumento de contagem de inventário não será criado automaticamente." />
+      <Success Text="Quantidade de stock alterada com sucesso.\nDocumento {0} criado." />
+    </QuickInventory>
+    <LearnMore Text="Obtenha mais informações sobre stock e inventário" />
+    <SearchResults Text="Resultado de pesquisa" />
+  </Stock>
+</Language>

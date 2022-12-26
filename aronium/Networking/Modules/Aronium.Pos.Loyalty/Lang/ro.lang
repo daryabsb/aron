@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ro" name="Romanian">
+  <Loyalty Text="Loialitate">
+    <Promotions Text="Promotii &amp; Actiuni">
+      <New Text="Adauga promotie">
+        <Title Text="Promotie noua" />
+      </New>
+      <Delete Text="Sterge promotie">
+        <Confirmation Text="Esti sigur ca vrei sa stergi promotia &quot;{0}&quot;?" />
+        <Error Text="A aparut o eroare la incercarea de stergere a promotiei." />
+      </Delete>
+      <View>
+        <Enabled Text="Activat" />
+        <Name Text="Nume" />
+        <DaysOfWeek Text="Zilele saptamanii" />
+        <StartDate Text="Data de start" />
+        <StartTime Text="Ora de start" />
+        <EndDate Text="Data de sfarsit" />
+        <EndTime Text="Ora de sfarsit" />
+      </View>
+      <Promotion>
+        <Empty Text="Nu s-au adaugat elemente in promotie." />
+        <Name Text="Numele promotiei" />
+        <Active Text="Activa" />
+        <DaysOfWeek>
+          <All Text="Toate zilele">
+            <ShortName Text="Tot" />
+          </All>
+          <Monday Text="Luni">
+            <ShortName Text="Lun" />
+          </Monday>
+          <Tuesday Text="Marti">
+            <ShortName Text="Mar" />
+          </Tuesday>
+          <Wednesday Text="Miercuri">
+            <ShortName Text="Mie" />
+          </Wednesday>
+          <Thursday Text="Joi">
+            <ShortName Text="Joi" />
+          </Thursday>
+          <Friday Text="Vineri">
+            <ShortName Text="Vin" />
+          </Friday>
+          <Saturday Text="Sambata">
+            <ShortName Text="Sam" />
+          </Saturday>
+          <Sunday Text="Duminica">
+            <ShortName Text="Dum" />
+          </Sunday>
+        </DaysOfWeek>
+        <Duration>
+          <Start Text="Start" />
+          <End Text="Sfarsit" />
+        </Duration>
+        <Item>
+          <PriceType>
+            <Discount Text="Reducere" />
+            <FixedPrice Text="Pret fix" />
+          </PriceType>
+          <Condition Text="Conditionat">
+            <Title Text="Cantitatea conditionata" />
+            <ApplyToAll Text="Aplica la tot" />
+            <LimitToNext Text="Limiteaza la urmatorul" />
+            <CopyToAll Text="Copiaza conditiile la toate elementele">
+              <Completed Text="Valorile conditiei au fost copiate la toate elementele promotiei" />
+            </CopyToAll>
+          </Condition>
+          <InvalidValue Text="Valoare invalida" />
+          <Errors>
+            <Existing Text="Elementul &quot;{0}&quot; exista deja in aceasta promotie." />
+          </Errors>
+        </Item>
+        <Saved Text="Promotia a fost salvata cu succes." />
+        <InvalidItems Text="Nu pot salva promotia. Unele elemente contin erori. Te rog verifica datele si incearca din nou." />
+      </Promotion>
+      <LearnMore Text="Invata mai multe despre promotii si ora vesela" />
+    </Promotions>
+  </Loyalty>
+</Language>

@@ -1,0 +1,1521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="is" name="Icelandic">
+  <Buttons>
+    <Yes Text="Já" />
+    <Ok Text="OK" />
+    <No Text="Nei" />
+    <Cancel Text="Hætta Við" />
+    <Save Text="Vista" />
+    <Close Text="Loka" />
+    <Add Text="Bæta Við" />
+    <New Text="Nýtt" />
+    <Edit Text="Breyta" />
+    <Cut Text="Klippa" />
+    <Copy Text="Afrita" />
+    <Paste Text="Líma" />
+    <Delete Text="Eyða" />
+    <Refresh Text="Endurhlaða" />
+    <Login Text="INNSKRÁ" />
+    <Logout Text="Útskrá" />
+    <Print Text="Prenta" />
+    <SavePdf Text="Vista Sem PDF" />
+    <Hide Text="Fela" />
+    <FirstPage Text="Fyrsta Síða" />
+    <LastPage Text="Síðasta Síða" />
+    <NextPage Text="Næsta Síða" />
+    <PreviousPage Text="Fyrri Síða" />
+    <Continue Text="Halda Áfram" />
+    <Clear Text="Hreinsa" />
+    <Exit Text="Hætta" />
+    <Search Text="Leita" />
+    <Ignore Text="Hunsa" />
+    <Retry Text="Reyna Aftur" />
+    <DeleteAll Text="Eyða Öllu" />
+    <Skip Text="Sleppa" />
+    <Restart Text="Endurræsa" />
+    <SaveAndClose Text="Vista og Loka" />
+    <Help Text="Hjálp" />
+    <Back Text="Til Baka" />
+    <LearnMore Text="Læra Meira" />
+    <Done Text="Lokið" />
+    <Send Text="Senda" />
+    <WhatsThis Text="Hvað Er Þetta?" />
+    <Pdf Text="PDF" />
+    <Excel Text="Excel" />
+    <Maximize Text="Stækkað" />
+    <Restore Text="Endurheimta" />
+    <Browse Text="Vafra" />
+    <PrintPreview Text="Prent Prufa" />
+  </Buttons>
+  <Bootstrap>
+    <Initializing Text="Ræsi Kassakerfið..." />
+    <Load>
+      <Components Text="Sæki Kassakerfis Hlutum..." />
+      <Modules Text="Sæki og Ræsi Einingar..." />
+      <Products Text="Sæki Vörur...">
+        <Error Text="Vill Við Að Sækja Vörur.">
+          <Info Text="Sumar Vörur eru ekki hæfar fyrir sölu. Athugun á Vörum Tókst ekki. Reynið Aftur." />
+          <DuplicateBarcode Text="Tvöfallt Strikamerki &quot;{0}&quot;" />
+          <DuplicateCode Text="Tvöfallt Vörunúmer &quot;{0}&quot;" />
+          <Copy Text="Afrita" />
+        </Error>
+      </Products>
+      <CashRegister Text="Sæki Gögn Kassakerfis..." />
+      <ScanTypes Text="Leitast Eftir Tegundum..." />
+    </Load>
+    <Connect Text="Tengist Gagnagrunni...">
+      <NoDataProvider Text="Náði ekki að Tengjast Gagnagrunni.\nHafðu Samband við Stjórnanda eða Umboðsaðila." />
+    </Connect>
+    <Error Text="Villa við að Ræsa Kassakerfi. Hafðu Samband við Stjórnanda." />
+    <Completed Text="Ræsi Forrit" />
+    <BackupDatabase Text="Staðfesti Gagnagrunns Útgáfu..." />
+    <Migrations Text="Athuga Gagnagrunn...">
+      <Failed Text="Gagna Breyting Mistókst!" />
+    </Migrations>
+    <RestartRequired Text="Endurræsa þarf Forritið til að Breytingarnar Taki Gyldi.\nSmelltu á Takkann að neðan til að Endurræsa." />
+    <ValidateLicense Text="Staðfesti Leyfi..." />
+    <Onboarding Text="Athuga Stöðu Um Borð..." />
+    <CustomerDisplay Text="Ræsi Skjá Viðskiptavina..." />
+    <PrinterStatus Text="Athuga Prentara Stöðu..." />
+    <VerifyVersion Text="Staðfesti Útgáfu Forrits..." />
+  </Bootstrap>
+  <Onboarding>
+    <Welcome Text="Velkomin">
+      <Info Text="Setjum Upp Verslunina Þína.\n:Þetta tekur bara smá stund." />
+      <Start Text="HEFJAST HANDA" />
+    </Welcome>
+    <Back Text="Til Baka" />
+    <Skip Text="Sleppa Loka Uppsetningu" />
+    <Hide Text="Ekki Sýna Þetta Aftur" />
+    <Next Text="Sleppa" />
+    <Continue Text="Vista og Halda Áfram" />
+    <Layout Text="Velja Útlit">
+      <LearnMore Text="Læra Meira og Útlit og Vinnuaðstöðu" />
+      <Standard Text="Hefðbundið">
+        <Description Text="Notaðu þetta Útlit ef þú ert með Stikamerki og Lyklaborð við Töluna." />
+      </Standard>
+      <TouchScreen Text="Sjónlegt">
+        <Description Text="Notaðu þetta ef þú ert með Snertiskjá og villt nota Lyklaborðið sem Kerfið býður upp á." />
+      </TouchScreen>
+      <EnableVirtualKeyboard Text="Virkja Lyklaborð Kassakerfis Lyklaborð" />
+    </Layout>
+    <Registration Text="Skráning">
+      <Info Text="Sláðu inn Netfang.">
+        <Email Text="Þetta mun verða Aðal Stjórnandalykilorðið og getur þú breytt því hvenær sem er." />
+      </Info>
+      <Email Text="Netfangur">
+        <Privacy Text="Þetta er þinn Persónulegi Netfangur." />
+      </Email>
+    </Registration>
+    <UserProfile>
+      <Title Text="Förum nú í Persónu Upplýsingar" />
+      <Info Text="Sláðu inn Nafn sem gefur þér Stjórnanda Aðgang." />
+      <LearnMore Text="Læra Meira Um Notendur" />
+      <FirstName Text="Fyrra Nafn" />
+      <LastName Text="Seinna Nafn" />
+      <Email Text="Netfangur">
+        <Info Text="Þessi Netfangur er notaður ef þú glatar Lykilorðinu.\nVertu viss um að nota gildan Netfang svo þú getir fengið Lykilorð Í Netfangi." />
+        <Missing Text="Ef þú slærð ekki inn gilt netfang ertu í hættu á að láta loka á þig.\nEf þú gleymir lykilorðinu þínu verður engin leið að endurheimta það án gilt netfangs.">
+          <Title Text="Netfang er ekki stillt" />
+          <Confirmation Text="Villtu Halda Áfram Án Netfangs" />
+        </Missing>
+      </Email>
+      <Password Text="Lykilorð">
+        <Errors>
+          <Empty Text="Lykilorðið stendst ekki Kröfur. Verður að vera minnst 4 Stafir" />
+          <ConfirmationError Text="Staðfesting Lykilorðs Passar ekki." />
+        </Errors>
+      </Password>
+      <ConfirmPassword Text="Staðfesta Lykilorð" />
+    </UserProfile>
+    <Completed Text="Loka Uppsetning">
+      <Info Text="Til Hamingju! Kassakerfið er nú Tilbúið.\nNæst opnaðu &quot;Stjórnborðið&quot; til að bæta við vörum til að selja." />
+      <Finish Text="Loka og Halda Áfram" />
+    </Completed>
+    <PriceDisplay Text="Verðskjá">
+      <Info Text="Veldu hvort verð eru sýnd og prentuð fyrir eða eftir skatt" />
+      <BeforeTax Text="Fyrir Skatt">
+        <Description Text="Verð verður sýnt og prentað á kvittun án skatts innifalinn" />
+      </BeforeTax>
+      <AfterTax Text="Eftir Skatt">
+        <Description Text="Verð verður sýnt og prentað á kvittun með skatts innifalinn" />
+      </AfterTax>
+      <DiscountApplyRule>
+        <Info Text="Afslætti verður beitt fyrir eftir skatta byggt á þessu vali. Þú getur breytt afsláttarreglum í stillingum hvenær sem er." />
+      </DiscountApplyRule>
+    </PriceDisplay>
+  </Onboarding>
+  <BusinessDay>
+    <Close>
+      <Authorization>
+        <Title Text="Sláðu Inn Lykilorð til að Ljúka Degi" />
+      </Authorization>
+    </Close>
+    <Select Text="Veldu Vinnu Dag">
+      <EnableSelection Text="(Smelltu á Dag til að velja)" />
+    </Select>
+  </BusinessDay>
+  <Application>
+    <Close Text="Loka Forriti">
+      <Info Text="Ertu viss um að þú viljir Loka Forritinu?" />
+      <ShutDown Text="Loka Forriti" />
+      <Restart Text="Endurræsa Forrit" />
+      <TurnOffComputer Text="Slökkva á Tölvu" />
+    </Close>
+    <FullScreen Text="Fullur Skjár" />
+    <Exit Text="Loka Forriti" />
+    <Menu Text="Valmynd" />
+    <RestartRequired Text="Endurræsing Þarfnast">
+      <Info Text="Þú þarft að Endurræsa Forritið til að Breytingar Taki Gyldi. Villtu Endurræsa Forritið?" />
+    </RestartRequired>
+    <ReloadProducts Text="Endurhlaða Vörum">
+      <Info Text="Vörum Hefur Verið Breytt. Villtu Endurhlaða Vörur?" />
+    </ReloadProducts>
+  </Application>
+  <Period Text="Tímabil">
+    <Start Text="Byrjar" />
+    <End Text="Endar" />
+    <Preset Text="Fyrirfram Áhveðinn Tími">
+      <Today Text="Í Dag" />
+      <Yesterday Text="Gær" />
+      <ThisWeek Text="Þessi Vika" />
+      <LastWeek Text="Síðasta Vika" />
+      <ThisMonth Text="Þessi Mánuður" />
+      <LastMonth Text="Síðasti Mánuður" />
+      <ThisYear Text="Þetta Ár" />
+      <LastYear Text="Síðasta Ár" />
+    </Preset>
+  </Period>
+  <Login Text="Innskrá">
+    <Password Text="Lykilorð">
+      <Forgot Text="Glatað Lykilorð?" />
+    </Password>
+    <Error Text="Villa við Innskráningu. Athugaðu Lykilorðið og Reyndu Aftur." />
+    <Authentication Text="Innskráning Notanda">
+      <Failed Text="Notandi Fannst Ekki. Athugaðu Lykilorðið og Reyndu Aftur." />
+    </Authentication>
+    <Reset Text="Nýtt Lykilorð">
+      <LearnMore Text="Læra Meira um Breytingu á Lykilorði" />
+      <Email Text="Netfangur">
+        <Info Text="Sláðu inn Netfang sem notandinn er með Lykilorðið á.\nVið sendum þér Staðfestingar Kóða sem þarf að slá inn að neðan." />
+        <Required Text="Netfangur er Skylda" />
+        <EmailAddress Text="Netfangur">
+          <Tooltip Text="Sláðu inn Netfang" />
+        </EmailAddress>
+        <ExistingCode Text="Er Með Kóða. Taka Mig í Næsta Skref." />
+      </Email>
+      <Code Text="Staðfestingar Kóði">
+        <Info Text="Athugaðu Netfanginn - Við höfum sennt Staðfestingar Kóða.\nEf þú fékst ekki Netfang með Staðfestingar Kóða athugaðu þá í Ruslpóst." />
+        <Email Text="Staðfestingarkóði er á {0}." />
+        <AuthorizationCode Text="Staðfestingar Kóði">
+          <Tooltip Text="Sláðu inn Staðfestingar Kóða..." />
+        </AuthorizationCode>
+        <Verify Text="Staðfestingar Kóði" />
+      </Code>
+      <Password Text="Sláðu inn Nýtt Lykilorð">
+        <Info Text="Sláðu inn Nýtt Lykilorð sem Þú mannst." />
+        <NewPassword Text="Nýtt Lykilorð" />
+        <NewPasswordConfirmation Text="Staðfesta Nýtt Lykilorð" />
+        <InUse Text="Lykilorðið er þegar í notkun. Reyndu annað." />
+        <User Text="Notandi: {0}" />
+        <SetPassword Text="Setja Nýtt Lykilorð" />
+        <Success Text="Lykilorðinu Var Breytt" />
+      </Password>
+      <Error>
+        <Expired Text="Staðfestingar Kóði Útrunnin. Reyndu Aftur." />
+        <InvalidCode Text="Rangur Staðfestingar Kóði. Reyndu Aftur." />
+        <NoSuchUser Text="Notandi Með Netfanginn &quot;{0}&quot; er ekki til.\nAthugaðu hvort réttur Netfangur hafi verið sleginn inn." />
+        <InvalidEmailAddress Text="Netfangur ekki gildur. Reyndu Aftur." />
+        <LimitReached Text="Þú hefur náð Takmörkum. Reyndu aftur eftir 24 tíma." />
+        <GeneralError Text="Villa við að Breyta Lykilorði. Reyndu Aftur." />
+      </Error>
+    </Reset>
+  </Login>
+  <Order>
+    <List Text="Opna Pöntunar Lista">
+      <Select Text="Veldu Lista" />
+    </List>
+    <New Text="Ný Sala" />
+    <Estimate Text="Læsa">
+      <Authorization>
+        <Title Text="Sláðu inn Lykilorð til að Læsa Sölunni" />
+      </Authorization>
+      <Created Text="Sölunni Hefur Verið Læst" />
+      <Clear Text="Aflæsa Sölu">
+        <Authorization>
+          <Title Text="Sláðu inn Lykilorð til að Aflæsa Sölunni" />
+        </Authorization>
+        <Success Text="Sölunni Hefur Verið Aflæst." />
+      </Clear>
+      <Locked Text="Sala Er Læst">
+        <Info Text="Breytingar á Læstum Sölum eru ekki leifðar." />
+      </Locked>
+      <Issued Text="Þessi Sala er þegar Læst.\nEkki er hægt að Breyta Læstum Sölum." />
+      <NoItems Text="Engar Vörur til að Læsa." />
+    </Estimate>
+    <Transfer Text="Flytja">
+      <Authorization>
+        <Title Text="Sláðu inn Lykilorð til að Flytja" />
+      </Authorization>
+      <All Text="Flytja Allar Vörur">
+        <Confirmation Text="Þú ert að fara að Flytja Sölu á Notanda sem er ekki Innskráður!\n\nErtu viss um að þú viljir Flytja Söluna Til {0}?" />
+        <Success Text="Tókst að Flytja Vörur." />
+        <Error Text="Villa við að Flytja Sölu á Notanda. Reyndu Aftur." />
+      </All>
+      <Orders Text="Opnar Sölur" />
+      <OrderNumber Text="Sölu Númer">
+        <Select Text="Veldu Sölu" />
+      </OrderNumber>
+      <Quantity Text="Veldu Fjölda til að Flytja" />
+      <User Text="Notandi">
+        <Current Text="Valinn Notandi er þegar með þessa sölu.\nSala mun verða færð á sama Notanda." />
+      </User>
+      <Rounds Text="Flytja Umferð">
+        <Summary Text="Seldar Vörur" />
+        <Selection Text="Veldu Umferð til að flytja" />
+      </Rounds>
+      <Items Text="Seldar Vörur">
+        <Selected Text="Valdar Vörur sem á að Flytja">
+          <NoItems Text="Veldu Vörur sem á að Flytja" />
+        </Selected>
+        <All Text="Flytja Allt" />
+        <Back Text="Eyða Öllu" />
+        <InvalidQuantity Text="Get ekki Flutt Valda Vöru">
+          <Info Text="Ekki er til nó af þessari Vöru til að Flytja.\nAthugaðu Byrðir áður." />
+        </InvalidQuantity>
+        <BundledQuantity Text="Fjöldi ekki leifður">
+          <Info Text="Þetta tilheyrir Hópi. Breytingar á Hópvörum eru ekki leifðar." />
+        </BundledQuantity>
+      </Items>
+      <CurrentOrder Text="Flytja á sömu Sölu">
+        <Confirmation Text="Ertu viss um að þú viljir Flytja á Sömu Sölu? " />
+      </CurrentOrder>
+      <Failed Text="Villa við að Flytja Sölu">
+        <Info Text="Villa við að Flytja Sölu. Reyndu Aftur" />
+      </Failed>
+      <Completed Text="Tókst að Flytja Sölu" />
+      <NoItems Text="Engar Vörur til að Flytja" />
+      <Discount>
+        <Warning Text="Fastur Afsláttur">
+          <Info Text="Þessi Pöntun er með Föstum Afslætti. Ef þú færir þessa Pntun muntu hreinsa Afslátt.\n\nVilltu Halda Áfram?" />
+        </Warning>
+      </Discount>
+    </Transfer>
+    <Void Text="Hætta Við Sölu">
+      <Authorization>
+        <Title Text="Sláðu Inn Lykilorð til að Hætta Við Sölu" />
+      </Authorization>
+      <Confirm Text="Hætta Við Sölu">
+        <Info Text="Ertu Viss um að þú viljir Hætta Við Sölu?" />
+      </Confirm>
+      <Completed Text="Hætt Hefur Verið Við Sölu" />
+      <NoItems Text="Engar Vörur til að Hætta Við Sölu" />
+    </Void>
+    <Rounds>
+      <Repeat Text="Endurtaka">
+        <NoItems Text="Engar Vörur til að Endurtaka." />
+        <NoQuantities Text="Valin Endurtakning  #{0} hefur verið Endurtekin" />
+        <Bundle Text="Vara Tilheyrir Hópi">
+          <Info Text="Getur ekki Endurtekið ef vara er í Hópi." />
+        </Bundle>
+      </Repeat>
+      <New Text="Ný Endurtekning">
+        <NoItems Text="Engar Vörur til að Endurtaka." />
+        <NoUnsavedItems Text="Öll Sala Vistuð." />
+      </New>
+      <SelectAll Text="Velja Allt" />
+      <SelectNone Text="Afvelja Allt" />
+      <Total Text="Samtalls:" />
+      <NoItems Text="Engar Vörur Valdar" />
+    </Rounds>
+    <Comment Text="Athugasemd">
+      <Add Text="Veldur sem er til eða skrifaðu þína Athugasemd &quot;{0}&quot;" />
+      <Insert Text="Skrifaðu Athugasemd Hér..." />
+      <Change Text="Breyta Athugasemd">
+        <Forbidden Text="Breytingar á Valdri Vöru eru ekki leifðar">
+          <Info Text="Vara &quot;{0}&quot; er Staðfest\nBreytingar eru ekki leifðar." />
+        </Forbidden>
+        <NoItem Text="Engin Vara Valin.\nVeldu Vöru til að Skrifa Athugasemd Við." />
+      </Change>
+    </Comment>
+    <Subtotal Text="Heildar Upphæð" />
+    <Tax Text="VSK" />
+    <Total Text="SAMTALLS" />
+    <Checkout Text="Greiðslur" />
+    <Save Text="Vista Sölu" />
+    <Refund Text="Endurgreiðsla">
+      <Authorization Text="Lykilorð Þarf fyrir þessa Aðgerð" />
+      <Title Text="Endurgreiðsla Á Vörum" />
+      <Total Text="UPPHÆÐ ENDURGREIÐSLU" />
+      <ReceiptNumber Text="Nóta" />
+      <PaymentType Text="Tegund Endurgreiðslu" />
+      <Description Text="Sláðu inn Númer á Nótu til að halda Áfram" />
+      <Print>
+        <PrinterNotFound Text="Endurgreiðslu prentari ekki valinn." />
+      </Print>
+      <MultyplePaymentTypes Text="Valin Skjöl innihaæda fleyrri en eina Greiðslur. Veldu Greiðslutegund að Neðan.">
+        <Copy Text="Afrita Greiðslu Tegund á Upprunnaleg Gögn" />
+        <PartialRefund Text="Notkun margra greiðslugerða úr upprunalegu söluskjali er ekki fáanleg til endurgreiðslu að hluta." />
+      </MultyplePaymentTypes>
+      <CartDiscountApplied Text="Körfu Afsláttur Viktur">
+        <Info Text="Körfu Afsláttur hefur verið Bætt Við og Reiknaður í Heild.\nEf endurgreiðsla er notuð að hluta verður körfuafsláttur reiknaður af endurgreiddum hlutum." />
+      </CartDiscountApplied>
+      <SelectAll Text="Velja / Afvelja Allt" />
+    </Refund>
+    <Items>
+      <Name Text="Nafn Vöru" />
+      <Quantity Text="Magn">
+        <Change Text="Breyta Magni">
+          <Info Text="Sláðu inn Magn fyrir Næstu Vöru" />
+          <Item Text="Vara &quot;{0}&quot;" />
+          <Forbidden Text="Ekki Leifilegt að Breyta Magni">
+            <Info Text="Vara &quot;{0}&quot; er Staðfest.\nBreytin á Staðfestingu er ekki leifð." />
+          </Forbidden>
+          <Product Text="Vara &quot;{0}&quot;\nSjálfgefið Magn: {1:#,#.000}" />
+          <Bundled Text="Ekki leifilegt að breyta Magni">
+            <Info Text="Ekki leifilegt að breyta Magni á Mörum Vörum." />
+          </Bundled>
+        </Change>
+        <Invalid Text="Rangt Magn. Sláðu inn rétt magn." />
+      </Quantity>
+      <Price Text="Verð">
+        <Change Text="Breyta Verði">
+          <Product Text="Vara &quot;{0}&quot;\nVerð: {1:#,#.00}" />
+        </Change>
+      </Price>
+      <Total Text="Upphæð" />
+      <Empty Text="Engar Vörur">
+        <Info Text="Bæta við Vöru með Strikamerki eða Vörunúmeri, Ýttu á F3 til að nota Vörunúmer eða Strikamerkis Leit" />
+      </Empty>
+      <Start Text="Byrja" />
+      <Page Text="Síða" />
+      <Add>
+        <Error Text="Villa við að bæta við Vöru. Röng Gögn.\nAthugaðu Verð eða Magn og reyndu aftur." />
+      </Add>
+      <Void>
+        <NoItems Text="Hunsa Vöru &quot;{0}&quot; Er ekki leifilegt. Rangt Magn." />
+        <Bundle Text="Vara er í eigu hóps. Með því að eyða þessari vöru eyðiru h´pinum líka.\n\nErtu Viss um að þú viljir eyða öllum vörum í þessum Hóp?">
+          <Title Text="Eyða Hóp Vörum" />
+        </Bundle>
+      </Void>
+    </Items>
+    <Print>
+      <User Text="Notandi: {0}" />
+      <Time Text="Tími: {0}" />
+      <Number Text="Pöntunar Númer: {0}" />
+      <Estimate Text="ÁÆTLAÐ">
+        <Discount Text="Afsláttur" />
+        <Total Text="SAMTALLS:" />
+        <Footer Text="Þetta er ekki Kvittun.\nBíddu eftir Kvittun." />
+      </Estimate>
+      <Kitchen>
+        <NumberAndRound Text="Pöntun: {0}. Umferð: {1}" />
+        <TableAndRound Text="Borð: {0}. Umferð: {1}" />
+      </Kitchen>
+      <Dialog>
+        <Title Text="Vill Viðskiptavinurinn Afrit?" />
+        <Change Text="Til Baka" />
+        <Receipt Text="Prenta Afrit" />
+        <Invoice Text="Prenta Reikning" />
+        <Email Text="Senda í Netfangi">
+          <Recipient Text="Senda Reikning í Netfangi">
+            <Title Text="Sláðu inn Skilaboðs Upplýsingar og smelltu á &quot;Send&quot; til að halda Áfram" />
+            <EmailAddress Text="Mótakandi">
+              <Description Text="Sláðu inn Netfang Viðskiptavinar" />
+              <AddCustomer Text="Bæta Við Viðskiptavin" />
+            </EmailAddress>
+            <Subject Text="Fyrirsögn">
+              <Description Text="Sláðu Inn Fyrirsögn" />
+              <Default Text="Rekningur {0}" />
+            </Subject>
+            <Message Text="Skilaboð">
+              <Description Text="Sláðu inn Skilaboð fyrir Viðskiptavin" />
+              <Default Text="Kæri Viðskiptavinur,\n\nHér finnur þú Afrit af Reikningnum Þínum.\n\nDagsetning Reiknings: {0}\nSamtalls: {1}" />
+            </Message>
+            <CopySelf Text="Senda Afrit til Mín" />
+            <Error>
+              <EmailFormat Text="Netfangurinn ekki skrifaður réttur.\nAthugaðu Netfanginn og reyndu aftur." />
+            </Error>
+            <Bcc Text="Bcc">
+              <Description Text="Bæta Bcc Viðtakanda" />
+            </Bcc>
+          </Recipient>
+          <Sending Text="Sendi Netfang... Augna Blik..." />
+          <Sent Text="Reikningur Sendur Til {0}" />
+        </Email>
+        <Hide Text="Ekki sýna Aftur" />
+      </Dialog>
+      <Table Text="Tafla: {0}" />
+    </Print>
+    <Products>
+      <Search Text="Leita">
+        <Name Text="Nafn Vöru">
+          <Tooltip Text="Leita af Vöru eftir Nafni" />
+          <NotFound Text="Ekkert Fannst &quot;{0}&quot;">
+            <Info Text="Athugaðu Leit og reyndu aftur" />
+          </NotFound>
+        </Name>
+        <Barcode Text="Stikamerki">
+          <Tooltip Text="Leita Eftir Sktrikamerki" />
+          <NotFound Text="Strikamerki Fannst ekki" />
+        </Barcode>
+        <Code Text="Vörunúmer">
+          <Tooltip Text="Leita Eftir Vörunúmeri" />
+          <NotFound Text="Vörunúmer Fannst Ekki" />
+        </Code>
+        <NoItems Text="Engin Vara Valin">
+          <Info Text="Leitaðu Eftir Nafn Vöru eða Vörunúmeri til að Halda Áfram" />
+        </NoItems>
+        <Selection>
+          <Price Text="Verð" />
+          <Description Text="Upplýsingar" />
+        </Selection>
+        <NoResults Text="Engin Niðurstaða" />
+      </Search>
+      <NoProducts Text="Engar Vörur Til">
+        <Info Text="Bættu við Vöru eða settu Verð til að Halda Áfram" />
+      </NoProducts>
+    </Products>
+    <Lock Text="Læsa" />
+    <Unlock Text="Aflæsa" />
+    <Item>
+      <Void>
+        <Authorization>
+          <Title Text="Sláðu inn Lykilorð til að Hætta Við Valda Vöru" />
+        </Authorization>
+      </Void>
+      <ChangePrice>
+        <Minimum Text="Lágmarksgildi: {0}" />
+      </ChangePrice>
+    </Item>
+    <QuickPayment Text="Flýti Borgun">
+      <Confirmation Text="Þú hefur Valið &quot;{0}&quot; fyrir núverandi Sölu.\n\nVilltu halda áfram með Núverandi Greiðslu?" />
+    </QuickPayment>
+    <Discount Text="Afsláttur">
+      <Authorization Text="Sláðu inn Lykilorð til að veita Afslátt" />
+      <Cart>
+        <Invalid Text="Rangur Körfu Afsláttur">
+          <GreaterThenTotal Text="Get ekki gefið Afslátt." />
+        </Invalid>
+        <Cleared Text="Afsláttur á Körfu Hreinsaður!">
+          <Info Text="Ógild heildartala greindist og afsláttur var fjarlægður úr pöntun.\n\nVinsamlegast athugaðu hlutina þína og notaðu gildan afslátt aftur áður en þú heldur áfram að greiða." />
+        </Cleared>
+      </Cart>
+      <Item>
+        <NotSelected Text="Engin Vara Valin.\nRil að Gefa Afslátt af Vöru veldu Þá Vöru." />
+        <Invalid Text="Rangur Vöru Afsláttur">
+          <GreaterThenTotal Text="Hægt er að setja inn upphærð á Afslátt" />
+        </Invalid>
+        <Cleared Text="Vöru Afsláttur Hreinsaður">
+          <Info Text="Ógildur vöruheild greindist og afsláttur sem áður var beittur var fjarlægður.\n\nVinsamlegast athugaðu hvort einhverjum afslætti ætti að beita á þessum hlut áður en þú heldur áfram að greiða." />
+        </Cleared>
+      </Item>
+    </Discount>
+  </Order>
+  <Closing Text="Söluyfirlit Í Lok Dags">
+    <Users Text="Opnar Sölur">
+      <User>
+        <Total Text="SAMTALLS:" />
+      </User>
+      <Summary Text="Opnar Sölur" />
+      <NoReports Text="Engar Opnar Sölur" />
+    </Users>
+    <Option Text="Veldu Ljúka Sölu Degi Möguleika">
+      <NotSelected Text="Ljúka Sölu Degi Möguleiki ekki valinn">
+        <Info Text="Veldu einn af ofangreindu Möguleikum til að halda áfram" />
+      </NotSelected>
+    </Option>
+    <User Text="Ljúka Sölu Degi">
+      <Completed Text="{0} Ljúka Sölu Degi." />
+    </User>
+    <Shift Text="Ljúka Sölu Allra Notanda">
+      <Closed Text="Lokið hefur verið við Söludag Allra Notanda" />
+    </Shift>
+    <BusinessDay Text="Loka Kassa">
+      <Income Text="Samtalls Yfir Daginn" />
+      <Closed Text="Kassa Hefur Verið Lokað" />
+      <Report Text="TILKYNNING" />
+      <CashIn Text="Innborgað" />
+      <CashOut Text="Útborgað" />
+    </BusinessDay>
+    <Error>
+      <OpenOrders Text="Opnar Sölur">
+        <Users Text="Það eru Notendur með Opna Sölu!\nVerður að klára sölu til að Ljúka Degi." />
+      </OpenOrders>
+    </Error>
+    <Print>
+      <User>
+        <Report>
+          <Total Text="HEILDAR UPPHÆÐ" />
+          <User Text="Notandi">
+            <ClosedBy Text="Fengið" />
+          </User>
+          <Header Text="Útborgað Notandi" />
+        </Report>
+      </User>
+      <DayClose>
+        <Report>
+          <Header Text="LÝK DEGI" />
+          <User>
+            <Total Text="SAMTAKKS" />
+          </User>
+          <Summary Text="SAMANTEKT" />
+          <Total Text="SAMTALLS" />
+        </Report>
+      </DayClose>
+    </Print>
+    <History Text="Saga">
+      <Info Text="Notaðu listann hér að neðan til að velja og prenta afrit af öllum áður mynduðum Z skýrslum." />
+      <List>
+        <Reports Text="Skýrslur" />
+        <Number Text="Númer" />
+        <Date Text="Dagsetning" />
+      </List>
+      <Print Text="Prenta Valda Skýrslu">
+        <Unsupported Text="Aðgerð ekki studd" />
+      </Print>
+    </History>
+  </Closing>
+  <User Text="Notandi">
+    <Profile Text="Upplýsingar Notanda">
+      <Info Text="Upplýsingar" />
+      <Edit Text="Breyttu Upplýsingum eða Lykilorðum" />
+      <Data>
+        <FirstName Text="Fyrra Nafn" />
+        <LastName Text="Seinna Nafn" />
+        <Email Text="Netfang" />
+        <Password Text="Lykilorð">
+          <Change Text="Breyta Lykilorði">
+            <Password Text="Lykilorð" />
+            <Confirm Text="Staðfesta Lykilorð" />
+            <ConfirmationFailed Text="Lykilorðs Reitir pössuðu ekki saman.\nReyndu Aftur." />
+            <InvalidPassword Text="Lykilorð þegar í Notkun. Reyndu Annað Lykilorð." />
+          </Change>
+        </Password>
+        <Saved Text="Upplýsingum Hefur Verið Breytt" />
+      </Data>
+      <ShiftReport Text="Notendaskýrsla">
+        <Report Text="Notendaskýrsla">
+          <NoData Text="Opnar Sölur" />
+          <Total Text="Samtalls" />
+        </Report>
+        <ClockOut Text="Útborgað" />
+      </ShiftReport>
+    </Profile>
+  </User>
+  <Security>
+    <Authorize Text="Auðkenni Notanda" />
+    <Level Text="Auðkennis Þrep">
+      <Change Text="Breyttu Auðkennis Þrepi fyrir Valinn Möguleika">
+        <AccessDenied Text="Þú ert ekki með réttindi til að breyta.\n\nVerður að vera breytt af Notanda með þetta Auðkennis Þrep." />
+      </Change>
+    </Level>
+    <AccessDenied Text="Aðgangi Hafnað">
+      <Info Text="Þú ert ekki með heimild til að frammhvæma þessa aðgerð." />
+    </AccessDenied>
+  </Security>
+  <Payment>
+    <Details>
+      <Summary Text="Vörur" />
+      <Actions Text="Aðgerðir">
+        <ShowItems Text="Sýna Vörur" />
+      </Actions>
+      <Discount Text="Afsláttur">
+        <Options Text="Afsláttur Möguleiki">
+          <DisallowedItems Text="Það eru vörur sem ekki getað gefið beinan Afslátt." />
+        </Options>
+        <Type>
+          <Percent Text="Afsláttur í Prósentum" />
+          <Fixed Text="Afsláttur í Fastri Upphæð" />
+        </Type>
+        <Target>
+          <Item Text="Vöru Afsláttur">
+            <NotSelected Text="Engin Vara Valin.\nVeldu Vöru að Vinstri til að gefa Afslátt." />
+            <NotAllowed Text="Afsláttur ekki veittur af sölu sem er Hætt Við" />
+            <Info Text="Afsláttur Fyrir &quot;{0}&quot;" />
+          </Item>
+          <Cart Text="Körfu Afsláttur">
+            <Info Text="Gefa Afslátt Á Körfu" />
+          </Cart>
+        </Target>
+        <Total Text="Samtalls:" />
+        <Subtotal Text="Heildar Verð:" />
+        <TotalDiscount Text="Samtalls Afsláttur:" />
+        <Clear Text="Hreinsa Afslátt">
+          <Completed Text="Allur Afsláttur Hreinsaður" />
+        </Clear>
+      </Discount>
+      <Split Text="Umferðir">
+        <Rounds Text="Veldur Umferð fyrir Greiðslu">
+          <RoundNumber Text="Umferð:" />
+          <RoundTotal Text="Magn:" />
+          <SelectAll Text="Velja Allt" />
+          <SelectNone Text="Afvelja Allt" />
+        </Rounds>
+      </Split>
+      <Customer Text="Viðskiptavinur" />
+      <Total Text="Samtalls:" />
+      <TotalWithoutDiscount Text="Samtalls Án Afsláttar:" />
+      <Money Text="Greiðsla">
+        <Paid Text="Peningar:">
+          <Hint>
+            <TypeAmount Text="Sláðu inn upphæð sem borgað er með" />
+            <TapToChange Text="Ýttu hér til að slá inn upphæð" />
+          </Hint>
+        </Paid>
+        <Change Text="Til Baka:" />
+        <Balance Text="Mismunur:" />
+      </Money>
+      <PaymentTypes Text="Tegund Greiðslu">
+        <Other Text="Skipta Greiðslum" />
+        <Invalid Text="Tegund Greiðslu Ekki Leifð">
+          <Fiscal Text="Valin Greiðsla inniheldur ranga greiðslu.\n\nþessi greiðsla er ekki leifð." />
+        </Invalid>
+      </PaymentTypes>
+      <NoItems Text="Engar Vörur " />
+    </Details>
+    <NoPaymentSelected Text="Greiðslu Tegund ekki valinn" />
+    <Add Text="Bæta Við Greiðslu Tegund">
+      <Info Text="Veldur Greiðslu Tegund og Upphæð fyrir Núverandi Sölu" />
+      <Amount Text="Upphæð Fyrir Greiðslu &quot;{0}&quot;" />
+    </Add>
+    <Selected Text="Veldu Greiðslu Tegund" />
+    <Customer>
+      <Required Text="Þarft Viðskiptarvin">
+        <Info Text="Greiðslu Tegund &quot;{0}&quot; Þarfnast Viðskiptavinar til að gera verið valið. Veldu Viðskiptarvin til að halda áfram." />
+      </Required>
+    </Customer>
+    <PaymentTypes>
+      <Validation>
+        <Change>
+          <Missing Text="Röng Upphæð">
+            <Info Text="Þessi Greiðslu Möguleiki býður ekki upp á Afgang. Veldu aðra upphæð eða annan Greiðslu Möguleika." />
+          </Missing>
+        </Change>
+      </Validation>
+    </PaymentTypes>
+  </Payment>
+  <Customer>
+    <Search Text="Leita Af Viðskiptarvini">
+      <Name Text="Nafn" />
+      <PIN Text="Kennitala" />
+      <LoyaltyCard Text="Vildar Kort" />
+      <Email Text="Netfang" />
+      <PhoneNumber Text="Símanúmer" />
+    </Search>
+    <Selection Text="Valinn Viðskiptavinur">
+      <Details>
+        <PIN Text="Kennitala:" />
+        <Address Text="Heimilisfang:" />
+        <Email Text="Netfang:" />
+        <PhoneNumber Text="Síma Númer:" />
+      </Details>
+      <None Text="Viðskiptavinur ekki valinn">
+        <Info Text="Veldu Viðskiptarvin af Listanum" />
+      </None>
+      <Clear Text="Hreinsa Valin Viðskiptarvin">
+        <Completed Text="Valinn Viðskiptavini Eytt" />
+      </Clear>
+    </Selection>
+    <New Text="Nýr Viðskiptavinur">
+      <Add Text="Bæta Við Nýjum Viðskiptarvin" />
+      <Name Text="Nafn" />
+      <TaxNumber Text="Kennitala" />
+      <Address Text="Heimilisfang" />
+      <City Text="Borg" />
+      <PostalCode Text="Póstnúmer" />
+      <Country Text="Fylki" />
+      <PhoneNumber Text="Símanúmer" />
+      <Email Text="Netfang" />
+    </New>
+  </Customer>
+  <Navigation>
+    <Back>
+      <NotAllowed Text="Valin Aðgerð er ekki Leifð." />
+    </Back>
+  </Navigation>
+  <FloorPlans>
+    <Options Text="Valkostir">
+      <Design Text="Hæðir / Borð Stillingar">
+        <FloorPlan>
+          <Add Text="Bæta Við Nýrri Hæð" />
+          <Delete Text="Eyða Hæð" />
+          <Rename Text="Endurnefna Hæð" />
+          <Name Text="Nafn" />
+        </FloorPlan>
+        <Table>
+          <Add Text="Bæta Við Borði" />
+          <Delete Text="Eyða Völdu Borði" />
+          <Name Text="Nafn" />
+          <Height Text="Hæð" />
+          <Width Text="Lengd" />
+          <Size Text="STÆRÐ" />
+        </Table>
+        <Grid>
+          <Show Text="Sýna Hæð" />
+          <SnapToGrid Text="Festa Við Hæð" />
+          <Size Text="Hæð Stærð" />
+        </Grid>
+      </Design>
+      <View>
+        <Orders Text="Sýna Sölur">
+          <Title Text="Opnar Sölur " />
+          <Order>
+            <Number Text="Nóta Númer" />
+            <Total Text="Samtalls" />
+          </Order>
+          <NoOrders Text="Engar Opnar Sölur. Búa til nýja Sölu með því að nota Hæð." />
+        </Orders>
+        <FloorPlans Text="Sýna Hæðir" />
+      </View>
+      <NoSelection Text="Halda Áfram Án Valkostar" />
+    </Options>
+    <Save>
+      <Success Text="Breytingar Hafa Verið Vistaðar." />
+      <Error Text="Villa við að Vista Breytingar\nGögnin eru ekki Vistuð.\nSkilaboð Kerfis: {0}">
+        <Duplicates Text="Sama Nafn fannst Oftar en einu sinni.\n\n{0}\n\nNöfnin verða að vera mismunandi. Vinsamlegast lagaðu þetta og Reyndu Aftur.">
+          <Title Text="Fleyrri en einn fannst" />
+        </Duplicates>
+      </Error>
+    </Save>
+    <Table>
+      <Unavailable Text="Borð „{0}“ er tekin af {1}. Ef þú heldur áfram muntu búa til sérstaka röð á sama borði.\n\nViltu halda áfram hvort sem er?">
+        <Title Text="Borð er þegar Upptekið" />
+      </Unavailable>
+    </Table>
+  </FloorPlans>
+  <Settings Text="Stillingar">
+    <General Text="Grunn Stillingar">
+      <Language Text="Tungumál" />
+      <Style Text="Stíll Forrits">
+        <ColorScheme Text="Lita Þema" />
+      </Style>
+      <Layout Text="Útlit">
+        <TouchScreen Text="Snertiskár" />
+        <Keyboard Text="Hefðbundið" />
+      </Layout>
+      <VirtualKeyboard Text="Virkja Lyklaborð Forrits" />
+      <ProductSearch>
+        <Barcode Text="Strikamerki" />
+        <Code Text="Vörunúmer" />
+        <Name Text="Nafn" />
+      </ProductSearch>
+      <ColorScheme>
+        <Dark Text="Dökkt" />
+        <Light Text="Ljóst" />
+      </ColorScheme>
+      <NotificationPosition>
+        <Top Text="Efst" />
+        <Bottom Text="Neðst" />
+      </NotificationPosition>
+      <Notifications Text="Skilaboð">
+        <ShowClose Text="Sýna &quot;Loka&quot; Takka" />
+        <ClickToClose Text="Smelltu til að Loka" />
+        <SlideIn Text="Renna Inn" />
+        <Duration Text="Lengd Skilaboða (sek.)" />
+        <Position Text="Staðsetning" />
+      </Notifications>
+      <StartingCash Text="Sýna Innborgannir við Ræsingu Forrits" />
+      <BusinessDay Text="Viðskipta Dagur">
+        <SelecBusinessDay Text="Velja Dag Viðskiptar við Tæsingu Forrits" />
+      </BusinessDay>
+      <Zoom Text="Aðdráttur" />
+      <ButtonBar Text="Takki">
+        <Info Text="Veldu Aðgerð til að sýna í Takka">
+          <VisualLayoutOnly Text="Gildir aðeins fyrir &quot;Snertiskjá&quot; útlit" />
+        </Info>
+        <IsCommentVisible Text="Athugasemd" />
+        <IsDiscountVisible Text="Afsláttur" />
+        <IsNewSaleVisible Text="Ný Sala" />
+        <IsRefundVisible Text="Endurgreiðsla" />
+        <IsSearchVisible Text="Leita" />
+        <IsTransferVisible Text="Flutningur" />
+      </ButtonBar>
+    </General>
+    <Order Text="Sölur og Greiðslur">
+      <Standard Text="Grunn Aðgerðir">
+        <AutoOrderNumber Text="Nota Hæðir" />
+        <PlaySound Text="Hljóð">
+          <SoundSettings>
+            <Navigation Text="Leiðsögu Hljóð" />
+            <ItemAdded Text="Vöru Bætt Við Hljóð" />
+            <ItemNotFound Text="Vara Fannst Ekki Hljóð" />
+            <Show Text="Sýna Hljóð öguleika" />
+            <Hide Text="Fela Hljóð Möguleika" />
+          </SoundSettings>
+        </PlaySound>
+        <ProductGrid Text="Númer eða Raðir / Dálkar" />
+      </Standard>
+      <Users Text="Notendur">
+        <SingleUser Text="Einn Notandi" />
+      </Users>
+      <Products Text="Vörur">
+        <DefaultQuantity Text="Sjálfgefið Magn" />
+        <DefaultSearch Text="Sjálfgefin Leit">
+          <Options Text="Sýna Leitar Möguleika" />
+        </DefaultSearch>
+        <DefaultDiscountType Text="Sjálfgefin Afsláttar Tegund">
+          <Percent Text="Prósentur" />
+          <Fixed Text="Föst Upphæð" />
+        </DefaultDiscountType>
+        <RowPerItem Text="Sér röð fyrir hverja vöru" />
+      </Products>
+      <Payment Text="Greiðslur">
+        <ShowSummary Text="Sýan Vörur í Greiðslum Frá" />
+        <FixedRows Text="Fjöldi Greiðslu Raðar" />
+        <IsSingleItemDiscountAllowed Text="Einnar Vöru Afsláttur Leifður" />
+        <QuickPaymentConfirmation Text="Greiðslu skilaboð flýtilykla" />
+        <ShowPrintReceiptDialog Text="Sýna Kvittun Prent Glugga" />
+        <DefaultDueDate Text="Sjálfgefinn Gjalddagi">
+          <Days Text="days" />
+        </DefaultDueDate>
+        <MergeItemsOnPayment Text="Sameina hluti við móttöku" />
+      </Payment>
+      <Advanced>
+        <Show Text="Sýna Frekari Stillingar" />
+        <Hide Text="Fela Frekari Stillingar" />
+        <ResetOrderNumber Text="Endurstilla Pöntunnar Númer" />
+        <ShowAllOccupiedTables Text="Sýna Öll Upptekin Borð á Hæðum" />
+      </Advanced>
+    </Order>
+    <Print Text="Prentara">
+      <PrinterSelection Text="Prentari">
+        <Tour>
+          <Title Text="Stilla Prentara Stillingar" />
+          <Content Text="Smeltu á &quot;Prentara Stillingar&quot; Takkann\ntil að setja upp eða breyta Prentara" />
+        </Tour>
+      </PrinterSelection>
+      <Printers>
+        <KitchenTicket Text="Eldhús Prentari">
+          <Operation Text="Prenta Eldhús Nótur" />
+        </KitchenTicket>
+        <Service Text="Þjónustu Prentari">
+          <Operation Text="Prenta Þjónustu Skilaboð" />
+        </Service>
+        <Estimate Text="Læst Sala Prentari">
+          <Operation Text="Prenta Læst Sala" />
+        </Estimate>
+        <OrderSummary Text="Prenta Sölur" />
+      </Printers>
+      <PrinterOptions Text="Prentara Stillingar">
+        <Tooltip Text="Stilla Prentara Stillingar" />
+        <PrinterType Text="Prentara Tegund">
+          <A4 Text="A4" />
+          <EscPos Text="ESC/POS" />
+          <POS58 Text="POS 58" />
+          <POS58Rtl Text="POS 58 RTL" />
+          <POS80 Text="POS 80" />
+          <POS80Rtl Text="POS 80 RTL" />
+        </PrinterType>
+        <NumberOfCopies Text="Fjöldi Afrita" />
+        <PaperWidth Text="Stafir í hverri Línu" />
+        <Header Text="Haus" />
+        <Footer Text="Fótur" />
+        <FeedLines Text="Pappírs Lína" />
+        <CutPaper Text="Klippa Pappír" />
+        <PrintBitmap Text="Prenta bitmap" />
+        <RichFormatting Text="Rich formatting" />
+        <Alignment>
+          <Left Text="Vinstri Jafna" />
+          <Center Text="Miðju Jafna" />
+        </Alignment>
+        <Revert Text="Afturkalla Breytingar">
+          <Completed Text="Fyrri Vistaðar Stillingar voru settar á" />
+        </Revert>
+        <PrintTestPage Text="Prenta Prufu Síðu" />
+        <Advanced Text="Ítarlegri">
+          <CodePage Text="Kóða Síða" />
+          <CharacterSet Text="Stafasett">
+            <None Text="Enginn (Aðal Prentari" />
+            <USA Text="Bandaríkin" />
+            <France Text="Frakkland" />
+            <Germany Text="Þýskaland" />
+            <UK Text="Bretland" />
+            <DenmarkI Text="Danmörk I" />
+            <Sweden Text="Svíþjóð" />
+            <Italy Text="Ítalía" />
+            <SpainI Text="Spánn I" />
+            <Japan Text="Japan" />
+            <Norway Text="Noreigur" />
+            <DenmarkII Text="Danmörk II" />
+            <SpainII Text="Spánn II" />
+            <LatinAmerica Text="Rómanska Ameríka" />
+            <Korea Text="Kórea" />
+            <SloveniaCroatia Text="Slóvenía / Króatía" />
+            <China Text="Kína" />
+            <Vietnam Text="Víetnam" />
+            <Arabia Text="Arabía" />
+          </CharacterSet>
+        </Advanced>
+        <Unavailable Text="Frekari Stillingar eru ekki til fyrir þennan Prentara.\nTil að gera Frekari stillingar veldu annan prentara.">
+          <Info Text="Learn more about selecting printer type and setting up receipt printer." />
+        </Unavailable>
+        <Margin Text="Spásíur (í millimetrum)">
+          <Top Text="Efst" />
+          <Right Text="Hægri" />
+          <Bottom Text="Neðst" />
+          <Left Text="Vinstri" />
+        </Margin>
+        <PrintBarcode Text="Prenta Strikamerki" />
+        <Font Text="Letur Stillingar">
+          <Family Text="Letur Fjölskylda" />
+          <SizePercent Text="Letur Stærð" />
+          <Reset Text="Endurstillir leturfjölskyldu í sjálfgefið og stillir leturstærð á 100%" />
+        </Font>
+      </PrinterOptions>
+      <Templates Text="Prent Sniðmáti">
+        <Font Text="Letur">
+          <Info Text="Letur sem valið er hér verður notað í reikningi, skýrslum og öðrum prentmátunum. Ef ekkert er valið verður sjálfgefið letur notað." />
+        </Font>
+      </Templates>
+    </Print>
+    <AddOns Text="Skráðar Einingar">
+      <Modules Text="Einingar" />
+      <Plugins Text="Viðbætur" />
+    </AddOns>
+    <WeighingScale Text="Strikamerki">
+      <VariableMeasureBarcode Text="Strikamerkis Vigt">
+        <Enabled Text="Virkja Strikamerkis Vikt" />
+        <Prefix Text="Fyrstu tveir tölustafir / Forskeyti" />
+        <ProductCodeLength Text="Fjöldi Stafa í Vörunúmeri " />
+        <DecimalPlaces Text="Fjöldu Auka Stafa" />
+        <TrimZeros Text="Eyða núllum frá Vörunúmeri (minkar 0)" />
+        <IsUsingPriceBarcode Text="Þyngd prentað í stað magns">
+          <Info Text="Sumir vigtarvegar prenta heildarverð í stað þess að magn sé mæld. Ef þessi valkostur er virkur verður magnið byggt á vöruverði og heildarfjárhæð frá mælikvarða." />
+        </IsUsingPriceBarcode>
+      </VariableMeasureBarcode>
+    </WeighingScale>
+    <Email Text="Netfangur">
+      <General>
+        <Host Text="Þjónn" />
+        <Port Text="Port" />
+        <EmailAddress Text="Netfangur" />
+        <DisplayName Text="Sýna Nafn" />
+        <Password Text="Lykilorð" />
+        <SSL Text="SSL Virkjað" />
+        <Defaults Text="Aðal Netfang Skilaboð">
+          <Subject Text="Fyrirsögn" />
+          <Message Text="Skilaboð" />
+          <Description Text="Það sem þú skrifar hér að neðan eru aðal skilaboð þegar Netfangur er sendur sem alltaf er hægt að breyta." />
+          <Bcc Text="Bcc Viðtakendur" />
+        </Defaults>
+        <Username Text="Notandanafn" />
+      </General>
+    </Email>
+    <About Text="Um">
+      <HelpCenter Text="Opna Aðstoð">
+        <Info Text="Fara á help.aronium.com til að fá Aðstoð." />
+      </HelpCenter>
+      <ApplicationDirectory Text="Gögn Forrits Mappa">
+        <Info Text="Staðsetning sem allt er vistað í, Log og mart fleyrra." />
+        <Open Text="Opna Gögn Forrits Möppu" />
+      </ApplicationDirectory>
+      <Database Text="Gagnagrunnur">
+        <Open Text="Opna Möppu Gagnagrunns" />
+        <Backup Text="Afrita Gagnagrunn">
+          <Success Text="Gagnagrunnur Hefur Verið Afritaður.">
+            <Path Text="Leið: {0}" />
+            <UnableToCopy Text="Öryggisafrit búið til á sjálfgefnum stað. Ekki er hægt að afrita afritaskrá í valda skrá." />
+          </Success>
+          <Error Text="Villa bið Tilbúning Gagnagrunns Afrit.\nSkoðaðu Skýrslu fyrir Upplýsingar." />
+        </Backup>
+      </Database>
+      <Update>
+        <AutoUpdate Text="Sjálfvirk Uppfærsla" />
+        <SendUsageData Text="Aðstoðaðu okkur við að bæta okkur með því að senda Nafnlausa Notkunnarupplýsingar" />
+        <Check Text="Athuga Með Uppfærslur">
+          <Checking Text="Athuga Með Uppfærslur... Augna Blik..." />
+          <Downloading Text="Sækji Uppfærslur... Augna Blik..." />
+          <UpToDate Text="Aronium þarfnast ekki uppdærslu." />
+          <Available Text="Ný Útgáfa er tilbúin.">
+            <Run Text="Smelltu hér til að sækja." />
+          </Available>
+          <Error>
+            <NoConnection Text="Næ ekki að tengjast Þjóni.\nAthugaðu Nettenginguna og Reyndu Aftur." />
+          </Error>
+        </Check>
+        <Ready Text="Ný Uppfærsla">
+          <Install Text="Smelltu hér til að setja upp nýja Útgáfu" />
+          <Description Text="Ný útgáfa er tilbúin til Uppsetningar.\nFyrir Frekari Upplýsingar smelltu á &quot;Hvað Er Nýtt?&quot; takkann að neðan.">
+            <Install Text="Smelltu á &quot;Setja Upp&quot; takkann til að Setja upp nýjustu útgáfuna." />
+          </Description>
+          <Versions>
+            <Current Text="Núverandi Útgáfa:" />
+            <New Text="Nýrri Útgáfa:" />
+          </Versions>
+          <Ignore Text="Hunsa Þessa Uppfærslu" />
+          <ReleaseNotes Text="Hvað Er Nýtt?" />
+          <Postpone Text="Ekki Núna" />
+          <Run Text="Setja Upp" />
+        </Ready>
+      </Update>
+      <Account Text="Aðgangur">
+        <Email Text="Sláðu inn Netfang" />
+        <Change Text="Breyta" />
+      </Account>
+      <TermsOfUse Text="Notenda Skilmálar">
+        <Info Text="Lestu &quot;Notenda Skilmálar&quot; Á Netinu" />
+      </TermsOfUse>
+    </About>
+    <Authorization>
+      <Title Text="Sláðu inn Lykilorð til að skoða Stillingar Forrits" />
+    </Authorization>
+    <Products Text="Vöru Stillingar">
+      <TaxInclusivePrice Text="Sýna og Prenta Vöru með Skatt Innifalinn">
+        <Tooltip Text="Ef það er valið verða hlutir birtir í sölu og prentaðir á kvittun með skatta inniföldu verði." />
+      </TaxInclusivePrice>
+      <DiscountApplyRule Text="Regla um afslátt gildir">
+        <BeforeTax Text="Fyrir Skatt" />
+        <AfterTax Text="Eftir Skatt" />
+      </DiscountApplyRule>
+    </Products>
+    <Database Text="Gagnagrunnur">
+      <AutoBackup Text="Sjálfvirkt Afrit">
+        <Enabled Text="Virkja Sjálfvirkt Afrit" />
+        <BackupOnStart Text="Afrita Gagnagrunn þegar Forritið Ræsir Sig" />
+        <BackupOnClose Text="Afrita Gagnagrunn þegar Forritið Lokar Sér" />
+        <DirectoryPath Text="Afrit Staðsetning">
+          <Choose Text="Veldu Staðsetningu Afrits" />
+          <Info Text="Veldu Staðsetningu Afrits. Sjálfvirkt Afrit skrár munu verða vistaðar í valda Möppu." />
+        </DirectoryPath>
+        <RemoveOldFiles Text="Eyða Gömlum Afrist Skrám">
+          <DaysToKeep Text="Fjöldi Daga til að halda Gömlum Afrits Skrám" />
+        </RemoveOldFiles>
+      </AutoBackup>
+    </Database>
+    <RestartRequired Text="Þú þarft að Endurræsa Aronium til að breytingarnar verði Virkar.">
+      <Title Text="Endurræsing Þarfnast" />
+    </RestartRequired>
+  </Settings>
+  <Document>
+    <Create>
+      <Error Text="Villa við að búa til Skjal.\nReyndu Aftur." />
+    </Create>
+    <Category>
+      <Expenses Text="Útgjöld">
+        <Purchase Text="Kaup" />
+        <StockReturn Text="Hlutabréfaávöxtun" />
+      </Expenses>
+      <Inventory Text="Birgðir">
+        <InventoryCount Text="Birgðir Talning" />
+      </Inventory>
+      <Loss Text="Tap">
+        <LossAndDamage Text="Tap og Skemdir" />
+      </Loss>
+      <Sales Text="Sölur">
+        <Sales Text="Sölur" />
+        <Refund Text="Endurgreiðsla" />
+        <Proforma Text="Proforma" />
+      </Sales>
+    </Category>
+  </Document>
+  <Invoices Text="Skoða Sölu Yfirlit">
+    <Title Text="Leita í Sölu Yfirliti" />
+    <Documents Text="Skjöl">
+      <Customer Text="Viðskiptavinur">
+        <Change Text="Breyta Viðskiptarvini">
+          <Success Text="Viðskiptavini Var Breytt." />
+        </Change>
+      </Customer>
+      <Print Text="Prenta">
+        <CashReceipt Text="Kvittun">
+          <PrinterNotFound Text="Prentari er ekki valinn eða ekki virkur. Athugaðu Stillingar Prentara og Reyndu Aftur." />
+          <Address Text="Heimilisfang" />
+          <VatNumber Text="Kennitala" />
+          <Date Text="Dagsetning" />
+          <ReceiptNumber Text="Nóta Númer" />
+          <Customer Text="Viðskiptavinur" />
+          <Total Text="Samtalls" />
+          <Tax Text="VSK" />
+          <TotalAmount Text="SAMTALLS" />
+          <FiscalReceiptNumber Text="Auka Nótu Númer" />
+          <Signature Text="Undirskrift" />
+          <Stamp Text="P.S." />
+          <Authorization>
+            <Title Text="Vinsamlegast Sláðu inn Lykilorð til að Prenta Kvittun" />
+          </Authorization>
+        </CashReceipt>
+        <Pdf Text="Vista Sem PDF">
+          <Success Text="Skjalið Vistað í  &quot;{0}&quot;" />
+        </Pdf>
+        <Error Text="Villa Við Að Prenta Skjal">
+          <NoService Text="Prentara Þjónn Er Ekki Skráður" />
+        </Error>
+        <Refund Text="Endurgreiða" />
+        <Preview Text="Prent Prufa" />
+      </Print>
+      <Delete Text="Eyða">
+        <Confirmation>
+          <Title Text="Eyða Skjali" />
+          <Message Text="Ertu viss um að þú viljir eyða Skjali &quot;{0}&quot;?" />
+        </Confirmation>
+        <Unauthorized Text="Þú hefur ekki réttindi til að eyða Skjali." />
+        <Error Text="Villa við að Eyða Skjali. Reyndu Aftur" />
+      </Delete>
+      <List Text="Skjöl">
+        <Document>
+          <Number Text="Númer" />
+          <DocumentType Text="Tegund Skjals" />
+          <Warehouse Text="Vöruhús" />
+          <Customer Text="Viðskiptavinur">
+            <Refresh Text="Endurhlaða Lista Viðskiptavina">
+              <Complete Text="Viðskiptavinir Voru Endurhlaðnir" />
+            </Refresh>
+          </Customer>
+          <Vendor Text="Seljandi">
+            <Refresh Text="Endurhlaða Birgja Lista">
+              <Complete Text="Seljendur Endurhlaðnir" />
+            </Refresh>
+          </Vendor>
+          <ExternalDocument Text="Ytri Skjöl" />
+          <Date Text="Dagsetning" />
+          <DueDate Text="Gjalddagi" />
+          <StockDate Text="Birðardagur" />
+          <DateCreated Text="Búið Til" />
+          <DateUpdated Text="Uppfært" />
+          <CashRegister Text="Kassi" />
+          <OrderNumber Text="Sölu Númer" />
+          <Warehouse Text="Vöruhús" />
+          <User Text="Notandi" />
+          <PaymentType Text="Greiðslu Tegund" />
+          <Discount Text="Afsláttur" />
+          <Paid Text="Borgað" />
+          <Unpaid Text="Ekki Borgað" />
+          <Total Text="Samtalls">
+            <Summary>
+              <TotalBeforeTax Text="Samtalls Án VSK:" />
+              <Tax Text="VSK:" />
+              <Total Text="Samtalls:" />
+              <Discount Text="Afsláttur:">
+                <DiscountType Text="Tegund Afsláttar:">
+                  <Percent Text="Afsláttur Prósenta" />
+                  <Fixed Text="Afsláttur Upphæð" />
+                </DiscountType>
+                <DiscountApplyRule Text="Virkja Afslátt fyrir eða eftir skatt.\nÞetta val verður notað í vöruafslætti og körfuafslætti.">
+                  <BeforeTax Text="Virkja Afslátt Fyrir Skatt" />
+                  <AfterTax Text="Virkja Afslátt Eftir Skatt" />
+                </DiscountApplyRule>
+              </Discount>
+              <Subtotal Text="Heildar Upphæð:" />
+            </Summary>
+          </Total>
+          <Payments Text="Greiðslur">
+            <Add Text="Ný Greiðsla" />
+            <PaymentType Text="Greiðslu Tegund" />
+            <Amount Text="Upphæð" />
+            <Date Text="Dagsetning" />
+            <NewPayment Text="Ný Greiðsla" />
+            <Delete Text="Eyða Greiðslu">
+              <Confirmation Text="Ertu Viss um að þú viljir Eyða Greiðslu Með &quot;{0}&quot;?" />
+            </Delete>
+            <Totals>
+              <PaymentsTotal Text="Greiðsla Samtalls:" />
+              <DocumentTotal Text="Skjöl Samtalls:" />
+            </Totals>
+          </Payments>
+          <Items Text="Skjöl">
+            <Item>
+              <ProductCode Text="Vörunúmer" />
+              <Product Text="Nafn" />
+              <MeasurementUnit Text="Mælieining" />
+              <Quantity Text="Magn" />
+              <PriceNoTax Text="Verð Fyrir VSK" />
+              <Price Text="Verð" />
+              <Tax Text="VSK %">
+                <Add Text="Bæta Við Skatt">
+                  <Tooltip Text="Bæta Við Skatt á Vöru" />
+                </Add>
+                <Remove>
+                  <Tooltip Text="Eyða Skattu af Vöru" />
+                </Remove>
+              </Tax>
+              <Discount Text="Afsláttur">
+                <DiscountType Text="Afsláttar Tegund">
+                  <Percent Text="Prósentur" />
+                  <Fixed Text="Föst Upphæð" />
+                </DiscountType>
+                <DiscountApplyRule>
+                  <BeforeTax Text="fyrir skatt" />
+                  <AfterTax Text="eftir skatt" />
+                </DiscountApplyRule>
+              </Discount>
+              <TotalBeforeTax Text="Samtalls Án VSK" />
+              <Total Text="Samtalls" />
+              <TotalBeforeDiscount Text="Samtalls Án Afsláttar" />
+              <Error>
+                <Taxes Text="Margir Skattar fundust. Skattur með nafni (&quot;{0}&quot;).\nVinsamlegast veldu gildan skatt og reyndu aftur." />
+              </Error>
+            </Item>
+            <Delete Text="Eyða Skjali">
+              <Confirmation Text="Ertu Viss um að þú viljir eyða &quot;{0}&quot;?" />
+            </Delete>
+          </Items>
+          <Print>
+            <UnsavedChanges Text="Skjalið inniheldur Upplýsingar sem ekki er búið að Vista. Villtu Vista áður en er Prentað?">
+              <Title Text="Ekki Vistaðar Breytingar" />
+            </UnsavedChanges>
+          </Print>
+        </Document>
+      </List>
+      <Count Text="Skjala Fjöldi:" />
+      <Total Text="Heildar Upphæð:" />
+      <AllUsers Text="Sýna Alla Notendur" />
+      <CashRegister>
+        <All Text="Allir Kassar" />
+        <Select Text="Valdir Kassar" />
+      </CashRegister>
+      <BulkActions Text="Magn Aðgerðir">
+        <Delete Text="Eyða völdum skjölum">
+          <Confirmation>
+            <Title Text="Eyða völdum skjölum" />
+            <Message Text="Ertu viss um að þú viljir Eyða völdum skjölum?" />
+          </Confirmation>
+          <Message Text="Eyða Völdum Skjölum... Vinsamlegast Bíðið..." />
+        </Delete>
+        <UpdatePaidStatus>
+          <Message Text="Uppfæri Greiðslu Stöðu... Vinsamlegast Bíðið..." />
+        </UpdatePaidStatus>
+      </BulkActions>
+    </Documents>
+    <Authorization>
+      <Title Text="Sláðu inn Lykilorð til að skoða Yfirlit" />
+    </Authorization>
+  </Invoices>
+  <CashRegister>
+    <Select Text="Veldu Kassa" />
+  </CashRegister>
+  <Feedback Text="Umsögn">
+    <Title Text="Hjálpaðu okkur að gera Aronium Betri" />
+    <Description Text="Takk fyrir að taka tíma í að senda okkur ábendingu.\nÁbendingin þín hjálpar okkur að gera Aronium Forritið mikklu Betra.">
+      <Contact Text="Þér er frjálst að Hafa Samband Hvenær Sem Er" />
+    </Description>
+    <Message>
+      <Name Text="Þitt Nafn" />
+      <Email Text="Netfangur" />
+      <Subject Text="Fyrirsögn" />
+      <Message Text="Skilaboð" />
+      <Rating Text="Heildar Einkun" />
+    </Message>
+    <Send Text="Senda Umsögn" />
+    <Confirmation>
+      <Title Text="Takk Fyrir!" />
+      <Message Text="Umsögning Þín var send. Við notum hana til að gera Aronium mikklu Betra." />
+    </Confirmation>
+  </Feedback>
+  <Security>
+    <Key>
+      <Management Text="Stjórnborð">
+        <Description Text="Stjórna Aðgangi að Stjórnanda Hlutanum" />
+      </Management>
+      <Settings Text="Stillingar">
+        <Description Text="Stjórna Aðgangs Stillingum" />
+      </Settings>
+      <VoidOrder Text="Hætta Við Sölu">
+        <Description Text="Stjórna hver hefur heimild til að Hætta Við Sölu" />
+      </VoidOrder>
+      <VoidItem Text="Hætta Við Vöru">
+        <Description Text="Stjórna hver hefur heimild til að Hætta Við Vöru" />
+      </VoidItem>
+      <LockSale Text="Læsa Sölu" />
+      <UnlockSale Text="Aflæsa Sölu" />
+      <SplitOrder Text="Skipta Greiðslum">
+        <Description Text="Stjórna Notendum til að Flytja kláruð eða part af sölum til annara notanda eða borða (pöntunar númer)" />
+      </SplitOrder>
+      <Discount Text="Virkja Afslátt" />
+      <DeleteDocument Text="Eyða Skjali" />
+      <ClosingDay Text="Söluyfirlit í Lok Dags">
+        <Description Text="Stjórna hver hefur leyfi til að gera Söluyfirlit í Lok Dags" />
+      </ClosingDay>
+      <Refund Text="Endurgreiðsla">
+        <Description Text="Leyfir notanda að endurgreiða fyrri sölu.\nÞetta mun búa til nýtt „Endurgreiðslu“ skjal og setja magn aftur á lager sjálfkrafa." />
+      </Refund>
+      <OpenOrders Text="Skoða Allar Opnar Sölur">
+        <Description Text="Stjórna hverjir hafa leifa til að skoða Skoða Allar Opnar Sölur\nÞeswsi Möguleiki er virkur í Hæðir eru virkar." />
+      </OpenOrders>
+      <SalesHistory Text="Skoða Sölusögu">
+        <Receipt Text="Prenta Kvittun">
+          <Description Text="Stjórna hvaða Notendur hafa leyfi til að Prrenta Kvittun frá Sölusögu." />
+        </Receipt>
+      </SalesHistory>
+      <StartingCash Text="Byrjar í Peningum">
+        <Description Text="Stjórna heimildum í Peninga Valmynd" />
+      </StartingCash>
+      <UserProfile Text="Upplýsingar Notanda" />
+    </Key>
+  </Security>
+  <Guide>
+    <Menu>
+      <Title Text="Opna Aðal Valmynd" />
+      <Content Text="Smelltu hér til að opna Aðal Valmynd til að skoða Stjórnborð" />
+    </Menu>
+    <Layout>
+      <SearchBox Text="Leita af Vöru eftir Nafni, Strikamerki eða Vörunúmeri.">
+        <Title Text="Leita Af Vöru" />
+      </SearchBox>
+    </Layout>
+    <Dismiss>
+      <Title Text="Sleppa Byrjunar Aðstoð" />
+      <Confirmation Text="Ertu viss um að þú viljir sleppa Byrjunar Aðstoð?" />
+    </Dismiss>
+  </Guide>
+  <Layout>
+    <Visual>
+      <Item>
+        <Edit Text="Breyta Snertiskjá Útliti">
+          <Color Text="Litur" />
+          <Image Text="Myndir">
+            <Select Text="Veldu Mynd" />
+            <Clear Text="Hreinsa mynd" />
+          </Image>
+        </Edit>
+      </Item>
+    </Visual>
+  </Layout>
+  <OpenOrders Text="Skoða Opnar Sölur">
+    <Total Text="HEILDAR UPPHÆÐ" />
+    <NoOrders Text="Engar Opnar Sölur" />
+    <Authorization>
+      <Title Text="Sláðu inn Lykilorð til að skoða Opnar Sölur" />
+    </Authorization>
+  </OpenOrders>
+  <StartingCash Text="Borgað Inn / Út">
+    <Type>
+      <CashIn Text="Bæta Við Greiðslu" />
+      <CashOut Text="Eyða Greiðslu" />
+    </Type>
+    <Amount Text="Upphæð">
+      <Reason Text="Upplýsingar">
+        <Tooltip Text="Sláðu inn Ástæðu fyrir að bæta við eða eyða Greiðslu..." />
+      </Reason>
+    </Amount>
+    <Hide Text="Ekki Sýna Þetta Aftur" />
+    <Entries Text="Yfirlit Greiðlsna">
+      <NoDescription Text="&lt;Engar Upplýsingar&gt;" />
+      <NoEntries Text="Engin Gögn" />
+    </Entries>
+    <Saved Text="Byrjunar Greiðsla Vistuð" />
+  </StartingCash>
+  <Account>
+    <FirstName Text="Fyrra Nafn" />
+    <LastName Text="Seinna Nafn" />
+    <Email Text="Netfang" />
+    <Password Text="Lykilorð">
+      <Confirmation Text="Staðfesta Lykilorð">
+        <Error Text="Lykilorð og Staðfesta Lykilorð verða að vera það sama" />
+      </Confirmation>
+    </Password>
+    <License>
+      <Info Text="Leyfi">
+        <Data Text="Leyfis Gögn">
+          <LicensedTo Text="Leyfi Skrá Á" />
+          <Email Text="Netfang" />
+          <StoreId Text="Verslun ID" />
+          <Id Text="Leyfi ID" />
+        </Data>
+        <Products Text="Vörur">
+          <Id Text="Id" />
+          <Name Text="Nafn" />
+          <ValidUntil Text="Gildir Til" />
+          <LicenseType Text="Leyfis Tegund" />
+        </Products>
+        <NoLicense>
+          <Info Text="Heimsóttu www.aronium.com Til að Læra Meira um Frekari Fríðindi" />
+        </NoLicense>
+        <Refresh Text="Endurhlaða Leyfi">
+          <Success Text="Leifið var Sótt." />
+        </Refresh>
+        <Copy Text="Afrita Leyfi í Skrá" />
+        <Load Text="Sækja Leyfi frá Skrá" />
+        <UnlicensedProducts Text="Óleyfislegar Vörur" />
+      </Info>
+      <Login Text="Innskrá á Þinn Aðgang">
+        <NotRegistered Text="Ertu ekki skráður?">
+          <SignUp Text="Nýskráðu þig núna!" />
+        </NotRegistered>
+        <SignIn Text="Innskrá" />
+      </Login>
+      <Register Text="Skrá Nýjann Aðgang">
+        <AlreadyRegistered Text="Ertu þegar skráður?">
+          <SignIn Text="Innskrá Núna!" />
+        </AlreadyRegistered>
+        <CreateAccount Text="Búa til Aðgang" />
+        <Store Text="Búa til Verslun">
+          <Details Text="Tökum okkur örfáar mínútur til að setja upp Verslunina Þína.\nÞín Fyrirtækis gögn munu verða uppfærð og Leyfi mun verða gert sjálfkrafa.">
+            <CompanyName Text="Nafn Fyrirtækis" />
+            <Address Text="Heimilisfang" />
+            <ZipCode Text="Póstnúmer" />
+            <TaxNumber Text="Virðisaukaskatts Númer" />
+            <City Text="Borg" />
+            <Country Text="Land" />
+          </Details>
+          <Create Text="Búa til Verslun og Búa til Leyfi" />
+        </Store>
+        <Success Text="Aðgangur var búinn til" />
+      </Register>
+      <SelectStore Text="Veldu Verslun">
+        <Info Text="Veldu Verslun að neðan sem á að sækja Leyfi fyrir.">
+          <Register Text="Þegar þú hefur valið Verslun, munntu verða spurður um að skrá óskráðar vörur í verslunnar leyfi." />
+        </Info>
+        <NoStores Text="Engin verslun fannst">
+          <Info Text="Svo virðist sem að engin Verslun sé við Aðgang &quot;{0}&quot;. Til að virkja Leyfið þitt, þaeftu að vera með Verslun við Aðganginn." />
+          <Reload Text="Vinsamlegast búðu til Verslun og Ýttu á &quot;Endurhlaða&quot; takkann að neðan til að halda áfram." />
+          <Add Text="Opna Mitt Aronium til að búa til firstu Verslun" />
+        </NoStores>
+        <Successfull Text="Þú hefur verið Innskráður">
+          <Info Text="Ef Leyfið er til fyrir tilgefna Verslun, mun það verða sótt sjálfkrafa" />
+        </Successfull>
+      </SelectStore>
+      <StartTrial Text="Byrja Prufu">
+        <Info Text="Veldu Möguleika að neðan til að byrja Prufu án Leyfis" />
+        <SelectedStore Text="Veldu Verslun:">
+          <Change Text="Nota aðra Verslun" />
+        </SelectedStore>
+        <Now Text="Hefa Prufu Núna" />
+      </StartTrial>
+      <Load Text="Sækja Leyfi frá skrá">
+        <Successful Text="Leyfi hefur verið hlaðið" />
+      </Load>
+      <InvalidLicense Text="Rangt eða Vantar Leyfi">
+        <Info Text="Ein eða fleyrri vörur vantar Gillt Leyfi.">
+          <SignInOrLoadFromFile Text="Vinsamlegast Innskráðu þig á Aðganginn þinn til að Sækja Leyfi eða til að Hlaða Leyfi frá Skrá." />
+          <FollowInstructions Text="Vinsamlegast Fylgdu Leiðbeiningum að neðan til að halda áfram." />
+        </Info>
+        <Hide Text="Ekki Sýna þetta aftur fyrir þessar vörur" />
+      </InvalidLicense>
+    </License>
+    <Switch Text="Innskrá með öðrum Aðgangi" />
+    <SignOut Text="Útskrá">
+      <Successful Text="Þú hefur verið útskráður" />
+    </SignOut>
+    <Error>
+      <ExistingAccount Text="Notandi með þessu Netfangi er þegar til." />
+      <Unauthorized Text="Rangt notandanafn eða Lykilorð. Vinsamlegast reyndu aftur." />
+    </Error>
+  </Account>
+  <Validations>
+    <Info Text="Sjá frekari Upplýsingar og hvernig á að leysa vandamál">
+      <Community Text="Í Samfélaginu Okkar" />
+      <Or Text="eða" />
+      <ContactSupport Text="Hafa Samband við Aðstoð" />
+    </Info>
+    <Cancel Text="Loka Forriti" />
+    <Confirm Text="É Skil, Halda Áfram með Forrit Opið" />
+    <Print>
+      <Warning>
+        <CustomTemplates Text="Við höfum komist að því að þú ert að nota sérsniðin kvittun eða reikningssniðmát. Vegna breytinga á gagnagrunni í þessari útgáfu virka þessi sniðmát ekki lengur.\nÞú munt geta notað sjálfgefin sniðmát, svo að daglegum aðgerðum þínum er ekki lokað.\n\nEf þú vilt samt nota gömul sniðmát ættirðu að stöðva gangsetningu forrita núna og fara aftur í gamla útgáfu.">
+          <Title Text="VARÚÐ! VIÐSKIPTAVINAR PRENTARA SNIÐMÁTI MUN EKKI VIRKA!" />
+        </CustomTemplates>
+      </Warning>
+    </Print>
+    <Refund>
+      <Invalid Text="Endurgreiðsla er ekki Gild" />
+    </Refund>
+  </Validations>
+  <Print>
+    <Error Text="Prent villa kom upp">
+      <CustomTemplate Text="Villa í sérsniðnu sniðmáti fannst!\nVinsamlegast hafðu samband við Aronium aðstoð til að leysa hugsanleg vandamál með sérsniðna prentmyndina þína.">
+        <Continue Text="Villtu halda áfram að prenta með því að nota aðal Sniðmáta?" />
+      </CustomTemplate>
+    </Error>
+  </Print>
+</Language>

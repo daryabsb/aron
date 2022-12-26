@@ -1,0 +1,34 @@
+<Workflow>
+  <Name>Aronium.Pos.Order.Item.Add</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="35eb3c85-72d5-4d74-b84b-131ee696155a" name="Start">
+      <Transitions>
+        <DefaultTransition id="7fe5e2cd-c793-4aee-91ad-0c30a011cbd4" name="Start">
+          <Target>f8c61f2d-36ce-4a2f-860c-6875435476e4</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="8aaaa0e4-7164-432c-a724-76248ca05d30" name="Add item">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AddItem</ClassName>
+      <Transitions>
+        <DefaultTransition id="2825c6a0-fed2-4f0b-98c1-cee6d7d50968" name="Continue">
+          <Target>4aabfdc1-7e6f-4181-b7f5-986e5cb05dca</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <EndTask id="4aabfdc1-7e6f-4181-b7f5-986e5cb05dca" name="End" />
+    <ExternalTask id="f8c61f2d-36ce-4a2f-860c-6875435476e4" name="Promotions">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.PromotionsTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="2e54dff3-1b04-4f6e-be3f-8ea1c837025a" name="Add item">
+          <Target>8aaaa0e4-7164-432c-a724-76248ca05d30</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+  </Tasks>
+</Workflow>

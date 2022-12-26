@@ -1,0 +1,208 @@
+<Workflow>
+  <Name>Aronium.Pos.Order.Item</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="9f63b3ca-e51d-441c-b4f7-ecf3ff992b41" name="Start">
+      <Transitions>
+        <DefaultTransition id="8dec1475-93c7-4c81-9ea1-d18c5f076cf0" name="Start">
+          <Target>9df5aac8-d41c-46bb-945f-54de65f9d888</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <RouterTask id="9df5aac8-d41c-46bb-945f-54de65f9d888" name="Item exists">
+      <IsExclusive>False</IsExclusive>
+      <Transitions>
+        <ErrorTransition id="c90d22c2-c663-43cc-9c5e-eb0fd7af69fb" name="Search">
+          <Target>417caedb-b007-4ff7-90e9-1d79c94c01df</Target>
+        </ErrorTransition>
+        <DefaultTransition id="eedc66ed-ca45-41a6-8295-7329937a54db" name="Item exists">
+          <Target>d1903e3c-6c4e-46ec-b133-9a61666662c9</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Item">{NOT_NULL}</Variable>
+      </Variables>
+    </RouterTask>
+    <ExternalTask id="417caedb-b007-4ff7-90e9-1d79c94c01df" name="Search product">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="c2f772ce-fc4e-42f4-8265-83be2aecaace" name="Continue">
+          <Target>db931396-ec03-4d06-ba51-878e471bfac8</Target>
+        </DefaultTransition>
+        <ErrorTransition id="ca46e5ed-b951-498b-a2ef-c123bef58730" name="Abort">
+          <Target>e0bd0b47-4f60-40a6-a120-7d6fc32b54ba</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/ProductSearch.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="62d7a821-bbb1-4b28-9ec1-6fd5d48d8acb" name="Display text">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.DisplayItem</ClassName>
+      <Transitions>
+        <DefaultTransition id="160e6a96-bace-4732-a2f5-23b852b029d4" name="End">
+          <Target>31eee2af-dc2d-4b51-9953-53adb2a38653</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="TopVar">Item.Product.Name</Variable>
+        <Variable name="BottomVar">Item.Product.Price</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="81085f94-08e1-4d72-a9b1-5d2487a21a86" name="Validate">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.ValidateOrderItemTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="5ade276f-d985-4b2b-ae2d-e4c225cecdda" name="Continue">
+          <Target>0aac600e-b2dc-4dc6-b751-c0c2b7c10dd8</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/AddComment.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <RouterTask id="aea6d79f-7f2a-4fe8-a9ce-e55553c59ce0" name="Can change price">
+      <IsExclusive>True</IsExclusive>
+      <Transitions>
+        <SuccessTransition id="fd9fd7d2-a2e3-4b70-a154-7a9d96de4f01" name="Change price">
+          <Target>88d582bd-d70b-417d-8c70-f659df119f8e</Target>
+        </SuccessTransition>
+        <ErrorTransition id="4629e626-a7ff-439f-adaf-eeb5913d8f70" name="Continue">
+          <Target>d44e06d2-067b-4cd6-b4ce-aea0939cc3a8</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Item.Product.IsPriceChangeAllowed">True</Variable>
+        <Variable name="IS_ITEM_PROMOTED">False</Variable>
+      </Variables>
+    </RouterTask>
+    <ExternalTask id="88d582bd-d70b-417d-8c70-f659df119f8e" name="Change price">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.ChangePriceTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="ae724b69-d7a1-4755-a92a-f23f13f5b6a6" name="Continue">
+          <Target>d44e06d2-067b-4cd6-b4ce-aea0939cc3a8</Target>
+        </DefaultTransition>
+        <ErrorTransition id="939ee9b7-497e-4f91-89da-dbbf190ade2a" name="Abort">
+          <Target>31eee2af-dc2d-4b51-9953-53adb2a38653</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <RouterTask id="d44e06d2-067b-4cd6-b4ce-aea0939cc3a8" name="Should change quantity">
+      <IsExclusive>False</IsExclusive>
+      <Transitions>
+        <ErrorTransition id="cab1e91d-c149-49f0-aa74-4bd071b86cd3" name="Set quantity">
+          <Target>d9645790-6535-4d1e-86a0-45129cd61a19</Target>
+        </ErrorTransition>
+        <SuccessTransition id="3f925404-3f3b-4845-9a76-834b50471b5b" name="Continue">
+          <Target>81085f94-08e1-4d72-a9b1-5d2487a21a86</Target>
+        </SuccessTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Item.Product.IsUsingDefaultQuantity">True</Variable>
+      </Variables>
+    </RouterTask>
+    <ExternalTask id="d9645790-6535-4d1e-86a0-45129cd61a19" name="Set quantity">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.SetQuantityTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="71fb6b09-74ce-47c4-9a91-11a883be1737" name="Continue">
+          <Target>81085f94-08e1-4d72-a9b1-5d2487a21a86</Target>
+        </DefaultTransition>
+        <ErrorTransition id="480ee7fb-2907-4f4d-95f8-187d0c56b1f9" name="Abort">
+          <Target>31eee2af-dc2d-4b51-9953-53adb2a38653</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <AbortTask id="e0bd0b47-4f60-40a6-a120-7d6fc32b54ba" name="Abort" />
+    <RouterTask id="0aac600e-b2dc-4dc6-b751-c0c2b7c10dd8" name="Has comments">
+      <IsExclusive>False</IsExclusive>
+      <Transitions>
+        <SuccessTransition id="c432b6ae-a342-459e-be5e-f3ca4e64bbbc" name="Yes">
+          <Target>d46803fc-09ef-48c7-9204-05735e6402b4</Target>
+        </SuccessTransition>
+        <ErrorTransition id="f2ec910b-caae-4f30-be09-edabf4b65f95" name="No">
+          <Target>2f0e747d-f76e-438f-9123-3143552a5f26</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Item.Product.HasComments">True</Variable>
+      </Variables>
+    </RouterTask>
+    <ExternalTask id="d46803fc-09ef-48c7-9204-05735e6402b4" name="Add comment">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="98b5aff3-10a1-4b0c-abe4-adc2e46e9870" name="Continue">
+          <Target>2f0e747d-f76e-438f-9123-3143552a5f26</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/AddComment.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="2f0e747d-f76e-438f-9123-3143552a5f26" name="Split quantity">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.SplitQuantityTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="34f33544-0d0a-4849-9d03-7585a30ee04a" name="Continue">
+          <Target>a12709dc-bb6c-408a-a3c7-aed36fc5ab19</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="a12709dc-bb6c-408a-a3c7-aed36fc5ab19" name="Run add item workflow">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AddItemWorkflowRunner</ClassName>
+      <Transitions>
+        <DefaultTransition id="57ecd514-21a0-422a-8dbb-e031a9bd8641" name="Continue">
+          <Target>62d7a821-bbb1-4b28-9ec1-6fd5d48d8acb</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Workflow">Aronium.Pos.Order.Item.Add</Variable>
+        <Variable name="Variables">Item;Order</Variable>
+      </Variables>
+    </ExternalTask>
+    <EndTask id="31eee2af-dc2d-4b51-9953-53adb2a38653" name="End" />
+    <RouterTask id="d1903e3c-6c4e-46ec-b133-9a61666662c9" name="Is Canceled">
+      <IsExclusive>False</IsExclusive>
+      <Transitions>
+        <SuccessTransition id="372b02ac-71ec-4d14-8e36-1a23983ea628" name="Void or repeat">
+          <Target>fbbe9cb6-f263-410d-9c92-91b48eb1fb5e</Target>
+        </SuccessTransition>
+        <ErrorTransition id="09375e6e-3760-455c-996d-5e6d3b40b068" name="Continue">
+          <Target>db931396-ec03-4d06-ba51-878e471bfac8</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Item.IsCanceled">True</Variable>
+        <Variable name="REPEAT_ITEM">True</Variable>
+      </Variables>
+    </RouterTask>
+    <ExternalTask id="db931396-ec03-4d06-ba51-878e471bfac8" name="Check promotion">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.CheckPromotions</ClassName>
+      <Transitions>
+        <DefaultTransition id="ac1ff189-09d0-4e71-a114-b49aec8039ef" name="Continue">
+          <Target>aea6d79f-7f2a-4fe8-a9ce-e55553c59ce0</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="fbbe9cb6-f263-410d-9c92-91b48eb1fb5e" name="Validate">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.ValidateOrderItemTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="7cd12bcb-4212-49ac-b286-527130ed4622" name="Continue">
+          <Target>a12709dc-bb6c-408a-a3c7-aed36fc5ab19</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/AddComment.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+  </Tasks>
+</Workflow>

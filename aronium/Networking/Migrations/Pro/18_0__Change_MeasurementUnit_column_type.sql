@@ -1,0 +1,1 @@
+ALTER TABLE Product ALTER COLUMN MeasurementUnit NVARCHAR(10);

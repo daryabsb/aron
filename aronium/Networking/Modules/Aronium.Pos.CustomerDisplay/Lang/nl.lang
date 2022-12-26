@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <CustomerDisplay>
+    <Total Text="Totaal:" />
+    <Change Text="Wisselgeld:" />
+    <Paid Text="Betaald:" />
+    <WelcomeMessage Text="WELKOM!" />
+    <Settings Text="Klanten display">
+      <Enabled Text="Ingeschakeld" />
+      <Port Text="COM-poort" />
+      <CharactersPerLine Text="Aantal tekens" />
+      <WelcomeMessage Text="Welkoms bericht">
+        <TopLine Text="Top regel" />
+        <BottomLine Text="Bottom line" />
+      </WelcomeMessage>
+      <Test Text="Testweergave" />
+    </Settings>
+  </CustomerDisplay>
+</Language>

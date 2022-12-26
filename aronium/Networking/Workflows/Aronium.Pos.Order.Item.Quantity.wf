@@ -1,0 +1,37 @@
+<Workflow>
+  <Name>Aronium.Pos.Order.Item.Quantity</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="98e88b7e-95ad-4129-9860-c9544c9db8e6" name="Start">
+      <Transitions>
+        <DefaultTransition id="a05b5f90-e485-488a-98bd-b89dc9965cea" name="Validate">
+          <Target>3ecf225f-9984-4fde-8a66-bdfe9ba10751</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="3ecf225f-9984-4fde-8a66-bdfe9ba10751" name="Validate">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.ValidateOrderItemTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="573b0f11-1585-40b1-9c18-3de2e4e5f67d" name="Conitinue">
+          <Target>f2f42bff-b2aa-4f53-a9ec-c6da2cf968bc</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/AddComment.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="f2f42bff-b2aa-4f53-a9ec-c6da2cf968bc" name="Change quantity">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.ChangeQuantityTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="8cd60037-71de-4ec3-ae0c-4d13a52b745d" name="End">
+          <Target>8bd9b7b9-acca-40ac-a3dd-2e06beb647ca</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <EndTask id="8bd9b7b9-acca-40ac-a3dd-2e06beb647ca" name="End" />
+  </Tasks>
+</Workflow>

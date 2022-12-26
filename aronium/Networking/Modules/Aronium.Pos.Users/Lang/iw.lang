@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="iw" name="Hebrew">
+  <Users Text="אבטחה ומשתמשים">
+    <View Text="משתמשים">
+      <Disabled Text="הצג משתמשים לא פעילים" />
+    </View>
+    <New Text="הוספת משתמש" />
+    <ResetPassword Text="אפס סיסמא">
+      <Success Text="הסיסמא אופסה בהצלחה" />
+    </ResetPassword>
+    <LearnMore Text="למידע נוסף על ניהול משתמשים" />
+    <User>
+      <FirstName Text="שם פרטי" />
+      <LastName Text="שם משפחה" />
+      <Email Text="דוא''ל" />
+      <Password Text="סיסמה" />
+      <PasswordConfirmation Text="אישור סיסמה" />
+      <AccessLevel Text="רמת הרשאות" />
+      <IsEnabled Text="פעיל" />
+      <Error>
+        <PasswordConfirmationMatch Text="אישור סיסמה וסיסמה חייבים להתאים." />
+        <InvalidPassword Text="משתמש עם אותה סיסמא כבר קיים.\nאנא הכנס\י סיסמה ייחודית ונסה\י שוב." />
+        <Disable>
+          <OpenOrders Text="השבתת המשתמש תמנע ממנו לסגור מכירות פתוחות.\nאנא סגור\י את כל ההזמנות הפתוחות שבבעלות משתמש זה לפני שתשבית\י אותו.">
+            <Title Text="לא ניתן להשבית משתמש עם מכירות פתוחות" />
+          </OpenOrders>
+        </Disable>
+        <DuplicateEmail Text="דוא''ל זה כבר בשימוש.\nאנא השתמש בכתובת דוא&quot;ל שונה." />
+      </Error>
+      <Saved Text="פרטי המשתמש השתנו בהצלחה." />
+    </User>
+    <Delete Text="מחק משתמש">
+      <Confirmation Text="האם למחוק את &quot;{0}&quot;?" />
+      <Error>
+        <CurrentUser Text="לא ניתן למחוק את עצמך!" />
+        <DataViolation Text="לא ניתן למחוק את המשתמש.\nהמשתמש מכיל מסמכים או פריטים קשורים אחרים." />
+      </Error>
+    </Delete>
+    <Security Text="אבטחה">
+      <Title Text="הגדר\י רמת גישה לפעולות מוגדרות מראש" />
+      <Description Text="בחר\י רמת גישה לכל פעולה על מנת להגדיר הרשאות משתמש נדרשות." />
+      <LearnMore Text="למידע נוסף על רמות גישה ואבטחה" />
+      <MaximumAccessLevelWarning Text="רמת גישה שנקבעה מעל לערך הגבוה ביותר שהוקצה לכל משתמש." />
+      <Save>
+        <Success Text="רמת ההרשאה נשמרה בהצלחה" />
+        <AccessLevelViolation Text="הפרת רמת גישה">
+          <Info Text="ניתן להגדיר רמות גישה לערך מקסימאלי המוקצה לכל משתמש. אחרת, ייתכן שלא תוכל\י לגשת למקטע מוגבל.\nהתאם\י פריטים בטעות ונסה שוב." />
+        </AccessLevelViolation>
+      </Save>
+      <Group>
+        <General Text="כללי" />
+        <Sales Text="מכירות" />
+      </Group>
+    </Security>
+  </Users>
+</Language>

@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" StartReportEvent="OnStartReport" ReportInfo.Created="12/18/2016 13:57:19" ReportInfo.Modified="12/19/2021 14:40:37" ReportInfo.CreatorVersion="2019.1.5.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+    private void OnStartReport(object sender, EventArgs e)
+    {
+      string sql = (Report.GetDataSource(&quot;Products&quot;) as TableDataSource).SelectCommand;
+      string groups = ((String)Report.GetParameterValue(&quot;ProductGroups&quot;));
+      sql = sql.Replace(&quot;:ProductGroups&quot;, groups);
+      (Report.GetDataSource(&quot;Products&quot;) as TableDataSource).SelectCommand = sql;
+    }
+
+    private void OnCostTotalBeforePrint(object sender, EventArgs e)
+    {
+      ((TextObject)sender).Visible = ((Boolean)Report.GetParameterValue(&quot;ShowCostPrices&quot;));
+    }
+  }
+}
+</ScriptText>
+  <Styles>
+    <Style Name="EvenRow" Fill.Color="WhiteSmoke" ApplyTextFill="false" ApplyFont="false"/>
+  </Styles>
+  <Dictionary>
+    <MsSqlDataConnection Name="Connection" ConnectionString="rijcmlqgmVPIUFpWJl7t63nP4g521Hn/lgUeicVSFoPOAiLi3EWlwgHGDWk7jb9NIaA+EA4sxwctoMgHcSnowEJpeBpX4gRK1OoxYbFei7xBHSwUotoXVdCAIm31oPLKpicKRmFJlBM7hv25uuNtd+ob8d89nvEeBHEDgAfXxhmII6dDr8e402grsP6NO9NC6/FxaMr">
+      <TableDataSource Name="Table" Alias="Products" DataType="System.Int32" Enabled="true" SelectCommand="DECLARE @xml XML&#13;&#10;SET @xml = N'&lt;root&gt;&lt;id&gt;' + REPLACE(@ProductGroups,',','&lt;/id&gt;&lt;id&gt;') + '&lt;/id&gt;&lt;/root&gt;'&#13;&#10;&#13;&#10;SELECT  P.Id, &#13;&#10;        P.Code, &#13;&#10;        P.Name, &#13;&#10;        COALESCE(G.Name, '(none)') AS ProductGroup,&#13;&#10;        P.Cost,&#13;&#10;        P.Price,&#13;&#10;        P.MeasurementUnit, &#13;&#10;        ISNULL(S.Quantity, 0) Quantity,&#13;&#10;        ISNULL(S.Quantity, 0) * P.Cost AS TotalCostBeforeTax,&#13;&#10;        ISNULL(S.Quantity, 0) * (P.Cost * (1.0 + (ISNULL(T.PercentTax,0) / 100.00))) + ISNULL(T.FixedTax,0) AS TotalCostIncludingTax,&#13;&#10;        ISNULL(S.Quantity, 0) * CASE WHEN P.IsTaxInclusivePrice = 1 THEN (P.Price -ISNULL(T.FixedTax,0)) / (1.0 + (ISNULL(T.PercentTax,0) / 100.00)) ELSE P.Price END AS TotalBeforeTax,&#13;&#10;        ISNULL(S.Quantity, 0) * CASE WHEN P.IsTaxInclusivePrice = 0 THEN (P.Price * (1.0 + (ISNULL(T.PercentTax,0) / 100.00))) + ISNULL(T.FixedTax,0) ELSE P.Price END AS TotalIncludingTax&#13;&#10;FROM    Product P &#13;&#10;        LEFT JOIN Stock S ON P.Id = S.ProductId&#13;&#10;        LEFT JOIN ProductGroup G ON P.ProductGroupId = G.Id&#13;&#10;        LEFT JOIN &#13;&#10;        (&#13;&#10;            SELECT  PT.ProductId,&#13;&#10;                    SUM(CASE WHEN Tax.IsFixed = 1 THEN Tax.Rate ELSE 0 END) AS FixedTax,&#13;&#10;                    SUM(CASE WHEN Tax.IsFixed = 0 THEN Tax.Rate ELSE 0 END) AS PercentTax&#13;&#10;            FROM ProductTax PT INNER JOIN Tax ON Tax.Id = PT.TaxId&#13;&#10;            GROUP BY PT.ProductId&#13;&#10;        ) AS T ON T.ProductId = P.Id&#13;&#10;WHERE   (@AllGroups = 1 OR P.ProductGroupId IN (SELECT CAST(t.value('.','INT') AS INT) FROM @xml.nodes('//root/id') AS a(t)))&#13;&#10;        AND (@NegativeQuantities = 0 OR S.Quantity &lt; 0) &#13;&#10;        AND (@NonZeroQuantities = 0 OR S.Quantity &lt;&gt; 0)&#13;&#10;        AND (@ZeroQuantities = 0 OR (S.Quantity IS NULL OR S.Quantity = 0))&#13;&#10;ORDER BY G.Name, P.Name">
+        <Column Name="Id" DataType="System.Int64"/>
+        <Column Name="Code" DataType="System.String"/>
+        <Column Name="Name" DataType="System.String"/>
+        <Column Name="MeasurementUnit" DataType="System.String"/>
+        <Column Name="Quantity" DataType="System.Decimal"/>
+        <Column Name="TotalBeforeTax" DataType="System.Object"/>
+        <Column Name="TotalIncludingTax" DataType="System.Object"/>
+        <Column Name="TotalCostBeforeTax" DataType="System.Object"/>
+        <Column Name="TotalCostIncludingTax" DataType="System.Object"/>
+        <Column Name="ProductGroup" DataType="System.String"/>
+        <Column Name="Price" DataType="System.Double"/>
+        <Column Name="Cost" DataType="System.Double"/>
+        <CommandParameter Name="AllGroups" DataType="8" Expression="[AllGroups]" DefaultValue="1"/>
+        <CommandParameter Name="NegativeQuantities" DataType="8" Expression="[NegativeQuantities]" DefaultValue="0"/>
+        <CommandParameter Name="NonZeroQuantities" DataType="8" Expression="[NonZeroQuantities]" DefaultValue="0"/>
+        <CommandParameter Name="ProductGroups" DataType="22" Expression="[ProductGroups]" DefaultValue="0"/>
+        <CommandParameter Name="ZeroQuantities" DataType="8" Expression="[ZeroQuantities]" DefaultValue="0"/>
+      </TableDataSource>
+      <TableDataSource Name="Company" DataType="System.Int32" Enabled="true" TableName="Company">
+        <Column Name="Id" DataType="System.Int64"/>
+        <Column Name="Name" DataType="System.String"/>
+        <Column Name="Address" DataType="System.String"/>
+        <Column Name="PostalCode" DataType="System.String"/>
+        <Column Name="City" DataType="System.String"/>
+        <Column Name="CountryId" DataType="System.Int64"/>
+        <Column Name="TaxNumber" DataType="System.String"/>
+        <Column Name="Email" DataType="System.String"/>
+        <Column Name="PhoneNumber" DataType="System.String"/>
+      </TableDataSource>
+    </MsSqlDataConnection>
+    <XmlDataConnection Name="Xml" ConnectionString="rijcmlqlfyl/7wT8MMj/7yn9ZCVUpMl5dGdbGvvkMAylrLvPQTE/XUJAGQxLMphgBfMZrjW5bp+CEM9d4EojNnFT8Kfu+DfoILG2GMaTED8hEP45CTDnZNOfjJJGXFmueZoXgnoqVNxC275Nc2dQZfFHYZdRw==">
+      <TableDataSource Name="Labels" DataType="System.Int32" Enabled="true" TableName="Labels">
+        <Column Name="Documents.InventoryCount" DataType="System.String"/>
+        <Column Name="Documents.InventoryCount.Counted" DataType="System.String"/>
+        <Column Name="Documents.InventoryCount.CountedValue" DataType="System.String"/>
+        <Column Name="Documents.InventoryCount.CreatedBy" DataType="System.String"/>
+        <Column Name="Documents.InventoryCount.DiffMinus" DataType="System.String"/>
+        <Column Name="Documents.InventoryCount.DiffPlus" DataType="System.String"/>
+        <Column Name="Documents.InventoryCount.Expected" DataType="System.String"/>
+        <Column Name="Documents.InventoryCount.NegativeAmount" DataType="System.String"/>
+        <Column Name="Documents.InventoryCount.PositiveAmount" DataType="System.String"/>
+        <Column Name="Documents.InventoryCount.Time" DataType="System.String"/>
+        <Column Name="Documents.Invoice" DataType="System.String"/>
+        <Column Name="Documents.Invoice.AmountDue" DataType="System.String"/>
+        <Column Name="Documents.Invoice.BankAccountNumber" DataType="System.String"/>
+        <Column Name="Documents.Invoice.BankDetails" DataType="System.String"/>
+        <Column Name="Documents.Invoice.BillTo" DataType="System.String"/>
+        <Column Name="Documents.Invoice.InvoiceNumber" DataType="System.String"/>
+        <Column Name="Documents.Invoice.Item" DataType="System.String"/>
+        <Column Name="Documents.Invoice.ItemsCount" DataType="System.String"/>
+        <Column Name="Documents.Invoice.PaidAmount" DataType="System.String"/>
+        <Column Name="Documents.Invoice.PaymentMethod" DataType="System.String"/>
+        <Column Name="Documents.Invoice.PaymentStatus" DataType="System.String"/>
+        <Column Name="Documents.Invoice.PaymentStatus.Paid" DataType="System.String"/>
+        <Column Name="Documents.Invoice.PaymentStatus.Unpaid" DataType="System.String"/>
+        <Column Name="Documents.LossAndDamage" DataType="System.String"/>
+        <Column Name="Documents.ProformaInvoice" DataType="System.String"/>
+        <Column Name="Documents.Purchase" DataType="System.String"/>
+        <Column Name="Documents.Refund" DataType="System.String"/>
+        <Column Name="Documents.Refund.ReceiptNumber" DataType="System.String"/>
+        <Column Name="Documents.Refund.RefundNumber" DataType="System.String"/>
+        <Column Name="Documents.StockReturn" DataType="System.String"/>
+        <Column Name="General.CashRegister" DataType="System.String"/>
+        <Column Name="General.Code" DataType="System.String"/>
+        <Column Name="General.Company" DataType="System.String"/>
+        <Column Name="General.Company.Address" DataType="System.String"/>
+        <Column Name="General.Cost" DataType="System.String"/>
+        <Column Name="General.Customer" DataType="System.String"/>
+        <Column Name="General.Date" DataType="System.String"/>
+        <Column Name="General.Description" DataType="System.String"/>
+        <Column Name="General.Discount" DataType="System.String"/>
+        <Column Name="General.DiscountGranted" DataType="System.String"/>
+        <Column Name="General.Document" DataType="System.String"/>
+        <Column Name="General.DocumentNumber" DataType="System.String"/>
+        <Column Name="General.DueDate" DataType="System.String"/>
+        <Column Name="General.Email" DataType="System.String"/>
+        <Column Name="General.ExternalDocument" DataType="System.String"/>
+        <Column Name="General.Margin" DataType="System.String"/>
+        <Column Name="General.Name" DataType="System.String"/>
+        <Column Name="General.Numbering" DataType="System.String"/>
+        <Column Name="General.Page" DataType="System.String"/>
+        <Column Name="General.Period" DataType="System.String"/>
+        <Column Name="General.Phone" DataType="System.String"/>
+        <Column Name="General.Product" DataType="System.String"/>
+        <Column Name="General.ProductGroup" DataType="System.String"/>
+        <Column Name="General.ProductName" DataType="System.String"/>
+        <Column Name="General.Products" DataType="System.String"/>
+        <Column Name="General.Profit" DataType="System.String"/>
+        <Column Name="General.PurchaseNumber" DataType="System.String"/>
+        <Column Name="General.Qty" DataType="System.String"/>
+        <Column Name="General.Quantity" DataType="System.String"/>
+        <Column Name="General.Subtotal" DataType="System.String"/>
+        <Column Name="General.Supplier" DataType="System.String"/>
+        <Column Name="General.Tax" DataType="System.String"/>
+        <Column Name="General.TaxName" DataType="System.String"/>
+        <Column Name="General.TaxNumber" DataType="System.String"/>
+        <Column Name="General.Total" DataType="System.String"/>
+        <Column Name="General.TotalAfterDiscount" DataType="System.String"/>
+        <Column Name="General.TotalBeforeDiscount" DataType="System.String"/>
+        <Column Name="General.TotalBeforeTax" DataType="System.String"/>
+        <Column Name="General.TotalDiscount" DataType="System.String"/>
+        <Column Name="General.TotalPaid" DataType="System.String"/>
+        <Column Name="General.TotalUnpaid" DataType="System.String"/>
+        <Column Name="General.UnitOfMeasurement" DataType="System.String"/>
+        <Column Name="General.UnitPrice" DataType="System.String"/>
+        <Column Name="General.User" DataType="System.String"/>
+        <Column Name="Reports.DailySales" DataType="System.String"/>
+        <Column Name="Reports.DiscountsGranted" DataType="System.String"/>
+        <Column Name="Reports.DiscountsGranted.AfterTax" DataType="System.String"/>
+        <Column Name="Reports.DiscountsGranted.BeforeTax" DataType="System.String"/>
+        <Column Name="Reports.DiscountsGranted.NumberOfDiscounts" DataType="System.String"/>
+        <Column Name="Reports.DiscountsGranted.TotalDiscounted" DataType="System.String"/>
+        <Column Name="Reports.InventoryCount" DataType="System.String"/>
+        <Column Name="Reports.Invoices" DataType="System.String"/>
+        <Column Name="Reports.ItemsDiscounts" DataType="System.String"/>
+        <Column Name="Reports.LossAndDamageByProduct" DataType="System.String"/>
+        <Column Name="Reports.PaymentTypesByCustomer" DataType="System.String"/>
+        <Column Name="Reports.PaymentTypesByUser" DataType="System.String"/>
+        <Column Name="Reports.ProfitAndMargin" DataType="System.String"/>
+        <Column Name="Reports.PurcahsedItemsDiscounts" DataType="System.String"/>
+        <Column Name="Reports.PurchaseByProduct" DataType="System.String"/>
+        <Column Name="Reports.PurchaseBySupplier" DataType="System.String"/>
+        <Column Name="Reports.PurchaseDiscounts" DataType="System.String"/>
+        <Column Name="Reports.PurchaseInvoices" DataType="System.String"/>
+        <Column Name="Reports.Refunds" DataType="System.String"/>
+        <Column Name="Reports.SalesByCustomer" DataType="System.String"/>
+        <Column Name="Reports.SalesByPaymentType" DataType="System.String"/>
+        <Column Name="Reports.SalesByProduct" DataType="System.String"/>
+        <Column Name="Reports.SalesByProductGroups" DataType="System.String"/>
+        <Column Name="Reports.SalesByUser" DataType="System.String"/>
+        <Column Name="Reports.StartingCashEntries" DataType="System.String"/>
+        <Column Name="Reports.StartingCashEntries.Open" DataType="System.String"/>
+        <Column Name="Reports.StartingCashEntries.ZReport" DataType="System.String"/>
+        <Column Name="Reports.Stock" DataType="System.String"/>
+        <Column Name="Reports.Stock.CostBeforeTax" DataType="System.String"/>
+        <Column Name="Reports.Stock.CostIncludingTax" DataType="System.String"/>
+        <Column Name="Reports.Stock.CostPrice" DataType="System.String"/>
+        <Column Name="Reports.Stock.History" DataType="System.String"/>
+        <Column Name="Reports.Stock.History.CostPrice" DataType="System.String"/>
+        <Column Name="Reports.Stock.History.CustomerOrSupplier" DataType="System.String"/>
+        <Column Name="Reports.Stock.History.DocumentNumber" DataType="System.String"/>
+        <Column Name="Reports.Stock.History.DocumentType" DataType="System.String"/>
+        <Column Name="Reports.Stock.History.QuantityOnHand" DataType="System.String"/>
+        <Column Name="Reports.Stock.History.StockDate" DataType="System.String"/>
+        <Column Name="Reports.StockMovement" DataType="System.String"/>
+        <Column Name="Reports.StockMovement.AverageNumberOfSalesPerItem" DataType="System.String"/>
+        <Column Name="Reports.StockMovement.FastMoving" DataType="System.String"/>
+        <Column Name="Reports.StockMovement.NonMoving" DataType="System.String"/>
+        <Column Name="Reports.StockMovement.NumberOfSales" DataType="System.String"/>
+        <Column Name="Reports.StockMovement.SlowMoving" DataType="System.String"/>
+        <Column Name="Reports.StockMovement.TotalNumberOfSales" DataType="System.String"/>
+        <Column Name="Reports.Taxes" DataType="System.String"/>
+        <Column Name="Reports.UnpaidPurchases" DataType="System.String"/>
+        <Column Name="Reports.UnpaidSales" DataType="System.String"/>
+        <Column Name="StockControl.Reports.ReorderProductList" DataType="System.String"/>
+        <Column Name="StockControl.Reports.ReorderProductList.OrderQuantity" DataType="System.String"/>
+        <Column Name="StockControl.Reports.LowStockWarning" DataType="System.String"/>
+        <Column Name="StockControl.Reports.LowStockWarning.QuantityOnHand" DataType="System.String"/>
+        <Column Name="StockControl.Reports.LowStockWarning.PreferredQuantity" DataType="System.String"/>
+        <Column Name="StockControl.Reports.LowStockWarning.WarningQuantity" DataType="System.String"/>
+        <Column Name="StockControl.Reports.LowStockWarning.ReorderPoint" DataType="System.String"/>
+      </TableDataSource>
+    </XmlDataConnection>
+    <Parameter Name="ProductGroups" DataType="System.String"/>
+    <Parameter Name="NegativeQuantities" DataType="System.Int32"/>
+    <Parameter Name="NonZeroQuantities" DataType="System.Int32"/>
+    <Parameter Name="AllGroups" DataType="System.Int32"/>
+    <Parameter Name="ZeroQuantities" DataType="System.Int32"/>
+    <Parameter Name="ShowCostPrices" DataType="System.Boolean"/>
+    <Total Name="Total" Expression="[Products.TotalBeforeTax]" Evaluator="Data1" PrintOn="ReportSummary1"/>
+    <Total Name="TotalIncludingTax" Expression="[Products.TotalIncludingTax]" Evaluator="Data1" PrintOn="ReportSummary1"/>
+    <Total Name="TotalCost" Expression="[Products.TotalCostBeforeTax]" Evaluator="Data1" PrintOn="ReportSummary1"/>
+    <Total Name="TotalCostIncludingTax" Expression="[Products.TotalCostIncludingTax]" Evaluator="Data1" PrintOn="ReportSummary1"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="297" PaperHeight="210" RawPaperSize="9" FirstPageSource="15" OtherPagesSource="15" ExtraDesignWidth="true">
+    <ReportTitleBand Name="ReportTitle1" Width="1047.06" Height="75.6" CanGrow="true">
+      <TextObject Name="Text44" Width="1048.95" Height="18.9" Text="[UpperCase([Labels.Reports.Stock])]" Font="Arial, 11pt, style=Bold"/>
+      <TextObject Name="Text35" Left="94.5" Top="28.35" Width="954.45" Height="18.9" Text="[Company.Name]" WordWrap="false" Font="Arial, 9pt" Trimming="EllipsisCharacter">
+        <Formats>
+          <DateFormat/>
+          <DateFormat/>
+        </Formats>
+      </TextObject>
+      <TextObject Name="Text36" Left="94.5" Top="47.25" Width="954.45" Height="18.9" Text="[Company.Address], [Company.PostalCode] [Company.City]" WordWrap="false" Font="Arial, 9pt" Trimming="EllipsisCharacter">
+        <Formats>
+          <DateFormat/>
+          <DateFormat/>
+        </Formats>
+      </TextObject>
+      <TextObject Name="Text37" Top="28.35" Width="94.5" Height="18.9" Text="[Labels.General.Company]:" WordWrap="false" Font="Arial, 9pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text38" Top="47.25" Width="94.5" Height="18.9" Text="[Labels.General.Company.Address]:" WordWrap="false" Font="Arial, 9pt" Trimming="EllipsisCharacter"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="79.6" Width="1047.06" Height="18.9" CanGrow="true">
+      <TextObject Name="Text49" Left="859.95" Width="94.5" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Labels.General.TotalBeforeTax]" Padding="2, 4, 2, 4" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="Text108" Left="954.45" Width="94.5" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Labels.General.Total]" Padding="2, 4, 2, 4" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="Text109" Left="765.45" Width="94.5" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Labels.Reports.Stock.CostIncludingTax]" Padding="2, 4, 2, 4" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="Text110" Left="670.95" Width="94.5" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Labels.Reports.Stock.CostBeforeTax]" Padding="2, 4, 2, 4" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="Text111" Left="548.1" Width="47.25" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Labels.General.UnitOfMeasurement]" Padding="2, 4, 2, 4" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="Text112" Left="472.5" Width="75.6" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Labels.General.Qty]" Padding="2, 4, 2, 4" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="Text113" Left="226.8" Width="245.7" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Labels.General.Product]" Padding="2, 4, 2, 4" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="Text114" Left="85.05" Width="141.75" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Labels.General.ProductGroup]" Padding="2, 4, 2, 4" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="Text115" Left="37.8" Width="47.25" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Labels.General.Code]" Padding="2, 4, 2, 4" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="Text116" Width="37.8" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Labels.General.Numbering]" Padding="2, 4, 2, 4" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="Text117" Left="595.35" Width="75.6" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Labels.Reports.Stock.CostPrice]" Padding="2, 4, 2, 4" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt, style=Bold"/>
+      <ChildBand Name="ChildHeaderSeparator" Top="102.5" Width="1047.06" Height="1.89" Tag="no-excel" Border.Lines="All" Border.Color="DarkGray" Fill.Color="DarkGray"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="108.39" Width="1047.06" Height="18.9" CanGrow="true" EvenStyle="EvenRow" DataSource="Table">
+      <TextObject Name="Text98" Left="37.8" Width="47.25" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Products.Code]" VertAlign="Center" Font="Tahoma, 9pt"/>
+      <TextObject Name="Text99" Left="226.8" Width="245.7" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Products.Name]" VertAlign="Center" Font="Tahoma, 9pt"/>
+      <TextObject Name="Text100" Left="472.5" Width="75.6" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Products.Quantity]" HorzAlign="Right" VertAlign="Center" Font="Tahoma, 9pt"/>
+      <TextObject Name="Text101" Width="37.8" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Row#]" HorzAlign="Center" VertAlign="Center" Font="Tahoma, 9pt"/>
+      <TextObject Name="Text102" Left="548.1" Width="47.25" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Products.MeasurementUnit]" VertAlign="Center" Font="Tahoma, 9pt"/>
+      <TextObject Name="Text103" Left="859.95" Width="94.5" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Products.TotalBeforeTax]" Format="Number" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Font="Tahoma, 9pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text104" Left="954.45" Width="94.5" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Products.TotalIncludingTax]" Format="Number" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Font="Tahoma, 9pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text105" Left="670.95" Width="94.5" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[IIf([ShowCostPrices],[Products.TotalCostBeforeTax],&quot;---&quot;)]" Format="Number" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Font="Tahoma, 9pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text106" Left="765.45" Width="94.5" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[IIf([ShowCostPrices],[Products.TotalCostIncludingTax],&quot;---&quot;)]" Format="Number" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Font="Tahoma, 9pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text97" Left="85.05" Width="141.75" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Products.ProductGroup]" VertAlign="Center" Font="Tahoma, 9pt"/>
+      <TextObject Name="Text118" Left="595.35" Width="75.6" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" GrowToBottom="true" Text="[Products.Cost]" Format="Number" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" Font="Tahoma, 9pt"/>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="131.29" Width="1047.06" Height="18.9">
+      <TextObject Name="Text13" Left="859.95" Width="94.5" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" Text="[Total]" Format="Number" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Font="Tahoma, 9pt, style=Bold"/>
+      <TextObject Name="Text14" Left="954.45" Width="94.5" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" Text="[TotalIncludingTax]" Format="Number" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Font="Tahoma, 9pt, style=Bold"/>
+      <TextObject Name="TextTotalCost" Left="670.95" Width="94.5" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" BeforePrintEvent="OnCostTotalBeforePrint" Text="[TotalCost]" Format="Number" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Font="Tahoma, 9pt, style=Bold"/>
+      <TextObject Name="TextTotalCostIncludingTax" Left="765.45" Width="94.5" Height="18.9" Border.Lines="All" Border.Color="Silver" CanGrow="true" BeforePrintEvent="OnCostTotalBeforePrint" Text="[TotalCostIncludingTax]" Format="Number" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Font="Tahoma, 9pt, style=Bold"/>
+    </ReportSummaryBand>
+    <PageFooterBand Name="PageFooter1" Top="154.19" Width="1047.06" Height="18.9">
+      <TextObject Name="Text56" Left="803.25" Width="245.7" Height="18.9" Text="[Labels.General.Page] [Page#] / [TotalPages]" HorzAlign="Right" VertAlign="Center" Font="Arial, 8pt"/>
+      <TextObject Name="Text107" Width="472.5" Height="18.9" Text="[Date]" AutoWidth="true" VertAlign="Center" Font="Arial, 8pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

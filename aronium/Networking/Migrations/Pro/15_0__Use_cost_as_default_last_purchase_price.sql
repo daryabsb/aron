@@ -1,0 +1,1 @@
+UPDATE Product SET LastPurchasePrice = Cost WHERE LastPurchasePrice = 0;

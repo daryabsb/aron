@@ -1,0 +1,165 @@
+<Workflow>
+  <Name>Aronium.Pos</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>False</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="9cf94b5a-389c-41ae-9915-9e4d5731c01f" name="Start">
+      <Transitions>
+        <DefaultTransition id="1e695a9b-15d5-430d-bc39-54876120e59a" name="Start">
+          <Target>d54f9581-d61b-4464-a853-46b6e26d17a3</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="7c93a149-2d01-439c-9207-555cedb70ec7" name="Business day">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.BusinessDay.SelectBusinessDayTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="24e0f7ee-ba26-4c75-88ac-acccf22416b1" name="Login">
+          <Target>5cb5f418-ac35-488c-9841-662f689339f1</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/BusinessDay/OpenBusinessDay.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="5cb5f418-ac35-488c-9841-662f689339f1" name="Login">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="1c6f9e0a-aefa-495b-bce8-0cdb82022922" name="Validate">
+          <Target>182c699a-20bc-4d83-9937-c403186cfb23</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Login.xaml</Variable>
+        <Variable name="Refresh">True</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="182c699a-20bc-4d83-9937-c403186cfb23" name="Authenticate">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.ValidateLogin</ClassName>
+      <Transitions>
+        <SuccessTransition id="7d889617-cbe6-4c6f-b668-88ee73b891a7" name="Success">
+          <Target>2bde61e8-2255-488c-817c-9e6a7ce059d1</Target>
+        </SuccessTransition>
+        <ErrorTransition id="92b849e1-344a-41de-bbc9-52defae0ad3d" name="Error">
+          <Target>5cb5f418-ac35-488c-9841-662f689339f1</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="b34ccb57-0174-4d4e-94b7-25abb76a9c66" name="Select order">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.SelectOrder</ClassName>
+      <Transitions>
+        <DefaultTransition id="7c9c2e1c-617a-4bdb-a21b-69efafae203b" name="Continue">
+          <Target>1fa23939-2eea-4ac1-b4b1-ee00d88d39dd</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Touch/FloorPlans.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="1149e540-37c1-446c-8e08-5f9b82966e26" name="Load order">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.LoadOrder</ClassName>
+      <Transitions>
+        <DefaultTransition id="01bb0995-a466-4dde-84c6-011a4fccc569" name="Continue">
+          <Target>c3e1111f-d863-4b7d-9a29-f2713f4a65ea</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="c3e1111f-d863-4b7d-9a29-f2713f4a65ea" name="Main View">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.MainViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="c600e4af-0049-4130-94c3-400f0c2ce951" name="SELECT_ORDER">
+          <Target>b34ccb57-0174-4d4e-94b7-25abb76a9c66</Target>
+        </DefaultTransition>
+        <DefaultTransition id="9932f079-35e1-4efd-a31f-43b637f8db9f" name="LOGOUT">
+          <Target>5cb5f418-ac35-488c-9841-662f689339f1</Target>
+        </DefaultTransition>
+        <DefaultTransition id="6e5dd5a1-bedf-4374-a971-8c6974dd97ff" name="End">
+          <Target>b4e8fe0f-f91a-413c-aba5-2765e9bfc1c3</Target>
+        </DefaultTransition>
+        <DefaultTransition id="9b3b75cf-cb27-45c8-9eea-a6b1249a2829" name="ORDER">
+          <Target>053bb27c-b981-4c20-b227-13fc3e13ac93</Target>
+        </DefaultTransition>
+        <DefaultTransition id="8ecf0526-fe79-4baa-83cc-2da9d02e0eed" name="ROUND">
+          <Target>3d5acabe-c0ac-419c-bb92-a707a82662d9</Target>
+        </DefaultTransition>
+        <DefaultTransition id="0a4a0a48-f471-42a3-8ea4-0cfbfbae704d" name="RELOAD">
+          <Target>1fa23939-2eea-4ac1-b4b1-ee00d88d39dd</Target>
+        </DefaultTransition>
+        <DefaultTransition id="52692cf5-f560-410b-9639-3b56c27dabe5" name="CHECK_LOGIN">
+          <Target>053bb27c-b981-4c20-b227-13fc3e13ac93</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Refresh">true</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="053bb27c-b981-4c20-b227-13fc3e13ac93" name="Single user">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.SingleUserRouter</ClassName>
+      <Transitions>
+        <SuccessTransition id="d5f4cf38-06d3-48d6-bed5-239ca0ce0afb" name="Single user">
+          <Target>b34ccb57-0174-4d4e-94b7-25abb76a9c66</Target>
+        </SuccessTransition>
+        <ErrorTransition id="71f58d55-f049-4a92-b1e9-1fd7bc98e0b9" name="Multi user">
+          <Target>5cb5f418-ac35-488c-9841-662f689339f1</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <EndTask id="b4e8fe0f-f91a-413c-aba5-2765e9bfc1c3" name="End" />
+    <ExternalTask id="3d5acabe-c0ac-419c-bb92-a707a82662d9" name="New round">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.WorkflowRunner</ClassName>
+      <Transitions>
+        <DefaultTransition id="e6c39427-4209-4e28-80b8-78f2ecd327b6" name="Completed">
+          <Target>c3e1111f-d863-4b7d-9a29-f2713f4a65ea</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Workflow">Aronium.Pos.Order.Create</Variable>
+        <Variable name="Variables">Order</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="d54f9581-d61b-4464-a853-46b6e26d17a3" name="Onboard">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.OnboardTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="8de1d26a-d4cb-4ca5-9c94-64c999421b40" name="Onboard">
+          <Target>c3e1111f-d863-4b7d-9a29-f2713f4a65ea</Target>
+        </DefaultTransition>
+        <DefaultTransition id="f72a4f69-2ace-4ba5-8ec0-8714dddef057" name="Continue">
+          <Target>7c93a149-2d01-439c-9207-555cedb70ec7</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/BusinessDay/OpenBusinessDay.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="2bde61e8-2255-488c-817c-9e6a7ce059d1" name="Starting Cash">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.BusinessDay.StartingCashTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="c7ea671e-d9fd-4317-ac85-022d63c9fb06" name="Continue">
+          <Target>b34ccb57-0174-4d4e-94b7-25abb76a9c66</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/BusinessDay/StartingCashTaskView.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="1fa23939-2eea-4ac1-b4b1-ee00d88d39dd" name="Order plugins">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.OrderPluginsTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="59196f66-f768-4379-94fc-7e5f47edc304" name="Continue">
+          <Target>1149e540-37c1-446c-8e08-5f9b82966e26</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+  </Tasks>
+</Workflow>

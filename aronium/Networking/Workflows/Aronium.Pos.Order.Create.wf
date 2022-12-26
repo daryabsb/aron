@@ -1,0 +1,48 @@
+<Workflow>
+  <Name>Aronium.Pos.Order.Create</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="78b4f49c-81e8-41fc-8a9b-6c6a31b3de42" name="Start">
+      <Transitions>
+        <DefaultTransition id="6c31e3ec-695f-458e-8259-eb8e0f914527" name="Create order">
+          <Target>0fd235d9-46e0-4ae0-ba89-efe17b2c883a</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="0fd235d9-46e0-4ae0-ba89-efe17b2c883a" name="Create order">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.CreateOrder</ClassName>
+      <Transitions>
+        <DefaultTransition id="ef24a50b-f841-43a1-8adb-0d639b8f3553" name="Completed">
+          <Target>12eef374-3f6f-4dce-bfae-133a71cf710a</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="c760b995-dfff-4a0d-ab5d-be4790e2aaa6" name="Print kitchen order">
+      <AssemblyName>Modules\Aronium.Pos.Print\Aronium.Pos.Print</AssemblyName>
+      <ClassName>Aronium.Pos.Print.Tasks.PrintKitchenOrder</ClassName>
+      <Transitions>
+        <DefaultTransition id="1036e737-3eff-4ba7-a866-86811b7d05fc" name="End">
+          <Target>ed1e7103-7b27-4523-ade8-b29e211ebfb5</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <EndTask id="ed1e7103-7b27-4523-ade8-b29e211ebfb5" name="End" />
+    <RouterTask id="12eef374-3f6f-4dce-bfae-133a71cf710a" name="Refund">
+      <IsExclusive>False</IsExclusive>
+      <Transitions>
+        <SuccessTransition id="120813c9-86d9-4648-9103-2053fe5c639b" name="End">
+          <Target>ed1e7103-7b27-4523-ade8-b29e211ebfb5</Target>
+        </SuccessTransition>
+        <ErrorTransition id="6898dad1-c95b-45e8-ba46-e29ccf228e68" name="Print">
+          <Target>c760b995-dfff-4a0d-ab5d-be4790e2aaa6</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="IsRefund">True</Variable>
+      </Variables>
+    </RouterTask>
+  </Tasks>
+</Workflow>
