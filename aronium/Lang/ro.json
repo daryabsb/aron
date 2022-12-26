@@ -1,0 +1,2339 @@
+{
+  "code": "ro",
+  "name": "Romana",
+  "Buttons": {
+    "Yes": {
+      "Text": "Da"
+    },
+    "Ok": {
+      "Text": "OK"
+    },
+    "No": {
+      "Text": "Nu"
+    },
+    "Cancel": {
+      "Text": "Anuleaza"
+    },
+    "Save": {
+      "Text": "Salveaza"
+    },
+    "Close": {
+      "Text": "Inchide"
+    },
+    "Add": {
+      "Text": "Adauga"
+    },
+    "New": {
+      "Text": "Nou"
+    },
+    "Edit": {
+      "Text": "Editare"
+    },
+    "Cut": {
+      "Text": "Taie"
+    },
+    "Copy": {
+      "Text": "Copiaza"
+    },
+    "Paste": {
+      "Text": "Lipeste"
+    },
+    "Delete": {
+      "Text": "Sterge"
+    },
+    "Refresh": {
+      "Text": "Reimprospatare"
+    },
+    "Login": {
+      "Text": "Logare"
+    },
+    "Logout": {
+      "Text": "DeLogare"
+    },
+    "Print": {
+      "Text": "Tiparire"
+    },
+    "SavePdf": {
+      "Text": "Salveaza ca PDF"
+    },
+    "Hide": {
+      "Text": "Ascunde"
+    },
+    "FirstPage": {
+      "Text": "Prima pagina"
+    },
+    "LastPage": {
+      "Text": "Ultima pagina"
+    },
+    "NextPage": {
+      "Text": "Pagina urmatoare"
+    },
+    "PreviousPage": {
+      "Text": "Pagina anterioara"
+    },
+    "Continue": {
+      "Text": "Continua"
+    },
+    "Clear": {
+      "Text": "Sterge"
+    },
+    "Exit": {
+      "Text": "Iesire"
+    },
+    "Search": {
+      "Text": "Cauta"
+    },
+    "Ignore": {
+      "Text": "Ignora"
+    },
+    "Retry": {
+      "Text": "Reincearca"
+    },
+    "DeleteAll": {
+      "Text": "Sterge tot"
+    },
+    "Skip": {
+      "Text": "Sari"
+    },
+    "Restart": {
+      "Text": "Restart"
+    },
+    "SaveAndClose": {
+      "Text": "Salveaza & inchide"
+    },
+    "Help": {
+      "Text": "Ajutor"
+    },
+    "Back": {
+      "Text": "Inapoi"
+    },
+    "LearnMore": {
+      "Text": "Invata mai multe"
+    },
+    "Done": {
+      "Text": "Gata"
+    },
+    "Send": {
+      "Text": "Trimite"
+    },
+    "WhatsThis": {
+      "Text": "Ce e asta?"
+    }
+  },
+  "Bootstrap": {
+    "Initializing": {
+      "Text": "Initializeaza aplicatia..."
+    },
+    "Load": {
+      "Components": {
+        "Text": "Incarcare componente aplicatie"
+      },
+      "Modules": {
+        "Text": "Incarcare si initializeaza module..."
+      },
+      "Products": {
+        "Text": "Incarca produse...",
+        "Error": {
+          "Text": "Eroare incarcare produse.",
+          "Info": {
+            "Text": "Unele produse s-ar putea sa nu fie libere pentru vanzare. Verifca aceste produse si incearca din nou."
+          },
+          "DuplicateBarcode": {
+            "Text": "Cod de bare duplicat \"{0}\""
+          },
+          "DuplicateCode": {
+            "Text": "Cod duplicat \"{0}\""
+          },
+          "Copy": {
+            "Text": "Copiere in clipboard"
+          }
+        }
+      },
+      "CashRegister": {
+        "Text": "Incarcarea datelor de casa de marcat"
+      },
+      "ScanTypes": {
+        "Text": "Tip scanare"
+      }
+    },
+    "Connect": {
+      "Text": "Conectare la baza de date",
+      "NoDataProvider": {
+        "Text": "Modulul pentru conectare la baza de date nu e disponibil.\\nTe rog contacteaza administratorul sau distribuitorul."
+      }
+    },
+    "Error": {
+      "Text": "A aparut o eroare la incercarea de a porni aplicatia. Te rog contacteaza administratorul de sistem."
+    },
+    "Completed": {
+      "Text": "Pornirea aplicatiei"
+    },
+    "BackupDatabase": {
+      "Text": "Confirmarea versiunii bazei de date..."
+    },
+    "Migrations": {
+      "Text": "Verificarea bazei de date...",
+      "Failed": {
+        "Text": "Migrarea bazei de date nereusita!"
+      }
+    },
+    "RestartRequired": {
+      "Text": "Aplicatia trebuie repornita pentru ca modificarile sa aiba efect.\\nApasa butonul de mai jos pentru a reporni aplicatia."
+    }
+  },
+  "Onboarding": {
+    "Welcome": {
+      "Text": "Bine ati venit",
+      "Info": {
+        "Text": "Haideti sa setam datele de baza ale magazinului si aplicatiei.\\nTot procesul va dura doar cateva minute."
+      },
+      "Start": {
+        "Text": "START"
+      }
+    },
+    "Back": {
+      "Text": "Inapoi"
+    },
+    "Skip": {
+      "Text": "Sari peste ..."
+    },
+    "Hide": {
+      "Text": "Nu mai arata aceasta in viitor"
+    },
+    "Next": {
+      "Text": "Sari"
+    },
+    "Continue": {
+      "Text": "Salveaza & Continua"
+    },
+    "Layout": {
+      "Text": "Alege formatul",
+      "LearnMore": {
+        "Text": "Invata mai multe despre formatul si spatiu de lucru"
+      },
+      "Standard": {
+        "Text": "Standard",
+        "Description": {
+          "Text": "Foloseste acest format daca utilizezi cititor de coduri de bare sau ai tastatura fizica la calculator."
+        }
+      },
+      "TouchScreen": {
+        "Text": "Vizual",
+        "Description": {
+          "Text": "Foloseste acest format daca doresti sa folsesti produse si grupe pe ecranul de vanzari ca butoane."
+        }
+      },
+      "EnableVirtualKeyboard": {
+        "Text": "Activeaza tastatura virtuala"
+      }
+    },
+    "Registration": {
+      "Text": "Inregistrare",
+      "Info": {
+        "Text": "Te rog, introdu adresa ta de e-mail, astfel putem sa va ajutam mai usor.",
+        "Email": {
+          "Text": "Acest e-mail va fi alocat contului implicit de administrator si va putea fi folosit pentru a reseta parole. Poti sa schimbi aceasta adresa de e-mail oricand."
+        }
+      },
+      "Email": {
+        "Text": "Adresa ta de e-mail",
+        "Privacy": {
+          "Text": "E-mail-ul tau va fi strict confidential. O sa utilizam acest e-mail pentru a-ti asigura asistenta personalizata si a-ti trimite cele mai noi modificari, doar daca doresti.\\nNici noua nu ne place \"spam-ul\"."
+        }
+      }
+    },
+    "UserProfile": {
+      "Title": {
+        "Text": "Hai sa setam contul personal"
+      },
+      "Info": {
+        "Text": "Te rog introdu numele si elementele pentru logare ca administrator"
+      },
+      "LearnMore": {
+        "Text": "Learn more about users and default credentials"
+      },
+      "FirstName": {
+        "Text": "Numele"
+      },
+      "LastName": {
+        "Text": "Prenumele"
+      },
+      "Password": {
+        "Text": "Parola",
+        "Errors": {
+          "Empty": {
+            "Text": "Parola nu respecta criteriile necesare. Parola trebuie sa aiba cel putin 4 caractere"
+          },
+          "ConfirmationError": {
+            "Text": "Confirmarea parolei nu corespunde. Te rog introdu aceeasi parola in ambele campuri."
+          }
+        }
+      },
+      "ConfirmPassword": {
+        "Text": "Confirmare parola"
+      },
+      "Email": {
+        "Text": "E-mail",
+        "Info": {
+          "Text": "Acest e-mail va fi utilizat ca e-mail de recuperare pentru contul tau.\\nVerifica sa fie corect introdus pentru a putea reseta parola prin e-mail."
+        }
+      }
+    },
+    "Completed": {
+      "Text": "Onboarding completed",
+      "Info": {
+        "Text": "Felicitari! Setarile sunt facute si suntem gata.\\nPasul urmator ... deschide sectiunea \"Administrare\" pentru a adouga ceva produse si porneste vanzarile."
+      },
+      "Finish": {
+        "Text": "Inchide & Continua"
+      }
+    }
+  },
+  "BusinessDay": {
+    "Close": {
+      "Authorization": {
+        "Title": {
+          "Text": "Te rog introdu parola pentru a inchide ziua"
+        }
+      }
+    },
+    "Select": {
+      "Text": "Alege ziua de lucru",
+      "EnableSelection": {
+        "Text": "(Apasa pe data pentru a modifica ziua de lucru)"
+      }
+    }
+  },
+  "Application": {
+    "Close": {
+      "Text": "Iesire din aplicatie",
+      "Info": {
+        "Text": "Esti sigur ca vrei  sa iesi din aplicatie?"
+      },
+      "ShutDown": {
+        "Text": "Iesire din aplicatie"
+      },
+      "Restart": {
+        "Text": "Repornirea aplicatiei"
+      }
+    },
+    "FullScreen": {
+      "Text": "Ecran complet"
+    },
+    "Exit": {
+      "Text": "Iesire din aplicatie"
+    },
+    "Menu": {
+      "Text": "Meniu"
+    },
+    "RestartRequired": {
+      "Text": "Repornire necesara",
+      "Info": {
+        "Text": "Repornirea aplicatiei este necesara pentru ca modificarile sa aiba efect. Vrei sa repornesti aplicatia acum?"
+      }
+    },
+    "ReloadProducts": {
+      "Text": "Reincarcarea produselor",
+      "Info": {
+        "Text": "Produsele s-au modificat. Vrei sa reincarci produsele acum?"
+      }
+    }
+  },
+  "Period": {
+    "Text": "Perioada",
+    "Start": {
+      "Text": "Start"
+    },
+    "End": {
+      "Text": "Sfarsit"
+    },
+    "Preset": {
+      "Text": "Perioada predefinita",
+      "Today": {
+        "Text": "Azi"
+      },
+      "Yesterday": {
+        "Text": "Ieri"
+      },
+      "ThisWeek": {
+        "Text": "Saptamana aceasta"
+      },
+      "LastWeek": {
+        "Text": "Ultima saptamana"
+      },
+      "ThisMonth": {
+        "Text": "Aceasta luna"
+      },
+      "LastMonth": {
+        "Text": "Ultima luna"
+      },
+      "ThisYear": {
+        "Text": "Acest an"
+      },
+      "LastYear": {
+        "Text": "Ultimul an"
+      }
+    }
+  },
+  "Login": {
+    "Text": "Logare",
+    "Password": {
+      "Text": "Parola",
+      "Forgot": {
+        "Text": "Ai uitat parola ?"
+      }
+    },
+    "Error": {
+      "Text": "Logare nereusita. Verifica parola si incearca din nou."
+    },
+    "Authentication": {
+      "Text": "Logare utilizator",
+      "Failed": {
+        "Text": "Utilizator negasit. Verifica si incearca din nou."
+      }
+    },
+    "Reset": {
+      "Text": "Resetarea parolei",
+      "LearnMore": {
+        "Text": "Invata mai multe despre resetarea parolei."
+      },
+      "Email": {
+        "Text": "Introdu adresa de e-mail",
+        "Info": {
+          "Text": "Introdu adresa de e-mail asociata utilizatorului pentru care vrei sa resetezi parola.\\nO sa-ti trimitem un cod de verificare la e-mail-ul pe care l-ai introdus mai jos."
+        },
+        "Required": {
+          "Text": "E-mail-ul este necesar"
+        },
+        "EmailAddress": {
+          "Text": "Adresa de e-mail",
+          "Tooltip": {
+            "Text": "Introdu adresa ta de e-mail"
+          }
+        },
+        "ExistingCode": {
+          "Text": "Am codul. Du-ma la urmatorul pas."
+        }
+      },
+      "Code": {
+        "Text": "Verifica codul",
+        "Info": {
+          "Text": "Verifica-ti e-mail-ul - ti-am trimis codul de autorizare pe care trebuie sa-l introduci in caseta de mai jos.\\nDaca nu ai primit un e-mail cu codul de autorizare, te rog verifica directorul \"spam\" sau incearca sa trimiti un e-mail din nou."
+        },
+        "Email": {
+          "Text": "Codul de autorizare e trimis la {0}."
+        },
+        "AuthorizationCode": {
+          "Text": "Cod de autorizare",
+          "Tooltip": {
+            "Text": "Introdu codul de autorizare aici ..."
+          }
+        },
+        "Verify": {
+          "Text": "Verificare cod"
+        }
+      },
+      "Password": {
+        "Text": "Introdu parola noua",
+        "Info": {
+          "Text": "Introdu parola noua si confirmarea parolei pentru contul local.\\nParola noua si confirmarea parolei trebuie sa fie identice.\\n\\nDupa ce ai terminat, apasa butonul \"OK\" pentru a reseta parola."
+        },
+        "NewPassword": {
+          "Text": "Parola noua"
+        },
+        "NewPasswordConfirmation": {
+          "Text": "Confirmare parola noua"
+        },
+        "InUse": {
+          "Text": "Parola aleasa este deja folosita. Te rog alege o parola diferita si incearca din nou."
+        },
+        "User": {
+          "Text": "Utilizator : {0}"
+        },
+        "SetPassword": {
+          "Text": "Setaza parola ta noua"
+        },
+        "Success": {
+          "Text": "Parola a fost schimbata cu succes"
+        }
+      },
+      "Error": {
+        "Expired": {
+          "Text": "Codul tau de autorizare a expirat.\\nTe rog solicita un nou cod de autorizare."
+        },
+        "InvalidCode": {
+          "Text": "Cod invalid. Te rog introdu un cod valid si incearca din nou."
+        },
+        "NoSuchUser": {
+          "Text": "Utilizatorul cu e-mail-ul \"{0}\" nu exista.\\nTe rog introdu un e-mail valid si incearca din nou."
+        },
+        "InvalidEmailAddress": {
+          "Text": "Adresa de e-mail nu e valida. Te rog introdu o adresa de e-mail valida si incearca din nou."
+        },
+        "LimitReached": {
+          "Text": "Ai atins numarul maxim de incercari de reset a parolei.\\nPoti sa incerci din nou peste 24 de ore."
+        },
+        "GeneralError": {
+          "Text": "A aparut o eroare la incercarea de a trimite o cerere de resetare a parolei.\\nTe rog incearca din nou mai tarziu."
+        }
+      }
+    }
+  },
+  "Order": {
+    "List": {
+      "Text": "Deschide lista comenzilor",
+      "Select": {
+        "Text": "Alege comanda"
+      }
+    },
+    "New": {
+      "Text": "Vanzare noua"
+    },
+    "Estimate": {
+      "Text": "Blocare",
+      "Authorization": {
+        "Title": {
+          "Text": "Te rog introdu parola pentru a bloca vanzarea"
+        }
+      },
+      "Created": {
+        "Text": "Comanda a fost blocata"
+      },
+      "Clear": {
+        "Text": "Deblocheaza aceasta vanzare",
+        "Authorization": {
+          "Title": {
+            "Text": "Te rog introdu parola pentru a debloca vanzarea"
+          }
+        },
+        "Success": {
+          "Text": "Comanda a fost deblocata"
+        }
+      },
+      "Locked": {
+        "Text": "Vanzare blocata",
+        "Info": {
+          "Text": "Modificarea unei vanzari blocate nu e permisa."
+        }
+      },
+      "Issued": {
+        "Text": "Aceasta vanzare e deja blocata.\\nModificarea unei vanzari blocate nu e permisa."
+      },
+      "NoItems": {
+        "Text": "Nici un element de blocat."
+      }
+    },
+    "Transfer": {
+      "Text": "Transfer",
+      "Authorization": {
+        "Title": {
+          "Text": "Te rog introdu parola pentru a accesa optiuni de transfer"
+        }
+      },
+      "All": {
+        "Text": "Transfera toate comenzile",
+        "Confirmation": {
+          "Text": "Transferarea tuturor comenzilor catre alt utilizator e ireversibila!\\n\\nEsti sigur ca vrei sa transferi toate comenzile tale catre {0}?"
+        },
+        "Success": {
+          "Text": "Toate comenzile au fost transferate cu succes."
+        },
+        "Error": {
+          "Text": "S-a produs o eroare la transferul comenzilor catre utilizatorul selectat.\\nTe rog incearca din nou."
+        }
+      },
+      "Orders": {
+        "Text": "Deschide comenzile"
+      },
+      "OrderNumber": {
+        "Text": "Numar comanda",
+        "Select": {
+          "Text": "Selecteaza comanda"
+        }
+      },
+      "Quantity": {
+        "Text": "Selecteaza cantitatile de transferat"
+      },
+      "User": {
+        "Text": "Utilizator",
+        "Current": {
+          "Text": "Utilizatorul selectat este deja proprietarul comenzii.\\nProdusele vor fi transferate aceluiasi utilizator."
+        }
+      },
+      "Rounds": {
+        "Text": "Tranfer rounds",
+        "Summary": {
+          "Text": "Elementele comenzii"
+        },
+        "Selection": {
+          "Text": "Select rounds to transfer"
+        }
+      },
+      "Items": {
+        "Text": "Elementele comenzii",
+        "Selected": {
+          "Text": "Elementele selectate pentru transfer",
+          "NoItems": {
+            "Text": "Selecteaza elemente pentru transfer"
+          }
+        },
+        "All": {
+          "Text": "Transfera tot"
+        },
+        "Back": {
+          "Text": "Elimina tot"
+        },
+        "InvalidQuantity": {
+          "Text": "Transferul elementelor selectate nu e permisa",
+          "Info": {
+            "Text": "Cantitatea totala a elementelor selectate e mai mica decat cantitatea selectata pentru transfer.\\nVerifica cantitatea de transferat, elementele anulate si incearca din nou."
+          }
+        }
+      },
+      "CurrentOrder": {
+        "Text": "Transfer catre aceeasi comanda",
+        "Confirmation": {
+          "Text": "Ai ales sa transferi elemente catre aceeasi comanda.\\nEsti sigur ca vrei sa transferi elemente catre aceeasi comanda?"
+        }
+      },
+      "Failed": {
+        "Text": "Eroare la transferul elementelor",
+        "Info": {
+          "Text": "A aparut o eroare la incercarea de a transfera elementele. Te rog incearca din nou."
+        }
+      },
+      "Completed": {
+        "Text": "Transferul finalizat cu succes"
+      },
+      "NoItems": {
+        "Text": "Nu sunt elemente pentru transfer"
+      }
+    },
+    "Void": {
+      "Text": "Anulare comanda",
+      "Authorization": {
+        "Title": {
+          "Text": "Te rog introdu parola pentru a anula aceasta comanda"
+        }
+      },
+      "Confirm": {
+        "Text": "Anulare comanda",
+        "Info": {
+          "Text": "Est sigur ca vrei sa anulezi toate elementele din comanda selectata?"
+        }
+      },
+      "Completed": {
+        "Text": "Comanda anulata cu succes"
+      },
+      "NoItems": {
+        "Text": "Nu sunt elemente de anulat"
+      }
+    },
+    "Rounds": {
+      "Repeat": {
+        "Text": "Repetare",
+        "NoItems": {
+          "Text": "Nu sunt elemente in comanda.\\nRepetarea rundei poate fi efectuata doar daca sunt elemente in comanda."
+        },
+        "NoQuantities": {
+          "Text": "In runda selectata  #{0} nu sunt elemente suficiente pentru repetare"
+        }
+      },
+      "New": {
+        "Text": "Runda noua",
+        "NoItems": {
+          "Text": "Nu sunt elemete in comanda pentru a crea o noua runda.\\nCompleteaza elemente in comanda si incearca din nou,"
+        },
+        "NoUnsavedItems": {
+          "Text": "Toate elementele din comanda sunt salvate. O noua runda a fost pornita."
+        }
+      },
+      "SelectAll": {
+        "Text": "Selecteaza tot"
+      },
+      "SelectNone": {
+        "Text": "Anuleaza tot"
+      },
+      "Total": {
+        "Text": "Total:"
+      },
+      "NoItems": {
+        "Text": "Nici un element selectat"
+      }
+    },
+    "Comment": {
+      "Text": "Comentarii",
+      "Add": {
+        "Text": "Alege un comentariu existent sau scrie comentariul tau pentru elementul \"{0}\""
+      },
+      "Insert": {
+        "Text": "Scrie comentariul aici..."
+      },
+      "Change": {
+        "Text": "Schimba comentariu",
+        "Forbidden": {
+          "Text": "Modificarea elementului selectat nu e permisa",
+          "Info": {
+            "Text": "Elementul \"{0}\" este comandat si confirmat\\nModificarea unui element confirmat nu este permisa."
+          }
+        },
+        "NoItem": {
+          "Text": "Nici un element nu este selectat.\\nSelecteaza un element pentru care vrei sa adoagi un comentariu si incearca din nou."
+        }
+      }
+    },
+    "Subtotal": {
+      "Text": "Subtotal"
+    },
+    "Tax": {
+      "Text": "TVA"
+    },
+    "Total": {
+      "Text": "TOTAL"
+    },
+    "Checkout": {
+      "Text": "Plata"
+    },
+    "Save": {
+      "Text": "Salveaza vanzarea"
+    },
+    "Refund": {
+      "Text": "Restituire",
+      "Authorization": {
+        "Text": "Parola necesara pentru operatia de restituire"
+      },
+      "Title": {
+        "Text": "Elemente restituite"
+      },
+      "Total": {
+        "Text": "VALOARE TOTALA RESTITUIRE"
+      },
+      "ReceiptNumber": {
+        "Text": "Numarul bonului"
+      },
+      "PaymentType": {
+        "Text": "Mod de plata a restituirii"
+      },
+      "Description": {
+        "Text": "Introdu numarul bonului si tipul platii pentru a confirma restituirea"
+      },
+      "Print": {
+        "PrinterNotFound": {
+          "Text": "Imprimanta pentru restituire nu e selectata"
+        }
+      },
+      "MultyplePaymentTypes": {
+        "Text": "Documentul selectat contine mai multe modalitati de plata. Selecteaza optiunea de mai jos pentru a copia modalitatile de plata la acest retur",
+        "Copy": {
+          "Text": "Copiaza madalitatile de plata din documentul original"
+        }
+      }
+    },
+    "Items": {
+      "Name": {
+        "Text": "Nume produs"
+      },
+      "Quantity": {
+        "Text": "Cantitate",
+        "Change": {
+          "Text": "Schimba cantitatea",
+          "Item": {
+            "Text": "Element \"{0}\""
+          },
+          "Forbidden": {
+            "Text": "Modificarea cantitatii nu e permisa",
+            "Info": {
+              "Text": "Elementul \"{0}\" e confirmat.\\nModificarea unui element confirmat nu e permisa."
+            }
+          },
+          "Product": {
+            "Text": "Produs \"{0}\"\\nCantitate implicita: {1:#,#.000}"
+          }
+        },
+        "Invalid": {
+          "Text": "Cantitate incorecta. Introdu cantitatea corecta si incearca din nou."
+        }
+      },
+      "Price": {
+        "Text": "Pret",
+        "Change": {
+          "Text": "Schimbare pret",
+          "Product": {
+            "Text": "Produse \"{0}\"\\nPret: {1:#,#.00}"
+          }
+        }
+      },
+      "Total": {
+        "Text": "Valoare"
+      },
+      "Empty": {
+        "Text": "Nici un element",
+        "Info": {
+          "Text": "Adauga produse pe bon utilizand cod de bare, cod sau cauta apasand butonul F3"
+        }
+      },
+      "Start": {
+        "Text": "Start"
+      },
+      "Page": {
+        "Text": "Pagina"
+      },
+      "Add": {
+        "Error": {
+          "Text": "Eroare la adougare element. Datele elementului sunt invalide.\\nVerifica pretul si cantitatea elementului si incearca din nou."
+        }
+      },
+      "Void": {
+        "NoItems": {
+          "Text": "Anularea elementului \"{0}\" nu e permisa. Cantitate insuficienta."
+        }
+      }
+    },
+    "Print": {
+      "User": {
+        "Text": "Utilizator: {0}"
+      },
+      "Time": {
+        "Text": "Timp: {0}"
+      },
+      "Number": {
+        "Text": "Comanda numarul: {0}"
+      },
+      "Estimate": {
+        "Text": "PROFORMA",
+        "Total": {
+          "Text": "TOTAL:"
+        },
+        "Footer": {
+          "Text": "Acesta nu e un bon fiscal.\\nTe rog asteapta bonul fiscal."
+        }
+      },
+      "Kitchen": {
+        "NumberAndRound": {
+          "Text": "Masa: {0}. Runda: {1}"
+        }
+      },
+      "Dialog": {
+        "Title": {
+          "Text": "Cum ii place clientului bonul de casa ?"
+        },
+        "Change": {
+          "Text": "Schimba"
+        },
+        "Receipt": {
+          "Text": "Tipareste bonul de casa"
+        },
+        "Invoice": {
+          "Text": "Tipareste factura"
+        },
+        "Email": {
+          "Text": "Trimite e-mail",
+          "Recipient": {
+            "Text": "E-mail  destinatie",
+            "Title": {
+              "Text": "Introdu mesajul e-mail-ului si apasa butonul \"Trimite\" pentru a continua"
+            },
+            "EmailAddress": {
+              "Text": "Adresa e-mail a destinatarului",
+              "Description": {
+                "Text": "Introdu adresa de e-mail a clientului"
+              },
+              "AddCustomer": {
+                "Text": "Adauga client"
+              }
+            },
+            "Subject": {
+              "Text": "Subiect",
+              "Description": {
+                "Text": "Introdu linia subiect"
+              },
+              "Default": {
+                "Text": "Bon de casa {0}"
+              }
+            },
+            "Message": {
+              "Text": "Mesaj",
+              "Description": {
+                "Text": "Introdu mesajul pentru client"
+              },
+              "Default": {
+                "Text": "Draga client,\\n\\nGasesti bonul de casa atasat.\\n\\nData bonului de casa: {0}\\nTotal: {1}"
+              }
+            },
+            "CopySelf": {
+              "Text": "Trimite-mi si mie o copie"
+            },
+            "Error": {
+              "EmailFormat": {
+                "Text": "Adresa de e-mail este scrisa gresit.\\nTe rog verifica adresa de e-mail si incearca din nou."
+              }
+            }
+          },
+          "Sending": {
+            "Text": "Se trimite e-mail ... Te rog asteapta ..."
+          },
+          "Sent": {
+            "Text": "Bonul de casa este trimis catre {0}"
+          }
+        },
+        "Hide": {
+          "Text": "Nu mai arata in viitor"
+        }
+      }
+    },
+    "Products": {
+      "Search": {
+        "Text": "Cauta",
+        "Name": {
+          "Text": "Nume produs",
+          "Tooltip": {
+            "Text": "Cauta produsul dupa nume"
+          },
+          "NotFound": {
+            "Text": "Nici un rezultat pentru \"{0}\"",
+            "Info": {
+              "Text": "Te rog verifica parametrii tai de cautare si incearca din nou"
+            }
+          }
+        },
+        "Barcode": {
+          "Text": "Cod de bare",
+          "Tooltip": {
+            "Text": "Cauta produse dupa cod de bare"
+          },
+          "NotFound": {
+            "Text": "Cod de bare negasit"
+          }
+        },
+        "Code": {
+          "Text": "Cod produs",
+          "Tooltip": {
+            "Text": "Cauta produse dupa cod"
+          },
+          "NotFound": {
+            "Text": "Cod negasit"
+          }
+        },
+        "NoItems": {
+          "Text": "Nici un produs nu e selectat",
+          "Info": {
+            "Text": "Cauta produse dupa nume sau cod pentru a continua"
+          }
+        },
+        "Selection": {
+          "Price": {
+            "Text": "Pret"
+          },
+          "Description": {
+            "Text": "Descriere"
+          }
+        },
+        "NoResults": {
+          "Text": "Nici un rezultat"
+        }
+      },
+      "NoProducts": {
+        "Text": "Nici un produs disponibil",
+        "Info": {
+          "Text": "Te rog adauga produse sau seteaza pret de vanzare la cele existente pentru a continua"
+        }
+      }
+    },
+    "Lock": {
+      "Text": "Blocare"
+    },
+    "Unlock": {
+      "Text": "Deblocare"
+    },
+    "Item": {
+      "Void": {
+        "Authorization": {
+          "Title": {
+            "Text": "Te rog introdu parola pentru a anula elementul selectat"
+          }
+        }
+      }
+    },
+    "QuickPayment": {
+      "Text": "Plata rapida",
+      "Confirmation": {
+        "Text": "Ai selectat \"{0}\" ca modalitate de plata pentru vanzarea curenta.\\n\\nDoresti sa continui utilizand modalitatea de plata selectata?"
+      }
+    },
+    "Discount": {
+      "Text": "Reducere",
+      "Authorization": {
+        "Text": "Te rog introdu parola pentru a aplica reducerea"
+      },
+      "Cart": {
+        "Invalid": {
+          "Text": "Reducere invalida",
+          "GreaterThenTotal": {
+            "Text": "Valoarea fixa nu poate fi mai mare decat totalul comenzii"
+          }
+        }
+      },
+      "Item": {
+        "NotSelected": {
+          "Text": "Pentru a aplica reducerea unui singur element, selecteaza unul din lista de vanzare inaintea deschiderii acestui dialog"
+        },
+        "Invalid": {
+          "Text": "Reducerea elementului e invalida",
+          "GreaterThenTotal": {
+            "Text": "Valoarea fixa nu poate fi mai mare\\ndecat valoarea totala"
+          }
+        }
+      }
+    }
+  },
+  "Closing": {
+    "Text": "Sfarsit de zi",
+    "Users": {
+      "Text": "Deschide tranzactia",
+      "User": {
+        "Total": {
+          "Text": "TOTAL:"
+        }
+      },
+      "Summary": {
+        "Text": "Deschide tranzactiile"
+      },
+      "NoReports": {
+        "Text": "Nici o tranzactie deschisa"
+      }
+    },
+    "Option": {
+      "Text": "Selectare optiune plata numerar",
+      "NotSelected": {
+        "Text": "Optiunea plata numerar nu e selectata",
+        "Info": {
+          "Text": "Alege una din optiunile listate mai sus pentru a continua"
+        }
+      }
+    },
+    "User": {
+      "Text": "Incasare",
+      "Completed": {
+        "Text": "{0} incasare cu succes."
+      }
+    },
+    "Shift": {
+      "Text": "Incasarea comenzilor tuturor utilizatorilor",
+      "Closed": {
+        "Text": "Toti utilizatorii si-au incasat cu succes comenzile"
+      }
+    },
+    "BusinessDay": {
+      "Text": "Inchide casa de marcat",
+      "Income": {
+        "Text": "Totalul zilei"
+      },
+      "Closed": {
+        "Text": "Casa de marcat a fost inchisa cu succes"
+      },
+      "Report": {
+        "Text": "RAPOARTE"
+      }
+    },
+    "Error": {
+      "OpenOrders": {
+        "Text": "Deschide comenzile",
+        "Users": {
+          "Text": "Sunt utilizatori cu comenzi deschise!\\nTrebuie sa inchizi toate comenzile inainte de a inchide ziua."
+        }
+      }
+    },
+    "Print": {
+      "User": {
+        "Report": {
+          "Total": {
+            "Text": "VALOAREA TOTALA"
+          },
+          "User": {
+            "Text": "Utilizator",
+            "ClosedBy": {
+              "Text": "Receptionat"
+            }
+          },
+          "Header": {
+            "Text": "INCASARILE UTILIZATORULUI"
+          }
+        }
+      },
+      "DayClose": {
+        "Report": {
+          "Header": {
+            "Text": "INCHIDERE de ZI"
+          },
+          "User": {
+            "Total": {
+              "Text": "TOTAL"
+            }
+          },
+          "Summary": {
+            "Text": "SUMAR"
+          },
+          "Total": {
+            "Text": "TOTAL"
+          }
+        }
+      }
+    }
+  },
+  "User": {
+    "Text": "Utilizator",
+    "Profile": {
+      "Text": "Informatii Utilizator",
+      "Info": {
+        "Text": "Profil"
+      },
+      "Edit": {
+        "Text": "Schimba profilul sau parola"
+      },
+      "Data": {
+        "FirstName": {
+          "Text": "Numele"
+        },
+        "LastName": {
+          "Text": "Prenumele"
+        },
+        "Password": {
+          "Text": "Parola",
+          "Change": {
+            "Text": "Schimba parola",
+            "Password": {
+              "Text": "Parola"
+            },
+            "Confirm": {
+              "Text": "Confirma parola"
+            },
+            "ConfirmationFailed": {
+              "Text": "Campurile cu parola si confirmarea parolei nu sunt identice.\\nVerifica parola si incearca din nou."
+            }
+          }
+        },
+        "Saved": {
+          "Text": "Profilul schimbat cu succes"
+        },
+        "Email": {
+          "Text": "E-mail"
+        }
+      },
+      "ShiftReport": {
+        "Text": "Raportul utilizatorului",
+        "Report": {
+          "Text": "Raportul utilizatorului",
+          "NoData": {
+            "Text": "Nici o tranzactie deschisa"
+          },
+          "Total": {
+            "Text": "TOTAL"
+          }
+        },
+        "ClockOut": {
+          "Text": "Incasare"
+        }
+      }
+    }
+  },
+  "Security": [
+    {
+      "Authorize": {
+        "Text": "Autentificare utilizator"
+      },
+      "Level": {
+        "Text": "Nivel de acces",
+        "Change": {
+          "Text": "Schimba nivelul de acces pentru actiunea selectata",
+          "AccessDenied": {
+            "Text": "Nu ai suficiente drepturi pentru a schimba nivelul de acces pentru aceasta operatiune.\\n\\nNuvelul de acces poate fi modificat de utilizatorul cu nivelul de acces necesat pentru operatiunea selctata."
+          }
+        }
+      },
+      "AccessDenied": {
+        "Text": "Acces respins",
+        "Info": {
+          "Text": "Nu ai suficiente drepturi pentru operatiunea selectata."
+        }
+      }
+    },
+    {
+      "Key": {
+        "Management": {
+          "Text": "Administrare"
+        },
+        "Settings": {
+          "Text": "Setari"
+        },
+        "VoidOrder": {
+          "Text": "Anulare comanda"
+        },
+        "VoidItem": {
+          "Text": "Anulare element"
+        },
+        "LockSale": {
+          "Text": "Blocare vanzare"
+        },
+        "UnlockSale": {
+          "Text": "Deblocare vanzare"
+        },
+        "SplitOrder": {
+          "Text": "Desparte comanda"
+        },
+        "Discount": {
+          "Text": "Aplica reducere"
+        },
+        "DeleteDocument": {
+          "Text": "Sterge document"
+        },
+        "ClosingDay": {
+          "Text": "Sfarsit de zi"
+        },
+        "Refund": {
+          "Text": "Retur"
+        },
+        "OpenOrders": {
+          "Text": "Vizualizarea tuturor comenzilor deschise"
+        }
+      }
+    }
+  ],
+  "Payment": {
+    "Details": {
+      "Summary": {
+        "Text": "Elemente"
+      },
+      "Actions": {
+        "Text": "Actiuni",
+        "ShowItems": {
+          "Text": "Arata elementele"
+        }
+      },
+      "Discount": {
+        "Text": "Reducere",
+        "Options": {
+          "Text": "Optiuni de reducere",
+          "DisallowedItems": {
+            "Text": "Sunt elemente pentru care nu se poate aplica o reducere directa."
+          }
+        },
+        "Type": {
+          "Percent": {
+            "Text": "Aplica reducerea ca procent"
+          },
+          "Fixed": {
+            "Text": "Aplica reducerea ca suma fixa"
+          }
+        },
+        "Target": {
+          "Item": {
+            "Text": "Reducere element",
+            "NotSelected": {
+              "Text": "Nici un element selectat.\\nTe rog selecteaza un element din stanga pentru a aplica o reducere."
+            },
+            "NotAllowed": {
+              "Text": "Reducerea nu e permisa pentru un element anulat"
+            },
+            "Info": {
+              "Text": "Aplica reducere la \"{0}\""
+            }
+          },
+          "Cart": {
+            "Text": "Reducere bloc",
+            "Info": {
+              "Text": "Aplica reducerea bloc"
+            }
+          }
+        },
+        "Total": {
+          "Text": "Total:"
+        },
+        "Subtotal": {
+          "Text": "Subtotal:"
+        },
+        "TotalDiscount": {
+          "Text": "Total reducere:"
+        },
+        "Clear": {
+          "Text": "Anuleaza reduceri",
+          "Completed": {
+            "Text": "Toate reducerile anulate"
+          }
+        }
+      },
+      "Split": {
+        "Text": "Runde",
+        "Rounds": {
+          "Text": "Selecteaza runda pentru plata",
+          "RoundNumber": {
+            "Text": "Runda:"
+          },
+          "RoundTotal": {
+            "Text": "Valoarea:"
+          },
+          "SelectAll": {
+            "Text": "Selecteaza tot"
+          },
+          "SelectNone": {
+            "Text": "Renunta tot"
+          }
+        }
+      },
+      "Customer": {
+        "Text": "Client"
+      },
+      "Total": {
+        "Text": "Total:"
+      },
+      "TotalWithoutDiscount": {
+        "Text": "Total fara reducere:"
+      },
+      "Money": {
+        "Text": "Plata",
+        "Paid": {
+          "Text": "Platit:"
+        },
+        "Change": {
+          "Text": "Schimba:"
+        },
+        "Balance": {
+          "Text": "Balanta:"
+        }
+      },
+      "PaymentTypes": {
+        "Text": "Tip de plata",
+        "Other": {
+          "Text": "Imparte platile"
+        },
+        "Invalid": {
+          "Text": "Tip de plata nepermis",
+          "Fiscal": {
+            "Text": "Tipul de plata selectat contine combinatii invalide sau tipuri de plata fiscale si non-fiscale.\\n\\nNu e permisa combinarea tipurilor de plata fiscale si non-fiscale."
+          }
+        }
+      },
+      "NoItems": {
+        "Text": "Nici un element"
+      }
+    },
+    "NoPaymentSelected": {
+      "Text": "Tipul de plata nu e selectat"
+    },
+    "Add": {
+      "Text": "Adauga modalitate de plata",
+      "Info": {
+        "Text": "Alege modalitatea de plata si valoarea necesare pentru vanzarea curenta"
+      },
+      "Amount": {
+        "Text": "Valoarea de plata \"{0}\""
+      }
+    },
+    "Selected": {
+      "Text": "Modalitatea de plata selectata"
+    },
+    "Customer": {
+      "Required": {
+        "Text": "Selectarea unui client e necesara",
+        "Info": {
+          "Text": "Modalitatea de plata \"{0}\" implica selectarea unui client"
+        }
+      }
+    },
+    "PaymentTypes": {
+      "Validation": {
+        "Change": {
+          "Missing": {
+            "Text": "Valoare incorecta",
+            "Info": {
+              "Text": "Modalitatea de plata selectata has insufficient amount to refund change."
+            }
+          }
+        }
+      }
+    }
+  },
+  "Customer": {
+    "Search": {
+      "Text": "Cauta client",
+      "Name": {
+        "Text": "Nume"
+      },
+      "PIN": {
+        "Text": "Cod TVA"
+      },
+      "LoyaltyCard": {
+        "Text": "Card de loialitate"
+      },
+      "Email": {
+        "Text": "E-mail"
+      }
+    },
+    "Selection": {
+      "Text": "Client selectat",
+      "Details": {
+        "PIN": {
+          "Text": "Cod TVA:"
+        },
+        "Address": {
+          "Text": "Adresa:"
+        },
+        "Email": {
+          "Text": "E-mail:"
+        }
+      },
+      "None": {
+        "Text": "Clientul nu e selectat",
+        "Info": {
+          "Text": "Selecteaza clientul din lista"
+        }
+      },
+      "Clear": {
+        "Text": "Clear selected customer"
+      }
+    },
+    "New": {
+      "Text": "Client nou",
+      "Name": {
+        "Text": "Nume"
+      },
+      "TaxNumber": {
+        "Text": "Cod TVA"
+      },
+      "Address": {
+        "Text": "Adresa"
+      },
+      "City": {
+        "Text": "Oras"
+      },
+      "PostalCode": {
+        "Text": "Cod postal"
+      },
+      "Country": {
+        "Text": "Judet"
+      },
+      "PhoneNumber": {
+        "Text": "Numar de telefon"
+      },
+      "Email": {
+        "Text": "Email"
+      }
+    }
+  },
+  "Navigation": {
+    "Back": {
+      "NotAllowed": {
+        "Text": "Operatiunea selectata nu e permisa."
+      }
+    }
+  },
+  "FloorPlans": {
+    "Options": {
+      "Text": "Optiuni",
+      "Design": {
+        "Text": "Organizare mese / Setari mese",
+        "FloorPlan": {
+          "Add": {
+            "Text": "Zona noua \\n de mese"
+          },
+          "Delete": {
+            "Text": "Sterge zona\\n  de mese"
+          },
+          "Rename": {
+            "Text": "Redenumeste zona\\n      de mese"
+          },
+          "Name": {
+            "Text": "Nume"
+          }
+        },
+        "Table": {
+          "Add": {
+            "Text": "Masa noua"
+          },
+          "Delete": {
+            "Text": "Elimina masa selectata"
+          },
+          "Name": {
+            "Text": "Nume"
+          },
+          "Height": {
+            "Text": "Inaltime"
+          },
+          "Width": {
+            "Text": "Latime"
+          },
+          "Size": {
+            "Text": "MARIME"
+          }
+        }
+      },
+      "View": {
+        "Orders": {
+          "Text": "Arata comenzile",
+          "Title": {
+            "Text": "Deschide comenzile"
+          },
+          "Order": {
+            "Number": {
+              "Text": "Numar bon"
+            },
+            "Total": {
+              "Text": "Total"
+            }
+          },
+          "NoOrders": {
+            "Text": "Nu sunt comenzi deschise. Creaza comanda noua utilizand planul de mese."
+          }
+        },
+        "FloorPlans": {
+          "Text": "Arata planul de mese"
+        }
+      }
+    },
+    "Save": {
+      "Success": {
+        "Text": "Modificarile salvate cu succes."
+      },
+      "Error": {
+        "Text": "Eroare aparuta la salvare\\nDatele nu sunt retinute.\\nMesaj de sistem: {0}",
+        "Duplicates": {
+          "Text": "S-a gasit un nume de masa duplicat.\\n\\n{0}\\n\\nNumele meselor trebuie sa fie unice. Te rog rezolva problema cu numele mesei si incearca din nou.",
+          "Title": {
+            "Text": "Sunt gasite dubluri"
+          }
+        }
+      }
+    }
+  },
+  "Settings": {
+    "Text": "Setari",
+    "Basic": {
+      "Text": "Setari de baza",
+      "Language": {
+        "Text": "Limba"
+      },
+      "Style": {
+        "Text": "Stilul aplicatiei",
+        "ColorScheme": {
+          "Text": "Schema de culori"
+        }
+      },
+      "Layout": {
+        "Text": "Format",
+        "TouchScreen": {
+          "Text": "Vizual"
+        },
+        "Keyboard": {
+          "Text": "Standard"
+        }
+      },
+      "VirtualKeyboard": {
+        "Text": "Activeaza tastatura virtuala"
+      },
+      "ProductSearch": {
+        "Barcode": {
+          "Text": "Cod de bare"
+        },
+        "Code": {
+          "Text": "Cod"
+        },
+        "Name": {
+          "Text": "Nume"
+        }
+      },
+      "ColorScheme": {
+        "Dark": {
+          "Text": "Intunecat"
+        },
+        "Light": {
+          "Text": "Luminos"
+        }
+      },
+      "NotificationPosition": {
+        "Top": {
+          "Text": "Sus"
+        },
+        "Bottom": {
+          "Text": "Jos"
+        }
+      },
+      "Notifications": {
+        "Text": "Mesaje",
+        "ShowClose": {
+          "Text": "Arata butonul \"Inchide\""
+        },
+        "ClickToClose": {
+          "Text": "Apasa pentru a inchide"
+        },
+        "SlideIn": {
+          "Text": "Efect de alunecare"
+        },
+        "Duration": {
+          "Text": "Durata mesajelor (sec)"
+        },
+        "Position": {
+          "Text": "Pozitia"
+        }
+      },
+      "BusinessDay": {
+        "Text": "Zi de lucru",
+        "SelecBusinessDay": {
+          "Text": "Alege ziua de lucru la pornirea aplicatiei"
+        }
+      }
+    },
+    "Order": {
+      "Text": "Comenzi & Plati",
+      "Standard": {
+        "Text": "Operatiuni de baza",
+        "AutoOrderNumber": {
+          "Text": "Utilizeaza organizarea meselor"
+        },
+        "PlaySound": {
+          "Text": "Sunete"
+        },
+        "ProductGrid": {
+          "Text": "Numarul de randuri / coloane"
+        }
+      },
+      "Users": {
+        "Text": "Utilizatori",
+        "SingleUser": {
+          "Text": "Un singur utilizator"
+        }
+      },
+      "Products": {
+        "Text": "Elemente",
+        "DefaultQuantity": {
+          "Text": "Cantitatea implicita"
+        },
+        "DefaultSearch": {
+          "Text": "Cautarea implicita",
+          "Options": {
+            "Text": "Arata optiunile de cautare"
+          }
+        },
+        "DefaultDiscountType": {
+          "Text": "Tipul de reducere implicit",
+          "Percent": {
+            "Text": "Procentaj"
+          },
+          "Fixed": {
+            "Text": "Fix"
+          }
+        }
+      },
+      "Payment": {
+        "Text": "Plata",
+        "ShowSummary": {
+          "Text": "Arata elementele in ecranul de plata"
+        },
+        "FixedRows": {
+          "Text": "Numar limitat de randuri pentru modalitatile de plata"
+        },
+        "IsSingleItemDiscountAllowed": {
+          "Text": "Reducere permisa pentru un singur element"
+        },
+        "QuickPaymentConfirmation": {
+          "Text": "Taste acces rapid confirmare plata"
+        },
+        "ShowPrintReceiptDialog": {
+          "Text": "Afisaza dialogul cu optiuni de tiparire a bonului de casa"
+        }
+      }
+    },
+    "Print": {
+      "Text": "Optiuni de tiparire",
+      "PrinterSelection": {
+        "Text": "Selectare imprimanta"
+      },
+      "Printers": {
+        "KitchenTicket": {
+          "Text": "Tiparesta tichet pentru \\nbucatarie"
+        },
+        "Service": {
+          "Text": "Tipareste mesaj service"
+        },
+        "Estimate": {
+          "Text": "Tipareste vanzarea blocata"
+        },
+        "OrderSummary": {
+          "Text": "Tipareste comanda"
+        }
+      },
+      "PrinterOptions": {
+        "Text": "Setari pentru imprimanta",
+        "Tooltip": {
+          "Text": "Regleaza setarile imprimantei"
+        },
+        "PaperWidth": {
+          "Text": "Caractere pe linie"
+        },
+        "Header": {
+          "Text": "Antet"
+        },
+        "Footer": {
+          "Text": "Subsol"
+        },
+        "FeedLines": {
+          "Text": "Linii avans"
+        },
+        "CutPaper": {
+          "Text": "Taie hartia"
+        },
+        "PrintBitmap": {
+          "Text": "Tipareste bitmap"
+        },
+        "RichFormatting": {
+          "Text": "Formatare \"rich\""
+        },
+        "Alignment": {
+          "Left": {
+            "Text": "Aliniere stanga"
+          },
+          "Center": {
+            "Text": "Aliniere centru"
+          }
+        },
+        "Revert": {
+          "Text": "Anulare modificari",
+          "Completed": {
+            "Text": "Setarile salvate anterior aplicate"
+          }
+        },
+        "PrinterType": {
+          "Text": "Tipul imprimantei",
+          "A4": {
+            "Text": "A4"
+          },
+          "EscPos": {
+            "Text": "ESC/POS"
+          }
+        },
+        "NumberOfCopies": {
+          "Text": "Numar de copii"
+        },
+        "Advanced": {
+          "Text": "Avansat",
+          "CodePage": {
+            "Text": "Code page"
+          },
+          "CharacterSet": {
+            "Text": "Set caractere",
+            "None": {
+              "Text": "Nimic (valorile implicite ale  imprimantei)"
+            },
+            "USA": {
+              "Text": "SUA"
+            },
+            "France": {
+              "Text": "Franta"
+            },
+            "Germany": {
+              "Text": "Germania"
+            },
+            "UK": {
+              "Text": "Anglia"
+            },
+            "DenmarkI": {
+              "Text": "Danemarca I"
+            },
+            "Sweden": {
+              "Text": "Suedia"
+            },
+            "Italy": {
+              "Text": "Italia"
+            },
+            "SpainI": {
+              "Text": "Spania I"
+            },
+            "Japan": {
+              "Text": "Japonia"
+            },
+            "Norway": {
+              "Text": "Norvegia"
+            },
+            "DenmarkII": {
+              "Text": "Danemarca II"
+            },
+            "SpainII": {
+              "Text": "Spania II"
+            },
+            "LatinAmerica": {
+              "Text": "America Latina"
+            },
+            "Korea": {
+              "Text": "Corea"
+            },
+            "SloveniaCroatia": {
+              "Text": "Slovenia / Croatia"
+            },
+            "China": {
+              "Text": "China"
+            },
+            "Vietnam": {
+              "Text": "Vietnam"
+            },
+            "Arabia": {
+              "Text": "Arabia"
+            }
+          }
+        },
+        "Unavailable": {
+          "Text": "Optiuni aditionale nu sunt disponibile pentru tipul de imprimanta selectat.\\nPentru a vedea optiuni aditionale, te rog sa alegi alt tip de imprimanta.",
+          "Info": {
+            "Text": "Invata mai multe despre selectarea unui tip de imprimanta si setarea imprimantei pentru bonuri de casa de marcat."
+          }
+        }
+      }
+    },
+    "AddOns": {
+      "Text": "Module inregistrate",
+      "Modules": {
+        "Text": "Module"
+      },
+      "Plugins": {
+        "Text": "Extensii"
+      }
+    },
+    "WeighingScale": {
+      "Text": "Setarile codurilor de bare",
+      "VariableMeasureBarcode": {
+        "Text": "Coduri de bare cantar",
+        "Enabled": {
+          "Text": "Activeaza coduri de bare cantar"
+        },
+        "Prefix": {
+          "Text": "Primele doua cifre / prefix"
+        },
+        "ProductCodeLength": {
+          "Text": "Numarul de cifre pentru cod produs"
+        },
+        "DecimalPlaces": {
+          "Text": "Numarul de zecimale"
+        },
+        "TrimZeros": {
+          "Text": "Sterge cifrele zero din codul produs"
+        }
+      }
+    },
+    "About": {
+      "Text": "Despre",
+      "HelpCenter": {
+        "Text": "Deschide centrul de ajutor",
+        "Info": {
+          "Text": "Acceseaza help.aronium.com pentru a deschide o cerere de suport."
+        }
+      },
+      "ApplicationDirectory": {
+        "Text": "Directorul cu datele aplicatiei",
+        "Info": {
+          "Text": "Locatia unde setarile aplicatiei, fisierele log si alte elemente ale aplicatiei sunt salvate."
+        },
+        "Open": {
+          "Text": "Deschide directorul cu datele aplicatiei"
+        }
+      },
+      "Database": {
+        "Text": "Baza de date",
+        "Open": {
+          "Text": "Deschide locatia bazei de date"
+        },
+        "Backup": {
+          "Text": "Salvare de rezerva a bazei de date",
+          "Success": {
+            "Text": "Salvarea de rezerva a bazei de date a fost efectuata cu succes."
+          }
+        }
+      },
+      "Update": {
+        "AutoUpdate": {
+          "Text": "Auto actualizare"
+        },
+        "SendUsageData": {
+          "Text": "Ajutati-ne sa imbunatatim programul prin trimiterea de date anonime despre utilizare"
+        },
+        "Check": {
+          "Text": "Verifica actualizarea",
+          "Checking": {
+            "Text": "Verificam actualizarea... Te rog asteapta..."
+          },
+          "Downloading": {
+            "Text": "Descarcam actualizarea... Te rog asteapta..."
+          },
+          "UpToDate": {
+            "Text": "Aronium e actualizat."
+          },
+          "Available": {
+            "Text": "O versiune noua e disponibila.",
+            "Run": {
+              "Text": "Apasa aici pentru a instala acum."
+            }
+          },
+          "Error": {
+            "NoConnection": {
+              "Text": "Nu pot sa ma conectez la server.\\nTe rog, verifica legatura la internet si incearca din nou."
+            }
+          }
+        },
+        "Ready": {
+          "Text": "Actualizarea e disponibila",
+          "Install": {
+            "Text": "Apasa aici pentru a instala versiunea noua"
+          },
+          "Description": {
+            "Text": "Versiunea noua e gata de instalat.\\nPentru mai multe informatii viziteaza \"relase note page\" pein apasarea butonului \"What's new?\" de mai jos.",
+            "Install": {
+              "Text": "Apasa butonul \"Instal\" pentru a instala ultima versiune."
+            }
+          },
+          "Versions": {
+            "Current": {
+              "Text": "Versiunea actuala:"
+            },
+            "New": {
+              "Text": "Versiune noua:"
+            }
+          },
+          "Ignore": {
+            "Text": "Ignora aceasta actualizare"
+          },
+          "ReleaseNotes": {
+            "Text": "Ce e nou?"
+          },
+          "Postpone": {
+            "Text": "Nu acum"
+          },
+          "Run": {
+            "Text": "Instalaeza"
+          }
+        }
+      },
+      "Account": {
+        "Text": "Cont",
+        "Email": {
+          "Text": "Introdu adresa ta de email"
+        },
+        "Change": {
+          "Text": "Schimba"
+        }
+      }
+    },
+    "Authorization": {
+      "Title": {
+        "Text": "Te rog introdu parola pentru a accesa setarile aplicatiei"
+      }
+    },
+    "Email": {
+      "Text": "Setari e-mail",
+      "General": {
+        "Host": {
+          "Text": "Server"
+        },
+        "Port": {
+          "Text": "Portul"
+        },
+        "EmailAddress": {
+          "Text": "Adresa de e-mail"
+        },
+        "DisplayName": {
+          "Text": "Numele afisat"
+        },
+        "Password": {
+          "Text": "Parola"
+        },
+        "SSL": {
+          "Text": "SSL activat"
+        },
+        "Defaults": {
+          "Text": "Mesajul e-mail implicit",
+          "Subject": {
+            "Text": "Subiectul"
+          },
+          "Message": {
+            "Text": "Mesajul"
+          },
+          "Description": {
+            "Text": "Daca lasi acest camp necompletat, va fi generat automat subiectul si mesajul implicit. Poti sa le modifici inainte sa trimiti mesajul."
+          }
+        }
+      }
+    }
+  },
+  "Document": {
+    "Create": {
+      "Error": {
+        "Text": "A aparut o eroare in crearea documentului.\\nTe rog incearca din nou."
+      }
+    }
+  },
+  "Invoices": {
+    "Text": "Vizualizarea istoricului de vanzari",
+    "Documents": {
+      "Text": "Documente",
+      "Customer": {
+        "Text": "Client",
+        "Change": {
+          "Text": "Schimba clientul",
+          "Success": {
+            "Text": "Clientul a fost schimbat cu succes."
+          }
+        }
+      },
+      "Print": {
+        "Text": "Tiparire",
+        "CashReceipt": {
+          "Text": "Bon fiscal",
+          "PrinterNotFound": {
+            "Text": "Imprimanta nu e selectata sau e dezactivata. Verifica setarile imprimantei si incearca din nou."
+          },
+          "Address": {
+            "Text": "Adresa"
+          },
+          "VatNumber": {
+            "Text": "Codul fiscal"
+          },
+          "Date": {
+            "Text": "Data"
+          },
+          "ReceiptNumber": {
+            "Text": "Numarul bonului"
+          },
+          "Customer": {
+            "Text": "Client"
+          },
+          "Total": {
+            "Text": "Total"
+          },
+          "Tax": {
+            "Text": "TVA"
+          },
+          "TotalAmount": {
+            "Text": "TOTAL"
+          },
+          "FiscalReceiptNumber": {
+            "Text": "Numarul bonului fiscal"
+          },
+          "Signature": {
+            "Text": "Semnatura"
+          },
+          "Stamp": {
+            "Text": "P.S."
+          }
+        },
+        "Pdf": {
+          "Text": "Salveaza ca PDF",
+          "Success": {
+            "Text": "Documentul  \"{0}\" e salvat"
+          }
+        },
+        "Error": {
+          "Text": "Eroare de tiparire a documentului",
+          "NoService": {
+            "Text": "Printing service not registered"
+          }
+        },
+        "Refund": {
+          "Text": "Retur"
+        },
+        "Preview": {
+          "Text": "Previzualizare tiparire"
+        }
+      },
+      "Delete": {
+        "Text": "Sterge",
+        "Confirmation": {
+          "Title": {
+            "Text": "Sterge documentul"
+          },
+          "Message": {
+            "Text": "Esti sigur ca vrei sa stergi documentul \"{0}\"?"
+          }
+        },
+        "Unauthorized": {
+          "Text": "Nu ai permisiunea sa stergi documente."
+        }
+      },
+      "List": {
+        "Text": "Documente",
+        "Document": {
+          "Number": {
+            "Text": "Numar"
+          },
+          "DocumentType": {
+            "Text": "Tipul documentului"
+          },
+          "Warehouse": [
+            {
+              "Text": "Depozit"
+            },
+            {
+              "Text": "Warehouse"
+            }
+          ],
+          "Customer": {
+            "Text": "Client"
+          },
+          "Vendor": {
+            "Text": "Distribuitor"
+          },
+          "ExternalDocument": {
+            "Text": "Document extern"
+          },
+          "Date": {
+            "Text": "Data"
+          },
+          "DueDate": {
+            "Text": "Data scadenta"
+          },
+          "StockDate": {
+            "Text": "Data stocului"
+          },
+          "DateCreated": {
+            "Text": "Creat"
+          },
+          "DateUpdated": {
+            "Text": "Actualizat"
+          },
+          "CashRegister": {
+            "Text": "POS"
+          },
+          "OrderNumber": {
+            "Text": "Numarul de comanda"
+          },
+          "User": {
+            "Text": "Utilizator"
+          },
+          "PaymentType": {
+            "Text": "Modalitate de plata"
+          },
+          "Discount": {
+            "Text": "Reducere"
+          },
+          "Total": {
+            "Text": "Total",
+            "Summary": {
+              "TotalBeforeTax": {
+                "Text": "Total fara TVA:"
+              },
+              "Tax": {
+                "Text": "TVA:"
+              },
+              "Total": {
+                "Text": "Total:"
+              },
+              "Discount": {
+                "Text": "Reducere:",
+                "DiscountType": {
+                  "Text": "Tipul reducerii:"
+                }
+              }
+            }
+          },
+          "Payments": {
+            "Text": "Plati",
+            "Add": {
+              "Text": "Adauga Plata"
+            },
+            "PaymentType": {
+              "Text": "Modalitate de plata"
+            },
+            "Amount": {
+              "Text": "Valoarea"
+            },
+            "NewPayment": {
+              "Text": "Plata noua"
+            },
+            "Delete": {
+              "Text": "Sterge plata",
+              "Confirmation": {
+                "Text": "Esti sigur ca vrei sa stergi plata \"{0}\"?"
+              }
+            }
+          },
+          "Items": {
+            "Text": "Documente",
+            "Item": {
+              "ProductCode": {
+                "Text": "Cod"
+              },
+              "Product": {
+                "Text": "Nume"
+              },
+              "MeasurementUnit": {
+                "Text": "U/M"
+              },
+              "Quantity": {
+                "Text": "Cantitate"
+              },
+              "PriceNoTax": {
+                "Text": "Pret fara TVA"
+              },
+              "Price": {
+                "Text": "Pret"
+              },
+              "Tax": {
+                "Text": "TVA %"
+              },
+              "Discount": {
+                "Text": "Reducere",
+                "DiscountType": {
+                  "Text": "Tipul reducerii",
+                  "Percent": {
+                    "Text": "Procentul"
+                  },
+                  "Fixed": {
+                    "Text": "Fix"
+                  }
+                }
+              },
+              "TotalBeforeTax": {
+                "Text": "Total fara TVA"
+              },
+              "Total": {
+                "Text": "Total"
+              },
+              "TotalBeforeDiscount": {
+                "Text": "Total fara reducere"
+              }
+            },
+            "Delete": {
+              "Text": "Sterge document item",
+              "Confirmation": {
+                "Text": "Esti sigur ca vrei sa stergi \"{0}\"?"
+              }
+            }
+          },
+          "Print": {
+            "UnsavedChanges": {
+              "Text": "Documentul are modificari nesalvate. Numarul bonului fiscalrei sa salvezi modificarile inainte de tiparire?",
+              "Title": {
+                "Text": "Modificari nesalvate"
+              }
+            }
+          },
+          "Paid": {
+            "Text": "Platit"
+          },
+          "Unpaid": {
+            "Text": "Neplatit"
+          }
+        }
+      },
+      "Count": {
+        "Text": "Numarare documente:"
+      },
+      "Total": {
+        "Text": "Valoarea totala:"
+      },
+      "AllUsers": {
+        "Text": "Arata toti utilizatorii"
+      }
+    }
+  },
+  "CashRegister": {
+    "Select": {
+      "Text": "Selectie casa de marcat"
+    }
+  },
+  "Feedback": {
+    "Text": "Pareri",
+    "Title": {
+      "Text": "Ajutati-ne sa imbunatatim Aronium"
+    },
+    "Description": {
+      "Text": "Va multumesc pentru ca ne trimiteti sugestii.\\nParerile voastre ne ajuta sa facem aplicatia Aronium mai buna.",
+      "Contact": {
+        "Text": "Puteti sa ne contactati oricand la"
+      }
+    },
+    "Message": {
+      "Name": {
+        "Text": "Numele tau"
+      },
+      "Email": {
+        "Text": "Adresa de e-mail"
+      },
+      "Subject": {
+        "Text": "Subiect"
+      },
+      "Message": {
+        "Text": "Mesaj"
+      },
+      "Rating": {
+        "Text": "Evaluare generala"
+      }
+    },
+    "Send": {
+      "Text": "Trimite parerea"
+    },
+    "Confirmation": {
+      "Title": {
+        "Text": "Multumesc!"
+      },
+      "Message": {
+        "Text": "Parerea ta a fost trimisa. Vom tine cont de ea pentru a face Aronium mai bun."
+      }
+    }
+  },
+  "Guide": {
+    "Menu": {
+      "Title": {
+        "Text": "Deschide meniul principal"
+      },
+      "Content": {
+        "Text": "Apasa aici pentru a deschide meniul principal si accesul la sectiunea de administrare"
+      }
+    },
+    "Layout": {
+      "SearchBox": {
+        "Text": "Cautare produse dupa nume, cod de bare sau cod",
+        "Title": {
+          "Text": "Cautare produs"
+        }
+      }
+    },
+    "Dismiss": {
+      "Title": {
+        "Text": "Renuntare la indicatii"
+      },
+      "Confirmation": {
+        "Text": "Esti sigur ca vrei sa ascunzi aceste indicatii?"
+      }
+    }
+  },
+  "Layout": {
+    "Visual": {
+      "Item": {
+        "Edit": {
+          "Text": "Alege interfata vizuala",
+          "Color": {
+            "Text": "Culoare"
+          },
+          "Image": {
+            "Text": "Imagine",
+            "Select": {
+              "Text": "Selectare imagine"
+            },
+            "Clear": {
+              "Text": "Sterge imagine"
+            }
+          }
+        }
+      }
+    }
+  },
+  "OpenOrders": {
+    "Text": "Vizualizare vanzari deschise",
+    "Total": {
+      "Text": "VALOARE TOTALA"
+    },
+    "NoOrders": {
+      "Text": "Nu sunt vanzari deschise"
+    },
+    "Authorization": {
+      "Title": {
+        "Text": "Te rog introdu parola pentru a accesa vanzarea deschisa"
+      }
+    }
+  }
+}

@@ -1,0 +1,3266 @@
+{
+  "code": "is",
+  "name": "Icelandic",
+  "Buttons": {
+    "Yes": {
+      "Text": "Já"
+    },
+    "Ok": {
+      "Text": "OK"
+    },
+    "No": {
+      "Text": "Nei"
+    },
+    "Cancel": {
+      "Text": "Hætta Við"
+    },
+    "Save": {
+      "Text": "Vista"
+    },
+    "Close": {
+      "Text": "Loka"
+    },
+    "Add": {
+      "Text": "Bæta Við"
+    },
+    "New": {
+      "Text": "Nýtt"
+    },
+    "Edit": {
+      "Text": "Breyta"
+    },
+    "Cut": {
+      "Text": "Klippa"
+    },
+    "Copy": {
+      "Text": "Afrita"
+    },
+    "Paste": {
+      "Text": "Líma"
+    },
+    "Delete": {
+      "Text": "Eyða"
+    },
+    "Refresh": {
+      "Text": "Endurhlaða"
+    },
+    "Login": {
+      "Text": "INNSKRÁ"
+    },
+    "Logout": {
+      "Text": "Útskrá"
+    },
+    "Print": {
+      "Text": "Prenta"
+    },
+    "SavePdf": {
+      "Text": "Vista Sem PDF"
+    },
+    "Hide": {
+      "Text": "Fela"
+    },
+    "FirstPage": {
+      "Text": "Fyrsta Síða"
+    },
+    "LastPage": {
+      "Text": "Síðasta Síða"
+    },
+    "NextPage": {
+      "Text": "Næsta Síða"
+    },
+    "PreviousPage": {
+      "Text": "Fyrri Síða"
+    },
+    "Continue": {
+      "Text": "Halda Áfram"
+    },
+    "Clear": {
+      "Text": "Hreinsa"
+    },
+    "Exit": {
+      "Text": "Hætta"
+    },
+    "Search": {
+      "Text": "Leita"
+    },
+    "Ignore": {
+      "Text": "Hunsa"
+    },
+    "Retry": {
+      "Text": "Reyna Aftur"
+    },
+    "DeleteAll": {
+      "Text": "Eyða Öllu"
+    },
+    "Skip": {
+      "Text": "Sleppa"
+    },
+    "Restart": {
+      "Text": "Endurræsa"
+    },
+    "SaveAndClose": {
+      "Text": "Vista og Loka"
+    },
+    "Help": {
+      "Text": "Hjálp"
+    },
+    "Back": {
+      "Text": "Til Baka"
+    },
+    "LearnMore": {
+      "Text": "Læra Meira"
+    },
+    "Done": {
+      "Text": "Lokið"
+    },
+    "Send": {
+      "Text": "Senda"
+    },
+    "WhatsThis": {
+      "Text": "Hvað Er Þetta?"
+    },
+    "Pdf": {
+      "Text": "PDF"
+    },
+    "Excel": {
+      "Text": "Excel"
+    },
+    "Maximize": {
+      "Text": "Stækkað"
+    },
+    "Restore": {
+      "Text": "Endurheimta"
+    },
+    "Browse": {
+      "Text": "Vafra"
+    },
+    "PrintPreview": {
+      "Text": "Prent Prufa"
+    }
+  },
+  "Bootstrap": {
+    "Initializing": {
+      "Text": "Ræsi Kassakerfið..."
+    },
+    "Load": {
+      "Components": {
+        "Text": "Sæki Kassakerfis Hlutum..."
+      },
+      "Modules": {
+        "Text": "Sæki og Ræsi Einingar..."
+      },
+      "Products": {
+        "Text": "Sæki Vörur...",
+        "Error": {
+          "Text": "Vill Við Að Sækja Vörur.",
+          "Info": {
+            "Text": "Sumar Vörur eru ekki hæfar fyrir sölu. Athugun á Vörum Tókst ekki. Reynið Aftur."
+          },
+          "DuplicateBarcode": {
+            "Text": "Tvöfallt Strikamerki \"{0}\""
+          },
+          "DuplicateCode": {
+            "Text": "Tvöfallt Vörunúmer \"{0}\""
+          },
+          "Copy": {
+            "Text": "Afrita"
+          }
+        }
+      },
+      "CashRegister": {
+        "Text": "Sæki Gögn Kassakerfis..."
+      },
+      "ScanTypes": {
+        "Text": "Leitast Eftir Tegundum..."
+      }
+    },
+    "Connect": {
+      "Text": "Tengist Gagnagrunni...",
+      "NoDataProvider": {
+        "Text": "Náði ekki að Tengjast Gagnagrunni.\\nHafðu Samband við Stjórnanda eða Umboðsaðila."
+      }
+    },
+    "Error": {
+      "Text": "Villa við að Ræsa Kassakerfi. Hafðu Samband við Stjórnanda."
+    },
+    "Completed": {
+      "Text": "Ræsi Forrit"
+    },
+    "BackupDatabase": {
+      "Text": "Staðfesti Gagnagrunns Útgáfu..."
+    },
+    "Migrations": {
+      "Text": "Athuga Gagnagrunn...",
+      "Failed": {
+        "Text": "Gagna Breyting Mistókst!"
+      }
+    },
+    "RestartRequired": {
+      "Text": "Endurræsa þarf Forritið til að Breytingarnar Taki Gyldi.\\nSmelltu á Takkann að neðan til að Endurræsa."
+    },
+    "ValidateLicense": {
+      "Text": "Staðfesti Leyfi..."
+    },
+    "Onboarding": {
+      "Text": "Athuga Stöðu Um Borð..."
+    },
+    "CustomerDisplay": {
+      "Text": "Ræsi Skjá Viðskiptavina..."
+    },
+    "PrinterStatus": {
+      "Text": "Athuga Prentara Stöðu..."
+    },
+    "VerifyVersion": {
+      "Text": "Staðfesti Útgáfu Forrits..."
+    }
+  },
+  "Onboarding": {
+    "Welcome": {
+      "Text": "Velkomin",
+      "Info": {
+        "Text": "Setjum Upp Verslunina Þína.\\n:Þetta tekur bara smá stund."
+      },
+      "Start": {
+        "Text": "HEFJAST HANDA"
+      }
+    },
+    "Back": {
+      "Text": "Til Baka"
+    },
+    "Skip": {
+      "Text": "Sleppa Loka Uppsetningu"
+    },
+    "Hide": {
+      "Text": "Ekki Sýna Þetta Aftur"
+    },
+    "Next": {
+      "Text": "Sleppa"
+    },
+    "Continue": {
+      "Text": "Vista og Halda Áfram"
+    },
+    "Layout": {
+      "Text": "Velja Útlit",
+      "LearnMore": {
+        "Text": "Læra Meira og Útlit og Vinnuaðstöðu"
+      },
+      "Standard": {
+        "Text": "Hefðbundið",
+        "Description": {
+          "Text": "Notaðu þetta Útlit ef þú ert með Stikamerki og Lyklaborð við Töluna."
+        }
+      },
+      "TouchScreen": {
+        "Text": "Sjónlegt",
+        "Description": {
+          "Text": "Notaðu þetta ef þú ert með Snertiskjá og villt nota Lyklaborðið sem Kerfið býður upp á."
+        }
+      },
+      "EnableVirtualKeyboard": {
+        "Text": "Virkja Lyklaborð Kassakerfis Lyklaborð"
+      }
+    },
+    "Registration": {
+      "Text": "Skráning",
+      "Info": {
+        "Text": "Sláðu inn Netfang.",
+        "Email": {
+          "Text": "Þetta mun verða Aðal Stjórnandalykilorðið og getur þú breytt því hvenær sem er."
+        }
+      },
+      "Email": {
+        "Text": "Netfangur",
+        "Privacy": {
+          "Text": "Þetta er þinn Persónulegi Netfangur."
+        }
+      }
+    },
+    "UserProfile": {
+      "Title": {
+        "Text": "Förum nú í Persónu Upplýsingar"
+      },
+      "Info": {
+        "Text": "Sláðu inn Nafn sem gefur þér Stjórnanda Aðgang."
+      },
+      "LearnMore": {
+        "Text": "Læra Meira Um Notendur"
+      },
+      "FirstName": {
+        "Text": "Fyrra Nafn"
+      },
+      "LastName": {
+        "Text": "Seinna Nafn"
+      },
+      "Email": {
+        "Text": "Netfangur",
+        "Info": {
+          "Text": "Þessi Netfangur er notaður ef þú glatar Lykilorðinu.\\nVertu viss um að nota gildan Netfang svo þú getir fengið Lykilorð Í Netfangi."
+        },
+        "Missing": {
+          "Text": "Ef þú slærð ekki inn gilt netfang ertu í hættu á að láta loka á þig.\\nEf þú gleymir lykilorðinu þínu verður engin leið að endurheimta það án gilt netfangs.",
+          "Title": {
+            "Text": "Netfang er ekki stillt"
+          },
+          "Confirmation": {
+            "Text": "Villtu Halda Áfram Án Netfangs"
+          }
+        }
+      },
+      "Password": {
+        "Text": "Lykilorð",
+        "Errors": {
+          "Empty": {
+            "Text": "Lykilorðið stendst ekki Kröfur. Verður að vera minnst 4 Stafir"
+          },
+          "ConfirmationError": {
+            "Text": "Staðfesting Lykilorðs Passar ekki."
+          }
+        }
+      },
+      "ConfirmPassword": {
+        "Text": "Staðfesta Lykilorð"
+      }
+    },
+    "Completed": {
+      "Text": "Loka Uppsetning",
+      "Info": {
+        "Text": "Til Hamingju! Kassakerfið er nú Tilbúið.\\nNæst opnaðu \"Stjórnborðið\" til að bæta við vörum til að selja."
+      },
+      "Finish": {
+        "Text": "Loka og Halda Áfram"
+      }
+    },
+    "PriceDisplay": {
+      "Text": "Verðskjá",
+      "Info": {
+        "Text": "Veldu hvort verð eru sýnd og prentuð fyrir eða eftir skatt"
+      },
+      "BeforeTax": {
+        "Text": "Fyrir Skatt",
+        "Description": {
+          "Text": "Verð verður sýnt og prentað á kvittun án skatts innifalinn"
+        }
+      },
+      "AfterTax": {
+        "Text": "Eftir Skatt",
+        "Description": {
+          "Text": "Verð verður sýnt og prentað á kvittun með skatts innifalinn"
+        }
+      },
+      "DiscountApplyRule": {
+        "Info": {
+          "Text": "Afslætti verður beitt fyrir eftir skatta byggt á þessu vali. Þú getur breytt afsláttarreglum í stillingum hvenær sem er."
+        }
+      }
+    }
+  },
+  "BusinessDay": {
+    "Close": {
+      "Authorization": {
+        "Title": {
+          "Text": "Sláðu Inn Lykilorð til að Ljúka Degi"
+        }
+      }
+    },
+    "Select": {
+      "Text": "Veldu Vinnu Dag",
+      "EnableSelection": {
+        "Text": "(Smelltu á Dag til að velja)"
+      }
+    }
+  },
+  "Application": {
+    "Close": {
+      "Text": "Loka Forriti",
+      "Info": {
+        "Text": "Ertu viss um að þú viljir Loka Forritinu?"
+      },
+      "ShutDown": {
+        "Text": "Loka Forriti"
+      },
+      "Restart": {
+        "Text": "Endurræsa Forrit"
+      },
+      "TurnOffComputer": {
+        "Text": "Slökkva á Tölvu"
+      }
+    },
+    "FullScreen": {
+      "Text": "Fullur Skjár"
+    },
+    "Exit": {
+      "Text": "Loka Forriti"
+    },
+    "Menu": {
+      "Text": "Valmynd"
+    },
+    "RestartRequired": {
+      "Text": "Endurræsing Þarfnast",
+      "Info": {
+        "Text": "Þú þarft að Endurræsa Forritið til að Breytingar Taki Gyldi. Villtu Endurræsa Forritið?"
+      }
+    },
+    "ReloadProducts": {
+      "Text": "Endurhlaða Vörum",
+      "Info": {
+        "Text": "Vörum Hefur Verið Breytt. Villtu Endurhlaða Vörur?"
+      }
+    }
+  },
+  "Period": {
+    "Text": "Tímabil",
+    "Start": {
+      "Text": "Byrjar"
+    },
+    "End": {
+      "Text": "Endar"
+    },
+    "Preset": {
+      "Text": "Fyrirfram Áhveðinn Tími",
+      "Today": {
+        "Text": "Í Dag"
+      },
+      "Yesterday": {
+        "Text": "Gær"
+      },
+      "ThisWeek": {
+        "Text": "Þessi Vika"
+      },
+      "LastWeek": {
+        "Text": "Síðasta Vika"
+      },
+      "ThisMonth": {
+        "Text": "Þessi Mánuður"
+      },
+      "LastMonth": {
+        "Text": "Síðasti Mánuður"
+      },
+      "ThisYear": {
+        "Text": "Þetta Ár"
+      },
+      "LastYear": {
+        "Text": "Síðasta Ár"
+      }
+    }
+  },
+  "Login": {
+    "Text": "Innskrá",
+    "Password": {
+      "Text": "Lykilorð",
+      "Forgot": {
+        "Text": "Glatað Lykilorð?"
+      }
+    },
+    "Error": {
+      "Text": "Villa við Innskráningu. Athugaðu Lykilorðið og Reyndu Aftur."
+    },
+    "Authentication": {
+      "Text": "Innskráning Notanda",
+      "Failed": {
+        "Text": "Notandi Fannst Ekki. Athugaðu Lykilorðið og Reyndu Aftur."
+      }
+    },
+    "Reset": {
+      "Text": "Nýtt Lykilorð",
+      "LearnMore": {
+        "Text": "Læra Meira um Breytingu á Lykilorði"
+      },
+      "Email": {
+        "Text": "Netfangur",
+        "Info": {
+          "Text": "Sláðu inn Netfang sem notandinn er með Lykilorðið á.\\nVið sendum þér Staðfestingar Kóða sem þarf að slá inn að neðan."
+        },
+        "Required": {
+          "Text": "Netfangur er Skylda"
+        },
+        "EmailAddress": {
+          "Text": "Netfangur",
+          "Tooltip": {
+            "Text": "Sláðu inn Netfang"
+          }
+        },
+        "ExistingCode": {
+          "Text": "Er Með Kóða. Taka Mig í Næsta Skref."
+        }
+      },
+      "Code": {
+        "Text": "Staðfestingar Kóði",
+        "Info": {
+          "Text": "Athugaðu Netfanginn - Við höfum sennt Staðfestingar Kóða.\\nEf þú fékst ekki Netfang með Staðfestingar Kóða athugaðu þá í Ruslpóst."
+        },
+        "Email": {
+          "Text": "Staðfestingarkóði er á {0}."
+        },
+        "AuthorizationCode": {
+          "Text": "Staðfestingar Kóði",
+          "Tooltip": {
+            "Text": "Sláðu inn Staðfestingar Kóða..."
+          }
+        },
+        "Verify": {
+          "Text": "Staðfestingar Kóði"
+        }
+      },
+      "Password": {
+        "Text": "Sláðu inn Nýtt Lykilorð",
+        "Info": {
+          "Text": "Sláðu inn Nýtt Lykilorð sem Þú mannst."
+        },
+        "NewPassword": {
+          "Text": "Nýtt Lykilorð"
+        },
+        "NewPasswordConfirmation": {
+          "Text": "Staðfesta Nýtt Lykilorð"
+        },
+        "InUse": {
+          "Text": "Lykilorðið er þegar í notkun. Reyndu annað."
+        },
+        "User": {
+          "Text": "Notandi: {0}"
+        },
+        "SetPassword": {
+          "Text": "Setja Nýtt Lykilorð"
+        },
+        "Success": {
+          "Text": "Lykilorðinu Var Breytt"
+        }
+      },
+      "Error": {
+        "Expired": {
+          "Text": "Staðfestingar Kóði Útrunnin. Reyndu Aftur."
+        },
+        "InvalidCode": {
+          "Text": "Rangur Staðfestingar Kóði. Reyndu Aftur."
+        },
+        "NoSuchUser": {
+          "Text": "Notandi Með Netfanginn \"{0}\" er ekki til.\\nAthugaðu hvort réttur Netfangur hafi verið sleginn inn."
+        },
+        "InvalidEmailAddress": {
+          "Text": "Netfangur ekki gildur. Reyndu Aftur."
+        },
+        "LimitReached": {
+          "Text": "Þú hefur náð Takmörkum. Reyndu aftur eftir 24 tíma."
+        },
+        "GeneralError": {
+          "Text": "Villa við að Breyta Lykilorði. Reyndu Aftur."
+        }
+      }
+    }
+  },
+  "Order": {
+    "List": {
+      "Text": "Opna Pöntunar Lista",
+      "Select": {
+        "Text": "Veldu Lista"
+      }
+    },
+    "New": {
+      "Text": "Ný Sala"
+    },
+    "Estimate": {
+      "Text": "Læsa",
+      "Authorization": {
+        "Title": {
+          "Text": "Sláðu inn Lykilorð til að Læsa Sölunni"
+        }
+      },
+      "Created": {
+        "Text": "Sölunni Hefur Verið Læst"
+      },
+      "Clear": {
+        "Text": "Aflæsa Sölu",
+        "Authorization": {
+          "Title": {
+            "Text": "Sláðu inn Lykilorð til að Aflæsa Sölunni"
+          }
+        },
+        "Success": {
+          "Text": "Sölunni Hefur Verið Aflæst."
+        }
+      },
+      "Locked": {
+        "Text": "Sala Er Læst",
+        "Info": {
+          "Text": "Breytingar á Læstum Sölum eru ekki leifðar."
+        }
+      },
+      "Issued": {
+        "Text": "Þessi Sala er þegar Læst.\\nEkki er hægt að Breyta Læstum Sölum."
+      },
+      "NoItems": {
+        "Text": "Engar Vörur til að Læsa."
+      }
+    },
+    "Transfer": {
+      "Text": "Flytja",
+      "Authorization": {
+        "Title": {
+          "Text": "Sláðu inn Lykilorð til að Flytja"
+        }
+      },
+      "All": {
+        "Text": "Flytja Allar Vörur",
+        "Confirmation": {
+          "Text": "Þú ert að fara að Flytja Sölu á Notanda sem er ekki Innskráður!\\n\\nErtu viss um að þú viljir Flytja Söluna Til {0}?"
+        },
+        "Success": {
+          "Text": "Tókst að Flytja Vörur."
+        },
+        "Error": {
+          "Text": "Villa við að Flytja Sölu á Notanda. Reyndu Aftur."
+        }
+      },
+      "Orders": {
+        "Text": "Opnar Sölur"
+      },
+      "OrderNumber": {
+        "Text": "Sölu Númer",
+        "Select": {
+          "Text": "Veldu Sölu"
+        }
+      },
+      "Quantity": {
+        "Text": "Veldu Fjölda til að Flytja"
+      },
+      "User": {
+        "Text": "Notandi",
+        "Current": {
+          "Text": "Valinn Notandi er þegar með þessa sölu.\\nSala mun verða færð á sama Notanda."
+        }
+      },
+      "Rounds": {
+        "Text": "Flytja Umferð",
+        "Summary": {
+          "Text": "Seldar Vörur"
+        },
+        "Selection": {
+          "Text": "Veldu Umferð til að flytja"
+        }
+      },
+      "Items": {
+        "Text": "Seldar Vörur",
+        "Selected": {
+          "Text": "Valdar Vörur sem á að Flytja",
+          "NoItems": {
+            "Text": "Veldu Vörur sem á að Flytja"
+          }
+        },
+        "All": {
+          "Text": "Flytja Allt"
+        },
+        "Back": {
+          "Text": "Eyða Öllu"
+        },
+        "InvalidQuantity": {
+          "Text": "Get ekki Flutt Valda Vöru",
+          "Info": {
+            "Text": "Ekki er til nó af þessari Vöru til að Flytja.\\nAthugaðu Byrðir áður."
+          }
+        },
+        "BundledQuantity": {
+          "Text": "Fjöldi ekki leifður",
+          "Info": {
+            "Text": "Þetta tilheyrir Hópi. Breytingar á Hópvörum eru ekki leifðar."
+          }
+        }
+      },
+      "CurrentOrder": {
+        "Text": "Flytja á sömu Sölu",
+        "Confirmation": {
+          "Text": "Ertu viss um að þú viljir Flytja á Sömu Sölu?"
+        }
+      },
+      "Failed": {
+        "Text": "Villa við að Flytja Sölu",
+        "Info": {
+          "Text": "Villa við að Flytja Sölu. Reyndu Aftur"
+        }
+      },
+      "Completed": {
+        "Text": "Tókst að Flytja Sölu"
+      },
+      "NoItems": {
+        "Text": "Engar Vörur til að Flytja"
+      },
+      "Discount": {
+        "Warning": {
+          "Text": "Fastur Afsláttur",
+          "Info": {
+            "Text": "Þessi Pöntun er með Föstum Afslætti. Ef þú færir þessa Pntun muntu hreinsa Afslátt.\\n\\nVilltu Halda Áfram?"
+          }
+        }
+      }
+    },
+    "Void": {
+      "Text": "Hætta Við Sölu",
+      "Authorization": {
+        "Title": {
+          "Text": "Sláðu Inn Lykilorð til að Hætta Við Sölu"
+        }
+      },
+      "Confirm": {
+        "Text": "Hætta Við Sölu",
+        "Info": {
+          "Text": "Ertu Viss um að þú viljir Hætta Við Sölu?"
+        }
+      },
+      "Completed": {
+        "Text": "Hætt Hefur Verið Við Sölu"
+      },
+      "NoItems": {
+        "Text": "Engar Vörur til að Hætta Við Sölu"
+      }
+    },
+    "Rounds": {
+      "Repeat": {
+        "Text": "Endurtaka",
+        "NoItems": {
+          "Text": "Engar Vörur til að Endurtaka."
+        },
+        "NoQuantities": {
+          "Text": "Valin Endurtakning  #{0} hefur verið Endurtekin"
+        },
+        "Bundle": {
+          "Text": "Vara Tilheyrir Hópi",
+          "Info": {
+            "Text": "Getur ekki Endurtekið ef vara er í Hópi."
+          }
+        }
+      },
+      "New": {
+        "Text": "Ný Endurtekning",
+        "NoItems": {
+          "Text": "Engar Vörur til að Endurtaka."
+        },
+        "NoUnsavedItems": {
+          "Text": "Öll Sala Vistuð."
+        }
+      },
+      "SelectAll": {
+        "Text": "Velja Allt"
+      },
+      "SelectNone": {
+        "Text": "Afvelja Allt"
+      },
+      "Total": {
+        "Text": "Samtalls:"
+      },
+      "NoItems": {
+        "Text": "Engar Vörur Valdar"
+      }
+    },
+    "Comment": {
+      "Text": "Athugasemd",
+      "Add": {
+        "Text": "Veldur sem er til eða skrifaðu þína Athugasemd \"{0}\""
+      },
+      "Insert": {
+        "Text": "Skrifaðu Athugasemd Hér..."
+      },
+      "Change": {
+        "Text": "Breyta Athugasemd",
+        "Forbidden": {
+          "Text": "Breytingar á Valdri Vöru eru ekki leifðar",
+          "Info": {
+            "Text": "Vara \"{0}\" er Staðfest\\nBreytingar eru ekki leifðar."
+          }
+        },
+        "NoItem": {
+          "Text": "Engin Vara Valin.\\nVeldu Vöru til að Skrifa Athugasemd Við."
+        }
+      }
+    },
+    "Subtotal": {
+      "Text": "Heildar Upphæð"
+    },
+    "Tax": {
+      "Text": "VSK"
+    },
+    "Total": {
+      "Text": "SAMTALLS"
+    },
+    "Checkout": {
+      "Text": "Greiðslur"
+    },
+    "Save": {
+      "Text": "Vista Sölu"
+    },
+    "Refund": {
+      "Text": "Endurgreiðsla",
+      "Authorization": {
+        "Text": "Lykilorð Þarf fyrir þessa Aðgerð"
+      },
+      "Title": {
+        "Text": "Endurgreiðsla Á Vörum"
+      },
+      "Total": {
+        "Text": "UPPHÆÐ ENDURGREIÐSLU"
+      },
+      "ReceiptNumber": {
+        "Text": "Nóta"
+      },
+      "PaymentType": {
+        "Text": "Tegund Endurgreiðslu"
+      },
+      "Description": {
+        "Text": "Sláðu inn Númer á Nótu til að halda Áfram"
+      },
+      "Print": {
+        "PrinterNotFound": {
+          "Text": "Endurgreiðslu prentari ekki valinn."
+        }
+      },
+      "MultyplePaymentTypes": {
+        "Text": "Valin Skjöl innihaæda fleyrri en eina Greiðslur. Veldu Greiðslutegund að Neðan.",
+        "Copy": {
+          "Text": "Afrita Greiðslu Tegund á Upprunnaleg Gögn"
+        },
+        "PartialRefund": {
+          "Text": "Notkun margra greiðslugerða úr upprunalegu söluskjali er ekki fáanleg til endurgreiðslu að hluta."
+        }
+      },
+      "CartDiscountApplied": {
+        "Text": "Körfu Afsláttur Viktur",
+        "Info": {
+          "Text": "Körfu Afsláttur hefur verið Bætt Við og Reiknaður í Heild.\\nEf endurgreiðsla er notuð að hluta verður körfuafsláttur reiknaður af endurgreiddum hlutum."
+        }
+      },
+      "SelectAll": {
+        "Text": "Velja / Afvelja Allt"
+      }
+    },
+    "Items": {
+      "Name": {
+        "Text": "Nafn Vöru"
+      },
+      "Quantity": {
+        "Text": "Magn",
+        "Change": {
+          "Text": "Breyta Magni",
+          "Info": {
+            "Text": "Sláðu inn Magn fyrir Næstu Vöru"
+          },
+          "Item": {
+            "Text": "Vara \"{0}\""
+          },
+          "Forbidden": {
+            "Text": "Ekki Leifilegt að Breyta Magni",
+            "Info": {
+              "Text": "Vara \"{0}\" er Staðfest.\\nBreytin á Staðfestingu er ekki leifð."
+            }
+          },
+          "Product": {
+            "Text": "Vara \"{0}\"\\nSjálfgefið Magn: {1:#,#.000}"
+          },
+          "Bundled": {
+            "Text": "Ekki leifilegt að breyta Magni",
+            "Info": {
+              "Text": "Ekki leifilegt að breyta Magni á Mörum Vörum."
+            }
+          }
+        },
+        "Invalid": {
+          "Text": "Rangt Magn. Sláðu inn rétt magn."
+        }
+      },
+      "Price": {
+        "Text": "Verð",
+        "Change": {
+          "Text": "Breyta Verði",
+          "Product": {
+            "Text": "Vara \"{0}\"\\nVerð: {1:#,#.00}"
+          }
+        }
+      },
+      "Total": {
+        "Text": "Upphæð"
+      },
+      "Empty": {
+        "Text": "Engar Vörur",
+        "Info": {
+          "Text": "Bæta við Vöru með Strikamerki eða Vörunúmeri, Ýttu á F3 til að nota Vörunúmer eða Strikamerkis Leit"
+        }
+      },
+      "Start": {
+        "Text": "Byrja"
+      },
+      "Page": {
+        "Text": "Síða"
+      },
+      "Add": {
+        "Error": {
+          "Text": "Villa við að bæta við Vöru. Röng Gögn.\\nAthugaðu Verð eða Magn og reyndu aftur."
+        }
+      },
+      "Void": {
+        "NoItems": {
+          "Text": "Hunsa Vöru \"{0}\" Er ekki leifilegt. Rangt Magn."
+        },
+        "Bundle": {
+          "Text": "Vara er í eigu hóps. Með því að eyða þessari vöru eyðiru h´pinum líka.\\n\\nErtu Viss um að þú viljir eyða öllum vörum í þessum Hóp?",
+          "Title": {
+            "Text": "Eyða Hóp Vörum"
+          }
+        }
+      }
+    },
+    "Print": {
+      "User": {
+        "Text": "Notandi: {0}"
+      },
+      "Time": {
+        "Text": "Tími: {0}"
+      },
+      "Number": {
+        "Text": "Pöntunar Númer: {0}"
+      },
+      "Estimate": {
+        "Text": "ÁÆTLAÐ",
+        "Discount": {
+          "Text": "Afsláttur"
+        },
+        "Total": {
+          "Text": "SAMTALLS:"
+        },
+        "Footer": {
+          "Text": "Þetta er ekki Kvittun.\\nBíddu eftir Kvittun."
+        }
+      },
+      "Kitchen": {
+        "NumberAndRound": {
+          "Text": "Pöntun: {0}. Umferð: {1}"
+        },
+        "TableAndRound": {
+          "Text": "Borð: {0}. Umferð: {1}"
+        }
+      },
+      "Dialog": {
+        "Title": {
+          "Text": "Vill Viðskiptavinurinn Afrit?"
+        },
+        "Change": {
+          "Text": "Til Baka"
+        },
+        "Receipt": {
+          "Text": "Prenta Afrit"
+        },
+        "Invoice": {
+          "Text": "Prenta Reikning"
+        },
+        "Email": {
+          "Text": "Senda í Netfangi",
+          "Recipient": {
+            "Text": "Senda Reikning í Netfangi",
+            "Title": {
+              "Text": "Sláðu inn Skilaboðs Upplýsingar og smelltu á \"Send\" til að halda Áfram"
+            },
+            "EmailAddress": {
+              "Text": "Mótakandi",
+              "Description": {
+                "Text": "Sláðu inn Netfang Viðskiptavinar"
+              },
+              "AddCustomer": {
+                "Text": "Bæta Við Viðskiptavin"
+              }
+            },
+            "Subject": {
+              "Text": "Fyrirsögn",
+              "Description": {
+                "Text": "Sláðu Inn Fyrirsögn"
+              },
+              "Default": {
+                "Text": "Rekningur {0}"
+              }
+            },
+            "Message": {
+              "Text": "Skilaboð",
+              "Description": {
+                "Text": "Sláðu inn Skilaboð fyrir Viðskiptavin"
+              },
+              "Default": {
+                "Text": "Kæri Viðskiptavinur,\\n\\nHér finnur þú Afrit af Reikningnum Þínum.\\n\\nDagsetning Reiknings: {0}\\nSamtalls: {1}"
+              }
+            },
+            "CopySelf": {
+              "Text": "Senda Afrit til Mín"
+            },
+            "Error": {
+              "EmailFormat": {
+                "Text": "Netfangurinn ekki skrifaður réttur.\\nAthugaðu Netfanginn og reyndu aftur."
+              }
+            },
+            "Bcc": {
+              "Text": "Bcc",
+              "Description": {
+                "Text": "Bæta Bcc Viðtakanda"
+              }
+            }
+          },
+          "Sending": {
+            "Text": "Sendi Netfang... Augna Blik..."
+          },
+          "Sent": {
+            "Text": "Reikningur Sendur Til {0}"
+          }
+        },
+        "Hide": {
+          "Text": "Ekki sýna Aftur"
+        }
+      },
+      "Table": {
+        "Text": "Tafla: {0}"
+      }
+    },
+    "Products": {
+      "Search": {
+        "Text": "Leita",
+        "Name": {
+          "Text": "Nafn Vöru",
+          "Tooltip": {
+            "Text": "Leita af Vöru eftir Nafni"
+          },
+          "NotFound": {
+            "Text": "Ekkert Fannst \"{0}\"",
+            "Info": {
+              "Text": "Athugaðu Leit og reyndu aftur"
+            }
+          }
+        },
+        "Barcode": {
+          "Text": "Stikamerki",
+          "Tooltip": {
+            "Text": "Leita Eftir Sktrikamerki"
+          },
+          "NotFound": {
+            "Text": "Strikamerki Fannst ekki"
+          }
+        },
+        "Code": {
+          "Text": "Vörunúmer",
+          "Tooltip": {
+            "Text": "Leita Eftir Vörunúmeri"
+          },
+          "NotFound": {
+            "Text": "Vörunúmer Fannst Ekki"
+          }
+        },
+        "NoItems": {
+          "Text": "Engin Vara Valin",
+          "Info": {
+            "Text": "Leitaðu Eftir Nafn Vöru eða Vörunúmeri til að Halda Áfram"
+          }
+        },
+        "Selection": {
+          "Price": {
+            "Text": "Verð"
+          },
+          "Description": {
+            "Text": "Upplýsingar"
+          }
+        },
+        "NoResults": {
+          "Text": "Engin Niðurstaða"
+        }
+      },
+      "NoProducts": {
+        "Text": "Engar Vörur Til",
+        "Info": {
+          "Text": "Bættu við Vöru eða settu Verð til að Halda Áfram"
+        }
+      }
+    },
+    "Lock": {
+      "Text": "Læsa"
+    },
+    "Unlock": {
+      "Text": "Aflæsa"
+    },
+    "Item": {
+      "Void": {
+        "Authorization": {
+          "Title": {
+            "Text": "Sláðu inn Lykilorð til að Hætta Við Valda Vöru"
+          }
+        }
+      },
+      "ChangePrice": {
+        "Minimum": {
+          "Text": "Lágmarksgildi: {0}"
+        }
+      }
+    },
+    "QuickPayment": {
+      "Text": "Flýti Borgun",
+      "Confirmation": {
+        "Text": "Þú hefur Valið \"{0}\" fyrir núverandi Sölu.\\n\\nVilltu halda áfram með Núverandi Greiðslu?"
+      }
+    },
+    "Discount": {
+      "Text": "Afsláttur",
+      "Authorization": {
+        "Text": "Sláðu inn Lykilorð til að veita Afslátt"
+      },
+      "Cart": {
+        "Invalid": {
+          "Text": "Rangur Körfu Afsláttur",
+          "GreaterThenTotal": {
+            "Text": "Get ekki gefið Afslátt."
+          }
+        },
+        "Cleared": {
+          "Text": "Afsláttur á Körfu Hreinsaður!",
+          "Info": {
+            "Text": "Ógild heildartala greindist og afsláttur var fjarlægður úr pöntun.\\n\\nVinsamlegast athugaðu hlutina þína og notaðu gildan afslátt aftur áður en þú heldur áfram að greiða."
+          }
+        }
+      },
+      "Item": {
+        "NotSelected": {
+          "Text": "Engin Vara Valin.\\nRil að Gefa Afslátt af Vöru veldu Þá Vöru."
+        },
+        "Invalid": {
+          "Text": "Rangur Vöru Afsláttur",
+          "GreaterThenTotal": {
+            "Text": "Hægt er að setja inn upphærð á Afslátt"
+          }
+        },
+        "Cleared": {
+          "Text": "Vöru Afsláttur Hreinsaður",
+          "Info": {
+            "Text": "Ógildur vöruheild greindist og afsláttur sem áður var beittur var fjarlægður.\\n\\nVinsamlegast athugaðu hvort einhverjum afslætti ætti að beita á þessum hlut áður en þú heldur áfram að greiða."
+          }
+        }
+      }
+    }
+  },
+  "Closing": {
+    "Text": "Söluyfirlit Í Lok Dags",
+    "Users": {
+      "Text": "Opnar Sölur",
+      "User": {
+        "Total": {
+          "Text": "SAMTALLS:"
+        }
+      },
+      "Summary": {
+        "Text": "Opnar Sölur"
+      },
+      "NoReports": {
+        "Text": "Engar Opnar Sölur"
+      }
+    },
+    "Option": {
+      "Text": "Veldu Ljúka Sölu Degi Möguleika",
+      "NotSelected": {
+        "Text": "Ljúka Sölu Degi Möguleiki ekki valinn",
+        "Info": {
+          "Text": "Veldu einn af ofangreindu Möguleikum til að halda áfram"
+        }
+      }
+    },
+    "User": {
+      "Text": "Ljúka Sölu Degi",
+      "Completed": {
+        "Text": "{0} Ljúka Sölu Degi."
+      }
+    },
+    "Shift": {
+      "Text": "Ljúka Sölu Allra Notanda",
+      "Closed": {
+        "Text": "Lokið hefur verið við Söludag Allra Notanda"
+      }
+    },
+    "BusinessDay": {
+      "Text": "Loka Kassa",
+      "Income": {
+        "Text": "Samtalls Yfir Daginn"
+      },
+      "Closed": {
+        "Text": "Kassa Hefur Verið Lokað"
+      },
+      "Report": {
+        "Text": "TILKYNNING"
+      },
+      "CashIn": {
+        "Text": "Innborgað"
+      },
+      "CashOut": {
+        "Text": "Útborgað"
+      }
+    },
+    "Error": {
+      "OpenOrders": {
+        "Text": "Opnar Sölur",
+        "Users": {
+          "Text": "Það eru Notendur með Opna Sölu!\\nVerður að klára sölu til að Ljúka Degi."
+        }
+      }
+    },
+    "Print": {
+      "User": {
+        "Report": {
+          "Total": {
+            "Text": "HEILDAR UPPHÆÐ"
+          },
+          "User": {
+            "Text": "Notandi",
+            "ClosedBy": {
+              "Text": "Fengið"
+            }
+          },
+          "Header": {
+            "Text": "Útborgað Notandi"
+          }
+        }
+      },
+      "DayClose": {
+        "Report": {
+          "Header": {
+            "Text": "LÝK DEGI"
+          },
+          "User": {
+            "Total": {
+              "Text": "SAMTAKKS"
+            }
+          },
+          "Summary": {
+            "Text": "SAMANTEKT"
+          },
+          "Total": {
+            "Text": "SAMTALLS"
+          }
+        }
+      }
+    },
+    "History": {
+      "Text": "Saga",
+      "Info": {
+        "Text": "Notaðu listann hér að neðan til að velja og prenta afrit af öllum áður mynduðum Z skýrslum."
+      },
+      "List": {
+        "Reports": {
+          "Text": "Skýrslur"
+        },
+        "Number": {
+          "Text": "Númer"
+        },
+        "Date": {
+          "Text": "Dagsetning"
+        }
+      },
+      "Print": {
+        "Text": "Prenta Valda Skýrslu",
+        "Unsupported": {
+          "Text": "Aðgerð ekki studd"
+        }
+      }
+    }
+  },
+  "User": {
+    "Text": "Notandi",
+    "Profile": {
+      "Text": "Upplýsingar Notanda",
+      "Info": {
+        "Text": "Upplýsingar"
+      },
+      "Edit": {
+        "Text": "Breyttu Upplýsingum eða Lykilorðum"
+      },
+      "Data": {
+        "FirstName": {
+          "Text": "Fyrra Nafn"
+        },
+        "LastName": {
+          "Text": "Seinna Nafn"
+        },
+        "Email": {
+          "Text": "Netfang"
+        },
+        "Password": {
+          "Text": "Lykilorð",
+          "Change": {
+            "Text": "Breyta Lykilorði",
+            "Password": {
+              "Text": "Lykilorð"
+            },
+            "Confirm": {
+              "Text": "Staðfesta Lykilorð"
+            },
+            "ConfirmationFailed": {
+              "Text": "Lykilorðs Reitir pössuðu ekki saman.\\nReyndu Aftur."
+            },
+            "InvalidPassword": {
+              "Text": "Lykilorð þegar í Notkun. Reyndu Annað Lykilorð."
+            }
+          }
+        },
+        "Saved": {
+          "Text": "Upplýsingum Hefur Verið Breytt"
+        }
+      },
+      "ShiftReport": {
+        "Text": "Notendaskýrsla",
+        "Report": {
+          "Text": "Notendaskýrsla",
+          "NoData": {
+            "Text": "Opnar Sölur"
+          },
+          "Total": {
+            "Text": "Samtalls"
+          }
+        },
+        "ClockOut": {
+          "Text": "Útborgað"
+        }
+      }
+    }
+  },
+  "Security": [
+    {
+      "Authorize": {
+        "Text": "Auðkenni Notanda"
+      },
+      "Level": {
+        "Text": "Auðkennis Þrep",
+        "Change": {
+          "Text": "Breyttu Auðkennis Þrepi fyrir Valinn Möguleika",
+          "AccessDenied": {
+            "Text": "Þú ert ekki með réttindi til að breyta.\\n\\nVerður að vera breytt af Notanda með þetta Auðkennis Þrep."
+          }
+        }
+      },
+      "AccessDenied": {
+        "Text": "Aðgangi Hafnað",
+        "Info": {
+          "Text": "Þú ert ekki með heimild til að frammhvæma þessa aðgerð."
+        }
+      }
+    },
+    {
+      "Key": {
+        "Management": {
+          "Text": "Stjórnborð",
+          "Description": {
+            "Text": "Stjórna Aðgangi að Stjórnanda Hlutanum"
+          }
+        },
+        "Settings": {
+          "Text": "Stillingar",
+          "Description": {
+            "Text": "Stjórna Aðgangs Stillingum"
+          }
+        },
+        "VoidOrder": {
+          "Text": "Hætta Við Sölu",
+          "Description": {
+            "Text": "Stjórna hver hefur heimild til að Hætta Við Sölu"
+          }
+        },
+        "VoidItem": {
+          "Text": "Hætta Við Vöru",
+          "Description": {
+            "Text": "Stjórna hver hefur heimild til að Hætta Við Vöru"
+          }
+        },
+        "LockSale": {
+          "Text": "Læsa Sölu"
+        },
+        "UnlockSale": {
+          "Text": "Aflæsa Sölu"
+        },
+        "SplitOrder": {
+          "Text": "Skipta Greiðslum",
+          "Description": {
+            "Text": "Stjórna Notendum til að Flytja kláruð eða part af sölum til annara notanda eða borða (pöntunar númer)"
+          }
+        },
+        "Discount": {
+          "Text": "Virkja Afslátt"
+        },
+        "DeleteDocument": {
+          "Text": "Eyða Skjali"
+        },
+        "ClosingDay": {
+          "Text": "Söluyfirlit í Lok Dags",
+          "Description": {
+            "Text": "Stjórna hver hefur leyfi til að gera Söluyfirlit í Lok Dags"
+          }
+        },
+        "Refund": {
+          "Text": "Endurgreiðsla",
+          "Description": {
+            "Text": "Leyfir notanda að endurgreiða fyrri sölu.\\nÞetta mun búa til nýtt „Endurgreiðslu“ skjal og setja magn aftur á lager sjálfkrafa."
+          }
+        },
+        "OpenOrders": {
+          "Text": "Skoða Allar Opnar Sölur",
+          "Description": {
+            "Text": "Stjórna hverjir hafa leifa til að skoða Skoða Allar Opnar Sölur\\nÞeswsi Möguleiki er virkur í Hæðir eru virkar."
+          }
+        },
+        "SalesHistory": {
+          "Text": "Skoða Sölusögu",
+          "Receipt": {
+            "Text": "Prenta Kvittun",
+            "Description": {
+              "Text": "Stjórna hvaða Notendur hafa leyfi til að Prrenta Kvittun frá Sölusögu."
+            }
+          }
+        },
+        "StartingCash": {
+          "Text": "Byrjar í Peningum",
+          "Description": {
+            "Text": "Stjórna heimildum í Peninga Valmynd"
+          }
+        },
+        "UserProfile": {
+          "Text": "Upplýsingar Notanda"
+        }
+      }
+    }
+  ],
+  "Payment": {
+    "Details": {
+      "Summary": {
+        "Text": "Vörur"
+      },
+      "Actions": {
+        "Text": "Aðgerðir",
+        "ShowItems": {
+          "Text": "Sýna Vörur"
+        }
+      },
+      "Discount": {
+        "Text": "Afsláttur",
+        "Options": {
+          "Text": "Afsláttur Möguleiki",
+          "DisallowedItems": {
+            "Text": "Það eru vörur sem ekki getað gefið beinan Afslátt."
+          }
+        },
+        "Type": {
+          "Percent": {
+            "Text": "Afsláttur í Prósentum"
+          },
+          "Fixed": {
+            "Text": "Afsláttur í Fastri Upphæð"
+          }
+        },
+        "Target": {
+          "Item": {
+            "Text": "Vöru Afsláttur",
+            "NotSelected": {
+              "Text": "Engin Vara Valin.\\nVeldu Vöru að Vinstri til að gefa Afslátt."
+            },
+            "NotAllowed": {
+              "Text": "Afsláttur ekki veittur af sölu sem er Hætt Við"
+            },
+            "Info": {
+              "Text": "Afsláttur Fyrir \"{0}\""
+            }
+          },
+          "Cart": {
+            "Text": "Körfu Afsláttur",
+            "Info": {
+              "Text": "Gefa Afslátt Á Körfu"
+            }
+          }
+        },
+        "Total": {
+          "Text": "Samtalls:"
+        },
+        "Subtotal": {
+          "Text": "Heildar Verð:"
+        },
+        "TotalDiscount": {
+          "Text": "Samtalls Afsláttur:"
+        },
+        "Clear": {
+          "Text": "Hreinsa Afslátt",
+          "Completed": {
+            "Text": "Allur Afsláttur Hreinsaður"
+          }
+        }
+      },
+      "Split": {
+        "Text": "Umferðir",
+        "Rounds": {
+          "Text": "Veldur Umferð fyrir Greiðslu",
+          "RoundNumber": {
+            "Text": "Umferð:"
+          },
+          "RoundTotal": {
+            "Text": "Magn:"
+          },
+          "SelectAll": {
+            "Text": "Velja Allt"
+          },
+          "SelectNone": {
+            "Text": "Afvelja Allt"
+          }
+        }
+      },
+      "Customer": {
+        "Text": "Viðskiptavinur"
+      },
+      "Total": {
+        "Text": "Samtalls:"
+      },
+      "TotalWithoutDiscount": {
+        "Text": "Samtalls Án Afsláttar:"
+      },
+      "Money": {
+        "Text": "Greiðsla",
+        "Paid": {
+          "Text": "Peningar:",
+          "Hint": {
+            "TypeAmount": {
+              "Text": "Sláðu inn upphæð sem borgað er með"
+            },
+            "TapToChange": {
+              "Text": "Ýttu hér til að slá inn upphæð"
+            }
+          }
+        },
+        "Change": {
+          "Text": "Til Baka:"
+        },
+        "Balance": {
+          "Text": "Mismunur:"
+        }
+      },
+      "PaymentTypes": {
+        "Text": "Tegund Greiðslu",
+        "Other": {
+          "Text": "Skipta Greiðslum"
+        },
+        "Invalid": {
+          "Text": "Tegund Greiðslu Ekki Leifð",
+          "Fiscal": {
+            "Text": "Valin Greiðsla inniheldur ranga greiðslu.\\n\\nþessi greiðsla er ekki leifð."
+          }
+        }
+      },
+      "NoItems": {
+        "Text": "Engar Vörur"
+      }
+    },
+    "NoPaymentSelected": {
+      "Text": "Greiðslu Tegund ekki valinn"
+    },
+    "Add": {
+      "Text": "Bæta Við Greiðslu Tegund",
+      "Info": {
+        "Text": "Veldur Greiðslu Tegund og Upphæð fyrir Núverandi Sölu"
+      },
+      "Amount": {
+        "Text": "Upphæð Fyrir Greiðslu \"{0}\""
+      }
+    },
+    "Selected": {
+      "Text": "Veldu Greiðslu Tegund"
+    },
+    "Customer": {
+      "Required": {
+        "Text": "Þarft Viðskiptarvin",
+        "Info": {
+          "Text": "Greiðslu Tegund \"{0}\" Þarfnast Viðskiptavinar til að gera verið valið. Veldu Viðskiptarvin til að halda áfram."
+        }
+      }
+    },
+    "PaymentTypes": {
+      "Validation": {
+        "Change": {
+          "Missing": {
+            "Text": "Röng Upphæð",
+            "Info": {
+              "Text": "Þessi Greiðslu Möguleiki býður ekki upp á Afgang. Veldu aðra upphæð eða annan Greiðslu Möguleika."
+            }
+          }
+        }
+      }
+    }
+  },
+  "Customer": {
+    "Search": {
+      "Text": "Leita Af Viðskiptarvini",
+      "Name": {
+        "Text": "Nafn"
+      },
+      "PIN": {
+        "Text": "Kennitala"
+      },
+      "LoyaltyCard": {
+        "Text": "Vildar Kort"
+      },
+      "Email": {
+        "Text": "Netfang"
+      },
+      "PhoneNumber": {
+        "Text": "Símanúmer"
+      }
+    },
+    "Selection": {
+      "Text": "Valinn Viðskiptavinur",
+      "Details": {
+        "PIN": {
+          "Text": "Kennitala:"
+        },
+        "Address": {
+          "Text": "Heimilisfang:"
+        },
+        "Email": {
+          "Text": "Netfang:"
+        },
+        "PhoneNumber": {
+          "Text": "Síma Númer:"
+        }
+      },
+      "None": {
+        "Text": "Viðskiptavinur ekki valinn",
+        "Info": {
+          "Text": "Veldu Viðskiptarvin af Listanum"
+        }
+      },
+      "Clear": {
+        "Text": "Hreinsa Valin Viðskiptarvin",
+        "Completed": {
+          "Text": "Valinn Viðskiptavini Eytt"
+        }
+      }
+    },
+    "New": {
+      "Text": "Nýr Viðskiptavinur",
+      "Add": {
+        "Text": "Bæta Við Nýjum Viðskiptarvin"
+      },
+      "Name": {
+        "Text": "Nafn"
+      },
+      "TaxNumber": {
+        "Text": "Kennitala"
+      },
+      "Address": {
+        "Text": "Heimilisfang"
+      },
+      "City": {
+        "Text": "Borg"
+      },
+      "PostalCode": {
+        "Text": "Póstnúmer"
+      },
+      "Country": {
+        "Text": "Fylki"
+      },
+      "PhoneNumber": {
+        "Text": "Símanúmer"
+      },
+      "Email": {
+        "Text": "Netfang"
+      }
+    }
+  },
+  "Navigation": {
+    "Back": {
+      "NotAllowed": {
+        "Text": "Valin Aðgerð er ekki Leifð."
+      }
+    }
+  },
+  "FloorPlans": {
+    "Options": {
+      "Text": "Valkostir",
+      "Design": {
+        "Text": "Hæðir / Borð Stillingar",
+        "FloorPlan": {
+          "Add": {
+            "Text": "Bæta Við Nýrri Hæð"
+          },
+          "Delete": {
+            "Text": "Eyða Hæð"
+          },
+          "Rename": {
+            "Text": "Endurnefna Hæð"
+          },
+          "Name": {
+            "Text": "Nafn"
+          }
+        },
+        "Table": {
+          "Add": {
+            "Text": "Bæta Við Borði"
+          },
+          "Delete": {
+            "Text": "Eyða Völdu Borði"
+          },
+          "Name": {
+            "Text": "Nafn"
+          },
+          "Height": {
+            "Text": "Hæð"
+          },
+          "Width": {
+            "Text": "Lengd"
+          },
+          "Size": {
+            "Text": "STÆRÐ"
+          }
+        },
+        "Grid": {
+          "Show": {
+            "Text": "Sýna Hæð"
+          },
+          "SnapToGrid": {
+            "Text": "Festa Við Hæð"
+          },
+          "Size": {
+            "Text": "Hæð Stærð"
+          }
+        }
+      },
+      "View": {
+        "Orders": {
+          "Text": "Sýna Sölur",
+          "Title": {
+            "Text": "Opnar Sölur"
+          },
+          "Order": {
+            "Number": {
+              "Text": "Nóta Númer"
+            },
+            "Total": {
+              "Text": "Samtalls"
+            }
+          },
+          "NoOrders": {
+            "Text": "Engar Opnar Sölur. Búa til nýja Sölu með því að nota Hæð."
+          }
+        },
+        "FloorPlans": {
+          "Text": "Sýna Hæðir"
+        }
+      },
+      "NoSelection": {
+        "Text": "Halda Áfram Án Valkostar"
+      }
+    },
+    "Save": {
+      "Success": {
+        "Text": "Breytingar Hafa Verið Vistaðar."
+      },
+      "Error": {
+        "Text": "Villa við að Vista Breytingar\\nGögnin eru ekki Vistuð.\\nSkilaboð Kerfis: {0}",
+        "Duplicates": {
+          "Text": "Sama Nafn fannst Oftar en einu sinni.\\n\\n{0}\\n\\nNöfnin verða að vera mismunandi. Vinsamlegast lagaðu þetta og Reyndu Aftur.",
+          "Title": {
+            "Text": "Fleyrri en einn fannst"
+          }
+        }
+      }
+    },
+    "Table": {
+      "Unavailable": {
+        "Text": "Borð „{0}“ er tekin af {1}. Ef þú heldur áfram muntu búa til sérstaka röð á sama borði.\\n\\nViltu halda áfram hvort sem er?",
+        "Title": {
+          "Text": "Borð er þegar Upptekið"
+        }
+      }
+    }
+  },
+  "Settings": {
+    "Text": "Stillingar",
+    "Basic": {
+      "Text": "Grunn Stillingar",
+      "Language": {
+        "Text": "Tungumál"
+      },
+      "Style": {
+        "Text": "Stíll Forrits",
+        "ColorScheme": {
+          "Text": "Lita Þema"
+        }
+      },
+      "Layout": {
+        "Text": "Útlit",
+        "TouchScreen": {
+          "Text": "Snertiskár"
+        },
+        "Keyboard": {
+          "Text": "Hefðbundið"
+        }
+      },
+      "VirtualKeyboard": {
+        "Text": "Virkja Lyklaborð Forrits"
+      },
+      "ProductSearch": {
+        "Barcode": {
+          "Text": "Strikamerki"
+        },
+        "Code": {
+          "Text": "Vörunúmer"
+        },
+        "Name": {
+          "Text": "Nafn"
+        }
+      },
+      "ColorScheme": {
+        "Dark": {
+          "Text": "Dökkt"
+        },
+        "Light": {
+          "Text": "Ljóst"
+        }
+      },
+      "NotificationPosition": {
+        "Top": {
+          "Text": "Efst"
+        },
+        "Bottom": {
+          "Text": "Neðst"
+        }
+      },
+      "Notifications": {
+        "Text": "Skilaboð",
+        "ShowClose": {
+          "Text": "Sýna \"Loka\" Takka"
+        },
+        "ClickToClose": {
+          "Text": "Smelltu til að Loka"
+        },
+        "SlideIn": {
+          "Text": "Renna Inn"
+        },
+        "Duration": {
+          "Text": "Lengd Skilaboða (sek.)"
+        },
+        "Position": {
+          "Text": "Staðsetning"
+        }
+      },
+      "StartingCash": {
+        "Text": "Sýna Innborgannir við Ræsingu Forrits"
+      },
+      "BusinessDay": {
+        "Text": "Viðskipta Dagur",
+        "SelecBusinessDay": {
+          "Text": "Velja Dag Viðskiptar við Tæsingu Forrits"
+        }
+      },
+      "Zoom": {
+        "Text": "Aðdráttur"
+      },
+      "ButtonBar": {
+        "Text": "Takki",
+        "Info": {
+          "Text": "Veldu Aðgerð til að sýna í Takka",
+          "VisualLayoutOnly": {
+            "Text": "Gildir aðeins fyrir \"Snertiskjá\" útlit"
+          }
+        },
+        "IsCommentVisible": {
+          "Text": "Athugasemd"
+        },
+        "IsDiscountVisible": {
+          "Text": "Afsláttur"
+        },
+        "IsNewSaleVisible": {
+          "Text": "Ný Sala"
+        },
+        "IsRefundVisible": {
+          "Text": "Endurgreiðsla"
+        },
+        "IsSearchVisible": {
+          "Text": "Leita"
+        },
+        "IsTransferVisible": {
+          "Text": "Flutningur"
+        }
+      }
+    },
+    "Order": {
+      "Text": "Sölur og Greiðslur",
+      "Standard": {
+        "Text": "Grunn Aðgerðir",
+        "AutoOrderNumber": {
+          "Text": "Nota Hæðir"
+        },
+        "PlaySound": {
+          "Text": "Hljóð",
+          "SoundSettings": {
+            "Navigation": {
+              "Text": "Leiðsögu Hljóð"
+            },
+            "ItemAdded": {
+              "Text": "Vöru Bætt Við Hljóð"
+            },
+            "ItemNotFound": {
+              "Text": "Vara Fannst Ekki Hljóð"
+            },
+            "Show": {
+              "Text": "Sýna Hljóð öguleika"
+            },
+            "Hide": {
+              "Text": "Fela Hljóð Möguleika"
+            }
+          }
+        },
+        "ProductGrid": {
+          "Text": "Númer eða Raðir / Dálkar"
+        }
+      },
+      "Users": {
+        "Text": "Notendur",
+        "SingleUser": {
+          "Text": "Einn Notandi"
+        }
+      },
+      "Products": {
+        "Text": "Vörur",
+        "DefaultQuantity": {
+          "Text": "Sjálfgefið Magn"
+        },
+        "DefaultSearch": {
+          "Text": "Sjálfgefin Leit",
+          "Options": {
+            "Text": "Sýna Leitar Möguleika"
+          }
+        },
+        "DefaultDiscountType": {
+          "Text": "Sjálfgefin Afsláttar Tegund",
+          "Percent": {
+            "Text": "Prósentur"
+          },
+          "Fixed": {
+            "Text": "Föst Upphæð"
+          }
+        },
+        "RowPerItem": {
+          "Text": "Sér röð fyrir hverja vöru"
+        }
+      },
+      "Payment": {
+        "Text": "Greiðslur",
+        "ShowSummary": {
+          "Text": "Sýan Vörur í Greiðslum Frá"
+        },
+        "FixedRows": {
+          "Text": "Fjöldi Greiðslu Raðar"
+        },
+        "IsSingleItemDiscountAllowed": {
+          "Text": "Einnar Vöru Afsláttur Leifður"
+        },
+        "QuickPaymentConfirmation": {
+          "Text": "Greiðslu skilaboð flýtilykla"
+        },
+        "ShowPrintReceiptDialog": {
+          "Text": "Sýna Kvittun Prent Glugga"
+        },
+        "DefaultDueDate": {
+          "Text": "Sjálfgefinn Gjalddagi",
+          "Days": {
+            "Text": "days"
+          }
+        },
+        "MergeItemsOnPayment": {
+          "Text": "Sameina hluti við móttöku"
+        }
+      },
+      "Advanced": {
+        "Show": {
+          "Text": "Sýna Frekari Stillingar"
+        },
+        "Hide": {
+          "Text": "Fela Frekari Stillingar"
+        },
+        "ResetOrderNumber": {
+          "Text": "Endurstilla Pöntunnar Númer"
+        },
+        "ShowAllOccupiedTables": {
+          "Text": "Sýna Öll Upptekin Borð á Hæðum"
+        }
+      }
+    },
+    "Print": {
+      "Text": "Prentara",
+      "PrinterSelection": {
+        "Text": "Prentari",
+        "Tour": {
+          "Title": {
+            "Text": "Stilla Prentara Stillingar"
+          },
+          "Content": {
+            "Text": "Smeltu á \"Prentara Stillingar\" Takkann\\ntil að setja upp eða breyta Prentara"
+          }
+        }
+      },
+      "Printers": {
+        "KitchenTicket": {
+          "Text": "Eldhús Prentari",
+          "Operation": {
+            "Text": "Prenta Eldhús Nótur"
+          }
+        },
+        "Service": {
+          "Text": "Þjónustu Prentari",
+          "Operation": {
+            "Text": "Prenta Þjónustu Skilaboð"
+          }
+        },
+        "Estimate": {
+          "Text": "Læst Sala Prentari",
+          "Operation": {
+            "Text": "Prenta Læst Sala"
+          }
+        },
+        "OrderSummary": {
+          "Text": "Prenta Sölur"
+        }
+      },
+      "PrinterOptions": {
+        "Text": "Prentara Stillingar",
+        "Tooltip": {
+          "Text": "Stilla Prentara Stillingar"
+        },
+        "PrinterType": {
+          "Text": "Prentara Tegund",
+          "A4": {
+            "Text": "A4"
+          },
+          "EscPos": {
+            "Text": "ESC/POS"
+          },
+          "POS58": {
+            "Text": "POS 58"
+          },
+          "POS58Rtl": {
+            "Text": "POS 58 RTL"
+          },
+          "POS80": {
+            "Text": "POS 80"
+          },
+          "POS80Rtl": {
+            "Text": "POS 80 RTL"
+          }
+        },
+        "NumberOfCopies": {
+          "Text": "Fjöldi Afrita"
+        },
+        "PaperWidth": {
+          "Text": "Stafir í hverri Línu"
+        },
+        "Header": {
+          "Text": "Haus"
+        },
+        "Footer": {
+          "Text": "Fótur"
+        },
+        "FeedLines": {
+          "Text": "Pappírs Lína"
+        },
+        "CutPaper": {
+          "Text": "Klippa Pappír"
+        },
+        "PrintBitmap": {
+          "Text": "Prenta bitmap"
+        },
+        "RichFormatting": {
+          "Text": "Rich formatting"
+        },
+        "Alignment": {
+          "Left": {
+            "Text": "Vinstri Jafna"
+          },
+          "Center": {
+            "Text": "Miðju Jafna"
+          }
+        },
+        "Revert": {
+          "Text": "Afturkalla Breytingar",
+          "Completed": {
+            "Text": "Fyrri Vistaðar Stillingar voru settar á"
+          }
+        },
+        "PrintTestPage": {
+          "Text": "Prenta Prufu Síðu"
+        },
+        "Advanced": {
+          "Text": "Ítarlegri",
+          "CodePage": {
+            "Text": "Kóða Síða"
+          },
+          "CharacterSet": {
+            "Text": "Stafasett",
+            "None": {
+              "Text": "Enginn (Aðal Prentari"
+            },
+            "USA": {
+              "Text": "Bandaríkin"
+            },
+            "France": {
+              "Text": "Frakkland"
+            },
+            "Germany": {
+              "Text": "Þýskaland"
+            },
+            "UK": {
+              "Text": "Bretland"
+            },
+            "DenmarkI": {
+              "Text": "Danmörk I"
+            },
+            "Sweden": {
+              "Text": "Svíþjóð"
+            },
+            "Italy": {
+              "Text": "Ítalía"
+            },
+            "SpainI": {
+              "Text": "Spánn I"
+            },
+            "Japan": {
+              "Text": "Japan"
+            },
+            "Norway": {
+              "Text": "Noreigur"
+            },
+            "DenmarkII": {
+              "Text": "Danmörk II"
+            },
+            "SpainII": {
+              "Text": "Spánn II"
+            },
+            "LatinAmerica": {
+              "Text": "Rómanska Ameríka"
+            },
+            "Korea": {
+              "Text": "Kórea"
+            },
+            "SloveniaCroatia": {
+              "Text": "Slóvenía / Króatía"
+            },
+            "China": {
+              "Text": "Kína"
+            },
+            "Vietnam": {
+              "Text": "Víetnam"
+            },
+            "Arabia": {
+              "Text": "Arabía"
+            }
+          }
+        },
+        "Unavailable": {
+          "Text": "Frekari Stillingar eru ekki til fyrir þennan Prentara.\\nTil að gera Frekari stillingar veldu annan prentara.",
+          "Info": {
+            "Text": "Learn more about selecting printer type and setting up receipt printer."
+          }
+        },
+        "Margin": {
+          "Text": "Spásíur (í millimetrum)",
+          "Top": {
+            "Text": "Efst"
+          },
+          "Right": {
+            "Text": "Hægri"
+          },
+          "Bottom": {
+            "Text": "Neðst"
+          },
+          "Left": {
+            "Text": "Vinstri"
+          }
+        },
+        "PrintBarcode": {
+          "Text": "Prenta Strikamerki"
+        },
+        "Font": {
+          "Text": "Letur Stillingar",
+          "Family": {
+            "Text": "Letur Fjölskylda"
+          },
+          "SizePercent": {
+            "Text": "Letur Stærð"
+          },
+          "Reset": {
+            "Text": "Endurstillir leturfjölskyldu í sjálfgefið og stillir leturstærð á 100%"
+          }
+        }
+      },
+      "Templates": {
+        "Text": "Prent Sniðmáti",
+        "Font": {
+          "Text": "Letur",
+          "Info": {
+            "Text": "Letur sem valið er hér verður notað í reikningi, skýrslum og öðrum prentmátunum. Ef ekkert er valið verður sjálfgefið letur notað."
+          }
+        }
+      }
+    },
+    "AddOns": {
+      "Text": "Skráðar Einingar",
+      "Modules": {
+        "Text": "Einingar"
+      },
+      "Plugins": {
+        "Text": "Viðbætur"
+      }
+    },
+    "WeighingScale": {
+      "Text": "Strikamerki",
+      "VariableMeasureBarcode": {
+        "Text": "Strikamerkis Vigt",
+        "Enabled": {
+          "Text": "Virkja Strikamerkis Vikt"
+        },
+        "Prefix": {
+          "Text": "Fyrstu tveir tölustafir / Forskeyti"
+        },
+        "ProductCodeLength": {
+          "Text": "Fjöldi Stafa í Vörunúmeri"
+        },
+        "DecimalPlaces": {
+          "Text": "Fjöldu Auka Stafa"
+        },
+        "TrimZeros": {
+          "Text": "Eyða núllum frá Vörunúmeri (minkar 0)"
+        },
+        "IsUsingPriceBarcode": {
+          "Text": "Þyngd prentað í stað magns",
+          "Info": {
+            "Text": "Sumir vigtarvegar prenta heildarverð í stað þess að magn sé mæld. Ef þessi valkostur er virkur verður magnið byggt á vöruverði og heildarfjárhæð frá mælikvarða."
+          }
+        }
+      }
+    },
+    "Email": {
+      "Text": "Netfangur",
+      "General": {
+        "Host": {
+          "Text": "Þjónn"
+        },
+        "Port": {
+          "Text": "Port"
+        },
+        "EmailAddress": {
+          "Text": "Netfangur"
+        },
+        "DisplayName": {
+          "Text": "Sýna Nafn"
+        },
+        "Password": {
+          "Text": "Lykilorð"
+        },
+        "SSL": {
+          "Text": "SSL Virkjað"
+        },
+        "Defaults": {
+          "Text": "Aðal Netfang Skilaboð",
+          "Subject": {
+            "Text": "Fyrirsögn"
+          },
+          "Message": {
+            "Text": "Skilaboð"
+          },
+          "Description": {
+            "Text": "Það sem þú skrifar hér að neðan eru aðal skilaboð þegar Netfangur er sendur sem alltaf er hægt að breyta."
+          },
+          "Bcc": {
+            "Text": "Bcc Viðtakendur"
+          }
+        },
+        "Username": {
+          "Text": "Notandanafn"
+        }
+      }
+    },
+    "About": {
+      "Text": "Um",
+      "HelpCenter": {
+        "Text": "Opna Aðstoð",
+        "Info": {
+          "Text": "Fara á help.aronium.com til að fá Aðstoð."
+        }
+      },
+      "ApplicationDirectory": {
+        "Text": "Gögn Forrits Mappa",
+        "Info": {
+          "Text": "Staðsetning sem allt er vistað í, Log og mart fleyrra."
+        },
+        "Open": {
+          "Text": "Opna Gögn Forrits Möppu"
+        }
+      },
+      "Database": {
+        "Text": "Gagnagrunnur",
+        "Open": {
+          "Text": "Opna Möppu Gagnagrunns"
+        },
+        "Backup": {
+          "Text": "Afrita Gagnagrunn",
+          "Success": {
+            "Text": "Gagnagrunnur Hefur Verið Afritaður.",
+            "Path": {
+              "Text": "Leið: {0}"
+            },
+            "UnableToCopy": {
+              "Text": "Öryggisafrit búið til á sjálfgefnum stað. Ekki er hægt að afrita afritaskrá í valda skrá."
+            }
+          },
+          "Error": {
+            "Text": "Villa bið Tilbúning Gagnagrunns Afrit.\\nSkoðaðu Skýrslu fyrir Upplýsingar."
+          }
+        }
+      },
+      "Update": {
+        "AutoUpdate": {
+          "Text": "Sjálfvirk Uppfærsla"
+        },
+        "SendUsageData": {
+          "Text": "Aðstoðaðu okkur við að bæta okkur með því að senda Nafnlausa Notkunnarupplýsingar"
+        },
+        "Check": {
+          "Text": "Athuga Með Uppfærslur",
+          "Checking": {
+            "Text": "Athuga Með Uppfærslur... Augna Blik..."
+          },
+          "Downloading": {
+            "Text": "Sækji Uppfærslur... Augna Blik..."
+          },
+          "UpToDate": {
+            "Text": "Aronium þarfnast ekki uppdærslu."
+          },
+          "Available": {
+            "Text": "Ný Útgáfa er tilbúin.",
+            "Run": {
+              "Text": "Smelltu hér til að sækja."
+            }
+          },
+          "Error": {
+            "NoConnection": {
+              "Text": "Næ ekki að tengjast Þjóni.\\nAthugaðu Nettenginguna og Reyndu Aftur."
+            }
+          }
+        },
+        "Ready": {
+          "Text": "Ný Uppfærsla",
+          "Install": {
+            "Text": "Smelltu hér til að setja upp nýja Útgáfu"
+          },
+          "Description": {
+            "Text": "Ný útgáfa er tilbúin til Uppsetningar.\\nFyrir Frekari Upplýsingar smelltu á \"Hvað Er Nýtt?\" takkann að neðan.",
+            "Install": {
+              "Text": "Smelltu á \"Setja Upp\" takkann til að Setja upp nýjustu útgáfuna."
+            }
+          },
+          "Versions": {
+            "Current": {
+              "Text": "Núverandi Útgáfa:"
+            },
+            "New": {
+              "Text": "Nýrri Útgáfa:"
+            }
+          },
+          "Ignore": {
+            "Text": "Hunsa Þessa Uppfærslu"
+          },
+          "ReleaseNotes": {
+            "Text": "Hvað Er Nýtt?"
+          },
+          "Postpone": {
+            "Text": "Ekki Núna"
+          },
+          "Run": {
+            "Text": "Setja Upp"
+          }
+        }
+      },
+      "Account": {
+        "Text": "Aðgangur",
+        "Email": {
+          "Text": "Sláðu inn Netfang"
+        },
+        "Change": {
+          "Text": "Breyta"
+        }
+      },
+      "TermsOfUse": {
+        "Text": "Notenda Skilmálar",
+        "Info": {
+          "Text": "Lestu \"Notenda Skilmálar\" Á Netinu"
+        }
+      }
+    },
+    "Authorization": {
+      "Title": {
+        "Text": "Sláðu inn Lykilorð til að skoða Stillingar Forrits"
+      }
+    },
+    "Products": {
+      "Text": "Vöru Stillingar",
+      "TaxInclusivePrice": {
+        "Text": "Sýna og Prenta Vöru með Skatt Innifalinn",
+        "Tooltip": {
+          "Text": "Ef það er valið verða hlutir birtir í sölu og prentaðir á kvittun með skatta inniföldu verði."
+        }
+      },
+      "DiscountApplyRule": {
+        "Text": "Regla um afslátt gildir",
+        "BeforeTax": {
+          "Text": "Fyrir Skatt"
+        },
+        "AfterTax": {
+          "Text": "Eftir Skatt"
+        }
+      }
+    },
+    "Database": {
+      "Text": "Gagnagrunnur",
+      "AutoBackup": {
+        "Text": "Sjálfvirkt Afrit",
+        "Enabled": {
+          "Text": "Virkja Sjálfvirkt Afrit"
+        },
+        "BackupOnStart": {
+          "Text": "Afrita Gagnagrunn þegar Forritið Ræsir Sig"
+        },
+        "BackupOnClose": {
+          "Text": "Afrita Gagnagrunn þegar Forritið Lokar Sér"
+        },
+        "DirectoryPath": {
+          "Text": "Afrit Staðsetning",
+          "Choose": {
+            "Text": "Veldu Staðsetningu Afrits"
+          },
+          "Info": {
+            "Text": "Veldu Staðsetningu Afrits. Sjálfvirkt Afrit skrár munu verða vistaðar í valda Möppu."
+          }
+        },
+        "RemoveOldFiles": {
+          "Text": "Eyða Gömlum Afrist Skrám",
+          "DaysToKeep": {
+            "Text": "Fjöldi Daga til að halda Gömlum Afrits Skrám"
+          }
+        }
+      }
+    },
+    "RestartRequired": {
+      "Text": "Þú þarft að Endurræsa Aronium til að breytingarnar verði Virkar.",
+      "Title": {
+        "Text": "Endurræsing Þarfnast"
+      }
+    }
+  },
+  "Document": {
+    "Create": {
+      "Error": {
+        "Text": "Villa við að búa til Skjal.\\nReyndu Aftur."
+      }
+    },
+    "Category": {
+      "Expenses": {
+        "Text": "Útgjöld",
+        "Purchase": {
+          "Text": "Kaup"
+        },
+        "StockReturn": {
+          "Text": "Hlutabréfaávöxtun"
+        }
+      },
+      "Inventory": {
+        "Text": "Birgðir",
+        "InventoryCount": {
+          "Text": "Birgðir Talning"
+        }
+      },
+      "Loss": {
+        "Text": "Tap",
+        "LossAndDamage": {
+          "Text": "Tap og Skemdir"
+        }
+      },
+      "Sales": {
+        "Text": "Sölur",
+        "Sales": {
+          "Text": "Sölur"
+        },
+        "Refund": {
+          "Text": "Endurgreiðsla"
+        },
+        "Proforma": {
+          "Text": "Proforma"
+        }
+      }
+    }
+  },
+  "Invoices": {
+    "Text": "Skoða Sölu Yfirlit",
+    "Title": {
+      "Text": "Leita í Sölu Yfirliti"
+    },
+    "Documents": {
+      "Text": "Skjöl",
+      "Customer": {
+        "Text": "Viðskiptavinur",
+        "Change": {
+          "Text": "Breyta Viðskiptarvini",
+          "Success": {
+            "Text": "Viðskiptavini Var Breytt."
+          }
+        }
+      },
+      "Print": {
+        "Text": "Prenta",
+        "CashReceipt": {
+          "Text": "Kvittun",
+          "PrinterNotFound": {
+            "Text": "Prentari er ekki valinn eða ekki virkur. Athugaðu Stillingar Prentara og Reyndu Aftur."
+          },
+          "Address": {
+            "Text": "Heimilisfang"
+          },
+          "VatNumber": {
+            "Text": "Kennitala"
+          },
+          "Date": {
+            "Text": "Dagsetning"
+          },
+          "ReceiptNumber": {
+            "Text": "Nóta Númer"
+          },
+          "Customer": {
+            "Text": "Viðskiptavinur"
+          },
+          "Total": {
+            "Text": "Samtalls"
+          },
+          "Tax": {
+            "Text": "VSK"
+          },
+          "TotalAmount": {
+            "Text": "SAMTALLS"
+          },
+          "FiscalReceiptNumber": {
+            "Text": "Auka Nótu Númer"
+          },
+          "Signature": {
+            "Text": "Undirskrift"
+          },
+          "Stamp": {
+            "Text": "P.S."
+          },
+          "Authorization": {
+            "Title": {
+              "Text": "Vinsamlegast Sláðu inn Lykilorð til að Prenta Kvittun"
+            }
+          }
+        },
+        "Pdf": {
+          "Text": "Vista Sem PDF",
+          "Success": {
+            "Text": "Skjalið Vistað í  \"{0}\""
+          }
+        },
+        "Error": {
+          "Text": "Villa Við Að Prenta Skjal",
+          "NoService": {
+            "Text": "Prentara Þjónn Er Ekki Skráður"
+          }
+        },
+        "Refund": {
+          "Text": "Endurgreiða"
+        },
+        "Preview": {
+          "Text": "Prent Prufa"
+        }
+      },
+      "Delete": {
+        "Text": "Eyða",
+        "Confirmation": {
+          "Title": {
+            "Text": "Eyða Skjali"
+          },
+          "Message": {
+            "Text": "Ertu viss um að þú viljir eyða Skjali \"{0}\"?"
+          }
+        },
+        "Unauthorized": {
+          "Text": "Þú hefur ekki réttindi til að eyða Skjali."
+        },
+        "Error": {
+          "Text": "Villa við að Eyða Skjali. Reyndu Aftur"
+        }
+      },
+      "List": {
+        "Text": "Skjöl",
+        "Document": {
+          "Number": {
+            "Text": "Númer"
+          },
+          "DocumentType": {
+            "Text": "Tegund Skjals"
+          },
+          "Warehouse": [
+            {
+              "Text": "Vöruhús"
+            },
+            {
+              "Text": "Vöruhús"
+            }
+          ],
+          "Customer": {
+            "Text": "Viðskiptavinur",
+            "Refresh": {
+              "Text": "Endurhlaða Lista Viðskiptavina",
+              "Complete": {
+                "Text": "Viðskiptavinir Voru Endurhlaðnir"
+              }
+            }
+          },
+          "Vendor": {
+            "Text": "Seljandi",
+            "Refresh": {
+              "Text": "Endurhlaða Birgja Lista",
+              "Complete": {
+                "Text": "Seljendur Endurhlaðnir"
+              }
+            }
+          },
+          "ExternalDocument": {
+            "Text": "Ytri Skjöl"
+          },
+          "Date": {
+            "Text": "Dagsetning"
+          },
+          "DueDate": {
+            "Text": "Gjalddagi"
+          },
+          "StockDate": {
+            "Text": "Birðardagur"
+          },
+          "DateCreated": {
+            "Text": "Búið Til"
+          },
+          "DateUpdated": {
+            "Text": "Uppfært"
+          },
+          "CashRegister": {
+            "Text": "Kassi"
+          },
+          "OrderNumber": {
+            "Text": "Sölu Númer"
+          },
+          "User": {
+            "Text": "Notandi"
+          },
+          "PaymentType": {
+            "Text": "Greiðslu Tegund"
+          },
+          "Discount": {
+            "Text": "Afsláttur"
+          },
+          "Paid": {
+            "Text": "Borgað"
+          },
+          "Unpaid": {
+            "Text": "Ekki Borgað"
+          },
+          "Total": {
+            "Text": "Samtalls",
+            "Summary": {
+              "TotalBeforeTax": {
+                "Text": "Samtalls Án VSK:"
+              },
+              "Tax": {
+                "Text": "VSK:"
+              },
+              "Total": {
+                "Text": "Samtalls:"
+              },
+              "Discount": {
+                "Text": "Afsláttur:",
+                "DiscountType": {
+                  "Text": "Tegund Afsláttar:",
+                  "Percent": {
+                    "Text": "Afsláttur Prósenta"
+                  },
+                  "Fixed": {
+                    "Text": "Afsláttur Upphæð"
+                  }
+                },
+                "DiscountApplyRule": {
+                  "Text": "Virkja Afslátt fyrir eða eftir skatt.\\nÞetta val verður notað í vöruafslætti og körfuafslætti.",
+                  "BeforeTax": {
+                    "Text": "Virkja Afslátt Fyrir Skatt"
+                  },
+                  "AfterTax": {
+                    "Text": "Virkja Afslátt Eftir Skatt"
+                  }
+                }
+              },
+              "Subtotal": {
+                "Text": "Heildar Upphæð:"
+              }
+            }
+          },
+          "Payments": {
+            "Text": "Greiðslur",
+            "Add": {
+              "Text": "Ný Greiðsla"
+            },
+            "PaymentType": {
+              "Text": "Greiðslu Tegund"
+            },
+            "Amount": {
+              "Text": "Upphæð"
+            },
+            "Date": {
+              "Text": "Dagsetning"
+            },
+            "NewPayment": {
+              "Text": "Ný Greiðsla"
+            },
+            "Delete": {
+              "Text": "Eyða Greiðslu",
+              "Confirmation": {
+                "Text": "Ertu Viss um að þú viljir Eyða Greiðslu Með \"{0}\"?"
+              }
+            },
+            "Totals": {
+              "PaymentsTotal": {
+                "Text": "Greiðsla Samtalls:"
+              },
+              "DocumentTotal": {
+                "Text": "Skjöl Samtalls:"
+              }
+            }
+          },
+          "Items": {
+            "Text": "Skjöl",
+            "Item": {
+              "ProductCode": {
+                "Text": "Vörunúmer"
+              },
+              "Product": {
+                "Text": "Nafn"
+              },
+              "MeasurementUnit": {
+                "Text": "Mælieining"
+              },
+              "Quantity": {
+                "Text": "Magn"
+              },
+              "PriceNoTax": {
+                "Text": "Verð Fyrir VSK"
+              },
+              "Price": {
+                "Text": "Verð"
+              },
+              "Tax": {
+                "Text": "VSK %",
+                "Add": {
+                  "Text": "Bæta Við Skatt",
+                  "Tooltip": {
+                    "Text": "Bæta Við Skatt á Vöru"
+                  }
+                },
+                "Remove": {
+                  "Tooltip": {
+                    "Text": "Eyða Skattu af Vöru"
+                  }
+                }
+              },
+              "Discount": {
+                "Text": "Afsláttur",
+                "DiscountType": {
+                  "Text": "Afsláttar Tegund",
+                  "Percent": {
+                    "Text": "Prósentur"
+                  },
+                  "Fixed": {
+                    "Text": "Föst Upphæð"
+                  }
+                },
+                "DiscountApplyRule": {
+                  "BeforeTax": {
+                    "Text": "fyrir skatt"
+                  },
+                  "AfterTax": {
+                    "Text": "eftir skatt"
+                  }
+                }
+              },
+              "TotalBeforeTax": {
+                "Text": "Samtalls Án VSK"
+              },
+              "Total": {
+                "Text": "Samtalls"
+              },
+              "TotalBeforeDiscount": {
+                "Text": "Samtalls Án Afsláttar"
+              },
+              "Error": {
+                "Taxes": {
+                  "Text": "Margir Skattar fundust. Skattur með nafni (\"{0}\").\\nVinsamlegast veldu gildan skatt og reyndu aftur."
+                }
+              }
+            },
+            "Delete": {
+              "Text": "Eyða Skjali",
+              "Confirmation": {
+                "Text": "Ertu Viss um að þú viljir eyða \"{0}\"?"
+              }
+            }
+          },
+          "Print": {
+            "UnsavedChanges": {
+              "Text": "Skjalið inniheldur Upplýsingar sem ekki er búið að Vista. Villtu Vista áður en er Prentað?",
+              "Title": {
+                "Text": "Ekki Vistaðar Breytingar"
+              }
+            }
+          }
+        }
+      },
+      "Count": {
+        "Text": "Skjala Fjöldi:"
+      },
+      "Total": {
+        "Text": "Heildar Upphæð:"
+      },
+      "AllUsers": {
+        "Text": "Sýna Alla Notendur"
+      },
+      "CashRegister": {
+        "All": {
+          "Text": "Allir Kassar"
+        },
+        "Select": {
+          "Text": "Valdir Kassar"
+        }
+      },
+      "BulkActions": {
+        "Text": "Magn Aðgerðir",
+        "Delete": {
+          "Text": "Eyða völdum skjölum",
+          "Confirmation": {
+            "Title": {
+              "Text": "Eyða völdum skjölum"
+            },
+            "Message": {
+              "Text": "Ertu viss um að þú viljir Eyða völdum skjölum?"
+            }
+          },
+          "Message": {
+            "Text": "Eyða Völdum Skjölum... Vinsamlegast Bíðið..."
+          }
+        },
+        "UpdatePaidStatus": {
+          "Message": {
+            "Text": "Uppfæri Greiðslu Stöðu... Vinsamlegast Bíðið..."
+          }
+        }
+      }
+    },
+    "Authorization": {
+      "Title": {
+        "Text": "Sláðu inn Lykilorð til að skoða Yfirlit"
+      }
+    }
+  },
+  "CashRegister": {
+    "Select": {
+      "Text": "Veldu Kassa"
+    }
+  },
+  "Feedback": {
+    "Text": "Umsögn",
+    "Title": {
+      "Text": "Hjálpaðu okkur að gera Aronium Betri"
+    },
+    "Description": {
+      "Text": "Takk fyrir að taka tíma í að senda okkur ábendingu.\\nÁbendingin þín hjálpar okkur að gera Aronium Forritið mikklu Betra.",
+      "Contact": {
+        "Text": "Þér er frjálst að Hafa Samband Hvenær Sem Er"
+      }
+    },
+    "Message": {
+      "Name": {
+        "Text": "Þitt Nafn"
+      },
+      "Email": {
+        "Text": "Netfangur"
+      },
+      "Subject": {
+        "Text": "Fyrirsögn"
+      },
+      "Message": {
+        "Text": "Skilaboð"
+      },
+      "Rating": {
+        "Text": "Heildar Einkun"
+      }
+    },
+    "Send": {
+      "Text": "Senda Umsögn"
+    },
+    "Confirmation": {
+      "Title": {
+        "Text": "Takk Fyrir!"
+      },
+      "Message": {
+        "Text": "Umsögning Þín var send. Við notum hana til að gera Aronium mikklu Betra."
+      }
+    }
+  },
+  "Guide": {
+    "Menu": {
+      "Title": {
+        "Text": "Opna Aðal Valmynd"
+      },
+      "Content": {
+        "Text": "Smelltu hér til að opna Aðal Valmynd til að skoða Stjórnborð"
+      }
+    },
+    "Layout": {
+      "SearchBox": {
+        "Text": "Leita af Vöru eftir Nafni, Strikamerki eða Vörunúmeri.",
+        "Title": {
+          "Text": "Leita Af Vöru"
+        }
+      }
+    },
+    "Dismiss": {
+      "Title": {
+        "Text": "Sleppa Byrjunar Aðstoð"
+      },
+      "Confirmation": {
+        "Text": "Ertu viss um að þú viljir sleppa Byrjunar Aðstoð?"
+      }
+    }
+  },
+  "Layout": {
+    "Visual": {
+      "Item": {
+        "Edit": {
+          "Text": "Breyta Snertiskjá Útliti",
+          "Color": {
+            "Text": "Litur"
+          },
+          "Image": {
+            "Text": "Myndir",
+            "Select": {
+              "Text": "Veldu Mynd"
+            },
+            "Clear": {
+              "Text": "Hreinsa mynd"
+            }
+          }
+        }
+      }
+    }
+  },
+  "OpenOrders": {
+    "Text": "Skoða Opnar Sölur",
+    "Total": {
+      "Text": "HEILDAR UPPHÆÐ"
+    },
+    "NoOrders": {
+      "Text": "Engar Opnar Sölur"
+    },
+    "Authorization": {
+      "Title": {
+        "Text": "Sláðu inn Lykilorð til að skoða Opnar Sölur"
+      }
+    }
+  },
+  "StartingCash": {
+    "Text": "Borgað Inn / Út",
+    "Type": {
+      "CashIn": {
+        "Text": "Bæta Við Greiðslu"
+      },
+      "CashOut": {
+        "Text": "Eyða Greiðslu"
+      }
+    },
+    "Amount": {
+      "Text": "Upphæð",
+      "Reason": {
+        "Text": "Upplýsingar",
+        "Tooltip": {
+          "Text": "Sláðu inn Ástæðu fyrir að bæta við eða eyða Greiðslu..."
+        }
+      }
+    },
+    "Hide": {
+      "Text": "Ekki Sýna Þetta Aftur"
+    },
+    "Entries": {
+      "Text": "Yfirlit Greiðlsna",
+      "NoDescription": {
+        "Text": "<Engar Upplýsingar>"
+      },
+      "NoEntries": {
+        "Text": "Engin Gögn"
+      }
+    },
+    "Saved": {
+      "Text": "Byrjunar Greiðsla Vistuð"
+    }
+  },
+  "Account": {
+    "FirstName": {
+      "Text": "Fyrra Nafn"
+    },
+    "LastName": {
+      "Text": "Seinna Nafn"
+    },
+    "Email": {
+      "Text": "Netfang"
+    },
+    "Password": {
+      "Text": "Lykilorð",
+      "Confirmation": {
+        "Text": "Staðfesta Lykilorð",
+        "Error": {
+          "Text": "Lykilorð og Staðfesta Lykilorð verða að vera það sama"
+        }
+      }
+    },
+    "License": {
+      "Info": {
+        "Text": "Leyfi",
+        "Data": {
+          "Text": "Leyfis Gögn",
+          "LicensedTo": {
+            "Text": "Leyfi Skrá Á"
+          },
+          "Email": {
+            "Text": "Netfang"
+          },
+          "StoreId": {
+            "Text": "Verslun ID"
+          },
+          "Id": {
+            "Text": "Leyfi ID"
+          }
+        },
+        "Products": {
+          "Text": "Vörur",
+          "Id": {
+            "Text": "Id"
+          },
+          "Name": {
+            "Text": "Nafn"
+          },
+          "ValidUntil": {
+            "Text": "Gildir Til"
+          },
+          "LicenseType": {
+            "Text": "Leyfis Tegund"
+          }
+        },
+        "NoLicense": {
+          "Info": {
+            "Text": "Heimsóttu www.aronium.com Til að Læra Meira um Frekari Fríðindi"
+          }
+        },
+        "Refresh": {
+          "Text": "Endurhlaða Leyfi",
+          "Success": {
+            "Text": "Leifið var Sótt."
+          }
+        },
+        "Copy": {
+          "Text": "Afrita Leyfi í Skrá"
+        },
+        "Load": {
+          "Text": "Sækja Leyfi frá Skrá"
+        },
+        "UnlicensedProducts": {
+          "Text": "Óleyfislegar Vörur"
+        }
+      },
+      "Login": {
+        "Text": "Innskrá á Þinn Aðgang",
+        "NotRegistered": {
+          "Text": "Ertu ekki skráður?",
+          "SignUp": {
+            "Text": "Nýskráðu þig núna!"
+          }
+        },
+        "SignIn": {
+          "Text": "Innskrá"
+        }
+      },
+      "Register": {
+        "Text": "Skrá Nýjann Aðgang",
+        "AlreadyRegistered": {
+          "Text": "Ertu þegar skráður?",
+          "SignIn": {
+            "Text": "Innskrá Núna!"
+          }
+        },
+        "CreateAccount": {
+          "Text": "Búa til Aðgang"
+        },
+        "Store": {
+          "Text": "Búa til Verslun",
+          "Details": {
+            "Text": "Tökum okkur örfáar mínútur til að setja upp Verslunina Þína.\\nÞín Fyrirtækis gögn munu verða uppfærð og Leyfi mun verða gert sjálfkrafa.",
+            "CompanyName": {
+              "Text": "Nafn Fyrirtækis"
+            },
+            "Address": {
+              "Text": "Heimilisfang"
+            },
+            "ZipCode": {
+              "Text": "Póstnúmer"
+            },
+            "TaxNumber": {
+              "Text": "Virðisaukaskatts Númer"
+            },
+            "City": {
+              "Text": "Borg"
+            },
+            "Country": {
+              "Text": "Land"
+            }
+          },
+          "Create": {
+            "Text": "Búa til Verslun og Búa til Leyfi"
+          }
+        },
+        "Success": {
+          "Text": "Aðgangur var búinn til"
+        }
+      },
+      "SelectStore": {
+        "Text": "Veldu Verslun",
+        "Info": {
+          "Text": "Veldu Verslun að neðan sem á að sækja Leyfi fyrir.",
+          "Register": {
+            "Text": "Þegar þú hefur valið Verslun, munntu verða spurður um að skrá óskráðar vörur í verslunnar leyfi."
+          }
+        },
+        "NoStores": {
+          "Text": "Engin verslun fannst",
+          "Info": {
+            "Text": "Svo virðist sem að engin Verslun sé við Aðgang \"{0}\". Til að virkja Leyfið þitt, þaeftu að vera með Verslun við Aðganginn."
+          },
+          "Reload": {
+            "Text": "Vinsamlegast búðu til Verslun og Ýttu á \"Endurhlaða\" takkann að neðan til að halda áfram."
+          },
+          "Add": {
+            "Text": "Opna Mitt Aronium til að búa til firstu Verslun"
+          }
+        },
+        "Successfull": {
+          "Text": "Þú hefur verið Innskráður",
+          "Info": {
+            "Text": "Ef Leyfið er til fyrir tilgefna Verslun, mun það verða sótt sjálfkrafa"
+          }
+        }
+      },
+      "StartTrial": {
+        "Text": "Byrja Prufu",
+        "Info": {
+          "Text": "Veldu Möguleika að neðan til að byrja Prufu án Leyfis"
+        },
+        "SelectedStore": {
+          "Text": "Veldu Verslun:",
+          "Change": {
+            "Text": "Nota aðra Verslun"
+          }
+        },
+        "Now": {
+          "Text": "Hefa Prufu Núna"
+        }
+      },
+      "Load": {
+        "Text": "Sækja Leyfi frá skrá",
+        "Successful": {
+          "Text": "Leyfi hefur verið hlaðið"
+        }
+      },
+      "InvalidLicense": {
+        "Text": "Rangt eða Vantar Leyfi",
+        "Info": {
+          "Text": "Ein eða fleyrri vörur vantar Gillt Leyfi.",
+          "SignInOrLoadFromFile": {
+            "Text": "Vinsamlegast Innskráðu þig á Aðganginn þinn til að Sækja Leyfi eða til að Hlaða Leyfi frá Skrá."
+          },
+          "FollowInstructions": {
+            "Text": "Vinsamlegast Fylgdu Leiðbeiningum að neðan til að halda áfram."
+          }
+        },
+        "Hide": {
+          "Text": "Ekki Sýna þetta aftur fyrir þessar vörur"
+        }
+      }
+    },
+    "Switch": {
+      "Text": "Innskrá með öðrum Aðgangi"
+    },
+    "SignOut": {
+      "Text": "Útskrá",
+      "Successful": {
+        "Text": "Þú hefur verið útskráður"
+      }
+    },
+    "Error": {
+      "ExistingAccount": {
+        "Text": "Notandi með þessu Netfangi er þegar til."
+      },
+      "Unauthorized": {
+        "Text": "Rangt notandanafn eða Lykilorð. Vinsamlegast reyndu aftur."
+      }
+    }
+  },
+  "Validations": {
+    "Info": {
+      "Text": "Sjá frekari Upplýsingar og hvernig á að leysa vandamál",
+      "Community": {
+        "Text": "Í Samfélaginu Okkar"
+      },
+      "Or": {
+        "Text": "eða"
+      },
+      "ContactSupport": {
+        "Text": "Hafa Samband við Aðstoð"
+      }
+    },
+    "Cancel": {
+      "Text": "Loka Forriti"
+    },
+    "Confirm": {
+      "Text": "É Skil, Halda Áfram með Forrit Opið"
+    },
+    "Print": {
+      "Warning": {
+        "CustomTemplates": {
+          "Text": "Við höfum komist að því að þú ert að nota sérsniðin kvittun eða reikningssniðmát. Vegna breytinga á gagnagrunni í þessari útgáfu virka þessi sniðmát ekki lengur.\\nÞú munt geta notað sjálfgefin sniðmát, svo að daglegum aðgerðum þínum er ekki lokað.\\n\\nEf þú vilt samt nota gömul sniðmát ættirðu að stöðva gangsetningu forrita núna og fara aftur í gamla útgáfu.",
+          "Title": {
+            "Text": "VARÚÐ! VIÐSKIPTAVINAR PRENTARA SNIÐMÁTI MUN EKKI VIRKA!"
+          }
+        }
+      }
+    },
+    "Refund": {
+      "Invalid": {
+        "Text": "Endurgreiðsla er ekki Gild"
+      }
+    }
+  },
+  "Print": {
+    "Error": {
+      "Text": "Prent villa kom upp",
+      "CustomTemplate": {
+        "Text": "Villa í sérsniðnu sniðmáti fannst!\\nVinsamlegast hafðu samband við Aronium aðstoð til að leysa hugsanleg vandamál með sérsniðna prentmyndina þína.",
+        "Continue": {
+          "Text": "Villtu halda áfram að prenta með því að nota aðal Sniðmáta?"
+        }
+      }
+    }
+  }
+}

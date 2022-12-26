@@ -1,0 +1,3388 @@
+{
+  "code": "en",
+  "name": "English",
+  "Buttons": {
+    "Yes": {
+      "Text": "Yes"
+    },
+    "Ok": {
+      "Text": "OK"
+    },
+    "No": {
+      "Text": "No"
+    },
+    "Cancel": {
+      "Text": "Cancel"
+    },
+    "Save": {
+      "Text": "Save"
+    },
+    "Close": {
+      "Text": "Close"
+    },
+    "Add": {
+      "Text": "Add"
+    },
+    "New": {
+      "Text": "New"
+    },
+    "Edit": {
+      "Text": "Edit"
+    },
+    "Cut": {
+      "Text": "Cut"
+    },
+    "Copy": {
+      "Text": "Copy"
+    },
+    "Paste": {
+      "Text": "Paste"
+    },
+    "Delete": {
+      "Text": "Delete"
+    },
+    "Refresh": {
+      "Text": "Refresh"
+    },
+    "Login": {
+      "Text": "LOGIN"
+    },
+    "Logout": {
+      "Text": "Sign out"
+    },
+    "Print": {
+      "Text": "Print"
+    },
+    "Pdf": {
+      "Text": "PDF"
+    },
+    "SavePdf": {
+      "Text": "Save as PDF"
+    },
+    "Excel": {
+      "Text": "Excel"
+    },
+    "Hide": {
+      "Text": "Hide"
+    },
+    "FirstPage": {
+      "Text": "First page"
+    },
+    "LastPage": {
+      "Text": "Last page"
+    },
+    "NextPage": {
+      "Text": "Next page"
+    },
+    "PreviousPage": {
+      "Text": "Previous page"
+    },
+    "Continue": {
+      "Text": "Continue"
+    },
+    "Clear": {
+      "Text": "Clear"
+    },
+    "Exit": {
+      "Text": "Exit"
+    },
+    "Search": {
+      "Text": "Search"
+    },
+    "Ignore": {
+      "Text": "Ignore"
+    },
+    "Retry": {
+      "Text": "Retry"
+    },
+    "DeleteAll": {
+      "Text": "Delete all"
+    },
+    "Skip": {
+      "Text": "Skip"
+    },
+    "Restart": {
+      "Text": "Restart"
+    },
+    "SaveAndClose": {
+      "Text": "Save & close"
+    },
+    "Help": {
+      "Text": "Help"
+    },
+    "Back": {
+      "Text": "Back"
+    },
+    "LearnMore": {
+      "Text": "Learn more"
+    },
+    "Done": {
+      "Text": "Done"
+    },
+    "Send": {
+      "Text": "Send"
+    },
+    "WhatsThis": {
+      "Text": "What's this?"
+    },
+    "Maximize": {
+      "Text": "Maximize"
+    },
+    "Restore": {
+      "Text": "Restore"
+    },
+    "Browse": {
+      "Text": "Browse"
+    },
+    "PrintPreview": {
+      "Text": "Print preview"
+    }
+  },
+  "Bootstrap": {
+    "Initializing": {
+      "Text": "Initializing application..."
+    },
+    "Load": {
+      "Components": {
+        "Text": "Loading application components..."
+      },
+      "Modules": {
+        "Text": "Loading and initializing modules..."
+      },
+      "Products": {
+        "Text": "Loading products...",
+        "Error": {
+          "Text": "Error loading products.",
+          "Info": {
+            "Text": "Some products may not be eligible for sale. Check failed products and try again."
+          },
+          "DuplicateBarcode": {
+            "Text": "Duplicate barcode \"{0}\""
+          },
+          "DuplicateCode": {
+            "Text": "Duplicate code \"{0}\""
+          },
+          "Copy": {
+            "Text": "Copy to clipboard"
+          }
+        }
+      },
+      "CashRegister": {
+        "Text": "Loading cash register data..."
+      },
+      "ScanTypes": {
+        "Text": "Scanning types..."
+      }
+    },
+    "Connect": {
+      "Text": "Connecting to database...",
+      "NoDataProvider": {
+        "Text": "Database connection module unavailable.\\nPlease contact your administrator."
+      }
+    },
+    "Error": {
+      "Text": "Error occured while trying to start application. Please, contact system administrator."
+    },
+    "Completed": {
+      "Text": "Starting application"
+    },
+    "BackupDatabase": {
+      "Text": "Validating database version..."
+    },
+    "Migrations": {
+      "Text": "Checking the database...",
+      "Failed": {
+        "Text": "Database migration failed!"
+      }
+    },
+    "RestartRequired": {
+      "Text": "Application restart is required for changes to take effect.\\nClick the button below to restart the application."
+    },
+    "ValidateLicense": {
+      "Text": "Validating license..."
+    },
+    "Onboarding": {
+      "Text": "Check onboarding status..."
+    },
+    "CustomerDisplay": {
+      "Text": "Initializing customer display..."
+    },
+    "PrinterStatus": {
+      "Text": "Check printer status..."
+    },
+    "VerifyVersion": {
+      "Text": "Verifying application version..."
+    }
+  },
+  "Onboarding": {
+    "Welcome": {
+      "Text": "Welcome",
+      "Info": {
+        "Text": "Let's set up your store and basic application data.\\nOnboarding process will take only a couple of minutes to complete."
+      },
+      "Start": {
+        "Text": "START"
+      }
+    },
+    "Back": {
+      "Text": "Back"
+    },
+    "Skip": {
+      "Text": "Skip onboarding"
+    },
+    "Hide": {
+      "Text": "Don't show this again"
+    },
+    "Next": {
+      "Text": "Skip"
+    },
+    "Continue": {
+      "Text": "Save & Continue"
+    },
+    "PriceDisplay": {
+      "Text": "Price display",
+      "Info": {
+        "Text": "Choose whether prices are displayed and printed before or after tax"
+      },
+      "BeforeTax": {
+        "Text": "Before tax",
+        "Description": {
+          "Text": "Prices will be displayed and printed in receipt without tax included"
+        }
+      },
+      "AfterTax": {
+        "Text": "After tax",
+        "Description": {
+          "Text": "Prices will be displayed and printed in receipt with tax included"
+        }
+      },
+      "DiscountApplyRule": {
+        "Info": {
+          "Text": "Discounts will be applied before of after tax based on this selection. You can change discount rules in settings anytime."
+        }
+      }
+    },
+    "Layout": {
+      "Text": "Choose Layout",
+      "LearnMore": {
+        "Text": "Learn more about layouts and workspace"
+      },
+      "Standard": {
+        "Text": "Standard",
+        "Description": {
+          "Text": "Use this layout if you are using barcodes or have a physical keyboard attached to your computer."
+        }
+      },
+      "TouchScreen": {
+        "Text": "Visual",
+        "Description": {
+          "Text": "Use this layout if you wish to visually display your products and groups on sales screen."
+        }
+      },
+      "EnableVirtualKeyboard": {
+        "Text": "Enable virtual keyboard"
+      }
+    },
+    "Registration": {
+      "Text": "Registration",
+      "Info": {
+        "Text": "Please, enter your email adress, so we can provide more customized support for you.",
+        "Email": {
+          "Text": "This email will be set to default admin account and can be used to reset password. You can change this email address anytime."
+        }
+      },
+      "Email": {
+        "Text": "Your email address",
+        "Privacy": {
+          "Text": "Your email is kept strictly confidental. We will use your email to provide more personalized support and to send you latest updates, only if you wish.\\nWe hate \"spam\", too."
+        }
+      }
+    },
+    "UserProfile": {
+      "Title": {
+        "Text": "Let's set your personal account"
+      },
+      "Info": {
+        "Text": "Please enter your name and login credentials used for admin access."
+      },
+      "LearnMore": {
+        "Text": "Learn more about users and default credentials"
+      },
+      "FirstName": {
+        "Text": "First name"
+      },
+      "LastName": {
+        "Text": "Last name"
+      },
+      "Email": {
+        "Text": "Email",
+        "Info": {
+          "Text": "This email will be used as a recovery email for your account.\\nMake sure your have entered a valid email address so you can reset your password via email."
+        },
+        "Missing": {
+          "Text": "If you do not enter valid email address, you are in the risk of being blocked.\\nIn case you forget your password, there will be no way to recover it without valid email address.",
+          "Title": {
+            "Text": "Email address is not set"
+          },
+          "Confirmation": {
+            "Text": "Do you want to continue without email address?"
+          }
+        }
+      },
+      "Password": {
+        "Text": "Password",
+        "Errors": {
+          "Empty": {
+            "Text": "Pasword do not meet required criteria. Password cannot be empty."
+          },
+          "ConfirmationError": {
+            "Text": "Password confirmation does not match. Please enter the same values in password and password confirmation fields."
+          }
+        }
+      },
+      "ConfirmPassword": {
+        "Text": "Confirm  password"
+      }
+    },
+    "Completed": {
+      "Text": "Onboarding completed",
+      "Info": {
+        "Text": "Congratulations! You are set and ready to go.\\nNext, open \"Management\" section to add some products and start selling."
+      },
+      "Finish": {
+        "Text": "Close & Continue"
+      }
+    }
+  },
+  "BusinessDay": {
+    "Close": {
+      "Authorization": {
+        "Title": {
+          "Text": "Please enter password to close business day"
+        }
+      }
+    },
+    "Select": {
+      "Text": "Select working day",
+      "EnableSelection": {
+        "Text": "(Click on date to change working day)"
+      }
+    }
+  },
+  "Application": {
+    "Close": {
+      "Text": "Exit application",
+      "Info": {
+        "Text": "Are you sure you want to exit the application?"
+      },
+      "ShutDown": {
+        "Text": "Exit application"
+      },
+      "Restart": {
+        "Text": "Restart application"
+      },
+      "TurnOffComputer": {
+        "Text": "Turn off PC"
+      }
+    },
+    "FullScreen": {
+      "Text": "Full screen"
+    },
+    "Exit": {
+      "Text": "Exit application"
+    },
+    "Menu": {
+      "Text": "Menu"
+    },
+    "RestartRequired": {
+      "Text": "Restart required",
+      "Info": {
+        "Text": "Application restart is required for changes to take effect. Do you want to restart application now?"
+      }
+    },
+    "ReloadProducts": {
+      "Text": "Reload products",
+      "Info": {
+        "Text": "Products are changed. Do you want to reload products now?"
+      }
+    }
+  },
+  "Period": {
+    "Text": "Period",
+    "Start": {
+      "Text": "Start"
+    },
+    "End": {
+      "Text": "End"
+    },
+    "Preset": {
+      "Text": "Predefined period",
+      "Today": {
+        "Text": "Today"
+      },
+      "Yesterday": {
+        "Text": "Yesterday"
+      },
+      "ThisWeek": {
+        "Text": "This week"
+      },
+      "LastWeek": {
+        "Text": "Last week"
+      },
+      "ThisMonth": {
+        "Text": "This month"
+      },
+      "LastMonth": {
+        "Text": "Last month"
+      },
+      "ThisYear": {
+        "Text": "This year"
+      },
+      "LastYear": {
+        "Text": "Last Year"
+      }
+    }
+  },
+  "Login": {
+    "Text": "Login",
+    "Password": {
+      "Text": "Password",
+      "Forgot": {
+        "Text": "Forgot password?"
+      }
+    },
+    "Error": {
+      "Text": "Login failed. Check your password and try again."
+    },
+    "Authentication": {
+      "Text": "User login",
+      "Failed": {
+        "Text": "User not found. Check your password and try again."
+      }
+    },
+    "Reset": {
+      "Text": "Reset password",
+      "LearnMore": {
+        "Text": "Learn more about resetting your password"
+      },
+      "Email": {
+        "Text": "Enter email address",
+        "Info": {
+          "Text": "Enter email address associated with the user you wish to reset password for.\\nWe'll send you a verification code to the email you enter below."
+        },
+        "Required": {
+          "Text": "Email is required"
+        },
+        "EmailAddress": {
+          "Text": "Email address",
+          "Tooltip": {
+            "Text": "Enter your email address"
+          }
+        },
+        "ExistingCode": {
+          "Text": "I have the code. Take me to the next step."
+        }
+      },
+      "Code": {
+        "Text": "Verify code",
+        "Info": {
+          "Text": "Check your email - we sent you an authorization code you need to enter in the box below.\\nIf you didn't receive an email with authorization code, please check your spam folder or try sending an email again."
+        },
+        "Email": {
+          "Text": "Authorization code is sent to {0}."
+        },
+        "AuthorizationCode": {
+          "Text": "Authorization code",
+          "Tooltip": {
+            "Text": "Enter authorization code here..."
+          }
+        },
+        "Verify": {
+          "Text": "Verify code"
+        }
+      },
+      "Password": {
+        "Text": "Enter new password",
+        "Info": {
+          "Text": "Enter new password and password confirmation for your local account.\\nNew password and new password confirmation fields must match.\\n\\nOnce you are done, click \"OK\" button to reset your password."
+        },
+        "NewPassword": {
+          "Text": "New password"
+        },
+        "NewPasswordConfirmation": {
+          "Text": "Confirm new password"
+        },
+        "InUse": {
+          "Text": "Specified password is already taken. Please enter different password and try again."
+        },
+        "User": {
+          "Text": "User: {0}"
+        },
+        "SetPassword": {
+          "Text": "Set your new password"
+        },
+        "Success": {
+          "Text": "Password changed successfully"
+        }
+      },
+      "Error": {
+        "Expired": {
+          "Text": "Your authorization code has expired.\\nPlease request new authorization code."
+        },
+        "InvalidCode": {
+          "Text": "Invalid code. Please enter valid code and try again."
+        },
+        "NoSuchUser": {
+          "Text": "User with specified email \"{0}\" does not exists.\\nPlease enter valid email and try again."
+        },
+        "InvalidEmailAddress": {
+          "Text": "Email address is not valid. Please enter valid email address and try again."
+        },
+        "LimitReached": {
+          "Text": "You have reached the reset password request limit.\\nYou can try again in 24 hours."
+        },
+        "GeneralError": {
+          "Text": "Error occured while trying to send reset password request.\\nPlease try again later."
+        }
+      }
+    }
+  },
+  "Order": {
+    "List": {
+      "Text": "Open orders list",
+      "Select": {
+        "Text": "Select order"
+      }
+    },
+    "New": {
+      "Text": "New sale"
+    },
+    "Estimate": {
+      "Text": "Lock",
+      "Authorization": {
+        "Title": {
+          "Text": "Please enter password to lock sale"
+        }
+      },
+      "Created": {
+        "Text": "Order locked successfully"
+      },
+      "Clear": {
+        "Text": "Unlock this sale",
+        "Authorization": {
+          "Title": {
+            "Text": "Please enter password to unlock sale"
+          }
+        },
+        "Success": {
+          "Text": "Sale is unlocked."
+        }
+      },
+      "Locked": {
+        "Text": "Sale locked",
+        "Info": {
+          "Text": "Editing a locked sale is not allowed."
+        }
+      },
+      "Issued": {
+        "Text": "This sale is already locked.\\nEditing a locked sale is not allowed."
+      },
+      "NoItems": {
+        "Text": "No items to lock."
+      }
+    },
+    "Transfer": {
+      "Text": "Transfer",
+      "Authorization": {
+        "Title": {
+          "Text": "Please enter password to access transfer option"
+        }
+      },
+      "All": {
+        "Text": "Transfer all orders",
+        "Confirmation": {
+          "Text": "Transferring all orders to another user is irreversible!\\n\\nAre you sure you want to transfer all your orders to {0}?"
+        },
+        "Success": {
+          "Text": "All orders transferred successfully."
+        },
+        "Error": {
+          "Text": "Error occurred while transferring orders to selected user.\\nPlease try again."
+        }
+      },
+      "Orders": {
+        "Text": "Open orders"
+      },
+      "OrderNumber": {
+        "Text": "Order number",
+        "Select": {
+          "Text": "Select order"
+        }
+      },
+      "Quantity": {
+        "Text": "Select quantities to transfer"
+      },
+      "User": {
+        "Text": "User",
+        "Current": {
+          "Text": "Order already belongs to selected user."
+        }
+      },
+      "Rounds": {
+        "Text": "Tranfer rounds",
+        "Summary": {
+          "Text": "Order Items"
+        },
+        "Selection": {
+          "Text": "Select rounds to transfer"
+        }
+      },
+      "Items": {
+        "Text": "Order items",
+        "Selected": {
+          "Text": "Selected items for transfer",
+          "NoItems": {
+            "Text": "Select items for transfer"
+          }
+        },
+        "All": {
+          "Text": "Transfer all"
+        },
+        "Back": {
+          "Text": "Remove all"
+        },
+        "InvalidQuantity": {
+          "Text": "Transfer of selected item is not allowed",
+          "Info": {
+            "Text": "Total quantity of selected items is less than the quantity selected for transfer.\\nCheck transfer quantity, voided items and try again."
+          }
+        },
+        "BundledQuantity": {
+          "Text": "Quantity change not allowed",
+          "Info": {
+            "Text": "Item belongs to a group. Changing quantity on group items is not allowed."
+          }
+        }
+      },
+      "CurrentOrder": {
+        "Text": "Transferring to same order",
+        "Confirmation": {
+          "Text": "You are transferring items to the same order. No changes will be made.\\nAre you sure you want to continue?"
+        }
+      },
+      "Failed": {
+        "Text": "Error transferring items",
+        "Info": {
+          "Text": "Error occurred while trying to transfer items. Please try again."
+        }
+      },
+      "Completed": {
+        "Text": "Tranfer completed successfully"
+      },
+      "NoItems": {
+        "Text": "No items to transfer"
+      },
+      "Discount": {
+        "Warning": {
+          "Text": "Fixed discount",
+          "Info": {
+            "Text": "Current order has fixed cart discount set. Transferring items from this order will clear cart discount.\\n\\nDo you want to continue?"
+          }
+        }
+      }
+    },
+    "Void": {
+      "Text": "Void order",
+      "Authorization": {
+        "Title": {
+          "Text": "Please enter password to void this order"
+        }
+      },
+      "Confirm": {
+        "Text": "Void order",
+        "Info": {
+          "Text": "Are you sure you want to void this order?"
+        }
+      },
+      "Completed": {
+        "Text": "Order voided successfully"
+      },
+      "NoItems": {
+        "Text": "No items to void"
+      }
+    },
+    "Rounds": {
+      "Repeat": {
+        "Text": "Repeat round",
+        "NoItems": {
+          "Text": "No items on order.\\nRepeat round can be done only if the round exists."
+        },
+        "NoQuantities": {
+          "Text": "On selected round  #{0} there are no items with quantities sufficient to repeat"
+        },
+        "Bundle": {
+          "Text": "Items belongs to a group",
+          "Info": {
+            "Text": "Repeat operation is not allowed for grouped items."
+          }
+        }
+      },
+      "New": {
+        "Text": "New round",
+        "NoItems": {
+          "Text": "There are no items in your order to create new round.\\nAdd items to order and try again."
+        },
+        "NoUnsavedItems": {
+          "Text": "All items in order saved. New round started."
+        }
+      },
+      "SelectAll": {
+        "Text": "Select all"
+      },
+      "SelectNone": {
+        "Text": "Dismiss all"
+      },
+      "Total": {
+        "Text": "Total:"
+      },
+      "NoItems": {
+        "Text": "No selected items"
+      }
+    },
+    "Comment": {
+      "Text": "Comment",
+      "Add": {
+        "Text": "Select existing or write your comment for item \"{0}\""
+      },
+      "Insert": {
+        "Text": "Write comment here..."
+      },
+      "Change": {
+        "Text": "Add comment",
+        "Forbidden": {
+          "Text": "Editing selected item is not allowed",
+          "Info": {
+            "Text": "Item \"{0}\" is ordered and confirmed.\\nEditing a confirmed item is not allowed."
+          }
+        },
+        "NoItem": {
+          "Text": "No items selected.\\nSelect an item you wish to add a comment to and try again."
+        }
+      }
+    },
+    "Subtotal": {
+      "Text": "Subtotal"
+    },
+    "Tax": {
+      "Text": "Tax"
+    },
+    "Total": {
+      "Text": "TOTAL"
+    },
+    "Checkout": {
+      "Text": "Payment"
+    },
+    "Save": {
+      "Text": "Save sale"
+    },
+    "Refund": {
+      "Text": "Refund",
+      "Authorization": {
+        "Text": "Password required for refund operation"
+      },
+      "Title": {
+        "Text": "Refund items"
+      },
+      "CartDiscountApplied": {
+        "Text": "Cart discount applied",
+        "Info": {
+          "Text": "Cart discount is applied and calculated in total.\\nIf partial refund is used, cart discount will be calculated on refunded items."
+        }
+      },
+      "Total": {
+        "Text": "TOTAL REFUND AMOUNT"
+      },
+      "ReceiptNumber": {
+        "Text": "Receipt number"
+      },
+      "PaymentType": {
+        "Text": "Refund payment type"
+      },
+      "Description": {
+        "Text": "Enter receipt number and payment type to confirm refund"
+      },
+      "SelectAll": {
+        "Text": "Select / Unselect all"
+      },
+      "Print": {
+        "PrinterNotFound": {
+          "Text": "Refund printer not selected."
+        }
+      },
+      "MultyplePaymentTypes": {
+        "Text": "Selected document contains multiple payment types. Select option below to copy payment types to this refund.",
+        "PartialRefund": {
+          "Text": "Using multiple payment types from original sales document is not available for partial refund."
+        },
+        "Copy": {
+          "Text": "Copy payment types from original document"
+        }
+      }
+    },
+    "Items": {
+      "Name": {
+        "Text": "Product name"
+      },
+      "Quantity": {
+        "Text": "Quantity",
+        "Change": {
+          "Text": "Change quantity",
+          "Info": {
+            "Text": "Enter quantity for next item"
+          },
+          "Item": {
+            "Text": "Item \"{0}\""
+          },
+          "Forbidden": {
+            "Text": "Quantity change is not allowed",
+            "Info": {
+              "Text": "Item \"{0}\" is confirmed.\\nEditing a confirmed item is not allowed."
+            }
+          },
+          "Product": {
+            "Text": "Product \"{0}\"\\nDefault quantity: {1:#,#.000}"
+          },
+          "Bundled": {
+            "Text": "Quantity change not allowed",
+            "Info": {
+              "Text": "Quantity change on bundled items is not allowed."
+            }
+          }
+        },
+        "Invalid": {
+          "Text": "Invalid quantity. Enter valid quantity and try again."
+        }
+      },
+      "Price": {
+        "Text": "Price",
+        "Change": {
+          "Text": "Change price",
+          "Product": {
+            "Text": "Product \"{0}\"\\nPrice: {1:#,#.00}"
+          }
+        }
+      },
+      "Total": {
+        "Text": "Amount"
+      },
+      "Empty": {
+        "Text": "No items",
+        "Info": {
+          "Text": "Add products to receipt using barcode, code or search by pressing F3 button"
+        }
+      },
+      "Start": {
+        "Text": "Start"
+      },
+      "Page": {
+        "Text": "Page"
+      },
+      "Add": {
+        "Error": {
+          "Text": "Error adding item. Invalid item data.\\nCheck the item price and quantity and try again."
+        }
+      },
+      "Void": {
+        "NoItems": {
+          "Text": "Voiding item \"{0}\" is not allowed. Insufficient quantity."
+        },
+        "Bundle": {
+          "Text": "Item belongs to a group. Deleting this item will remove all items in the same group.\\n\\nAre you sure you wish to remove all items in this group?",
+          "Title": {
+            "Text": "Deleting group item"
+          }
+        }
+      }
+    },
+    "Print": {
+      "User": {
+        "Text": "User: {0}"
+      },
+      "Time": {
+        "Text": "Time: {0}"
+      },
+      "Number": {
+        "Text": "Order number: {0}"
+      },
+      "Table": {
+        "Text": "Table: {0}"
+      },
+      "Estimate": {
+        "Text": "ESTIMATE",
+        "Discount": {
+          "Text": "Discount"
+        },
+        "Total": {
+          "Text": "TOTAL:"
+        },
+        "Footer": {
+          "Text": "This is not a receipt.\\nPlease wait for the final receipt."
+        }
+      },
+      "Kitchen": {
+        "TableAndRound": {
+          "Text": "Table: {0}. Round: {1}"
+        },
+        "NumberAndRound": {
+          "Text": "Order: {0}. Round: {1}"
+        }
+      },
+      "Dialog": {
+        "Title": {
+          "Text": "How would the customer like their receipt?"
+        },
+        "Change": {
+          "Text": "Change"
+        },
+        "Receipt": {
+          "Text": "Print receipt"
+        },
+        "Invoice": {
+          "Text": "Print invoice"
+        },
+        "Email": {
+          "Text": "Send email",
+          "Recipient": {
+            "Text": "Email recipient",
+            "Title": {
+              "Text": "Enter email message details and click \"Send\" button to continue"
+            },
+            "EmailAddress": {
+              "Text": "Recepient address",
+              "Description": {
+                "Text": "Enter customer email address"
+              },
+              "AddCustomer": {
+                "Text": "Add customer"
+              }
+            },
+            "Bcc": {
+              "Text": "Bcc",
+              "Description": {
+                "Text": "Add Bcc recipients"
+              }
+            },
+            "Subject": {
+              "Text": "Subject",
+              "Description": {
+                "Text": "Enter subject line"
+              },
+              "Default": {
+                "Text": "Receipt {0}"
+              }
+            },
+            "Message": {
+              "Text": "Message",
+              "Description": {
+                "Text": "Enter message for customer"
+              },
+              "Default": {
+                "Text": "Dear customer,\\n\\nFind the receipt attached.\\n\\nReceipt date: {0}\\nTotal: {1}"
+              }
+            },
+            "CopySelf": {
+              "Text": "Send a copy to myself"
+            },
+            "Error": {
+              "EmailFormat": {
+                "Text": "Email address is not formatted properly.\\nPlease check email address and try again."
+              }
+            }
+          },
+          "Sending": {
+            "Text": "Sending email... Please wait..."
+          },
+          "Sent": {
+            "Text": "Receipt sent to {0}"
+          }
+        },
+        "Hide": {
+          "Text": "Don't show this again"
+        }
+      }
+    },
+    "Products": {
+      "Search": {
+        "Text": "Search",
+        "Name": {
+          "Text": "Product name",
+          "Tooltip": {
+            "Text": "Search product by name"
+          },
+          "NotFound": {
+            "Text": "No results for \"{0}\"",
+            "Info": {
+              "Text": "Please check your search parameters and try again"
+            }
+          }
+        },
+        "Barcode": {
+          "Text": "Barcode",
+          "Tooltip": {
+            "Text": "Search product by barcode"
+          },
+          "NotFound": {
+            "Text": "Barcode not found"
+          }
+        },
+        "Code": {
+          "Text": "Product code",
+          "Tooltip": {
+            "Text": "Search product by code"
+          },
+          "NotFound": {
+            "Text": "Code not found"
+          }
+        },
+        "NoItems": {
+          "Text": "No product selected",
+          "Info": {
+            "Text": "Search product by name or code to continue"
+          }
+        },
+        "Selection": {
+          "Price": {
+            "Text": "Price"
+          },
+          "Description": {
+            "Text": "Description"
+          }
+        },
+        "NoResults": {
+          "Text": "No results"
+        }
+      },
+      "NoProducts": {
+        "Text": "No products available",
+        "Info": {
+          "Text": "Please, add products or set sale price to existing ones to continue"
+        }
+      }
+    },
+    "Lock": {
+      "Text": "Lock"
+    },
+    "Unlock": {
+      "Text": "Unlock"
+    },
+    "Item": {
+      "Void": {
+        "Authorization": {
+          "Title": {
+            "Text": "Please enter password to void selected item"
+          }
+        }
+      },
+      "ChangePrice": {
+        "Minimum": {
+          "Text": "Min value: {0}"
+        }
+      }
+    },
+    "QuickPayment": {
+      "Text": "Quick payment",
+      "Confirmation": {
+        "Text": "You have selected \"{0}\" as payment type for current sale.\\n\\nDo you wish to continue using selected payment type?"
+      }
+    },
+    "Discount": {
+      "Text": "Discount",
+      "Authorization": {
+        "Text": "Please enter password to apply discounts"
+      },
+      "Cart": {
+        "Invalid": {
+          "Text": "Invalid cart discount",
+          "GreaterThenTotal": {
+            "Text": "Total with discounts cannot be greater\\nthen order total."
+          }
+        },
+        "Cleared": {
+          "Text": "Cart discount cleared!",
+          "Info": {
+            "Text": "Invalid total is detected and discount was removed from order.\\n\\nPlease check your items and apply valid discount again before you proceed to payment."
+          }
+        }
+      },
+      "Item": {
+        "NotSelected": {
+          "Text": "Item is not selected.\\nTo apply discount to a single item, select one from the sales list before opening this dialog"
+        },
+        "Invalid": {
+          "Text": "Invalid item discount",
+          "GreaterThenTotal": {
+            "Text": "Fixed amount can not be greater\\nthen item total"
+          }
+        },
+        "Cleared": {
+          "Text": "Item discount cleared",
+          "Info": {
+            "Text": "Invalid item total is detected and previously applied discount was removed.\\n\\nPlease check if any discounts should be applied to this item before you proceed to payment."
+          }
+        }
+      }
+    }
+  },
+  "Closing": {
+    "Text": "End of day",
+    "Users": {
+      "Text": "Open transactions",
+      "User": {
+        "Total": {
+          "Text": "TOTAL:"
+        }
+      },
+      "Summary": {
+        "Text": "Open transactions"
+      },
+      "NoReports": {
+        "Text": "No open transactions"
+      }
+    },
+    "Option": {
+      "Text": "Select cash out option",
+      "NotSelected": {
+        "Text": "Cash out option not selected",
+        "Info": {
+          "Text": "Choose one of the above listed options to continue"
+        }
+      }
+    },
+    "User": {
+      "Text": "Cash out",
+      "Completed": {
+        "Text": "{0} cashed out successfully."
+      }
+    },
+    "Shift": {
+      "Text": "Cash out all users",
+      "Closed": {
+        "Text": "All users successfully cashed out"
+      }
+    },
+    "BusinessDay": {
+      "Text": "Close register",
+      "Income": {
+        "Text": "Day total"
+      },
+      "Closed": {
+        "Text": "Register successfully closed"
+      },
+      "Report": {
+        "Text": "REPORT"
+      },
+      "CashIn": {
+        "Text": "Cash in"
+      },
+      "CashOut": {
+        "Text": "Cash out"
+      }
+    },
+    "Error": {
+      "OpenOrders": {
+        "Text": "Open orders",
+        "Users": {
+          "Text": "There are users with open orders!\\nAll orders must be closed before closing the day."
+        }
+      }
+    },
+    "Print": {
+      "User": {
+        "Report": {
+          "Total": {
+            "Text": "TOTAL AMOUNT"
+          },
+          "User": {
+            "Text": "User",
+            "ClosedBy": {
+              "Text": "Received"
+            }
+          },
+          "Header": {
+            "Text": "USER CASH OUT"
+          }
+        }
+      },
+      "DayClose": {
+        "Report": {
+          "Header": {
+            "Text": "CLOSING DAY"
+          },
+          "User": {
+            "Total": {
+              "Text": "TOTAL"
+            }
+          },
+          "Summary": {
+            "Text": "SUMMARY"
+          },
+          "Total": {
+            "Text": "TOTAL"
+          }
+        }
+      }
+    },
+    "History": {
+      "Text": "History",
+      "Info": {
+        "Text": "Use the list below to select and print a copy of any previously generated Z report."
+      },
+      "List": {
+        "Reports": {
+          "Text": "Reports"
+        },
+        "Number": {
+          "Text": "Number"
+        },
+        "Date": {
+          "Text": "Date"
+        }
+      },
+      "Print": {
+        "Text": "Print selected report",
+        "Unsupported": {
+          "Text": "Operation not supported"
+        }
+      }
+    }
+  },
+  "User": {
+    "Text": "User",
+    "Profile": {
+      "Text": "User info",
+      "Info": {
+        "Text": "Profile"
+      },
+      "Edit": {
+        "Text": "Change profile or password"
+      },
+      "Data": {
+        "FirstName": {
+          "Text": "First Name"
+        },
+        "LastName": {
+          "Text": "Last Name"
+        },
+        "Email": {
+          "Text": "Email"
+        },
+        "Password": {
+          "Text": "Password",
+          "Change": {
+            "Text": "Change Password",
+            "Password": {
+              "Text": "Password"
+            },
+            "Confirm": {
+              "Text": "Confirm Password"
+            },
+            "ConfirmationFailed": {
+              "Text": "The field for the password and confirm password do not match.\\nCheck the password and try again."
+            },
+            "InvalidPassword": {
+              "Text": "Password is already in use. Please use different password."
+            }
+          }
+        },
+        "Saved": {
+          "Text": "Profile changed successfully"
+        }
+      },
+      "ShiftReport": {
+        "Text": "User report",
+        "Report": {
+          "Text": "User report",
+          "NoData": {
+            "Text": "No open transactions"
+          },
+          "Total": {
+            "Text": "TOTAL"
+          }
+        },
+        "ClockOut": {
+          "Text": "Cash out"
+        }
+      }
+    }
+  },
+  "Security": {
+    "Authorize": {
+      "Text": "User authentication"
+    },
+    "Level": {
+      "Text": "Access level",
+      "Change": {
+        "Text": "Change access level for selected action",
+        "AccessDenied": {
+          "Text": "You do not have sufficient privileges to change the access level for this operation.\\n\\nAccess level can be adjusted by the user with access level necessary to perform the selected operation."
+        }
+      }
+    },
+    "AccessDenied": {
+      "Text": "Access denied",
+      "Info": {
+        "Text": "You do not have sufficient privileges for selected operation."
+      }
+    },
+    "Key": {
+      "Management": {
+        "Text": "Management",
+        "Description": {
+          "Text": "Controls access to management section"
+        }
+      },
+      "Settings": {
+        "Text": "Settings",
+        "Description": {
+          "Text": "Controls access to settings"
+        }
+      },
+      "VoidOrder": {
+        "Text": "Void order",
+        "Description": {
+          "Text": "Controls whether user is allowed to void complete order"
+        }
+      },
+      "VoidItem": {
+        "Text": "Void item",
+        "Description": {
+          "Text": "Controls whether user is allowed to void single item in open order"
+        }
+      },
+      "LockSale": {
+        "Text": "Lock sale"
+      },
+      "UnlockSale": {
+        "Text": "Unlock sale"
+      },
+      "SplitOrder": {
+        "Text": "Split order",
+        "Description": {
+          "Text": "Allows user to transfer complete or part of an order to another user or table (order number)"
+        }
+      },
+      "Discount": {
+        "Text": "Apply discount"
+      },
+      "DeleteDocument": {
+        "Text": "Delete document"
+      },
+      "ClosingDay": {
+        "Text": "End of day",
+        "Description": {
+          "Text": "Controls access to closing day section"
+        }
+      },
+      "Refund": {
+        "Text": "Refund",
+        "Description": {
+          "Text": "Allows user to refund previously made sale.\\nThis will create new \"Refund\" document and will put quantities back to stock automatically."
+        }
+      },
+      "OpenOrders": {
+        "Text": "View all open orders",
+        "Description": {
+          "Text": "Controls whether user is allowed to see all open orders.\\nThis option is available with floor plans enabled."
+        }
+      },
+      "SalesHistory": {
+        "Text": "View sales history",
+        "Receipt": {
+          "Text": "Reprint receipt",
+          "Description": {
+            "Text": "Controls whether user is allowed to print receipt from sales history."
+          }
+        }
+      },
+      "StartingCash": {
+        "Text": "Starting cash",
+        "Description": {
+          "Text": "Controls access to starting cash section"
+        }
+      },
+      "UserProfile": {
+        "Text": "User profile"
+      }
+    }
+  },
+  "Payment": {
+    "Details": {
+      "Summary": {
+        "Text": "Items"
+      },
+      "Actions": {
+        "Text": "Actions",
+        "ShowItems": {
+          "Text": "Show items"
+        }
+      },
+      "Discount": {
+        "Text": "Discount",
+        "Options": {
+          "Text": "Discount options",
+          "DisallowedItems": {
+            "Text": "There are items which can not be directly assigned to a discount."
+          }
+        },
+        "Type": {
+          "Percent": {
+            "Text": "Apply discount in percents"
+          },
+          "Fixed": {
+            "Text": "Apply discount as fixed amount"
+          }
+        },
+        "Target": {
+          "Item": {
+            "Text": "Item discount",
+            "NotSelected": {
+              "Text": "No items selected.\\nPlease select item on the left to apply a discount."
+            },
+            "NotAllowed": {
+              "Text": "Discount is not allowed for voided items"
+            },
+            "Info": {
+              "Text": "Apply discount to \"{0}\""
+            }
+          },
+          "Cart": {
+            "Text": "Cart discount",
+            "Info": {
+              "Text": "Apply cart discount"
+            }
+          }
+        },
+        "Total": {
+          "Text": "Total:"
+        },
+        "Subtotal": {
+          "Text": "Subtotal:"
+        },
+        "TotalDiscount": {
+          "Text": "Total discount:"
+        },
+        "Clear": {
+          "Text": "Clear discounts",
+          "Completed": {
+            "Text": "All discounts removed"
+          }
+        }
+      },
+      "Split": {
+        "Text": "Rounds",
+        "Rounds": {
+          "Text": "Select round for payment",
+          "RoundNumber": {
+            "Text": "Round:"
+          },
+          "RoundTotal": {
+            "Text": "Amount:"
+          },
+          "SelectAll": {
+            "Text": "Select all"
+          },
+          "SelectNone": {
+            "Text": "Dismiss all"
+          }
+        }
+      },
+      "Customer": {
+        "Text": "Customer"
+      },
+      "Total": {
+        "Text": "Total:"
+      },
+      "TotalWithoutDiscount": {
+        "Text": "Total without discount:"
+      },
+      "Money": {
+        "Text": "Payment",
+        "Paid": {
+          "Text": "Paid:",
+          "Hint": {
+            "TypeAmount": {
+              "Text": "Type paid amount"
+            },
+            "TapToChange": {
+              "Text": "Tap here to enter paid amount"
+            }
+          }
+        },
+        "Change": {
+          "Text": "Change:"
+        },
+        "Balance": {
+          "Text": "Balance:"
+        }
+      },
+      "PaymentTypes": {
+        "Text": "Payment type",
+        "Other": {
+          "Text": "Split payments"
+        },
+        "Invalid": {
+          "Text": "Payment type not allowed",
+          "Fiscal": {
+            "Text": "Selected payment type contain invalid combination of fiscal and non-fiscal payment type.\\n\\nIt is not allowed to combine fiscal and non-fiscal payment types."
+          }
+        }
+      },
+      "NoItems": {
+        "Text": "No items"
+      }
+    },
+    "NoPaymentSelected": {
+      "Text": "Payment type not selected"
+    },
+    "Add": {
+      "Text": "Add payment type",
+      "Info": {
+        "Text": "Choose payment types and amounts required for the current sale"
+      },
+      "Amount": {
+        "Text": "Amount for payment \"{0}\""
+      }
+    },
+    "Selected": {
+      "Text": "Selected payment type"
+    },
+    "Customer": {
+      "Required": {
+        "Text": "Customer required",
+        "Info": {
+          "Text": "Payment type \"{0}\" requires customer to be selected. Please select a customer to proceed."
+        }
+      }
+    },
+    "PaymentTypes": {
+      "Validation": {
+        "Change": {
+          "Missing": {
+            "Text": "Incorrect amount",
+            "Info": {
+              "Text": "This payment type does not allows change. Enter correct amount or select another payment type."
+            }
+          }
+        }
+      }
+    }
+  },
+  "Customer": {
+    "Search": {
+      "Text": "Search customer",
+      "Name": {
+        "Text": "Name"
+      },
+      "PIN": {
+        "Text": "Tax number"
+      },
+      "LoyaltyCard": {
+        "Text": "Loyalty card"
+      },
+      "Email": {
+        "Text": "Email"
+      },
+      "PhoneNumber": {
+        "Text": "Phone number"
+      }
+    },
+    "Selection": {
+      "Text": "Selected customer",
+      "Details": {
+        "PIN": {
+          "Text": "Tax number:"
+        },
+        "Address": {
+          "Text": "Address:"
+        },
+        "Email": {
+          "Text": "Email:"
+        },
+        "PhoneNumber": {
+          "Text": "Phone number:"
+        }
+      },
+      "None": {
+        "Text": "Customer not selected",
+        "Info": {
+          "Text": "Select customer from the list"
+        }
+      },
+      "Clear": {
+        "Text": "Clear selected customer",
+        "Completed": {
+          "Text": "Selected customer removed"
+        }
+      }
+    },
+    "New": {
+      "Text": "New customer",
+      "Add": {
+        "Text": "Add new customer",
+        "Error": {
+          "Text": "Error occured while trying to add customer.\\nSystem message: {0}"
+        }
+      },
+      "Name": {
+        "Text": "Name"
+      },
+      "Code": {
+        "Text": "Code"
+      },
+      "TaxNumber": {
+        "Text": "Tax number"
+      },
+      "Address": {
+        "Text": "Address"
+      },
+      "City": {
+        "Text": "City"
+      },
+      "PostalCode": {
+        "Text": "ZIP code"
+      },
+      "Country": {
+        "Text": "State"
+      },
+      "PhoneNumber": {
+        "Text": "Phone number"
+      },
+      "Email": {
+        "Text": "Email"
+      }
+    }
+  },
+  "Navigation": {
+    "Back": {
+      "NotAllowed": {
+        "Text": "Selected operation is not allowed."
+      }
+    }
+  },
+  "FloorPlans": {
+    "Options": {
+      "Text": "Options",
+      "Design": {
+        "Text": "Floor plan / table settings",
+        "Grid": {
+          "Show": {
+            "Text": "Show grid"
+          },
+          "SnapToGrid": {
+            "Text": "Snap to grid"
+          },
+          "Size": {
+            "Text": "Grid size"
+          }
+        },
+        "FloorPlan": {
+          "Add": {
+            "Text": "Add new floor plan"
+          },
+          "Delete": {
+            "Text": "Remove floor plan"
+          },
+          "Rename": {
+            "Text": "Rename floor plan"
+          },
+          "Name": {
+            "Text": "Name"
+          },
+          "Color": {
+            "Text": "Floor plan color",
+            "Reset": {
+              "Text": "Reset to default"
+            }
+          }
+        },
+        "Table": {
+          "Add": {
+            "Text": "Add table"
+          },
+          "Delete": {
+            "Text": "Remove selected table"
+          },
+          "Name": {
+            "Text": "Name"
+          },
+          "Height": {
+            "Text": "Height"
+          },
+          "Width": {
+            "Text": "Width"
+          },
+          "Size": {
+            "Text": "SIZE"
+          }
+        }
+      },
+      "View": {
+        "Orders": {
+          "Text": "Show orders",
+          "Title": {
+            "Text": "Open orders"
+          },
+          "Order": {
+            "Number": {
+              "Text": "Order number"
+            },
+            "Total": {
+              "Text": "Total"
+            }
+          },
+          "NoOrders": {
+            "Text": "There are no open orders. Create new order using floor plan."
+          }
+        },
+        "FloorPlans": {
+          "Text": "Show floor plans"
+        }
+      },
+      "NoSelection": {
+        "Text": "Continue without selection"
+      }
+    },
+    "Save": {
+      "Success": {
+        "Text": "Changes successfully saved."
+      },
+      "Error": {
+        "Text": "Error occurs while saving\\nData are not preserved.\\nSystem Message: {0}",
+        "Duplicates": {
+          "Text": "Duplicate table names found.\\n\\n{0}\\n\\nTable names must be unique. Please fix table names and try again.",
+          "Title": {
+            "Text": "Duplicates found"
+          }
+        }
+      }
+    },
+    "Table": {
+      "Unavailable": {
+        "Text": "Table \"{0}\" is taken by {1}. If you continue, you will create separate order on the same table.\\n\\nDo you wish to continue anyway?",
+        "Title": {
+          "Text": "Table already taken"
+        }
+      }
+    }
+  },
+  "Settings": {
+    "Text": "Settings",
+    "Basic": {
+      "Text": "Basic settings",
+      "Language": {
+        "Text": "Language"
+      },
+      "WritingDirection": {
+        "Text": "Writing direction",
+        "LeftToRight": {
+          "Text": "Left to right"
+        },
+        "RightToLeft": {
+          "Text": "Right to left"
+        }
+      },
+      "Style": {
+        "Text": "Application style",
+        "ColorScheme": {
+          "Text": "Color scheme"
+        }
+      },
+      "Layout": {
+        "Text": "Layout",
+        "TouchScreen": {
+          "Text": "Visual"
+        },
+        "Keyboard": {
+          "Text": "Standard"
+        }
+      },
+      "Zoom": {
+        "Text": "Zoom"
+      },
+      "VirtualKeyboard": {
+        "Text": "Enable virtual keyboard"
+      },
+      "ProductSearch": {
+        "Barcode": {
+          "Text": "Barcode"
+        },
+        "Code": {
+          "Text": "Code"
+        },
+        "Name": {
+          "Text": "Name"
+        }
+      },
+      "ColorScheme": {
+        "Dark": {
+          "Text": "Dark"
+        },
+        "Light": {
+          "Text": "Light"
+        },
+        "Dimmed": {
+          "Text": "Dimmed"
+        },
+        "HighContrast": {
+          "Text": "High contrast"
+        },
+        "Gray": {
+          "Text": "Gray"
+        }
+      },
+      "NotificationPosition": {
+        "Top": {
+          "Text": "Top"
+        },
+        "Bottom": {
+          "Text": "Bottom"
+        }
+      },
+      "Notifications": {
+        "Text": "Messages",
+        "ShowClose": {
+          "Text": "Show \"Close\" button"
+        },
+        "ClickToClose": {
+          "Text": "Click to close"
+        },
+        "SlideIn": {
+          "Text": "Slide in"
+        },
+        "Duration": {
+          "Text": "Message duration (sec.)"
+        },
+        "Position": {
+          "Text": "Position"
+        }
+      },
+      "StartingCash": {
+        "Text": "Show cash in on application start"
+      },
+      "BusinessDay": {
+        "Text": "Business day",
+        "SelecBusinessDay": {
+          "Text": "Select business day on application start"
+        }
+      },
+      "ButtonBar": {
+        "Text": "Button bar",
+        "Info": {
+          "Text": "Select actions to appear in button bar",
+          "VisualLayoutOnly": {
+            "Text": "Applicable for \"Visual\" layout only"
+          }
+        },
+        "IsCommentVisible": {
+          "Text": "Comment"
+        },
+        "IsDiscountVisible": {
+          "Text": "Discount"
+        },
+        "IsNewSaleVisible": {
+          "Text": "New sale"
+        },
+        "IsRefundVisible": {
+          "Text": "Refund"
+        },
+        "IsSearchVisible": {
+          "Text": "Search"
+        },
+        "IsTransferVisible": {
+          "Text": "Transfer"
+        }
+      }
+    },
+    "Order": {
+      "Text": "Order & payment",
+      "Standard": {
+        "Text": "Basic operations",
+        "AutoOrderNumber": {
+          "Text": "Use floor plans"
+        },
+        "PlaySound": {
+          "Text": "Sounds",
+          "SoundSettings": {
+            "Navigation": {
+              "Text": "Navigation sound"
+            },
+            "ItemAdded": {
+              "Text": "Item added sound"
+            },
+            "ItemNotFound": {
+              "Text": "Item not found sound"
+            },
+            "Show": {
+              "Text": "Show sound options"
+            },
+            "Hide": {
+              "Text": "Hide sound options"
+            }
+          }
+        },
+        "ProductGrid": {
+          "Text": "Number or rows / columns"
+        }
+      },
+      "Users": {
+        "Text": "Users",
+        "SingleUser": {
+          "Text": "Single user"
+        }
+      },
+      "Products": {
+        "Text": "Items",
+        "DefaultQuantity": {
+          "Text": "Default quantity"
+        },
+        "DefaultSearch": {
+          "Text": "Default search",
+          "Options": {
+            "Text": "Show search options"
+          }
+        },
+        "DefaultDiscountType": {
+          "Text": "Default discount type",
+          "Percent": {
+            "Text": "Percentage"
+          },
+          "Fixed": {
+            "Text": "Fixed"
+          }
+        },
+        "RowPerItem": {
+          "Text": "Separate row for each item"
+        }
+      },
+      "Payment": {
+        "Text": "Payment",
+        "ShowSummary": {
+          "Text": "Show items on payment form"
+        },
+        "FixedRows": {
+          "Text": "Number of payment type rows"
+        },
+        "IsSingleItemDiscountAllowed": {
+          "Text": "Single item discount allowed"
+        },
+        "QuickPaymentConfirmation": {
+          "Text": "Shortcut keys payment confirmation"
+        },
+        "ShowPrintReceiptDialog": {
+          "Text": "Display receipt print dialog"
+        },
+        "DefaultDueDate": {
+          "Text": "Default due date",
+          "Days": {
+            "Text": "days"
+          }
+        },
+        "MergeItemsOnPayment": {
+          "Text": "Merge items on receipt"
+        }
+      },
+      "Advanced": {
+        "Show": {
+          "Text": "Show advanced settings"
+        },
+        "Hide": {
+          "Text": "Hide advanced settings"
+        },
+        "ResetOrderNumber": {
+          "Text": "Reset order number on day close"
+        },
+        "ShowAllOccupiedTables": {
+          "Text": "Show all occupied tables in floor plan"
+        }
+      }
+    },
+    "Products": {
+      "Text": "Products settings",
+      "TaxInclusivePrice": {
+        "Text": "Display and print items with tax included",
+        "Tooltip": {
+          "Text": "If selected, items will be displayed in sales and printed on a receipt with tax included price."
+        }
+      },
+      "DiscountApplyRule": {
+        "Text": "Discount apply rule",
+        "BeforeTax": {
+          "Text": "Before tax"
+        },
+        "AfterTax": {
+          "Text": "After tax"
+        }
+      },
+      "Sorting": {
+        "Text": "Sorting",
+        "Name": {
+          "Text": "Name"
+        },
+        "Code": {
+          "Text": "Code"
+        }
+      },
+      "AllowNegativePrices": {
+        "Text": "Allow negative price",
+        "Tooltip": {
+          "Text": "If selected, negative sale price will be allowed."
+        }
+      }
+    },
+    "Print": {
+      "Text": "Print options",
+      "PrinterSelection": {
+        "Text": "Printer selection",
+        "Tour": {
+          "Title": {
+            "Text": "Adjust printer settings"
+          },
+          "Content": {
+            "Text": "Click \"Printer settings\" button\\nto set up and customize your printer"
+          }
+        }
+      },
+      "Printers": {
+        "KitchenTicket": {
+          "Text": "Kitchen printer",
+          "Operation": {
+            "Text": "Print kitchen ticket"
+          }
+        },
+        "Service": {
+          "Text": "Service printer",
+          "Operation": {
+            "Text": "Print service messages"
+          }
+        },
+        "Estimate": {
+          "Text": "Locked sale printer",
+          "Operation": {
+            "Text": "Print locked sale"
+          }
+        },
+        "OrderSummary": {
+          "Text": "Print order"
+        }
+      },
+      "PrinterOptions": {
+        "Text": "Printer settings",
+        "BasicSettings": {
+          "Text": "Basic settings"
+        },
+        "Tooltip": {
+          "Text": "Adjust printer settings"
+        },
+        "PrinterType": {
+          "Text": "Printer type",
+          "WindowsPrinter": {
+            "Text": "Windows printer"
+          },
+          "GenericTextOnly": {
+            "Text": "Generic / Text only"
+          }
+        },
+        "PaperSize": {
+          "Text": "Paper size",
+          "RollPaper58": {
+            "Text": "58 mm"
+          },
+          "RollPaper80": {
+            "Text": "80 mm"
+          },
+          "A4": {
+            "Text": "A4"
+          }
+        },
+        "RightToLeft": {
+          "Text": "Right to left"
+        },
+        "NumberOfCopies": {
+          "Text": "Number of copies"
+        },
+        "PaperWidth": {
+          "Text": "Characters per line"
+        },
+        "Header": {
+          "Text": "Header"
+        },
+        "Footer": {
+          "Text": "Footer"
+        },
+        "FeedLines": {
+          "Text": "Feed lines"
+        },
+        "CutPaper": {
+          "Text": "Cut paper"
+        },
+        "PrintBitmap": {
+          "Text": "Print bitmap"
+        },
+        "RichFormatting": {
+          "Text": "Rich formatting"
+        },
+        "Alignment": {
+          "Left": {
+            "Text": "Align left"
+          },
+          "Center": {
+            "Text": "Align center"
+          }
+        },
+        "Revert": {
+          "Text": "Revert changes",
+          "Completed": {
+            "Text": "Previously saved settings applied"
+          }
+        },
+        "PrintTestPage": {
+          "Text": "Print test page"
+        },
+        "Advanced": {
+          "Text": "Advanced",
+          "CodePage": {
+            "Text": "Code page"
+          },
+          "CharacterSet": {
+            "Text": "Character set",
+            "None": {
+              "Text": "None (Printer default)"
+            },
+            "USA": {
+              "Text": "USA"
+            },
+            "France": {
+              "Text": "France"
+            },
+            "Germany": {
+              "Text": "Germany"
+            },
+            "UK": {
+              "Text": "United Kingdom"
+            },
+            "DenmarkI": {
+              "Text": "Denmark I"
+            },
+            "Sweden": {
+              "Text": "Sweden"
+            },
+            "Italy": {
+              "Text": "Italy"
+            },
+            "SpainI": {
+              "Text": "Spain I"
+            },
+            "Japan": {
+              "Text": "Japan"
+            },
+            "Norway": {
+              "Text": "Norway"
+            },
+            "DenmarkII": {
+              "Text": "Denmark II"
+            },
+            "SpainII": {
+              "Text": "Spain II"
+            },
+            "LatinAmerica": {
+              "Text": "Latin America"
+            },
+            "Korea": {
+              "Text": "Korea"
+            },
+            "SloveniaCroatia": {
+              "Text": "Slovenia / Croatia"
+            },
+            "China": {
+              "Text": "China"
+            },
+            "Vietnam": {
+              "Text": "Vietnam"
+            },
+            "Arabia": {
+              "Text": "Arabia"
+            }
+          }
+        },
+        "Unavailable": {
+          "Text": "Additional options are not available for selected printer type.\\nTo see additional printer options, please select different printer type.",
+          "Info": {
+            "Text": "Learn more about selecting printer type and setting up receipt printer."
+          }
+        },
+        "Margin": {
+          "Text": "Margins (in millimeters)",
+          "Top": {
+            "Text": "Top"
+          },
+          "Right": {
+            "Text": "Right"
+          },
+          "Bottom": {
+            "Text": "Bottom"
+          },
+          "Left": {
+            "Text": "Left"
+          }
+        },
+        "PrintBarcode": {
+          "Text": "Print barcode"
+        },
+        "Font": {
+          "Text": "Font settings",
+          "Family": {
+            "Text": "Font family"
+          },
+          "SizePercent": {
+            "Text": "Font size"
+          },
+          "Reset": {
+            "Text": "Resets font family to default and sets font size to 100%"
+          }
+        }
+      },
+      "Templates": {
+        "Text": "Print templates",
+        "Font": {
+          "Text": "Font",
+          "Info": {
+            "Text": "Font selected here will be used in invoice, reports and other print templates. If none is selected, default font will be used."
+          }
+        },
+        "Invoice": {
+          "Text": "Invoice settings",
+          "Title": {
+            "Text": "Title"
+          },
+          "Columns": {
+            "Text": "Columns selection",
+            "TaxColumn": {
+              "Text": "Tax column"
+            },
+            "DiscountColumn": {
+              "Text": "Discount column"
+            }
+          },
+          "CustomerDetails": {
+            "Text": "Customer details",
+            "TaxNumber": {
+              "Text": "Tax number"
+            },
+            "Code": {
+              "Text": "Code"
+            },
+            "PhoneNumber": {
+              "Text": "Phone number"
+            },
+            "Email": {
+              "Text": "Email"
+            }
+          },
+          "Other": {
+            "Text": "Other settings",
+            "PrintPaymentTypes": {
+              "Text": "Payment methods"
+            }
+          },
+          "Footer": {
+            "Text": "Footer"
+          }
+        }
+      }
+    },
+    "AddOns": {
+      "Text": "Registrated modules",
+      "Modules": {
+        "Text": "Modules"
+      },
+      "Plugins": {
+        "Text": "Plugins"
+      }
+    },
+    "WeighingScale": {
+      "Text": "Weighing scale",
+      "VariableMeasureBarcode": {
+        "Text": "Weighing scales barcode",
+        "Enabled": {
+          "Text": "Enable weighing scales barcode"
+        },
+        "Prefix": {
+          "Text": "First two digits / prefix"
+        },
+        "ProductCodeLength": {
+          "Text": "Number of digits for product code"
+        },
+        "DecimalPlaces": {
+          "Text": "Number of decimal places"
+        },
+        "TrimZeros": {
+          "Text": "Remove zeros from product code (trim zeros)"
+        },
+        "IsUsingPriceBarcode": {
+          "Text": "Scale prints price instead of quantity",
+          "Info": {
+            "Text": "Some weighing scales prints total price instead of quantity being measured. If this option is enabled, quantity will be based on product price and total amount from the scale."
+          }
+        }
+      }
+    },
+    "Email": {
+      "Text": "Email settings",
+      "General": {
+        "Text": "General",
+        "Host": {
+          "Text": "Host"
+        },
+        "Port": {
+          "Text": "Port"
+        },
+        "EmailAddress": {
+          "Text": "Email address"
+        },
+        "DisplayName": {
+          "Text": "Display name"
+        },
+        "Username": {
+          "Text": "Username"
+        },
+        "Password": {
+          "Text": "Password"
+        },
+        "SSL": {
+          "Text": "SSL enabled"
+        },
+        "Defaults": {
+          "Text": "Default email message values",
+          "Subject": {
+            "Text": "Subject"
+          },
+          "Message": {
+            "Text": "Message"
+          },
+          "Description": {
+            "Text": "If you decide to leave these fields blank, automatically generated subject and message for the customer will be used. You can change them before message is sent."
+          },
+          "Bcc": {
+            "Text": "Bcc recipients"
+          }
+        }
+      }
+    },
+    "About": {
+      "Text": "About",
+      "Version": {
+        "Text": "Version"
+      },
+      "ApplicationId": {
+        "Text": "Application ID"
+      },
+      "HelpCenter": {
+        "Text": "Open help center",
+        "Info": {
+          "Text": "Go to help.aronium.com to open support request."
+        }
+      },
+      "ApplicationDirectory": {
+        "Text": "Application data directory",
+        "Info": {
+          "Text": "Location where application settings, log files and other application related items are stored."
+        },
+        "Open": {
+          "Text": "Open application data directory"
+        }
+      },
+      "Database": {
+        "Text": "Database",
+        "Open": {
+          "Text": "Open database location"
+        },
+        "Backup": {
+          "Text": "Backup database",
+          "Success": {
+            "Text": "Database backup completed successfully.",
+            "Path": {
+              "Text": "Path: {0}"
+            },
+            "UnableToCopy": {
+              "Text": "Backup created at default location. Unable to copy backup file to selected directory."
+            }
+          },
+          "Error": {
+            "Text": "Error creating database backup.\\nSee logs for more details."
+          }
+        }
+      },
+      "Update": {
+        "AutoUpdate": {
+          "Text": "Auto update"
+        },
+        "SendUsageData": {
+          "Text": "Help us improve by sending anonymous usage data"
+        },
+        "Check": {
+          "Text": "Check for updates",
+          "Checking": {
+            "Text": "Checking for updates... Please wait..."
+          },
+          "Downloading": {
+            "Text": "Downloading update... Please wait..."
+          },
+          "UpToDate": {
+            "Text": "Aronium is up to date."
+          },
+          "Available": {
+            "Text": "New version is available.",
+            "Run": {
+              "Text": "Click here to install now."
+            }
+          },
+          "Error": {
+            "NoConnection": {
+              "Text": "Unable to connect to server.\\nPlease, check your internet connection and try again."
+            },
+            "InvalidFile": {
+              "Text": "Error occurred while downloading the file. It may be unavailable or corrupted.\\nPlease try again later."
+            }
+          }
+        },
+        "Ready": {
+          "Text": "Update is available",
+          "Install": {
+            "Text": "Click here to install new version"
+          },
+          "Description": {
+            "Text": "New version is ready to be installed.\\nFor more information visit release notes page by clicking \"What's new?\" button below.",
+            "Install": {
+              "Text": "Click \"Install\" button to install the latest updates."
+            }
+          },
+          "Versions": {
+            "Current": {
+              "Text": "Current version:"
+            },
+            "New": {
+              "Text": "New version:"
+            }
+          },
+          "Ignore": {
+            "Text": "Ignore this update"
+          },
+          "ReleaseNotes": {
+            "Text": "What's new?"
+          },
+          "Postpone": {
+            "Text": "Not now"
+          },
+          "Run": {
+            "Text": "Install"
+          }
+        }
+      },
+      "Account": {
+        "Text": "Account",
+        "Email": {
+          "Text": "Enter your email address"
+        },
+        "Change": {
+          "Text": "Change"
+        }
+      },
+      "TermsOfUse": {
+        "Text": "Terms of use",
+        "Info": {
+          "Text": "Read our \"Terms of Use\" online"
+        }
+      }
+    },
+    "Authorization": {
+      "Title": {
+        "Text": "Please enter password to access application settings"
+      }
+    },
+    "Database": {
+      "Text": "Database",
+      "AutoBackup": {
+        "Text": "Auto backup",
+        "Enabled": {
+          "Text": "Enable auto backup"
+        },
+        "BackupOnStart": {
+          "Text": "Backup database on application start"
+        },
+        "BackupOnClose": {
+          "Text": "Backup database on application close"
+        },
+        "DirectoryPath": {
+          "Text": "Backup location",
+          "Choose": {
+            "Text": "Choose backup location"
+          },
+          "Info": {
+            "Text": "Select your backup location. Auto backup files will be saved to selected directory."
+          }
+        },
+        "RemoveOldFiles": {
+          "Text": "Remove old backup files",
+          "DaysToKeep": {
+            "Text": "Number of days to keep old backup files"
+          }
+        }
+      }
+    },
+    "RestartRequired": {
+      "Text": "Aronium must be restarted for these changes to take effect.",
+      "Title": {
+        "Text": "Restart required"
+      }
+    }
+  },
+  "Document": {
+    "Category": {
+      "Expenses": {
+        "Text": "Expenses",
+        "Purchase": {
+          "Text": "Purchase"
+        },
+        "StockReturn": {
+          "Text": "Stock return"
+        }
+      },
+      "Inventory": {
+        "Text": "Inventory",
+        "InventoryCount": {
+          "Text": "Inventory count"
+        }
+      },
+      "Loss": {
+        "Text": "Loss",
+        "LossAndDamage": {
+          "Text": "Loss and damage"
+        }
+      },
+      "Sales": {
+        "Text": "Sales",
+        "Sales": {
+          "Text": "Sales"
+        },
+        "Refund": {
+          "Text": "Refund"
+        },
+        "Proforma": {
+          "Text": "Proforma"
+        }
+      }
+    },
+    "Create": {
+      "Error": {
+        "Text": "There was an error creating document.\\nPlease try again."
+      }
+    }
+  },
+  "Invoices": {
+    "Text": "View sales history",
+    "Title": {
+      "Text": "Sales history"
+    },
+    "Documents": {
+      "Text": "Documents",
+      "Customer": {
+        "Text": "Customer",
+        "Change": {
+          "Text": "Change customer",
+          "Success": {
+            "Text": "Customer changed successfully."
+          }
+        }
+      },
+      "CashRegister": {
+        "All": {
+          "Text": "All cash registers"
+        },
+        "Select": {
+          "Text": "Select cash register"
+        }
+      },
+      "DocumentNumber": {
+        "Text": "Document number",
+        "NotFound": {
+          "Text": "Document \"{0}\" not found"
+        }
+      },
+      "Print": {
+        "Text": "Print",
+        "CashReceipt": {
+          "Text": "Receipt",
+          "PrinterNotFound": {
+            "Text": "Service printer is not selected or disabled. Check printer settings and try again."
+          },
+          "Address": {
+            "Text": "Address"
+          },
+          "VatNumber": {
+            "Text": "Tax number"
+          },
+          "Date": {
+            "Text": "Date"
+          },
+          "ReceiptNumber": {
+            "Text": "Receipt number"
+          },
+          "Customer": {
+            "Text": "Customer"
+          },
+          "Total": {
+            "Text": "Total"
+          },
+          "Tax": {
+            "Text": "Tax"
+          },
+          "TotalAmount": {
+            "Text": "TOTAL"
+          },
+          "FiscalReceiptNumber": {
+            "Text": "Fiscal receipt number"
+          },
+          "Signature": {
+            "Text": "Signiture"
+          },
+          "Stamp": {
+            "Text": "P.S."
+          },
+          "Authorization": {
+            "Title": {
+              "Text": "Please enter password to print receipt"
+            }
+          }
+        },
+        "Pdf": {
+          "Text": "Save as PDF",
+          "Success": {
+            "Text": "Document \"{0}\" saved"
+          }
+        },
+        "Error": {
+          "Text": "Error printing document",
+          "NoService": {
+            "Text": "Printing service not registered"
+          }
+        },
+        "Refund": {
+          "Text": "Refund"
+        },
+        "Preview": {
+          "Text": "Print preview"
+        }
+      },
+      "Delete": {
+        "Text": "Delete",
+        "Confirmation": {
+          "Title": {
+            "Text": "Delete document"
+          },
+          "Message": {
+            "Text": "Are you sure you want to delete document \"{0}\"?"
+          }
+        },
+        "Error": {
+          "Text": "Error ocurred while trying to delete document. Please try again"
+        },
+        "Unauthorized": {
+          "Text": "You do not have permissions to delete documents."
+        }
+      },
+      "List": {
+        "Text": "Documents",
+        "Document": {
+          "Number": {
+            "Text": "Number"
+          },
+          "DocumentType": {
+            "Text": "Document type"
+          },
+          "Warehouse": [
+            {
+              "Text": "Warehouse"
+            },
+            {
+              "Text": "Warehouse"
+            }
+          ],
+          "Customer": {
+            "Text": "Customer",
+            "Refresh": {
+              "Text": "Refresh customers list",
+              "Complete": {
+                "Text": "Customers reloaded"
+              }
+            }
+          },
+          "Vendor": {
+            "Text": "Vendor",
+            "Refresh": {
+              "Text": "Refresh suppliers list",
+              "Complete": {
+                "Text": "Suppliers reloaded"
+              }
+            }
+          },
+          "ExternalDocument": {
+            "Text": "External document"
+          },
+          "Date": {
+            "Text": "Date"
+          },
+          "DueDate": {
+            "Text": "Due date"
+          },
+          "StockDate": {
+            "Text": "Stock date"
+          },
+          "DateCreated": {
+            "Text": "Created"
+          },
+          "DateUpdated": {
+            "Text": "Updated"
+          },
+          "CashRegister": {
+            "Text": "POS"
+          },
+          "OrderNumber": {
+            "Text": "Order number"
+          },
+          "User": {
+            "Text": "User"
+          },
+          "PaymentType": {
+            "Text": "Payment type"
+          },
+          "Discount": {
+            "Text": "Discount"
+          },
+          "Paid": {
+            "Text": "Paid"
+          },
+          "Unpaid": {
+            "Text": "Unpaid"
+          },
+          "Total": {
+            "Text": "Total",
+            "Summary": {
+              "Subtotal": {
+                "Text": "Subtotal:"
+              },
+              "TotalBeforeTax": {
+                "Text": "Total before tax:"
+              },
+              "Tax": {
+                "Text": "Tax:"
+              },
+              "Total": {
+                "Text": "Total:"
+              },
+              "Discount": {
+                "Text": "Discount:",
+                "DiscountApplyRule": {
+                  "Text": "Apply discount before or after tax.\\nThis selection will be used for items and cart discounts.",
+                  "BeforeTax": {
+                    "Text": "Apply discount before tax"
+                  },
+                  "AfterTax": {
+                    "Text": "Apply discount after tax"
+                  }
+                },
+                "DiscountType": {
+                  "Text": "Select discount type",
+                  "Percent": {
+                    "Text": "Discount percent"
+                  },
+                  "Fixed": {
+                    "Text": "Discount amount"
+                  }
+                }
+              }
+            }
+          },
+          "Payments": {
+            "Text": "Payments",
+            "Add": {
+              "Text": "Add payment"
+            },
+            "PaymentType": {
+              "Text": "Payment type"
+            },
+            "Amount": {
+              "Text": "Amount"
+            },
+            "Date": {
+              "Text": "Date"
+            },
+            "NewPayment": {
+              "Text": "New payment"
+            },
+            "Delete": {
+              "Text": "Delete payment",
+              "Confirmation": {
+                "Text": "Are you sure you want to delete payment \"{0}\"?"
+              }
+            },
+            "Totals": {
+              "PaymentsTotal": {
+                "Text": "Payments total:"
+              },
+              "DocumentTotal": {
+                "Text": "Document total:"
+              }
+            }
+          },
+          "Items": {
+            "Text": "Document items",
+            "Item": {
+              "ProductCode": {
+                "Text": "Code"
+              },
+              "Product": {
+                "Text": "Name"
+              },
+              "MeasurementUnit": {
+                "Text": "Unit of measure"
+              },
+              "Quantity": {
+                "Text": "Quantity"
+              },
+              "PriceNoTax": {
+                "Text": "Price before tax"
+              },
+              "Price": {
+                "Text": "Price"
+              },
+              "Tax": {
+                "Text": "Tax",
+                "Add": {
+                  "Text": "Add taxes",
+                  "Tooltip": {
+                    "Text": "Add tax to this item"
+                  }
+                },
+                "Remove": {
+                  "Tooltip": {
+                    "Text": "Remove tax from this item"
+                  }
+                }
+              },
+              "Discount": {
+                "Text": "Discount",
+                "DiscountType": {
+                  "Text": "Select discount type",
+                  "Percent": {
+                    "Text": "Discount percent"
+                  },
+                  "Fixed": {
+                    "Text": "Discount amount"
+                  }
+                },
+                "DiscountApplyRule": {
+                  "BeforeTax": {
+                    "Text": "before tax"
+                  },
+                  "AfterTax": {
+                    "Text": "after tax"
+                  }
+                }
+              },
+              "TotalBeforeTax": {
+                "Text": "Total before tax"
+              },
+              "Total": {
+                "Text": "Total"
+              },
+              "TotalBeforeDiscount": {
+                "Text": "Total before discount"
+              },
+              "Error": {
+                "Taxes": {
+                  "Text": "Duplicate taxes found. Tax name (\"{0}\").\\nPlease select valid taxes and try again."
+                }
+              }
+            },
+            "Delete": {
+              "Text": "Delete document item",
+              "Confirmation": {
+                "Text": "Are you sure you want to delete \"{0}\"?"
+              }
+            }
+          },
+          "Print": {
+            "UnsavedChanges": {
+              "Text": "Document contains unsaved changes. Do you want to save the changes before print?",
+              "Title": {
+                "Text": "Unsaved changes"
+              }
+            }
+          }
+        }
+      },
+      "Count": {
+        "Text": "Documents count:"
+      },
+      "Total": {
+        "Text": "Total amount:"
+      },
+      "AllUsers": {
+        "Text": "Show all users"
+      },
+      "BulkActions": {
+        "Text": "Bulk operations",
+        "Delete": {
+          "Text": "Delete selected documents",
+          "Confirmation": {
+            "Title": {
+              "Text": "Delete selected documents"
+            },
+            "Message": {
+              "Text": "Are you sure you want to delete selected documents?"
+            }
+          },
+          "Message": {
+            "Text": "Deleting documents... Please wait..."
+          }
+        },
+        "UpdatePaidStatus": {
+          "Message": {
+            "Text": "Updating paid status... Please wait..."
+          }
+        }
+      }
+    },
+    "Authorization": {
+      "Title": {
+        "Text": "Please enter password to access sales history"
+      }
+    }
+  },
+  "Feedback": {
+    "Text": "Feedback",
+    "Title": {
+      "Text": "Help us improve Aronium"
+    },
+    "Description": {
+      "Text": "Thank you for taking the time to provide a suggestion.\\nYour feedback helps us make the Aronium application better.",
+      "Contact": {
+        "Text": "Feel free to contact us anytime at"
+      }
+    },
+    "Message": {
+      "Name": {
+        "Text": "Your name"
+      },
+      "Email": {
+        "Text": "Email address"
+      },
+      "Subject": {
+        "Text": "Subject"
+      },
+      "Message": {
+        "Text": "Message"
+      },
+      "Rating": {
+        "Text": "Overall rating"
+      }
+    },
+    "Send": {
+      "Text": "Send feedback"
+    },
+    "Confirmation": {
+      "Title": {
+        "Text": "Thank you!"
+      },
+      "Message": {
+        "Text": "Your feedback is sent. We will use it to make Aronium better."
+      }
+    }
+  },
+  "Guide": {
+    "Menu": {
+      "Title": {
+        "Text": "Open main menu"
+      },
+      "Content": {
+        "Text": "Click here to open main menu and access management section"
+      }
+    },
+    "Layout": {
+      "SearchBox": {
+        "Text": "Search products by name, barcode or code.",
+        "Title": {
+          "Text": "Product search"
+        }
+      }
+    },
+    "Dismiss": {
+      "Title": {
+        "Text": "Dismiss guided tour"
+      },
+      "Confirmation": {
+        "Text": "Are you sure wou wish to hide these tips?"
+      }
+    }
+  },
+  "Layout": {
+    "Visual": {
+      "Item": {
+        "Edit": {
+          "Text": "Edit visual appearance",
+          "Color": {
+            "Text": "Color"
+          },
+          "Image": {
+            "Text": "Image",
+            "Select": {
+              "Text": "Select image"
+            },
+            "Clear": {
+              "Text": "Clear image"
+            }
+          }
+        }
+      }
+    }
+  },
+  "OpenOrders": {
+    "Text": "View open sales",
+    "Total": {
+      "Text": "TOTAL AMOUNT"
+    },
+    "NoOrders": {
+      "Text": "No open sales"
+    },
+    "Authorization": {
+      "Title": {
+        "Text": "Please enter password to access open sales"
+      }
+    }
+  },
+  "StartingCash": {
+    "Text": "Cash In / Out",
+    "Type": {
+      "CashIn": {
+        "Text": "Add cash"
+      },
+      "CashOut": {
+        "Text": "Remove cash"
+      }
+    },
+    "Amount": {
+      "Text": "Amount",
+      "Reason": {
+        "Text": "Description",
+        "Tooltip": {
+          "Text": "Enter the reason for adding or removing cash..."
+        }
+      }
+    },
+    "Hide": {
+      "Text": "Don't show this again"
+    },
+    "Entries": {
+      "Text": "Cash entries",
+      "NoDescription": {
+        "Text": "<No description>"
+      },
+      "NoEntries": {
+        "Text": "No records"
+      }
+    },
+    "Saved": {
+      "Text": "Starting cash saved successfully"
+    }
+  },
+  "Account": {
+    "FirstName": {
+      "Text": "First name"
+    },
+    "LastName": {
+      "Text": "Last name"
+    },
+    "Email": {
+      "Text": "Email"
+    },
+    "Password": {
+      "Text": "Password",
+      "Confirmation": {
+        "Text": "Password confirmation",
+        "Error": {
+          "Text": "Password and password confirmation must match"
+        }
+      }
+    },
+    "License": {
+      "ActivationKey": {
+        "Text": "Activation key",
+        "Invalid": {
+          "Text": "Your activation key does not match the one in the license file. Please use a valid license for this installation."
+        }
+      },
+      "Info": {
+        "Text": "License",
+        "Data": {
+          "Text": "License data",
+          "LicensedTo": {
+            "Text": "Licensed to"
+          },
+          "Email": {
+            "Text": "Email"
+          },
+          "StoreId": {
+            "Text": "Store ID"
+          },
+          "Id": {
+            "Text": "License ID"
+          }
+        },
+        "Products": {
+          "Text": "Products",
+          "Id": {
+            "Text": "Id"
+          },
+          "Name": {
+            "Text": "Name"
+          },
+          "ValidUntil": {
+            "Text": "Valid until"
+          },
+          "LicenseType": {
+            "Text": "License type"
+          }
+        },
+        "NoLicense": {
+          "Info": {
+            "Text": "Visit www.aronium.com to learn more about premium features"
+          }
+        },
+        "Refresh": {
+          "Text": "Refresh license",
+          "Success": {
+            "Text": "License downloaded successfully."
+          }
+        },
+        "Copy": {
+          "Text": "Copy license to file"
+        },
+        "Load": {
+          "Text": "Load license from file"
+        },
+        "UnlicensedProducts": {
+          "Text": "Unlicensed products"
+        }
+      },
+      "Login": {
+        "Text": "Login to your account",
+        "NotRegistered": {
+          "Text": "Not registered?",
+          "SignUp": {
+            "Text": "Sign up now!"
+          }
+        },
+        "SignIn": {
+          "Text": "Sign in"
+        }
+      },
+      "Register": {
+        "Text": "Register new account",
+        "AlreadyRegistered": {
+          "Text": "Already registered?",
+          "SignIn": {
+            "Text": "Sign in now!"
+          }
+        },
+        "CreateAccount": {
+          "Text": "Create account"
+        },
+        "Store": {
+          "Text": "Create your store",
+          "Details": {
+            "Text": "Let's take a minute to set up your store.\\nYour company data will be updated and license will be generated automatically.",
+            "CompanyName": {
+              "Text": "Company name"
+            },
+            "Address": {
+              "Text": "Address"
+            },
+            "ZipCode": {
+              "Text": "Zip code"
+            },
+            "TaxNumber": {
+              "Text": "TaxNumber"
+            },
+            "City": {
+              "Text": "City"
+            },
+            "Country": {
+              "Text": "Country"
+            }
+          },
+          "Create": {
+            "Text": "Create store and generate license"
+          }
+        },
+        "Success": {
+          "Text": "Account created successfully"
+        }
+      },
+      "SelectStore": {
+        "Text": "Select store",
+        "Info": {
+          "Text": "Select a store from the list below you wish to load license for.",
+          "Register": {
+            "Text": "Once you select a store, you will be asked to register any unlicensed products under that store's license."
+          }
+        },
+        "NoStores": {
+          "Text": "No stores found",
+          "Info": {
+            "Text": "It seems there are no stores associated with account \"{0}\". In order to activate your license, you need to have a store associated with it."
+          },
+          "Reload": {
+            "Text": "Please create a store first and then click \"Refresh\" button below to continue."
+          },
+          "Add": {
+            "Text": "Open My Aronium to create your first store"
+          }
+        },
+        "Successfull": {
+          "Text": "You have successfully signed in",
+          "Info": {
+            "Text": "If license exists for selected store, it will be automatically downloaded"
+          }
+        }
+      },
+      "StartTrial": {
+        "Text": "Start trial",
+        "Info": {
+          "Text": "Select option below to start trial for all unlicensed products"
+        },
+        "SelectedStore": {
+          "Text": "Selected store:",
+          "Change": {
+            "Text": "Use a different store"
+          }
+        },
+        "Now": {
+          "Text": "Start trial now"
+        }
+      },
+      "Load": {
+        "Text": "Load license from file",
+        "Successful": {
+          "Text": "License loaded successfully"
+        },
+        "Error": {
+          "Text": "Error loading license",
+          "Unknown": {
+            "Text": "Unknown error occurred while trying to load your license. Please try again later.\\nSystem message: {0}"
+          }
+        }
+      },
+      "InvalidLicense": {
+        "Text": "Invalid or missing license",
+        "Info": {
+          "Text": "One or more products are missing a valid license.",
+          "SignInOrLoadFromFile": {
+            "Text": "Please log in to your account to download a license or load existing license from file."
+          },
+          "FollowInstructions": {
+            "Text": "Please follow instructions below to continue."
+          }
+        },
+        "Hide": {
+          "Text": "Do not show this again for these products"
+        }
+      }
+    },
+    "Switch": {
+      "Text": "Sign in using different account"
+    },
+    "SignOut": {
+      "Text": "Sign out",
+      "Successful": {
+        "Text": "You have signed out successfully"
+      }
+    },
+    "Error": {
+      "ExistingAccount": {
+        "Text": "User with specified email address already exists."
+      },
+      "Unauthorized": {
+        "Text": "Wrong username or password. Please check your credentials and try again."
+      }
+    }
+  },
+  "Validations": {
+    "Info": {
+      "Text": "See more details and how to address this issue at",
+      "Community": {
+        "Text": "our community"
+      },
+      "Or": {
+        "Text": "or"
+      },
+      "ContactSupport": {
+        "Text": "contact our support"
+      }
+    },
+    "Cancel": {
+      "Text": "Close application"
+    },
+    "Confirm": {
+      "Text": "I understand, continue with application start"
+    },
+    "Print": {
+      "Warning": {
+        "CustomTemplates": {
+          "Text": "We have detected that you are using custom receipt or invoice templates. Due to database structure changes in this release, these templates may not work anymore.\\nYou will be able to use default templates, so your daily operations are not blocked.\\n\\nIf you still wish to use old templates, you should stop application startup now and revert to old version.",
+          "Title": {
+            "Text": "WARNING! CUSTOM PRINT TEMPLATES MAY NOT WORK!"
+          }
+        }
+      }
+    },
+    "Refund": {
+      "Invalid": {
+        "Text": "Refund is not valid"
+      }
+    },
+    "MaxLength": {
+      "Error": {
+        "Text": "Field longer then allowed",
+        "Message": {
+          "Text": "The value of the field \"{0}\" is too long. The maximum allowed length is {1} character(s)."
+        }
+      }
+    },
+    "InvalidValue": {
+      "TryAgain": {
+        "Text": "Please enter a valid value(s) and try again."
+      }
+    }
+  },
+  "Print": {
+    "Error": {
+      "Text": "Print error occurred",
+      "CustomTemplate": {
+        "Text": "Error in custom template was detected!\\nPlease contact Aronium support in order to resolve potential issues with your custom print template.",
+        "Continue": {
+          "Text": "Do you wish to continue printing using default template?"
+        }
+      }
+    }
+  }
+}

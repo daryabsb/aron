@@ -1,0 +1,3221 @@
+{
+  "code": "tr",
+  "name": "Türkçe",
+  "Buttons": {
+    "Yes": {
+      "Text": "Evet"
+    },
+    "Ok": {
+      "Text": "TAMAM"
+    },
+    "No": {
+      "Text": "Hayır"
+    },
+    "Cancel": {
+      "Text": "İptal"
+    },
+    "Save": {
+      "Text": "Kaydet"
+    },
+    "Close": {
+      "Text": "Kapat"
+    },
+    "Add": {
+      "Text": "Ekle"
+    },
+    "New": {
+      "Text": "Yeni"
+    },
+    "Edit": {
+      "Text": "Düzenle"
+    },
+    "Cut": {
+      "Text": "Kes"
+    },
+    "Copy": {
+      "Text": "Kopyala"
+    },
+    "Paste": {
+      "Text": "Yapıştır"
+    },
+    "Delete": {
+      "Text": "Sil"
+    },
+    "Refresh": {
+      "Text": "Yenile"
+    },
+    "Login": {
+      "Text": "GİRİŞ"
+    },
+    "Logout": {
+      "Text": "Oturumu kapat"
+    },
+    "Print": {
+      "Text": "Yazdır"
+    },
+    "SavePdf": {
+      "Text": "PDF olarak kaydet"
+    },
+    "Excel": {
+      "Text": "Excel"
+    },
+    "Hide": {
+      "Text": "Gizle"
+    },
+    "FirstPage": {
+      "Text": "İlk sayfa"
+    },
+    "LastPage": {
+      "Text": "Son sayfa"
+    },
+    "NextPage": {
+      "Text": "Sonraki sayfa"
+    },
+    "PreviousPage": {
+      "Text": "Önceki sayfa"
+    },
+    "Continue": {
+      "Text": "Devam et"
+    },
+    "Clear": {
+      "Text": "Temizle"
+    },
+    "Exit": {
+      "Text": "Çıkış"
+    },
+    "Search": {
+      "Text": "Arama"
+    },
+    "Ignore": {
+      "Text": "Yoksay"
+    },
+    "Retry": {
+      "Text": "Tekrar dene"
+    },
+    "DeleteAll": {
+      "Text": "Tümünü Sil"
+    },
+    "Skip": {
+      "Text": "Atla"
+    },
+    "Restart": {
+      "Text": "Yeniden başlat"
+    },
+    "SaveAndClose": {
+      "Text": "Kaydet & kapat"
+    },
+    "Help": {
+      "Text": "Yardım"
+    },
+    "Back": {
+      "Text": "Geri"
+    },
+    "LearnMore": {
+      "Text": "Daha fazla öğren"
+    },
+    "Done": {
+      "Text": "Bitti"
+    },
+    "Send": {
+      "Text": "Gönder"
+    },
+    "WhatsThis": {
+      "Text": "Bu nedir?"
+    },
+    "Pdf": {
+      "Text": "PDF"
+    },
+    "Maximize": {
+      "Text": "Büyüt"
+    },
+    "Restore": {
+      "Text": "Onar"
+    },
+    "Browse": {
+      "Text": "Göz at"
+    }
+  },
+  "Bootstrap": {
+    "Initializing": {
+      "Text": "Uygulama yükleniyor..."
+    },
+    "Load": {
+      "Components": {
+        "Text": "Uygulama bileşenleri yükleniyor..."
+      },
+      "Modules": {
+        "Text": "Modüller yükleniyor ve başlatılıyor ..."
+      },
+      "Products": {
+        "Text": "Ürünler ükleniyor....",
+        "Error": {
+          "Text": "Ürünler yüklenirken hata.",
+          "Info": {
+            "Text": "Bazı ürünler satılık uygun olmayabilir. Başarısız ürünleri kontrol edin ve tekrar deneyin."
+          },
+          "DuplicateBarcode": {
+            "Text": "Çift barkod \"{0}\""
+          },
+          "DuplicateCode": {
+            "Text": "Çift kod \"{0}\""
+          },
+          "Copy": {
+            "Text": "Panoya kopyala"
+          }
+        }
+      },
+      "CashRegister": {
+        "Text": "Yazar kasa verileri yükleniyor ..."
+      },
+      "ScanTypes": {
+        "Text": "Tarama türleri..."
+      }
+    },
+    "Connect": {
+      "Text": "Veritabanına bağlanıyor....",
+      "NoDataProvider": {
+        "Text": "Veritabanına bağlanmak için modül mevcut değil.\\nLütfen yöneticinize veya bayinize başvurun."
+      }
+    },
+    "Error": {
+      "Text": "Uygulama başlatmaya çalışırken hata oluştu. Lütfen sistem yöneticisine başvurun."
+    },
+    "Completed": {
+      "Text": "Uygulama başlatılıyor"
+    },
+    "BackupDatabase": {
+      "Text": "Veritabanı sürümü doğrulanıyor..."
+    },
+    "Migrations": {
+      "Text": "Veritabanı konrol ediliyor...",
+      "Failed": {
+        "Text": "Veritabanı taşıma başarısız!"
+      }
+    },
+    "RestartRequired": {
+      "Text": "Değişikliklerin yürürlüğe girmesi için uygulama yeniden başlatma gereklidir.\\nUygulamayı yeniden başlatmak için aşağıdaki düğmeye tıklayın."
+    },
+    "ValidateLicense": {
+      "Text": "Lisans doğrulanıyor..."
+    },
+    "Onboarding": {
+      "Text": "Bütünleştirme durumu denetleniyor..."
+    },
+    "CustomerDisplay": {
+      "Text": "Müşteri ekranı başlatılıyor ..."
+    },
+    "PrinterStatus": {
+      "Text": "Yazıcı durumu denetleniyor..."
+    },
+    "VerifyVersion": {
+      "Text": "Uygulama sürümü doğrulanıyor..."
+    }
+  },
+  "Onboarding": {
+    "Welcome": {
+      "Text": "Hoşgeldiniz",
+      "Info": {
+        "Text": "Mağazanız ve temel uygulama verilerinizi ayarlayalım.\\nKatılım sürecinin tamamlanması sadece birkaç dakika sürecektir."
+      },
+      "Start": {
+        "Text": "BAŞLAT"
+      }
+    },
+    "Back": {
+      "Text": "Geri"
+    },
+    "Skip": {
+      "Text": "Bütünleştirmeyi atla"
+    },
+    "Hide": {
+      "Text": "Bunu bir daha gösterme"
+    },
+    "Next": {
+      "Text": "Atla"
+    },
+    "Continue": {
+      "Text": "Kaydet & Devam et"
+    },
+    "Layout": {
+      "Text": "Yerleşim seçin",
+      "LearnMore": {
+        "Text": "Düzen ve çalışma alanı hakkında daha fazla bilgi edinin."
+      },
+      "Standard": {
+        "Text": "Standart",
+        "Description": {
+          "Text": "Barkod kullanıyorsanız veya bilgisayarınıza bağlı bir fiziksel klavyeniz varsa bu düzeni kullanın."
+        }
+      },
+      "TouchScreen": {
+        "Text": "Görsel",
+        "Description": {
+          "Text": "Ürünlerinizi ve gruplarınızı görsel olarak ekranda görüntülemek isterseniz bu düzeni kullanın."
+        }
+      },
+      "EnableVirtualKeyboard": {
+        "Text": "Sanal klavyeyi etkinleştir"
+      }
+    },
+    "Registration": {
+      "Text": "Kayıt",
+      "Info": {
+        "Text": "Lütfen e-posta adresinizi girin, böylece sizin için daha özelleştirilmiş destek sağlayabiliriz.",
+        "Email": {
+          "Text": "Bu e-posta varsayılan yönetici hesabına ayarlanacak ve şifreyi sıfırlamak için kullanılabilir. Bu e-posta adresini istediğiniz zaman değiştirebilirsiniz."
+        }
+      },
+      "Email": {
+        "Text": "Eposta adresiniz",
+        "Privacy": {
+          "Text": "E-postanız kesinlikle gizli tutulur. E-postanızı daha kişiselleştirilmiş destek sağlamak ve size en son güncellemeleri göndermek için kullanacağız.\\nBiz de \"spam\" dan nefret ediyoruz."
+        }
+      }
+    },
+    "UserProfile": {
+      "Title": {
+        "Text": "Haydi kişisel hesabınızı ayarlayalım"
+      },
+      "Info": {
+        "Text": "Lütfen adınızı ve yönetici erişimi için kullandığınız giriş bilgilerinizi giriniz."
+      },
+      "LearnMore": {
+        "Text": "Kullanıcılar ve varsayılan kimlik bilgileri hakkında daha fazla bilgi edinin"
+      },
+      "FirstName": {
+        "Text": "Ad"
+      },
+      "LastName": {
+        "Text": "Soyad"
+      },
+      "Email": {
+        "Text": "E-posta",
+        "Info": {
+          "Text": "Bu e-posta hesabınız için bir kurtarma e-postası olarak kullanılacaktır. Geçerli e-posta adresi, şifrenizi e-posta ile sıfırlayabilirsiniz."
+        },
+        "Missing": {
+          "Text": "Geçerli bir e-posta adresi girmezseniz, bloke edilme riskiniz vardır.\\nParolanızı unutmanız durumunda, geçerli e-posta adresi olmadan kurtarmanız mümkün olmayacaktır.",
+          "Title": {
+            "Text": "E-posta adresi ayarlanmadı"
+          },
+          "Confirmation": {
+            "Text": "E-posta adresi olmadan devam etmek istiyor musunuz?"
+          }
+        }
+      },
+      "Password": {
+        "Text": "Şifre",
+        "Errors": {
+          "Empty": {
+            "Text": "Şifre gerekli kriterleri karşılamıyor. Şifre ayarlanmalı ve en az 4 karakter uzunluğunda olmalı"
+          },
+          "ConfirmationError": {
+            "Text": "Şifre onayı uyuşmuyor. Lütfen şifre ve şifre doğrulama alanlarında aynı değerleri girin."
+          }
+        }
+      },
+      "ConfirmPassword": {
+        "Text": "Şifreyi onaylayın"
+      }
+    },
+    "Completed": {
+      "Text": "Onboard tamamlandı",
+      "Info": {
+        "Text": "Tebrikler! Hazırsınız ve hazırsınız. \\nSonra, bazı ürünleri eklemek ve satmaya başlamak için \"Yönetim\" bölümünü açın."
+      },
+      "Finish": {
+        "Text": "Kapat ve Devam Et"
+      }
+    },
+    "PriceDisplay": {
+      "Text": "Fiyat ekranı",
+      "Info": {
+        "Text": "Fiyatların vergiden hariç mi dahil mi görüntüleneceğini ve yazdırılacağını seçin"
+      },
+      "BeforeTax": {
+        "Text": "Vergi Öncesi",
+        "Description": {
+          "Text": "Fiyatlar vergi dahil olmadan fişte gösterilecek ve yazdırılacaktır."
+        }
+      },
+      "AfterTax": {
+        "Text": "Vergi Sonrası",
+        "Description": {
+          "Text": "Fiyatlar, vergi dahil olmak üzere makbuzda görüntülenecek ve yazdırılacaktır."
+        }
+      },
+      "DiscountApplyRule": {
+        "Info": {
+          "Text": "İndirimler bu seçime göre vergi öncesi veya sonrası uygulanacaktır. İndirim kurallarını istediğiniz zaman ayarlardan değiştirebilirsiniz."
+        }
+      }
+    }
+  },
+  "BusinessDay": {
+    "Close": {
+      "Authorization": {
+        "Title": {
+          "Text": "İş gününü kapatmak için lütfen şifre giriniz"
+        }
+      }
+    },
+    "Select": {
+      "Text": "İş gününü seç",
+      "EnableSelection": {
+        "Text": "(İş gününü değiştirmek için tarihte tıklayın)"
+      }
+    }
+  },
+  "Application": {
+    "Close": {
+      "Text": "Uygulamadan çık",
+      "Info": {
+        "Text": "Uyulamadan çıkmak istediğinize emin misiniz?"
+      },
+      "ShutDown": {
+        "Text": "Uygulamadan çık"
+      },
+      "Restart": {
+        "Text": "Uygulamayı yeniden başlat"
+      },
+      "TurnOffComputer": {
+        "Text": "Bilgisayarı Kapat"
+      }
+    },
+    "FullScreen": {
+      "Text": "Tam ekran"
+    },
+    "Exit": {
+      "Text": "Uygulamadan çık"
+    },
+    "Menu": {
+      "Text": "Menü"
+    },
+    "RestartRequired": {
+      "Text": "Yeniden başlama gerekli",
+      "Info": {
+        "Text": "Değişikliklerin etkin olması için uygulama yeniden başlatma gereklidir. Uygulamayı şimdi yeniden başlatmak istiyor musunuz?"
+      }
+    },
+    "ReloadProducts": {
+      "Text": "Ürünleri yeniden yükle",
+      "Info": {
+        "Text": "Ürünler değişti. Ürünleri şimdi yeniden yüklemek istiyor musunuz?"
+      }
+    }
+  },
+  "Period": {
+    "Text": "Dönem",
+    "Start": {
+      "Text": "Başlangıç"
+    },
+    "End": {
+      "Text": "Bitiş"
+    },
+    "Preset": {
+      "Text": "Ön tanımlı dönem",
+      "Today": {
+        "Text": "Bugün"
+      },
+      "Yesterday": {
+        "Text": "Dün"
+      },
+      "ThisWeek": {
+        "Text": "Bu hafta"
+      },
+      "LastWeek": {
+        "Text": "Geçen hafta"
+      },
+      "ThisMonth": {
+        "Text": "Bu ay"
+      },
+      "LastMonth": {
+        "Text": "Geçen ay"
+      },
+      "ThisYear": {
+        "Text": "Bu yıl"
+      },
+      "LastYear": {
+        "Text": "Geçen Yıl"
+      }
+    }
+  },
+  "Login": {
+    "Text": "Giriş",
+    "Password": {
+      "Text": "Şifre",
+      "Forgot": {
+        "Text": "Şifremi unuttum?"
+      }
+    },
+    "Error": {
+      "Text": "Giriş başarısız. Şifrenizi kontrol edip tekrar deneyin."
+    },
+    "Authentication": {
+      "Text": "Kullanıcı girişi",
+      "Failed": {
+        "Text": "Kullanıcı bulunamadı. Şifrenizi kontrol edip tekrar deneyin."
+      }
+    },
+    "Reset": {
+      "Text": "Şifreyi sıfırla",
+      "LearnMore": {
+        "Text": "Şifrenizi sıfırlamak hakkında daha fazla bilgi edinin."
+      },
+      "Email": {
+        "Text": "Eposta adresinizi girin",
+        "Info": {
+          "Text": "Şifreyi sıfırlamak istediğiniz kullanıcıyla ilişkili e-posta adresini girin.\\nAşağıya girdiğiniz e-postaya bir doğrulama kodu göndereceğiz."
+        },
+        "Required": {
+          "Text": "Eposta gerekli"
+        },
+        "EmailAddress": {
+          "Text": "Eposta adresi",
+          "Tooltip": {
+            "Text": "Eposta adresinizi girin"
+          }
+        },
+        "ExistingCode": {
+          "Text": "Kodum var. Beni bir sonraki adıma götür."
+        }
+      },
+      "Code": {
+        "Text": "Kodu doğrula",
+        "Info": {
+          "Text": "E-postanızı kontrol edin - size aşağıdaki kutuya girmeniz gereken bir yetki kodunu gönderdik.\\nYetkilendirme kodu içeren bir e-posta almadıysanız, lütfen spam klasörünüzü kontrol edin veya bir e-posta göndermeyi tekrar deneyin."
+        },
+        "Email": {
+          "Text": "Yetkilendirme kodu bu adrese gönderilir {0}."
+        },
+        "AuthorizationCode": {
+          "Text": "Yetkilendirme kodu",
+          "Tooltip": {
+            "Text": "Yetkilendirme kodunu buraya girin..."
+          }
+        },
+        "Verify": {
+          "Text": "Kodu doğrula"
+        }
+      },
+      "Password": {
+        "Text": "Yeni şifrenizi girin",
+        "Info": {
+          "Text": "Yerel hesabınız için yeni şifre ve şifre onayı girin.\\nYeni şifre ve yeni şifre doğrulama alanları eşleşmelidir.\\n\\nİşiniz bittiğinde, şifrenizi sıfırlamak için \"Tamam\" düğmesine tıklayın."
+        },
+        "NewPassword": {
+          "Text": "Yeni şifre"
+        },
+        "NewPasswordConfirmation": {
+          "Text": "Yeni şifreyi onayla"
+        },
+        "InUse": {
+          "Text": "Belirtilen şifre zaten alınmış. Lütfen farklı şifre girin ve tekrar deneyin."
+        },
+        "User": {
+          "Text": "Kullanıcı: {0}"
+        },
+        "SetPassword": {
+          "Text": "Yeni şifrenizi ayarlayın"
+        },
+        "Success": {
+          "Text": "Parola başarıyla değiştirildi"
+        }
+      },
+      "Error": {
+        "Expired": {
+          "Text": "Yetkilendirme kodunuzun süresi doldu.\\nLütfen yeni yetkilendirme kodunu isteyin."
+        },
+        "InvalidCode": {
+          "Text": "Geçersiz kod. Lütfen geçerli bir kod girin ve tekrar deneyin."
+        },
+        "NoSuchUser": {
+          "Text": "Belirtilen \"{0}\" e-posta adresine sahip kullanıcı mevcut değil.\\nLütfen geçerli bir e-posta adresi girin ve tekrar deneyin."
+        },
+        "InvalidEmailAddress": {
+          "Text": "E-posta adresi geçerli değil. Lütfen geçerli bir e-posta adresi girin ve tekrar deneyin."
+        },
+        "LimitReached": {
+          "Text": "Şifre sıfırlama sınırına ulaştınız.\\n24 saat içinde tekrar deneyebilirsiniz."
+        },
+        "GeneralError": {
+          "Text": "Şifre sıfırlama isteğini göndermeye çalışırken hata oluştu.\\nLütfen daha sonra tekrar deneyiniz."
+        }
+      }
+    }
+  },
+  "Order": {
+    "List": {
+      "Text": "Sipariş listesini aç",
+      "Select": {
+        "Text": "Sipariş seç"
+      }
+    },
+    "New": {
+      "Text": "Yeni satış"
+    },
+    "Estimate": {
+      "Text": "Kilitle",
+      "Authorization": {
+        "Title": {
+          "Text": "Satışı kilitlemek için lütfen şifre giriniz"
+        }
+      },
+      "Created": {
+        "Text": "Sipariş başarıyla kilitlendi"
+      },
+      "Clear": {
+        "Text": "Bu satışın kilidini aç",
+        "Authorization": {
+          "Title": {
+            "Text": "Satışı açmak için lütfen şifre giriniz"
+          }
+        },
+        "Success": {
+          "Text": "Satışın kilidi açıldı."
+        }
+      },
+      "Locked": {
+        "Text": "Satış kilitli",
+        "Info": {
+          "Text": "Kilitli bir satışı düzenlemek yasaktır."
+        }
+      },
+      "Issued": {
+        "Text": "Bu satış zaten kilitlendi.\\nKilitli bir satışı düzenlemek yasaktır."
+      },
+      "NoItems": {
+        "Text": "Kilitlenecek öğe yok."
+      }
+    },
+    "Transfer": {
+      "Text": "Aktar",
+      "Authorization": {
+        "Title": {
+          "Text": "Transfer seçeneğine erişmek için lütfen şifre giriniz"
+        }
+      },
+      "All": {
+        "Text": "Tüm siparişleri aktar",
+        "Confirmation": {
+          "Text": "Tüm siparişlerin başka bir kullanıcıya aktarılması geri alınamaz!\\n\\nTüm siparişlerinizi {0} olarak aktarmak istediğinizden emin misiniz?"
+        },
+        "Success": {
+          "Text": "Tüm siaparişler başarıyla aktarıldı."
+        },
+        "Error": {
+          "Text": "Siparişleri seçilen kullanıcıya aktarırken hata oluştu.\\nLütfen tekrar deneyin."
+        }
+      },
+      "Orders": {
+        "Text": "Siparişleri aç"
+      },
+      "OrderNumber": {
+        "Text": "Sipariş numarası",
+        "Select": {
+          "Text": "Sipariş seç"
+        }
+      },
+      "Quantity": {
+        "Text": "Aktarılacak miktarları seçin"
+      },
+      "User": {
+        "Text": "Kullanıcı",
+        "Current": {
+          "Text": "Seçilen kullanıcı zaten siparişin sahibidir.\\nÜrünler aynı kullanıcıya aktarılacaktır."
+        }
+      },
+      "Rounds": {
+        "Text": "Servisleri Aktar",
+        "Summary": {
+          "Text": "Sipariş öğeleri"
+        },
+        "Selection": {
+          "Text": "Aktarılacak servisleri seç"
+        }
+      },
+      "Items": {
+        "Text": "Sipariş öğeleri",
+        "Selected": {
+          "Text": "Aktarım için seçilen öğeler",
+          "NoItems": {
+            "Text": "Aktarılacak öğeleri seç"
+          }
+        },
+        "All": {
+          "Text": "Tümünü aktar"
+        },
+        "Back": {
+          "Text": "Tümünü kaldır"
+        },
+        "InvalidQuantity": {
+          "Text": "Seçilen öğenin aktarılmasına izin verilmiyor",
+          "Info": {
+            "Text": "Seçilen kalemlerin toplam miktarı, aktarın için seçilen miktardan daha azdır.\\nAktarım miktarını, geçersiz öğeler kontrol edin ve tekrar deneyin."
+          }
+        },
+        "BundledQuantity": {
+          "Text": "Miktar değişikliğine izin verilmiyor",
+          "Info": {
+            "Text": "Öğe bir gruba aittir. Grup öğeleri üzerinde değişen miktarlara izin verilmez."
+          }
+        }
+      },
+      "CurrentOrder": {
+        "Text": "Aynı siparişe aktarılıyor",
+        "Confirmation": {
+          "Text": "Öğeleri aynı siparişe aktarmayı seçtiniz.\\nÖğeleri aynı siparişe aktarmak istediğinizden emin misiniz?"
+        }
+      },
+      "Failed": {
+        "Text": "Öğeler aktarılırken hata oluştu",
+        "Info": {
+          "Text": "Öğeleri aktarmaya çalışırken hata oluştu. Lütfen tekrar deneyin."
+        }
+      },
+      "Completed": {
+        "Text": "Aktarım başarıyla tamamlandı"
+      },
+      "NoItems": {
+        "Text": "Aktarılacak öğe yok"
+      },
+      "Discount": {
+        "Warning": {
+          "Text": "Sabit indirim",
+          "Info": {
+            "Text": "Mevcut sipariş, sepetin indirim setini sabitledi. Bu siparişten ürün transferi, sepet indirimini temizleyecektir.\\n\\nDevam etmek istiyor musun?"
+          }
+        }
+      }
+    },
+    "Void": {
+      "Text": "Sipariş İptal",
+      "Authorization": {
+        "Title": {
+          "Text": "Bu siparişi iptal etmek için lütfen şifre girin"
+        }
+      },
+      "Confirm": {
+        "Text": "Sipariş iptal",
+        "Info": {
+          "Text": "Bu siparişi iptal etmek istediğinizden emin misiniz?"
+        }
+      },
+      "Completed": {
+        "Text": "Sipariş başarılı bir şekilde iptal edildi"
+      },
+      "NoItems": {
+        "Text": "İptal edilecek öğe yok"
+      }
+    },
+    "Rounds": {
+      "Repeat": {
+        "Text": "Servisi tekrarla",
+        "NoItems": {
+          "Text": "Siparişte ürün yok.\\nTekrar turu sadece tur mevcutsa yapılabilir."
+        },
+        "NoQuantities": {
+          "Text": "Seçilen #{0} servisinde, tekrarlanması yeterli miktarlarda ürün yok"
+        },
+        "Bundle": {
+          "Text": "Öğeler bir gruba aittir",
+          "Info": {
+            "Text": "Gruplanmış öğeler için tekrar işlemine izin verilmez."
+          }
+        }
+      },
+      "New": {
+        "Text": "Yeni Servis",
+        "NoItems": {
+          "Text": "Yeni servis oluşturmak için siparişinizde hiç öğe yok.\\nSiparişe öğeler ekleyin ve tekrar deneyin."
+        },
+        "NoUnsavedItems": {
+          "Text": "Tüm öğeler sırayla kaydedildi. Yeni servis başladı."
+        }
+      },
+      "SelectAll": {
+        "Text": "Tümünü seç"
+      },
+      "SelectNone": {
+        "Text": "Tümünü reddet"
+      },
+      "Total": {
+        "Text": "Toplam:"
+      },
+      "NoItems": {
+        "Text": "Seçili öğe yok"
+      }
+    },
+    "Comment": {
+      "Text": "Açıklama",
+      "Add": {
+        "Text": "\"{0}\" öğesi için mevcut olanı seçin veya yorumunuzu yazın"
+      },
+      "Insert": {
+        "Text": "Açıklama yazınız ..."
+      },
+      "Change": {
+        "Text": "Açıklama ekle",
+        "Forbidden": {
+          "Text": "Seçilen öğenin düzenlenmesine izin verilmiyor.",
+          "Info": {
+            "Text": "\"{0}\" öğesi sipariş edildi ve onaylandı.\\nOnaylanmış bir öğeyi düzenlemek yasaktır."
+          }
+        },
+        "NoItem": {
+          "Text": "Hiçbir öğe seçilmedi.\\nYorum eklemek istediğiniz bir öğeyi seçin ve tekrar deneyin."
+        }
+      }
+    },
+    "Subtotal": {
+      "Text": "Aratoplam"
+    },
+    "Tax": {
+      "Text": "Vergi"
+    },
+    "Total": {
+      "Text": "TOPLAM"
+    },
+    "Checkout": {
+      "Text": "Ödeme"
+    },
+    "Save": {
+      "Text": "Satış kayıt"
+    },
+    "Refund": {
+      "Text": "İade",
+      "Authorization": {
+        "Text": "İade işlemi için şifre gereklidir"
+      },
+      "Title": {
+        "Text": "İade öğeler"
+      },
+      "Total": {
+        "Text": "TOPLAM İADE MİKTARI"
+      },
+      "ReceiptNumber": {
+        "Text": "Makbuz numarası"
+      },
+      "PaymentType": {
+        "Text": "Geri ödeme türü"
+      },
+      "Description": {
+        "Text": "İade işlemini onaylamak için makbuz numarası ve ödeme türünü girin"
+      },
+      "Print": {
+        "PrinterNotFound": {
+          "Text": "İade yazıcısı seçilmemiş."
+        }
+      },
+      "MultyplePaymentTypes": {
+        "Text": "Seçilen belge birden fazla ödeme türü içerir. Ödeme türlerini bu geri ödemeye kopyalamak için aşağıdaki seçeneği belirleyin.",
+        "PartialRefund": {
+          "Text": "Orijinal satış belgesinde birden fazla ödeme türü kullanmak kısmi geri ödeme için  geçerli değildir."
+        },
+        "Copy": {
+          "Text": "Orijinal dokümandan ödeme türlerini kopyala"
+        }
+      },
+      "SelectAll": {
+        "Text": "Tümü Seç / Bırak"
+      },
+      "CartDiscountApplied": {
+        "Text": "Sepet İndirimi uygulandı",
+        "Info": {
+          "Text": "Sepet indirimi uygulanmakta ve toplam olarak hesaplanmaktadır.\\nKısmi iade kullanılırsa, iade edilen ürünler üzerinden sepeti indirimi hesaplanacaktır."
+        }
+      }
+    },
+    "Items": {
+      "Name": {
+        "Text": "Ürün adı"
+      },
+      "Quantity": {
+        "Text": "Miktar",
+        "Change": {
+          "Text": "Miktar değiştir",
+          "Info": {
+            "Text": "Bir sonraki ürün için miktar girin"
+          },
+          "Item": {
+            "Text": "Öğe \"{0}\""
+          },
+          "Forbidden": {
+            "Text": "Miktar değişikliğine izin verilmiyor",
+            "Info": {
+              "Text": "\"{0}\" öğesi onaylandı.\\nOnaylanmış bir öğeyi düzenlemeye izin verilmez."
+            }
+          },
+          "Product": {
+            "Text": "Ürün \"{0}\"\\nVarsayılan miktar: {1:#,#.000}"
+          },
+          "Bundled": {
+            "Text": "Miktar değişikliğine izin verilmiyor",
+            "Info": {
+              "Text": "Paketlenmiş öğelerdeki miktar değişikliği izin verilmiyor."
+            }
+          }
+        },
+        "Invalid": {
+          "Text": "Geçersiz miktar. Geçerli miktarı girin ve tekrar deneyin."
+        }
+      },
+      "Price": {
+        "Text": "Fiyat",
+        "Change": {
+          "Text": "Fiyat değiştir",
+          "Product": {
+            "Text": "Ürün \"{0}\"\\nFiyat: {1:#,#.00}"
+          }
+        }
+      },
+      "Total": {
+        "Text": "Miktar"
+      },
+      "Empty": {
+        "Text": "Öğe yok",
+        "Info": {
+          "Text": "Barkod, kod kullanarak veya F3 tuşuna basarak arama yapmak için ürünleri ekleyin"
+        }
+      },
+      "Start": {
+        "Text": "Başlangıç"
+      },
+      "Page": {
+        "Text": "Sayfa"
+      },
+      "Add": {
+        "Error": {
+          "Text": "Öğe eklenirken hata oluştu. Geçersiz öğe verileri.\\nÜrün fiyatını ve miktarını kontrol edip tekrar deneyin."
+        }
+      },
+      "Void": {
+        "NoItems": {
+          "Text": "\"{0}\" öğesinin geçersiz olmasına izin verilmiyor. Yetersiz miktar."
+        },
+        "Bundle": {
+          "Text": "Öğe bir gruba aittir. Bu öğeyi silmek aynı gruptaki tüm öğeleri kaldırır.\\n\\nBu gruptaki tüm öğeleri kaldırmak istediğinizden emin misiniz?",
+          "Title": {
+            "Text": "Grup öğesi siliniyor"
+          }
+        }
+      }
+    },
+    "Print": {
+      "User": {
+        "Text": "Kullanıcı: {0}"
+      },
+      "Time": {
+        "Text": "Zaman: {0}"
+      },
+      "Number": {
+        "Text": "Sipariş No: {0}"
+      },
+      "Estimate": {
+        "Text": "HESAPLAMA",
+        "Discount": {
+          "Text": "İndirim"
+        },
+        "Total": {
+          "Text": "TOPLAM:"
+        },
+        "Footer": {
+          "Text": "Bu bir resmi makbuz değildir.\\nLütfen fatura için bekleyin."
+        }
+      },
+      "Kitchen": {
+        "NumberAndRound": {
+          "Text": "Sipariş: {0}. Servis: {1}"
+        },
+        "TableAndRound": {
+          "Text": "Masa: {0}. Servis: {1}"
+        }
+      },
+      "Dialog": {
+        "Title": {
+          "Text": "Müşteri makbuzlarını nasıl ister?"
+        },
+        "Change": {
+          "Text": "Para üstü"
+        },
+        "Receipt": {
+          "Text": "Makbuzu yazdır"
+        },
+        "Invoice": {
+          "Text": "Faturayı yazdır"
+        },
+        "Email": {
+          "Text": "E-posta Gönder",
+          "Recipient": {
+            "Text": "E-posta alıcısı",
+            "Title": {
+              "Text": "Devam etmek için e-posta mesajı ayrıntılarını girin ve \"Gönder\" düğmesine tıklayın"
+            },
+            "EmailAddress": {
+              "Text": "Alıcı adresi",
+              "Description": {
+                "Text": "Müşteri e-posta adresini girin"
+              },
+              "AddCustomer": {
+                "Text": "Müşteri ekle"
+              }
+            },
+            "Subject": {
+              "Text": "Konu",
+              "Description": {
+                "Text": "Konu satırını girin"
+              },
+              "Default": {
+                "Text": "Makbuz {0}"
+              }
+            },
+            "Message": {
+              "Text": "Mesaj",
+              "Description": {
+                "Text": "Müşteri için mesaj girin"
+              },
+              "Default": {
+                "Text": "Değerli müşterimiz,\\n\\nEkli makbuza bakın.\\n\\nMakbuz tarihi: {0}\\nToplam: {1}"
+              }
+            },
+            "CopySelf": {
+              "Text": "Bir kopyasını bana gönder"
+            },
+            "Error": {
+              "EmailFormat": {
+                "Text": "E-posta adresi düzgün biçimlendirilmemiş.\\nLütfen e-posta adresini kontrol edip tekrar deneyin."
+              }
+            },
+            "Bcc": {
+              "Text": "Bcc",
+              "Description": {
+                "Text": "Bcc'ye ekle"
+              }
+            }
+          },
+          "Sending": {
+            "Text": "E-mail gönderiliyor... Lütfen bekleyin..."
+          },
+          "Sent": {
+            "Text": "Makbuz, {0} adresine gönderildi"
+          }
+        },
+        "Hide": {
+          "Text": "Bunu bir daha gösterme"
+        }
+      },
+      "Table": {
+        "Text": "Masa: {0}"
+      }
+    },
+    "Products": {
+      "Search": {
+        "Text": "Arama",
+        "Name": {
+          "Text": "Ürün adı",
+          "Tooltip": {
+            "Text": "Ürün adıyla ara"
+          },
+          "NotFound": {
+            "Text": "\"{0}\" için sonuç bulunamadı",
+            "Info": {
+              "Text": "Lütfen arama parametrelerinizi kontrol edip tekrar deneyin"
+            }
+          }
+        },
+        "Barcode": {
+          "Text": "Barkod",
+          "Tooltip": {
+            "Text": "Barkodla ürün ara"
+          },
+          "NotFound": {
+            "Text": "Barkod bulunamadı"
+          }
+        },
+        "Code": {
+          "Text": "Ürün Kodu",
+          "Tooltip": {
+            "Text": "Ürünü kodla ara"
+          },
+          "NotFound": {
+            "Text": "Kod bulunamadı"
+          }
+        },
+        "NoItems": {
+          "Text": "Ürün seçilmedi",
+          "Info": {
+            "Text": "Devam etmek için ürünü ad veya kodla arayın"
+          }
+        },
+        "Selection": {
+          "Price": {
+            "Text": "Fiyat"
+          },
+          "Description": {
+            "Text": "Açıklama"
+          }
+        },
+        "NoResults": {
+          "Text": "Sonuç yok"
+        }
+      },
+      "NoProducts": {
+        "Text": "Kullanılabilir ürün yok",
+        "Info": {
+          "Text": "Devam etmek için lütfen ürün ekleyin veya mevcut fiyatlara satış fiyatı ayarlayın"
+        }
+      }
+    },
+    "Lock": {
+      "Text": "Kilitle"
+    },
+    "Unlock": {
+      "Text": "Kilidi aç"
+    },
+    "Item": {
+      "Void": {
+        "Authorization": {
+          "Title": {
+            "Text": "Seçilen öğeyi geçersiz kılmak için lütfen şifre girin"
+          }
+        }
+      },
+      "ChangePrice": {
+        "Minimum": {
+          "Text": "Min değer: {0}"
+        }
+      }
+    },
+    "QuickPayment": {
+      "Text": "Hızlı ödeme",
+      "Confirmation": {
+        "Text": "Mevcut satış için \"{0}\" ödeme türünü seçtiniz.\\n\\nSeçilen ödeme türünü kullanmaya devam etmek istiyor musunuz?"
+      }
+    },
+    "Discount": {
+      "Text": "İndirim",
+      "Authorization": {
+        "Text": "İndirimleri uygulamak için lütfen şifre giriniz"
+      },
+      "Cart": {
+        "Invalid": {
+          "Text": "Geçersiz sepet indirimi",
+          "GreaterThenTotal": {
+            "Text": "İndirim toplamı toplam siparişten\\ndaha büyük olamaz\\n"
+          }
+        },
+        "Cleared": {
+          "Text": "Sepeti indirim temizlendi!",
+          "Info": {
+            "Text": "Geçersiz toplam algılandı ve indirim siparişten kaldırıldı.\\n\\nLütfen, ürünlerinizi kontrol edin ve ödemeye devam etmeden önce geçerli bir indirim uygulayın."
+          }
+        }
+      },
+      "Item": {
+        "NotSelected": {
+          "Text": "Öğe seçilmemiş.\\nTek bir öğeye indirim uygulamak için, bu iletişim kutusunu açmadan önce satış listesinden birini seçin."
+        },
+        "Invalid": {
+          "Text": "Geçersiz ürün indirimi",
+          "GreaterThenTotal": {
+            "Text": "Sabit tutar ürünler toplanımdan \\ndaha büyük olamaz"
+          }
+        }
+      }
+    }
+  },
+  "Closing": {
+    "Text": "Gün sonu",
+    "Users": {
+      "Text": "Açık işlemler",
+      "User": {
+        "Total": {
+          "Text": "TOPLAM:"
+        }
+      },
+      "Summary": {
+        "Text": "Açık işlemler"
+      },
+      "NoReports": {
+        "Text": "Açık işlem yok"
+      }
+    },
+    "Option": {
+      "Text": "Hesap kesme türünü seçin",
+      "NotSelected": {
+        "Text": "Hesap kesme türü seçilmedi",
+        "Info": {
+          "Text": "Devam etmek için yukarıda listelenen seçeneklerden birini seçin"
+        }
+      }
+    },
+    "User": {
+      "Text": "Hesap kesim",
+      "Completed": {
+        "Text": "{0} hesabı başarıyla kesildi."
+      }
+    },
+    "Shift": {
+      "Text": "Tüm kullanıcıların hesap kesimi",
+      "Closed": {
+        "Text": "Tüm kullanıcıların hesapları başarıyla kesildi"
+      }
+    },
+    "BusinessDay": {
+      "Text": "Kaydı kapat",
+      "Income": {
+        "Text": "Gün toplamı"
+      },
+      "Closed": {
+        "Text": "Kayıt başarıyla kapatıldı"
+      },
+      "Report": {
+        "Text": "RAPOR"
+      },
+      "CashIn": {
+        "Text": "Nakit girişi"
+      },
+      "CashOut": {
+        "Text": "Nakit çıkışı"
+      }
+    },
+    "Error": {
+      "OpenOrders": {
+        "Text": "Açık siparişler",
+        "Users": {
+          "Text": "Açık siparişleri olan kullanıcılar var!\\nGün kapanmadan önce tüm siparişleri kapatmalısınız."
+        }
+      }
+    },
+    "Print": {
+      "User": {
+        "Report": {
+          "Total": {
+            "Text": "TOPLAM TUTAR"
+          },
+          "User": {
+            "Text": "Kullanıcı",
+            "ClosedBy": {
+              "Text": "Alınan"
+            }
+          },
+          "Header": {
+            "Text": "KULLANICI HESAP KAPANIŞI"
+          }
+        }
+      },
+      "DayClose": {
+        "Report": {
+          "Header": {
+            "Text": "GÜN KAPANIŞI"
+          },
+          "User": {
+            "Total": {
+              "Text": "TOPLAM"
+            }
+          },
+          "Summary": {
+            "Text": "ÖZET"
+          },
+          "Total": {
+            "Text": "TOPLAM"
+          }
+        }
+      }
+    },
+    "History": {
+      "Text": "Geçmiş",
+      "Info": {
+        "Text": "Önceden oluşturulan Z raporunun bir kopyasını seçmek ve yazdırmak için aşağıdaki listeyi kullanın."
+      },
+      "List": {
+        "Reports": {
+          "Text": "Raporlar"
+        },
+        "Number": {
+          "Text": "Sayı"
+        },
+        "Date": {
+          "Text": "Tarih"
+        }
+      },
+      "Print": {
+        "Text": "Seçili raporu yazdır",
+        "Unsupported": {
+          "Text": "İşlem desteklenmiyor"
+        }
+      }
+    }
+  },
+  "User": {
+    "Text": "Kullanıcı",
+    "Profile": {
+      "Text": "Kullanıcı bilgisi",
+      "Info": {
+        "Text": "Profil"
+      },
+      "Edit": {
+        "Text": "Profili ya da şifreyi değiştir"
+      },
+      "Data": {
+        "FirstName": {
+          "Text": "Adı"
+        },
+        "LastName": {
+          "Text": "Soyadı"
+        },
+        "Email": {
+          "Text": "E-posta"
+        },
+        "Password": {
+          "Text": "Şifre",
+          "Change": {
+            "Text": "Şİfreyi değiştir",
+            "Password": {
+              "Text": "Şifre"
+            },
+            "Confirm": {
+              "Text": "Şifreyi onayla"
+            },
+            "ConfirmationFailed": {
+              "Text": "Şifre ve onaylama şifresi alanı eşleşmiyor.\\nŞifreyi kontrol edip tekrar deneyin."
+            },
+            "InvalidPassword": {
+              "Text": "Şifre zaten kullanımda. Lütfen farklı şifre kullanın."
+            }
+          }
+        },
+        "Saved": {
+          "Text": "Profil başarıyla değiştirildi"
+        }
+      },
+      "ShiftReport": {
+        "Text": "Kullanıcı raporu",
+        "Report": {
+          "Text": "Kullanıcı raporu",
+          "NoData": {
+            "Text": "Açık işlem yok"
+          },
+          "Total": {
+            "Text": "TOPLAM"
+          }
+        },
+        "ClockOut": {
+          "Text": "Nakit çıkışı"
+        }
+      }
+    }
+  },
+  "Security": [
+    {
+      "Authorize": {
+        "Text": "Kullanıcı doğrulama"
+      },
+      "Level": {
+        "Text": "Erişim seviyesi",
+        "Change": {
+          "Text": "Seçilen işlem için erişim düzeyini değiştir",
+          "AccessDenied": {
+            "Text": "Bu işlem için erişim seviyesini değiştirmek için yeterli ayrıcalığınız yok.\\n\\nErişim seviyesi, seçilen işlemi gerçekleştirmek için gerekli erişim seviyesi olan kullanıcı tarafından ayarlanabilir."
+          }
+        }
+      },
+      "AccessDenied": {
+        "Text": "Erişim reddedildi",
+        "Info": {
+          "Text": "Seçilen işlem için yeterli ayrıcalığınız yok."
+        }
+      }
+    },
+    {
+      "Key": {
+        "Management": {
+          "Text": "Yönetim",
+          "Description": {
+            "Text": "Yönetim bölümüne erişimi kontrol eder"
+          }
+        },
+        "Settings": {
+          "Text": "Ayarlar",
+          "Description": {
+            "Text": "Ayarlara erişimi kontrol eder"
+          }
+        },
+        "VoidOrder": {
+          "Text": "Sipariş iptali",
+          "Description": {
+            "Text": "Kullanıcının tüm siparişi geçersiz kılma izni olup olmadığını kontrol eder"
+          }
+        },
+        "VoidItem": {
+          "Text": "Öğe iptali",
+          "Description": {
+            "Text": "Kullanıcının açık siparişte tek bir öğeyi iptal etmesine izin verilip verilmediğini kontrol eder"
+          }
+        },
+        "LockSale": {
+          "Text": "Kilit satışı"
+        },
+        "UnlockSale": {
+          "Text": "Kilidini aç"
+        },
+        "SplitOrder": {
+          "Text": "Sipariş ayırma",
+          "Description": {
+            "Text": "Kullanıcının bir siparişin tamamını veya bir kısmını başka bir kullanıcıya veya masaya aktarmasına izin verir ( sipariş numarası)"
+          }
+        },
+        "Discount": {
+          "Text": "Indirimi uygula"
+        },
+        "DeleteDocument": {
+          "Text": "Belgeyi sil"
+        },
+        "ClosingDay": {
+          "Text": "Gün sonu",
+          "Description": {
+            "Text": "Gün sonu erişimi kontrol eder bölüm"
+          }
+        },
+        "Refund": {
+          "Text": "İade",
+          "Description": {
+            "Text": "Kullanıcının önceden yapılmış satış için iade yapmasına izin verir.\\nBu, yeni \"İade\" belgesi oluşturur ve miktarları otomatik olarak stoklara geri koyar."
+          }
+        },
+        "OpenOrders": {
+          "Text": "Tüm açık siparişleri görüntüle",
+          "Description": {
+            "Text": "Kullanıcının tüm açık siparişleri görmesine izin verilip verilmediğini kontrol eder.\\nBu seçenek, etkin kat planları ile kullanılabilir."
+          }
+        },
+        "SalesHistory": {
+          "Text": "Satış geçmişini görüntüle",
+          "Receipt": {
+            "Text": "Makbuzu yeniden yazdır",
+            "Description": {
+              "Text": "Kullanıcının satış geçmişinden fiş yazdırmasına izin verilip verilmediğini kontrol eder."
+            }
+          }
+        },
+        "StartingCash": {
+          "Text": "Günbaşı nakit",
+          "Description": {
+            "Text": "Günbaşı nakit bölümüne erişimi kontrol eder"
+          }
+        },
+        "UserProfile": {
+          "Text": "Kullanıcı profili"
+        }
+      }
+    }
+  ],
+  "Payment": {
+    "Details": {
+      "Summary": {
+        "Text": "Ürünler"
+      },
+      "Actions": {
+        "Text": "Eylemler",
+        "ShowItems": {
+          "Text": "Ürünleri göster"
+        }
+      },
+      "Discount": {
+        "Text": "İndirim",
+        "Options": {
+          "Text": "İndirim seçeneği",
+          "DisallowedItems": {
+            "Text": "Doğrudan bir indirime atanamayan ürünler var."
+          }
+        },
+        "Type": {
+          "Percent": {
+            "Text": "Yüzde indirim uygula"
+          },
+          "Fixed": {
+            "Text": "Sabit tutar olarak indirim uygulayın"
+          }
+        },
+        "Target": {
+          "Item": {
+            "Text": "Ürün indirimi",
+            "NotSelected": {
+              "Text": "Hiçbir öğe seçilmedi.\\nİndirim uygulamak için lütfen soldaki öğeyi seçin."
+            },
+            "NotAllowed": {
+              "Text": "Seçilen öğeler için indirim yapılamaz"
+            },
+            "Info": {
+              "Text": "\"{0}\" a indirim uygulayın"
+            }
+          },
+          "Cart": {
+            "Text": "Sepet indirimi",
+            "Info": {
+              "Text": "Sepet indirimini uygula"
+            }
+          }
+        },
+        "Total": {
+          "Text": "Toplam:"
+        },
+        "Subtotal": {
+          "Text": "Alt toplam:"
+        },
+        "TotalDiscount": {
+          "Text": "Toplam indirim:"
+        },
+        "Clear": {
+          "Text": "İndirimleri temizle",
+          "Completed": {
+            "Text": "Tüm indirimler kaldırıldı"
+          }
+        }
+      },
+      "Split": {
+        "Text": "Servisler",
+        "Rounds": {
+          "Text": "Ödeme için servis seçin",
+          "RoundNumber": {
+            "Text": "Servis:"
+          },
+          "RoundTotal": {
+            "Text": "Tutar:"
+          },
+          "SelectAll": {
+            "Text": "Tümünü seç"
+          },
+          "SelectNone": {
+            "Text": "Tümünü reddet"
+          }
+        }
+      },
+      "Customer": {
+        "Text": "Müşteri"
+      },
+      "Total": {
+        "Text": "Toplam:"
+      },
+      "TotalWithoutDiscount": {
+        "Text": "İndirimsiz toplam:"
+      },
+      "Money": {
+        "Text": "Ödeme",
+        "Paid": {
+          "Text": "Ödenen:",
+          "Hint": {
+            "TypeAmount": {
+              "Text": "Ücret tutarını yaz"
+            },
+            "TapToChange": {
+              "Text": "Ücret tutarı girmek için buraya dokunun"
+            }
+          }
+        },
+        "Change": {
+          "Text": "Para üstü:"
+        },
+        "Balance": {
+          "Text": "Bakiye:"
+        }
+      },
+      "PaymentTypes": {
+        "Text": "Ödeme Türü",
+        "Other": {
+          "Text": "Bölünmüş ödemeler"
+        },
+        "Invalid": {
+          "Text": "Ödeme türüne izin verilmiyor",
+          "Fiscal": {
+            "Text": "Seçilen ödeme türü, mali ve mali olmayan ödeme türlerinin geçersiz bir kombinasyonunu içerir.\\n\\nMali ve mali olmayan ödeme türlerini birleştirmesine izin verilmez."
+          }
+        }
+      },
+      "NoItems": {
+        "Text": "Ürün yok"
+      }
+    },
+    "NoPaymentSelected": {
+      "Text": "Ödeme türü seçilmemiş"
+    },
+    "Add": {
+      "Text": "Ödeme türü ekle",
+      "Info": {
+        "Text": "Mevcut satış için gerekli ödeme türlerini ve miktarlarını seçin"
+      },
+      "Amount": {
+        "Text": "Ödeme tutarı \"{0}\""
+      }
+    },
+    "Selected": {
+      "Text": "Seçilen ödeme şekli"
+    },
+    "Customer": {
+      "Required": {
+        "Text": "Müşteri gerekli",
+        "Info": {
+          "Text": "\"{0}\" ödeme türü, müşterinin seçilmesini gerektirir. Devam etmek için lütfen bir müşteri seçin."
+        }
+      }
+    },
+    "PaymentTypes": {
+      "Validation": {
+        "Change": {
+          "Missing": {
+            "Text": "Yanlış miktar",
+            "Info": {
+              "Text": "Bu ödeme türü değişikliğe izin vermez. Doğru tutarı girin veya başka bir ödeme türü seçin."
+            }
+          }
+        }
+      }
+    }
+  },
+  "Customer": {
+    "Search": {
+      "Text": "Müşteri ara",
+      "Name": {
+        "Text": "Adı"
+      },
+      "PIN": {
+        "Text": "Vergi numarası"
+      },
+      "LoyaltyCard": {
+        "Text": "Sadakat kartı"
+      },
+      "Email": {
+        "Text": "Eposta"
+      },
+      "PhoneNumber": {
+        "Text": "Telefon numarası"
+      }
+    },
+    "Selection": {
+      "Text": "Seçilen müşteri",
+      "Details": {
+        "PIN": {
+          "Text": "Vergi numarası"
+        },
+        "Address": {
+          "Text": "Adres:"
+        },
+        "Email": {
+          "Text": "Eposta:"
+        },
+        "PhoneNumber": {
+          "Text": "Telefon:"
+        }
+      },
+      "None": {
+        "Text": "Müşteri seçilmedi",
+        "Info": {
+          "Text": "Listeden müşteri seçin"
+        }
+      },
+      "Clear": {
+        "Text": "Seçilen müşteriyi temizle",
+        "Completed": {
+          "Text": "Seçili müşteri kaldırıldı"
+        }
+      }
+    },
+    "New": {
+      "Text": "Yeni müşteri",
+      "Add": {
+        "Text": "Yeni müşteri ekle"
+      },
+      "Name": {
+        "Text": "Adı"
+      },
+      "TaxNumber": {
+        "Text": "Vergi numarası"
+      },
+      "Address": {
+        "Text": "Adres"
+      },
+      "City": {
+        "Text": "Şehir"
+      },
+      "PostalCode": {
+        "Text": "Posta kodu"
+      },
+      "Country": {
+        "Text": "Bölge"
+      },
+      "PhoneNumber": {
+        "Text": "Telefon"
+      },
+      "Email": {
+        "Text": "E-posta"
+      }
+    }
+  },
+  "Navigation": {
+    "Back": {
+      "NotAllowed": {
+        "Text": "Seçilen operasyona izin verilmiyor."
+      }
+    }
+  },
+  "FloorPlans": {
+    "Options": {
+      "Text": "Seçenekler",
+      "Design": {
+        "Text": "Kat planı / Masa Ayarları",
+        "FloorPlan": {
+          "Add": {
+            "Text": "Yeni kat planı ekle"
+          },
+          "Delete": {
+            "Text": "Kat planını kaldır"
+          },
+          "Rename": {
+            "Text": "Kat planını yeniden \\nadlandır"
+          },
+          "Name": {
+            "Text": "Ad"
+          }
+        },
+        "Table": {
+          "Add": {
+            "Text": "Masa ekle"
+          },
+          "Delete": {
+            "Text": "Seçili masayı kaldır"
+          },
+          "Name": {
+            "Text": "Ad"
+          },
+          "Height": {
+            "Text": "Uzunluk"
+          },
+          "Width": {
+            "Text": "Genişlik"
+          },
+          "Size": {
+            "Text": "BOYUT"
+          }
+        },
+        "Grid": {
+          "Show": {
+            "Text": "Cetveli göster"
+          },
+          "SnapToGrid": {
+            "Text": "Cetvele yasla"
+          },
+          "Size": {
+            "Text": "Cetvel boyutu"
+          }
+        }
+      },
+      "View": {
+        "Orders": {
+          "Text": "Siparişleri göster",
+          "Title": {
+            "Text": "Açık siparişler"
+          },
+          "Order": {
+            "Number": {
+              "Text": "Sipariş Numarası"
+            },
+            "Total": {
+              "Text": "Toplam"
+            }
+          },
+          "NoOrders": {
+            "Text": "Açık sipariş yok. Kat planını kullanarak yeni sipariş oluşturun."
+          }
+        },
+        "FloorPlans": {
+          "Text": "Kat planını göster"
+        }
+      },
+      "NoSelection": {
+        "Text": "Seçim yapmadan devam et"
+      }
+    },
+    "Save": {
+      "Success": {
+        "Text": "Değişiklikler başarıyla kaydedildi"
+      },
+      "Error": {
+        "Text": "Kaydetme sırasında hata oluştu\\nVeriler saklanamıyor.\\nSistem Mesaj: {0}",
+        "Duplicates": {
+          "Text": "Yinelenen masa adları bulundu.\\n\\n{0}\\n\\nMasa isimleri benzersiz olmalıdır. Lütfen masa adlarını düzeltin ve tekrar deneyin.",
+          "Title": {
+            "Text": "Çakışma bulundu"
+          }
+        }
+      }
+    },
+    "Table": {
+      "Unavailable": {
+        "Text": "\"{0}\" masası {1} tarafından alınmıştır. Devam ederseniz aynı masada ayrı sipariş oluşturacaksınız.\\n\\nYine de devam etmek istiyor musun?",
+        "Title": {
+          "Text": "Masa daha önce alınmış"
+        }
+      }
+    }
+  },
+  "Settings": {
+    "Text": "Ayarlar",
+    "Basic": {
+      "Text": "Basit ayarlar",
+      "Language": {
+        "Text": "Dil"
+      },
+      "Style": {
+        "Text": "Uygulama stili",
+        "ColorScheme": {
+          "Text": "Renk düzeni"
+        }
+      },
+      "Layout": {
+        "Text": "Yerleşim",
+        "TouchScreen": {
+          "Text": "Görsel"
+        },
+        "Keyboard": {
+          "Text": "Standart"
+        }
+      },
+      "VirtualKeyboard": {
+        "Text": "Sanal klavyeyi etkinleştir"
+      },
+      "ProductSearch": {
+        "Barcode": {
+          "Text": "Barkod"
+        },
+        "Code": {
+          "Text": "Kod"
+        },
+        "Name": {
+          "Text": "Ad"
+        }
+      },
+      "ColorScheme": {
+        "Dark": {
+          "Text": "Koyu"
+        },
+        "Light": {
+          "Text": "Açık"
+        }
+      },
+      "NotificationPosition": {
+        "Top": {
+          "Text": "Üst"
+        },
+        "Bottom": {
+          "Text": "Alt"
+        }
+      },
+      "Notifications": {
+        "Text": "Mesajlar",
+        "ShowClose": {
+          "Text": "\"Kapat\" düğmesini göster"
+        },
+        "ClickToClose": {
+          "Text": "Kapatmak için tıklayın"
+        },
+        "SlideIn": {
+          "Text": "İçeri kaydır"
+        },
+        "Duration": {
+          "Text": "Mesaj süresi (sn.)"
+        },
+        "Position": {
+          "Text": "Pozisyon"
+        }
+      },
+      "StartingCash": {
+        "Text": "Uygulama başlangıcında nakit göster"
+      },
+      "BusinessDay": {
+        "Text": "İş günleri",
+        "SelecBusinessDay": {
+          "Text": "Uygulama başlangıcında iş günü seç"
+        }
+      },
+      "ButtonBar": {
+        "Text": "Düğme çubuğu",
+        "Info": {
+          "Text": "Üst düğme çubuğunda görünecek eylemleri seçin",
+          "VisualLayoutOnly": {
+            "Text": "Yalnızca \"Görsel\" düzen için geçerlidir"
+          }
+        },
+        "IsCommentVisible": {
+          "Text": "Açıklama"
+        },
+        "IsDiscountVisible": {
+          "Text": "İndirim"
+        },
+        "IsNewSaleVisible": {
+          "Text": "Yeni satış"
+        },
+        "IsRefundVisible": {
+          "Text": "İade"
+        },
+        "IsSearchVisible": {
+          "Text": "Arama"
+        },
+        "IsTransferVisible": {
+          "Text": "Aktar"
+        }
+      }
+    },
+    "Order": {
+      "Text": "Sipariş & Ödeme",
+      "Standard": {
+        "Text": "Temel işlemler",
+        "AutoOrderNumber": {
+          "Text": "Kat planı kullan"
+        },
+        "PlaySound": {
+          "Text": "Sesler",
+          "SoundSettings": {
+            "Navigation": {
+              "Text": "Gezinme sesi"
+            },
+            "ItemAdded": {
+              "Text": "Öğe ekleme sesi"
+            },
+            "ItemNotFound": {
+              "Text": "Öğe bulunamadı sesi"
+            },
+            "Show": {
+              "Text": "Ses seçeneklerini göster"
+            },
+            "Hide": {
+              "Text": "Ses seçeneklerini gizle"
+            }
+          }
+        },
+        "ProductGrid": {
+          "Text": "Sayı veya satır / sütun"
+        }
+      },
+      "Users": {
+        "Text": "Kullanıcılar",
+        "SingleUser": {
+          "Text": "Tek kullanıcı"
+        }
+      },
+      "Products": {
+        "Text": "Ürünler",
+        "DefaultQuantity": {
+          "Text": "Varsayılan miktar"
+        },
+        "DefaultSearch": {
+          "Text": "Varsayılan arama",
+          "Options": {
+            "Text": "Arama seçeneklerini göster"
+          }
+        },
+        "DefaultDiscountType": {
+          "Text": "Varsayılan indirim tipi",
+          "Percent": {
+            "Text": "Yüzde"
+          },
+          "Fixed": {
+            "Text": "Sabit"
+          }
+        },
+        "RowPerItem": {
+          "Text": "Her öğe için ayrı satır"
+        }
+      },
+      "Payment": {
+        "Text": "Ödeme",
+        "ShowSummary": {
+          "Text": "Ödeme formundaki ürünleri göster"
+        },
+        "FixedRows": {
+          "Text": "Ödeme türü satır sayısı"
+        },
+        "IsSingleItemDiscountAllowed": {
+          "Text": "Tek ürün indirimine izin ver"
+        },
+        "QuickPaymentConfirmation": {
+          "Text": "Ödeme onayı için kısayol tuşları"
+        },
+        "ShowPrintReceiptDialog": {
+          "Text": "Makbuz yazdırma iletişim kutusunu görüntüle"
+        },
+        "DefaultDueDate": {
+          "Text": "Varsayılan vade tarihi",
+          "Days": {
+            "Text": "günler"
+          }
+        },
+        "MergeItemsOnPayment": {
+          "Text": "Makbuzdaki ürünleri birleştir"
+        }
+      },
+      "Advanced": {
+        "Show": {
+          "Text": "Gelişmiş ayarları göster"
+        },
+        "Hide": {
+          "Text": "Gelişmiş ayarları gizle"
+        },
+        "ResetOrderNumber": {
+          "Text": "Sipariş numarasını sıfırla"
+        },
+        "ShowAllOccupiedTables": {
+          "Text": "Kat planında tüm dolu masaları göster"
+        }
+      }
+    },
+    "Print": {
+      "Text": "Yazdırma seçenekleri",
+      "PrinterSelection": {
+        "Text": "Yazıcı seçimi",
+        "Tour": {
+          "Title": {
+            "Text": "Yazıcı ayarlarını yap"
+          },
+          "Content": {
+            "Text": "Yazıcınızı kurmak ve özelleştirmek için\\n\"Yazıcı ayarları\" düğmesine tıklayın"
+          }
+        }
+      },
+      "Printers": {
+        "KitchenTicket": {
+          "Text": "Mutfak yazıcısı",
+          "Operation": {
+            "Text": "Mutfak fişi yazdır"
+          }
+        },
+        "Service": {
+          "Text": "Servis yazıcısı",
+          "Operation": {
+            "Text": "Servis mesajlarını yazdır"
+          }
+        },
+        "Estimate": {
+          "Text": "Satış yazıcısı kilitli",
+          "Operation": {
+            "Text": "Kilitli satışı yazdır"
+          }
+        },
+        "OrderSummary": {
+          "Text": "Siparişi yazdır"
+        }
+      },
+      "PrinterOptions": {
+        "Text": "Yazıcı ayarları",
+        "Tooltip": {
+          "Text": "Yazıcı ayarlarını yap"
+        },
+        "PrinterType": {
+          "Text": "Yazıcı türü",
+          "A4": {
+            "Text": "A4"
+          },
+          "EscPos": {
+            "Text": "ESC/POS"
+          },
+          "POS58": {
+            "Text": "POS 58"
+          },
+          "POS58Rtl": {
+            "Text": "POS 58 RTL"
+          },
+          "POS80": {
+            "Text": "POS 80"
+          },
+          "POS80Rtl": {
+            "Text": "POS 80 RTL"
+          }
+        },
+        "NumberOfCopies": {
+          "Text": "Kopya sayısı"
+        },
+        "PaperWidth": {
+          "Text": "Satır başına karakter"
+        },
+        "Header": {
+          "Text": "Üst başlık"
+        },
+        "Footer": {
+          "Text": "Alt başlık"
+        },
+        "FeedLines": {
+          "Text": "Besleme hatları"
+        },
+        "CutPaper": {
+          "Text": "Kağıdı kes"
+        },
+        "PrintBitmap": {
+          "Text": "Resim olarak yazdır"
+        },
+        "RichFormatting": {
+          "Text": "Zengin biçim"
+        },
+        "Alignment": {
+          "Left": {
+            "Text": "Sola hızala"
+          },
+          "Center": {
+            "Text": "Ortala"
+          }
+        },
+        "Revert": {
+          "Text": "Değişiklikleri geri al",
+          "Completed": {
+            "Text": "Önceden kaydedilen ayarlar uygulandı"
+          }
+        },
+        "PrintTestPage": {
+          "Text": "Test sayfası yazdır"
+        },
+        "Advanced": {
+          "Text": "Gelişmiş",
+          "CodePage": {
+            "Text": "Kod sayfası"
+          },
+          "CharacterSet": {
+            "Text": "Karakter seti",
+            "None": {
+              "Text": "Yok (Yazıcı varsayılanı)"
+            },
+            "USA": {
+              "Text": "USA"
+            },
+            "France": {
+              "Text": "France"
+            },
+            "Germany": {
+              "Text": "Germany"
+            },
+            "UK": {
+              "Text": "United Kingdom"
+            },
+            "DenmarkI": {
+              "Text": "Denmark I"
+            },
+            "Sweden": {
+              "Text": "Sweden"
+            },
+            "Italy": {
+              "Text": "Italy"
+            },
+            "SpainI": {
+              "Text": "Spain I"
+            },
+            "Japan": {
+              "Text": "Japan"
+            },
+            "Norway": {
+              "Text": "Norway"
+            },
+            "DenmarkII": {
+              "Text": "Denmark II"
+            },
+            "SpainII": {
+              "Text": "Spain II"
+            },
+            "LatinAmerica": {
+              "Text": "Latin America"
+            },
+            "Korea": {
+              "Text": "Korea"
+            },
+            "SloveniaCroatia": {
+              "Text": "Slovenia / Croatia"
+            },
+            "China": {
+              "Text": "China"
+            },
+            "Vietnam": {
+              "Text": "Vietnam"
+            },
+            "Arabia": {
+              "Text": "Arabia"
+            }
+          }
+        },
+        "Unavailable": {
+          "Text": "Seçilen yazıcı türü için ek seçenekler mevcut değildir.\\nEk yazıcı seçeneklerini görmek için lütfen farklı yazıcı tipi seçin.",
+          "Info": {
+            "Text": "Yazıcı türünü seçme ve makbuz yazıcısını ayarlama hakkında daha fazla bilgi edinin."
+          }
+        },
+        "Margin": {
+          "Text": "Kenar boşlukları (milimetre cinsinden)",
+          "Top": {
+            "Text": "Üst"
+          },
+          "Right": {
+            "Text": "Sağ"
+          },
+          "Bottom": {
+            "Text": "Alt"
+          },
+          "Left": {
+            "Text": "Sol"
+          }
+        },
+        "PrintBarcode": {
+          "Text": "Barkodu yazdır"
+        },
+        "Font": {
+          "Text": "Font ayarları",
+          "Family": {
+            "Text": "Font ailesi"
+          },
+          "SizePercent": {
+            "Text": "Font boyutu"
+          },
+          "Reset": {
+            "Text": "Font ailesini varsayılana sıfırlar ve font boyutunu% 100'e ayarlar"
+          }
+        }
+      },
+      "Templates": {
+        "Text": "Şablonları yazdır",
+        "Font": {
+          "Text": "Font",
+          "Info": {
+            "Text": "Burada seçilen yazı tipi faturada, raporlarda ve diğer baskı şablonlarında kullanılacaktır. Hiçbiri seçilmezse, varsayılan yazı tipi kullanılacaktır."
+          }
+        }
+      }
+    },
+    "AddOns": {
+      "Text": "Kayıtlı modüller",
+      "Modules": {
+        "Text": "Modüller"
+      },
+      "Plugins": {
+        "Text": "Eklentiler"
+      }
+    },
+    "WeighingScale": {
+      "Text": "Barkod ayarları",
+      "VariableMeasureBarcode": {
+        "Text": "Tartı ölçekleri barkod",
+        "Enabled": {
+          "Text": "Tartım ölçekleri barkodunu etkinleştir"
+        },
+        "Prefix": {
+          "Text": "İlk iki basamak / önek"
+        },
+        "ProductCodeLength": {
+          "Text": "Ürün kodu için basamak sayısı"
+        },
+        "DecimalPlaces": {
+          "Text": "Ondalık değer sayısı"
+        },
+        "TrimZeros": {
+          "Text": "Ürün kodundan sıfırları kaldır(sıfırı kırp)"
+        },
+        "IsUsingPriceBarcode": {
+          "Text": "Ölçek, miktar yerine fiyat basar",
+          "Info": {
+            "Text": "Bazı tartım ölçekleri ölçülen miktar yerine toplam fiyatı basar. Bu seçenek etkinleştirilirse, miktar ürün fiyatına ve toplam tutarı bağlı olacaktır."
+          }
+        }
+      }
+    },
+    "Email": {
+      "Text": "Eposta ayarları",
+      "General": {
+        "Host": {
+          "Text": "Sunucu"
+        },
+        "Port": {
+          "Text": "Port"
+        },
+        "EmailAddress": {
+          "Text": "Eposta adresi"
+        },
+        "DisplayName": {
+          "Text": "Görünen ad"
+        },
+        "Password": {
+          "Text": "Şifre"
+        },
+        "SSL": {
+          "Text": "SSL kullan"
+        },
+        "Defaults": {
+          "Text": "Varsayılan e-posta mesajı değerleri",
+          "Subject": {
+            "Text": "Konu"
+          },
+          "Message": {
+            "Text": "Mesaj"
+          },
+          "Description": {
+            "Text": "Bu alanları boş bırakmaya karar verirseniz, otomatik olarak oluşturulan konu ve müşteri için mesaj kullanılacaktır. Mesaj gönderilmeden önce bunları değiştirebilirsiniz."
+          },
+          "Bcc": {
+            "Text": "Bcc alıcıları"
+          }
+        }
+      }
+    },
+    "About": {
+      "Text": "Hakkında",
+      "HelpCenter": {
+        "Text": "Yardım merkezini aç",
+        "Info": {
+          "Text": "Destek isteği açmak için help.aronium.com adresine gidin."
+        }
+      },
+      "ApplicationDirectory": {
+        "Text": "Uygulama veri dizini",
+        "Info": {
+          "Text": "Uygulama ayarlarının, kayıt dosyalarının ve diğer uygulama öğelerinin depolandığı yer."
+        },
+        "Open": {
+          "Text": "Uygulama veri dizinini aç"
+        }
+      },
+      "Database": {
+        "Text": "Veritabanı",
+        "Open": {
+          "Text": "Veritabanı dizinini aç"
+        },
+        "Backup": {
+          "Text": "Veritabanını yedekle",
+          "Success": {
+            "Text": "Veritabanı yedekleme başarıyla tamamlandı.",
+            "Path": {
+              "Text": "Dizin: {0}"
+            },
+            "UnableToCopy": {
+              "Text": "Yedekleme varsayılan konumda oluşturuldu. Yedekleme dosyası seçilen dizine kopyalanamıyor."
+            }
+          },
+          "Error": {
+            "Text": "Veritabanı yedeği alınırken hata oluştu.\\nDetay için loglara bakın."
+          }
+        }
+      },
+      "Update": {
+        "AutoUpdate": {
+          "Text": "Otomatik güncelleme"
+        },
+        "SendUsageData": {
+          "Text": "Anonim kullanım verileri göndererek geliştirmemize yardımcı olun"
+        },
+        "Check": {
+          "Text": "Güncellemeleri kontrol et",
+          "Checking": {
+            "Text": "Güncellemeler kontrol ediliyor... Litfen bekleyin..."
+          },
+          "Downloading": {
+            "Text": "Güncelleme indiriliyor ... Lütfen bekleyin ..."
+          },
+          "UpToDate": {
+            "Text": "Aronium güncel."
+          },
+          "Available": {
+            "Text": "Yeni versiyon var.",
+            "Run": {
+              "Text": "Şimdi yüklemek için buraya tıklayın."
+            }
+          },
+          "Error": {
+            "NoConnection": {
+              "Text": "Sunucuya bağlanılamıyor.\\nLütfen internet bağlantınızı kontrol edin ve tekrar deneyin."
+            }
+          }
+        },
+        "Ready": {
+          "Text": "Güncelleme mevcut",
+          "Install": {
+            "Text": "Yeni sürümü yüklemek için buraya tıklayın"
+          },
+          "Description": {
+            "Text": "Yeni sürüm kurulmaya hazır.\\nDaha fazla bilgi için \"Yenilikler\" i tıklayarak yayın notları sayfasını ziyaret edin.",
+            "Install": {
+              "Text": "En son güncellemeleri yüklemek için \"Yükle\" düğmesine tıklayın."
+            }
+          },
+          "Versions": {
+            "Current": {
+              "Text": "Şimdiki versiyonu:"
+            },
+            "New": {
+              "Text": "Yeni versiyon:"
+            }
+          },
+          "Ignore": {
+            "Text": "Bu güncellemeyi yoksay"
+          },
+          "ReleaseNotes": {
+            "Text": "Yeni ne var?"
+          },
+          "Postpone": {
+            "Text": "Şimdi değil"
+          },
+          "Run": {
+            "Text": "Yükle"
+          }
+        }
+      },
+      "Account": {
+        "Text": "Hesap",
+        "Email": {
+          "Text": "Eposta adresinizi girin"
+        },
+        "Change": {
+          "Text": "Değiştir"
+        }
+      },
+      "TermsOfUse": {
+        "Text": "Kullanım koşulları",
+        "Info": {
+          "Text": "\"Kullanım koşullarımızı\" çevrimiçi okuyun"
+        }
+      }
+    },
+    "Authorization": {
+      "Title": {
+        "Text": "Uygulama ayarlarına erişmek için lütfen şifre giriniz"
+      }
+    },
+    "Products": {
+      "Text": "Ürün Ayarları",
+      "TaxInclusivePrice": {
+        "Text": "Öğeleri Vergi Dahil görüntüle ve yazdır",
+        "Tooltip": {
+          "Text": "Seçilirse, ürünler satışlarda gösterilecek ve vergi dahil fiyatı makbuz üzerine yazdırılacaktır."
+        }
+      },
+      "DiscountApplyRule": {
+        "Text": "İndirim uygulama kuralı",
+        "BeforeTax": {
+          "Text": "Vergi Öncesi"
+        },
+        "AfterTax": {
+          "Text": "Vergi Sonrası"
+        }
+      }
+    },
+    "Database": {
+      "Text": "Veritabanı",
+      "AutoBackup": {
+        "Text": "Otomatik Yedekleme",
+        "Enabled": {
+          "Text": "Otomatik Yedeklemeyi Etkinleştir"
+        },
+        "BackupOnStart": {
+          "Text": "Uygulama başlangıcında veritabanını yedekle"
+        },
+        "BackupOnClose": {
+          "Text": "Uygulama kapanışında veritabanını yedekle"
+        },
+        "DirectoryPath": {
+          "Text": "Yedekleme yeri",
+          "Choose": {
+            "Text": "Yedekleme yerini seç"
+          },
+          "Info": {
+            "Text": "Yedekleme yerinizi seçin. Otomatik yedekleme dosyaları seçilen dizine kaydedilecektir."
+          }
+        },
+        "RemoveOldFiles": {
+          "Text": "Eski yedekleme dosyalarını kaldır",
+          "DaysToKeep": {
+            "Text": "Eski yedekleme dosyalarının saklanacağı gün sayısı"
+          }
+        }
+      }
+    },
+    "RestartRequired": {
+      "Text": "Bu değişikliklerin geçerli olması için Aronium'un yeniden başlatılması gerekir.",
+      "Title": {
+        "Text": "Yeniden başlatma gerekli"
+      }
+    }
+  },
+  "Document": {
+    "Create": {
+      "Error": {
+        "Text": "Belge oluşturulurken bir hata oluştu.\\nLütfen tekrar deneyin."
+      }
+    },
+    "Category": {
+      "Expenses": {
+        "Text": "Masraflar",
+        "Purchase": {
+          "Text": "Satınalma"
+        },
+        "StockReturn": {
+          "Text": "Stok iade"
+        }
+      },
+      "Inventory": {
+        "Text": "Envanter",
+        "InventoryCount": {
+          "Text": "Envater sayımı"
+        }
+      },
+      "Loss": {
+        "Text": "Kayıp",
+        "LossAndDamage": {
+          "Text": "Kayıp ve hasarlı"
+        }
+      },
+      "Sales": {
+        "Text": "Satışlar",
+        "Sales": {
+          "Text": "Satışlar"
+        },
+        "Refund": {
+          "Text": "İade"
+        },
+        "Proforma": {
+          "Text": "Proforma"
+        }
+      }
+    }
+  },
+  "Invoices": {
+    "Text": "Satış geçmişini görüntüle",
+    "Title": {
+      "Text": "Satış geçmişi"
+    },
+    "Documents": {
+      "Text": "Dökümanlar",
+      "Customer": {
+        "Text": "Müşteri",
+        "Change": {
+          "Text": "Müşteri değiştir",
+          "Success": {
+            "Text": "Müşteri başarıyla değiştirildi."
+          }
+        }
+      },
+      "Print": {
+        "Text": "Yazdır",
+        "CashReceipt": {
+          "Text": "Makbuz",
+          "PrinterNotFound": {
+            "Text": "Servis yazıcısı seçili değil veya devre dışı bırakılmış. Yazıcı ayarlarını kontrol edip tekrar deneyin."
+          },
+          "Address": {
+            "Text": "Adres"
+          },
+          "VatNumber": {
+            "Text": "Vergi numarası"
+          },
+          "Date": {
+            "Text": "Tarih"
+          },
+          "ReceiptNumber": {
+            "Text": "Makbuz numarası"
+          },
+          "Customer": {
+            "Text": "Müşteri"
+          },
+          "Total": {
+            "Text": "Toplam"
+          },
+          "Tax": {
+            "Text": "Vergi"
+          },
+          "TotalAmount": {
+            "Text": "TOPLAM"
+          },
+          "FiscalReceiptNumber": {
+            "Text": "Mali makbuz numarası"
+          },
+          "Signature": {
+            "Text": "İmza"
+          },
+          "Stamp": {
+            "Text": "P.S."
+          },
+          "Authorization": {
+            "Title": {
+              "Text": "Makbuz yazdırmak için lütfen şifre girin"
+            }
+          }
+        },
+        "Pdf": {
+          "Text": "PDF olarak kaydet",
+          "Success": {
+            "Text": "\"{0}\" Belge kaydedildi"
+          }
+        },
+        "Error": {
+          "Text": "Hata belge yazdırılıyor",
+          "NoService": {
+            "Text": "Yazdırma servisi kayıtlı değil"
+          }
+        },
+        "Refund": {
+          "Text": "İade"
+        },
+        "Preview": {
+          "Text": "Baskı önizleme"
+        }
+      },
+      "Delete": {
+        "Text": "Sil",
+        "Confirmation": {
+          "Title": {
+            "Text": "Belgeyi sil"
+          },
+          "Message": {
+            "Text": "\"{0}\" belgesini silmek istediğinizden emin misiniz?"
+          }
+        },
+        "Unauthorized": {
+          "Text": "Belgeleri silmek için izniniz yok."
+        },
+        "Error": {
+          "Text": "Belgeyi silmeye çalışırken hata oluştu. Lütfen tekrar deneyin"
+        }
+      },
+      "List": {
+        "Text": "Belgeler",
+        "Document": {
+          "Number": {
+            "Text": "Numara"
+          },
+          "DocumentType": {
+            "Text": "Belge türü"
+          },
+          "Warehouse": [
+            {
+              "Text": "Depo"
+            },
+            {
+              "Text": "Depo"
+            }
+          ],
+          "Customer": {
+            "Text": "Müşteri",
+            "Refresh": {
+              "Text": "Müşteri listesini yenile",
+              "Complete": {
+                "Text": "Müşteriler yeniden yüklendi"
+              }
+            }
+          },
+          "Vendor": {
+            "Text": "Satıcı",
+            "Refresh": {
+              "Text": "Tedarikçi listesini yenile",
+              "Complete": {
+                "Text": "Tedarikçiler yeniden yüklendi"
+              }
+            }
+          },
+          "ExternalDocument": {
+            "Text": "Dış belge"
+          },
+          "Date": {
+            "Text": "Tarih"
+          },
+          "DueDate": {
+            "Text": "Son ödeme tarihi"
+          },
+          "StockDate": {
+            "Text": "Stok tarihi"
+          },
+          "DateCreated": {
+            "Text": "Oluşturuldu"
+          },
+          "DateUpdated": {
+            "Text": "Güncellendi"
+          },
+          "CashRegister": {
+            "Text": "POS"
+          },
+          "OrderNumber": {
+            "Text": "Sipariş numarası"
+          },
+          "User": {
+            "Text": "Kullanıcı"
+          },
+          "PaymentType": {
+            "Text": "Ödeme şekli"
+          },
+          "Discount": {
+            "Text": "İndirim"
+          },
+          "Paid": {
+            "Text": "Ödenmiş"
+          },
+          "Unpaid": {
+            "Text": "Ödenmemiş"
+          },
+          "Total": {
+            "Text": "Toplam",
+            "Summary": {
+              "TotalBeforeTax": {
+                "Text": "Vergi Öncesi Toplam:"
+              },
+              "Tax": {
+                "Text": "Vergi:"
+              },
+              "Total": {
+                "Text": "Toplam:"
+              },
+              "Discount": {
+                "Text": "İndirim:",
+                "DiscountType": {
+                  "Text": "İndirim türü:",
+                  "Percent": {
+                    "Text": "Yüzdesel indirim"
+                  },
+                  "Fixed": {
+                    "Text": "Tutar İndirimi"
+                  }
+                },
+                "DiscountApplyRule": {
+                  "Text": "Vergi öncesi veya sonrası indirim uygulayın.\\nBu seçim, ürün ve alışveriş sepeti indirimleri için kullanılacaktır.",
+                  "BeforeTax": {
+                    "Text": "Vergi öncesi indirim uygula"
+                  },
+                  "AfterTax": {
+                    "Text": "Vergi sonrası indirim uygula"
+                  }
+                }
+              },
+              "Subtotal": {
+                "Text": "Aratoplam:"
+              }
+            }
+          },
+          "Payments": {
+            "Text": "Ödemeler",
+            "Add": {
+              "Text": "Ödeme ekle"
+            },
+            "PaymentType": {
+              "Text": "Ödeme şekli"
+            },
+            "Amount": {
+              "Text": "Tutar"
+            },
+            "Date": {
+              "Text": "Tarih"
+            },
+            "NewPayment": {
+              "Text": "Yeni ödeme"
+            },
+            "Delete": {
+              "Text": "Ödeme silme",
+              "Confirmation": {
+                "Text": "\"{0}\" ödemesini silmek istediğinizden emin misiniz?"
+              }
+            },
+            "Totals": {
+              "PaymentsTotal": {
+                "Text": "Toplam ödeme:"
+              },
+              "DocumentTotal": {
+                "Text": "Toplam belge:"
+              }
+            }
+          },
+          "Items": {
+            "Text": "Belge",
+            "Item": {
+              "ProductCode": {
+                "Text": "Kod"
+              },
+              "Product": {
+                "Text": "Ad"
+              },
+              "MeasurementUnit": {
+                "Text": "Ölçü Birimi"
+              },
+              "Quantity": {
+                "Text": "Adet"
+              },
+              "PriceNoTax": {
+                "Text": "Fiyat vergi öncesi"
+              },
+              "Price": {
+                "Text": "Fiyat"
+              },
+              "Tax": {
+                "Text": "Vergi",
+                "Add": {
+                  "Text": "Vegi ekle",
+                  "Tooltip": {
+                    "Text": "Bu ürüne vergi ekle"
+                  }
+                },
+                "Remove": {
+                  "Tooltip": {
+                    "Text": "Bu üründen vergi kaldır"
+                  }
+                }
+              },
+              "Discount": {
+                "Text": "İndirim",
+                "DiscountType": {
+                  "Text": "İndirim türü",
+                  "Percent": {
+                    "Text": "Yüzde"
+                  },
+                  "Fixed": {
+                    "Text": "Sabit"
+                  }
+                },
+                "DiscountApplyRule": {
+                  "BeforeTax": {
+                    "Text": "vergi öncesi"
+                  },
+                  "AfterTax": {
+                    "Text": "vergi sonrası"
+                  }
+                }
+              },
+              "TotalBeforeTax": {
+                "Text": "Vergi öncesi toplam"
+              },
+              "Total": {
+                "Text": "Toplam"
+              },
+              "TotalBeforeDiscount": {
+                "Text": "İndirimden önce toplam"
+              },
+              "Error": {
+                "Taxes": {
+                  "Text": "Yinelenen vergiler bulundu. Vergi adı (\"{0}\").\\nLütfen geçerli vergi seçin ve tekrar deneyin."
+                }
+              }
+            },
+            "Delete": {
+              "Text": "Belge öğesini sil",
+              "Confirmation": {
+                "Text": "\"{0}\" öğesini silmek istediğinizden emin misiniz?"
+              }
+            }
+          },
+          "Print": {
+            "UnsavedChanges": {
+              "Text": "Doküman kaydedilmemiş değişiklikler içeriyor. Yazdırmadan önce değişiklikleri kaydetmek ister misiniz?",
+              "Title": {
+                "Text": "Kaydedilmemiş değişiklikler"
+              }
+            }
+          }
+        }
+      },
+      "Count": {
+        "Text": "Doküman sayısı:"
+      },
+      "Total": {
+        "Text": "Toplam tutar:"
+      },
+      "AllUsers": {
+        "Text": "Bütün kullanıcıları göster"
+      },
+      "CashRegister": {
+        "All": {
+          "Text": "Tüm yazar kasalar"
+        },
+        "Select": {
+          "Text": "Seçili yazar kasa"
+        }
+      },
+      "BulkActions": {
+        "Text": "Toplu işlemler",
+        "Delete": {
+          "Text": "Seçili belgeleri sil",
+          "Confirmation": {
+            "Title": {
+              "Text": "Seçili belgeleri sil"
+            },
+            "Message": {
+              "Text": "Seçili belgeleri silmek istediğinizden emin misiniz?"
+            }
+          },
+          "Message": {
+            "Text": "Belgeler siliniyor ... Lütfen bekleyin ..."
+          }
+        },
+        "UpdatePaidStatus": {
+          "Message": {
+            "Text": "Ödeme durumu güncelleniyor ... Lütfen bekleyin ..."
+          }
+        }
+      }
+    },
+    "Reports": {
+      "Text": "Raporlar",
+      "Date": {
+        "Text": "Rapor tarihi"
+      },
+      "Print": {
+        "Text": "Yazdır"
+      },
+      "Pdf": {
+        "Text": "PDF olarak kaydet",
+        "Success": {
+          "Text": "Rapor \"{0}\" başarıyla kaydedildi."
+        }
+      },
+      "List": {
+        "Products": {
+          "Text": "Ürünler özeti"
+        },
+        "Customers": {
+          "Text": "Müşteri özeti"
+        },
+        "PaymentTypes": {
+          "Text": "Ödemeler türü özet"
+        },
+        "VATRates": {
+          "Text": "Vergi oranları özet"
+        }
+      }
+    },
+    "Authorization": {
+      "Title": {
+        "Text": "Satış geçmişine erişmek için lütfen şifre giriniz"
+      }
+    }
+  },
+  "CashRegister": {
+    "Select": {
+      "Text": "Yazar kasa seç"
+    }
+  },
+  "Feedback": {
+    "Text": "Geri bildirim",
+    "Title": {
+      "Text": "Bize yardımcı olun Aronium"
+    },
+    "Description": {
+      "Text": "Bir öneri sunmak için zaman ayırdığınız için teşekkür ederiz.\\nGörüşleriniz Aronium uygulamasını daha iyi hale getirmemize yardımcı oluyor.",
+      "Contact": {
+        "Text": "Her zaman bizimle temas kurmaktan çekinmeyin"
+      }
+    },
+    "Message": {
+      "Name": {
+        "Text": "Adınız"
+      },
+      "Email": {
+        "Text": "E-posta adresi"
+      },
+      "Subject": {
+        "Text": "Konu"
+      },
+      "Message": {
+        "Text": "Mesaj"
+      },
+      "Rating": {
+        "Text": "Genel değerlendirme"
+      }
+    },
+    "Send": {
+      "Text": "Geri bildirim gönder"
+    },
+    "Confirmation": {
+      "Title": {
+        "Text": "Teşekkürler!"
+      },
+      "Message": {
+        "Text": "Görüşleriniz gönderildi. Aronium'u daha iyi yapmak için kullanacağız."
+      }
+    }
+  },
+  "Guide": {
+    "Menu": {
+      "Title": {
+        "Text": "Ana menüyü aç"
+      },
+      "Content": {
+        "Text": "Ana menüyü açmak için buraya tıklayın ve yönetim bölümüne erişin"
+      }
+    },
+    "Layout": {
+      "SearchBox": {
+        "Text": "Ürünleri ad, barkod veya kod ile arayın.",
+        "Title": {
+          "Text": "Ürün arama"
+        }
+      }
+    },
+    "Dismiss": {
+      "Title": {
+        "Text": "Rehberli turu reddet"
+      },
+      "Confirmation": {
+        "Text": "Bu ipuçlarını saklamak istediğinden emin misin?"
+      }
+    }
+  },
+  "Layout": {
+    "Visual": {
+      "Item": {
+        "Edit": {
+          "Text": "Görsel görünümü düzenle",
+          "Color": {
+            "Text": "Renk"
+          },
+          "Image": {
+            "Text": "Resim",
+            "Select": {
+              "Text": "Resim seç"
+            },
+            "Clear": {
+              "Text": "Resmi temizle"
+            }
+          }
+        }
+      }
+    }
+  },
+  "OpenOrders": {
+    "Text": "Açık satışları göster",
+    "Total": {
+      "Text": "TOPLAM TUTAR"
+    },
+    "NoOrders": {
+      "Text": "Açık satış yok"
+    },
+    "Authorization": {
+      "Title": {
+        "Text": "Lütfen şifre giriniz Açık satışlara erişmek için"
+      }
+    }
+  },
+  "StartingCash": {
+    "Text": "Nakit Giriş / Çıkış",
+    "Type": {
+      "CashIn": {
+        "Text": "Para ekle"
+      },
+      "CashOut": {
+        "Text": "Para çekiniz"
+      }
+    },
+    "Amount": {
+      "Text": "Tutar",
+      "Reason": {
+        "Text": "Açıklama",
+        "Tooltip": {
+          "Text": "Para eklenmesi veya kaldırılması için sebep giriniz..."
+        }
+      }
+    },
+    "Hide": {
+      "Text": "Bunu bir daha gösterme"
+    },
+    "Entries": {
+      "Text": "Nakit girişler",
+      "NoDescription": {
+        "Text": "<Açıklama yok>"
+      },
+      "NoEntries": {
+        "Text": "Kayıt yok"
+      }
+    },
+    "Saved": {
+      "Text": "Başlangıç Nakdi başarıyla kaydedildi"
+    }
+  },
+  "Account": {
+    "FirstName": {
+      "Text": "Adı"
+    },
+    "LastName": {
+      "Text": "Soyadı"
+    },
+    "Email": {
+      "Text": "Eposta"
+    },
+    "Password": {
+      "Text": "Parola",
+      "Confirmation": {
+        "Text": "Parolayı doğrula",
+        "Error": {
+          "Text": "Parola ve parola doğrulama eşleşmelidir"
+        }
+      }
+    },
+    "License": {
+      "Info": {
+        "Text": "Lisans bilgisi",
+        "Data": {
+          "Text": "Lisans verisi",
+          "Id": {
+            "Text": "Lisans ID"
+          },
+          "StoreId": {
+            "Text": "Mağaza ID"
+          },
+          "LicensedTo": {
+            "Text": "Lisanslı"
+          },
+          "Email": {
+            "Text": "Eposta"
+          }
+        },
+        "Products": {
+          "Text": "Ürünler",
+          "Id": {
+            "Text": "Id"
+          },
+          "Name": {
+            "Text": "Adı"
+          },
+          "ValidUntil": {
+            "Text": "Tarihine kadar geçerli"
+          },
+          "LicenseType": {
+            "Text": "Lisans tipi"
+          }
+        },
+        "NoLicense": {
+          "Text": "Bu sistemle ilişkili lisans yok",
+          "Info": {
+            "Text": "Premium özellikler hakkında daha fazla bilgi için www.aronium.com adresini ziyaret edin."
+          }
+        },
+        "Refresh": {
+          "Text": "Lisansı Güncelle",
+          "Success": {
+            "Text": "Lisans başarıyla indirildi"
+          }
+        },
+        "Copy": {
+          "Text": "Lisansı dosyaya kopyala"
+        },
+        "Load": {
+          "Text": "Lisansı dosyadan yükle"
+        }
+      },
+      "Login": {
+        "Text": "Hesabınıza giriş yapın",
+        "NotRegistered": {
+          "Text": "Kayıtlı değilmisiniz?",
+          "SignUp": {
+            "Text": "Şimdi kayıt ol!"
+          }
+        },
+        "SignIn": {
+          "Text": "Oturum aç"
+        }
+      },
+      "Register": {
+        "Text": "Yeni hesap oluştur",
+        "AlreadyRegistered": {
+          "Text": "Zaten kayıtlımısınız?",
+          "SignIn": {
+            "Text": "Şimdi giriş yap!"
+          }
+        },
+        "CreateAccount": {
+          "Text": "Hesap oluştur"
+        },
+        "Store": {
+          "Text": "Mağaza oluştur",
+          "Details": {
+            "Text": "Mağazanızı kurmak için bir dakika bekleyelim.\\nŞirket verileriniz güncellenecek ve lisans otomatik olarak üretilecektir.",
+            "CompanyName": {
+              "Text": "Şirket adı"
+            },
+            "Address": {
+              "Text": "Adres"
+            },
+            "ZipCode": {
+              "Text": "Posta kodu"
+            },
+            "TaxNumber": {
+              "Text": "Vergi No"
+            },
+            "City": {
+              "Text": "Şehir"
+            },
+            "Country": {
+              "Text": "Ülke"
+            }
+          },
+          "Create": {
+            "Text": "Mağaza oluştur ve lisans üret"
+          }
+        },
+        "Success": {
+          "Text": "Hesap başarıyla oluşturuldu"
+        }
+      },
+      "Load": {
+        "Text": "Lisansı dosyadan yükle"
+      },
+      "InvalidLicense": {
+        "Text": "Geçersiz yada eksik lisans",
+        "Info": {
+          "Text": "Bir veya daha fazla üründe geçerli bir lisans eksik.",
+          "SignInOrLoadFromFile": {
+            "Text": "Lütfen lisansınızı yenilemek veya mevcut lisansı dosyadan yüklemek için hesabınıza giriş yapın."
+          }
+        },
+        "ProductName": {
+          "Text": "Ürün adı:"
+        }
+      }
+    },
+    "Error": {
+      "ExistingAccount": {
+        "Text": "Kullanıcı için belirtilen eposta adresi zaten mevcut."
+      },
+      "Unauthorized": {
+        "Text": "Yanlış kullanıcı adı yada parola. Lütfen bilgileri kontrol edip tekrar deneyin."
+      }
+    }
+  },
+  "Validations": {
+    "Info": {
+      "Text": "Daha fazla ayrıntıya ve bu sorunun nasıl ele alınacağına bakın",
+      "Community": {
+        "Text": "Topluluğumuz"
+      },
+      "Or": {
+        "Text": "yada"
+      },
+      "ContactSupport": {
+        "Text": "destek ile iletişim kurun"
+      }
+    },
+    "Cancel": {
+      "Text": "Uygulamayı kapat"
+    },
+    "Confirm": {
+      "Text": "Anladım, devam et ve uygulamayı başlat"
+    },
+    "Print": {
+      "Warning": {
+        "CustomTemplates": {
+          "Text": "Özel makbuz veya fatura şablonları kullandığınızı tespit ettik. Bu sürümdeki veritabanı yapısı değişiklikleri nedeniyle, bu şablonlar artık çalışmayabilir.\\nVarsayılan şablonları kullanabileceksiniz, böylece günlük işlemleriniz engellenmeyecek.\\n\\nHala eski şablonları kullanmak istiyorsanız, uygulamanın başlatılmasını şimdi durdurmalı ve eski sürüme geri almalısınız.",
+          "Title": {
+            "Text": "UYARI! ÖZEL BASKI ŞABLONLARI ÇALIŞMAYABİLİR!"
+          }
+        }
+      }
+    },
+    "Refund": {
+      "Invalid": {
+        "Text": "İade geçerli değildir"
+      }
+    }
+  },
+  "Print": {
+    "Error": {
+      "Text": "Yazdırma hatası oluştu",
+      "CustomTemplate": {
+        "Text": "Özel şablonda hata tespit edildi!\\nÖzel baskı şablonunuzla ilgili olası sorunları çözmek için lütfen Aronium desteğine başvurun.",
+        "Continue": {
+          "Text": "Varsayılan şablonu kullanarak yazdırmaya devam etmek istiyor musunuz?"
+        }
+      }
+    }
+  }
+}
