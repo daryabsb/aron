@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="pt" name="Português">
+  <Reports Text="Relatórios">
+    <Filter Text="Filtro">
+      <User Text="Utilizador">
+        <All Text="Todos os utilizadores" />
+      </User>
+      <Customer Text="Clientes &amp; fornecedores">
+        <All Text="Todos os clientes &amp; fornecedores" />
+      </Customer>
+      <Product Text="Produto">
+        <All Text="Todos os produtos" />
+      </Product>
+      <Period>
+        <Tip Text="Clique para alterar o período do relatório" />
+      </Period>
+      <NotAvailable Text="Não aplicável para relatórios seleccionados" />
+    </Filter>
+    <Report>
+      <Select Text="Seleccionar relatório">
+        <Title Text="Seleccionar relatório para visualizar ou imprimir" />
+      </Select>
+      <Show Text="Mostrar relatório" />
+      <NotFound Text="Template do relatório não encontrado." />
+    </Report>
+    <Sales Text="Vendas">
+      <Products Text="Produtos" />
+      <ProductGroups Text="Grupos de produtos" />
+      <PaymentTypes Text="Tipos de pagamento" />
+      <PaymentTypesUsers Text="Tipos de pagamento por utilizadores" />
+      <PaymentTypesCustomers Text="Tipos de pagamento por clientes" />
+      <TaxRates Text="Taxas de imposto" />
+      <Customers Text="Clientes" />
+      <Users Text="Utilizadores" />
+      <Refunds Text="Reembolsos" />
+      <InvoiceList Text="Lista de facturas" />
+      <Profit Text="Lucro &amp; margem" />
+      <Daily Text="Vendas diárias" />
+      <Unpaid Text="Vendas não pagas" />
+      <StartingCash Text="Entradas de dinheiro iniciais" />
+    </Sales>
+    <Purchase Text="Compras">
+      <Suppliers Text="Fornecedores" />
+      <Products Text="Produtos" />
+      <Unpaid Text="Compras não pagas" />
+    </Purchase>
+  </Reports>
+</Language>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Users Text="Kasutajad &amp; Turvalisus">
+    <View Text="Kasutajad">
+      <Disabled Text="Näita mitteaktiivseid kasutajaid" />
+    </View>
+    <New Text="Lisa kasutaja" />
+    <ResetPassword Text="Lähtesta parool">
+      <Success Text="Parooli muutmine õnnestus" />
+    </ResetPassword>
+    <LearnMore Text="Loe täiendavalt kasutajate halduse kohta" />
+    <User>
+      <FirstName Text="Eesnimi" />
+      <LastName Text="Perenimi" />
+      <Email Text="E-post" />
+      <Password Text="Parool" />
+      <PasswordConfirmation Text="Kinnita parooli" />
+      <AccessLevel Text="Ligipääsu tase" />
+      <IsEnabled Text="Aktiivne" />
+      <Error>
+        <PasswordConfirmationMatch Text="Parooli ja parooli kinnitamise väljade sisu peavad kattuma" />
+        <InvalidPassword Text="Selline parool on juba kasutusel.\nPalun sisesta unikaalne parool ja proovi uuesti." />
+        <Disable>
+          <OpenOrders Text="Kasutaja keelamine takistab tal avatud müüki sulgemast.&#xA;Enne kasutaja keelamist, sulgege kõik selle kasutaja käsutuses olevad avatud tellimused.">
+            <Title Text="Avatud müügiga kasutajat ei saa keelata." />
+          </OpenOrders>
+        </Disable>
+        <DuplicateEmail Text="See e-mail on juba kasutuses.&#xA;Palun kasutage muud e-posti aadressi." />
+      </Error>
+      <Saved Text="Kasutaja üksikasjad on edukalt muudetud." />
+    </User>
+    <Delete Text="Kustuta kasutaja">
+      <Confirmation Text="Kas olete kindel, et soovite kustutada kasutaja &quot;{0}&quot;?" />
+      <Error>
+        <CurrentUser Text="Te ei saa kustutada enda kontot!" />
+        <DataViolation Text="Kasutajat ei saa kustutada.&#xA;Kasutajaga on seotud dokumente või muid üksusi." />
+      </Error>
+    </Delete>
+    <Security Text="Turvalisus">
+      <Title Text="Seadke eelmääratud toimingute juurdepääsutase" />
+      <Description Text="Nõutavate kasutajalubade määramiseks valige igale toimingule juurdepääsutase." />
+      <LearnMore Text="Lisateave juurdepääsutasemete ja turvalisuse kohta" />
+      <MaximumAccessLevelWarning Text="Juurdepääsutase seatud kõrgemale mis tahes kasutajale määratud suurimast väärtusest." />
+      <Save>
+        <Success Text="Turvatasemed salvestati edukalt" />
+        <AccessLevelViolation Text="Juurdepääsutaseme rikkumine">
+          <Info Text="Juurdepääsutaseme võiks seade teistest kasutajatest kõrgemaks. Vastasel juhul ei pääse te piiratud jaotisele juurde.&#xA;Parandage vead ja proovige uuesti." />
+        </AccessLevelViolation>
+      </Save>
+      <Group>
+        <General Text="Üldine" />
+        <Sales Text="Müük" />
+      </Group>
+    </Security>
+  </Users>
+  <Stock Text="Varud" />
+</Language>

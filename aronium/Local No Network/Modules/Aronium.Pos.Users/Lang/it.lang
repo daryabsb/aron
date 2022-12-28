@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="it" name="Italian">
+  <Users Text="Utenti &amp; Sicurezza">
+    <View Text="Utenti">
+      <Disabled Text="Mostra gli utenti non attivi" />
+    </View>
+    <New Text="Aggiungi utente" />
+    <ResetPassword Text="Reimposta la password">
+      <Success Text="Password cambiata correttamente" />
+    </ResetPassword>
+    <LearnMore Text="Ulteriori informazioni sulla gestione degli utenti" />
+    <User>
+      <FirstName Text="Nome" />
+      <LastName Text="Cognome" />
+      <Email Text="Email" />
+      <Password Text="Password" />
+      <PasswordConfirmation Text="Conferma password" />
+      <AccessLevel Text="Livello di accesso" />
+      <IsEnabled Text="Attivo" />
+      <Error>
+        <PasswordConfirmationMatch Text="La password e la conferma della password devono coincidere" />
+        <InvalidPassword Text="Un utente con questa password esiste già.\nInserisci una password unica e riprova." />
+        <Disable>
+          <OpenOrders Text="La disabilitazione dell'utente gli impedirà di chiudere le vendite aperte.\nSi prega di chiudere tutti gli ordini aperti di proprietà di questo utente prima di disabilitarlo.">
+            <Title Text="Impossibile disabilitare un utente con vendite aperte" />
+          </OpenOrders>
+        </Disable>
+        <DuplicateEmail Text="Questo indirizzo email è già utilizzato.\nUtilizzare un indirizzo email diverso." />
+      </Error>
+      <Saved Text="I dettagli dell'utente sono stati cambiati correttamente." />
+    </User>
+    <Delete Text="Cancella utente">
+      <Confirmation Text="Sei sicuro di voler cancellare &quot;{0}&quot;?" />
+      <Error>
+        <CurrentUser Text="Non puoi cancellare te stesso!" />
+        <DataViolation Text="Impossibile eliminare l'utente.\nL'utente contiene documenti o altri elementi correlati." />
+      </Error>
+    </Delete>
+    <Security Text="Sicurezza">
+      <Title Text="Imposta il livello di sicurezza per le operazioni preedefinite" />
+      <Description Text="Seleziona il livello di accesso per ogni azione riguardo le autorizzazioni utente." />
+      <LearnMore Text="Ulteriori informazioni sui livelli di accesso e sicurezza" />
+      <MaximumAccessLevelWarning Text="Livello di accesso impostato sopra il valore più alto assegnato a qualsiasi utente." />
+      <Save>
+        <Success Text="Livelli di sicurezza salvati correttamente" />
+        <AccessLevelViolation Text="Violazione dei livelli di accesso">
+          <Info Text="I livelli di accesso possono essere impostati su un valore massimo assegnato a qualsiasi utente. In caso contrario, potresti non essere in grado di accedere alla sezione riservata.\nSistema gli articoli in errore e riprova." />
+        </AccessLevelViolation>
+      </Save>
+      <Group>
+        <General Text="Generale" />
+        <Sales Text="Vendite" />
+      </Group>
+    </Security>
+  </Users>
+</Language>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <CustomerDisplay>
+    <Total Text="Celkem:" />
+    <Change Text="Změna:" />
+    <Paid Text="Zaplaceno:" />
+    <WelcomeMessage Text="VÍTEJTE!" />
+    <Settings Text="Zákaznický displej">
+      <Enabled Text="Povolit" />
+      <Port Text="COM port">
+        <Settings>
+          <BaudRate Text="Bits per second" />
+          <DataBits Text="Data bits" />
+          <StopBits Text="Stop bits" />
+          <Parity Text="Parity" />
+          <FlowControl Text="Flow control" />
+          <Show Text="Ukázat nastavení portů" />
+          <Hide Text="Schovat nastavení portů" />
+          <ResetToDefaults Text="Obnovit původní nastavení" />
+        </Settings>
+      </Port>
+      <CharactersPerLine Text="Počet charakterů" />
+      <WelcomeMessage Text="Uvítací zpráva">
+        <TopLine Text="Vrchní linka" />
+        <BottomLine Text="Spodní linka" />
+      </WelcomeMessage>
+      <Test Text="Otestovat displej" />
+    </Settings>
+    <Error>
+      <InvalidPortSettings Text="Chyba při inicializaci zákaznického displeje.&#xA;Zkontrolujte prosím nastavení portu." />
+    </Error>
+  </CustomerDisplay>
+</Language>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="tr" name="Türkçe">
+  <Loyalty Text="Sadakat">
+    <Promotions Text="Promosyonlar ve Eylemler">
+      <New Text="Promosyon ekle">
+        <Title Text="Yeni promosyon"></Title>
+      </New>
+      <Delete Text="Kampanyayı sil">
+        <Confirmation Text="&quot;{0}&quot; promosyonunu silmek istediğinizden emin misiniz?"></Confirmation>
+        <Error Text="Promosyonu silmeye çalışırken hata oluştu."></Error>
+      </Delete>
+      <View>
+        <Enabled Text="Etkin"></Enabled>
+        <Name Text="Ad"></Name>
+        <DaysOfWeek Text="Haftanın günleri"></DaysOfWeek>
+        <StartDate Text="Başlangıç tarihi"></StartDate>
+        <StartTime Text="Başlangıç zamanı"></StartTime>
+        <EndDate Text="Bitiş tarihi"></EndDate>
+        <EndTime Text="Bitiş zamanı"></EndTime>
+      </View>
+      <Promotion>
+        <Empty Text="Promosyona eklenen öğe yok."></Empty>
+        <Name Text="Promosyon adı"></Name>
+        <Active Text="Aktif"></Active>
+        <DaysOfWeek>
+          <All Text="Tüm günler">
+            <ShortName Text="Hepsi"></ShortName>
+          </All>
+          <Monday Text="Pazartesi">
+            <ShortName Text="Pztsi"></ShortName>
+          </Monday>
+          <Tuesday Text="Salı">
+            <ShortName Text="Sal"></ShortName>
+          </Tuesday>
+          <Wednesday Text="Çarşamba">
+            <ShortName Text="Çarş"></ShortName>
+          </Wednesday>
+          <Thursday Text="Perşembe">
+            <ShortName Text="Perş"></ShortName>
+          </Thursday>
+          <Friday Text="Cuma">
+            <ShortName Text="Cum"></ShortName>
+          </Friday>
+          <Saturday Text="Cumartesi">
+            <ShortName Text="Cts"></ShortName>
+          </Saturday>
+          <Sunday Text="Pazar">
+            <ShortName Text="Paz"></ShortName>
+          </Sunday>
+        </DaysOfWeek>
+        <Duration>
+          <Start Text="Başlangıç"></Start>
+          <End Text="Bitiş"></End>
+        </Duration>
+        <Item>
+          <PriceType>
+            <Discount Text="İndirim"></Discount>
+            <FixedPrice Text="Sabit fiyat"></FixedPrice>
+          </PriceType>
+          <Condition Text="Şartlı">
+            <Title Text="Miktar koşulu"></Title>
+            <ApplyToAll Text="Tümüne uygula"></ApplyToAll>
+            <Quantity>
+              <Description Text="Bu promosyon için gerekli miktarı girin"></Description>
+            </Quantity>
+            <LimitToNext Text="Bir sonraki uygulamaya geçin">
+              <Description Text="Bu promosyona gerekli miktarın bir kez uygulanması için gerekli miktar limitini girin"></Description>
+            </LimitToNext>
+            <CopyToAll Text="Tüm öğeleri kopyalayın">
+              <Completed Text="Tüm promosyon kalemlerine kopyalanan koşul değerleri"></Completed>
+            </CopyToAll>
+          </Condition>
+          <InvalidValue Text="Geçersiz değer"></InvalidValue>
+          <Errors>
+            <Existing Text="Bu tanıtımda &quot;{0}&quot; öğesi zaten var."></Existing>
+          </Errors>
+        </Item>
+        <Saved Text="Promosyon başarıyla kaydedildi."></Saved>
+        <InvalidItems Text="Tanıtım kaydedilemiyor. Bazı öğeler hata içeriyor. Lütfen verilerinizi kontrol edip tekrar deneyin."></InvalidItems>
+      </Promotion>
+      <NoPromotions Text="Tanıtım yok">
+        <Add Text="Yeni promosyon oluştur"></Add>
+      </NoPromotions>
+      <LearnMore Text="Promosyonlar ve indirimli saatler hakkında daha fazla bilgi edinin"></LearnMore>
+      <Edit>
+        <Title Text="Promosyon &quot;{0}&quot; düzenle" />
+      </Edit>
+    </Promotions>
+  </Loyalty>
+</Language>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="is" name="Icelandic">
+  <Reports Text="Skýrslur">
+    <Filter Text="Sía">
+      <User Text="Notendur">
+        <All Text="Allir Notendur" />
+      </User>
+      <Customer Text="Viðskiptavinir &amp; Birgjar">
+        <All Text="Allir Viðskiptavinir &amp; Birgjar" />
+      </Customer>
+      <Product Text="Vörur">
+        <All Text="Allar Vörur" />
+      </Product>
+      <Period>
+        <Tip Text="Smelltu til að Breyta Tímabili á Skýrslu" />
+      </Period>
+      <NotAvailable Text="Ekki viðeigandi fyrir valda Skýrslu" />
+      <CashRegister Text="Kassi">
+        <All Text="Allir" />
+      </CashRegister>
+    </Filter>
+    <Report>
+      <Select Text="Veldu Skýrslu">
+        <Title Text="Veldu Skýrslu til að SKoða eða Prenta" />
+      </Select>
+      <Show Text="Sýna Skýrslu" />
+      <NotFound Text="Tilkynna að Sniðmát vantar." />
+    </Report>
+    <Sales Text="Sölur">
+      <Products Text="Vörur" />
+      <ProductGroups Text="Vöru Flokkar" />
+      <PaymentTypes Text="Greiðslu Tegundir" />
+      <PaymentTypesUsers Text="Greiðslu Tegundi Eftir Notendum" />
+      <PaymentTypesCustomers Text="Greiðslu Tegundir Eftir Viðskiptavinum" />
+      <TaxRates Text="VSK" />
+      <Customers Text="Viðskiptavinir" />
+      <Users Text="Notendur" />
+      <Refunds Text="Endurgreiðslur" />
+      <InvoiceList Text="Reiknings Listi" />
+      <Profit Text="Hagnaður &amp; Framlag" />
+      <Daily Text="Daglegar Sölur" />
+      <Unpaid Text="Ógreiddar Sölur" />
+      <StartingCash Text="Byrja Greiðslu Færslur" />
+      <Discounts Text="Afsláttur Veittur" />
+      <ItemDiscounts Text="Vöru Afsláttur" />
+      <StockMovement Text="Birgja Hreifing" />
+    </Sales>
+    <Purchase Text="Verslað">
+      <Suppliers Text="Birgjar" />
+      <Products Text="Vörur" />
+      <Unpaid Text="Ógreiddar Sölur" />
+      <Discounts Text="Keyptur Afsláttur" />
+      <ItemDiscounts Text="Keyptur Vöru Afsláttur" />
+      <PurchaseInvoiceList Text="Keyptur Innkaupa Listi" />
+    </Purchase>
+    <LossAndDamage Text="Tapað og Skemmt">
+      <Products Text="Vörur" />
+    </LossAndDamage>
+  </Reports>
+</Language>

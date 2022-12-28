@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="it" name="Italian">
+  <Loyalty Text="Fedeltà">
+    <Promotions Text="Promozioni &amp; Azioni">
+      <New Text="Aggiungi promozione">
+        <Title Text="Nuova promozione" />
+      </New>
+      <Delete Text="Cancella promozione">
+        <Confirmation Text="Sei sicuro di voler cancellare la promozione &quot;{0}&quot;?" />
+        <Error Text="Errore durante la cancellazione della promozione." />
+      </Delete>
+      <View>
+        <Enabled Text="Abilitato" />
+        <Name Text="Nome" />
+        <DaysOfWeek Text="Giorni della settimana" />
+        <StartDate Text="Data di inizio" />
+        <StartTime Text="Ora di inizio" />
+        <EndDate Text="Data di fine" />
+        <EndTime Text="ora di fine" />
+      </View>
+      <Promotion>
+        <Empty Text="Nessun articolo aggiunto alla promozione." />
+        <Name Text="Nome promozione" />
+        <Active Text="Attivo" />
+        <DaysOfWeek>
+          <All Text="Tutti i giorni">
+            <ShortName Text="Tutto" />
+          </All>
+          <Monday Text="Lunedì">
+            <ShortName Text="Lun" />
+          </Monday>
+          <Tuesday Text="Martedì">
+            <ShortName Text="Mar" />
+          </Tuesday>
+          <Wednesday Text="Mercoledì">
+            <ShortName Text="Mer" />
+          </Wednesday>
+          <Thursday Text="Giovedì">
+            <ShortName Text="Gio" />
+          </Thursday>
+          <Friday Text="Venerdì">
+            <ShortName Text="Ven" />
+          </Friday>
+          <Saturday Text="Sabato">
+            <ShortName Text="Sab" />
+          </Saturday>
+          <Sunday Text="Domenica">
+            <ShortName Text="Dom" />
+          </Sunday>
+        </DaysOfWeek>
+        <Duration>
+          <Start Text="Inizio" />
+          <End Text="Fine" />
+        </Duration>
+        <Item>
+          <PriceType>
+            <Discount Text="Sconto" />
+            <FixedPrice Text="Prezzo fisso" />
+          </PriceType>
+          <Condition Text="Condizionale">
+            <Title Text="Condizione di quantità" />
+            <ApplyToAll Text="Applica a tutti" />
+            <Quantity>
+              <Description Text="Inserisci la quantità richiesta per questa promozione" />
+            </Quantity>
+            <LimitToNext Text="Applica a successivo">
+              <Description Text="Inserisci il limite di quantità da applicare quando viene raggiunta la quantità richiesta per questa promozione" />
+            </LimitToNext>
+            <CopyToAll Text="Copia le condizioni a tutti gli articoli">
+              <Completed Text="Valori di condizione copiati su tutti gli articoli della promozione" />
+            </CopyToAll>
+          </Condition>
+          <InvalidValue Text="Valore non valido" />
+          <Errors>
+            <Existing Text="Articolo &quot;{0}&quot; già presente in questa promozione." />
+          </Errors>
+        </Item>
+        <Saved Text="Promozione salvata correttamente." />
+        <InvalidItems Text="Impossibile salvare la promozione. Alcuni articoli contengono errori. Controlla i dati e riprova." />
+      </Promotion>
+      <NoPromotions Text="Nessuna promozione">
+        <Add Text="Crea una nuova promozione" />
+      </NoPromotions>
+      <LearnMore Text="Informazioni aggiuntive su promozioni e happy hour" />
+    </Promotions>
+  </Loyalty>
+</Language>

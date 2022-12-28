@@ -1,0 +1,117 @@
+<Workflow>
+  <Name>Aronium.Pos.Onboarding</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>False</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="b2d18e4d-cbc7-4ade-b852-33f26fce6c76" name="Start">
+      <Transitions>
+        <DefaultTransition id="e713c00f-e7ce-4106-8432-77fefdd02f5b" name="Continue">
+          <Target>ebe1f5a8-b88f-4add-83ee-49ffe1ad1ab1</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="0d65d983-bc2e-4fe3-ae83-7748084a648b" name="Welcome">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="641ab0ac-9328-469b-85e1-652937529b3a" name="Registration">
+          <Target>6181ecfe-dfa7-4332-a17c-e728d8337f22</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Bootstrap/Onboarding/Welcome.xaml</Variable>
+        <Variable name="NoCount">TRUE</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="6181ecfe-dfa7-4332-a17c-e728d8337f22" name="Registration">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="adc8e283-4893-4f5c-99a4-c7a0c70bdcc4" name="Continue">
+          <Target>9c756ec7-233d-4aa1-b162-0746a9483dc5</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Bootstrap/Onboarding/Registration.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="85b5328a-0a71-4d4f-a798-3a4da4d3d7e2" name="Finish">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="0779fb74-b872-483a-9fbf-6381f5127558" name="End">
+          <Target>ebfe7e83-7b11-47f4-9e44-2e013f5d4042</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Bootstrap/Onboarding/OnboardingComplete.xaml</Variable>
+        <Variable name="NoCount">TRUE</Variable>
+      </Variables>
+    </ExternalTask>
+    <EndTask id="ebfe7e83-7b11-47f4-9e44-2e013f5d4042" name="End" />
+    <ExternalTask id="506294c8-2f0d-43da-bf8a-c1d822d3a27b" name="Choose layout">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="d904452a-3da0-402a-8b48-0b09550961f1" name="Finish">
+          <Target>85b5328a-0a71-4d4f-a798-3a4da4d3d7e2</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Bootstrap/Onboarding/ChooseLayout.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="9ef715cf-b95a-4126-a6df-2a6a3d6c1bfd" name="User profile">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="f6f1628f-3103-4660-9a21-c4f42eded58f" name="Continue">
+          <Target>6230d540-89ba-4370-8913-48d863140ac1</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Bootstrap/Onboarding/UserProfile.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <RouterTask id="9c756ec7-233d-4aa1-b162-0746a9483dc5" name="First run">
+      <IsExclusive>False</IsExclusive>
+      <Transitions>
+        <SuccessTransition id="1f2fdb88-9870-4af8-9eee-4c7289006a88" name="Continue">
+          <Target>9ef715cf-b95a-4126-a6df-2a6a3d6c1bfd</Target>
+        </SuccessTransition>
+        <ErrorTransition id="b8f4c4f4-de70-490b-b4f7-2e7d26bea240" name="Setup">
+          <Target>6230d540-89ba-4370-8913-48d863140ac1</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="FirstRun">TRUE</Variable>
+      </Variables>
+    </RouterTask>
+    <ExternalTask id="ebe1f5a8-b88f-4add-83ee-49ffe1ad1ab1" name="Check in">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.CheckInTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="150ae3a7-eed0-4340-a9d1-1972de14b375" name="Continue">
+          <Target>0d65d983-bc2e-4fe3-ae83-7748084a648b</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Bootstrap/Onboarding/Welcome.xaml</Variable>
+        <Variable name="NoCount">TRUE</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="6230d540-89ba-4370-8913-48d863140ac1" name="Price display selection">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="a43b0e29-73aa-4747-8c41-df0ccbd4cc33" name="Continue">
+          <Target>506294c8-2f0d-43da-bf8a-c1d822d3a27b</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Bootstrap/Onboarding/ChoosePriceDisplay.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+  </Tasks>
+</Workflow>

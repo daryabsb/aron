@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="it" name="Italian">
+  <Reports Text="Riepiloghi">
+    <Filter Text="Filtro">
+      <User Text="Utente">
+        <All Text="Tutti gli utenti" />
+      </User>
+      <Customer Text="Clienti &amp; fornitori">
+        <All Text="Tutti i clienti &amp; i fornitori" />
+      </Customer>
+      <Product Text="Prodotto">
+        <All Text="Tutti i prodotti" />
+      </Product>
+      <Period>
+        <Tip Text="Premi per cambiare il periodo del report" />
+      </Period>
+      <NotAvailable Text="Non applicabile per il report selezionato" />
+    </Filter>
+    <Report>
+      <Select Text="Seleziona il report">
+        <Title Text="Seleziona il report da vedere o stampare" />
+      </Select>
+      <Show Text="Mostra il report" />
+      <NotFound Text="Il template del report è mancante." />
+    </Report>
+    <Sales Text="Vendite">
+      <Products Text="Prodotti" />
+      <ProductGroups Text="Gruppo di prodotti" />
+      <PaymentTypes Text="Tipi di pagamento" />
+      <PaymentTypesUsers Text="Tipi di pagamento per utenti" />
+      <PaymentTypesCustomers Text="Tipi di pagamento per clienti" />
+      <TaxRates Text="Aliquote fiscali" />
+      <Customers Text="Clienti" />
+      <Users Text="Utenti" />
+      <Refunds Text="Rimborsi" />
+      <InvoiceList Text="Lista fatture" />
+      <Profit Text="Profitti &amp; margini" />
+      <Daily Text="Vendite del giorno" />
+      <Unpaid Text="Vendite non pagate" />
+      <StartingCash Text="Inizio incasso" />
+      <Discounts Text="Sconti concessi" />
+      <ItemDiscounts Text="Articoli scontati" />
+      <StockMovement Text="Movimenti delle scorte" />
+    </Sales>
+    <Purchase Text="Acquisto">
+      <Suppliers Text="Fornitori" />
+      <Products Text="Prodotti" />
+      <Unpaid Text="Acquisto non pagato" />
+      <Discounts Text="Sconti sugli acquisti" />
+      <ItemDiscounts Text="Sconti sugli articoli acquistati" />
+    </Purchase>
+    <LossAndDamage Text="Perdita e danni">
+      <Products Text="Prodotti" />
+    </LossAndDamage>
+  </Reports>
+</Language>

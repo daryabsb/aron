@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="de" name="Deutsch">
+  <ReceiptPrinter Text="Quittungsdrucker">
+    <PrintReceipt Text="Quittung drucken" />
+    <Receipt>
+      <PrinterNotFound Text="Der Quittungsdrucker ist nicht ausgewählt oder deaktiviert. Überprüfen Sie die Druckereinstellungen und versuchen es erneut." />
+      <PaymentTypes>
+        <PrintDisabled Text="Der Quittungsdruck ist für ausgewählte Zahlungsarten deaktiviert.\nAktivieren Sie den Quittungsdruck für ausgewählte Zahlungsarten, bevor Sie eine Quittung drucken." />
+      </PaymentTypes>
+      <Company>
+        <TaxNumber Text="Steuernr." />
+      </Company>
+      <Customer Text="Kunde">
+        <Address Text="Adresse" />
+        <TaxNumber Text="Steuernr." />
+        <Code Text="Code" />
+        <PhoneNumber Text="Telefon" />
+        <Email Text="E-Mail" />
+      </Customer>
+      <Number Text="Quittungsnr." />
+      <RefundNumber Text="Rückerstattungsnr." />
+      <OrderNumber Text="Bestellnr." />
+      <ItemsCount Text="Artikelanzahl" />
+      <Subtotal Text="Zwischensumme" />
+      <Tax Text="MwSt." />
+      <Discount Text="Warenkorb-Rabatt" />
+      <Total Text="GESAMT" />
+      <PaidAmount Text="Bezahlter Betrag" />
+      <AmountDue Text="Offener Betrag" />
+      <DueDate Text="Fälligkeitsdatum" />
+      <User Text="Benutzer" />
+      <Change Text="Wechselgeld" />
+      <Customize Text="Quittung anpassen">
+        <UseSystemCurrency Text="Währungsformat des Systems verwenden ">
+          <Info Text="Ihr Währungssymbol ist auf &quot;{0}&quot; eingestellt. Verwenden Sie die Windows-Systemsteuerung, um das Währungssymbol zu ändern.">
+            <OpenRegionalSettings Text="Regionaleinstellungen öffnen" />
+          </Info>
+        </UseSystemCurrency>
+        <NumberOfDecimalPlaces Text="Nachkommastellen" />
+        <PrintTaxes Text="Steuersummen drucken" />
+        <PrintItemsCount Text="Artikelanzahl drucken">
+          <PrintItemsQuantity Text="Gesamtmenge drucken" />
+        </PrintItemsCount>
+        <PrintOrderNumber Text="Bestellnummer drucken" />
+        <ShortReceiptNumber Text="Kurze Quittungsnummer" />
+        <Counter Text="Quittungszähler">
+          <Edit Text="Klicken Sie, um den Quittungsnummernzähler zu bearbeiten" />
+        </Counter>
+        <Localize Text="Quittungstext verändern">
+          <Info Text="Verwenden Sie dieses Formular, um die auf Quittungen gedruckten Bezeichnungen zu übersetzen oder zu ändern." />
+          <Company>
+            <TaxNumber Text="USt-ID" />
+          </Company>
+          <CustomerDetails Text="Kundendetails">
+            <Info Text="Wählen Sie aus, wie Kundendetails gedruckt werden sollen. Wenn Sie bestimmte Angaben nicht auf die Quittung drucken möchten, deaktivieren Sie die Option unten.\nDieser Abschnitt bezieht sich nur auf die Bezeichnungen und nicht auf tatsächliche Kundendaten, die auf die Quittung gedruckt werden." />
+          </CustomerDetails>
+          <Customer Text="Kunde">
+            <Address Text="Adresse" />
+            <TaxNumber Text="Steuernummer" />
+            <Code Text="Code" />
+            <PhoneNumber Text="Telefonnummer" />
+            <Email Text="E-Mail" />
+          </Customer>
+          <ReceiptNumber Text="Quittungsnummer" />
+          <RefundNumber Text="Rückerstattungsnummer" />
+          <OrderNumber Text="Bestellnummer" />
+          <ItemsCount Text="Artikelanzahl" />
+          <Discount Text="Rabatt" />
+          <Subtotal Text="Zwischensumme" />
+          <Tax Text="Steuersatz" />
+          <Total Text="Gesamt" />
+          <PaidAmount Text="Bezahlter Betrag" />
+          <AmountDue Text="Offener Betrag" />
+          <DueDate Text="Fälligkeitsdatum" />
+          <User Text="Benutzer" />
+          <Change Text="Wechselgeld" />
+        </Localize>
+        <CustomerDetails Text="Kundendetails">
+          <Info Text="Wählen Sie aus, welche Kundendetails gedruckt werden sollen" />
+          <Name Text="Name" />
+          <Code Text="Code" />
+          <TaxNumber Text="Steuernummer" />
+          <Address Text="Adresse" />
+          <PhoneNumber Text="Telefonnummer" />
+          <Email Text="E-Mail" />
+        </CustomerDetails>
+        <PrintMeasurementUnit Text="Maßeinheit drucken" />
+        <PrintTaxName Text="Steuernamen drucken" />
+      </Customize>
+    </Receipt>
+    <DailyReport>
+      <ZReport Text="Z BERICHT" />
+      <XReport Text="X BERICHT" />
+      <Date Text="Datum:" />
+      <Time Text="Zeit:" />
+      <ReportNumber Text="Bericht #:" />
+      <FromDocument Text="Von Dokument:" />
+      <ToDocument Text="Bis Dokument:" />
+      <CashIn Text="Einzahlung:" />
+      <CashOut Text="Auszahlung:" />
+      <UserSales Text="Benutzerverkäufe:" />
+      <PaymentTypes Text="Angebotsarten:">
+        <Total Text="Gesamt Angebote:" />
+      </PaymentTypes>
+      <Refunds Text="Rücknahmen:">
+        <Total Text="Gesamt Rücknahmen:" />
+      </Refunds>
+      <TaxCollected Text="Steuer erhoben:" />
+      <TaxableTotal Text="Steuerpflichtige Summe:" />
+      <Tax Text="Steuer:" />
+      <Total Text="Gesamt:" />
+      <TotalBalance Text="Gesamtsaldo:" />
+      <Items Text="ARTIKELBERICHT">
+        <ReportNumber Text="Bericht #:" />
+        <Products Text="PRODUKTE" />
+        <Groups Text="PRODUKTGRUPPEN" />
+        <Count Text="Artikel zählen" />
+      </Items>
+      <DiscountsGranted Text="Gewährung von Rabatten:" />
+      <CashRegister Text="POS #:" />
+    </DailyReport>
+    <CashDrawer Text="Kassenschublade">
+      <OpenCashDrawer Text="Kassenschublade öffnen">
+        <AuthorizationRequired Text="Öffnen der Kassenschublade erfordert Autorisierung.\nBitte Passwort eingeben, um die Kassenschublade zu öffnen." />
+      </OpenCashDrawer>
+      <Command Text="Kassenschubladenbefehl">
+        <LearnMore Text="Was ist das?" />
+      </Command>
+      <Error>
+        <CommandNotSet Text="Kassenschubladenbefehl nicht gesetzt.\nBitte setzen Sie den Befehl für die Kassenschublade, um fortzufahren." />
+        <PrinterNotSet Text="Quittungsdrucker nicht eingestellt.\nBitte konfigurieren Sie den Quittungsdrucker, um fortzufahren." />
+      </Error>
+      <Test Text="Schublade testen">
+        <InvalidCommand Text="Bitte geben Sie einen gültigen Kassenschubladenbefehl ein,\num zu testen." />
+      </Test>
+    </CashDrawer>
+  </ReceiptPrinter>
+  <FiscalPrinter>
+    <Check Text="Lade Quittungsdrucker...">
+      <Status Text="Überprüfung des Druckerstatus" />
+    </Check>
+    <CloseFiscalDay Text="Abschlussberichte drucken">
+      <Info Text="Bitte wählen Sie die zu druckenden Berichte aus. Stellen Sie sicher, dass Ihr Drucker verfügbar und betriebsbereit ist." />
+      <DailyReport Text="Z Bericht drucken">
+        <InProgress Text="Z Bericht wird gedruckt... Bitte warten..." />
+      </DailyReport>
+      <SubReport Text="X Bericht drucken">
+        <InProgress Text="X Bericht wird gedruckt... Bitte warten..." />
+      </SubReport>
+      <ItemsReport Text="Artikelbericht drucken">
+        <InProgress Text="Artikelbericht wird gedruckt... Bitte warten..." />
+      </ItemsReport>
+      <PrinterDisabled Text="Drucker ist deaktiviert oder nicht ausgewählt. Berichte werden möglicherweise nicht gedruckt." />
+    </CloseFiscalDay>
+  </FiscalPrinter>
+</Language>

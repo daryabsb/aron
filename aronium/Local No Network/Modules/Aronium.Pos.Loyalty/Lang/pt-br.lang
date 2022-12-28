@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="pt-br" name="Português do Brasil">
+  <Loyalty Text="Fidelidade">
+    <Promotions Text="Promoções &amp; Ações">
+      <New Text="Adicionar promoção">
+        <Title Text="Nova promoção" />
+      </New>
+      <Edit>
+        <Title Text="Editar promoção &quot;{0}&quot;" />
+      </Edit>
+      <Delete Text="Excluir promoção">
+        <Confirmation Text="Tem certeza que deseja excluir a promoção &quot;{0}&quot;?" />
+        <Error Text="Ocorreu um erro ao tentar excluir a promoção." />
+      </Delete>
+      <View>
+        <Enabled Text="Habilitada" />
+        <Name Text="Nome" />
+        <DaysOfWeek Text="Dias da semana" />
+        <StartDate Text="Data de início" />
+        <StartTime Text="Hora de início" />
+        <EndDate Text="Data final" />
+        <EndTime Text="Hora de fim" />
+      </View>
+      <Promotion>
+        <Empty Text="Nenhum item adicionado à promoção." />
+        <Name Text="Nome da promoção" />
+        <Active Text="Ativa" />
+        <DaysOfWeek>
+          <All Text="Todos os dias">
+            <ShortName Text="Todos" />
+          </All>
+          <Monday Text="Segunda">
+            <ShortName Text="Seg" />
+          </Monday>
+          <Tuesday Text="Terça-feira">
+            <ShortName Text="Ter" />
+          </Tuesday>
+          <Wednesday Text="Quarta-feira">
+            <ShortName Text="Qua" />
+          </Wednesday>
+          <Thursday Text="Quinta-feira">
+            <ShortName Text="Qui" />
+          </Thursday>
+          <Friday Text="Sexta-feira">
+            <ShortName Text="Sex" />
+          </Friday>
+          <Saturday Text="Sábado">
+            <ShortName Text="Sab" />
+          </Saturday>
+          <Sunday Text="Domingo">
+            <ShortName Text="Dom" />
+          </Sunday>
+        </DaysOfWeek>
+        <Duration>
+          <Start Text="Início" />
+          <End Text="Fim" />
+        </Duration>
+        <Item>
+          <PriceType>
+            <Discount Text="Desconto" />
+            <FixedPrice Text="Preço fixo" />
+          </PriceType>
+          <Condition Text="Condição">
+            <Title Text="Condição de quantidade" />
+            <ApplyToAll Text="Aplicar a todos" />
+            <Quantity>
+              <Description Text="Insira a quantidade necessária para esta promoção" />
+            </Quantity>
+            <LimitToNext Text="Aplicar ao próximo">
+              <Description Text="Insira o limite de quantidade a ser aplicado quando a quantidade necessária para esta promoção for atingida" />
+            </LimitToNext>
+            <CopyToAll Text="Copiar condição para todos os itens">
+              <Completed Text="Valores de condição copiados para todos os itens de promoção" />
+            </CopyToAll>
+          </Condition>
+          <InvalidValue Text="Valor inválido" />
+          <Errors>
+            <Existing Text="O item &quot;{0}&quot; já existe nesta promoção." />
+          </Errors>
+        </Item>
+        <Saved Text="Promoção salva com sucesso." />
+        <InvalidItems Text="Não foi possível salvar a promoção. Alguns itens possuem erros. Por favor, verifique os dados e tente novamente." />
+      </Promotion>
+      <NoPromotions Text="Sem promoções">
+        <Add Text="Crie uma nova promoção" />
+      </NoPromotions>
+      <LearnMore Text="Saiba mais sobre promoções e happy hour" />
+    </Promotions>
+  </Loyalty>
+</Language>

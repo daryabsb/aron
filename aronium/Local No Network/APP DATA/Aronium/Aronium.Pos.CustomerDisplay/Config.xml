@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomerDisplay xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsEnabled>false</IsEnabled>
+  <CharactersPerLine>20</CharactersPerLine>
+  <BaudRate>9600</BaudRate>
+  <DataBits>8</DataBits>
+  <Parity>None</Parity>
+  <StopBits>One</StopBits>
+  <Handshake>None</Handshake>
+</CustomerDisplay>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <FloorPlans>
+    <Options>
+      <View>
+        <Orders>
+          <Order>
+            <Number Text="Tellimus / Kliendi nimi" />
+          </Order>
+        </Orders>
+      </View>
+    </Options>
+  </FloorPlans>
+  <Order>
+    <Name Text="Tellimuse nimetus">
+      <Title Text="Tellimuse või kliendi nimetus" />
+      <Info Text="Sisestage tellimuse nimetus või number" />
+      <Validation>
+        <Duplicate Text="Sellise nimetusege tellimus on juba olemas. Palun sisestage jätkamiseks teine nimetus." />
+        <Empty Text="Tellimuse nimetus olemasoleval tellimusel ei saa ollla tühi." />
+        <Required Text="Tellimuse nimetus või number ei saa olla tühi." />
+      </Validation>
+      <Settings>
+        <Enabled Text="Luba kohandatud tellimuse nimetust" />
+        <Required Text="Tellimuse nimetus on nõutud" />
+        <RequestOrderName Text="Küsi tellimuse nimetust automaatselt" />
+      </Settings>
+    </Name>
+  </Order>
+</Language>

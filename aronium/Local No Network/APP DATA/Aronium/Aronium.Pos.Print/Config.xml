@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Invoice>
+    <TaxColumn>true</TaxColumn>
+    <DiscountColumn>true</DiscountColumn>
+    <CustomerTaxNumber>true</CustomerTaxNumber>
+    <CustomerCode>false</CustomerCode>
+    <CustomerPhoneNumber>false</CustomerPhoneNumber>
+    <CustomerEmail>false</CustomerEmail>
+    <PaymentTypes>true</PaymentTypes>
+    <IsFooterCentered>false</IsFooterCentered>
+  </Invoice>
+</Config>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="it" name="Italian">
+  <CustomerDisplay>
+    <Total Text="Totale:" />
+    <Change Text="Resto:" />
+    <Paid Text="Pagato:" />
+    <WelcomeMessage Text="BENVENUTO!" />
+    <Settings Text="Display cliente">
+      <Enabled Text="Abilitato" />
+      <Port Text="Porta COM " />
+      <CharactersPerLine Text="Numero di caratteri" />
+      <WelcomeMessage Text="Messaggio di benvenuto">
+        <TopLine Text="Linea superiore" />
+        <BottomLine Text="Linea di fondo" />
+      </WelcomeMessage>
+      <Test Text="Prova il display" />
+    </Settings>
+  </CustomerDisplay>
+</Language>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="pt-br" name="Português do Brasil">
+  <Notes Text="Notes">
+    <Add Text="Adicionar notas" />
+    <Document>
+      <Number Text="Número do documento:" />
+      <Customer Text="Cliente:" />
+      <Total Text="Total:" />
+    </Document>
+    <Note Text="Nota pública">
+      <Description Text="Inserir nota pública" />
+    </Note>
+    <InternalNote Text="Nota interna">
+      <Description Text="Inserir nota interna" />
+    </InternalNote>
+    <Saved Text="Notas salvas com sucesso" />
+  </Notes>
+</Language>

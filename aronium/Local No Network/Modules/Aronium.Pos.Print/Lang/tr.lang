@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <ReceiptPrinter Text="Makbuz Yazıcısı">
+    <PrintReceipt Text="Makbuz Yazdır" />
+    <Receipt>
+      <PrinterNotFound Text="Makbuz yazıcısı seçilmemiş veya devre dışı bırakılmamış. Yazıcı ayarlarını kontrol edin ve tekrar deneyin." />
+      <PaymentTypes>
+        <PrintDisabled Text="Seçilen ödeme türleri için makbuz yazdır devre dışı bırakıldı.\nLütfen makbuz yazdırmadan önce seçilen ödeme türleri için makbuz yazdırmayı etkinleştirin." />
+      </PaymentTypes>
+      <Company>
+        <TaxNumber Text="Vergi No:" />
+      </Company>
+      <Customer Text="Müşteri">
+        <Address Text="Adres" />
+        <TaxNumber Text="Vergi No." />
+        <Code Text="Kod" />
+        <PhoneNumber Text="Telefon" />
+        <Email Text="Email" />
+      </Customer>
+      <Number Text="Makbuz No." />
+      <RefundNumber Text="İade No." />
+      <OrderNumber Text="Sipariş No." />
+      <ItemsCount Text="Öğe Sayımı" />
+      <Subtotal Text="Aratoplam" />
+      <Tax Text="Vergi" />
+      <Discount Text="Sepet indirimi" />
+      <Total Text="TOPLAM" />
+      <PaidAmount Text="Ödenmiş Miktar" />
+      <AmountDue Text="Vadeli Miktar" />
+      <DueDate Text="Vade tarihi" />
+      <User Text="Kullanıcı" />
+      <Change Text="Değiştir" />
+      <Customize Text="Makbuzu Özelleştir">
+        <UseSystemCurrency Text="Sistem para birimi biçimini kullan">
+          <Info Text="Para birimi simgeniz &quot;{0}&quot; olarak ayarlandı. Para birimi simgesini değiştirmek için Windows Denetim Masası'nı kullanın.">
+            <OpenRegionalSettings Text="Bölgesel Ayarları Aç" />
+          </Info>
+        </UseSystemCurrency>
+        <NumberOfDecimalPlaces Text="Ondalık" />
+        <PrintTaxes Text="Vergi Toplamını Yazdır" />
+        <PrintItemsCount Text="Öğe Sayısını Yazdır" />
+        <PrintOrderNumber Text="Sipariş Numarasını Yazdır" />
+        <ShortReceiptNumber Text="Kısa Makbuz numarası" />
+        <PrintTaxName Text="Vergi Adını Yazdır" />
+        <Counter Text="Makbuz Sayacı">
+          <Edit Text="Makbuz numarası sayacını düzenlemek için tıklayın" />
+        </Counter>
+        <Localize Text="Makbuz metnini yerelleştirin">
+          <Info Text="Makbuzlara yazdırılan etiketleri çevirmek veya değiştirmek için bu formu kullanın." />
+          <Company>
+            <TaxNumber Text="Şirket Vergi no:" />
+          </Company>
+          <CustomerDetails Text="Müşter Detayları">
+            <Info Text="Müşteri ayrıntılarının makbuzda nasıl yazdırılacağını seçin. Makbuzda bir etiket yazdırmak istemiyorsanız, aşağıdaki seçeneğin işaretini kaldırın.\nBu bölüm yalnızca etiketlerle ilgilidir, fişe yazdırılan gerçek müşteri ayrıntıları ile ilgili değildir." />
+          </CustomerDetails>
+          <Customer Text="Müşteri">
+            <Address Text="Adres" />
+            <TaxNumber Text="Vergi Numarası" />
+            <Code Text="Kod" />
+            <PhoneNumber Text="Telefon Numarası" />
+            <Email Text="Email" />
+          </Customer>
+          <ReceiptNumber Text="Makbuz Numarası" />
+          <RefundNumber Text="İade Numarası" />
+          <OrderNumber Text="Sipariş Numarası" />
+          <ItemsCount Text="Öğe sayımı" />
+          <Discount Text="İndirim" />
+          <Subtotal Text="Aratoplam" />
+          <Tax Text="Vergi Oranı" />
+          <Total Text="Toplam" />
+          <PaidAmount Text="Ödenmiş Miktar" />
+          <AmountDue Text="Vadeli Miktar" />
+          <DueDate Text="Vade Tarihi" />
+          <User Text="Kullanıcı" />
+          <Change Text="Değiştir" />
+        </Localize>
+        <CustomerDetails Text="Müşteri Detayları">
+          <Info Text="Makbuzda hangi müşteri ayrıntılarının yazdırılacağını seçin" />
+          <Name Text="Ad" />
+          <Code Text="Kod" />
+          <TaxNumber Text="Vergi Numarası" />
+          <Address Text="Adres" />
+          <PhoneNumber Text="Telefon Numarası" />
+          <Email Text="Email" />
+        </CustomerDetails>
+      </Customize>
+    </Receipt>
+    <DailyReport>
+      <ZReport Text="Z RAPORU" />
+      <XReport Text="X RAPORU" />
+      <CashRegister Text="POS NO:" />
+      <Date Text="Tarih:" />
+      <Time Text="Saat:" />
+      <ReportNumber Text="Rapor No:" />
+      <FromDocument Text="Belgeden:" />
+      <ToDocument Text="Belgeye:" />
+      <CashIn Text="Nakit Giriş:" />
+      <CashOut Text="Nakit Çıkış:" />
+      <UserSales Text="Kullanıcı Satışları:" />
+      <PaymentTypes Text="Teklif tipleri:">
+        <Total Text="Teklifler Toplamı:" />
+      </PaymentTypes>
+      <Refunds Text="İadeler:">
+        <Total Text="Toplam İadeler:" />
+      </Refunds>
+      <TaxCollected Text="Toplanan Vergi:" />
+      <TaxableTotal Text="Vergilendirilebilir toplam:" />
+      <Tax Text="Vergi:" />
+      <Total Text="Toplam:" />
+      <TotalBalance Text="Toplam bakiye:" />
+      <Items Text="ÖĞELER RAPORU">
+        <ReportNumber Text="Rapor no:" />
+        <Products Text="ÜRÜNLER" />
+        <Groups Text="ÜRÜN GRUPLARI" />
+        <Count Text="Öğe sayımı" />
+      </Items>
+      <DiscountsGranted Text="Verilen indirimler:" />
+    </DailyReport>
+    <CashDrawer Text="Para Çekmecesi">
+      <OpenCashDrawer Text="Para Çekmecesini aç">
+        <AuthorizationRequired Text="Para çekmecesini açmak yetkilendirme gerektirir.\nLütfen para çekmecesini açmak için gerekli şifreyi girin." />
+      </OpenCashDrawer>
+      <Command Text="Para Çekmecesi Komutu">
+        <LearnMore Text="Bu nedir ?" />
+      </Command>
+      <Error>
+        <CommandNotSet Text="Para çekmecesi komutu ayarlanmadı.\nDevam etmek için lütfen para çekmecesi komutunu ayarlayın." />
+        <PrinterNotSet Text="Makbuz yazıcısı ayarlanmadı.\nDevam etmek için lütfen makbuz yazıcısını yapılandırın." />
+      </Error>
+      <Test Text="Para Çekmesini Test Et">
+        <InvalidCommand Text="Lütfen test etmek için geçerli bir para çekmecesi komutu girin." />
+      </Test>
+    </CashDrawer>
+  </ReceiptPrinter>
+  <FiscalPrinter>
+    <Check Text="Makbuz yazıcısı yükleniyor ...">
+      <Status Text="Yazıcı durumu kontrolü ..." />
+    </Check>
+    <CloseFiscalDay Text="Kapanış raporlarını yazdırın">
+      <Info Text="Lütfen yazdırılacak raporları seçin. Yazıcınızın kullanılabilir ve çalışır durumda olduğundan emin olun." />
+      <DailyReport Text="Z raporu yazdır">
+        <InProgress Text="Z raporu yazdırılıyor ... Lütfen bekleyin ..." />
+      </DailyReport>
+      <SubReport Text="X raporunu yazdır">
+        <InProgress Text="X raporu yazdırılıyor ... Lütfen Bekleyin ..." />
+      </SubReport>
+      <ItemsReport Text="Öğeler raporunu yazdır">
+        <InProgress Text="Öğe raporu yazdırılıyor ... Lütfen bekleyin ..." />
+      </ItemsReport>
+      <PrinterDisabled Text="Yazıcı devre dışı bırakıldı veya seçilmedi. Raporlar yazdırılamaz." />
+    </CloseFiscalDay>
+  </FiscalPrinter>
+  <Print>
+    <Labels>
+      <Documents>
+        <InventoryCount Text="Envanter sayımı">
+          <Counted Text="Sayılan" />
+          <CountedValue Text="Sayılan Değer" />
+          <CreatedBy Text="Oluşturan" />
+          <DiffMinus Text="Fark -" />
+          <DiffPlus Text="Fark +" />
+          <Expected Text="Öngörülen" />
+          <Time Text="Zaman" />
+          <NegativeAmount Text="Tutar -" />
+          <PositiveAmount Text="Tutar +" />
+        </InventoryCount>
+        <Invoice Text="Fatura">
+          <AmountDue Text="Vade Tarihi" />
+          <BankAccountNumber Text="Banka Hesap Numarası" />
+          <BankDetails Text="Banka Detayları" />
+          <BillTo Text="Faturalanan" />
+          <InvoiceNumber Text="Fatura No." />
+          <Item Text="Öğe" />
+          <ItemsCount Text="Öğe Adedi" />
+          <PaidAmount Text="Ödenmiş tutar" />
+          <PaymentMethod Text="Ödeme türü" />
+          <PaymentStatus Text="Ödeme durumu">
+            <Paid Text="Ödenmiş" />
+            <Unpaid Text="Ödenmemiş" />
+          </PaymentStatus>
+        </Invoice>
+        <LossAndDamage Text="Kayıp ve Hasar" />
+        <ProformaInvoice Text="Proforma" />
+        <Purchase Text="Ürün makbuzu" />
+        <Refund Text="İade">
+          <ReceiptNumber Text="Makbuz numarası" />
+          <RefundNumber Text="İade No." />
+        </Refund>
+        <StockReturn Text="İade Mallar" />
+      </Documents>
+      <General>
+        <CashRegister Text="Yazar kasa" />
+        <Code Text="Kod" />
+        <Company Text="Şirket">
+          <Address Text="Adres" />
+        </Company>
+        <Cost Text="Maliyet" />
+        <Customer Text="Müşteri" />
+        <Date Text="Tarih" />
+        <Description Text="Açıklama" />
+        <Discount Text="İndirim" />
+        <DiscountGranted Text="Verilen indirim" />
+        <Document Text="Belge" />
+        <DocumentNumber Text="Belge numarası" />
+        <DueDate Text="Vade tarihi" />
+        <Email Text="Email" />
+        <ExternalDocument Text="Dış Belge" />
+        <Margin Text="Marj" />
+        <Name Text="Ad" />
+        <Numbering Text="#" />
+        <Page Text="Sayfa" />
+        <Period Text="Dönem" />
+        <Phone Text="Telefon" />
+        <Product Text="Ürün" />
+        <ProductGroup Text="Ürün grubu" />
+        <ProductName Text="Ürün adı" />
+        <Products Text="Ürünler" />
+        <Profit Text="Kar" />
+        <PurchaseNumber Text="Satın alma numarası" />
+        <TaxNumber Text="Vergi No." />
+        <Qty Text="Adt." />
+        <Quantity Text="Adet" />
+        <Subtotal Text="Aratoplam" />
+        <Supplier Text="Tedarikçi" />
+        <Tax Text="Vergi" />
+        <TaxName Text="Vergi adı" />
+        <Total Text="Toplam" />
+        <TotalAfterDiscount Text="İndirimden sonra toplam" />
+        <TotalBeforeDiscount Text="İndirimden önce toplam" />
+        <TotalBeforeTax Text="Vergiden önce toplam" />
+        <TotalDiscount Text="Toplam indirim" />
+        <TotalPaid Text="Toplam ödenen" />
+        <TotalUnpaid Text="Toplam ödenmemiş" />
+        <UnitOfMeasurement Text="Ölçü/birim" />
+        <UnitPrice Text="Birim Fiyat" />
+        <User Text="Kullanıcı" />
+      </General>
+      <Reports>
+        <DailySales Text="Günlük satışlar" />
+        <DiscountsGranted Text="Verilen indirimler">
+          <BeforeTax Text="(vergi öncesi)" />
+          <AfterTax Text="(vergi sonrası)" />
+          <NumberOfDiscounts Text="İndirimli sipariş sayısı" />
+          <TotalDiscounted Text="İndirimler toplamı" />
+        </DiscountsGranted>
+        <InventoryCount Text="Envanter sayım raporu" />
+        <Invoices Text="Faturalar" />
+        <ItemsDiscounts Text="Öğe indirimleri" />
+        <LossAndDamageByProduct Text="Ürüne göre kayıp ve hasar" />
+        <PaymentTypesByCustomer Text="Müşterilere göre ödeme türleri" />
+        <PaymentTypesByUser Text="Kullanıcılara göre ödeme türleri" />
+        <ProfitAndMargin Text="Kar" />
+        <PurcahsedItemsDiscounts Text="Satın alınan ürün indirimleri" />
+        <PurchaseByProduct Text="Ürüne göre satınalma" />
+        <PurchaseBySupplier Text="Tedarikçiye göre satınalma" />
+        <PurchaseDiscounts Text="Satınalma indirimleri" />
+        <PurchaseInvoices Text="Satınalma faturaları" />
+        <Refunds Text="İadeler" />
+        <SalesByCustomer Text="Müşterilere göre satışlar" />
+        <SalesByPaymentType Text="Ödeme türlerine göre satışlar" />
+        <SalesByProduct Text="Ürünlere göre satışlar" />
+        <SalesByProductGroups Text="Ürün gruplarına göre satışlar" />
+        <SalesByUser Text="Kullanıcılara göre satışlar" />
+        <StartingCashEntries Text="Başlangıç Nakdi girişleri">
+          <ZReport Text="Z raporu" />
+          <Open Text="Aç" />
+        </StartingCashEntries>
+        <Stock Text="Stok raporu">
+          <CostIncludingTax Text="Vergi dahil maliyet" />
+          <History Text="Stok geçmişi">
+            <CustomerOrSupplier Text="Müşteri / Tedarikçi" />
+            <DocumentNumber Text="Belge no" />
+            <DocumentType Text="Belge tipi" />
+            <QuantityOnHand Text="Stok adedi" />
+            <StockDate Text="StokTarihi" />
+          </History>
+        </Stock>
+        <StockMovement Text="Stok hareketi">
+          <AverageNumberOfSalesPerItem Text="Ürün başına ortalama satış sayısı" />
+          <FastMoving Text="Hızlı satılan" />
+          <SlowMoving Text="Yavaş satılan" />
+          <NonMoving Text="Hareketsiz" />
+          <NumberOfSales Text="Satış adedi" />
+          <TotalNumberOfSales Text="Toplam satış adedi" />
+        </StockMovement>
+        <Taxes Text="VERGİ" />
+        <UnpaidPurchases Text="Ödenmemiş satınalma" />
+        <UnpaidSales Text="Ödenmemiş satış" />
+      </Reports>
+    </Labels>
+  </Print>
+</Language>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Logo Text="Minu logo">
+    <Add Text="Lisa logo" />
+    <Remove Text="Eemalda logo" />
+    <Empty Text="Logo pole valitud. Vajuta &quot;Lisa logo&quot; nupppu ja vali oma logo." />
+    <License>
+      <Expiring Text="Mooduli &quot;Minu logo&quot; litsents aegub {0} päeva pärast.&#xA;&#xA;Ostke litsents, et tagada teie logo kuvamine pärast {1}">
+        <Title Text="Litsents aegub peagi" />
+      </Expiring>
+    </License>
+  </Logo>
+</Language>

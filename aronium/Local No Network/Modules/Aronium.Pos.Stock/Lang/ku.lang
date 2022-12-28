@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Stock Text="کۆگا">
+    <Items>
+      <Item>
+        <Product>
+          <Id Text="پێناس" />
+          <Code Text="کۆد" />
+          <Name Text="ناو" />
+          <MeasurementUnit Text="یەکەی پێوان" />
+        </Product>
+        <Quantity Text="ژمارە" />
+        <NegativeQuantity Text="ژمارەی کاڵا لە ماخزەن خوار سفربێت" />
+        <TotalCostBeforeTax Text="تێچوو" />
+        <TotalCost Text="تێچوو لەگەڵ باج" />
+        <TotalBeforeTax Text="کۆی گشتی" />
+        <TotalAfterTax Text="کۆی گشتی لەگەڵ باج" />
+      </Item>
+      <Filter>
+        <NegativeQuantity Text="ژمارەی خوار سفرە">
+          <Info Text="تەنها ئەو بەرهەمانە پیشانبدە کە ژمارەیان خوار سفرە" />
+        </NegativeQuantity>
+        <NonZeroQuantity Text="ژمارەی سفر نیە">
+          <Info Text="ئەو بەرهەمانە کە ژمارەیان سفر نیە" />
+        </NonZeroQuantity>
+        <ZeroQuantity Text="ژمارە سفر">
+          <Info Text="ئەو بەرهەمانە پیشانبدە کە ژمارەی سفر" />
+        </ZeroQuantity>
+      </Filter>
+      <Summary>
+        <NegativeCount Text="کۆی گشتی ئەو کاڵایانەی کە ژمارەیان خوار سفرە لە کۆگا" />
+        <ZeroCount Text="کۆی گشتی ئەو کاڵایانەی ژمارەیان سفرە لە کۆگا" />
+        <PositiveCount Text="کۆی گشتی ئەو کاڵایانەی ژمارەیان لە سفر زیاترە" />
+        <TotalBeforeTax Text="کۆی گشتی:" />
+        <TotalIncludingTax Text="کۆی گشتی لەگەڵ باج:" />
+        <SellPrice Text="نرخی فرۆشتن" />
+        <CostPrice Text="نرخی تێچوو">
+          <TotalCostBeforeTax Text="کۆی گشتی تێچوو:" />
+          <TotalCostAfterTax Text="کۆی گشتی تێچوو لەگەڵ باج:" />
+        </CostPrice>
+      </Summary>
+    </Items>
+    <Reset Text="جەردکردنەوەی کۆگا">
+      <Completed Text="جەردکردنەوەی کۆگا بە سەرکەوتووی کۆتاییهات" />
+    </Reset>
+    <History Text="ڕابردووی کۆگا">
+      <Start Text="دەستپێک" />
+      <End Text="کۆتایی" />
+      <Document Text="ڕاپۆرت">
+        <DocumentType Text="جۆری ڕاپۆرت" />
+        <Customer Text="کڕیار" />
+        <Date Text="بەروار" />
+        <StockDate Text="بەرواری تۆمارکردن لە کۆگا" />
+      </Document>
+      <ChangeQuantity Text="ژمارە" />
+      <InStock Text="لە کۆگا هەیە" />
+      <MeasurementUnit Text="یەکەی پێوان" />
+    </History>
+    <Print>
+      <Report Text="ڕاپۆرتی جەردی کۆگا" />
+    </Print>
+    <ProductDetails>
+      <OnHand Text="ژمارەی ئەو کاڵایانەی لە کۆگا بەردەستن" />
+    </ProductDetails>
+    <Control>
+      <Settings>
+        <PreventNegativeQuantities Text="ڕێگرتن لە سفربوونەوەی ژمارەی کاڵا" />
+      </Settings>
+      <NegativeQuantity Text="فرۆشی کاڵایەک کە لە کۆگا ژمارەی سفرە">
+        <Confirmation Text="ژمارەی پێویستت نیە لە بەردەستدا بۆ فرۆشتنی ئەم کاڵایە.فرۆشتنی ئەم کاڵایە لەوانەیە ژمارەی بکاتە خوار سفر لە کۆگا\n\nژمارەی بەردەست: {0}\nژمارەی پێویست: {1}\n\nدڵنیایت دەتەوێت ئەم کاڵایە زیادبکەیت بۆ فرۆشی ئێستا؟" />
+        <Title Text="لە کۆگا ژمارەی پێویست نیە" />
+        <PermissionDenied Text="ڕێگەتپێنەدراوە کە کاڵایەک بفرۆشیت ژمارەی بەردەستی سفربێت.تکایە لەگەڵ ئەدمین قسەبکە" />
+        <Authorization>
+          <Title Text="کۆنتڕۆڵ کردنی کۆگا لەکاردایە\nتکایە پاسوۆرد بنووسە بۆ فرۆشتنی ئەو کاڵایانەی ژمارەیان سفرە لە کۆگا" />
+        </Authorization>
+        <AllowMultiple>
+          <NotAllowed Text="دووبارەکردنەوەی بار ڕێگەپێدراو نیە کە کۆنترۆڵکردنی کۆگا لەکاردایە" />
+        </AllowMultiple>
+        <Security>
+          <Description Text="کۆنتڕۆڵی ئەوەبکە بەکارهێنەرێک دەتوانێت کاڵایەک بفرۆشێت کە ژمارەی سفربێت" />
+        </Security>
+      </NegativeQuantity>
+    </Control>
+    <QuickInventory Text="جەردی خێرا">
+      <Description Text="ژمارەی کاڵاکان لە کۆگا بگۆڕە" />
+      <Title Text="تازەکردنەوەی ژمارەکانی کۆگا" />
+      <Subtitle Text="ژمارەی بەرهەمە دیاریکراوەکان لە کۆگا بنووسە\nڕاپۆرتی جەردی کۆگا ئۆتۆماتیکی دروستدەکرێت" />
+      <Success Text="ژمارەی کۆگا بە سەرکەوتووی گۆڕا\nڕاپۆرتی {0} دروستکرا" />
+      <Unauthorized Text="بەکارهێنانی جەردی خێرا ڕێگەپێدراو نیە" />
+    </QuickInventory>
+    <LearnMore Text="زانیاری زیاتر وەربگرە لەسەر کۆگا و جەردکردن" />
+    <SearchResults Text="ئەنجامی گەڕان" />
+    <ShowCostPrices Text="نرخی تێچوو پیشانبدە">
+      <Description Text="کۆنتڕۆڵی پیشاندانی نرخی تێچوو دەکات لە بەشی کۆگا" />
+    </ShowCostPrices>
+  </Stock>
+</Language>

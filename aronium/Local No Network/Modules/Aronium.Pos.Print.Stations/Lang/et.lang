@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Print>
+    <Stations Text="Printerite üksused">
+      <New Text="Lisa üksus" />
+      <Edit Text="Muuda üksust" />
+      <NoItems Text="Printerite üksusi pole">
+        <Add Text="Lisa printerite üksus" />
+      </NoItems>
+      <PrintStation>
+        <Id Text="ID" />
+        <Name Text="Nimetus" />
+      </PrintStation>
+      <Delete>
+        <Title Text="Kustuta printerite üksus" />
+        <Confirmation Text="Kas oled kindel, et soovid kustutada &quot;{0}&quot;?" />
+      </Delete>
+      <Saved>
+        <Created Text="Printerite üksus edukalt loodud" />
+        <Updated Text="Printerite üksus edukalt muudetud" />
+      </Saved>
+      <Product>
+        <Info Text="Siin saate lisada printerite üksusi. Tooted ja rühmad, millele on määratud printerite üksus, prindivad spetsiaalse üksuse printeriga." />
+        <Add Text="Määrake printeriüksus">
+          <Tooltip Text="Teise printerite üksuse lisamine" />
+        </Add>
+        <Remove>
+          <Tooltip Text="Printerite üksuse eemaldamine" />
+        </Remove>
+        <NoItems>
+          <Info Text="Printerite üksusi ei leitud.&#xA;Enne kui saate neid tootele või rühmale määrata, peate looma printeriüksuse." />
+        </NoItems>
+        <Error>
+          <Duplicates Text="Tuvastati dubleerivad printeriüksused" />
+        </Error>
+      </Product>
+      <Settings Text="Printeriüksused">
+        <Info Text="Kasutage allolevaid valikuid, et konfigureerida printerid printeriüksuste jaoks." />
+        <PrintStation Text="Printeriüksus" />
+        <Printer Text="Printer" />
+        <AddConfiguration Text="Lisage printimiskonfiguratsioon" />
+        <RemoveConfiguration Text="Eemaldage printimiskonfiguratsioon" />
+      </Settings>
+      <License>
+        <Expiring Text="Mooduli &quot;Printerite üksused&quot; litsents aegub {0} päeva pärast.&#xA;&#xA;Ostke litsents, et tagada jätkuv juurdepääs peale {1}">
+          <Title Text="Litsents aegub peagi" />
+        </Expiring>
+        <GracePeriod Text="Mooduli &quot;Printerite üksused&quot; litsents aegus ja see lakkab töötamast peale {0}&#xA;Jätkuva juurdepääsu tagamiseks ostke litsents.">
+          <LicenseAlreadyPurchased Text="Kui olete litsentsi juba ostnud, võite seda teadet eirata, kontrollime makse laekumist ja teie litsentsi värskendatakse." />
+          <Hide Text="Peida see sõnum 30 päevaks" />
+        </GracePeriod>
+        <Expired Text="&quot;Printerite üksused&quot; litsents aegus ja moodul on keelatud kuni litsentsi ostmiseni.">
+          <Title Text="Litsents aegunud!" />
+          <Renew Text="Palun uuendage oma litsentsi aadressil" />
+          <Hide Text="Ära seda sõnumit enam näita" />
+        </Expired>
+        <Error>
+          <Notification Text="Printeri üksuste funktsioonide lubamiseks ostke litsents.">
+            <Expired Text="Litsents aegunud." />
+            <Missing Text="Litsents puudub." />
+          </Notification>
+        </Error>
+      </License>
+    </Stations>
+  </Print>
+</Language>

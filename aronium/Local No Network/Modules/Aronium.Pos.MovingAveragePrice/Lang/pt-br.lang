@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="pt-br" name="Português do Brasil">
+  <MovingAveragePrice>
+    <Recalculate Text="Mov. med. preço">
+      <Title Text="Preço médio móvel" />
+      <Info Text="Selecione produtos ou grupos de produtos para os quais você deseja recalcular o preço médio móvel. O preço médio móvel será calculado e atualizará todos os documentos no período selecionado.&#xA;Esta operação pode demorar algum tempo, dependendo do número de produtos e período de tempo selecionado." />
+      <Selection>
+        <ProductGroups Text="Grupos de produtos" />
+        <Products Text="Produtos" />
+        <NoItems Text="Nenhum produto selecionado" />
+      </Selection>
+      <SelectedPeriod Text="Período selecionado" />
+      <PeriodStart Text="Início do período" />
+      <PeriodEnd Text="Fim do período" />
+      <Start Text="Iniciar" />
+      <Stop Text="Parar" />
+      <Product Text="Produto: {0}" />
+      <OverallProgress Text="Progresso geral" />
+      <Complete Text="Preço médio móvel recalculado com sucesso." />
+      <Disabled Text="O preço médio móvel está desativado. Ative o preço médio móvel para começar a rastrear os preços de custo automaticamente.">
+        <Enable Text="Clique aqui para habilitar o preço médio móvel" />
+      </Disabled>
+    </Recalculate>
+    <Settings>
+      <Title Text="Preço médio móvel" />
+      <Enabled Text="Ativar preço médio móvel" />
+    </Settings>
+  </MovingAveragePrice>
+</Language>

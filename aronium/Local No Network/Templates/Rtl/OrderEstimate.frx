@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" StartReportEvent="_StartReport" ReportInfo.Created="11/25/2017 01:34:22" ReportInfo.Modified="10/14/2021 15:46:56" ReportInfo.CreatorVersion="2018.4.0.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+
+    private void _StartReport(object sender, EventArgs e)
+    {
+      DataFooter1.Visible = ((Decimal)Report.GetColumnValue(&quot;Order.Discount&quot;)) &gt; 0M;
+      
+      if(((Boolean)Report.GetColumnValue(&quot;Translation.IsHeaderCentered&quot;)))
+        TextHeader.HorzAlign = HorzAlign.Center;
+      
+      if(((Boolean)Report.GetColumnValue(&quot;Translation.IsFooterCentered&quot;)))
+        TextFooter.HorzAlign = HorzAlign.Center;
+    }
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <SQLiteDataConnection Name="Connection" ConnectionString="rijcmlqIltkgxALMArhJ2W63qXqy9mHFxj3jszzPRFpX1ii4uTuch5qPIB4cGrB4iECYGs+zdGXqlEPX4zFY4oZokjGzFC/++UQ0S7HrISGyaXTcf4l5Bk5//Jw6Rgj/GyLVIFv">
+      <TableDataSource Name="Table" Alias="Order" DataType="System.Int32" Enabled="true" SelectCommand="SELECT  O.Number, &#13;&#10;        O.Discount, &#13;&#10;        O.DiscountType, &#13;&#10;        O.Total ,&#13;&#10;        U.FirstName,&#13;&#10;        U.LastName&#13;&#10;FROM    PosOrder AS O INNER JOIN User AS U ON U.Id = O.UserId&#13;&#10;WHERE   O.Id=:Id">
+        <Column Name="Number" DataType="System.String"/>
+        <Column Name="Discount" DataType="System.Decimal"/>
+        <Column Name="DiscountType" DataType="System.Int64"/>
+        <Column Name="Total" DataType="System.Decimal"/>
+        <Column Name="FirstName" DataType="System.String"/>
+        <Column Name="LastName" DataType="System.String"/>
+        <CommandParameter Name="Id" DataType="11" Expression="[Id]" DefaultValue="1"/>
+      </TableDataSource>
+      <TableDataSource Name="Table1" Alias="Items" DataType="System.Int32" Enabled="true" SelectCommand="SELECT  P.Name,&#13;&#10;        SUM(I.Quantity) AS Quantity,&#13;&#10;        I.Price,&#13;&#10;        I.Discount,&#13;&#10;        I.DiscountType,&#13;&#10;        SUM(CASE &#13;&#10;            WHEN I.Discount = 0 THEN I.Quantity * I.Price&#13;&#10;            WHEN I.DiscountType = 0 THEN (I.Quantity * I.Price) * ((ROUND(1.00, 2) - (I.Discount / ROUND(100, 2))))&#13;&#10;            ELSE (I.Quantity * I.Price) - (CASE WHEN I.Quantity &lt; 0 THEN -I.Discount ELSE I.Discount END)&#13;&#10;        END) AS Total&#13;&#10;FROM    PosOrderItem AS I &#13;&#10;        INNER JOIN Product P ON I.ProductId = P.Id&#13;&#10;WHERE   I.PosOrderId = :Id        &#13;&#10;GROUP BY P.Id, I.Price, I.Discount, I.DiscountType">
+        <Column Name="Name" DataType="System.String"/>
+        <Column Name="Quantity" DataType="System.Object"/>
+        <Column Name="Price" DataType="System.Decimal"/>
+        <Column Name="Discount" DataType="System.Decimal"/>
+        <Column Name="DiscountType" DataType="System.Int32"/>
+        <Column Name="Total" DataType="System.Object"/>
+        <CommandParameter Name="Id" DataType="11" Expression="[Id]" DefaultValue="1"/>
+      </TableDataSource>
+    </SQLiteDataConnection>
+    <TableDataSource Name="Translation" ReferenceName="Order.Translation" DataType="System.Int32" Enabled="true" TableName="Translation">
+      <Column Name="Estimate" DataType="System.String"/>
+      <Column Name="User" DataType="System.String"/>
+      <Column Name="OrderNumber" DataType="System.String"/>
+      <Column Name="Time" DataType="System.String"/>
+      <Column Name="Discount" DataType="System.String"/>
+      <Column Name="Total" DataType="System.String"/>
+      <Column Name="Header" DataType="System.String"/>
+      <Column Name="Footer" DataType="System.String"/>
+      <Column Name="IsHeaderCentered" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="IsFooterCentered" DataType="System.Boolean" BindableControl="CheckBox"/>
+    </TableDataSource>
+    <Parameter Name="Id" DataType="System.Int32"/>
+    <Total Name="ItemsTotal" Expression="[Items.Total]" Evaluator="Data1" PrintOn="DataFooter1"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="80" PaperHeight="1000" LeftMargin="0" TopMargin="0" RightMargin="0" BottomMargin="0" FirstPageSource="15" OtherPagesSource="15" ExtraDesignWidth="true" UnlimitedHeight="true" PrintOnRollPaper="true">
+    <ReportTitleBand Name="ReportTitle1" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true">
+      <TextObject Name="TextHeader" Width="302.4" Height="18.9" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Translation.Header]" RightToLeft="true" Font="Tahoma, 9pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="22.9" Width="302.4" Height="56.7" Border.Lines="Bottom" Border.Style="Dash" CanGrow="true" CanShrink="true" PrintOn="FirstPage">
+      <TextObject Name="Text2" Width="302.4" Height="56.7" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Format([Translation.User], Format(&quot;{0} {1}&quot;, [Order.FirstName], [Order.LastName]))]&#13;&#10;[Format([Translation.OrderNumber], [Order.Number])]&#13;&#10;[Format([Translation.Time],string.Format(&quot;{0} {1}&quot;, DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString()))]" Padding="2, 5, 2, 5" RightToLeft="true" Font="Tahoma, 9pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="83.6" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true" DataSource="Table1">
+      <TextObject Name="Text6" Width="302.4" Height="18.9" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Items.Name]" RightToLeft="true" Font="Tahoma, 9pt"/>
+      <ChildBand Name="Child2" Top="106.5" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true">
+        <TextObject Name="Text7" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" Text="[Items.Quantity]x [Items.Price][IIf(([Items.Discount] &gt; 0 &amp;&amp; [Items.DiscountType] == 0),string.Format(&quot; (-{0}%)&quot;, [Items.Discount]),&quot;&quot;)][IIf(([Items.Discount] &gt; 0 &amp;&amp; [Items.DiscountType] == 1),string.Format(&quot; (-{0})&quot;, [Items.Discount].ToString(&quot;N2&quot;)),&quot;&quot;)]" Padding="2, 0, 2, 2" RightToLeft="true" Font="Tahoma, 9pt">
+          <Formats>
+            <GeneralFormat/>
+            <NumberFormat/>
+          </Formats>
+        </TextObject>
+        <TextObject Name="Text8" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[Items.Total]" Padding="2, 0, 2, 2" Format="Number" Format.UseLocale="true" HorzAlign="Right" RightToLeft="true" Font="Tahoma, 9pt"/>
+      </ChildBand>
+      <DataFooterBand Name="DataFooter1" Top="129.4" Width="302.4" Height="28.35" Border.Lines="Top" Border.Style="Dash" CanGrow="true" CanShrink="true">
+        <TextObject Name="Text10" Width="151.2" Height="28.35" Dock="Left" CanGrow="true" CanShrink="true" Text="-[[ItemsTotal]-[Order.Total]]" Padding="2, 5, 2, 5" Format="Number" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Tahoma, 9pt"/>
+        <TextObject Name="Text9" Left="151.2" Width="151.2" Height="28.35" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.Discount][IIf([Order.DiscountType] == 0,string.Format(&quot; ({0}%)&quot;, [Order.Discount]),&quot;&quot;)]:" Padding="2, 5, 2, 5" VertAlign="Center" RightToLeft="true" Font="Tahoma, 9pt"/>
+      </DataFooterBand>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="161.75" Width="302.4" Height="30.05" Border.Lines="Top, Bottom" CanGrow="true" CanShrink="true">
+      <TextObject Name="Text4" Width="151.2" Height="30.05" Dock="Left" CanGrow="true" CanShrink="true" Text="[Order.Total]" Format="Number" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" RightToLeft="true" WordWrap="false" Font="Tahoma, 11pt, style=Bold" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text3" Left="151.2" Width="151.2" Height="30.05" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.Total]" VertAlign="Center" RightToLeft="true" Font="Tahoma, 11pt, style=Bold"/>
+      <ChildBand Name="Child3" Top="195.8" Width="302.4" Height="20.6" CanGrow="true" CanShrink="true">
+        <TextObject Name="TextFooter" Width="302.4" Height="20.6" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Translation.Footer]" Padding="2, 5, 2, 5" RightToLeft="true" Font="Tahoma, 9pt"/>
+      </ChildBand>
+    </ReportSummaryBand>
+  </ReportPage>
+</Report>

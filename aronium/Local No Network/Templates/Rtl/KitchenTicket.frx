@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" StartReportEvent="_StartReport" ReportInfo.Created="11/25/2017 01:34:22" ReportInfo.Modified="10/14/2021 15:46:55" ReportInfo.CreatorVersion="2018.4.0.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+    private void _StartReport(object sender, EventArgs e)
+    {
+      if(((Boolean)Report.GetColumnValue(&quot;Translation.IsHeaderCentered&quot;)))
+        TextHeader.HorzAlign = HorzAlign.Center;
+      
+      if(((Boolean)Report.GetColumnValue(&quot;Translation.IsFooterCentered&quot;)))
+        TextFooter.HorzAlign = HorzAlign.Center;
+    }
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <TableDataSource Name="Translation" ReferenceName="KitchenTicket.Translation" DataType="System.Int32" Enabled="true" TableName="Translation">
+      <Column Name="User" DataType="System.String"/>
+      <Column Name="NumberAndRound" DataType="System.String"/>
+      <Column Name="Time" DataType="System.String"/>
+      <Column Name="Header" DataType="System.String"/>
+      <Column Name="Footer" DataType="System.String"/>
+      <Column Name="IsHeaderCentered" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="IsFooterCentered" DataType="System.Boolean" BindableControl="CheckBox"/>
+    </TableDataSource>
+    <TableDataSource Name="Order" ReferenceName="KitchenTicket.Order" DataType="System.Int32" Enabled="true" TableName="Order">
+      <Column Name="User" DataType="System.String"/>
+      <Column Name="Number" DataType="System.String"/>
+      <Column Name="RoundNumber" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="Items" ReferenceName="KitchenTicket.Items" DataType="System.Int32" Enabled="true" TableName="Items">
+      <Column Name="Name" DataType="System.String"/>
+      <Column Name="Comment" DataType="System.String"/>
+      <Column Name="Quantity" DataType="System.Decimal"/>
+    </TableDataSource>
+    <Parameter Name="Id" DataType="System.Int32"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="80" PaperHeight="1000" LeftMargin="0" TopMargin="0" RightMargin="0" BottomMargin="0" FirstPageSource="15" OtherPagesSource="15" ExtraDesignWidth="true" UnlimitedHeight="true" PrintOnRollPaper="true">
+    <ReportTitleBand Name="ReportTitle1" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true">
+      <TextObject Name="TextHeader" Width="302.4" Height="18.9" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Translation.Header]" RightToLeft="true" Font="Tahoma, 9pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="22.9" Width="302.4" Height="56.7" Border.Lines="Bottom" Border.Style="Dash" CanGrow="true" CanShrink="true" PrintOn="FirstPage">
+      <TextObject Name="Text2" Width="302.4" Height="56.7" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Format([Translation.User], [Order.User])]&#13;&#10;[Format([Translation.NumberAndRound], [Order.Number], [Order.RoundNumber])]&#13;&#10;[Format([Translation.Time],string.Format(&quot;{0} {1}&quot;, DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString()))]" Padding="2, 5, 2, 5" RightToLeft="true" Font="Tahoma, 9pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="83.6" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true" DataSource="Items">
+      <TextObject Name="Text6" Left="94.5" Width="207.9" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" Text="[Items.Name]" VertAlign="Center" RightToLeft="true" Font="Tahoma, 9pt"/>
+      <TextObject Name="Text8" Width="94.5" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[Convert.ToDouble([Items.Quantity])]" Padding="2, 0, 2, 2" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Tahoma, 9pt"/>
+      <ChildBand Name="CommentBand" Top="106.5" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true">
+        <TextObject Name="Text1" Width="302.4" Height="18.9" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Items.Comment]" Padding="20, 0, 2, 0" RightToLeft="true" Font="Arial, 10pt, style=Italic"/>
+      </ChildBand>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="129.4" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true">
+      <TextObject Name="TextFooter" Width="302.4" Height="18.9" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Translation.Footer]" RightToLeft="true" Font="Tahoma, 9pt"/>
+    </ReportSummaryBand>
+  </ReportPage>
+</Report>

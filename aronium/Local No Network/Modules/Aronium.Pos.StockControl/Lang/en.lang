@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <StockControl>
+    <Product>
+      <Title Text="Stock control" />
+      <Supplier Text="Supplier">
+        <None Text="(none)" />
+        <Clear Text="Clear" />
+      </Supplier>
+      <ReorderPoint Text="Reorder point" />
+      <PreferredQuantity Text="Preferred quantity" />
+      <LowStockWarning Text="Low stock warning">
+        <WarningQuantity Text="Low stock warning quantity" />
+      </LowStockWarning>
+      <Reset Text="Reset to default" />
+      <Info Text="Set low stock quantity rules that can be used as a stock reorder point." />
+    </Product>
+    <Notification>
+      <Message Text="Some products have reached their reorder point.\nConsider purchasing the following items: {0}.">
+        <Title Text="Products are reaching low stock quantity" />
+      </Message>
+    </Notification>
+    <Reports>
+      <Group Text="Stock control" />
+      <ReorderProductList Text="Reorder product list">
+        <OrderQuantity Text="Order qty." />
+      </ReorderProductList>
+      <LowStockWarning Text="Low stock warning">
+        <QuantityOnHand Text="Qty. on hand" />
+        <PreferredQuantity Text="Preferred qty." />
+        <WarningQuantity Text="Warning qty." />
+        <ReorderPoint Text="Reorder point" />
+      </LowStockWarning>
+    </Reports>
+  </StockControl>
+</Language>

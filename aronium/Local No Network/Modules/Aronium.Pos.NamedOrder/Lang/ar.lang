@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ar">
+  <FloorPlans>
+    <Options>
+      <View>
+        <Orders>
+          <Order>
+            <Number Text="اسم الزبون" />
+          </Order>
+        </Orders>
+      </View>
+    </Options>
+  </FloorPlans>
+  <Order>
+    <Name Text="اسم الزبون">
+      <Title Text="اسم الزبون" />
+      <Info Text="اسم الزبون" />
+      <Validation>
+        <Duplicate Text="نفس الاسم موجود بالفعل. الرجاء إدخال اسم مختلف للمتابعة" />
+        <Empty Text="لا يمكن أن يكون اسم أو رقم الطلب فارغًا للفاتورة الحالية" />
+        <Required Text="لا يمكن أن يكون اسم أو رقم الفاتورة فارغًا" />
+      </Validation>
+      <Settings>
+        <Enabled Text="تفعيل اسم الزبون على الفاتورة" />
+        <Required Text="اسم الزبون مطلوب" />
+        <RequestOrderName Text="طلب اسم الزبون تلقائيًا" />
+      </Settings>
+    </Name>
+  </Order>
+</Language>

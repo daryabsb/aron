@@ -1,0 +1,1 @@
+INSERT INTO DocumentType (Name, Code, DocumentCategoryId, WarehouseId, StockDirection, EditorType, PrintTemplate) VALUES ('Stock Return', '120', 1, 1, 2, 0, 'StockReturn');

@@ -1,0 +1,834 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Management Text="Haldus">
+    <NoItems Text="Kasutaja {0} jaoks pole ühtegi haldusmoodulit saadaval.&#xA;Jätkamiseks logige sisse kasutajaga, kellel on juurdepääs vähemalt ühele haldusmoodulile." />
+    <Dashboard Text="Töölaud">
+      <NoData Text="Pole andmeid, mida kuvada" />
+      <MonthlySales Text="Igakuine müük">
+        <Description Text="Müügiandmed kuude kaupa" />
+        <Month Text="Kuu" />
+        <Legend Text="Legend" />
+        <CurrentYear Text="Käesolev aasta" />
+        <TotalSales Text="Müük kokku">
+          <TopMonth Text="Parim kuu:" />
+        </TotalSales>
+        <Year Text="Aasta">
+          <Previous Text="Eelmine aasta" />
+          <Next Text="Järgmine aasta" />
+        </Year>
+      </MonthlySales>
+      <HourlySales Text="Müük tundide lõikes">
+        <Description Text="Müügiandmed tundide kaupa" />
+        <Hour Text="Tund" />
+        <Options>
+          <Amount Text="Summa" />
+          <Count Text="Kogus" />
+        </Options>
+      </HourlySales>
+      <TopProducts Text="Enimmüüdud tooted">
+        <Product Text="Toode" />
+        <Total Text="Kokku" />
+      </TopProducts>
+      <TopProductGroups Text="Enimmüüdud tootegrupid">
+        <Description Text="Valitud perioodi enimmüüdud tootegrupid" />
+        <Group Text="Tootegrupp" />
+      </TopProductGroups>
+      <TopCustomers Text="Parimad kliendid">
+        <Description Text="Parimad kliendid valitud perioodil (5 parimat)" />
+      </TopCustomers>
+      <PeriodicReports Text="Perioodilised aruanded">
+        <SelectPeriod Text="Valige aruande periood" />
+      </PeriodicReports>
+    </Dashboard>
+    <Products Text="Tooted">
+      <Loading Text="Toodete lugemine..." />
+      <LearnMore Text="Lisateave toodete kohta" />
+      <Taxes Text="Maksumäärad">
+        <LearnMore Text="Lisateave maksumäärade kohta" />
+        <New Text="Uus maksumäär" />
+        <Switch Text="Vaheta maksumäära">
+          <OldTax Text="Vana maksumäär" />
+          <NewTax Text="Uus maksumäär" />
+          <Tooltip Text="Asenda maksumäär kõigil toodetel" />
+          <Info Text="Kasutage seda vormi kõigi toodete maksumäära asendamiseks.&#xA;&#xA;Valige vana maksumäär, mille soovite uue maksumääraga asendada, ja klõpsake allpool asuvat nuppu &quot;Asenda&quot;." />
+          <Replace Text="Asenda" />
+          <Error Text="Maksumäärade asendamisel tekkis viga.&#xA;Süsteemiteade: {0}" />
+          <Success Text="Maksumäärad asendati edukalt!" />
+        </Switch>
+        <Edit>
+          <Title Text="Muuda maksumäära &quot;{0}&quot;" />
+        </Edit>
+        <Delete>
+          <Title Text="Kustuta maksumäär" />
+          <Confirmation Text="Kas olete kindel, et soovite kustutada maksumäära &quot;{0}&quot;?" />
+          <Error Text="Maksumäära kustutamisel ilmnes viga. Veenduge, et maksumäära ei kasutata ja proovige uuesti." />
+        </Delete>
+        <Tax>
+          <ReadOnly Text="Valitud maksumäär on dokumentides olemas ja seda ei saa muuta" />
+          <Code Text="Kood" />
+          <Name Text="Nimetus" />
+          <Rate Text="Määr" />
+          <Fixed Text="Fikseeritud" />
+          <TaxOnTotal Text="Maksumäär lõppsummale" />
+          <Enabled Text="Lubatud" />
+        </Tax>
+        <Onboarding>
+          <Title Text="Maksumäärad" />
+          <Info Text="Sisestage toodete maksumäärad, kui neid on.&#xA;Süsteemis peab olema vähemalt üks maksumäär." />
+          <AddMore Text="Salvesta ja lisa järgmine">
+            <Error Text="Uue maksumäära lisamisel ilmnes viga. Kontrollige oma andmeid ja proovige uuesti" />
+            <Name Text="Maksumäära nimetud (nt. &quot;Käibemaks&quot;)" />
+          </AddMore>
+          <Existing Text="Olemasolevad maksumäärad">
+            <NoItems Text="Maksumäärad puuduvad. Uute toodete lisamiseks lisage vähemalt üks maksumäär.">
+              <AddDefault Text="Lisage vaikimisi maksumäär" />
+            </NoItems>
+          </Existing>
+        </Onboarding>
+        <NoTaxes Text="Ilma maksumäärata">
+          <Add Text="Lisa uus maksumäär" />
+        </NoTaxes>
+      </Taxes>
+      <New Text="Uus toode">
+        <Product Text="Lisa uus toode" />
+        <Or Text="või" />
+        <Group Text="uus tootegrupp" />
+      </New>
+      <Delete Text="Kustuta toode" />
+      <Edit Text="Muuda toodet" />
+      <Search Text="Otsi toodet">
+        <Result Text="Tulemus" />
+        <Empty Text="Tulemusi pole" />
+      </Search>
+      <Groups Text="Tootegrupid">
+        <Root Text="Tooted" />
+        <Empty Text="Valitud tootegrupid pole tooteid">
+          <Info Text="Lisa toode valitud tootegruppi" />
+        </Empty>
+      </Groups>
+      <Group>
+        <New Text="Uus tootegrupp" />
+        <Edit Text="Muuda tootegruppi">
+          <Title Text="Muuda tootegruppi &quot;{0}&quot;" />
+          <Error>
+            <InvalidParentGroup Text="Vale põhigrupp" />
+          </Error>
+        </Edit>
+        <Name Text="Nimetus" />
+        <Color Text="Värvus" />
+        <Image Text="Pilt">
+          <Browse Text="Sirvi">
+            <Info Text="Valige arvutist tooterühma pilt" />
+          </Browse>
+          <Clear Text="Tühjenda">
+            <Info Text="Eemaldage tooterühma pilt" />
+          </Clear>
+        </Image>
+        <Delete Text="Kustuta tootegrupp">
+          <Title Text="Kustuta tootegrupp" />
+          <Confirmation Text="Kas olete kindel, et soovite kustutada tootegrupi &quot;{0}&quot;?" />
+          <Error Text="Grupi kustutamisel ilmnes viga.&#xA;Süsteemiteade: {0}">
+            <DataViolation Text="Valitud tootegruppi ei saa kustutada.&#xA;&#xA;Veenduge, et gruppi kuuluvad tooted ei oleks dokumentides, reklaamikampaaniates\nega muudes müükides ja proovige uuesti." />
+          </Error>
+        </Delete>
+        <Saved Text="Tootegrupp salvestati edukalt" />
+        <Details Text="Üksikasjad" />
+      </Group>
+      <Product>
+        <Edit Text="Muuda toodet &quot;{0}&quot;" />
+        <Details Text="Toote üksikasjad" />
+        <Name Text="Nimetus" />
+        <Code Text="Kood" />
+        <Barcode Text="Vöötkood">
+          <Generate Text="Genereerige vöötkood" />
+        </Barcode>
+        <MeasurementUnit Text="Mõõtühik" />
+        <Taxes Text="Maksumäär">
+          <Add Text="Lisage tootele maksumäär">
+            <Tooltip Text="Lisage tootele maksumäär" />
+          </Add>
+          <Remove>
+            <Tooltip Text="Eemaldage see maksumäär" />
+          </Remove>
+          <NoTaxes>
+            <Info Text="Maksemäära ei leitud.&#xA;Lisage maksemäärad, et saaksite tootele ühe määrata" />
+          </NoTaxes>
+        </Taxes>
+        <SalePriceBeforeTax Text="Müügihind enne makse" />
+        <SalePrice Text="Müügihind" />
+        <IsTaxIncluded Text="Hind koos maksudega" />
+        <Group Text="Grupp" />
+        <IsEnabled Text="Aktiivne" />
+        <IsService Text="Teenus (mitte ladustatav)" />
+        <IsDiscountAllowed Text="Allahindlus lubatud" />
+        <IsPriceChangeAllowed Text="Hinna muutmine lubatud" />
+        <IsUsingDefaultQuantity Text="Vaikimisi kogus" />
+        <AgeRestriction Text="Vanusepiirang">
+          <Tooltip Text="Selle toote ostmiseks vajalik minimaalne vanus (nt. 18+)" />
+          <Years Text="aasta(t)" />
+          <Validation>
+            <Message Text="See toode on vanusepiiranguga toode.&#xA;Palun kinnitage, et kliendil on lubatud toodet osta.">
+              <Title Text="Vanusepiiranguga toode" />
+              <BornBefore Text="Sündinud kuupäeval või varem:" />
+            </Message>
+            <Confirm Text="Kinnita" />
+          </Validation>
+        </AgeRestriction>
+        <Description Text="Kirjeldus" />
+        <Prices Text="Hind ja maksumäär" />
+        <Cost Text="Maksumus">
+          <BeforeTax Text="(enne maksumäära)" />
+          <Disabled Text="Miks ma ei saa omahinda sisestada?" />
+        </Cost>
+        <Markup Text="Juurdehindlus">
+          <Warning Text="Müügihind ja juurdehindlus on valed, kui kasutate käibemaksuga hinda.&#xA;Juurdehindlusel põhineva müügihinna korrektseks arvutamiseks kasutage maksudeta hinda." />
+        </Markup>
+        <ImageAndColor Text="Pilt ja värv">
+          <Image Text="Pilt">
+            <Browse Text="Sirvi">
+              <Info Text="Valige arvutist toote pilt" />
+            </Browse>
+            <Clear Text="Tühjenda">
+              <Info Text="Eemaldage toote pilt" />
+            </Clear>
+          </Image>
+          <Color Text="Värv" />
+        </ImageAndColor>
+        <Comments Text="Kommentaarid">
+          <Info Text="Kommentaarid prinditakse köögitšekkidele." />
+          <Note Text="Sisestage märkus ..." />
+          <Add Text="Lisage märkus" />
+          <Error>
+            <ExistingComment Text="Märkus on juba lisatud" />
+          </Error>
+        </Comments>
+        <DateCreated Text="Lisatud" />
+        <DateUpdated Text="Uuendatud" />
+        <Saved>
+          <Created Text="Toote loomine õnnestus" />
+          <Updated Text="Toote muutmine õnnestus" />
+        </Saved>
+        <Delete Text="Toote kustutamine">
+          <Confirmation Text="Kas soovite kindlasti toote &quot;{0}&quot; kustutada?" />
+          <Error Text="Toote kustutamisel ilmnes viga.&#xA;Süsteemiteade: {0}" />
+          <DataViolation Text="Toodet ei saa kustutada.&#xA;Veenduge, et toodet pole dokumentides ja proovige uuesti." />
+        </Delete>
+        <Error>
+          <Code Text="Määratud koodiga toode on juba olemas (&quot;{0}&quot;).&#xA;Sisestage ainulaadne tootekood ja proovige uuesti." />
+          <Barcode Text="Määratud vöötkoodiga toode on juba olemas (&quot;{0}&quot;).&#xA;Sisestage unikaalsed vöötkoodid ja proovige uuesti." />
+          <Taxes Text="Leiti duplikaat! Maksumäär (&quot;{0}&quot;) on juba olemas.&#xA;Valige kehtivad maksumäärad ja proovige uuesti." />
+          <Invalid Text="Toodet ei saa sisendiks salvestada. Palun kontrollige veateateid ja proovige uuesti." />
+        </Error>
+      </Product>
+      <Export Text="Eksport">
+        <NoServices Text="Eksporditeenused pole saadaval." />
+        <Success Text="Eksportimine õnnestus." />
+        <Error Text="Ilmnes viga. Palun proovi uuesti." />
+        <Select Text="Valige eksporditüüp" />
+      </Export>
+      <Onboarding>
+        <Import Text="Importige tooteid CSV-failist">
+          <SelectFile Text="Valige fail">
+            <Description Text="Valige oma tooteid sisaldav CSV-fail." />
+          </SelectFile>
+          <Validate Text="Kinnitage">
+            <Description Text="Kinnitage CSV sisu ja tooted importimiseks." />
+            <Error Text="Viga CSV-faili valideerimisel. Kontrollige oma andmeid ja proovige uuesti." />
+            <Success Text="Tooted on importimiseks valmis. Toodete arv: {0}" />
+          </Validate>
+          <ImportProducts Text="Impordi">
+            <Description Text="Klõpsake toodete importimiseks valitud CSV-failist." />
+          </ImportProducts>
+          <NoItems Text="Pole midagi importida" />
+          <Completed Text="Importimine õnnestus!">
+            <Result>
+              <Created Text="Loodud üksused:" />
+              <Updated Text="Uuendatud üksused:" />
+              <DocumentNumber Text="Loodud dokument:" />
+            </Result>
+            <Restart Text="Taaskäivitage import" />
+          </Completed>
+          <Importing Text="Toodete importimine ... Palun oodake ..." />
+        </Import>
+      </Onboarding>
+      <Count Text="Toodete arv:" />
+      <ChangeGroup Text="Toode &quot;{0}&quot; teisaldati gruppi &quot;{1}&quot;" />
+      <Guide>
+        <Title Text="Ava tooted" />
+        <Content Text="Klõpsake siin, et avada toodete jaotis ja lisada mõned tooted oma poodi" />
+        <Add>
+          <Title Text="Toote lisamine" />
+          <Content Text="Uute toodete lisamiseks klõpsake nuppu &quot;Uus toode&quot;" />
+          <Name>
+            <Title Text="Toote nimetus" />
+            <Content Text="Lisage toote nimi ja toote üksikasjad" />
+          </Name>
+          <Prices>
+            <Title Text="Toote hind" />
+            <Content Text="Toote hinna määramiseks klõpsake siin" />
+            <SalePrice>
+              <Title Text="Müügihind" />
+              <Content Text="Määrake toote müügihind nii, et see ilmuks müügiekraanile" />
+            </SalePrice>
+          </Prices>
+          <Save>
+            <Title Text="Salvestage muudatused" />
+            <Content Text="Muudatuste salvestamiseks ja uue toote lisamiseks klõpsake nuppu &quot;Salvesta&quot;" />
+          </Save>
+        </Add>
+      </Guide>
+      <Settings Text="Tooted">
+        <Title Text="Toote vaikeväärtused" />
+        <PriceIncludesTax Text="Hind sisaldab makse">
+          <Tooltip Text="Selle valimisel, on uute toodete hind vaikimisi koos maksudega" />
+        </PriceIncludesTax>
+        <DefaultTax Text="Vaikimisi maksumäär">
+          <NoTaxes Text="Maksumäära ei leitud. Lisage uus maksumäär halduse alajaotuses &quot;Maksumäärad&quot;." />
+        </DefaultTax>
+        <MarkupOption Text="Omahinna põhine juurdehindlus">
+          <Tooltip Text="Selle valimisel uuendab omahinna muutmine müügihinna asemel juurdehindlust" />
+        </MarkupOption>
+      </Settings>
+      <Import Text="Importimine">
+        <LearnMore Text="Lisateave CSV-failide importimise kohta" />
+        <Basic Text="Põhiline">
+          <Description Text="Lihtsustatud importimist saate kasutada, järgides juhendit CSV-faili loomiseks aadressil">
+            <Link Text="meie tugikeskuse veebilehel" />
+            <Formatting Text="Kui kasutate ettevalmistatud CSV-faili, lugege kindlasti seda">
+              <Link Text="õpetust CSV-faili vormindamise kohta" />
+            </Formatting>
+            <Exported Text="Samuti saate selle lihtsustatud importimise abil importida tooteid, mis on varem eksporditud Aronium'i ekspordifunktsioonide abil." />
+          </Description>
+        </Basic>
+        <Advanced Text="Laiendatud valikud">
+          <Description Text="Kasutage laiendatud valikutega importimist toodete üleslaadimiseks, kasutades kohandatud CSV-faili või mõnest muust rakendusest eksporditud CSV-faili.&#xA;Laiendatud valikutega importimise kohta leiate lisateavet aadressilt">
+            <Link Text="meie tugikeskuse lehelt" />
+          </Description>
+          <SelectFile Text="Valige fail" />
+          <Fields>
+            <Name Text="Nimetus" />
+            <ProductGroup Text="Tootegrupp" />
+            <SKU Text="SKU" />
+            <Barcode Text="Vöötkood" />
+            <MeasurementUnit Text="Möötühik" />
+            <Cost Text="Maksumus" />
+            <Markup Text="Juurdehindlus" />
+            <Price Text="Hind" />
+            <TaxPercent Text="Maksuprotsent" />
+            <IsTaxInclusivePrice Text="Maksudega hind" />
+            <IsPriceChangeAllowed Text="Hinna muutmine on lubatud" />
+            <IsUsingDefaultQuantity Text="Vaikekoguse kasutamine" />
+            <IsService Text="Teenus (ladu ei kasutata)" />
+            <IsEnabled Text="Lubatud" />
+            <Description Text="Kirjeldus" />
+            <Quantity Text="Kogus" />
+            <Clear Text="Tühjenda väärtus" />
+          </Fields>
+          <Duplicates Text="Mis juhtub, kui leitakse duplikaadid?">
+            <Skip Text="Jäta duplikaadid vahele" />
+            <Merge Text="Liida duplikaadid" />
+          </Duplicates>
+          <RequiredField Text="Märgib nõutud välja" />
+          <Import Text="Impordi" />
+          <Preview Text="Eelvaade">
+            <ProductsCount Text="Imporditavate toodete arv:" />
+          </Preview>
+          <Error>
+            <RequiredFields Text="Kohustuslikud väljad puuduvad. Enne importimist valige kõik kohustuslikud väljad." />
+            <InvalidContent Text="Viga CSV-faili töötlemisel. Kontrollige faili sisu ja proovige uuesti.&#xA;Veateade: {0}" />
+            <InvalidField Text="Vigane sisend välja &quot;{0}&quot; jaoks. Kontrollige faili sisu ja proovige uuesti." />
+            <FileNotSelected Text="CSV-faili pole valitud. Valige jätkamiseks fail." />
+            <DuplicateSKU Text="Tuvastati tootekoodide duplikaadid. Toote nimi: &quot;{0}&quot;. Dubleeritud kood: &quot;{1}&quot;" />
+            <DuplicateName Text="Tuvastati toote duplikaat. Toote nimetus: &quot;{0}&quot;." />
+          </Error>
+        </Advanced>
+        <Xml Text="Aronium Xml">
+          <Description Text="Teisest Aronium'i eksemplarist eksporditavate toodete laadimiseks, kasutage XML-i importimist.&#xA;XML-i importimine säilitab kõik atribuudid, sealhulgas pildid ja toodete hierarhia." />
+          <SelectFile Text="Valige fail" />
+          <Import Text="Importige" />
+        </Xml>
+        <Csv Text="CSV">
+          <Description Text="Kasutage CSV-importi toodete laadimiseks kohandatud CSV-faili või muust rakendusest eksporditud CSV-faili abil.&#xA;Lisateavet CSV-failide abil toodete importimise kohta leiate aadressilt ">
+            <Link Text="meie tugikeskus" />
+          </Description>
+          <SelectFile Text="Valige fail" />
+          <Fields>
+            <Name Text="Nimetus" />
+            <ProductGroup Text="Tooterühm" />
+            <SKU Text="SKU" />
+            <Barcode Text="Vöötkood" />
+            <MeasurementUnit Text="Mõõtühik" />
+            <Cost Text="Maksumus" />
+            <Markup Text="Juurdehindlus" />
+            <Price Text="Hind" />
+            <Tax Text="Maksumäär" />
+            <IsTaxInclusivePrice Text="Hind koos käibemaksuga" />
+            <IsPriceChangeAllowed Text="Hinnamuutus lubatud" />
+            <IsUsingDefaultQuantity Text="Vaikekoguse kasutamine" />
+            <IsService Text="Teenus (ei kasuta laoseisu)" />
+            <IsEnabled Text="Lubatud" />
+            <Description Text="Kirjeldus" />
+            <Quantity Text="Kogus" />
+            <Clear Text="Tühista väärtus" />
+          </Fields>
+          <Duplicates Text="Mis juhtub, kui leitakse duplikaadid?">
+            <Skip Text="Jäta duplikaadid vahele" />
+            <Merge Text="Ühendage duplikaadid" />
+          </Duplicates>
+          <RequiredField Text="Märgib nõutud välja" />
+          <Import Text="Impordi" />
+          <Preview Text="Eelvaade">
+            <ProductsCount Text="Imporditavate toodete arv:" />
+          </Preview>
+          <Error>
+            <RequiredFields Text="Kohustuslikud väljad puuduvad. Palun valige enne importimist kõik nõutavad väljad." />
+            <InvalidContent Text="Viga CSV-faili lugemisel. Kontrollige faili sisu ja proovige uuesti.&#xA;Veateade: {0}" />
+            <InvalidField Text="Vale väärtus väljale &quot;{0}&quot;. Palun kontrolli veelkord faili sisu ja proovi uuesti." />
+            <FileNotSelected Text="CSV-faili pole valitud. Jätkamiseks valige fail." />
+            <DuplicateSKU Text="Tuvastati dubleerivad tootekoodid. Toote nimi: &quot;{0}&quot;. Dubleeritud kood: &quot;{1}&quot;" />
+            <DuplicateName Text="Tuvastati tootenime duplikaat. Toote nimi: &quot;{0}&quot;." />
+          </Error>
+          <Document Text="Loo dokument määratud kogusest">
+            <Purchase Text="Ostud" />
+            <InventoryCount Text="Varude arv" />
+          </Document>
+        </Csv>
+      </Import>
+      <PriceTags Text="Hinnasildid">
+        <Loading Text="Hinnasiltide malli laadimine ... Palun oodake ..." />
+        <Layout Text="Paigutus">
+          <Columns Text="Veerud" />
+          <RowHeight Text="Rea kõrgus" />
+          <PaperSize Text="Paberi suurus">
+            <Custom Text="Kohandatud" />
+          </PaperSize>
+          <PageWidth Text="Lehe laius" />
+          <PageHeight Text="Lehe kõrgus" />
+          <LabelWidth Text="Sildi laius" />
+          <LabelHeight Text="Sildi kõrgus" />
+          <RowSpacing Text="Reavahe" />
+          <ColumnSpacing Text="Veergude vahe" />
+          <RollPaper Text="Printimine rullpaberile (piiramatu kõrgus)" />
+        </Layout>
+        <Display Text="Kuva">
+          <Barcode Text="Vöötkood">
+            <Type Text="Vöötkoodi tüüp" />
+            <Height Text="Vöötkoodi kõrgus" />
+          </Barcode>
+          <Code Text="Kood (SKU)" />
+          <PriceIncludesTax Text="Maksudega hind" />
+          <Borders Text="Piirid" />
+          <Product Text="Toote nimetus">
+            <FontSize Text="Toote nimetuse suurus" />
+          </Product>
+          <Price Text="Hind">
+            <FontSize Text="Toote hinna suurus" />
+          </Price>
+        </Display>
+        <Products Text="Tooted">
+          <All Text="Kõik tooted" />
+          <Product Text="Toode" />
+          <NumberOfCopies Text="Koopiate arv" />
+          <NoSelection Text="Ühtegi toodet pole valitud&#xA;Kõik tooted prinditakse" />
+        </Products>
+      </PriceTags>
+      <Sort Text="Järjestus">
+        <Top Text="Ülal" />
+        <Bottom Text="All" />
+        <Reset Text="Lähtesta">
+          <Confirmation Text="See tühjendab kohandatud sortimise ja lähtestab kõik tooted ja rühmad vaikejärjestusele.&#xA;&#xA;Kas soovite jätkata?">
+            <Title Text="Lähtestage toodete ja rühmade sortimise järjekord" />
+          </Confirmation>
+        </Reset>
+        <Menu>
+          <Top Text="Liigu üles" />
+          <Bottom Text="Liigu alla" />
+          <Reset Text="Reset products and groups" />
+          <SortProducts Text="Sorteeri tooteid" />
+          <SortGroups Text="Sorteeri gruppe" />
+        </Menu>
+        <NoItems Text="Valitud grupil pole sortimiseks üksusi" />
+        <Success Text="Tooted edukalt sorteeritud" />
+        <Progress Text="Toodete sorteerimine... Palun oota..." />
+        <UnsavedChanges Text="On salvestamata muudatusi, mis lähevad jätkamisel kaotsi.&#xA;&#xA;Kas olete kindel, et soovite jätkata ja kaotada salvestamata muudatused?">
+          <Title Text="Salvestamata muudatused" />
+        </UnsavedChanges>
+      </Sort>
+    </Products>
+    <Customers Text="Kliendid ja tarnijad">
+      <Search Text="Otsige kliente ja tarnijaid" />
+      <LearnMore Text="Lisateave klientide ja tarnijate kohta" />
+      <New Text="Uus klient / tarnija" />
+      <Delete Text="Kustuta">
+        <Confirmation Text="Kas olete kindel, et soovite üksuse &quot;{0}&quot; kustutada?" />
+        <Error Text="Viga kliendi kustutamisel. Klienti ei saanud kustutada.&#xA;Süsteemiteade: {0}" />
+      </Delete>
+      <Customer>
+        <Edit Text="Muuda &quot;{0}&quot;" />
+        <General Text="Üldine">
+          <Title Text="Üldine info" />
+          <Code Text="Kood" />
+          <Name Text="Nimi" />
+          <Address Text="Aadress" />
+          <PostalCode Text="Postiindeks" />
+          <City Text="Linn" />
+          <Country Text="Riik" />
+          <TaxNumber Text="Reg. number" />
+          <RabatePercent Text="Allahindlus" />
+          <Email Text="E-post" />
+          <PhoneNumber Text="Telefoni number" />
+          <IsEnabled Text="Aktiivne" />
+          <IsCustomer Text="Klient" />
+          <IsSupplier Text="Tarnija" />
+        </General>
+        <Loyalty>
+          <Discounts Text="Allahindlused">
+            <Title Text="Määrake kliendiallahindlusi toodetele või tooterühmadele" />
+            <Info Text="Määra valitud tootele allahindlus" />
+            <NoItems Text="Allahindlusi pole" />
+            <Existing Text="Allahindlus tootel „{0}” on juba olemas." />
+            <Clear Text="Tühista kõik allahindlused" />
+          </Discounts>
+          <Cards Text="Kliendikaardid">
+            <Title Text="Sisestage klientide püsikliendikaardid" />
+            <CardNumber Text="Kaardi number" />
+            <Add Text="Lisa kaart" />
+            <Duplicate Text="Kliendikaart juba eksisteerib">
+              <Warning Text="Kliendikaart &quot;{0}&quot; on juba kasutajale {1} määratud. Kliendikaardid peavad olema kordumatud.&#xA;&#xA;Kasutage selle kliendi jaoks teist kaarti ja proovige uuesti." />
+            </Duplicate>
+          </Cards>
+        </Loyalty>
+        <Saved>
+          <Created Text="Uus klient on edukalt loodud." />
+          <Updated Text="Kliendi andmed on edukalt muudetud." />
+        </Saved>
+        <Existing Text="Olemasolev klient">
+          <Warning Text="Sarnane klient on juba olemas: „{0}”.&#xA;Duplikaatväljad: {1}.&#xA;&#xA;Kas soovite ikkagi kliendi andmed salvestada?" />
+        </Existing>
+        <PaymentTerms Text="Maksetingimused">
+          <DueDatePeriod Text="Maksetähtaeg">
+            <Info Text="Kasutage maksetähtaega, et määrata päevade arv, mille jooksul kliendil tuleb tasuda iga esitatud tasumata arvega müügi eest" />
+            <Days Text="päev(a)" />
+          </DueDatePeriod>
+        </PaymentTerms>
+        <Default>
+          <Warning Text="See on vaikeklient, mida kasutatakse kogu müügi puhul, kus klienti pole selgesõnaliselt määratud.&#xA;&#xA;Soovitame tungivalt seda klienti mitte muuta." />
+        </Default>
+      </Customer>
+      <Guide>
+        <Title Text="Kliendid ja tarnijad" />
+        <Content Text="Klientide ja tarnijate jaotise avamiseks klõpsake siin" />
+        <Add>
+          <Title Text="Lisage klient või tarnija" />
+          <Content Text="Uue kliendi või tarnija loomiseks klõpsake siin" />
+          <Name>
+            <Title Text="Sisestage nimi" />
+            <Content Text="Sisestage kliendi või tarnija nimi" />
+          </Name>
+          <Save>
+            <Title Text="Salvestage muudatused" />
+            <Content Text="Kui olete kõik üksikasjad sisestanud, klõpsake muudatuste salvestamiseks nuppu &quot;Salvesta&quot;" />
+          </Save>
+        </Add>
+      </Guide>
+      <Import Text="Impordi">
+        <Title Text="Impordi kliendid" />
+        <Description Text="Kasutage klientide importimist klientide loendi üleslaadimiseks, kasutades teie kohandatud CSV-faili või mõnest muust rakendusest eksporditud CSV-faili.&#xA;Lisateavet klientide impordi kohta leiate aadressilt">
+          <Link Text="meie tugikeskuse lehel" />
+        </Description>
+        <Fields>
+          <Name Text="Nimi" />
+          <Code Text="Kood" />
+          <TaxNumber Text="Reg. number" />
+          <Address Text="Aadress" />
+          <ZIP Text="Postiindeks" />
+          <City Text="Linn" />
+          <Country Text="Riik" />
+          <Email Text="E-post" />
+          <Phone Text="Telefon" />
+          <IsEnabled Text="Lubatud" />
+          <IsCustomer Text="Klient" />
+          <Clear Text="Tühijenda väärtus" />
+        </Fields>
+        <Import Text="Impordi" />
+        <Preview Text="Eelvaade">
+          <CustomersCount Text="Imporditavaid kliente kokku:" />
+        </Preview>
+        <RequiredField Text="Märgib nõutud välja" />
+        <Importing Text="Klientide importimine ... Palun oodake ..." />
+        <Error>
+          <RequiredFields Text="Kohustuslikud väljad puuduvad. Enne importimist valige kõik kohustuslikud väljad." />
+          <InvalidContent Text="Viga CSV-faili töötlemisel. Kontrollige faili sisu ja proovige uuesti.&#xA;Veateade: {0}" />
+          <InvalidField Text="Vigane väärtus väljal &quot;{0}”. Kontrollige faili sisu ja proovige uuesti." />
+          <FileNotSelected Text="CSV-faili pole valitud. Valige jätkamiseks fail." />
+          <DuplicateName Text="Tuvastati kliendi nime duplikaat. Kliendi nimi: &quot;{0}&quot;." />
+        </Error>
+        <Completed Text="Klientide import õnnestus!" />
+      </Import>
+      <Export Text="Eksportimine">
+        <Completed Text="Kliendiandmete eksportimine õnnestus!\nFaili nimi: &quot;{0}&quot;" />
+      </Export>
+    </Customers>
+    <PaymentTypes Text="Makseviisid">
+      <LearnMore Text="Lisateave maksetüüpide kohta" />
+      <New Text="Uus maksetüüp" />
+      <Edit Text="Muuda maksetüüpi &quot;{0}&quot;" />
+      <Delete Text="Kustutage maksetüüp">
+        <Confirmation Text="Kas olete kindel, et soovite üksuse &quot;{0}” kustutada?" />
+        <Error Text="Viga maksetüübi kustutamisel. Valitud maksetüüpi ei saa kustutada.&#xA;Süsteemiteade: {0}" />
+        <DataViolation Text="Valitud maksetüüpi ei saa kustutada. Veenduge, et maksetüüpi ei kasutataks dokumentides, ja proovige uuesti." />
+      </Delete>
+      <PaymentType>
+        <Name Text="Nimetus" />
+        <Code Text="Kood" />
+        <IsCustomerRequired Text="Klient nõutud" />
+        <IsFiscal Text="Prindi kviitung" />
+        <IsChangeAllowed Text="Muutmine lubatud" />
+        <Ordinal Text="Asukoht" />
+        <IsEnabled Text="Lubatud" />
+        <IsQuickPayment Text="Kiirmakse" />
+        <OpenCashDrawer Text="Ava rahasahtel" />
+        <ShortcutKey Text="Kiirkorralduse klahv" />
+        <MarkAsPaid Text="Märgi tehing tasutuks" />
+        <Saved>
+          <Created Text="Payment type successfully created." />
+          <Updated Text="Maksetüübi muutmine õnnestus." />
+        </Saved>
+        <Error Text="Viga">
+          <ExistingShortcutKey Text="Määratud otseteeklahv on juba määratud maksetüübile &quot;{0}&quot;.&#xA;Kiirklahvid peavad olema unikaalsed.&#xA;\nPalun määrake teine kiirklahv ja proovige uuesti.">
+            <Title Text="Tuvastati duplikaat" />
+          </ExistingShortcutKey>
+        </Error>
+      </PaymentType>
+      <Onboarding>
+        <Title Text="Maksetüübid" />
+        <Info Text="Sisestage oma poes müügiks kasutatud maksetüübid." />
+        <AddMore Text="Salvesta ja lisa veel">
+          <Error Text="Uue maksetüübi lisamisel ilmnes viga.&#xA;Kontrollige sisendit ja proovige uuesti" />
+        </AddMore>
+        <Existing Text="Olemasolevad maksetüübid" />
+      </Onboarding>
+    </PaymentTypes>
+    <Documents Text="Dukomendid">
+      <View Text="Vaata dokumente" />
+      <Search Text="Otsi dokumente">
+        <Customer Text="Klient">
+          <All Text="Kõik kliendid" />
+        </Customer>
+        <Product Text="Toode">
+          <All Text="Kõik tooted" />
+        </Product>
+        <Period Text="Periood">
+          <Tip Text="Klõpsake otsinguperioodi valimiseks" />
+        </Period>
+        <DocumentType Text="Dokumendi tüüp">
+          <All Text="Kõik dokumenditüübid" />
+        </DocumentType>
+        <User Text="Kasutaja">
+          <All Text="Kõik kasutajad" />
+        </User>
+        <PaidStatus Text="Maksmise staatus">
+          <None Text="Kõik tehingud" />
+          <Paid Text="Makstud" />
+          <Unpaid Text="Maksmata" />
+        </PaidStatus>
+        <DocumentNumber Text="Dokumendi number" />
+        <ReferenceDocumentNumber Text="Väline dokument" />
+        <CashRegister Text="Kassa">
+          <All Text="Kõik kassad" />
+        </CashRegister>
+        <Clear Text="Tühista kõik filtrid" />
+      </Search>
+      <Document>
+        <Save>
+          <Saved Text="Dokumendi salvestamine õnnestus" />
+          <Error Text="Viga dokumendi salvestamisel. Muudatusi ei salvestata.&#xA;Süsteemiteade: {0}">
+            <InvalidPayments Text="Vigane makse summa">
+              <Info Text="Maksete summa peab olema võrdne dokumendi kogusummaga. Parandage dokumendimaksed ja proovige uuesti.&#xA;&#xA;Dokumendi koguarv: {0}. Maksesumma: {1}." />
+            </InvalidPayments>
+          </Error>
+        </Save>
+        <UnsavedChanges Text="Salvestamata muudatused">
+          <Confirmation Text="Dokumendis &quot;{0}&quot; on salvestamata muudatusi.&#xA;&#xA;Kas soovite dokumendi enne sulgemist salvestada?" />
+        </UnsavedChanges>
+        <StockDate Text="Valige laovarude muutmise kuupäev">
+          <Description Text="Sisestage kuupäev, millal lao muutus on selle dokumendiga registreeritud" />
+          <Invalid Text="Vigane ladustamise kuupäev">
+            <Description Text="Valitud toiming pole lubatud.&#xA;&#xA;Olemasolevate varude arv on leitud. Dokumendi „{0}” loomise kuupäev on {1}.&#xA;&#xA;Kontrollige dokumenti ja proovige uuesti." />
+            <Message Text="Valitud ladustamise kuupäev pole lubatud.&#xA;Varude arv on {0}, loodud {1}" />
+            <InvalidTime Text="Inventuuri aeg ei saa olla tulevikus" />
+          </Invalid>
+        </StockDate>
+        <Note Text="Märkus" />
+        <InternalNote Text="Sisemine märkus" />
+        <PaidStatus>
+          <Changed Text="Tasumise oleku muutmine õnnestus" />
+        </PaidStatus>
+        <Items>
+          <CostPrice>
+            <Settings>
+              <AutoUpdate Text="Uuenda automaatselt ostuhinda" />
+            </Settings>
+            <Update Text="Värskenda omahinda">
+              <Info Text="Toote maksumus on muutunud. Valige üksused, mille omahinda soovite muuta." />
+              <Confirmation Text="Kas soovite uuendada valitud toodete omahinda?" />
+              <Success Text="Omahindade uuendamine õnnestus" />
+            </Update>
+          </CostPrice>
+          <Missing Text="Valitud toodet pole olemas." />
+        </Items>
+        <Payments>
+          <AutomaticallyModified Text="Maksed ja olemasolevad summad uuendatakse maksete kogusummaga vastavusse viimiseks" />
+          <MarkPaid Text="Kõik krediidimaksed on nüüd tasutud. Kas soovite märkida dokumendi tasutuks?">
+            <Title Text="Dokumendi oleku värskendamine" />
+          </MarkPaid>
+          <Status Text="Olek">
+            <Paid Text="Makstud" />
+            <Unpaid Text="Maksmata" />
+          </Status>
+        </Payments>
+      </Document>
+      <New>
+        <SelectDocumentType Text="Vali dokumendi tüüp" />
+      </New>
+      <NoDocument Text="Taotletud dokumenti ei eksisteeri." />
+      <Inventory>
+        <Date Text="Valige inventuuri kuupäev">
+          <Description Text="Sisestage varude loendi loomise kuupäev." />
+        </Date>
+        <Document>
+          <Item>
+            <Expected Text="Eeldatav" />
+            <Counted Text="Loendatud" />
+            <ChangeQuantity Text="Koguse muutus" />
+          </Item>
+          <ExistingItem Text="Valitud toode on juba sellesse dokumenti lisatud." />
+          <Service Text="Teenuse lisamine varude loendisse">
+            <Info Text="Valitud toode &quot;{0}&quot; on märgitud teenusena. Kas soovite kindlasti teenuse lisada varude loendisse?" />
+          </Service>
+          <AddGroup Text="Lisage tootegrupp dokumenti">
+            <Confirmation Text="Kas soovite kindlasti lisada kõik grupi „{0}” tooted varude loendisse?" />
+          </AddGroup>
+        </Document>
+      </Inventory>
+      <Guide>
+        <Title Text="Avatud dokumendid" />
+        <Content Text="Dokumentide jaotise avamiseks ja oma esimese ostu lisamiseks klõpsake siin" />
+        <Add>
+          <Title Text="Loo dokument" />
+          <Content Text="Uue ostu loomiseks ja kaupade ladustamiseks klõpsake siin" />
+          <Customer>
+            <Title Text="Valige klient" />
+            <Content Text="Valige selle dokumendi klient" />
+          </Customer>
+          <Supplier>
+            <Title Text="Valige tarnija" />
+            <Content Text="Valige selle dokumendi tarnija" />
+          </Supplier>
+          <Product>
+            <Title Text="Vali toode" />
+            <Content Text="Topeltklõpsake toodet, mille soovite dokumenti lisada" />
+          </Product>
+          <Item>
+            <Quantity>
+              <Title Text="Sisestage kogus" />
+              <Content Text="Sisestage ostetud kogus. See kogus kantakse varudesse" />
+            </Quantity>
+            <Price>
+              <Title Text="Hind" />
+              <Content Text="Sisestage ühiku hind" />
+            </Price>
+            <Save>
+              <Title Text="Salvestage muudatused" />
+              <Content Text="Muudatuste salvestamiseks ja selle üksuse dokumenti lisamiseks klõpsake nuppu &quot;Salvesta&quot;" />
+            </Save>
+          </Item>
+          <Save>
+            <Title Text="Salvesta dokument" />
+            <Content Text="Dokumendi salvestamiseks klõpsake nuppu &quot;Salvesta&quot;" />
+          </Save>
+        </Add>
+      </Guide>
+    </Documents>
+    <Countries Text="Riigid">
+      <New Text="Uus riik" />
+      <Delete>
+        <Title Text="Kustuta riik" />
+        <Confirmation Text="Kas soovite kindlasti riigi „{0}” kustutada?" />
+      </Delete>
+      <Country>
+        <Edit Text="Muuda riiki &quot;{0}&quot;" />
+        <Name Text="Nimi" />
+        <Code Text="Kood" />
+        <Saved>
+          <Created Text="Riik on edukalt loodud" />
+          <Updated Text="Riik on edukalt muudetud" />
+        </Saved>
+      </Country>
+    </Countries>
+    <Company Text="Minu ettevõte">
+      <LearnMore Text="Lisateave ettevõtte üksikasjade kohta" />
+      <Details Text="Minu ettevõtte andmed">
+        <Title Text="Ettevõtte andmed" />
+        <Logo Text="Logo">
+          <Add Text="Sirvi" />
+          <Remove Text="Tühjenda" />
+        </Logo>
+        <BankAccount Text="Pangakonto">
+          <Number Text="Pangakonto number" />
+          <BankDetails Text="Pangarekvisiidid" />
+        </BankAccount>
+      </Details>
+      <Saved Text="Ettevõtte andmete salvestamine õnnestus" />
+      <Onboarding>
+        <Title Text="Ettevõtte andmed" />
+        <Info Text="Sisestage oma ettevõtte andmed. Ettevõtte andmeid kasutatakse kviitungite ja arvete jaoks" />
+      </Onboarding>
+      <Reset Text="Lähtesta andmebaas">
+        <Info Text="Selle toimingu käivitamine toob kaasa täieliku andmete kadumise.&#xA;&#xA;Andmebaasi lähtestamine kustutab kõik tehingud, kliendid, tooted ja lähtestab kõik loendurite väärtused." />
+        <AdminPassword Text="Sisestage administraatori parool" />
+        <Backup>
+          <Info Text="Andmebaasi varundamine tehakse enne lähtestamist.&#xA;Vaikimisi varundamise sihtkohta saate muuta allolevate väljade abil." />
+          <Path Text="Varundatava andmebaasi asukoht">
+            <Select Text="Enne lähtestamist, valige sihtkoht, kuhu andmebaasi varukoopia salvestatakse." />
+          </Path>
+          <Completed Text="Andmebaasi varundamine on lõpetatud" />
+          <Description Text="Asukoht, kuhu andmebaasi varukoopia salvestatakse" />
+        </Backup>
+        <PerformReset Text="Lähtesta andmebaas">
+          <Confirmation Text="Kas olete kindel, et soovite andmebaasi lähtestada ja kõik andmed kustutada?">
+            <Title Text="Andmebaasi lähtestamine on pooleli" />
+          </Confirmation>
+          <Error>
+            <NoSelection Text="Valige lähtestamiseks vähemalt üks üksus." />
+          </Error>
+        </PerformReset>
+        <Completed Text="Andmebaasi lähtestamine õnnestus. Arooium taaskäivitub." />
+        <Selection Text="Valige lähtestatavad üksused">
+          <Description Text="Valitud üksused kustutatakse andmebaasist" />
+          <Items>
+            <Documents Text="Dokumendid" />
+            <Products Text="Tooted" />
+            <Customers Text="Kliendid" />
+            <Promotions Text="Pakkumised/Kampaaniad" />
+            <Counters Text="Loendurid" />
+            <CashInOut Text="Sularaha sisse / välja" />
+            <Taxes Text="Maksumäärad" />
+            <OpenOrders Text="Avatud tellimused" />
+          </Items>
+        </Selection>
+        <Confirmation Text="Kinnitamine">
+          <Description Text="Rakendage valitud üksustele ja lähtestage need" />
+        </Confirmation>
+      </Reset>
+    </Company>
+    <Guide>
+      <Title Text="Haldus" />
+      <Content Text="Halduse jaotise avamiseks ning toodete ja klientide lisamiseks klõpsake siin" />
+    </Guide>
+    <Authorization>
+      <Title Text="Sisestage haldus-sektsiooni juurdepääsu parool" />
+    </Authorization>
+  </Management>
+  <Loyalty Text="Lojaalsus" />
+</Language>

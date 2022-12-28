@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Stock Text="Varud">
+    <Items>
+      <Item>
+        <Product>
+          <Id Text="Tunnus" />
+          <Code Text="Kood" />
+          <Name Text="Nimentus" />
+          <MeasurementUnit Text="Mõõtühik" />
+          <CostPrice Text="Sisseostuhind" />
+        </Product>
+        <Quantity Text="Kogus" />
+        <NegativeQuantity Text="Negatiivne lao kogus" />
+        <TotalCostBeforeTax Text="Maksumus" />
+        <TotalCost Text="Maksumus koos maksudega" />
+        <TotalBeforeTax Text="Väärtus" />
+        <TotalAfterTax Text="Väärtus koos maksudega" />
+      </Item>
+      <Filter>
+        <NegativeQuantity Text="Negatiivne kogus">
+          <Info Text="Näita ainult negatiivse kogusega tooteid" />
+        </NegativeQuantity>
+        <NonZeroQuantity Text="Mitte null kogus">
+          <Info Text="Kuva ainult tooted, mille kogus pole null" />
+        </NonZeroQuantity>
+        <ZeroQuantity Text="Null kogus">
+          <Info Text="Näita ainult nullkogusega tooteid" />
+        </ZeroQuantity>
+      </Filter>
+      <Summary>
+        <NegativeCount Text="Negatiivse kogusega laos olevad tooted kokku" />
+        <ZeroCount Text="Laos nullkogusega kaubad kokku" />
+        <PositiveCount Text="Positiivse kogusega laos olevad kaubad kokku" />
+        <TotalBeforeTax Text="Kokku:" />
+        <TotalIncludingTax Text="Kokku koos maksudega:" />
+        <SellPrice Text="Müügihind" />
+        <CostPrice Text="Sisseostuhind">
+          <TotalCostBeforeTax Text="Kogumaksumus:" />
+          <TotalCostAfterTax Text="Kogumaksumus koos maksudega:" />
+        </CostPrice>
+      </Summary>
+    </Items>
+    <Reset Text="Varude kogused arvutatakse ümber">
+      <Completed Text="Varude arvutamine on edukalt lõpule viidud." />
+    </Reset>
+    <History Text="Varude ajalugu">
+      <Start Text="Algus" />
+      <End Text="Lõpp" />
+      <Document Text="Dokument">
+        <DocumentType Text="Dokumendi tüüp" />
+        <Customer Text="Klient" />
+        <Date Text="Kuupäev" />
+        <StockDate Text="Tehingu ajatempel" />
+      </Document>
+      <ChangeQuantity Text="Kogus" />
+      <InStock Text="Laos" />
+      <MeasurementUnit Text="Mõõtühik" />
+      <CostPrice Text="Sisseostuhind" />
+    </History>
+    <Print>
+      <Report Text="Varude loendamise aruanne" />
+    </Print>
+    <ProductDetails>
+      <OnHand Text="Käesolev kogus" />
+    </ProductDetails>
+    <Control>
+      <Settings>
+        <PreventNegativeQuantities Text="Vältige negatiivseid varusid" />
+      </Settings>
+      <NegativeQuantity Text="Nullvaruga toote müük">
+        <Confirmation Text="Teil pole selle kauba müümiseks piisavalt kogust. Selle toote müümine võib anda laos negatiivse koguse.&#xA;&#xA;Käesolev kogus: {0}&#xA;Nõutav kogus: {1}&#xA;&#xA;Kas soovite kindlasti selle toote praegusele müügile lisada?" />
+        <Title Text="Laokogus puudub" />
+        <PermissionDenied Text="Teil pole nullkogusega üksuste müümiseks piisavalt õigusi. Palun pöörduge administraatori poole." />
+        <Authorization>
+          <Title Text="Varude kontroll on lubatud.&#xA;Jätkamiseks palun sisestage parool nullvaruga toodete müümiseks" />
+        </Authorization>
+        <AllowMultiple>
+          <NotAllowed Text="Korduv voor pole lubatud, kui varude kontroll on lubatud." />
+        </AllowMultiple>
+        <Security>
+          <Description Text="Kontrollib, kas kasutaja saab müüa negatiivse kogusega tooteid" />
+        </Security>
+      </NegativeQuantity>
+    </Control>
+    <QuickInventory Text="Kiire inventeerimine">
+      <Description Text="Muutke valitud toodete laokoguseid" />
+      <Title Text="Uuendage laoseisu" />
+      <Subtitle Text="Määrake valitud toote laokogused.&#xA;Varude loendamise dokument luuakse automaatselt." />
+      <Success Text="Laokogust muudeti edukalt.&#xA;Dokument {0} on loodud." />
+      <Unauthorized Text="Teil pole õigusi kiire inventuuri kasutamiseks." />
+    </QuickInventory>
+    <LearnMore Text="Lisateave varude ja inventuuri kohta" />
+    <SearchResults Text="Otsingutulemus" />
+    <ShowCostPrices Text="Vaadake omahindu">
+      <Description Text="Määrab, kas laovarude vaates kuvatakse toodete omahinda." />
+    </ShowCostPrices>
+  </Stock>
+</Language>

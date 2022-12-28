@@ -1,0 +1,1315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ar" name="Arabic" rtl="true">
+  <Buttons>
+    <SavePdf Text="حفظ PDF" />
+    <Yes Text="نعم" />
+    <Ok Text="موافق" />
+    <No Text="لا" />
+    <Cancel Text="الغاء" />
+    <Save Text="احفظ" />
+    <Close Text="إغلاق" />
+    <Add Text="إضافة" />
+    <New Text="جديد" />
+    <Edit Text="تعديل" />
+    <Cut Text="قص" />
+    <Copy Text="نسخ" />
+    <Paste Text="لصق" />
+    <Delete Text="حذف" />
+    <Refresh Text="تحديث" />
+    <Login Text="تسجيل دخول" />
+    <Logout Text="تسجيل خروج" />
+    <Print Text="طباعة" />
+    <Hide Text="إخفاء" />
+    <FirstPage Text="الصفحة الأولى" />
+    <LastPage Text="آخر صفحة" />
+    <NextPage Text="الصفحة التالية" />
+    <PreviousPage Text="الصفحة السابقة" />
+    <Continue Text="متابعة" />
+    <Clear Text="مسح" />
+    <Exit Text="خروج" />
+    <Search Text="بحث" />
+    <Ignore Text="تجاهل" />
+    <Retry Text="إعادة المحاولة" />
+    <DeleteAll Text="حذف الكل" />
+    <Skip Text="تخطي" />
+    <Restart Text="إعادة تشغيل" />
+    <SaveAndClose Text="احفظ وأغلق" />
+    <Help Text="مساعدة" />
+    <Back Text="خلف" />
+    <LearnMore Text="معرفة المزيد" />
+    <Done Text="تم" />
+    <Send Text="إرسال" />
+    <WhatsThis Text="ما هذا؟" />
+    <Maximize Text="تصغير" />
+    <Restore Text="إستعادة" />
+    <Browse Text="عرض" />
+    <Pdf Text="PDF" />
+    <Excel Text="Excel" />
+  </Buttons>
+  <Bootstrap>
+    <Load>
+      <Components Text="يتم الآن تحميل مكونات النظام" />
+      <Modules Text="جاري تحميل الوحدات النمطية و تهيئتها" />
+      <Products Text="تحميل الأصناف">
+        <Error Text="خطأ في تحميل الأصناف.">
+          <Info Text="قد لا تكون بعض الأصناف مؤهلة للبيع. تحقق من الأصناف وحاول مرة أخرى" />
+          <DuplicateBarcode Text="الباركود مكرر &quot;{0}&quot;" />
+          <DuplicateCode Text="كود مكرر &quot;{0}&quot;" />
+          <Copy Text="نسخ إلى الحافظة" />
+        </Error>
+      </Products>
+      <CashRegister Text="جاري تحميل بيانات السجل النقدي" />
+      <ScanTypes Text="أنواع المسح الضوئي" />
+    </Load>
+    <Initializing Text="جارٍ بدء النظام" />
+    <Connect Text="يتم الآن الاتصال بقاعدة البيانات">
+      <NoDataProvider Text="وحدة اتصال قاعدة البيانات النمطية غير متوفرة.\nالرجاء الاتصال بالمسؤول." />
+    </Connect>
+    <Error Text="حدث خطأ أثناء محاولة بدء تشغيل التطبيق. الرجاء الاتصال بمسؤول النظام." />
+    <Completed Text="بدء النظام" />
+    <BackupDatabase Text="يتم الآن التحقق من صحة إصدار قاعدة البيانات" />
+    <Migrations Text="يتم الآن التحقق من قاعدة البيانات">
+      <Failed Text="فشل ترحيل قاعدة البيانات!" />
+    </Migrations>
+    <RestartRequired Text="إعادة تشغيل النظام حتى تدخل التغييرات حيز التنفيذ.\nانقر فوق الزر أدناه لإعادة تشغيل النظام." />
+    <Onboarding Text="تحقق من حالة الإعداد" />
+    <CustomerDisplay Text="تهيئة شاشة عرض العملاء" />
+    <PrinterStatus Text="تحقق من حالة الطابعة" />
+    <VerifyVersion Text="يتم الآن التحقق من إصدار النظام" />
+  </Bootstrap>
+  <Onboarding>
+    <Welcome Text="أهلًا وسهلًا">
+      <Info Text="لنقم بإعداد متجرك وبيانات النظام الأساسية.\nستستغرق عملية الإعداد دقيقتين فقط حتى تكتمل." />
+      <Start Text="بدأ" />
+    </Welcome>
+    <Back Text="خلف" />
+    <Skip Text="تخطي" />
+    <Hide Text="عدم إظهار هذا مرة أخرى" />
+    <Next Text="تخطي" />
+    <Continue Text="حفظ ومتابعة" />
+    <PriceDisplay Text="عرض السعر">
+      <Info Text="اختيار ما إذا كان يتم عرض الأسعار وطباعتها قبل أو بعد الضريبة" />
+      <BeforeTax Text="قبل الضريبة">
+        <Description Text="سيتم عرض الأسعار وطباعتها في الاستلام دون تضمين الضريبة" />
+      </BeforeTax>
+      <AfterTax Text="بعد الضريبة">
+        <Description Text="سيتم عرض الأسعار وطباعتها في الاستلام مع تضمين الضريبة" />
+      </AfterTax>
+      <DiscountApplyRule>
+        <Info Text="سيتم تطبيق الخصومات قبل الضريبة بعد الضريبة بناءً على هذا التحديد. يمكنك تغيير قواعد الخصم في الإعدادات في أي وقت." />
+      </DiscountApplyRule>
+    </PriceDisplay>
+    <Layout Text="اختر تخطيط">
+      <LearnMore Text="تعرف على المزيد حول التخطيطات ومساحة العمل" />
+      <Standard Text="اساسي">
+        <Description Text="استخدم هذا التخطيط إذا كنت تستخدم قارئ الباركود أو لديك لوحة مفاتيح فعلية متصلة بجهاز الكمبيوتر الخاص بك." />
+      </Standard>
+      <TouchScreen Text="مرئي">
+        <Description Text="استخدم هذا التخطيط إذا كنت ترغب في عرض الأصناف والمجموعات بشكل مرئي على شاشة المبيعات." />
+      </TouchScreen>
+      <EnableVirtualKeyboard Text="تمكين لوحة المفاتيح الظاهرية" />
+    </Layout>
+    <Registration Text="التسجيل">
+      <Info Text="من فضلك ، أدخل عنوان بريدك الإلكتروني ، حتى نتمكن من تقديم المزيد من الدعم المخصص لك.">
+        <Email Text="سيتم تعيين هذا البريد الإلكتروني على حساب المسؤول الافتراضي ويمكن استخدامه لإعادة تعيين كلمة المرور. يمكنك تغيير عنوان البريد الإلكتروني هذا في أي وقت." />
+      </Info>
+      <Email Text="عنوان بريدك الإلكتروني" />
+    </Registration>
+    <UserProfile>
+      <Title Text="لنقم بتعيين حسابك الشخصي" />
+      <Info Text="الرجاء إدخال اسمك وبيانات اعتماد تسجيل الدخول المستخدمة للوصول إلى المسؤول." />
+      <LearnMore Text="تعرف على المزيد حول المستخدمين وبيانات الاعتماد الافتراضية" />
+      <FirstName Text="الاسم الاول" />
+      <LastName Text="الكنية" />
+      <Email Text="البريد الإلكتروني">
+        <Info Text="سيتم استخدام هذا البريد الإلكتروني كبريد إلكتروني لاسترداد الحساب الخاص بك.\nتأكد من إدخال عنوان بريد إلكتروني صالح حتى تتمكن من إعادة تعيين كلمة المرور الخاصة بك عبر البريد الإلكتروني." />
+        <Missing Text="إذا لم تدخل عنوان بريد إلكتروني صالحًا ، فأنت في خطر التعرض للحظر.\nفي حالة نسيان كلمة المرور الخاصة بك ، لن تكون هناك طريقة لاستعادتها بدون عنوان بريد إلكتروني صالح.">
+          <Title Text="لم يتم تعيين عنوان البريد الإلكتروني" />
+          <Confirmation Text="هل تريد الاستمرار بدون عنوان بريد إلكتروني؟" />
+        </Missing>
+      </Email>
+      <Password Text="كلمة المرور">
+        <Errors>
+          <Empty Text="كلمة المرور لا تفي بالمعايير المطلوبة. يجب تعيين كلمة المرور وطولها 4 أحرف على الأقل" />
+          <ConfirmationError Text="تأكيد كلمة المرور غير متطابق. الرجاء إدخال نفس القيم في حقلي كلمة المرور وتأكيد كلمة المرور." />
+        </Errors>
+      </Password>
+      <ConfirmPassword Text="تأكيد كلمة المرور" />
+    </UserProfile>
+    <Completed Text="تم الانتهاء من الإعداد">
+      <Info Text="تهانينا! أنت جاهز للانطلاق.\n، افتح قسم &quot;الإدارة&quot; لإضافة بعض الأصناف وبدء البيع." />
+      <Finish Text="إغلاق ومتابعة" />
+    </Completed>
+  </Onboarding>
+  <Application>
+    <RestartRequired Text="مطلوب إعادة التشغيل">
+      <Info Text="إعادة تشغيل النظام حتى تدخل التغييرات حيز التنفيذ. هل تريد إعادة تشغيل النظام الآن؟" />
+    </RestartRequired>
+    <ReloadProducts Text="إعادة تحميل الأصناف">
+      <Info Text="تم اضافة أصناف جديدة . هل تريد إعادة تحميلها الآن؟" />
+    </ReloadProducts>
+    <Close Text="إنهاء النظام">
+      <Info Text="هل تريد بالتأكيد إنهاء النظام؟" />
+      <ShutDown Text="إنهاء النظام" />
+      <Restart Text="إعادة تشغيل النظام" />
+      <TurnOffComputer Text="إيقاف تشغيل الكمبيوتر" />
+    </Close>
+    <FullScreen Text="تكبير الشاشة" />
+    <Exit Text="الخروج" />
+    <Menu Text="القائمه" />
+  </Application>
+  <Period Text="التاريخ">
+    <Start Text="البداية" />
+    <End Text="النهاية" />
+    <Preset Text="تحديد فترة">
+      <ThisWeek Text="الأسبوع الحالي" />
+      <LastWeek Text="الأسبوع الماضي" />
+      <ThisMonth Text="الشهر الحالي" />
+      <ThisYear Text="السنة الحالية" />
+      <Today Text="اليوم" />
+      <Yesterday Text="أمس" />
+      <LastMonth Text="الشهر الماضي" />
+      <LastYear Text="السنة الماضية" />
+    </Preset>
+  </Period>
+  <Order>
+    <New Text="فاتورة جديدة" />
+    <Subtotal Text="المجموع " />
+    <Total Text="الإجمالي" />
+    <Checkout Text="آجل" />
+    <Save Text="تعليق الفاتورة" />
+    <Refund Text="استرداد">
+      <Authorization Text="ادخل كلمة المرور للإسترداد" />
+      <Title Text="أصناف الاسترداد" />
+      <CartDiscountApplied Text="تم تطبيق خصم سلة التسوق">
+        <Info Text="يتم تطبيق خصم سلة التسوق وحسابه بشكل إجمالي.\nإذا تم استخدام استرداد جزئي ، فسيتم احتساب خصم سلة التسوق على العناصر المستردة." />
+      </CartDiscountApplied>
+      <Total Text="إجمالي المبلغ المسترد" />
+      <ReceiptNumber Text="رقم الإيصال" />
+      <PaymentType Text="نوع دفع المبلغ المسترد" />
+      <Description Text="أدخل رقم الإيصال ونوع الدفع لتأكيد الاسترداد" />
+      <SelectAll Text="تحديد / إلغاء تحديد الكل" />
+      <Print>
+        <PrinterNotFound Text="لم يتم تحديد طابعة استرداد الأموال." />
+      </Print>
+      <MultyplePaymentTypes Text="يحتوي المستند المحدد على أنواع دفع متعددة. حدد الخيار أدناه لنسخ أنواع الدفع إلى هذا المبلغ المسترد.">
+        <PartialRefund Text="استخدام أنواع دفع متعددة من مستند المبيعات الأصلي غير متاح للاسترداد الجزئي." />
+      </MultyplePaymentTypes>
+    </Refund>
+    <Items>
+      <Name Text="اسم الصنف" />
+      <Quantity Text="الكمية">
+        <Change Text="تغيير الكمية">
+          <Info Text="ادخل كمية للصنف التالي" />
+          <Item Text="العنصر &quot;{0}&quot;" />
+          <Forbidden Text="غير مسموح بتغيير الكمية">
+            <Info Text="تم تأكيد العنصر &quot;{0}&quot;.\nتحرير عنصر مؤكد غير مسموح به." />
+          </Forbidden>
+          <Product Text="الصنف &quot;{0}&quot;\nالكمية الافتراضية: {1: #، # .000}" />
+          <Bundled Text="تغيير الكمية غير مسموح به">
+            <Info Text="غير مسموح بتغيير الكمية على الأصناف المجمعة." />
+          </Bundled>
+        </Change>
+        <Invalid Text="كمية غير صالحة. أدخل كمية صالحة وحاول مرة أخرى." />
+      </Quantity>
+      <Price Text="السعر">
+        <Change Text="تغيير السعر">
+          <Product Text="الصنف &quot;{0}&quot;\nالسعر: {1: # ، #. 00}" />
+        </Change>
+      </Price>
+      <Total Text="المجموع" />
+      <Empty Text="لا توجد عناصر">
+        <Info Text="إضافة أصناف إلى الفاتورة باستخدام قارئ الباركود أو الكود أو البحث عن طريق الضغط على زر F3" />
+      </Empty>
+      <Start Text="البداية" />
+      <Page Text="صفحه" />
+      <Add>
+        <Error Text="خطأ في إضافة صنف. بيانات الصنف غير صالحة.\nتحقق من سعر الصنف وكميته وحاول مرة أخرى." />
+      </Add>
+      <Void>
+        <NoItems Text="غير مسموح بإلغاء الصنف &quot;{0}&quot;. كمية غير كافية." />
+        <Bundle Text="الصنف ينتمي إلى مجموعة. سيؤدي حذف هذا الصنف إلى إزالة جميع الاصناف في نفس المجموعة.\n\nهل أنت متأكد أنك تريد إزالة كافة الاصناف في هذه المجموعة؟">
+          <Title Text="حذف صنف المجموعة" />
+        </Bundle>
+      </Void>
+    </Items>
+    <Products>
+      <Search Text="البحث">
+        <Name Text="اسم الصنف">
+          <Tooltip Text="البحث عن صنف بالاسم" />
+          <NotFound Text="لا توجد نتائج لـ &quot;{0}&quot;">
+            <Info Text="يرجى التحقق من معلمات البحث والمحاولة مرة أخرى" />
+          </NotFound>
+        </Name>
+        <Barcode Text="الباركود">
+          <Tooltip Text="البحث عن الصنف بالباركود" />
+          <NotFound Text="الباركود غير موجود" />
+        </Barcode>
+        <Code Text="الكود">
+          <Tooltip Text="البحث عن الصنف بالكود" />
+          <NotFound Text="لم يتم العثور على الكود" />
+        </Code>
+        <NoItems Text="لم يتم اختيار أي صنف">
+          <Info Text="ابحث عن الصنف بالاسم أو الكود للمتابعة" />
+        </NoItems>
+        <Selection>
+          <Price Text="السعر" />
+          <Description Text="الوصف" />
+        </Selection>
+        <NoResults Text="لا توجد نتائج" />
+      </Search>
+      <NoProducts Text="لا توجد أصناف متوفرة">
+        <Info Text="الرجاء إضافة أصناف أو تحديد سعر بيع إلى الأصناف الموجودة للمتابعة" />
+      </NoProducts>
+    </Products>
+    <List Text="فتح قائمة الطلبات">
+      <Select Text="اختر طلبا" />
+    </List>
+    <Estimate Text="تأمين">
+      <Authorization>
+        <Title Text="الرجاء إدخال كلمة المرور لتأمين البيع" />
+      </Authorization>
+      <Created Text="تأمين الطلب بنجاح" />
+      <Clear Text="فتح هذا البيع">
+        <Authorization>
+          <Title Text="الرجاء إدخال كلمة المرور لإلغاء فتح البيع" />
+        </Authorization>
+        <Success Text="البيع مفتوح." />
+      </Clear>
+      <Locked Text="البيع مغلق">
+        <Info Text="تحرير بيع مؤمن غير مسموح به." />
+      </Locked>
+      <Issued Text="هذا البيع مؤمن بالفعل.\nتحرير بيع مؤمن غير مسموح به." />
+      <NoItems Text="لا توجد عناصر لتأمينها." />
+    </Estimate>
+    <Transfer Text="تحويل">
+      <Authorization>
+        <Title Text="الرجاء إدخال كلمة المرور للوصول إلى خيار التحويل" />
+      </Authorization>
+      <All Text="تحويل جميع الطلبات">
+        <Confirmation Text="لا يمكن التراجع عن تحويل جميع الطلبات إلى مستخدم آخر!\n\nهل تريد بالتأكيد نقل جميع طلباتك إلى {0}؟" />
+        <Success Text="تم تحويل كافة الطلبات بنجاح." />
+        <Error Text="حدث خطأ أثناء تحويل الطلبات إلى المستخدم المحدد.\nحاول مرة اخرى." />
+      </All>
+      <Orders Text="طلبات مفتوحه" />
+      <OrderNumber Text="رقم الطلب">
+        <Select Text="اختر طلبا" />
+      </OrderNumber>
+      <Quantity Text="حدد الكميات المراد تحويلها" />
+      <User Text="المستخدم">
+        <Current Text="الطلب ينتمي بالفعل إلى المستخدم المحدد." />
+      </User>
+      <Rounds Text="تحويل الجولات">
+        <Summary Text="أصناف الطلب" />
+        <Selection Text="حدد الجولات لتحويلها" />
+      </Rounds>
+      <Items Text="أصناف الطلب">
+        <Selected Text="الأصناف المحددة للتحويل">
+          <NoItems Text="تحديد الأصناف للتحويل" />
+        </Selected>
+        <All Text="تحويل الكل" />
+        <Back Text="حذف الكل" />
+        <InvalidQuantity Text="غير مسموح بنقل الصنف المحدد">
+          <Info Text="الكمية الإجمالية للأصناف المحددة أقل من الكمية المحددة للنقل.\nتحقق من كمية النقل والأصناف الملغاة وحاول مرة أخرى." />
+        </InvalidQuantity>
+        <BundledQuantity Text="غير مسموح بتغيير الكمية">
+          <Info Text="ينتمي الصنف إلى مجموعة. غير مسموح بتغيير الكمية على أصناف المجموعة." />
+        </BundledQuantity>
+      </Items>
+      <CurrentOrder Text="التحويل لنفس الطلب">
+        <Confirmation Text="أنت تقوم بنقل الأصناف إلى نفس الطلب. لن يتم إجراء أي تغييرات.\nهل أنت متأكد أنك تريد الاستمرار؟" />
+      </CurrentOrder>
+      <Failed Text="خطأ في نقل الأصناف">
+        <Info Text="حدث خطأ أثناء محاولة نقل الأصناف. الرجاء المحاولة مرة أخرى." />
+      </Failed>
+      <Completed Text="تم التحويل بنجاح" />
+      <NoItems Text="لا توجد أصناف لتحويلها" />
+      <Discount>
+        <Warning Text="خصم ثابت">
+          <Info Text="الطلب الحالي به مجموعة خصم سلة التسوق الثابتة. سيؤدي نقل الأصناف من هذا الطلب إلى مسح خصم سلة التسوق.\n\nهل تريد الاستمرار؟" />
+        </Warning>
+      </Discount>
+    </Transfer>
+    <Void Text="إلغاء الفاتورة">
+      <Authorization>
+        <Title Text="الرجاء إدخال كلمة المرور لإلغاء هذه الفاتورة" />
+      </Authorization>
+      <Confirm Text="إلغاء الفاتورة">
+        <Info Text="هل أنت متأكد أنك تريد إلغاء هذه الفاتورة؟" />
+      </Confirm>
+      <Completed Text="تم إلغاء الفاتورة بنجاح" />
+      <NoItems Text="لا توجد أصناف لإلغائها" />
+    </Void>
+    <Comment Text="ملاحظة">
+      <Add Text="تحديد القائمة أو كتابة ملاحظة للعنصر &quot;{0}&quot;" />
+      <Insert Text="اكتب ملاحظة هنا ..." />
+      <Change Text="أضف ملاحظة">
+        <Forbidden Text="تحرير الصنف المحدد غير مسموح به">
+          <Info Text="تم طلب الصنف &quot;{0}&quot; وتأكيده.\nتحرير صنف مؤكد غير مسموح به." />
+        </Forbidden>
+        <NoItem Text="لم يتم تحديد أصناف.\nحدد عنصرًا ترغب في إضافة ملاحظة إليه وحاول مرة أخرى." />
+      </Change>
+    </Comment>
+    <Rounds>
+      <Repeat Text="كرر الجولة">
+        <NoItems Text="لا توجد أصناف تحت الطلب.\nيمكن تكرار الجولة فقط في حالة وجود أصناف." />
+        <NoQuantities Text="في الجولة المحددة {0} لا توجد أصناف بكميات كافية لتكرارها" />
+        <Bundle Text="الأصناف تنتمي إلى مجموعة">
+          <Info Text="غير مسموح بإجراء عملية تكرار لأصناف المجموعة." />
+        </Bundle>
+      </Repeat>
+      <New Text="جولة جديدة">
+        <NoItems Text="لا توجد أصناف في طلبك لإنشاء جولة جديدة.\nأضف أصناف للطلب وحاول مرة أخرى." />
+        <NoUnsavedItems Text="تم حفظ جميع الأصناف في الطلب. بدأ جولة جديدة." />
+      </New>
+      <SelectAll Text="حدد الكل" />
+      <SelectNone Text="رفض الكل" />
+      <Total Text="مجموع :" />
+      <NoItems Text="لا توجد عناصر محددة" />
+    </Rounds>
+    <Tax Text="ضريبة" />
+    <Print>
+      <User Text="المستخدم: {0}" />
+      <Time Text="الوقت: {0}" />
+      <Number Text="رقم الطلب: {0}" />
+      <Table Text="طاولة: {0}" />
+      <Estimate Text="تقدير">
+        <Discount Text="خصم" />
+        <Total Text="مجموع:" />
+        <Footer Text="هذا ليس إيصال.\nيرجى انتظار الإيصال النهائي." />
+      </Estimate>
+      <Kitchen>
+        <NumberAndRound Text="الطلب: {0}. الجولة: {1}" />
+        <TableAndRound Text="طاولة: {0}- الجولة: {1}" />
+      </Kitchen>
+      <Dialog>
+        <Title Text="كيف يمكن للعميل أن يرغب في استلامه؟" />
+        <Change Text="الباقي" />
+        <Receipt Text="اطبع الايصال" />
+        <Invoice Text="طباعة الفاتورة" />
+        <Email Text="ارسل بريد الكتروني">
+          <Recipient Text="مستلم البريد الإلكتروني">
+            <Title Text="أدخل تفاصيل رسالة البريد الإلكتروني وانقر على زر &quot;إرسال&quot; للمتابعة" />
+            <EmailAddress Text="عنوان المستلم">
+              <Description Text="أدخل عنوان البريد الإلكتروني للعميل" />
+              <AddCustomer Text="إضافة عميل" />
+            </EmailAddress>
+            <Subject Text="الموضوع">
+              <Description Text="أدخل سطر الموضوع" />
+              <Default Text="إيصال {0}" />
+            </Subject>
+            <Message Text="رسالة">
+              <Description Text="أدخل رسالة للعميل" />
+              <Default Text="عزيزي الزبون،\n\n\n\nتاريخ الاستلام: {0}\nالإجمالي: {1}" />
+            </Message>
+            <CopySelf Text="إرسال نسخة لبريدي" />
+            <Error>
+              <EmailFormat Text="عنوان البريد الإلكتروني ليس منسق بشكل صحيح.\nالرجاء التحقق من عنوان البريد الإلكتروني والمحاولة مرة أخرى." />
+            </Error>
+          </Recipient>
+          <Sending Text="إرسال بريد إلكتروني ... الرجاء الانتظار ..." />
+          <Sent Text="تم إرسال الإيصال إلى {0}" />
+        </Email>
+        <Hide Text="عدم إظهار هذا مرة أخرى" />
+      </Dialog>
+    </Print>
+    <Lock Text="قفل" />
+    <Unlock Text="الغاء القفل" />
+    <Item>
+      <Void>
+        <Authorization>
+          <Title Text="الرجاء إدخال كلمة المرور لإلغاء الصنف المحدد" />
+        </Authorization>
+      </Void>
+      <ChangePrice>
+        <Minimum Text="قيمة الحد الأدنى: {0}" />
+      </ChangePrice>
+    </Item>
+    <QuickPayment Text="دفع سريع">
+      <Confirmation Text="لقد قمت بتحديد &quot;{0}&quot; كنوع دفع للبيع الحالي.\n\nهل ترغب في الاستمرار في استخدام نوع الدفع المحدد؟" />
+    </QuickPayment>
+    <Discount Text="الخصم">
+      <Authorization Text="الرجاء إدخال كلمة المرور لتطبيق الخصومات" />
+      <Cart>
+        <Invalid Text="خصم غير صالح على السلة">
+          <GreaterThenTotal Text="لا يمكن أن يكون إجمالي الخصومات أكبر\nمن مجموع الطلب." />
+        </Invalid>
+        <Cleared Text="تم مسح خصم سلة التسوق!">
+          <Info Text="تم الكشف عن إجمالي غير صالح وإزالة الخصم من الطلب.\n\nمن فضلك ، تحقق من الاصناف الخاصة بك وقم بتطبيق خصم صالح مرة أخرى قبل الشروع في الدفع." />
+        </Cleared>
+      </Cart>
+      <Item>
+        <NotSelected Text="لم يتم تحديد الصنف .\nلتطبيق خصم على صنف واحد، حدد أحد الاصناف من قائمة المبيعات قبل فتح مربع الحوار هذا" />
+        <Invalid Text="خصم صنف غير صالح">
+          <GreaterThenTotal Text="لا يمكن أن يكون المبلغ الثابت أكبر\nمن إجمالي الصنف" />
+        </Invalid>
+      </Item>
+    </Discount>
+  </Order>
+  <Payment>
+    <Details>
+      <Summary Text="الأصناف" />
+      <Discount Text="الخصم">
+        <Type>
+          <Percent Text="الخصم بالنسبة المئوية" />
+          <Fixed Text="الخصم كمبلغ ثابت" />
+        </Type>
+        <Target>
+          <Cart Text="خصم للسلة">
+            <Info Text="تطبيق خصم سلة التسوق" />
+          </Cart>
+          <Item Text="خصم لصنف">
+            <NotSelected Text="لم يتم تحديد اصناف.\nالرجاء تحديد الصنف الموجود على اليسار لتطبيق الخصم." />
+            <NotAllowed Text="الخصم غير مسموح به للأصناف الملغاة" />
+            <Info Text="تطبيق الخصم على &quot;{0}&quot;" />
+          </Item>
+        </Target>
+        <Subtotal Text="المجموع :" />
+        <Total Text="المجموع :" />
+        <Options Text="خيارات الخصم">
+          <DisallowedItems Text="هناك اصناف لا يمكن تخصيصها مباشرة للخصم." />
+        </Options>
+        <TotalDiscount Text="إجمالي الخصم :" />
+        <Clear Text="ازالة الخصم">
+          <Completed Text="تمت إزالة جميع الخصومات" />
+        </Clear>
+      </Discount>
+      <Total Text="المجموع :" />
+      <TotalWithoutDiscount Text="الإجمالي بدون خصم :" />
+      <Money Text="الدفع">
+        <Change Text="الباقي :" />
+        <Paid Text="مدفوع">
+          <Hint>
+            <TypeAmount Text="اكتب المبلغ المدفوع" />
+            <TapToChange Text="انقر هنا لإدخال المبلغ المدفوع" />
+          </Hint>
+        </Paid>
+        <Balance Text="الرصيد" />
+      </Money>
+      <Actions Text="الاجراءات">
+        <ShowItems Text="إظهار الاصناف" />
+      </Actions>
+      <Split Text="جولات">
+        <Rounds Text="تحديد جولة للدفع">
+          <RoundNumber Text="جوله :" />
+          <RoundTotal Text="المبلغ :" />
+          <SelectAll Text="حدد الكل" />
+          <SelectNone Text="إلغاء تحديد الكل" />
+        </Rounds>
+      </Split>
+      <Customer Text="العملاء" />
+      <PaymentTypes Text="نوع الدفع">
+        <Other Text="تقسيم المدفوعات" />
+        <Invalid Text="نوع الدفع غير مسموح به">
+          <Fiscal Text="يحتوي نوع الدفع المحدد على مجموعة غير صالحة من نوع الدفع الضريبي وغير الضريبي.\n\nلا يجوز الجمع بين أنواع المدفوعات المالية وغير المالية." />
+        </Invalid>
+      </PaymentTypes>
+      <NoItems Text="لا توجد عناصر" />
+    </Details>
+    <Customer>
+      <Required Text="يرجى تحديد عميل">
+        <Info Text="يتطلب نوع الدفع &quot;{0}&quot; تحديد العميل. الرجاء تحديد عميل للمتابعة." />
+      </Required>
+    </Customer>
+    <NoPaymentSelected Text="نوع الدفع غير محدد" />
+    <Add Text="إضافة نوع الدفع">
+      <Info Text="اختر أنواع الدفع والمبالغ المطلوبة للبيع الحالي" />
+      <Amount Text="مبلغ الدفع &quot;{0}&quot;" />
+    </Add>
+    <Selected Text="نوع الدفع المحدد" />
+    <PaymentTypes>
+      <Validation>
+        <Change>
+          <Missing Text="مبلغ غير صحيح">
+            <Info Text="نوع الدفع هذا لا يسمح بالتغيير. أدخل المبلغ الصحيح أو حدد نوع دفع آخر." />
+          </Missing>
+        </Change>
+      </Validation>
+    </PaymentTypes>
+  </Payment>
+  <Customer>
+    <Selection Text="عميل محدد">
+      <None Text="لم يتم تحديد عميل">
+        <Info Text="حدد عميل من القائمة" />
+      </None>
+      <Details>
+        <PIN Text="الرقم الضريبي:" />
+        <Address Text="العنوان:" />
+        <Email Text="البريد الإلكتروني:" />
+        <PhoneNumber Text="رقم الهاتف:" />
+      </Details>
+      <Clear Text="مسح العميل المحدد">
+        <Completed Text="تمت إزالة العميل المحدد" />
+      </Clear>
+    </Selection>
+    <New Text="إضافة عميل جديد">
+      <Add Text="إضافة عميل جديد" />
+      <Name Text="الاسم" />
+      <TaxNumber Text="الرقم الضريبي" />
+      <Address Text="العنوان" />
+      <City Text="المدينه" />
+      <Country Text="الدوله" />
+      <PostalCode Text="الرمز البريدي" />
+      <PhoneNumber Text="رقم الهاتف" />
+      <Email Text="البريد الإلكتروني" />
+    </New>
+    <Search Text="البحث عن عملاء">
+      <Name Text="اسم" />
+      <PIN Text="الرقم الضريبي" />
+      <LoyaltyCard Text="بطاقة الولاء" />
+      <Email Text="البريد الإلكتروني" />
+      <PhoneNumber Text="رقم الهاتف" />
+    </Search>
+  </Customer>
+  <Document>
+    <Category>
+      <Expenses Text="مشتريات">
+        <StockReturn Text="مرتجع مشتريات" />
+        <Purchase Text="فاتورة مشتريات" />
+      </Expenses>
+      <Sales Text="مبيعات">
+        <Refund Text="مرتجع مبيعات" />
+        <Proforma Text="فاتورة عرض" />
+        <Sales Text="فاتورة مبيعات" />
+      </Sales>
+      <Inventory Text="المخزون">
+        <InventoryCount Text="جرد المخزون" />
+      </Inventory>
+      <Loss Text="تالف">
+        <LossAndDamage Text="تالف" />
+      </Loss>
+    </Category>
+    <Create>
+      <Error Text="حدث خطأ في إنشاء المستند.\nحاول مرة اخرى." />
+    </Create>
+  </Document>
+  <Invoices Text="عرض سجل المبيعات">
+    <Documents Text="الفواتير">
+      <Print Text="طباعه">
+        <Pdf Text="احفظ PDF">
+          <Success Text="تم حفظ الفاتورة &quot;{0}&quot;" />
+        </Pdf>
+        <CashReceipt Text="فاتورة">
+          <PrinterNotFound Text="طابعة الخدمة غير محددة أو معطلة. تحقق من إعدادات الطابعة وحاول مرة أخرى." />
+          <Address Text="العنوان" />
+          <VatNumber Text="الرقم الضريبي" />
+          <Date Text="التاريخ" />
+          <ReceiptNumber Text="رقم الإيصال" />
+          <Customer Text="العميل" />
+          <Total Text="المجموع" />
+          <Tax Text="الضريبة" />
+          <TotalAmount Text="المجموع الكلي" />
+          <FiscalReceiptNumber Text="رقم الإيصال المالي" />
+          <Signature Text="التوقيع" />
+          <Authorization>
+            <Title Text="الرجاء إدخال كلمة المرور لطباعة الإيصال" />
+          </Authorization>
+        </CashReceipt>
+        <Error Text="خطأ في طباعة الفاتورة">
+          <NoService Text="خدمة الطباعة غير مسجلة" />
+        </Error>
+        <Refund Text="استرجاع" />
+        <Preview Text="معاينة قبل الطباعة" />
+      </Print>
+      <Count Text="عدد الفواتير :" />
+      <Total Text="المبلغ الإجمالي :" />
+      <Customer Text="العميل">
+        <Change Text="تغيير العميل">
+          <Success Text="تم تغيير العميل بنجاح." />
+        </Change>
+      </Customer>
+      <CashRegister>
+        <All Text="جميع السجلات النقدية" />
+        <Select Text="حدد الكاشير" />
+      </CashRegister>
+      <Delete Text="حذف">
+        <Confirmation>
+          <Title Text="حذف فاتورة" />
+          <Message Text="هل تريد بالتأكيد حذف الفاتورة &quot;{0}&quot;؟" />
+        </Confirmation>
+        <Error Text="حدث خطأ أثناء محاولة حذف الفاتورة. الرجاء المحاولة مرة أخرى" />
+        <Unauthorized Text="ليس لديك أذونات لحذف الفواتير." />
+      </Delete>
+      <List Text="الفواتير">
+        <Document>
+          <Number Text="العدد" />
+          <DocumentType Text="نوع الفاتورة" />
+          <Warehouse Text="المستودع" />
+          <Customer Text="العميل">
+            <Refresh Text="تحديث قائمة العملاء">
+              <Complete Text="إعادة تحميل العملاء" />
+            </Refresh>
+          </Customer>
+          <Vendor Text="اسم المورد">
+            <Refresh Text="تحديث قائمة الموردين">
+              <Complete Text="إعادة تحميل الموردين" />
+            </Refresh>
+          </Vendor>
+          <ExternalDocument Text="رقم الفاتورة" />
+          <Date Text="التاريخ" />
+          <DueDate Text="تاريخ الاستحقاق" />
+          <StockDate Text="تاريخ المخزون" />
+          <DateCreated Text="انشاء" />
+          <DateUpdated Text="محدث" />
+          <OrderNumber Text="رقم الفاتورة" />
+          <User Text="المستخدم" />
+          <PaymentType Text="نوع الدفع" />
+          <Discount Text="خصم" />
+          <Paid Text="مدفوعة" />
+          <Unpaid Text="غير مدفوعة" />
+          <Total Text="إجمالي">
+            <Summary>
+              <Subtotal Text="المجموع :" />
+              <TotalBeforeTax Text="المجموع قبل الضريبة :" />
+              <Tax Text="ضريبة :" />
+              <Total Text="إجمالي" />
+              <Discount Text="خصم :">
+                <DiscountApplyRule Text="تطبيق الخصم قبل أو بعد الضريبة.\nسيتم استخدام هذا التحديد للعناصر وخصومات سلة التسوق.">
+                  <BeforeTax Text="تطبيق الخصم قبل الضريبة" />
+                  <AfterTax Text="تطبيق الخصم بعد الضريبة" />
+                </DiscountApplyRule>
+                <DiscountType Text="حدد نوع الخصم">
+                  <Percent Text="نسبة مئوية" />
+                  <Fixed Text="مبلغ ثابت" />
+                </DiscountType>
+              </Discount>
+            </Summary>
+          </Total>
+          <Payments Text="الدفعات">
+            <PaymentType Text="نوع الدفع" />
+            <Amount Text="المبلغ" />
+            <Date Text="التاريخ" />
+            <Add Text="إضافة طريقة دفع" />
+            <NewPayment Text="حدد نوع الدفع والمبلغ" />
+            <Delete Text="حذف">
+              <Confirmation Text="هل تريد بالتأكيد حذف الدفع &quot;{0}&quot;؟" />
+            </Delete>
+            <Totals>
+              <PaymentsTotal Text="مجموع المدفوعات :" />
+              <DocumentTotal Text="إجمالي الفاتورة :" />
+            </Totals>
+          </Payments>
+          <Items Text="الأصناف">
+            <Item>
+              <ProductCode Text="كود الصنف" />
+              <Product Text="أسم الصنف" />
+              <MeasurementUnit Text="وحدة القياس" />
+              <PriceNoTax Text="السعر قبل الضريبة" />
+              <Quantity Text="الكميه" />
+              <Price Text="السعر" />
+              <Tax Text="ضريبة">
+                <Add Text="إضافة ضرائب">
+                  <Tooltip Text="إضافة ضريبة إلى هذا العنصر" />
+                </Add>
+                <Remove>
+                  <Tooltip Text="إزالة الضريبة من هذا العنصر" />
+                </Remove>
+              </Tax>
+              <Discount Text="خصم">
+                <DiscountType Text="تحديد نوع الخصم">
+                  <Percent Text="نسبة مئوية" />
+                  <Fixed Text="خصم ثابت" />
+                </DiscountType>
+                <DiscountApplyRule>
+                  <BeforeTax Text="قبل الضريبة" />
+                  <AfterTax Text="بعد الضريبة" />
+                </DiscountApplyRule>
+              </Discount>
+              <TotalBeforeTax Text="الإجمالي قبل الضريبة" />
+              <Total Text="الإجمالي" />
+              <TotalBeforeDiscount Text="الإجمالي قبل الخصم" />
+              <Error>
+                <Taxes Text="تم العثور على ضرائب مكررة. الاسم الضريبي (&quot;{0}&quot;).\nيرجى تحديد الضرائب الصالحة والمحاولة مرة أخرى." />
+              </Error>
+            </Item>
+            <Delete Text="حذف">
+              <Confirmation Text="هل أنت متأكد أنك تريد حذف &quot;{0}&quot;؟" />
+            </Delete>
+          </Items>
+          <Print>
+            <UnsavedChanges Text="تحتوي الفاتورة على تغييرات غير محفوظة. هل تريد حفظ التغييرات قبل الطباعة؟">
+              <Title Text="تغييرات غير محفوظة" />
+            </UnsavedChanges>
+          </Print>
+        </Document>
+      </List>
+      <AllUsers Text="إظهار كافة المستخدمين" />
+      <BulkActions Text="العمليات المجمعة">
+        <Delete Text="حذف الفاتورة المحددة">
+          <Confirmation>
+            <Title Text="حذف الفاتورة المحددة" />
+            <Message Text="هل تريد بالتأكيد حذف الفواتير المحددة؟" />
+          </Confirmation>
+          <Message Text="جاري حذف الفواتير... الرجاء الانتظار ..." />
+        </Delete>
+        <UpdatePaidStatus>
+          <Message Text="جاري تحديث الحالة المدفوعة... الرجاء الانتظار..." />
+        </UpdatePaidStatus>
+      </BulkActions>
+    </Documents>
+    <Title Text="محفوظات المبيعات" />
+    <Authorization>
+      <Title Text="الرجاء إدخال كلمة المرور للوصول إلى سجل المبيعات" />
+    </Authorization>
+  </Invoices>
+  <OpenOrders Text="عرض المبيعات المفتوحة">
+    <Total Text="المبلغ الإجمالي" />
+    <NoOrders Text="لا توجد مبيعات مفتوحة" />
+    <Authorization>
+      <Title Text="الرجاء إدخال كلمة المرور للوصول إلى المبيعات المفتوحة" />
+    </Authorization>
+  </OpenOrders>
+  <BusinessDay>
+    <Close>
+      <Authorization>
+        <Title Text="الرجاء إدخال كلمة المرور لإغلاق يوم العمل" />
+      </Authorization>
+    </Close>
+    <Select Text="تحديد يوم العمل">
+      <EnableSelection Text="(انقر على التاريخ لتغيير يوم العمل)" />
+    </Select>
+  </BusinessDay>
+  <Login Text="تسجيل الدخول">
+    <Password Text="كلمة المرور">
+      <Forgot Text="هل نسيت كلمة السر؟" />
+    </Password>
+    <Error Text="فشل تسجيل الدخول. تحقق من كلمة المرور الخاصة بك وحاول مرة أخرى." />
+    <Authentication Text="تسجيل دخول المستخدم">
+      <Failed Text="لم يتم العثور على المستخدم. تحقق من كلمة المرور الخاصة بك وحاول مرة أخرى." />
+    </Authentication>
+    <Reset Text="إعادة تعيين كلمة المرور">
+      <LearnMore Text="مزيد من المعلومات حول إعادة تعيين كلمة المرور" />
+      <Email Text="أدخل عنوان البريد الإلكتروني">
+        <Info Text="أدخل عنوان البريد الإلكتروني المرتبط بالمستخدم الذي ترغب في إعادة تعيين كلمة المرور له.\nسنرسل لك رمز التحقق إلى البريد الإلكتروني الذي تقوم بإدخاله أدناه." />
+        <Required Text="البريد الإلكتروني مطلوب" />
+        <EmailAddress Text="عنوان البريد الإلكتروني">
+          <Tooltip Text="أدخل عنوان بريدك الإلكتروني" />
+        </EmailAddress>
+        <ExistingCode Text="لدي الرمز. خذني إلى الخطوة التالية." />
+      </Email>
+      <Code Text="التحقق من الكود">
+        <Info Text="تحقق من بريدك الإلكتروني - لقد أرسلنا لك رمز تفويض تحتاج إلى إدخاله في المربع أدناه.\nإذا لم تتلق رسالة إلكترونية تحتوي على رمز تفويض، فيرجى التحقق من مجلد الرسائل غير المرغوب فيها أو محاولة إرسال بريد إلكتروني مرة أخرى." />
+        <Email Text="تم إرسال رمز التفويض إلى {0}." />
+        <AuthorizationCode Text="رمز التفويض">
+          <Tooltip Text="أدخل رمز التفويض هنا ..." />
+        </AuthorizationCode>
+        <Verify Text="التحقق من الرمز" />
+      </Code>
+      <Password Text="أدخل كلمة مرور جديدة">
+        <Info Text="أدخل كلمة مرور جديدة وتأكيد كلمة المرور لحسابك المحلي.\nيجب أن تتطابق كلمة المرور الجديدة وحقول تأكيد كلمة المرور الجديدة.\n\nبمجرد الانتهاء ، انقر فوق الزر &quot;موافق&quot; لإعادة تعيين كلمة المرور الخاصة بك." />
+        <NewPassword Text="كلمة مرور جديدة" />
+        <NewPasswordConfirmation Text="تأكيد كلمة المرور الجديدة" />
+        <InUse Text="تم أخذ كلمة المرور المحددة بالفعل. الرجاء إدخال كلمة مرور مختلفة والمحاولة مرة أخرى." />
+        <User Text="المستخدم: {0}" />
+        <SetPassword Text="تعيين كلمة المرور الجديدة" />
+        <Success Text="تم تغيير كلمة المرور بنجاح" />
+      </Password>
+      <Error>
+        <Expired Text="انتهت صلاحية رمز التفويض الخاص بك.\nالرجاء طلب رمز التفويض الجديد." />
+        <InvalidCode Text="الرمز غير صحيح. الرجاء إدخال رمز صحيح وحاول مرة أخرى." />
+        <NoSuchUser Text="المستخدم بالبريد الإلكتروني المحدد &quot;{0}&quot; غير موجود.\nالرجاء إدخال بريد إلكتروني صالح وحاول مرة أخرى." />
+        <InvalidEmailAddress Text="عنوان البريد الإلكتروني غير صالح. الرجاء إدخال عنوان بريد إلكتروني صالح وحاول مرة أخرى." />
+        <LimitReached Text="لقد وصلت إلى حد طلب إعادة تعيين كلمة المرور.\nيمكنك المحاولة مرة أخرى في غضون 24 ساعة." />
+        <GeneralError Text="حدث خطأ أثناء محاولة إرسال طلب إعادة تعيين كلمة المرور.\nالرجاء معاودة المحاولة في وقت لاحق." />
+      </Error>
+    </Reset>
+  </Login>
+  <Closing Text="نهاية اليوم">
+    <Users Text="المعاملات">
+      <NoReports Text="لا توجد معاملات مفتوحة" />
+      <Summary Text="المعاملات" />
+      <User>
+        <Total Text="المجموع :" />
+      </User>
+    </Users>
+    <Option Text="حدد خيار السحب النقدي">
+      <NotSelected Text="لم يتم تحديد خيار السحب النقدي">
+        <Info Text="اختر أحد الخيارات المذكورة أعلاه للمتابعة" />
+      </NotSelected>
+    </Option>
+    <User Text="المصروفات">
+      <Completed Text="تم سحب {0} بنجاح." />
+    </User>
+    <Shift Text="صرف النقدية من جميع المستخدمين">
+      <Closed Text="تم صرف جميع المستخدمين بنجاح" />
+    </Shift>
+    <BusinessDay Text="إغلاق السجل">
+      <Income Text="مجموع اليوم" />
+      <Closed Text="تم الإغلاق بنجاح" />
+      <Report Text="تقرير" />
+      <CashOut Text="المصروفات" />
+      <CashIn Text="النقدية الداخلة" />
+    </BusinessDay>
+    <Error>
+      <OpenOrders Text="فواتير مفتوحة">
+        <Users Text="هناك مستخدمين مع فواتير مفتوحة!\nيجب إغلاق جميع الفواتير قبل إغلاق اليوم." />
+      </OpenOrders>
+    </Error>
+    <Print>
+      <User>
+        <Report>
+          <Total Text="المبلغ الإجمالي" />
+          <User Text="المستخدم">
+            <ClosedBy Text="الوارد" />
+          </User>
+          <Header Text="النقد الخارج للمستخدم" />
+        </Report>
+      </User>
+      <DayClose>
+        <Report>
+          <Header Text="إقفال اليوم" />
+          <User>
+            <Total Text="المجموع" />
+          </User>
+          <Summary Text="الملخص" />
+          <Total Text="مجموع" />
+        </Report>
+      </DayClose>
+    </Print>
+    <History Text="المحفوظات">
+      <Info Text="استخدم القائمة أدناه لتحديد وطباعة نسخة من أي تقرير Z تم إنشاؤه مسبقًا." />
+      <List>
+        <Reports Text="التقارير" />
+        <Number Text="العدد" />
+        <Date Text="تاريخ" />
+      </List>
+      <Print Text="طباعة التقرير المحدد">
+        <Unsupported Text="العملية غير مدعومة" />
+      </Print>
+    </History>
+  </Closing>
+  <User Text="المستخدم">
+    <Profile Text="معلومات المستخدم">
+      <Info Text="الملف الشخصي" />
+      <Edit Text="تغيير ملف التعريف أو كلمة المرور" />
+      <Data>
+        <FirstName Text="الاسم الأول" />
+        <LastName Text="الكنية" />
+        <Email Text="البريد الإلكتروني" />
+        <Password Text="كلمه المرور">
+          <Change Text="تغيير كلمة المرور">
+            <Password Text="كلمه المرور" />
+            <Confirm Text="تأكيد كلمة المرور" />
+            <ConfirmationFailed Text="لا يتطابق حقل كلمة المرور وتأكيد كلمة المرور.\nتحقق من كلمة المرور وحاول مرة أخرى." />
+            <InvalidPassword Text="كلمة المرور قيد الاستخدام بالفعل. الرجاء استخدام كلمة مرور مختلفة." />
+          </Change>
+        </Password>
+        <Saved Text="تم تغيير الملف الشخصي بنجاح" />
+      </Data>
+      <ShiftReport Text="تقرير المستخدم">
+        <Report Text="تقرير المستخدم">
+          <NoData Text="لا توجد معاملات مفتوحة" />
+          <Total Text="المبلغ الإجمالي" />
+        </Report>
+        <ClockOut Text="المصروفات" />
+      </ShiftReport>
+    </Profile>
+  </User>
+  <Security>
+    <Authorize Text="مصادقة المستخدم" />
+    <Level Text="مستوى الوصول">
+      <Change Text="تغيير مستوى الوصول للإجراء المحدد">
+        <AccessDenied Text="ليس لديك امتيازات كافية لتغيير مستوى الوصول لهذه العملية.\n\nيمكن ضبط مستوى الوصول من قبل المستخدم مع مستوى الوصول اللازم لتنفيذ العملية المحددة." />
+      </Change>
+    </Level>
+    <AccessDenied Text="تم رفض الوصول">
+      <Info Text="ليس لديك امتيازات كافية للعملية المحددة." />
+    </AccessDenied>
+    <Key>
+      <Management Text="الإدارة">
+        <Description Text="التحكم في الوصول إلى قسم الإدارة" />
+      </Management>
+      <Settings Text="الاعدادات">
+        <Description Text="التحكم في الوصول إلى الإعدادات" />
+      </Settings>
+      <VoidOrder Text="إلغاء الفاتورة">
+        <Description Text="يتحكم في ما إذا كان يُسمح للمستخدم بإلغاء الفاتورة" />
+      </VoidOrder>
+      <VoidItem Text="إلغاء صنف">
+        <Description Text="يتحكم في ما إذا كان يُسمح للمستخدم بإلغاء صنف واحد في أمر مفتوح" />
+      </VoidItem>
+      <LockSale Text="قفل البيع" />
+      <UnlockSale Text="فتح البيع" />
+      <SplitOrder Text="تقسيم الفاتورة">
+        <Description Text="يسمح للمستخدم بنقل الفاتورة كاملاً أو جزئيًا إلى مستخدم أو جدول آخر (رقم الفاتورة)" />
+      </SplitOrder>
+      <Discount Text="تطبيق الخصم" />
+      <DeleteDocument Text="حذف مستند" />
+      <ClosingDay Text="نهاية اليوم">
+        <Description Text="يتحكم في الوصول إلى قسم نهاية اليوم" />
+      </ClosingDay>
+      <Refund Text="استرجاع">
+        <Description Text="يسمح للمستخدم باسترجاع البيع الذي تم إجراؤه مسبقًا.\nسيؤدي هذا إلى إنشاء مستند &quot;استرجاع&quot; جديد وسيعيد الكميات إلى المخزون تلقائيًا." />
+      </Refund>
+      <OpenOrders Text="عرض جميع الفواتير المعلقة">
+        <Description Text="يتحكم في ما إذا كان يُسمح للمستخدم برؤية جميع الفواتير المعلقة.\nهذا الخيار متاح مع تمكين مخططات الطاولات." />
+      </OpenOrders>
+      <SalesHistory Text="عرض سجل المبيعات">
+        <Receipt Text="إعادة طباعة الإيصال">
+          <Description Text="يتحكم فيما إذا كان مسموحًا للمستخدم بطباعة الإيصال من سجل المبيعات." />
+        </Receipt>
+      </SalesHistory>
+      <StartingCash Text="بداية النقدية">
+        <Description Text="يتحكم في الوصول إلى قسم النقدية" />
+      </StartingCash>
+      <UserProfile Text="ملف تعريف المستخدم" />
+    </Key>
+  </Security>
+  <Navigation>
+    <Back>
+      <NotAllowed Text="العملية المحددة غير مسموح بها." />
+    </Back>
+  </Navigation>
+  <FloorPlans>
+    <Options Text="الخيارات">
+      <Design Text="تصميم الأرضية والطاولات">
+        <Grid>
+          <Show Text="إظهار الشبكة" />
+          <SnapToGrid Text="تطابق على الشبكة" />
+          <Size Text="حجم الشبكة" />
+        </Grid>
+        <FloorPlan>
+          <Add Text="إضافة أرضية جديدة" />
+          <Delete Text="إزالة أرضية " />
+          <Rename Text="إعادة تسمية أرضية" />
+          <Name Text="اسم" />
+        </FloorPlan>
+        <Table>
+          <Add Text="إضافة طاولة" />
+          <Delete Text="إزالة الطاولة المحددة" />
+          <Name Text="اسم" />
+          <Height Text="ارتفاع" />
+          <Width Text="عرض" />
+          <Size Text="حجم" />
+        </Table>
+      </Design>
+      <View>
+        <Orders Text="إظهار الفواتير">
+          <Title Text="فواتير معلقة" />
+          <Order>
+            <Number Text="رقم الفاتورة" />
+            <Total Text="المجموع" />
+          </Order>
+          <NoOrders Text="لا توجد فواتير معلقة. إنشاء فاتورة جديدة باستخدام الطاولات." />
+        </Orders>
+        <FloorPlans Text="إظهار الطاولات" />
+      </View>
+      <NoSelection Text="المتابعة بدون اختيار" />
+    </Options>
+    <Save>
+      <Success Text="تم حفظ التغييرات بنجاح." />
+      <Error Text="حدث خطأ أثناء الحفظ\nلا يتم حفظ البيانات.\nرسالة النظام: {0}">
+        <Duplicates Text="تم العثور على أسماء طاولات مكررة.\n\n{0}\n\nيجب أن تكون أسماء الطاولات فريدة. الرجاء تصحيح أسماء الطاولات وحاول مرة أخرى.">
+          <Title Text="تم العثور على تكرارات" />
+        </Duplicates>
+      </Error>
+    </Save>
+    <Table>
+      <Unavailable Text="الطاولة &quot;{0}&quot; مأخوذه من {1}. إذا تابعت ، فسوف تقوم بإنشاء طلب منفصل على نفس الطاولة.\n\nهل ترغب في الاستمرار على أي حال؟">
+        <Title Text="الطاولة موجودة بالفعل" />
+      </Unavailable>
+    </Table>
+  </FloorPlans>
+  <Settings Text="الإعدادات">
+    <General Text="الإعدادات الأساسية">
+      <Language Text="اللغة" />
+      <Style Text="تصميم النظام">
+        <ColorScheme Text="نظام الألوان" />
+      </Style>
+      <Layout Text="التصميم">
+        <TouchScreen Text="شاشة اللمس" />
+        <Keyboard Text="أساسي" />
+      </Layout>
+      <VirtualKeyboard Text="تمكين لوحة المفاتيح الظاهرية" />
+      <ProductSearch>
+        <Barcode Text="الباركود" />
+        <Code Text="الكود" />
+        <Name Text="اسم" />
+      </ProductSearch>
+      <ColorScheme>
+        <Dark Text="لون غامق" />
+        <Light Text="لون فاتح" />
+      </ColorScheme>
+      <NotificationPosition>
+        <Top Text="أعلى" />
+        <Bottom Text="أسفل" />
+      </NotificationPosition>
+      <Notifications Text="الإشعارات">
+        <ShowClose Text="إظهار زر الإغلاق" />
+        <ClickToClose Text="انقر للإغلاق" />
+        <SlideIn Text="تراجع" />
+        <Duration Text="مدة الإشعار (بالثانية)" />
+        <Position Text="موقع الإشعار" />
+      </Notifications>
+      <StartingCash Text="عرض النقدية عند بدء النظام" />
+      <BusinessDay Text="يوم العمل">
+        <SelecBusinessDay Text="حدد يوم العمل عند بدء النظام" />
+      </BusinessDay>
+      <ButtonBar Text="الأزرار في شاشة البيع">
+        <Info Text="أختر الأزرار المراد عرضها في شاشة البيع">
+          <VisualLayoutOnly Text="ينطبق على مخطط &quot;شاشة اللمس&quot; فقط" />
+        </Info>
+        <IsCommentVisible Text="ملاحظة" />
+        <IsDiscountVisible Text="خصم" />
+        <IsNewSaleVisible Text="فاتورة جديدة" />
+        <IsRefundVisible Text="استرجاع" />
+        <IsSearchVisible Text="بحث" />
+        <IsTransferVisible Text="تحويل" />
+      </ButtonBar>
+      <WritingDirection Text="اتجاه الكتابة">
+        <LeftToRight Text="من اليسار إلى اليمين" />
+        <RightToLeft Text="من اليمين الى اليسار" />
+      </WritingDirection>
+      <Zoom Text="تكبير" />
+    </General>
+    <Order Text="الطلبات والدفع">
+      <Standard Text="العمليات الأساسية">
+        <AutoOrderNumber Text="إستخدام الطاولات" />
+        <PlaySound Text="الأصوات">
+          <SoundSettings>
+            <Navigation Text="صوت التنقل" />
+            <ItemAdded Text="صوت إضافة عنصر" />
+            <ItemNotFound Text="صوت لم يتم العثور على العنصر" />
+            <Show Text="إظهار خيارات الصوت" />
+            <Hide Text="إخفاء خيارات الصوت" />
+          </SoundSettings>
+        </PlaySound>
+        <ProductGrid Text="عدد أو صفوف / أعمدة" />
+      </Standard>
+      <Users Text="المستخدمين">
+        <SingleUser Text="مستخدم واحد" />
+      </Users>
+      <Products Text="الأصناف">
+        <DefaultQuantity Text="الكمية الافتراضية" />
+        <DefaultSearch Text="البحث الافتراضي">
+          <Options Text="إظهار خيارات البحث" />
+        </DefaultSearch>
+        <DefaultDiscountType Text="نوع الخصم الافتراضي">
+          <Percent Text="نسبه مئويه" />
+          <Fixed Text="ثابت" />
+        </DefaultDiscountType>
+        <RowPerItem Text="صف منفصل لكل صنف" />
+      </Products>
+      <Payment Text="الفاتورة">
+        <ShowSummary Text="إظهار الاصناف في نموذج الدفع" />
+        <FixedRows Text="عدد صفوف نوع الدفع" />
+        <IsSingleItemDiscountAllowed Text="يُسمح بخصم صنف واحد" />
+        <QuickPaymentConfirmation Text="مفاتيح الاختصار لتأكيد الدفع" />
+        <ShowPrintReceiptDialog Text="عرض مربع حوار طباعة الإيصال" />
+        <DefaultDueDate Text="تاريخ الاستحقاق الافتراضي">
+          <Days Text="يوم / أيام" />
+        </DefaultDueDate>
+        <MergeItemsOnPayment Text="دمج الاصناف في الفاتورة" />
+      </Payment>
+      <Advanced>
+        <Show Text="إظهار الاعدادات المتقدمة" />
+        <Hide Text="إخفاء الإعدادات المتقدمة" />
+        <ResetOrderNumber Text="إعادة تعيين رقم الفاتورة عند الإغلاق اليومي" />
+        <ShowAllOccupiedTables Text="عرض كل الطاولات المشغولة في مخطط العرض" />
+      </Advanced>
+    </Order>
+    <Products Text="إعدادات الاصناف">
+      <TaxInclusivePrice Text="عرض وطباعة الاصناف شاملة الضريبة">
+        <Tooltip Text="في حالة تحديدها، سيتم عرض الأصناف في المبيعات وطباعتها على إيصال مع السعر الضريبي المضمن." />
+      </TaxInclusivePrice>
+      <DiscountApplyRule Text="تطبيق الخصم">
+        <BeforeTax Text="قبل الضريبة" />
+        <AfterTax Text="بعد الضريبة" />
+      </DiscountApplyRule>
+    </Products>
+    <Print Text="خيارات الطباعة">
+      <PrinterSelection Text="اختيار الطابعات">
+        <Tour>
+          <Title Text="اختيار الطابعات" />
+          <Content Text="انقر فوق الزر &quot;إعدادات الطابعة&quot;\nلإعداد الطابعة وتخصيصها" />
+        </Tour>
+      </PrinterSelection>
+      <Printers>
+        <KitchenTicket Text="طابعة المطبخ">
+          <Operation Text="طابعة المطبخ" />
+        </KitchenTicket>
+        <Service Text="طابعة الخدمة">
+          <Operation Text="طباعة رسائل الخدمة" />
+        </Service>
+        <Estimate Text="طابعة إقفال البيع">
+          <Operation Text="طابعة إقفال البيع" />
+        </Estimate>
+        <OrderSummary Text="طباعة الطلب" />
+      </Printers>
+      <PrinterOptions Text="إعدادات الطابعة">
+        <Tooltip Text="ضبط إعدادات الطابعة" />
+        <PrinterType Text="نوع الطابعة" />
+        <NumberOfCopies Text="عدد النسخ" />
+        <PaperWidth Text="الأحرف في كل سطر" />
+        <Header Text="رأس" />
+        <Footer Text="تذييل" />
+        <FeedLines Text="سطور" />
+        <CutPaper Text="قص الورق" />
+        <PrintBitmap Text="طباعة صورة نقطية" />
+        <RichFormatting Text="تنسيق منسق" />
+        <Alignment>
+          <Left Text="محاذاة إلى اليسار" />
+          <Center Text="محاذاة الى الوسط" />
+        </Alignment>
+        <Revert Text="إعادة التغييرات">
+          <Completed Text="تم تطبيق الإعدادات المحفوظة مسبقاً" />
+        </Revert>
+        <PrintTestPage Text="طباعة صفحة اختبار" />
+        <RightToLeft Text="من اليمين الى اليسار" />
+        <Advanced Text="متقدمه" />
+        <Unavailable Text="لا تتوفر خيارات إضافية لنوع الطابعة المحدد.\nللاطلاع على خيارات الطابعة الإضافية ، يرجى تحديد نوع طابعة مختلف." />
+        <Margin Text="الهوامش (بالمليمترات)">
+          <Top Text="أعلى" />
+          <Right Text="يمين" />
+          <Bottom Text="أسفل" />
+          <Left Text="يسار" />
+        </Margin>
+        <PrintBarcode Text="طباعة الباركود" />
+        <Font Text="إعدادات الخط">
+          <SizePercent Text="حجم الخط" />
+          <Reset Text="إعادة تعيين حجم الخط إلى الإفتراضي" />
+        </Font>
+        <General Text="الإعدادات الأساسية" />
+        <PaperSize Text="حجم الورق" />
+      </PrinterOptions>
+      <Templates Text="طابعة نموذج">
+        <Font Text="الخط">
+          <Info Text="سيتم استخدام الخط المحدد هنا في الفواتير والتقارير وقوالب الطباعة الأخرى. إذا لم يتم تحديد أي شيء، سيتم استخدام الخط الافتراضي." />
+        </Font>
+      </Templates>
+    </Print>
+    <AddOns Text="الوحدات المسجلة">
+      <Modules Text="الوحدات" />
+      <Plugins Text="الإضافات" />
+    </AddOns>
+    <WeighingScale Text="الميزان الإلكتروني">
+      <VariableMeasureBarcode Text="الميزان الإلكتروني">
+        <Enabled Text="تمكين الميزان الإلكتروني" />
+        <Prefix Text="أول رقمين / بادئة" />
+        <ProductCodeLength Text="عدد الأرقام لرمز المنتج " />
+        <DecimalPlaces Text="عدد المنازل العشرية" />
+        <TrimZeros Text="إزالة الأصفار من رمز المنتج" />
+        <IsUsingPriceBarcode Text="طباعة سعر الوزن بدلاً من الكمية">
+          <Info Text="تقوم بعض موازين الباركود بطباعة السعر الإجمالي بدلاً من قياس الكمية. إذا تم تمكين هذا الخيار ، فستعتمد الكمية على سعر المنتج والمبلغ الإجمالي من المقياس." />
+        </IsUsingPriceBarcode>
+      </VariableMeasureBarcode>
+    </WeighingScale>
+    <Email Text="إعدادات البريد الإلكتروني">
+      <Defaults>
+        <Description Text="إذا قررت ترك هذه الحقول فارغة ، فسيتم استخدام موضوع ورسالة تم إنشاؤها تلقائيًا للعميل. يمكنك تغييرها قبل إرسال الرسالة." />
+      </Defaults>
+    </Email>
+    <About Text="حول">
+      <Account Text="الحساب">
+        <Email Text="أدخل عنوان بريدك الالكتروني" />
+        <Change Text="تغيير" />
+      </Account>
+      <HelpCenter Text="افتح مركز المساعدة">
+        <Info Text="انتقل إلى help.aronium.com لفتح طلب الدعم." />
+      </HelpCenter>
+      <Database Text="قاعدة البيانات">
+        <Open Text="افتح موقع قاعدة البيانات" />
+        <Backup Text="قاعدة بيانات النسخ الاحتياطي" />
+      </Database>
+      <TermsOfUse Text="تعليمات الاستخدام">
+        <Info Text="اقرأ شروط الاستخدام الخاصة بنا على الإنترنت" />
+      </TermsOfUse>
+    </About>
+    <Authorization>
+      <Title Text="الرجاء إدخال كلمة المرور للوصول إلى إعدادات النظام" />
+    </Authorization>
+    <Database Text="قاعدة البيانات" />
+  </Settings>
+  <Guide>
+    <Menu>
+      <Title Text="فتح القائمة الرئيسية" />
+      <Content Text="انقر هنا لفتح القائمة الرئيسية وقسم إدارة الوصول" />
+    </Menu>
+    <Layout>
+      <SearchBox Text="البحث عن الاصناف حسب الاسم أو الباركود أو الكود.">
+        <Title Text="البحث عن الاصناف" />
+      </SearchBox>
+    </Layout>
+    <Dismiss>
+      <Confirmation Text="هل أنت متأكد أنك ترغب في إخفاء هذه النصائح؟" />
+    </Dismiss>
+  </Guide>
+  <Layout>
+    <Visual>
+      <Item>
+        <Edit Text="تعديل المظهر المرئي">
+          <Color Text="اللون" />
+          <Image Text="صورة">
+            <Select Text="اختيار صورة" />
+            <Clear Text="مسح الصورة" />
+          </Image>
+        </Edit>
+      </Item>
+    </Visual>
+  </Layout>
+  <StartingCash Text="الخزينة">
+    <Type>
+      <CashIn Text="إدخال مبلغ" />
+      <CashOut Text="صرف مبلغ" />
+    </Type>
+    <Amount Text="المبلغ">
+      <Reason Text="تفاصيل">
+        <Tooltip Text="أدخل تفاصيل إدخال أو إزالة المبلغ..." />
+      </Reason>
+    </Amount>
+    <Hide Text="لا تظهر هذا مرة أخرى" />
+    <Entries Text="المبالغ النقدية">
+      <NoDescription Text="&lt;بلا وصف&gt;" />
+      <NoEntries Text="لا توجد سجلات" />
+    </Entries>
+    <Saved Text="تم حفظ بداية النقدية" />
+  </StartingCash>
+  <Account>
+    <FirstName Text="الاسم الاول" />
+    <LastName Text="الكنية" />
+    <Email Text="البريد الإلكتروني" />
+    <Password Text="كلمه المرور">
+      <Confirmation Text="تأكيد كلمة المرور">
+        <Error Text="يجب أن تتطابق كلمة المرور وتأكيد كلمة المرور" />
+      </Confirmation>
+    </Password>
+    <Error>
+      <ExistingAccount Text="المستخدم بعنوان البريد الإلكتروني المحدد موجود بالفعل." />
+      <Unauthorized Text="اسم المستخدم أو كلمة المرور خاطئة. يرجى التحقق من بيانات الاعتماد الخاصة بك وحاول مرة أخرى." />
+    </Error>
+    <License>
+      <Info Text="رخصة">
+        <Data Text="بيانات الترخيص">
+          <LicensedTo Text="المرخص لها" />
+          <Email Text="بريد الالكتروني" />
+          <StoreId Text="معرف المتجر" />
+          <Id Text="معرف الترخيص" />
+        </Data>
+      </Info>
+    </License>
+  </Account>
+  <Validations>
+    <Cancel Text="إغلاق النظام" />
+    <Confirm Text="أعلم ، استمر في بدء النظام" />
+    <Print>
+      <Warning>
+        <CustomTemplates Text="لقد اكتشفنا أنك تستخدم قوالب إيصال أو فاتورة مخصصة. نظرًا للتغييرات في بنية قاعدة البيانات في هذا الإصدار ، فقد لا تعمل هذه القوالب بعد الآن.\nستتمكن من استخدام القوالب الافتراضية ، حتى لا يتم حظر عملياتك اليومية.\n\nإذا كنت لا تزال ترغب في استخدام القوالب القديمة ، فيجب عليك إيقاف بدء تشغيل التطبيق الآن والعودة إلى الإصدار القديم.">
+          <Title Text="تحذير! قد لا تعمل قوالب الطباعة المخصصة!" />
+        </CustomTemplates>
+      </Warning>
+    </Print>
+    <Refund>
+      <Invalid Text="إسترجاع غير صالح" />
+    </Refund>
+  </Validations>
+  <Print>
+    <Error Text="حدث خطأ في الطباعة">
+      <CustomTemplate>
+        <Continue Text="هل ترغب في متابعة الطباعة باستخدام القالب الافتراضي؟" />
+      </CustomTemplate>
+    </Error>
+  </Print>
+  <Feedback Text="استجابة">
+    <Send Text="ارسل رأيك" />
+  </Feedback>
+</Language>

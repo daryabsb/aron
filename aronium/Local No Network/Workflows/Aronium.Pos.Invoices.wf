@@ -1,0 +1,76 @@
+<Workflow>
+  <Name>Aronium.Pos.Invoices</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="dcbb06f3-7c89-4a72-9950-8aebfcdc0313" name="Start">
+      <Transitions>
+        <DefaultTransition id="2b256bc8-4d26-471b-89ae-0d1e44a2f507" name="Invoices">
+          <Target>ffa81da9-b669-4500-9dfe-862cd744536d</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="ffa81da9-b669-4500-9dfe-862cd744536d" name="View Invoices">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="5b07cbfc-0ad1-4f69-9b3b-56092d023472" name="END">
+          <Target>a6e321e1-2bd0-4570-aa6e-1e1059aa952c</Target>
+        </DefaultTransition>
+        <DefaultTransition id="d10e4e41-6cad-4b4b-add1-c9d4688c74b9" name="CUSTOMER">
+          <Target>c747d400-3512-4f53-b573-8b85ef9a8144</Target>
+        </DefaultTransition>
+        <DefaultTransition id="3bc9b6ee-726e-4d36-a111-b69b6720d1a0" name="CASH RECEIPT">
+          <Target>c1e40a68-0a41-461e-bea0-a0e8e965d1ba</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Invoices/Default.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <EndTask id="a6e321e1-2bd0-4570-aa6e-1e1059aa952c" name="End" />
+    <ExternalTask id="c747d400-3512-4f53-b573-8b85ef9a8144" name="Select customer">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="02cc1b11-dd64-4c8a-9043-db010df3529c" name="Customer selected">
+          <Target>361bfa6c-5cc4-4228-b037-1732fc932007</Target>
+        </DefaultTransition>
+        <ErrorTransition id="036dc5ca-315f-44bf-b9a0-45b3bf157b2c" name="CANCEL">
+          <Target>ffa81da9-b669-4500-9dfe-862cd744536d</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Payment/SelectCustomer.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="361bfa6c-5cc4-4228-b037-1732fc932007" name="Customer selected">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Invoices.ChangeCustomer</ClassName>
+      <Transitions>
+        <DefaultTransition id="4cb0fb4d-4e3a-40d1-ad5d-ba06b77957be" name="Continue">
+          <Target>ffa81da9-b669-4500-9dfe-862cd744536d</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="c1e40a68-0a41-461e-bea0-a0e8e965d1ba" name="Print Cash Receipt">
+      <AssemblyName>Modules\Aronium.Pos.Print\Aronium.Pos.Print</AssemblyName>
+      <ClassName>Aronium.Pos.Print.Tasks.Invoices.PrintCashReceipt</ClassName>
+      <Transitions>
+        <DefaultTransition id="ab992633-1606-4afa-9ff6-6a89d938cdf0" name="Completed">
+          <Target>6a2ab1ce-c117-4652-a911-ebca8e290910</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="6a2ab1ce-c117-4652-a911-ebca8e290910" name="Open cash drawer">
+      <AssemblyName>Modules\Aronium.Pos.Print\Aronium.Pos.Print</AssemblyName>
+      <ClassName>Aronium.Pos.Print.Tasks.OpenCashDrawerTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="ad19a182-0b32-4d4e-9690-43ff6f849fec" name="Completed">
+          <Target>ffa81da9-b669-4500-9dfe-862cd744536d</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+  </Tasks>
+</Workflow>

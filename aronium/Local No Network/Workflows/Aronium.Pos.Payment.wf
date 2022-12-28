@@ -1,0 +1,265 @@
+<Workflow>
+  <Name>Aronium.Pos.Payment</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="48430278-2da1-4b9d-b013-e4f333e87a0b" name="Start">
+      <Transitions>
+        <DefaultTransition id="b1fd36ce-ce40-46d8-aaaf-dd2edfa1764c" name="Start">
+          <Target>c1694969-b785-44a4-b893-3d232fd49b68</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <RouterTask id="c1694969-b785-44a4-b893-3d232fd49b68" name="Has Items">
+      <IsExclusive>False</IsExclusive>
+      <Transitions>
+        <SuccessTransition id="f0606094-3156-4351-b5f2-3a2c8c25c7df" name="Has Items">
+          <Target>36503955-8776-4a3b-9713-1e51337d3de3</Target>
+        </SuccessTransition>
+        <ErrorTransition id="28bf5707-ddec-4054-a4dc-551d46ad63f2" name="No items">
+          <Target>cdc468bd-9cd2-43f5-a319-1a6ef374ac96</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Order.HasItems">true</Variable>
+      </Variables>
+    </RouterTask>
+    <RouterTask id="164bb5af-f44e-4b25-9492-779c55df7262" name="Payment type selected">
+      <IsExclusive>False</IsExclusive>
+      <Transitions>
+        <SuccessTransition id="d5e01e46-4e53-47fe-a427-9b28d2f40de1" name="Payment type selected">
+          <Target>083abfe6-fac1-4d04-bc3f-ed8ca631705c</Target>
+        </SuccessTransition>
+        <ErrorTransition id="039b655b-2e10-449f-b344-612f5206ebd9" name="Select payment type">
+          <Target>c72adeb6-d7b7-4ce6-b50b-c64a83e8416c</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="PAYMENTS">{NOT_NULL}</Variable>
+      </Variables>
+    </RouterTask>
+    <ExternalTask id="c72adeb6-d7b7-4ce6-b50b-c64a83e8416c" name="Payment details">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <ErrorTransition id="ec73714c-a33a-41e1-b555-c4b2d8865b90" name="Cancel">
+          <Target>ea94cbc6-4085-41c1-ba0e-269d9b918511</Target>
+        </ErrorTransition>
+        <DefaultTransition id="b7bbede1-6030-4760-92ad-9bb8f08ba73a" name="Discount">
+          <Target>a05a9ce9-8ff3-4127-b36d-e23c37713db7</Target>
+        </DefaultTransition>
+        <DefaultTransition id="8652c34e-92ea-4aa2-a08c-a0530ce7a35a" name="Split">
+          <Target>0cdd85fa-98c6-48a0-8d8f-6ec727652f9e</Target>
+        </DefaultTransition>
+        <DefaultTransition id="df511097-e9dd-4b95-8b7b-94294ce469fb" name="CUSTOMER">
+          <Target>71e1c331-49e3-418f-b733-a824ca1c8bf3</Target>
+        </DefaultTransition>
+        <SuccessTransition id="87d808a9-334c-4706-ba50-fb05e400dd2a" name="Success">
+          <Target>083abfe6-fac1-4d04-bc3f-ed8ca631705c</Target>
+        </SuccessTransition>
+        <DefaultTransition id="97918fe8-dea5-42bc-a341-1f8a9ba45e8c" name="CLEAR_CUSTOMER">
+          <Target>0bcf2036-0ffe-4af0-a81d-dd4ea0dbd70c</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Payment/Details.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="71e1c331-49e3-418f-b733-a824ca1c8bf3" name="Select customer">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="59b68e75-51b5-4f78-b43c-f6b4282f3fd8" name="Success">
+          <Target>6d1e953c-dce1-4bca-a775-91675b73b62d</Target>
+        </DefaultTransition>
+        <ErrorTransition id="29b03326-9949-4579-bc29-6a07dcbd4d41" name="CANCEL">
+          <Target>c72adeb6-d7b7-4ce6-b50b-c64a83e8416c</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Payment/SelectCustomer.xaml</Variable>
+        <Variable name="ClearCustomerAllowed">True</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="a05a9ce9-8ff3-4127-b36d-e23c37713db7" name="Discount">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="34e25be8-f079-481c-a170-63b4beb24fee" name="Done">
+          <Target>0bcf2036-0ffe-4af0-a81d-dd4ea0dbd70c</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Payment/DiscountView.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="0cdd85fa-98c6-48a0-8d8f-6ec727652f9e" name="Split order">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="02c89af8-170e-453c-a449-1153db4f2961" name="Done">
+          <Target>c72adeb6-d7b7-4ce6-b50b-c64a83e8416c</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Payment/SelectOrderRounds.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="6d1e953c-dce1-4bca-a775-91675b73b62d" name="Customer selected">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Payments.CustomerSelected</ClassName>
+      <Transitions>
+        <DefaultTransition id="9d88e2bf-fb1a-4eda-a3ec-b473f290f0f0" name="Done">
+          <Target>0bcf2036-0ffe-4af0-a81d-dd4ea0dbd70c</Target>
+        </DefaultTransition>
+        <DefaultTransition id="e6906930-45ad-41e5-a4ab-d379f7e71f47" name="CUSTOMER_SELECTED">
+          <Target>083abfe6-fac1-4d04-bc3f-ed8ca631705c</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="083abfe6-fac1-4d04-bc3f-ed8ca631705c" name="Validate payments">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Payments.ValidatePaymentsTask</ClassName>
+      <Transitions>
+        <SuccessTransition id="55e14854-a74d-448b-b8bc-66f9d9a985c1" name="Create document">
+          <Target>994814ae-c419-44e1-96de-5b38dde22901</Target>
+        </SuccessTransition>
+        <ErrorTransition id="7314b467-dd37-418b-805b-e422f556b142" name="Add">
+          <Target>96e33df1-883b-4e58-b101-2be8b3ce3ebf</Target>
+        </ErrorTransition>
+        <DefaultTransition id="ca95fc7a-0c5c-4751-825a-f17e1dffe475" name="CUSTOMER">
+          <Target>71e1c331-49e3-418f-b733-a824ca1c8bf3</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="96e33df1-883b-4e58-b101-2be8b3ce3ebf" name="Add payments">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="00c27646-cf4e-4d01-902d-44499cc00cd0" name="Continue">
+          <Target>083abfe6-fac1-4d04-bc3f-ed8ca631705c</Target>
+        </DefaultTransition>
+        <ErrorTransition id="cc8f9c86-c5d4-4666-8d2a-a7c25b6bff4d" name="Cancel">
+          <Target>c72adeb6-d7b7-4ce6-b50b-c64a83e8416c</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Payment/AddPayment.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="994814ae-c419-44e1-96de-5b38dde22901" name="Create document">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Documents.DocumentWorkflowRunner</ClassName>
+      <Transitions>
+        <SuccessTransition id="9e5cadf1-daa6-43ee-aea6-31b393e83327" name="Success">
+          <Target>b4980217-3285-4b0e-901f-3cb5f7b328d1</Target>
+        </SuccessTransition>
+        <ErrorTransition id="60a0a4ce-b620-4607-bb4b-885754584739" name="Error">
+          <Target>ea94cbc6-4085-41c1-ba0e-269d9b918511</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="b4980217-3285-4b0e-901f-3cb5f7b328d1" name="Clear order">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Payments.ClearOrder</ClassName>
+      <Transitions>
+        <DefaultTransition id="ee09f5b9-51ed-4cf1-a9f5-ecc9fa98a96b" name="Success">
+          <Target>0d45f76e-bd82-4ac9-b625-89f1e32ff4d1</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <AbortTask id="ea94cbc6-4085-41c1-ba0e-269d9b918511" name="Abort" />
+    <EndTask id="6332ab51-d38e-4317-bf11-31b4a616e1ae" name="End" />
+    <ExternalTask id="10ef898b-a8b5-49e8-b7dd-40c0d4f59b30" name="Print receipt">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Payments.PrintReceiptTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="a23dc138-5c94-4faa-b06b-6b42f00fd6b9" name="Success">
+          <Target>cdc468bd-9cd2-43f5-a319-1a6ef374ac96</Target>
+        </DefaultTransition>
+        <ErrorTransition id="f5101834-179a-4e60-a1a1-69ba27e0ad28" name="Error">
+          <Target>ea94cbc6-4085-41c1-ba0e-269d9b918511</Target>
+        </ErrorTransition>
+        <DefaultTransition id="dcf74c2b-1bbb-4805-8fbd-495269a3e5a8" name="Back">
+          <Target>8635ea0c-6390-4205-960c-95c3d81565b2</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="8635ea0c-6390-4205-960c-95c3d81565b2" name="Print dialog">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Payments.PrintDialogTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="e73c89ee-a503-4203-a32e-1c3d66d0c07e" name="Receipt">
+          <Target>10ef898b-a8b5-49e8-b7dd-40c0d4f59b30</Target>
+        </DefaultTransition>
+        <DefaultTransition id="0fcd2600-81c4-4a34-8df7-c9924c12e9dd" name="Done">
+          <Target>cdc468bd-9cd2-43f5-a319-1a6ef374ac96</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Payment/ReceiptPrintDialog.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="0d45f76e-bd82-4ac9-b625-89f1e32ff4d1" name="Display total">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Payments.DisplayTotal</ClassName>
+      <Transitions>
+        <DefaultTransition id="6fda8f7a-8bca-4744-8567-bd3d38200fad" name="Continue">
+          <Target>a98705b6-f85a-4839-93d2-cb3c50fb4808</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="TopVar">Item.Product.Name</Variable>
+        <Variable name="BottomVar">Item.Product.Price</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="cdc468bd-9cd2-43f5-a319-1a6ef374ac96" name="Display welcome message">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.DisplayWelcomeMessage</ClassName>
+      <Transitions>
+        <DefaultTransition id="769e3a3a-b5a4-4734-b532-507b928ba223" name="Conitinue">
+          <Target>6332ab51-d38e-4317-bf11-31b4a616e1ae</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="WaitTime">3</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="36503955-8776-4a3b-9713-1e51337d3de3" name="Display total">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Payments.DisplayTotal</ClassName>
+      <Transitions>
+        <DefaultTransition id="eed4df30-9847-4817-a088-37e248de8651" name="Continue">
+          <Target>164bb5af-f44e-4b25-9492-779c55df7262</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="TopVar">Item.Product.Name</Variable>
+        <Variable name="BottomVar">Item.Product.Price</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="a98705b6-f85a-4839-93d2-cb3c50fb4808" name="Open cash drawer">
+      <AssemblyName>Modules\Aronium.Pos.Print\Aronium.Pos.Print</AssemblyName>
+      <ClassName>Aronium.Pos.Print.Tasks.OpenCashDrawerTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="0f81ade8-753f-4e59-8c24-59fbee7b748b" name="Continue">
+          <Target>8635ea0c-6390-4205-960c-95c3d81565b2</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="0bcf2036-0ffe-4af0-a81d-dd4ea0dbd70c" name="Display total">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Payments.DisplayTotal</ClassName>
+      <Transitions>
+        <DefaultTransition id="4fad4b88-0eeb-4641-9825-be553a8d612b" name="Continue">
+          <Target>c72adeb6-d7b7-4ce6-b50b-c64a83e8416c</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="TopVar">Item.Product.Name</Variable>
+        <Variable name="BottomVar">Item.Product.Price</Variable>
+      </Variables>
+    </ExternalTask>
+  </Tasks>
+</Workflow>

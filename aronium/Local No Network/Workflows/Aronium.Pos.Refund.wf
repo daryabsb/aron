@@ -1,0 +1,92 @@
+<Workflow>
+  <Name>Aronium.Pos.Refund</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="1645f69d-5473-491e-9571-45b4908a4912" name="Start">
+      <Transitions>
+        <DefaultTransition id="930ba017-9a6d-4faa-80e5-4656d8356613" name="Add receipt number">
+          <Target>d7d03afa-d845-487c-8cca-033c898b61b8</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="d7d03afa-d845-487c-8cca-033c898b61b8" name="Enter receipt number">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <ErrorTransition id="44801ecd-3360-47da-bd25-9b1350715ae9" name="Cancel">
+          <Target>d3612139-1959-40c5-b373-934f0d2ad49b</Target>
+        </ErrorTransition>
+        <DefaultTransition id="29419396-d6c4-4f36-af71-ef14f65c0fc2" name="Continue">
+          <Target>5403752c-29f4-4f1b-8df0-fa0839bf3adf</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Refund/RefundView.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="3cfd6da2-9a3a-4773-82c2-b4180a75c3de" name="Print refund">
+      <AssemblyName>Modules\Aronium.Pos.Print\Aronium.Pos.Print</AssemblyName>
+      <ClassName>Aronium.Pos.Print.Tasks.PrintRefundTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="e32134be-2fa8-4c45-9052-2a4bcf270619" name="Continue">
+          <Target>72807738-0b98-4937-9028-5ac0f306bd6f</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="7b2bfd83-d49c-46d8-81e5-cda2914b4e3e" name="Create document">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Documents.RefundDocumentTask</ClassName>
+      <Transitions>
+        <ErrorTransition id="06d88339-9147-49fc-beb7-495d009653e8" name="Error">
+          <Target>d3612139-1959-40c5-b373-934f0d2ad49b</Target>
+        </ErrorTransition>
+        <DefaultTransition id="fd4a3cb6-700e-494c-b988-81927ea29273" name="Continue">
+          <Target>d390752f-c6f6-4d79-ac9e-907d674bf4f5</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <AbortTask id="d3612139-1959-40c5-b373-934f0d2ad49b" name="Abort" />
+    <EndTask id="1d3ebf44-a60f-419c-a543-d40e50ec89e1" name="End" />
+    <ExternalTask id="4943d417-bfc2-48da-aed5-d85af3228225" name="Clear order">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Payments.ClearOrder</ClassName>
+      <Transitions>
+        <DefaultTransition id="1d2c4e35-d9e4-413a-a525-a3861bbe6039" name="End">
+          <Target>1d3ebf44-a60f-419c-a543-d40e50ec89e1</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="d390752f-c6f6-4d79-ac9e-907d674bf4f5" name="Refund payments">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Documents.RefundPaymentsTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="513df4d6-9203-4af5-bcb8-0d21c54a91a3" name="Print receipt">
+          <Target>3cfd6da2-9a3a-4773-82c2-b4180a75c3de</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="72807738-0b98-4937-9028-5ac0f306bd6f" name="Open cash drawer">
+      <AssemblyName>Modules\Aronium.Pos.Print\Aronium.Pos.Print</AssemblyName>
+      <ClassName>Aronium.Pos.Print.Tasks.OpenCashDrawerTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="18511714-f814-4b11-bd43-c529233de4c9" name="Continue">
+          <Target>4943d417-bfc2-48da-aed5-d85af3228225</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="5403752c-29f4-4f1b-8df0-fa0839bf3adf" name="Validate">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Documents.ValidateRefundTask</ClassName>
+      <Transitions>
+        <SuccessTransition id="3d3ab345-5c48-4c85-8921-4a79c2ef7119" name="Create document">
+          <Target>7b2bfd83-d49c-46d8-81e5-cda2914b4e3e</Target>
+        </SuccessTransition>
+        <ErrorTransition id="ecee7724-d791-4c41-a224-423efd12ef37" name="Error">
+          <Target>d7d03afa-d845-487c-8cca-033c898b61b8</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+  </Tasks>
+</Workflow>

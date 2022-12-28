@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Print>
+    <Labels>
+      <Documents>
+        <Invoice Text="Factuur">
+          <BillTo Text="Te factureren aan" />
+          <InvoiceNumber Text="Factuurnummer" />
+          <PaymentStatus Text="Betalingsstatus">
+            <Unpaid Text="Niet betaald" />
+            <Paid Text="Betaald" />
+          </PaymentStatus>
+          <BankAccountNumber Text="Rekeningnummer" />
+          <BankDetails Text="Bankdetails" />
+          <PaymentMethod Text="Betalingswijze" />
+          <PaidAmount Text="Betaald bedrag" />
+          <AmountDue Text="Openstaand bedrag" />
+          <Item Text="Artikel" />
+          <ItemsCount Text="Aantal artikelen" />
+        </Invoice>
+      </Documents>
+      <General>
+        <Tax Text="BTW" />
+        <Phone Text="Phone" />
+        <Email Text="Email" />
+        <Date Text="Datum" />
+        <DueDate Text="Vervaldatum" />
+        <Numbering Text="Nr." />
+        <Product Text="Artikel" />
+        <Quantity Text="Aantal" />
+        <UnitPrice Text="Eenheidsprijs" />
+        <Discount Text="Korting" />
+        <Total Text="Totaal" />
+        <Subtotal Text="Subtotaal" />
+        <Page Text="Pagina" />
+        <Period Text="Periode" />
+        <Customer Text="Klant" />
+        <User Text="Gebruiker" />
+        <Code Text="Code" />
+        <ProductName Text="Productnaam" />
+        <Qty Text="Aantal" />
+        <Cost Text="Kosten" />
+        <Profit Text="Winst" />
+        <Margin Text="Marge" />
+        <Company Text="Bedrijf">
+          <Address Text="Adres" />
+        </Company>
+        <Supplier Text="Leverancier" />
+        <UnitOfMeasurement Text="Eenheid" />
+        <TotalBeforeTax Text="Belastbaar totaal" />
+        <PurchaseNumber Text="Factuurnummer" />
+        <TotalPaid Text="Totaal betaald" />
+        <TotalUnpaid Text="Totaal onbetaald" />
+        <ProductGroup Text="Artikelgroep" />
+        <TaxName Text="BTW naam" />
+        <TaxNumber Text="BTW" />
+        <Description Text="Beschrijving" />
+        <Name Text="Naam" />
+        <Products Text="Producten" />
+        <ExternalDocument Text="Extern document" />
+      </General>
+      <Reports>
+        <ProfitAndMargin Text="Winstmarge" />
+        <PurchaseByProduct Text="Aankoop per artikel" />
+        <PurchaseBySupplier Text="Aankoop door leverancier" />
+        <UnpaidPurchases Text="Onbetaalde aankoop" />
+        <DailySales Text="Dagelijkse verkopen" />
+        <Invoices Text="Facturen" />
+        <SalesByPaymentType Text="Verkopen door betalingstypen" />
+        <PaymentTypesByUser Text="Betalingstypen door gebruikers" />
+        <SalesByProductGroups Text="Verkopen per artikelgroepen" />
+        <SalesByProduct Text="Verkopen door product" />
+        <Refunds Text="Teruggave" />
+        <Taxes Text="BTW" />
+        <UnpaidSales Text="Onbetaalde verkopen" />
+        <SalesByUser Text="Verkopen door gebruikers" />
+        <StartingCashEntries Text="Geldmeldingen starten">
+          <ZReport Text="Z-rapport" />
+          <Open Text="Open" />
+        </StartingCashEntries>
+        <PaymentTypesByCustomer Text="Betaalmethoden door klanten" />
+        <SalesByCustomer Text="Verkoop per klant" />
+      </Reports>
+    </Labels>
+  </Print>
+</Language>

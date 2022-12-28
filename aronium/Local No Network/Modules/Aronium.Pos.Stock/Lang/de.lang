@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="de" name="Deutsch">
+  <Stock Text="Bestand">
+    <Items>
+      <Item>
+        <Product>
+          <Id Text="ID" />
+          <Code Text="Code" />
+          <Name Text="Name" />
+          <MeasurementUnit Text="Maßeinheit" />
+        </Product>
+        <Quantity Text="Menge" />
+        <NegativeQuantity Text="Negative Bestandsmenge" />
+        <TotalCostBeforeTax Text="Einkaufspreis" />
+        <TotalCost Text="Einkaufspreis inkl. Steuern" />
+        <TotalBeforeTax Text="Gesamtwert" />
+        <TotalAfterTax Text="Gesamtwert inkl. Steuern" />
+      </Item>
+      <Filter>
+        <NegativeQuantity Text="Negative Menge">
+          <Info Text="Zeigt nur Produkte mit negativer Menge an" />
+        </NegativeQuantity>
+        <NonZeroQuantity Text="Menge ungleich Null">
+          <Info Text="Zeigt nur Produkte mit einer anderen Menge als Null an" />
+        </NonZeroQuantity>
+        <ZeroQuantity Text="Menge gleich Null">
+          <Info Text="Zeigt nur Produkte mit der Menge gleich Null an" />
+        </ZeroQuantity>
+      </Filter>
+      <Summary>
+        <NegativeCount Text="Gesamtzahl der Artikel mit negativer Menge auf Lager" />
+        <ZeroCount Text="Gesamtzahl der Artikel mit der Menge gleich Null auf Lager" />
+        <PositiveCount Text="Gesamtzahl der Artikel mit positiver Menge auf Lager" />
+        <TotalBeforeTax Text="Gesamt:" />
+        <TotalIncludingTax Text="Gesamt inkl. Steuern:" />
+        <SellPrice Text="Verkaufspreis" />
+        <CostPrice Text="Einkaufspreis">
+          <TotalCostBeforeTax Text="Gesamt Einkaufspreis:" />
+          <TotalCostAfterTax Text="Gesamt Einkaufspreis inkl. Steuern:" />
+        </CostPrice>
+      </Summary>
+    </Items>
+    <Reset Text="Bestandsmengen neu berechnen">
+      <Completed Text="Bestandsberechnung erfolgreich abgeschlossen." />
+    </Reset>
+    <History Text="Bestandsverlauf">
+      <Start Text="Beginn" />
+      <End Text="Ende" />
+      <Document Text="Dokument">
+        <DocumentType Text="Dokumententyp" />
+        <Customer Text="Kunde" />
+        <Date Text="Datum" />
+        <StockDate Text="Lagerdatum" />
+      </Document>
+      <ChangeQuantity Text="Menge" />
+      <InStock Text="Auf Lager" />
+      <MeasurementUnit Text="Maßeinheit" />
+      <CostPrice Text="Einkaufspreis" />
+    </History>
+    <Print>
+      <Report Text="Inventurzählbericht" />
+    </Print>
+    <ProductDetails>
+      <OnHand Text="Verfügbare Menge" />
+    </ProductDetails>
+    <Control>
+      <Settings>
+        <PreventNegativeQuantities Text="Negatives Inventar verhindern" />
+      </Settings>
+      <NegativeQuantity Text="Verkauf bei leerem Bestand">
+        <Confirmation Text="Sie haben keine ausreichende Menge auf Lager, um diesen Artikel zu verkaufen. Der Verkauf dieses Artikels kann zu einer negativen Menge im Lager führen.\n\nVerfügbare Menge: {0}\nBenötigte Menge: {1}\n\nSind Sie sicher, dass Sie diesen Artikel zum aktuellen Verkauf hinzufügen möchten?" />
+        <Title Text="Bestandsmenge fehlt" />
+        <PermissionDenied Text="Sie verfügen nicht über ausreichende Berechtigungen zum Verkauf von Artikeln mit leerem Bestand. Bitte wenden Sie sich an den Administrator." />
+        <Authorization>
+          <Title Text="Bestandskontrolle ist aktiviert.\nBitte geben Sie das Passwort für den Verkauf von leerem Bestand ein, um fortzufahren" />
+        </Authorization>
+        <AllowMultiple>
+          <NotAllowed Text="Wiederholungsrunde ist nicht erlaubt, wenn die Bestandskontrolle aktiviert ist." />
+        </AllowMultiple>
+        <Security>
+          <Description Text="Steuert, ob ein Benutzer Artikel mit negativer Menge verkaufen kann" />
+        </Security>
+      </NegativeQuantity>
+    </Control>
+    <QuickInventory Text="Schnellinventarisierung">
+      <Description Text="Bestandsmengen für den ausgewählten Artikel ändern" />
+      <Title Text="Bestandsmenge aktualisieren" />
+      <Subtitle Text="Legen Sie die Bestandsmengen für das ausgewählte Produkt fest.\nInventurzählungsdokument wird automatisch erstellt." />
+      <Success Text="Bestandsmenge erfolgreich geändert.\nDokument {0} erstellt." />
+      <Unauthorized Text="Sie haben keine Berechtigung, die Schnellinventur zu benutzen." />
+    </QuickInventory>
+    <LearnMore Text="Mehr erfahren über Bestand und Inventar" />
+    <SearchResults Text="Suchergebnis" />
+    <ShowCostPrices Text="Einkaufspreise anzeigen">
+      <Description Text="Steuert, ob Einkaufspreise in der Lageransicht angezeigt werden." />
+    </ShowCostPrices>
+  </Stock>
+</Language>

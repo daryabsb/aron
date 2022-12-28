@@ -1,0 +1,118 @@
+<Workflow>
+  <Name>Aronium.Pos.Registration</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>False</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="cdc01c4e-3d1e-4ed3-a64a-58df1830497e" name="Start">
+      <Transitions>
+        <DefaultTransition id="9e22d502-61c3-4545-b1c2-5bf93a96c443" name="Registration">
+          <Target>7186fcee-57fd-4cc5-b504-061ea59ef600</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="7186fcee-57fd-4cc5-b504-061ea59ef600" name="Validate registration">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Registration.ValidateRegistrationTask</ClassName>
+      <Transitions>
+        <SuccessTransition id="d7b8d819-b9f4-4e66-af89-be31c7742a79" name="End">
+          <Target>4de56151-76b9-4848-9213-503e953af26a</Target>
+        </SuccessTransition>
+        <ErrorTransition id="92b2a6a4-8565-451d-90da-f15ed3c391c6" name="Error">
+          <Target>7fd2ca58-8d54-43c4-bca6-364eea9d7513</Target>
+        </ErrorTransition>
+        <DefaultTransition id="70af4f60-5237-4e1e-81e0-bafd555d0848" name="Store">
+          <Target>92acfdd8-0ec8-4ec1-bf91-ffcfbe7d5f19</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <EndTask id="4de56151-76b9-4848-9213-503e953af26a" name="End" />
+    <ExternalTask id="7fd2ca58-8d54-43c4-bca6-364eea9d7513" name="Login">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="01bfc70f-2184-400a-8492-222dfc36e132" name="Skip">
+          <Target>4de56151-76b9-4848-9213-503e953af26a</Target>
+        </DefaultTransition>
+        <DefaultTransition id="4c77d00e-fd64-4cfb-8a72-e954e5cba3f4" name="Store">
+          <Target>92acfdd8-0ec8-4ec1-bf91-ffcfbe7d5f19</Target>
+        </DefaultTransition>
+        <SuccessTransition id="df9f5218-afb0-43fb-8c8d-09d14f7c55a4" name="Validate">
+          <Target>7186fcee-57fd-4cc5-b504-061ea59ef600</Target>
+        </SuccessTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Registration/LoginAndRegistrationView.xaml</Variable>
+        <Variable name="Refresh">True</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="92acfdd8-0ec8-4ec1-bf91-ffcfbe7d5f19" name="Load stores">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Registration.LoadStoreTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="ea4a7b25-e67f-4edf-aebb-000a6f36846f" name="Select">
+          <Target>303ceba6-a478-42be-8e34-36474abdbc34</Target>
+        </DefaultTransition>
+        <SuccessTransition id="466657d6-3af3-4b11-afe3-e551fd68b053" name="Continue">
+          <Target>890c227b-2697-4c0a-a1b9-1f5696c4a382</Target>
+        </SuccessTransition>
+        <ErrorTransition id="f47531fe-60ca-44fc-9a27-7def1cd7b2b2" name="Error">
+          <Target>7fd2ca58-8d54-43c4-bca6-364eea9d7513</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="303ceba6-a478-42be-8e34-36474abdbc34" name="Select store">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <SuccessTransition id="e4b5a8a4-cef9-42e1-8b81-7970c22febcc" name="Continue">
+          <Target>890c227b-2697-4c0a-a1b9-1f5696c4a382</Target>
+        </SuccessTransition>
+        <DefaultTransition id="90cf595c-ea4e-4e24-9c65-be4d59a027c2" name="Skip">
+          <Target>4de56151-76b9-4848-9213-503e953af26a</Target>
+        </DefaultTransition>
+        <ErrorTransition id="27e73971-514c-43b3-ab96-07fd6ab87127" name="Login">
+          <Target>7fd2ca58-8d54-43c4-bca6-364eea9d7513</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Registration/StoresView.xaml</Variable>
+        <Variable name="Refresh">True</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="890c227b-2697-4c0a-a1b9-1f5696c4a382" name="Load license">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Registration.LoadLicenseTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="ea08b17e-0a75-4faa-9977-a0c153401d1d" name="Continue">
+          <Target>98d565cb-9d70-449b-8ca8-6b4f6a288355</Target>
+        </DefaultTransition>
+        <SuccessTransition id="a80ca9a4-ea4e-4bb3-bcf9-8e589b139429" name="Validate">
+          <Target>7186fcee-57fd-4cc5-b504-061ea59ef600</Target>
+        </SuccessTransition>
+        <ErrorTransition id="18d7bbe5-d017-42ca-834b-7dd3f6cc26ad" name="Error">
+          <Target>7fd2ca58-8d54-43c4-bca6-364eea9d7513</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="98d565cb-9d70-449b-8ca8-6b4f6a288355" name="Activate">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <SuccessTransition id="a7f6db57-347d-4a84-8972-ca13d6b17af6" name="Continue">
+          <Target>7186fcee-57fd-4cc5-b504-061ea59ef600</Target>
+        </SuccessTransition>
+        <DefaultTransition id="978d84ed-01eb-49cd-ac90-665f3af3de70" name="Skip">
+          <Target>4de56151-76b9-4848-9213-503e953af26a</Target>
+        </DefaultTransition>
+        <ErrorTransition id="e321ba2d-28d6-4592-930d-c8eb4fcb26ee" name="Store">
+          <Target>92acfdd8-0ec8-4ec1-bf91-ffcfbe7d5f19</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Registration/ActivateModulesView.xaml</Variable>
+        <Variable name="Refresh">True</Variable>
+      </Variables>
+    </ExternalTask>
+  </Tasks>
+</Workflow>

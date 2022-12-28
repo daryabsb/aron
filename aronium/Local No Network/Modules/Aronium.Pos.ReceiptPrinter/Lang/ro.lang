@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ro" name="Romanian">
+  <ReceiptPrinter Text="Imprimanta fiscala">
+    <Receipt>
+      <PrinterNotFound Text="Imprimanta fiscala nu e selectata sau e dezactivata. Verifica setarile imprimantei si incearca din nou." />
+      <Company>
+        <TaxNumber Text="C.U.I." />
+      </Company>
+      <Customer Text="Client">
+        <Address Text="Adresa" />
+        <TaxNumber Text="Codul fiscal" />
+      </Customer>
+      <Number Text="Bon nr." />
+      <RefundNumber Text="Retur nr." />
+      <ItemsCount Text="Numar elemente" />
+      <Subtotal Text="Subtotal" />
+      <Tax Text="TVA" />
+      <Discount Text="Reducere cos" />
+      <Total Text="TOTAL" />
+      <PaidAmount Text="Valoarea platita" />
+      <Change Text="Rest" />
+      <Customize Text="Personalizeaza bonul">
+        <UseSystemCurrency Text="Utilizeaza formatul sistemului pentru moneda" />
+        <NumberOfDecimalPlaces Text="Numar zecimale" />
+        <PrintTaxes Text="Tipareste TVA total" />
+        <PrintItemsCount Text="Tipareste numarul elementelor" />
+        <Localize Text="Localizeaza textul pe bon">
+          <Company>
+            <TaxNumber Text="Codul fiscal al companiei" />
+          </Company>
+          <Customer Text="Clientul">
+            <Address Text="Adresa clientului" />
+            <TaxNumber Text="Codul fiscal al clientului" />
+          </Customer>
+          <ReceiptNumber Text="Numarul bonului" />
+          <RefundNumber Text="Numarul returului" />
+          <ItemsCount Text="Numar elemente" />
+          <Discount Text="Reducere" />
+          <Subtotal Text="Subtotal" />
+          <Tax Text="TVA" />
+          <Total Text="Total" />
+          <PaidAmount Text="Valoare platita" />
+          <Change Text="Rest" />
+          <OrderNumber Text="Numarul de comanda" />
+        </Localize>
+      </Customize>
+      <OrderNumber Text="Comanda Nr." />
+    </Receipt>
+    <DailyReport>
+      <ZReport Text="Raport Z" />
+      <XReport Text="Raport X" />
+      <Date Text="Data:" />
+      <Time Text="Timpul:" />
+      <ReportNumber Text="Raport #:" />
+      <FromDocument Text="Din Document:" />
+      <ToDocument Text="In Document:" />
+      <UserSales Text="Vanzarea utilizatorului:" />
+      <PaymentTypes Text="Mod de plata:">
+        <Total Text="Total platit:" />
+      </PaymentTypes>
+      <Refunds Text="Retururi:">
+        <Total Text="Total Retururi:" />
+      </Refunds>
+      <TaxCollected Text="TVA Colectat:" />
+      <TaxableTotal Text="Total fara TVA:" />
+      <Tax Text="TVA:" />
+      <Total Text="Total:" />
+      <Items Text="RAPORT ELEMENTE ">
+        <ReportNumber Text="Raport #:" />
+        <Products Text="PROSUSE" />
+        <Groups Text="GRUP de PRODUSE" />
+      </Items>
+    </DailyReport>
+    <CashDrawer Text="Sertar de bani">
+      <OpenCashDrawer Text="Deschide sertarul de bani">
+        <AuthorizationRequired Text="Deschiderea sertarului de bani necesita autorizare.\nTe rog introdu parola necesara pentru deschiderea sertarului de bani." />
+      </OpenCashDrawer>
+      <Command Text="Comanda sertarului de bani">
+        <LearnMore Text="Ce e asta?" />
+      </Command>
+      <Error>
+        <CommandNotSet Text="Comanda sertarului de bani nu e setata.\nTe rog seteaza comanda sertarului de bani pentru a continua." />
+        <PrinterNotSet Text="Imprimanta fiscala nu e setata.\nTe rog configureaza imprimanta fiscala pentru a continua." />
+      </Error>
+    </CashDrawer>
+  </ReceiptPrinter>
+  <FiscalPrinter>
+    <Check Text="Incarca imprimanta fiscala...">
+      <Status Text="Verificarea starii imprimantei" />
+    </Check>
+    <CloseFiscalDay Text="Tipareste raportul de inchidere">
+      <Info Text="Te rog selecteaza raportul pentru tiparit. Asigura-te ca imprimanta e  disponibila si operationala." />
+      <DailyReport Text="Tipareste raportul Z">
+        <InProgress Text="Raportul Z se tipareste... Te rog asteapta..." />
+      </DailyReport>
+      <SubReport Text="Tipareste raportul X">
+        <InProgress Text="Raportul X se tipareste... Te rog asteapta..." />
+      </SubReport>
+      <ItemsReport Text="Tipareste raportul elementelor">
+        <InProgress Text="Raportul elementelor se tipareste... Te rog asteapta..." />
+      </ItemsReport>
+      <PrinterDisabled Text="Imprimanta e dezactivata sau nu e selectata. Rapoartele probabil nu se tiparesc." />
+    </CloseFiscalDay>
+  </FiscalPrinter>
+</Language>

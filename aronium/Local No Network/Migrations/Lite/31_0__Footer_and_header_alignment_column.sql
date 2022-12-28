@@ -1,0 +1,2 @@
+ALTER TABLE PosPrinterSettings ADD COLUMN HeaderAlignment INT(1) NOT NULL DEFAULT 0;
+ALTER TABLE PosPrinterSettings ADD COLUMN FooterAlignment INT(1) NOT NULL DEFAULT 0;

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Notes Text="تێبینیەکان">
+    <Add Text="زیادکردنی تێبینی" />
+    <Document>
+      <Number Text="ژمارەی ڕاپۆرت:" />
+      <Customer Text="کڕیار:" />
+      <Total Text="کۆی گشتی:" />
+    </Document>
+    <Note Text="تێبینی گشتی">
+      <Description Text="تێبینی گشتی بنووسە" />
+    </Note>
+    <InternalNote Text="تێبینی ناوخۆیی">
+      <Description Text="تێبینی ناوخۆیی بنووسە" />
+    </InternalNote>
+    <Saved Text="تێبینیەکان بە سەرکەوتووی خەزنکران" />
+  </Notes>
+</Language>

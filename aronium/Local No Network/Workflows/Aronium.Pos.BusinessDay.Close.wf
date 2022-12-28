@@ -1,0 +1,190 @@
+<Workflow>
+  <Name>Aronium.Pos.BusinessDay.Close</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="ddaae8ae-4d6b-485f-83d5-0d2d658a37f1" name="Start">
+      <Transitions>
+        <DefaultTransition id="07878222-312d-4306-9fdf-7a29cb8d0590" name="Close option">
+          <Target>2004a76e-b604-49b7-937f-77e21c4f30f8</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <EndTask id="c83d4a5a-3219-42d4-8f90-6c4e43cfd69e" name="End" />
+    <AbortTask id="13949a8e-7cba-4276-84e0-2ea9d0076cb3" name="Abort" />
+    <ExternalTask id="2004a76e-b604-49b7-937f-77e21c4f30f8" name="Closing details">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <ErrorTransition id="e16e1858-f77d-4e2c-beb2-8b4ee8cc2af7" name="Cancel">
+          <Target>13949a8e-7cba-4276-84e0-2ea9d0076cb3</Target>
+        </ErrorTransition>
+        <DefaultTransition id="3d9c86a4-d1c5-424d-a021-251ba14aa1e4" name="Continue">
+          <Target>706f25cc-8c70-4bae-b500-7722ccf972f3</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/BusinessDay/CloseBusinessDay.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="03b66269-5b81-4297-bfa8-384dabe1912f" name="Close fiscal day">
+      <AssemblyName>Modules\Aronium.Pos.FiscalPrinter\Aronium.Pos.FiscalPrinter</AssemblyName>
+      <ClassName>Aronium.Pos.FiscalPrinter.Tasks.CloseFiscalDay</ClassName>
+      <Transitions>
+        <DefaultTransition id="d0eecda0-632a-4ce8-9527-47cf7967c961" name="Continue">
+          <Target>69732bc3-b62f-4bdd-a898-66a29a52bf5c</Target>
+        </DefaultTransition>
+        <ErrorTransition id="43df9ea4-0d43-4dd6-9c3d-3e261ad17b69" name="Cancel">
+          <Target>2004a76e-b604-49b7-937f-77e21c4f30f8</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <RouterTask id="a9333345-6bc2-4d39-b887-a23edb6b1e46" name="Check closing option">
+      <IsExclusive>False</IsExclusive>
+      <Transitions>
+        <SuccessTransition id="451be2b2-a3c2-470e-9326-3e22f28fae81" name="Close day">
+          <Target>03b66269-5b81-4297-bfa8-384dabe1912f</Target>
+        </SuccessTransition>
+        <ErrorTransition id="b648a244-7008-41d0-b3c6-12d2baa89dd7" name="Clock out">
+          <Target>c57ff197-8f15-40ad-8ee4-ff5d14e82a84</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="ClosingDayOption">CloseBusinessDay</Variable>
+      </Variables>
+    </RouterTask>
+    <ExternalTask id="eb8993ac-e562-415a-ae4d-0977b89d0ca1" name="Items report">
+      <AssemblyName>Modules\Aronium.Pos.FiscalPrinter\Aronium.Pos.FiscalPrinter</AssemblyName>
+      <ClassName>Aronium.Pos.FiscalPrinter.Tasks.Reports.PrintItemsReport</ClassName>
+      <Transitions>
+        <DefaultTransition id="ee926208-9c8e-4f29-8d79-b3374d43e24f" name="Continue">
+          <Target>06d4637b-ae55-46f0-86e0-92be24a5a7fb</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Timeout">0</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="06d4637b-ae55-46f0-86e0-92be24a5a7fb" name="Payments report">
+      <AssemblyName>Modules\Aronium.Pos.FiscalPrinter\Aronium.Pos.FiscalPrinter</AssemblyName>
+      <ClassName>Aronium.Pos.FiscalPrinter.Tasks.Reports.PrintPaymentsReport</ClassName>
+      <Transitions>
+        <DefaultTransition id="4cc530dc-6810-44df-bec1-aec63e3a33e8" name="Continue">
+          <Target>bccb7239-a7fd-47be-a773-14205493d84a</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Timeout">0</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="bccb7239-a7fd-47be-a773-14205493d84a" name="Daily report">
+      <AssemblyName>Modules\Aronium.Pos.FiscalPrinter\Aronium.Pos.FiscalPrinter</AssemblyName>
+      <ClassName>Aronium.Pos.FiscalPrinter.Tasks.Reports.PrintDailyReport</ClassName>
+      <Transitions>
+        <DefaultTransition id="69ba5bbd-81be-4a6f-bf4a-4f94c65737c4" name="Print">
+          <Target>b70ebd42-6dd1-48a9-955d-eade33ba5d40</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Timeout">0</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="b70ebd42-6dd1-48a9-955d-eade33ba5d40" name="Close day">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.BusinessDay.CloseDay</ClassName>
+      <Transitions>
+        <DefaultTransition id="2c90da80-0f57-4a0e-9043-d31a2d303f93" name="Continue">
+          <Target>09dab98e-60a9-41f3-ad18-bdd05ceba394</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="c57ff197-8f15-40ad-8ee4-ff5d14e82a84" name="Clock Out Workflow">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.WorkflowRunner</ClassName>
+      <Transitions>
+        <DefaultTransition id="38370047-1105-44a8-8d99-74c73f60606b" name="End">
+          <Target>20e7291a-f140-4962-bc27-1c65989e92d9</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Workflow">Aronium.Pos.BusinessDay.ClockOut</Variable>
+        <Variable name="Variables">ShiftReports,ClosingDayOption</Variable>
+      </Variables>
+    </ExternalTask>
+    <RouterTask id="69732bc3-b62f-4bdd-a898-66a29a52bf5c" name="Print fiscal receipts">
+      <IsExclusive>False</IsExclusive>
+      <Transitions>
+        <SuccessTransition id="05b945b5-7778-43be-81ca-02250b320aa5" name="Yes">
+          <Target>eb8993ac-e562-415a-ae4d-0977b89d0ca1</Target>
+        </SuccessTransition>
+        <ErrorTransition id="3e799e66-fe7e-47ae-a3d6-be708c67138e" name="No">
+          <Target>b70ebd42-6dd1-48a9-955d-eade33ba5d40</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="PrintsDailyFiscalReports">True</Variable>
+      </Variables>
+    </RouterTask>
+    <ExternalTask id="706f25cc-8c70-4bae-b500-7722ccf972f3" name="Check open orders">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.BusinessDay.CheckOpenOrders</ClassName>
+      <Transitions>
+        <ErrorTransition id="9e0f0bac-3624-40aa-adc2-8002fb32cef2" name="Error">
+          <Target>2004a76e-b604-49b7-937f-77e21c4f30f8</Target>
+        </ErrorTransition>
+        <DefaultTransition id="1a886b52-b789-4308-be62-933c466c4eaa" name="Continue">
+          <Target>a9333345-6bc2-4d39-b887-a23edb6b1e46</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="bc14dfea-5d5a-4761-9198-efa446b8bd9f" name="Business day">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.BusinessDay.SelectBusinessDayTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="0783f2ac-373b-4a08-b6da-3227ffeb1eb9" name="Continue">
+          <Target>7a7e1bda-544f-4ffd-9aba-39e3f1664809</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/BusinessDay/OpenBusinessDay.xaml</Variable>
+        <Variable name="IsClosingDay">TRUE</Variable>
+      </Variables>
+    </ExternalTask>
+    <RouterTask id="20e7291a-f140-4962-bc27-1c65989e92d9" name="Check closing option">
+      <IsExclusive>False</IsExclusive>
+      <Transitions>
+        <SuccessTransition id="4d4a77fb-d00b-4171-93b5-1b517c6b32ae" name="Business day">
+          <Target>bc14dfea-5d5a-4761-9198-efa446b8bd9f</Target>
+        </SuccessTransition>
+        <ErrorTransition id="f017c1a0-2d2d-4c12-a6ba-1ad8c88c8858" name="Continue">
+          <Target>7a7e1bda-544f-4ffd-9aba-39e3f1664809</Target>
+        </ErrorTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="ClosingDayOption">CloseBusinessDay</Variable>
+      </Variables>
+    </RouterTask>
+    <ExternalTask id="7a7e1bda-544f-4ffd-9aba-39e3f1664809" name="Starting Cash">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.BusinessDay.StartingCashTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="73dcd67a-f490-4d34-ac45-8a20686b9ec0" name="End">
+          <Target>c83d4a5a-3219-42d4-8f90-6c4e43cfd69e</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/BusinessDay/StartingCashTaskView.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="09dab98e-60a9-41f3-ad18-bdd05ceba394" name="Reset order number">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.ResetOrderNumberTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="15012a33-74a7-4350-b068-46cf59b861b9" name="Continue">
+          <Target>c57ff197-8f15-40ad-8ee4-ff5d14e82a84</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+  </Tasks>
+</Workflow>

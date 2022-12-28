@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <Settings>
+    <Email>
+      <Disabled Text="Email configuration is required to send emails. Make sure your email settings are configured properly." />
+      <Reporting Text="Reporting">
+        <Recepient Text="Recepient(s)">
+          <Info Text="Separate multiple email addresses with commas" />
+        </Recepient>
+        <Subject Text="Subject" />
+        <Message Text="Message" />
+        <XReport Text="X report" />
+        <ZReport Text="Z report (end of day)" />
+        <Reports Text="Reports">
+          <Selection Text="Report selection">
+            <Add Text="Add report" />
+            <Remove Text="Remove report" />
+          </Selection>
+          <Format Text="Format">
+            <Pdf Text="PDF" />
+            <Excel Text="Excel" />
+          </Format>
+        </Reports>
+        <Scheduled Text="Scheduled reports">
+          <SendPeriodically Text="Send email periodically" />
+          <Interval Text="Send interval">
+            <Minutes Text="minutes" />
+          </Interval>
+          <BusinessHours Text="Business hours" />
+          <SendEmpty Text="Send if empty">
+            <Info Text="Send email even if no sales were made" />
+          </SendEmpty>
+        </Scheduled>
+        <Test Text="Send test email">
+          <Info Text="Configuration will be saved before sending test email" />
+          <Incomplete Text="Email is not configured. Please check your coniguration and try again." />
+          <Error Text="Error sending test email. Please check your configuration and try again.\nSystem message: {0}" />
+        </Test>
+      </Reporting>
+    </Email>
+  </Settings>
+  <Email>
+    <Reporting>
+      <Message>
+        <Body>
+          <Total Text="Your sales total for {0}: {1}" />
+          <NumberOfSales Text="Number of sales: {0}" />
+          <PaymentTypes Text="Payment types:" />
+          <Users Text="Users:" />
+          <NumberOfRefunds Text="Number of refunds: {0}" />
+          <RefundsTotal Text="Refunds total: {0}" />
+        </Body>
+        <ReportType>
+          <XReport Text="Sales reports" />
+          <ZReport Text="End of day" />
+        </ReportType>
+      </Message>
+      <License>
+        <Expiring Text="License for &quot;Email reporting&quot; module will expire in {0} day(s).\n\nPlease purchase a license to ensure continued access after {1}">
+          <Title Text="License will expire soon"/>
+        </Expiring>
+        <GracePeriod Text="License for &quot;Email reporting&quot; module expired and it will stop working after {0}\nPlease purchase a license to ensure continued access.">
+          <LicenseAlreadyPurchased Text="If you have already purchased a license, you can ignore this message until we receive the payment and your license is updated." />
+          <Hide Text="Hide this message for 30 days" />
+        </GracePeriod>
+        <Expired Text="License for &quot;Email reporting&quot; expired and the module will be disabled until a license is purchased.">
+          <Title Text="License expired!"/>
+          <Renew Text="Please renew your license at"/>
+          <Hide Text="Don&apos;t show this message again"/>
+        </Expired>
+        <Error>
+          <Notification Text="Please purchase a license to enable Email reporting functionality.">
+            <Expired Text="License expired." />
+            <Missing Text="License missing." />
+          </Notification>
+        </Error>
+      </License>
+      <SendingInProgress Text="Sending reports... Please wait..." />
+    </Reporting>
+  </Email>
+</Language>

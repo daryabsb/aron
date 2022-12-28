@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ku" name="kurdish">
+  <Management Text="بەڕێوەبردن">
+    <NoItems Text="{0} هیچ بەشێکی بڕێوەبردن ڕێگەپێدراونیە بۆ\nتکایە بە بەکارهێنەرێکی دیکە  داغڵبە" />
+    <Dashboard Text="زانیاریەکان">
+      <NoData Text="هیچ زانیارییەک نیە بۆ پیشاندان" />
+      <MonthlySales Text="فرۆشی مانگانە">
+        <Description Text="زانیاری فرۆشی جیاکراوە بە مانگ" />
+        <Month Text="مانگ" />
+        <Legend Text="ڕونکردنەوە" />
+        <CurrentYear Text="ئەمساڵ" />
+        <TotalSales Text="کۆی گشتی فرۆش">
+          <TopMonth Text="باشترین مانگ:" />
+        </TotalSales>
+        <Year Text="ساڵ">
+          <Previous Text="ساڵی پار" />
+          <Next Text="ساڵی داهاتوو" />
+        </Year>
+      </MonthlySales>
+      <HourlySales Text="فرۆش بەپێی کاتژمێر">
+        <Description Text="زانیاری فرۆش بەپێی کاتژمێر" />
+        <Hour Text="کاتژمێر" />
+        <Options>
+          <Amount Text="بڕی فرۆشراو" />
+          <Count Text="ژماردن" />
+        </Options>
+      </HourlySales>
+      <TopProducts Text="باشترین بەرهەمەکان">
+        <Product Text="بەرهەم" />
+        <Total Text="کۆی گشتی" />
+      </TopProducts>
+      <TopProductGroups Text="باشترین گروپی بەرهەم">
+        <Description Text="گروپی بەرهەمی خاوەن زۆرترین فرۆش لە ماوەی دیاریکراودا" />
+        <Group Text="گروپی بەرهەمەکان" />
+      </TopProductGroups>
+      <TopCustomers Text="باشترین کڕیارەکان">
+        <Description Text="باشترین پێنج کڕیار لە ماوەی دیاریکراودا" />
+      </TopCustomers>
+      <PeriodicReports Text="ڕاپۆرت بەپێی ماوە">
+        <SelectPeriod Text="ماوی ڕاپۆرت دیاریبکە" />
+      </PeriodicReports>
+    </Dashboard>
+    <Products Text="بەرهەمەکان">
+      <Loading Text="پیشاندانی بەرهەمەکان" />
+      <LearnMore Text="زانیاری زیاتر وەربگرە لەسەر بەرهەمەکان" />
+      <New Text="بەرهەمی نوێ">
+        <Product Text="زیادکردنی بەرهەمی نوێ" />
+        <Or Text="یان" />
+        <Group Text="گروپی بەرهەمی نوێ" />
+      </New>
+      <Delete Text="سڕینەوەی بەرهەم" />
+      <Edit Text="گۆڕانکاریکردن لە بەرهەم" />
+      <Search Text="گەڕان بەدوای بەرهەمەکان">
+        <Result Text="ئەنجام" />
+        <Empty Text="بێئەنجام" />
+      </Search>
+      <Groups Text="گروپەکانی بەرهەمەکان">
+        <Root Text="بەرهەمەکان" />
+        <Empty Text="ئەو گروپەی دیاریتکردوە هیچ بەرهەمێکی تێدانیە">
+          <Info Text="زیادکردنی بەرهەم بۆ گروپی دیاریکراو" />
+        </Empty>
+      </Groups>
+      <Group>
+        <New Text="گروپی نوێ" />
+        <Edit Text="گۆڕانکاریکردن لە گروپ">
+          <Title Text="گۆڕانکاریکردن لە گروپی &quot;{0}&quot;" />
+          <Error>
+            <InvalidParentGroup Text="گروپەکە بوونی نیە" />
+          </Error>
+        </Edit>
+        <Name Text="ناو" />
+        <Color Text="ڕەنگ" />
+        <Image Text="وێنە">
+          <Browse Text="گەڕان">
+            <Info Text="دیاریکردنی وێنەی گروپی بەرهەم لە کۆمپیتەرەکەت" />
+          </Browse>
+          <Clear Text="لابردن">
+            <Info Text="لابردنی وێنەی گروپی بەرهەم" />
+          </Clear>
+        </Image>
+        <Delete Text="سڕینەوەی گروپ">
+          <Title Text="گروپی بەرهەم بسڕەوە" />
+          <Confirmation Text="دڵنیایت دەتەوێت گروپی &quot;{0}&quot; بسڕیتەوە؟" />
+          <Error Text="هەڵە ڕویدا لە سڕینەوەی گروپ.\n نامەی سیستەم: {0}">
+            <DataViolation Text="گروپی دیاریکراو ناتوانی بسڕیتەوە\n\nدڵنیابە یەکێک لە بەرهەمەکانی لەناو تۆمارێک،بانگەشەکردن یان هەرفرۆشێکدا نیە و دووبارە هەوڵبدەرەوە" />
+          </Error>
+        </Delete>
+        <Saved Text="گروپەکە بە سەرکەوتووی خەزنکرا" />
+      </Group>
+      <Product>
+        <Edit Text="گۆڕانکاریکردن لە بەرهەم &quot;{0}&quot;" />
+        <Details Text="زانیاریەکانی بەرهەم" />
+        <Name Text="ناو" />
+        <Code Text="کۆد" />
+        <Barcode Text="باڕکۆد">
+          <Generate Text="دروستکردنی باڕکۆد" />
+        </Barcode>
+        <MeasurementUnit Text="یەکەی کێشان" />
+        <Taxes Text="باجەکان">
+          <Add Text="زیادکردنی باج بۆ بەرهەمێک">
+            <Tooltip Text="زیادکردنی ڕێژەی باج بۆ بەرهەمێک" />
+          </Add>
+          <Remove>
+            <Tooltip Text="لابردنی باج" />
+          </Remove>
+          <NoTaxes>
+            <Info Text="هیچ باجێک نەدۆزرایەوە\nباج زیادبکە بۆ ئەوەی بتوانی بیخەیتە سەر بەرهەمێک" />
+          </NoTaxes>
+        </Taxes>
+        <SalePriceBeforeTax Text="نرخ پێش باج" />
+        <SalePrice Text="نرخی فرۆشتن" />
+        <IsTaxIncluded Text="نرخەکە باجیش لەخۆدەگرێت" />
+        <Group Text="گروپ" />
+        <IsEnabled Text="لەکاردایە" />
+        <IsService Text="خزمەتگوزاریە واتە کۆگا بەکارناهێنێت" />
+        <IsDiscountAllowed Text="داشکاند ڕێگەپێدراوە" />
+        <IsPriceChangeAllowed Text="گۆڕینی نرخ ڕێگەپێدراوە" />
+        <IsUsingDefaultQuantity Text="ژمارەی دیاریکراو" />
+        <Description Text="باس" />
+        <Prices Text="نرخ و باج" />
+        <Cost Text="تێچوو" />
+        <Markup Text="قازانج بە ڕێژەی سەدی" />
+        <ImageAndColor Text="وێنە و ڕەنگ">
+          <Image Text="وێنە">
+            <Browse Text="گەڕان">
+              <Info Text="وێنەی بەرهەمەکە دیاریبکە لە کۆمپیوتەرەکەت" />
+            </Browse>
+            <Clear Text="لابردن">
+              <Info Text="وێنەی بەرهەمەکە لابە" />
+            </Clear>
+          </Image>
+          <Color Text="ڕەنگ" />
+        </ImageAndColor>
+        <Comments Text="کۆمێنت">
+          <Info Text="کۆمێنتەکان پرینتدەکرێن لەسەر بلیتی چێشتخانە" />
+          <Note Text="تێبینی بنووسە" />
+          <Add Text="زیادکردنی تێبینی" />
+          <Error>
+            <ExistingComment Text="تێبینیەکە دووبارەیە" />
+          </Error>
+        </Comments>
+        <DateCreated Text="بەرواری درووستکردن" />
+        <DateUpdated Text="بەرواری تازەکردنەوە" />
+        <Saved>
+          <Created Text="بەرهەمەکە بە سەرکەوتووی دروستکرا" />
+          <Updated Text="بەرهەمەکە بە سەرکەوتوی تازەکرایەوە" />
+        </Saved>
+        <Delete Text="سڕینەوەی بەرهەمەکە">
+          <Confirmation Text="دڵنیایت دەتەوێت &quot;{0}&quot; بسڕیتەوە؟" />
+          <Error Text="هەڵە ڕویدا لە سڕینەوەی بەرهەمەکە.\nنامەی سیستەم: {0}" />
+          <DataViolation Text="نەتوانرا بەرهەمەکە بسڕێتەوە\nدڵنیایبکەرەوە کە بەرهەمەکە لە تۆمارەکاندا بوونینیە و دووبارە هەوڵبدەرەوە" />
+        </Delete>
+        <Error>
+          <Code Text="بەرهەمێک بە هەمان کۆد بوونی هەیە  (&quot;{0}&quot;)\nکۆدێک بۆ بەرهەمەکە بنووسە کە دووبارەنەبێت و دووبارە هەوڵبدەرەوە" />
+          <Barcode Text="بەرهەمێک بە هەمان باڕکۆد بوونی هەیە  (&quot;{0}&quot;)\nباڕکۆدێک بۆ بەرهەمەکە بنووسە کە دووبارەنەبێت و دووبارە هەوڵبدەرەوە" />
+          <Taxes Text="باجی دووبارە دۆزرایەوە.ناوی باج (&quot;{0}&quot;)\nتکایە باجی ڕاست هەڵبژێرە و دووبارە هەوڵبدەرەوە" />
+        </Error>
+        <AgeRestriction Text="سنووری تەمەن">
+          <Tooltip Text="کەمترین تەمەنی پێویست بۆ کڕینی ئەم بەرهەمە" />
+          <Years Text="ساڵ" />
+          <Validation>
+            <Message Text="ئەم بەرهەمە بۆ تەمەنێکی دیاریکراوە\nتکایە دڵنیابە لەوەی کڕیارەکە ڕێگەری پێدراوە ئەم کاڵایە بکڕێت">
+              <Title Text="ئەم بەرهەمە سنووری تەمەنی هەیە" />
+              <BornBefore Text="لەدایکبووە لە یان دوای" />
+            </Message>
+            <Confirm Text="دڵنیاکردنەوە" />
+          </Validation>
+        </AgeRestriction>
+      </Product>
+      <Export Text="ناردنی زانیاریەکان">
+        <NoServices Text="هیچ خزمەتگوزاریەکی ناردنی زانیاری بەردەستنیە" />
+        <Success Text="ناردنی زانیاری بە سەرکەوتوی تەواوبوو" />
+        <Error Text="هەڵە ڕویدا. تکایە دووبارە هەوڵبدەرەوە" />
+        <Select Text="جۆری ناردنی زانیاری دیاریبکە" />
+      </Export>
+      <Onboarding>
+        <Import Text="وەرگرتنی زانیاری لە فایلی سی ئێس ڤی">
+          <SelectFile Text="دیاریکردنی فایل">
+            <Description Text="فایلی سی ئێس ڤی دیاریبکە کە زانیاری کاڵاکانتی تێدایە" />
+          </SelectFile>
+          <Validate Text="دڵنیاکردنەوە">
+            <Description Text="دڵنیاکردنەوەی پێکهاتەکان و بەرهەمەکانی ناو فایلی سی ئێس ڤی بۆ وەرگرتنی زانیاریەکانی" />
+            <Error Text="هەڵە لە دڵنیاکردنەوەی فایلی سی ئێس ڤی.زانیاریەکان بپشکنە و دووبارە هەوڵبدە" />
+            <Success Text="بەرهەمەکان ئامادەن بۆ وەرگرتن. ژمارەی بەرهەمەکان:  {0}" />
+          </Validate>
+          <ImportProducts Text="وەرگرتنی زانیاری">
+            <Description Text="کلیکبکە بۆ وەرگرتنی زانیاری بەرهەمەکان لە فایلی سی ئێس ڤی دیاریکراو" />
+          </ImportProducts>
+          <NoItems Text="هیچ بەرهەمێک نیە بۆ وەرگرتن" />
+          <Completed Text="وەرگرتنی زانیاری بە سەرکەوتوی کۆتاییهات">
+            <Result>
+              <Created Text="کاڵای داروستکراو:" />
+              <Updated Text="کاڵای تازەکراوە:" />
+              <DocumentNumber Text="ڕاپۆرتی دروستکرا:" />
+            </Result>
+            <Restart Text="دووبارەکردنەوەی وەرگرتنی زانیاری" />
+          </Completed>
+          <Importing Text="زانیاری بەرهەمەکان وەردەگیرێت... تکایە چاوەڕوانبە" />
+        </Import>
+      </Onboarding>
+      <Count Text="ژمارەی بەرهەمەکان:" />
+      <ChangeGroup Text="بەرهەمی  &quot;{0}&quot; گوازرایەوە بۆ  &quot;{1}&quot;" />
+      <Guide>
+        <Title Text="بەرهەمەکان بکەرەوە" />
+        <Content Text="کلیک لێرەبکە بۆ کردنەوەی بەشی بەرهەمەکان و زیادکردنی هەندێک بەرهەم بۆ دووکانەکەت" />
+        <Add>
+          <Title Text="زیادکردنی بەرهەمێک" />
+          <Content Text="کلیک بکە لەسەر دوگمەی &quot;بەرهەمی نوێ&quot; بۆ زیادکردنی بەرهەمی نوێ" />
+          <Name>
+            <Title Text="ناوی بەرهەمەکە" />
+            <Content Text="ناوی بەرهەمەکە و زانیاریەکانی دیکەی بنووسە کە بۆ فرۆش بەکاردێت" />
+          </Name>
+          <Prices>
+            <Title Text="نرخی بەرهەمەکە" />
+            <Content Text="کلیک لێرەبکە بۆ دیاریکردنی نرخی بەرهەمەکە" />
+            <SalePrice>
+              <Title Text="نرخی فرۆشتن" />
+              <Content Text="نرخی فرۆشتنی کاڵا لێرە بنووسە بۆئەوەی لەسەر شاشەی فرۆش دەربکەوێت" />
+            </SalePrice>
+          </Prices>
+          <Save>
+            <Title Text="خەزنکردنی گۆڕانکاریەکان" />
+            <Content Text="کلیک لەسەر دوگمەی خەزنکردن بکە بۆ خەزنکردنی گۆڕانکاریەکان و زیادکردنی بەرهەمە نوێکە" />
+          </Save>
+        </Add>
+      </Guide>
+      <Settings Text="ڕێکبەندی بەرهەمەکان">
+        <Title Text="ڕێکبەندی دانراوی بەرهەمەکان" />
+        <PriceIncludesTax Text="نرخی کۆتایی باجیش لەخۆی دەگرێت">
+          <Tooltip Text="ئەگەر دیاریکرا بەرهەمە نوێکان نرخی کۆتایی باجیش لەخۆی دەگرێت" />
+        </PriceIncludesTax>
+        <DefaultTax Text="ڕێژەی دیاریکراوی باج">
+          <NoTaxes Text="باج نەدۆزرایەوە. تکایە ڕێژەی باج زیادبکە لە بەشی بەڕێوەبردن" />
+        </DefaultTax>
+        <MarkupOption Text="ڕێژەی قازانج بەپێی نرخی تێچووی کاڵاکە">
+          <Tooltip Text="ئەگەر دیاریکرا ئەوا گۆڕینی نرخی تێچوونی کاڵا ڕێژەی سەدی قازانج دەگۆڕێت لەشوێنی نرخی فرۆشتن" />
+        </MarkupOption>
+      </Settings>
+      <Import Text="زانیاری وەرگرتن">
+        <LearnMore Text="زانیاری زیاتر وەربگرە لەسەر وەرگرتنی زانیاری لە فایلی سی ئێس ڤی" />
+        <Basic Text="بنەڕەتی">
+          <Description Text="دەتوانیت وەرگرتنی زانیاری بنەڕەتی بەکاربێنیت بە بەکارهێنانی فێرکاریەکانمان">
+            <Link Text="شوێنی وەرگرتنی یارمەتی" />
+            <Formatting Text="ئەگەر فایلی سی ئێس ڤی ئامادەکراو بەکاردێدنی. تکایە دلنیابە زانیاریەکان دەخوێنیتەوە">
+              <Link Text="فێرکاری دروستکردنی فایلی سی ئێس ڤی" />
+            </Formatting>
+            <Exported Text="هەروەها دەتوانی ئەمە بەکاربێنی بۆ وەرگرتنی ئەو زانیاریانەی کە بەم بەرنامە نێردراوە" />
+          </Description>
+        </Basic>
+        <Csv Text="پێشکەوتوو">
+          <Description Text="وەرگرتنی زانیاری پێشکەوتوو بەکاردێت بۆ بەکارهێنانی زانیاری کە لە فایلی سی ئێس ڤی تایبەت یان وەرگیراو لە بەرنامەی دیکە">
+            <Link Text="سەنتەری زانیاریەکان" />
+          </Description>
+          <SelectFile Text="دیاریکردنی فایل" />
+          <Fields>
+            <Name Text="ناو" />
+            <ProductGroup Text="گروپی بەرهەم" />
+            <SKU Text="ئێس کەی یو" />
+            <Barcode Text="باڕکۆد" />
+            <MeasurementUnit Text="یەکەی کێشان" />
+            <Cost Text="تێچوو" />
+            <Markup Text="قازانج بە ڕێژەی سەدی" />
+            <Price Text="نرخ" />
+            <Tax Text="ڕێژەی سەدی باج" />
+            <IsTaxInclusivePrice Text="نرخ باج لەخۆدەگرێت" />
+            <IsPriceChangeAllowed Text="گۆڕانی نرخ ڕێگەپێدراوە" />
+            <IsUsingDefaultQuantity Text="بەکارهێنانی ژمارەی دیاریکراو" />
+            <IsService Text="خزمەتگوزاریە واتە کۆگا بەکارناهێنێت" />
+            <IsEnabled Text="لەکاردایە" />
+            <Description Text="باس" />
+            <Quantity Text="ژمارە" />
+            <Clear Text="لابردن" />
+          </Fields>
+          <Duplicates Text="چی ڕودەدات ئەگەر دووبارە هەبوو؟">
+            <Skip Text="دووبارەکان بپەڕێنە" />
+            <Merge Text="دووبارەکان تێکەڵ بکە" />
+          </Duplicates>
+          <RequiredField Text="واتە ئەو خانە پێویستە" />
+          <Import Text="وەرگرتنی زانیاری" />
+          <Preview Text="پیشاندانی پێشوەخت">
+            <ProductsCount Text="ژمارەی بەرهەمەکان بۆ وەرگرتنی زانیاریان:" />
+          </Preview>
+          <Error>
+            <RequiredFields Text="چەند خانەی پێویست دیارنین.تکایە هەموو خانە پێویستەکان دیاریبکە پێش وەرگرتنی زانیاریەکان" />
+            <InvalidContent Text="هەڵە لە فایلی سی ئێس ڤی.تکایە پێکهاتەکانی بپشکنە و دووبارە هەوڵبدەرەوە\nنامەی هەڵە: {0}" />
+            <InvalidField Text="نووسینی هەڵە هەیە لە خانەی &quot;{0}&quot; . تکایە پێکهاتەکانی فایلەکە بپشکنە و دووبارە هەوڵبدەرەوە" />
+            <FileNotSelected Text="فایلی سی ئێس ڤی دیاری نەکراوە.تکایە فایلەکە دیاریبکە بۆ بەردەوامبوون" />
+            <DuplicateSKU Text="کۆدی دووبارە دۆزرایەوە لە بەرهەمەکاندا. ناوی بەرهەم: &quot;{0}&quot; .کۆدی &quot;{1}&quot; دووبارەیە" />
+            <DuplicateName Text="ناوی دووبارەی بەرهەم دۆزرایەوە.ناوی بەرهەم: &quot;{1}&quot;" />
+          </Error>
+        </Csv>
+        <Xml Text="ئێکس ئێم ئێڵ ی ئەرۆنیەم">
+          <Description Text="ئەمە بەکاربێنە ئەگەر کاڵاکانت لە بەرنامەی ئەرۆنیەم دەرهێناوە\nبەمشێوەیە هەموو وێنە و زانیاریەکانی بەرهەمەکان وەک خۆی دەمێنێتەوە" />
+          <SelectFile Text="دیاریکردنی فایلەکە" />
+          <Import Text="وەرگرتنی زانیاریەکان" />
+        </Xml>
+      </Import>
+      <PriceTags Text="پەڕەی نرخ">
+        <Loading Text="پیشاندانی بەشی پەڕەی نرخ.. تکایە چاوەڕوانبە" />
+        <Layout Text="شێواز">
+          <Columns Text="ستوون" />
+          <RowHeight Text="بەرزی ڕیزەکان" />
+        </Layout>
+        <Display Text="پیشاندان">
+          <Barcode Text="باڕکۆد">
+            <Type Text="جۆری باڕکۆد" />
+          </Barcode>
+          <Code Text="کۆدی ئێس کەی یو" />
+          <PriceIncludesTax Text="نرخ باج لەخۆیدەگرێت" />
+        </Display>
+        <Products Text="بەرهەمەکان">
+          <All Text="هەموو بەرهەمەکان" />
+          <Product Text="بەرهەم" />
+          <NumberOfCopies Text="ژمارەی کۆپیەکان" />
+        </Products>
+      </PriceTags>
+      <Taxes Text="ڕێژەی باجەکان">
+        <LearnMore Text="زانیاری زیاتر دەربارەی ڕێژەی باجەکان" />
+        <New Text="ڕێژەی باجی نوێ" />
+        <Switch Text="گۆڕێنی باجەکان">
+          <OldTax Text="باجی کۆن" />
+          <NewTax Text="باجی نوێ" />
+          <Tooltip Text="گۆڕینی باجی هەموو بەرهەمەکان" />
+          <Info Text="ئەم فۆڕمە بەکاربێنە بۆ گۆڕینی باجی هەموو بەرهەمەکان\nئەو باجە کۆنە دیاریبکە کە دەتەوێت بیگۆڕی بە باجی نوێ وە کلیک لەسەر دوگمەی گۆڕین بکە" />
+          <Replace Text="گۆڕین" />
+          <Error Text="هەڵە ڕویدا لەکاتی گۆڕینی باجەکان\nنامەی سیستەم: {0}" />
+          <Success Text="باجەکان بە سەرکەوتووی گۆڕان" />
+        </Switch>
+        <Edit>
+          <Title Text="گۆڕانکاریکردن لە باجی &quot;{0}&quot;" />
+        </Edit>
+        <Delete>
+          <Title Text="سڕینەوەی ڕێژەی باج" />
+          <Confirmation Text="دڵنیایت لە سڕینەوەی باجی &quot;{0}&quot;؟" />
+          <Error Text="هەڵە ڕویدا لەکاتی سڕینەوەی ڕێژەی باج.دڵنیایبکەرەوە کە باجەکە لەکاردانیە و دووبارە هەوڵبدەرەوە" />
+        </Delete>
+        <Tax>
+          <ReadOnly Text="باجی دیاریکراو لە تۆمارەکاندا هەیە و ناتوانیت گۆڕانکاری تێدابکەیت" />
+          <Code Text="کۆد" />
+          <Name Text="ناو" />
+          <Rate Text="ڕێژە" />
+          <Fixed Text="دیاریکراو" />
+          <TaxOnTotal Text="کۆی گشتی باج" />
+          <Enabled Text="لەکاردایە" />
+        </Tax>
+        <Onboarding>
+          <Title Text="ڕێژەی باجەکان" />
+          <Info Text="ڕێژەی باجەکان بەکاردێت بۆ پێناسی بەرهەمەکان،ئەگەر هەبوو\nدەبێت لانیکەم یەک ڕێژەی باج هەبێت لە سیستەمەکەدا" />
+          <AddMore Text="خەزنکرد و زیادکردنی دانەیەکی دیکە">
+            <Error Text="هەڵە ڕویدا لە زیادکردنی ڕێژەی باجی نوێ.زانیاریەکانت بپشکنە و دووبارە هەوڵبدەرەوە" />
+            <Name Text="ناوی باج بۆ نموونە باجی یەکەم" />
+          </AddMore>
+          <Existing Text="ئەو ڕێژەی باجانەی کە بوونیان هەیە">
+            <NoItems Text="هیچ ڕێژەی باجێک دیارینەکراوە.لانیکەم یەک ڕێژەی باج زیادبکە بۆ ئەوەی بتوانی بەرهەمی نوێ زیادبکەی">
+              <AddDefault Text="ڕێژەی باجی دیاریکراو زیادبکە" />
+            </NoItems>
+          </Existing>
+        </Onboarding>
+        <NoTaxes Text="هیچ باجێک نیە">
+          <Add Text="باجی نوێ زیادبکە" />
+        </NoTaxes>
+      </Taxes>
+    </Products>
+    <Customers Text="کڕیار و دابینکار">
+      <Search Text="گەڕان بەدوای کڕیار و دابینکار" />
+      <LearnMore Text="زانیاری زیاتر وەربگرە لەسەر کڕیار و دابینکار" />
+      <New Text="کڕیار / دابینکاری نوێ" />
+      <Delete Text="سڕینەوە">
+        <Confirmation Text="دڵنیایت دەتەوێت  &quot;{0}&quot; بسڕیتەوە؟" />
+        <Error Text="هەڵە لە سڕینەوەی کڕیار.کڕیار نەتوانرا بسڕیتەوە\nنامەی سیستەم: {0}" />
+      </Delete>
+      <Customer>
+        <Edit Text="گۆڕانکاریکردن لە &quot;{0}&quot;" />
+        <General Text="گشتی">
+          <Title Text="زانیاری گشتی" />
+          <Code Text="کۆد" />
+          <Name Text="ناو" />
+          <Address Text="شوێن" />
+          <PostalCode Text="کۆدی پۆستە" />
+          <City Text="شار" />
+          <Country Text="وڵات" />
+          <TaxNumber Text="ژمارەی باج" />
+          <RabatePercent Text="داشکاندن" />
+          <Email Text="ئیمەیڵ" />
+          <PhoneNumber Text="ژمارەی تەلەفون" />
+          <IsEnabled Text="لەکاردایە" />
+          <IsCustomer Text="کڕیار" />
+          <IsSupplier Text="دابینکار" />
+        </General>
+        <Loyalty>
+          <Discounts Text="داشکاندن">
+            <Title Text="داشکاندنی کڕیار دیاریبکە بۆ بەرهەمەکان یان گروپی بەرهەمەکان" />
+            <Info Text="داشکاندن دیاریبکە بۆ کاڵای دیاریکراو" />
+            <NoItems Text="داشکاندن نیە" />
+            <Existing Text="داشکاندن بۆ &quot;{0}&quot; بوونی هەیە" />
+            <Clear Text="لابردنی هەموو داشکاندنەکان" />
+          </Discounts>
+          <Cards Text="کارتی متمانە">
+            <Title Text="کاتی متمانەی کڕیار بنووسە" />
+            <CardNumber Text="ژمارەی کارت" />
+            <Add Text="زیادکردنی کارت" />
+            <Duplicate Text="کارتی متمانە بوونی هەیە" />
+          </Cards>
+        </Loyalty>
+        <Saved>
+          <Created Text="کڕیاری نوێ بە سەرکەوتووی دروستکرا" />
+          <Updated Text="کڕیار بەسەرکەوتووی گۆڕانکاری تێداکرا" />
+        </Saved>
+        <Existing Text="کڕیار بوونی هەیە">
+          <Warning Text="کڕیارێکی هاوشێوە بوونی هەیە: &quot;{0}&quot;\nخانەی دووبارە: {1}\n\nدەتەوێت کڕیار خەزن بکەیت؟" />
+        </Existing>
+        <PaymentTerms Text="ماوەی پارەدان">
+          <DueDatePeriod Text=" ماوەی بەرواری پارەدان">
+            <Info Text="ماوی کاتی پارەدان بەکاربێنە بۆ دیاریکردنی ژمارەی ئەو ڕۆژانەی کە دەبێت کڕیار پارەی ئەو بەرهەمانە بدات کە نایداوە" />
+            <Days Text="ڕۆژەکان" />
+          </DueDatePeriod>
+        </PaymentTerms>
+        <Default>
+          <Warning Text="ئەمە ئەکڕیارەیە بۆ هەموو فرۆشەکان دادەنرێت ئەگەر کڕیار دیاری نەکرابوو\nتکایە گۆڕانکاری لەم کڕیارەمەکە" />
+        </Default>
+      </Customer>
+      <Guide>
+        <Title Text="کڕیار و دابینکار" />
+        <Content Text="کلیک لێرەبکە بۆ کردنەوەی بەشی کڕیار و دابینکار" />
+        <Add>
+          <Title Text="زایدکردنی کڕیار و دابینکار" />
+          <Content Text="کلیک لێرەبکە بۆ دروستکردنی کڕیار یان دابینکار" />
+          <Name>
+            <Title Text="ناو بنووسە" />
+            <Content Text="ناوی کڕیار یان دابینکار بنووسە" />
+          </Name>
+          <Save>
+            <Title Text="خەزنکردنی گۆڕانکاریەکان" />
+            <Content Text="کە هەموو زانیاریەکانت نووسی کلیک لەسەر دوگمەی خەزنکردن بکە بۆ خەزنکردنی گۆڕانکاریەکان" />
+          </Save>
+        </Add>
+      </Guide>
+    </Customers>
+    <Authorization>
+      <Title Text="تکایە وشەی نهێنی بنووسە بۆ کردنەوەی بەشی بەڕێوەبردن" />
+    </Authorization>
+    <Guide>
+      <Title Text="بەڕێوەبردن" />
+      <Content Text="کلیک لێرەبکە بۆ کردنەوەی بەشی بەڕێوەبردن و زیادکردنی بەرهەم یان کڕیار" />
+    </Guide>
+    <Documents Text="ڕاپۆرتەکان">
+      <View Text="پیشاندانی ڕاپۆرتەکان" />
+      <Search Text="گەڕان بەدوای ڕاپۆرتەکان">
+        <Customer Text="کڕیار">
+          <All Text="هەموو کڕیارەکان" />
+        </Customer>
+        <Product Text="بەرهەم">
+          <All Text="هەموو بەرهەمەکان" />
+        </Product>
+        <Period Text="ماوە">
+          <Tip Text="کلیک بکە بۆ گەڕان بە پێی ماوە" />
+        </Period>
+        <DocumentType Text="جۆری ڕاپۆرت">
+          <All Text="هەموو جۆری ڕاپۆرتەکان" />
+        </DocumentType>
+        <User Text="بەکارهێنەر">
+          <All Text="هەموو بەکارهێنەرەکان" />
+        </User>
+        <PaidStatus Text="پارەی دراوە یان نا">
+          <None Text="هەموو مامەڵەکان" />
+          <Paid Text="پارەی دراوە" />
+          <Unpaid Text="پارەی نەدراوە" />
+        </PaidStatus>
+        <DocumentNumber Text="ژمارەی ڕاپۆرت" />
+        <ReferenceDocumentNumber Text="ڕاپۆرتی دەرەکی" />
+        <CashRegister Text="کاشێر">
+          <All Text="هەموو کاشێرەکان" />
+        </CashRegister>
+        <Clear Text="هەموو فلتەرەکان لابە" />
+      </Search>
+      <Document>
+        <Save>
+          <Saved Text="ڕاپۆرتەکە بە سەرکەوتووی خەزنکرا" />
+          <Error Text="هەڵە ڕویدا لە خەزنکردنی ڕاپۆرتەکە.گۆڕانکریەکان خەزننەکران\nنامەی سیستەم: {0}">
+            <InvalidPayments Text="بڕی پارەدان هەڵەیە">
+              <Info Text="بڕی پارەدان دەبێت یەکسانبێت بە کۆی گشتی ڕاپۆرتەکە.تکایە پارەدانی ناو ڕاپۆرتەکە چاکبکەرەوە و دووبارە هەوڵبدەرەوە\n\nکۆی گشتی ڕاپۆرتەکە: {0}. بڕی پارەدان {1}" />
+            </InvalidPayments>
+          </Error>
+        </Save>
+        <UnsavedChanges Text="گۆڕانکاری خەزننەکراو">
+          <Confirmation Text="ڕاپۆرتی &quot;{0}&quot; گۆڕانکاری خەزننەکراوی تێدایە\n\nدەتەوێت ڕاپۆرتەکە خەزن بکەیت پێش داخستن؟" />
+        </UnsavedChanges>
+        <StockDate Text="بەرواری گۆڕانکری جەرد دیاریبکە">
+          <Description Text="ئەو بەروارە دیاریبکە کە گۆڕانکاری لە جەردکردندا تۆمارکراوە لەلایەن ئەم ڕاپۆرتە" />
+          <Invalid Text="بەرواری جەردکردن هەڵەیە">
+            <Description Text="کرداری دیاریکراو ڕێگەپێدراو نیە\n\nجەردی دووبارە کۆگا دۆزرایەوە.ڕاپۆرت &quot;{0}&quot; دروستکراوە لە {1}\n\nبەرواری جەردی ڕاپۆرتەکە بپشکنە و دووبارە هەوڵبدەرەوە" />
+            <Message Text="بەرواری جەردی دیاریکراو ڕێگەپێدراو نیە\nجەردی کۆگا {0} دروستکراوە لە {1}" />
+            <InvalidTime Text="جەردی کۆگا ناکرێت لە داهاتوودابێت" />
+          </Invalid>
+        </StockDate>
+        <Note Text="تێبینی" />
+        <InternalNote Text="تێبینی ناوخۆیی" />
+        <PaidStatus>
+          <Changed Text="دۆخی پارەدان بە سەرکەوتووی گۆڕا" />
+        </PaidStatus>
+        <Items>
+          <CostPrice>
+            <Settings>
+              <AutoUpdate Text="بە ئۆتۆماتیکی نرخی تێچوو تازەبکەرەوە لەکاتی کڕین" />
+            </Settings>
+            <Update Text="تازەکردنەوەی نرخی تێچوو ">
+              <Info Text="تێچووی کاڵاکان گۆڕا.ئەو کاڵانە دیاریبکە کە دەتەوێت نرخی تێچوویان بگۆڕیت" />
+              <Confirmation Text="دەتەوێت نرخی تێچووی کاڵا دیاریکراوەکان تازەبکەیتەوە؟" />
+              <Success Text="نرخی تێچوو بە سەرکەوتووی گۆڕا" />
+            </Update>
+          </CostPrice>
+          <Missing Text="بەرهەمی دیاریکراو بوونی نیە" />
+        </Items>
+        <Payments>
+          <AutomaticallyModified Text="پارەدان و بڕی پارە تازەدەکرێنەوە بۆ ئەوەی یەکبگرێتەوە لەگەڵ کۆی گشتی پارەدان" />
+          <MarkPaid Text="هەموو پارەدانەکان سەرکەوتووبوون.دەتەوێت ڕاپۆرتەکە دیاریبکەیت وەک پارەی دراو؟">
+            <Title Text="دۆخی ڕاپۆرتەکە تازەبکەرەوە" />
+          </MarkPaid>
+          <Status Text="دۆخ">
+            <Paid Text="پارەی دراو" />
+            <Unpaid Text="پارەی نەدراو" />
+          </Status>
+        </Payments>
+      </Document>
+      <New>
+        <SelectDocumentType Text="جۆری ڕاپۆرت دیاریبکە" />
+      </New>
+      <NoDocument Text="ڕاپۆرتی دیاریکراو بوونی نیە" />
+      <Inventory>
+        <Date Text="بەرواری جەردکردن دیاریبکە">
+          <Description Text="ئەو بەروارە بنووسە کە لیستی جەردی تێدا دروستکرا" />
+        </Date>
+        <Document>
+          <Item>
+            <Expected Text="چاوەڕوانکراو" />
+            <Counted Text="ژمێردراو" />
+            <ChangeQuantity Text="گۆڕینی ژمارە" />
+          </Item>
+          <ExistingItem Text="کاڵای دیاریکراو پێشتر زیادکراوە بۆ ئەم ڕاپۆرتە" />
+          <Service Text="هەوڵدان بۆ زیادکردنی خزمەتگوزاری بۆ جەردکردن">
+            <Info Text="کاڵای دیاریکراو &quot;{0}&quot; نیشانەکراوە وەک خزمەتگوزاری.دڵنیایت دەتەوێت خزمەتگوزاریەک زیادبکەیت بۆ جەردکردن؟" />
+          </Service>
+          <AddGroup Text="کاڵاکانی ناو گروپ زیادبکە بۆ ڕاپۆرتەکە">
+            <Confirmation Text="دڵنیایت دەتەوێت هەموو بەرهەمەکانی گروپی &quot;{0}&quot; زیادبکەیت بۆ جەردکردن؟" />
+          </AddGroup>
+        </Document>
+      </Inventory>
+      <Guide>
+        <Title Text="ڕاپۆرتەکان بکەرەوە" />
+        <Content Text="کلیک لێرەبکە بۆ کردنەوەی بەشی ڕاپۆرتەکان و زیادکردنی یەکەم مامەڵەت" />
+        <Add>
+          <Title Text="دروستکردنی ڕاپۆرت" />
+          <Content Text="کلیک لێرەبکە بۆ دروستکردنی مامەڵەی نوێ و زیادکردنی کاڵا بۆ کۆگا" />
+          <Customer>
+            <Title Text="کڕیار دیاریبکە" />
+            <Content Text="کڕیار دیاریبکە بۆ ئەم ڕاپۆرتە" />
+          </Customer>
+          <Supplier>
+            <Title Text="دابینکار دیاریبکە" />
+            <Content Text="دابینکار دیاریبکە بۆ ئەم ڕاپۆرتە" />
+          </Supplier>
+          <Product>
+            <Title Text="بەرهەمێک دیاریبکە" />
+            <Content Text="دەبڵ کلیک بکە لەسەر ئەو بەرهەمەی دەتەوێت زیادیبکەی بۆ ڕاپۆرت" />
+          </Product>
+          <Item>
+            <Quantity>
+              <Title Text="ژمارە بنووسە" />
+              <Content Text="ژمارەی کاڵای کڕاو بنووسە.ئەم ژمارەیە زیاددەکرێت بۆ کۆگا" />
+            </Quantity>
+            <Price>
+              <Title Text="نرخ" />
+              <Content Text="نرخی کاڵا بنووسە" />
+            </Price>
+            <Save>
+              <Title Text="خەزنکردنی گۆڕانکاریەکان" />
+              <Content Text="کلیک لەسەر دوگمەی خەزنکردن بکە بۆ خەزنکردنی گۆڕانکاریەکان و زیادکردنی ئەم کاڵایە بۆ ڕاپۆرت" />
+            </Save>
+          </Item>
+          <Save>
+            <Title Text="خەزنکردنی ڕاپۆرت" />
+            <Content Text="کلیک لەسەر دوگمەی خەزنکردن بکە بۆ خەزنکردنی ڕاپۆرت" />
+          </Save>
+        </Add>
+      </Guide>
+    </Documents>
+    <Countries Text="وڵاتەکان">
+      <New Text="وڵاتی نوێ" />
+      <Delete>
+        <Title Text="سڕینەوەی وڵات" />
+        <Confirmation Text="دڵنیایت دەتەوێت وڵاتی &quot;{0}&quot; بسڕیتەوە؟" />
+      </Delete>
+      <Country>
+        <Edit Text="گۆڕانکاری لە وڵاتی &quot;{0}&quot;" />
+        <Name Text="ناو" />
+        <Code Text="کۆد" />
+        <Saved>
+          <Created Text="وڵات بە سەرکەوتووی دروستکرا" />
+          <Updated Text="وڵات بە سەرکەوتووی گۆڕانکاری تێداکرا" />
+        </Saved>
+      </Country>
+    </Countries>
+    <Company Text="کۆمپانیاکەم">
+      <LearnMore Text="زانیاری زیاتر وەربگرە لەسەر کۆمپانیا" />
+      <Details Text="زانیاریەکانی کۆمپانیاکەم">
+        <Title Text="زانیاری کۆمپانیا" />
+        <Logo Text="لۆگۆ">
+          <Add Text="گەڕان" />
+          <Remove Text="لابردن" />
+        </Logo>
+        <BankAccount Text="حیسابی بانکی">
+          <Number Text="ژمارەی حیسابی بانکی" />
+          <BankDetails Text="زانیاری بانک" />
+        </BankAccount>
+      </Details>
+      <Saved Text="زانیاری کۆمپانیا بە سەرکەوتووی خەزنکرا" />
+      <Onboarding>
+        <Title Text="زانیاریەکانی کۆمپانیا" />
+        <Info Text="زانیاریەکانی کۆمپانیاکەت بنووسە.زانیاری کۆمپانیا بۆ حیساب و وەصڵ بەکاردێت" />
+      </Onboarding>
+      <Reset Text="سڕینەوەی داتابەیس">
+        <AdminPassword Text="وشەی نهێنیی ئەدمین بنووسە" />
+        <Backup>
+          <Info Text="داتابەیس پاشەکەوت دەکرێت پێش سڕینەوەی\nدەتوانیت شوێنی پاشەکەوتەکە بگۆڕی بە بەکارهێنانی خانەکانی خوارەوە" />
+          <Path Text="شوێنی پاشەکەوتی داتابەیس">
+            <Select Text="ئەو شوێنە دیاریبکە کە پاشەکەوتی داتابەیسەکەی تێدا خەزندەکرێت پێش سڕینەوەی" />
+          </Path>
+          <Completed Text="پاشەکەوتکردنی داتابەیس تەواوبوو" />
+        </Backup>
+        <PerformReset Text="سڕینەوەی داتابەیس">
+          <Confirmation Text="دڵنیایت دەتەوێت داتابەیسەکە بسڕیتەوە و هەموو زانیاریەکان لەدەستبەیت؟">
+            <Title Text="داتابەیس دەسڕێتەوە" />
+          </Confirmation>
+        </PerformReset>
+        <Completed Text="داتابەیس بە سەرکەوتووی سڕایەوە.ئێستا بەرنامەکە دووبارە دەکرێتەوە" />
+      </Reset>
+    </Company>
+  </Management>
+</Language>

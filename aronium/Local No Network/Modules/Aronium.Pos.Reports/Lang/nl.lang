@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <Reports Text="Rapportage">
+    <Filter Text="Filter">
+      <User Text="Gebruiker">
+        <All Text="Alle gebruikers" />
+      </User>
+      <Customer Text="Klanten en leveranciers">
+        <All Text="Alle klanten en leveranciers" />
+      </Customer>
+      <Product Text="Artikel">
+        <All Text="Alle producten" />
+      </Product>
+      <Period>
+        <Tip Text="Klik om de rapportperiode te wijzigen" />
+      </Period>
+      <NotAvailable Text="Niet van toepassing op geselecteerd rapport" />
+    </Filter>
+    <Report>
+      <Select Text="Selecteer rapport">
+        <Title Text="Selecteer rapport om te bekijken of af te drukken" />
+      </Select>
+      <Show Text="Rapport weergeven" />
+      <NotFound Text="Rapportsjabloon ontbreekt." />
+    </Report>
+    <Sales Text="Verkoop">
+      <Products Text="Producten" />
+      <PaymentTypes Text="Betalingswijzen" />
+      <PaymentTypesUsers Text="Betalingswijzen door gebruikers" />
+      <PaymentTypesCustomers Text="Betalingstypes door klanten" />
+      <TaxRates Text="Btw tarieven" />
+      <Customers Text="Klanten" />
+      <Users Text="Gebruikers" />
+      <Refunds Text="Terugbetalingen" />
+      <InvoiceList Text="Factuurlijst" />
+      <Profit Text="Winstmarge" />
+      <Daily Text="Dagelijkse verkoop" />
+      <Unpaid Text="Onbetaalde verkopen" />
+      <StartingCash Text="Cash-items starten" />
+    </Sales>
+    <Purchase Text="Aankoop">
+      <Suppliers Text="Leveranciers" />
+      <Products Text="Producten" />
+      <Unpaid Text="Onbetaalde aankoop" />
+    </Purchase>
+  </Reports>
+</Language>

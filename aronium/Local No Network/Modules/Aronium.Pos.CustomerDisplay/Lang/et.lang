@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <CustomerDisplay>
+    <Total Text="Kokku:" />
+    <Change Text="Tagasi:" />
+    <Paid Text="Makstud:" />
+    <WelcomeMessage Text="TERE TULEMAST!" />
+    <Settings Text="Kliendiekraan">
+      <Enabled Text="Lubatud" />
+      <Port Text="COM port">
+        <Settings>
+          <BaudRate Text="Bits per second" />
+          <DataBits Text="Data bits" />
+          <StopBits Text="Stop bits" />
+          <Parity Text="Parity" />
+          <FlowControl Text="Flow control" />
+          <Show Text="Kuva pordiseaded" />
+          <Hide Text="Peida pordiseaded" />
+          <ResetToDefaults Text="Taasta algseaded" />
+        </Settings>
+      </Port>
+      <CharactersPerLine Text="Tähemärkide arv" />
+      <WelcomeMessage Text="Tervitussõnum">
+        <TopLine Text="Ülemine rida" />
+        <BottomLine Text="Alumine rida" />
+      </WelcomeMessage>
+      <Test Text="Testi kliendiekraani" />
+    </Settings>
+    <Error>
+      <InvalidPortSettings Text="Viga kliendiekraani lähtestamisel.&#xA;Kontrollige pordi sätteid." />
+    </Error>
+  </CustomerDisplay>
+</Language>

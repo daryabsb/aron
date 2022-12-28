@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ro" name="Romanian">
+  <Users Text="Utilizatori &amp; Securitate">
+    <View Text="Utilizatori">
+      <Disabled Text="Arata utilizatorii inactivi" />
+    </View>
+    <New Text="Adauga utilizator" />
+    <ResetPassword Text="Reseteaza parola">
+      <Success Text="Parola a fost schimbata cu succes" />
+    </ResetPassword>
+    <LearnMore Text="Invata mai multe despre administrarea utilizatorilor" />
+    <User>
+      <FirstName Text="Prenumele" />
+      <LastName Text="Numele" />
+      <Password Text="Parola" />
+      <PasswordConfirmation Text="Confirmarea parolei" />
+      <AccessLevel Text="Nivelul de acces" />
+      <IsEnabled Text="Activ" />
+      <Error>
+        <PasswordConfirmationMatch Text="Parola si confirmarea parolei trebuie sa fie identice." />
+        <InvalidPassword Text="Exista utilizator cu aceeasi parola.\nTe rog introdu parola unica si incearca din nou." />
+        <Disable>
+          <OpenOrders Text="Dezactivarea unui utilizator nu-i va permite sa inchida o vanzare deschisa.\nTe rog inchide toate operatiunile deschise de acest utilizator inainte de a-l dezactiva.">
+            <Title Text="Nu se poate dezactiva utilizatorul care are vanzare deschisa" />
+          </OpenOrders>
+        </Disable>
+        <DuplicateEmail Text="Acest e-mail e deja utilizat.\nTe rog alege o alta adresa de e-mail." />
+      </Error>
+      <Saved Text="Detaliile utilizatorului au fost salvate cu succes" />
+      <Email Text="E-mail" />
+    </User>
+    <Delete Text="Sterge utilizatorul">
+      <Confirmation Text="Esti sigur ca vrei sa stergi &quot;{0}&quot;?" />
+      <Error>
+        <CurrentUser Text="Nu te poti sterge pe tine!" />
+        <DataViolation Text="Nu se poate sterge utilizatorul.\nUtilizatorul apare in documente sau in alte elemente." />
+      </Error>
+    </Delete>
+    <Security Text="Securitate">
+      <Title Text="Seteaza nivelul de acces pentru operatiunile predefinite" />
+      <Description Text="Selecteaza nivelul de acces pentru fiecare actiune  " />
+      <LearnMore Text="Invata mai multe despre nivele de acces si securitate" />
+      <MaximumAccessLevelWarning Text="Access level set above the highest value assigned to any user." />
+      <Save>
+        <Success Text="Nivelul de securitate a fost salvat cu succes" />
+        <AccessLevelViolation Text="Nivelul de acces incalcat">
+          <Info Text="Nivelul de acces poate fi setat la valoarea maxima pentru a avea acces la sectiunile protejate.\nTe rog regleaza elementele cu eroare si incearca din nou." />
+        </AccessLevelViolation>
+      </Save>
+    </Security>
+  </Users>
+</Language>

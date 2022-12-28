@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="11/25/2017 01:34:22" ReportInfo.Modified="10/14/2021 15:46:57" ReportInfo.CreatorVersion="2018.4.0.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+    
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <TableDataSource Name="Translation" ReferenceName="CashOut.Translation" DataType="System.Int32" Enabled="true" TableName="Translation">
+      <Column Name="CashOutTitle" DataType="System.String"/>
+      <Column Name="Total" DataType="System.String"/>
+      <Column Name="User" DataType="System.String"/>
+      <Column Name="Manager" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="ShiftReport" ReferenceName="CashOut.ShiftReport" DataType="System.Int32" Enabled="true" TableName="ShiftReport">
+      <Column Name="BusinessDay" DataType="System.DateTime"/>
+      <Column Name="User" DataType="System.String"/>
+      <Column Name="Total" DataType="System.Decimal"/>
+      <Column Name="AdminUser" DataType="System.String"/>
+      <Column Name="CashRegister" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="Payments" ReferenceName="CashOut.Payments" DataType="System.Int32" Enabled="true" TableName="Payments">
+      <Column Name="Name" DataType="System.String"/>
+      <Column Name="Amount" DataType="System.Decimal"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="80" PaperHeight="1000" LeftMargin="0" TopMargin="0" RightMargin="0" BottomMargin="0" FirstPageSource="15" OtherPagesSource="15" ExtraDesignWidth="true" UnlimitedHeight="true" PrintOnRollPaper="true">
+    <ReportTitleBand Name="ReportTitle1" Width="302.4" Height="28.35" CanGrow="true" CanShrink="true">
+      <TextObject Name="Text6" Width="302.4" Height="28.35" Dock="Fill" Text="[Translation.CashOutTitle]" Padding="2, 5, 2, 5" HorzAlign="Center" RightToLeft="true" Font="Tahoma, 10pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="32.35" Width="302.4" Height="37.8" Border.Lines="Bottom" CanGrow="true" CanShrink="true" PrintOn="FirstPage">
+      <TextObject Name="Text2" Width="302.4" Height="37.8" Dock="Fill" CanGrow="true" CanShrink="true" Text="[ShiftReport.CashRegister], [ShiftReport.BusinessDay]" Padding="2, 5, 2, 5" HorzAlign="Center" RightToLeft="true" Font="Tahoma, 9pt">
+        <Formats>
+          <GeneralFormat/>
+          <DateFormat/>
+        </Formats>
+      </TextObject>
+    </PageHeaderBand>
+    <DataBand Name="Data2" Top="74.15" Width="302.4" Height="18.9" CanGrow="true" DataSource="Payments">
+      <TextObject Name="Text1" Left="132.3" Width="170.1" Height="18.9" Dock="Right" CanGrow="true" Text="[Payments.Name]:" RightToLeft="true" Font="Tahoma, 9pt"/>
+      <TextObject Name="Text3" Width="132.3" Height="18.9" Dock="Left" CanGrow="true" Text="[Payments.Amount]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" RightToLeft="true" Font="Tahoma, 9pt"/>
+      <DataFooterBand Name="DataFooter1" Top="97.05" Width="302.4" Height="28.35" Border.Lines="Top, Bottom" Border.Style="Dash" CanGrow="true" CanShrink="true">
+        <TextObject Name="Text4" Width="151.2" Height="28.35" Dock="Left" CanGrow="true" CanShrink="true" Text="[ShiftReport.Total]" Padding="2, 5, 2, 5" Format="Currency" Format.UseLocale="true" HorzAlign="Right" RightToLeft="true" WordWrap="false" Font="Tahoma, 10pt, style=Bold" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text5" Left="151.2" Width="151.2" Height="28.35" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.Total]:" Padding="2, 5, 2, 5" RightToLeft="true" Font="Tahoma, 10pt, style=Bold"/>
+      </DataFooterBand>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="129.4" Width="302.4" Height="141.75" CanGrow="true">
+      <TextObject Name="Text8" Width="302.4" Height="103.95" Dock="Top" Border.Lines="Bottom" Border.Style="Dash" CanGrow="true" Text="[Translation.User]: [ShiftReport.User]&#13;&#10;&#13;&#10;[Translation.Manager]:" Padding="2, 10, 2, 30" RightToLeft="true" Font="Tahoma, 9pt"/>
+      <TextObject Name="Text7" Top="103.95" Width="302.4" Height="18.9" Dock="Top" CanGrow="true" CanShrink="true" CanBreak="false" Text="([ShiftReport.AdminUser])" Padding="2, 2, 2, 0" HorzAlign="Center" RightToLeft="true" Font="Tahoma, 9pt"/>
+      <TextObject Name="Text9" Top="122.85" Width="302.4" Height="18.9" Dock="Top" CanGrow="true" Text="[Format(&quot;{0} {1}&quot;,[Date].ToShortDateString(), [Date].ToShortTimeString())]" Padding="2, 5, 2, 0" RightToLeft="true" Font="Tahoma, 9pt"/>
+    </ReportSummaryBand>
+  </ReportPage>
+</Report>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Settings>
+    <Email>
+      <Disabled Text="K odesílání e-mailů je vyžadována konfigurace e-mailu. Ujistěte se, že máte správně nakonfigurováno nastavení e-mailu." />
+      <Reporting Text="Report">
+        <Recepient Text="Příjemci">
+          <Info Text="Více e-mailových adres oddělte čárkami" />
+        </Recepient>
+        <Subject Text="Předmět" />
+        <Message Text="Zpráva" />
+        <XReport Text="Zpráva X" />
+        <ZReport Text="Z report (konec dne)" />
+        <Reports Text="Zprávy">
+          <Selection Text="Výběr zprávy" />
+          <Format Text="Formát">
+            <Pdf Text="PDF" />
+            <Excel Text="Excel" />
+          </Format>
+        </Reports>
+        <Scheduled Text="Plánované zprávy">
+          <SendPeriodically Text="Pravidelně odesílat e-maily" />
+          <Interval Text="Interval odesílání">
+            <Minutes Text="minuty" />
+          </Interval>
+          <BusinessHours Text="Úřední hodiny" />
+          <SendEmpty Text="Odeslat, pokud je prázdné">
+            <Info Text="Odesílejte e-maily, i když neproběhly žádné prodeje" />
+          </SendEmpty>
+        </Scheduled>
+        <Test Text="Odeslat zkušební e-mail">
+          <Info Text="Konfigurace bude uložena před odesláním testovacího e-mailu" />
+          <Incomplete Text="E-mail není nakonfigurován. Zkontrolujte prosím konfiguraci a zkuste to znovu." />
+          <Error Text="Chyba při odesílání testovacího e-mailu. Zkontrolujte prosím konfiguraci a zkuste to znovu.&#xA;Systémová zpráva: {0}" />
+        </Test>
+      </Reporting>
+    </Email>
+  </Settings>
+  <Email>
+    <Reporting>
+      <Message>
+        <Body>
+          <Total Text="Vaše celkové prodeje za {0}: {1}" />
+          <NumberOfSales Text="Počet prodejů: {0}" />
+          <PaymentTypes Text="Typy plateb:" />
+          <Users Text="Uživatelé:" />
+          <NumberOfRefunds Text="Počet refundací: {0}" />
+          <RefundsTotal Text="Celková refundace: {0}" />
+        </Body>
+        <ReportType>
+          <XReport Text="Zprávy o prodeji" />
+          <ZReport Text="Konec dne" />
+        </ReportType>
+      </Message>
+      <License>
+        <Expiring Text="Licence pro modul &quot;E-mailové přehledy&quot; vyprší za {0} dnů.&#xA;&#xA;Zakupte si prosím licenci, abyste si zajistili nepřetržitý přístup i po {1}">
+          <Title Text="Licence brzy vyprší" />
+        </Expiring>
+        <GracePeriod Text="Licence pro modul „E-mailové hlášení“ vypršela a modul přestane fungovat po {0}&#xA;Pro zajištění trvalého přístupu si prosím zakupte licenci.">
+          <LicenseAlreadyPurchased Text="Pokud jste si již zakoupili licenci, můžete tuto zprávu ignorovat, dokud neobdržíme platbu a vaše licence nebude aktualizována." />
+          <Hide Text="Skrýt tuto zprávu po dobu 30 dnů" />
+        </GracePeriod>
+        <Expired Text="Licence pro &quot;E-mailové hlášení&quot; vypršela a modul bude deaktivován, dokud nebude licence zakoupena. ">
+          <Title Text="Licence vypršela!" />
+          <Renew Text="Obnovte si prosím licenci na" />
+          <Hide Text="Tuto zprávu již nezobrazovat" />
+        </Expired>
+        <Error>
+          <Notification Text="Chcete-li aktivovat funkci e-mailových zpráv, zakupte si licenci.">
+            <Expired Text="Licence vypršela." />
+            <Missing Text="Chybí licence." />
+          </Notification>
+        </Error>
+      </License>
+    </Reporting>
+  </Email>
+</Language>

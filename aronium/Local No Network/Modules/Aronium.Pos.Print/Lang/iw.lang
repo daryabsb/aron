@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Print>
+    <Labels>
+      <Documents>
+        <Invoice Text="חשבונית">
+          <AmountDue Text="הסכום שנותר" />
+          <BankAccountNumber Text="מספר חשבון בנק " />
+          <BankDetails Text="בנק" />
+          <BillTo Text="עבור" />
+          <InvoiceNumber Text="מספר חשבונית:" />
+          <Item Text="פריט" />
+          <PaymentMethod Text="סוג תשלום" />
+          <PaidAmount Text="סכום ששולם" />
+          <PaymentStatus Text="מצב תשלום">
+            <Paid Text="שולם" />
+            <Unpaid Text="לא שולם" />
+          </PaymentStatus>
+        </Invoice>
+      </Documents>
+      <General>
+        <Discount Text="הנחה" />
+        <Quantity Text="כמות" />
+        <Qty Text="כמות" />
+        <UnitPrice Text="מחיר לפריט" />
+        <Tax Text="מס" />
+        <Total Text="סה&quot;כ" />
+        <Subtotal Text="סיכום ביניים" />
+      </General>
+    </Labels>
+  </Print>
+</Language>

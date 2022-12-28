@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <Reports Text="Reporting">
+    <Filter Text="Filter">
+      <User Text="User">
+        <All Text="All" />
+      </User>
+      <Customer Text="Customers &amp; suppliers">
+        <All Text="All" />
+      </Customer>
+      <Product Text="Product">
+        <All Text="All" />
+      </Product>
+      <CashRegister Text="Cash register">
+        <All Text="All" />
+      </CashRegister>
+      <ProductGroup Text="Product group">
+        <IncludeSubgroups Text="Include subgroups" />
+      </ProductGroup>
+      <Period>
+        <Tip Text="Click to change report period" />
+      </Period>
+      <NotAvailable Text="Not applicable for selected report" />
+    </Filter>
+    <Report>
+      <Select Text="Select report">
+        <Title Text="Select report to view or print" />
+      </Select>
+      <Show Text="Show report" />
+      <NotFound Text="Report template is missing." />
+    </Report>
+    <Sales Text="Sales">
+      <Products Text="Products" />
+      <ProductGroups Text="Product groups" />
+      <PaymentTypes Text="Payment types" />
+      <PaymentTypesUsers Text="Payment types by users" />
+      <PaymentTypesCustomers Text="Payment types by customers" />
+      <TaxRates Text="Tax rates" />
+      <Customers Text="Customers" />
+      <Users Text="Users" />
+      <Refunds Text="Refunds" />
+      <InvoiceList Text="Invoice list" />
+      <Profit Text="Profit &amp; margin" />
+      <Daily Text="Daily sales" />
+      <Hourly Text="Hourly sales" />
+      <HourlyByProductGroup Text="Hourly sales by product groups" />
+      <OrderNumber Text="Table or order number" />
+      <Unpaid Text="Unpaid sales" />
+      <StartingCash Text="Starting cash entries" />
+      <Discounts Text="Discounts granted" />
+      <ItemDiscounts Text="Items discounts" />
+      <StockMovement Text="Stock movement" />
+    </Sales>
+    <Purchase Text="Purchase">
+      <Suppliers Text="Suppliers" />
+      <Products Text="Products" />
+      <Unpaid Text="Unpaid purchase" />
+      <Discounts Text="Purchase discounts" />
+      <ItemDiscounts Text="Purchased items discounts" />
+      <PurchaseInvoiceList Text="Purchase invoice list" />
+    </Purchase>
+    <LossAndDamage Text="Loss and damage">
+      <Products Text="Products" />
+    </LossAndDamage>
+    <Favorites Text="Favorites">
+      <Add Text="Add to favorites" />
+      <Remove Text="Remove from favorites" />
+      <Clear Text="Clear favorites" />
+    </Favorites>
+  </Reports>
+</Language>

@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" DoublePass="true" StartReportEvent="_StartReport" ReportInfo.Created="11/18/2015 01:41:15" ReportInfo.Modified="08/03/2021 19:25:45" ReportInfo.CreatorVersion="2019.1.5.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+    // Declare money format field
+    private FastReport.Format.CustomFormat moneyFormat;
+
+    private void _StartReport(object sender, EventArgs e)
+    {
+      // Create new CustomFormat instance and set its properties
+      moneyFormat = new FastReport.Format.CustomFormat();
+      moneyFormat.Format = ((String)Report.GetParameterValue(&quot;MoneyFormat&quot;)) ?? &quot;C2&quot;;
+
+      TextItemsCount.Visible = (Boolean)Report.GetParameterValue(&quot;ShowItemsCount&quot;);
+      DataTaxes.Visible = (Boolean)Report.GetParameterValue(&quot;ShowTaxRates&quot;);
+      
+      PictureLogo.Visible = Report.GetColumnValue(&quot;Company.Logo&quot;) != null;
+      CartDiscountChildBand.Visible = ((Decimal)Report.GetColumnValue(&quot;Document.Discount&quot;)) &gt; 0;
+      
+      RefundReceiptBand.Visible = ((Boolean)Report.GetColumnValue(&quot;Document.IsRefund&quot;));
+      
+      if(((Boolean)Report.GetColumnValue(&quot;Options.IsHeaderCentered&quot;)))
+        TextHeader.HorzAlign = HorzAlign.Center;
+      
+      if(((Boolean)Report.GetColumnValue(&quot;Options.IsFooterCentered&quot;)))
+        TextFooter.HorzAlign = HorzAlign.Center;
+      
+      BarcodeChildBand.Visible = ((Boolean)Report.GetColumnValue(&quot;Options.PrintBarcode&quot;));
+    }
+ 
+    private void OnMoneyPrint(object sender, EventArgs e)
+    {
+      // Apply format to text object
+      ((TextObject)sender).Format = moneyFormat;
+    }
+
+    private void OnBeforeAmountDueBandLayout(object sender, EventArgs e)
+    {
+      AmountDueBand.Visible = (((Decimal)Report.GetColumnValue(&quot;Document.Total&quot;)) - Report.GetTotalValue(&quot;TotalPaid&quot;)) &gt; 0;
+    }
+
+    private void OnChangeBandBeforePrint(object sender, EventArgs e)
+    {
+      Double changeAmount = Report.GetTotalValue(&quot;TotalPaid&quot;) - (((Decimal)Report.GetColumnValue(&quot;Document.Total&quot;)) - Report.GetTotalValue(&quot;TotalUnpaid&quot;));
+
+      // Display change if it is not refund and if change exists
+      ChangeBand.Visible = !((Boolean)Report.GetColumnValue(&quot;Document.IsRefund&quot;)) &amp;&amp; changeAmount &gt;= 0;
+    }
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <SQLiteDataConnection Name="Connection" ConnectionString="rijcmlqIltkgxALMArhJ2W63qXqy9mHFxj3jszzPRFpX1ii4uTuch5qPIB4cGrB4iECYGs+zdGXqlEPX4zFY4oZokjGzFC/++UQ0S7HrISGyaXTcf52iz2gXZmhu0heBkleXBWh">
+      <TableDataSource Name="Company" DataType="System.Int32" Enabled="true" TableName="Company">
+        <Column Name="Id" DataType="System.Int64"/>
+        <Column Name="Name" DataType="System.String"/>
+        <Column Name="Address" DataType="System.String"/>
+        <Column Name="PostalCode" DataType="System.String"/>
+        <Column Name="City" DataType="System.String"/>
+        <Column Name="CountryId" DataType="System.Int64"/>
+        <Column Name="TaxNumber" DataType="System.String"/>
+        <Column Name="Email" DataType="System.String"/>
+        <Column Name="PhoneNumber" DataType="System.String"/>
+        <Column Name="Logo" DataType="System.Byte[]" BindableControl="Picture"/>
+      </TableDataSource>
+    </SQLiteDataConnection>
+    <TableDataSource Name="Document" ReferenceName="Receipt.Document" DataType="System.Int32" Enabled="true" TableName="Document">
+      <Column Name="Date" DataType="System.DateTime"/>
+      <Column Name="DueDate" DataType="System.DateTime"/>
+      <Column Name="DateCreated" DataType="System.DateTime"/>
+      <Column Name="Number" DataType="System.String"/>
+      <Column Name="OrderNumber" DataType="System.String"/>
+      <Column Name="ReferenceDocumentNumber" DataType="System.String"/>
+      <Column Name="Note" DataType="System.String"/>
+      <Column Name="CustomerId" DataType="System.Int32"/>
+      <Column Name="CustomerName" DataType="System.String"/>
+      <Column Name="CustomerCode" DataType="System.String"/>
+      <Column Name="CustomerPhoneNumber" DataType="System.String"/>
+      <Column Name="CustomerEmail" DataType="System.String"/>
+      <Column Name="CustomerAddress" DataType="System.String"/>
+      <Column Name="CustomerPostalCode" DataType="System.String"/>
+      <Column Name="CustomerTaxNumber" DataType="System.String"/>
+      <Column Name="CustomerCity" DataType="System.String"/>
+      <Column Name="Discount" DataType="System.Decimal"/>
+      <Column Name="DiscountType" DataType="System.Int32"/>
+      <Column Name="Total" DataType="System.Decimal"/>
+      <Column Name="PaidStatus" DataType="System.Int32"/>
+      <Column Name="FirstName" DataType="System.String"/>
+      <Column Name="LastName" DataType="System.String"/>
+      <Column Name="IsRefund" DataType="System.Boolean"/>
+    </TableDataSource>
+    <TableDataSource Name="Items" ReferenceName="Receipt.Items" DataType="System.Int32" Enabled="true" TableName="Items">
+      <Column Name="TotalTax" DataType="System.Decimal"/>
+      <Column Name="PriceBeforeTaxWithDiscount" DataType="System.Decimal"/>
+      <Column Name="PriceAfterDocumentDiscount" DataType="System.Decimal"/>
+      <Column Name="Quantity" DataType="System.Decimal"/>
+      <Column Name="MeasurementUnit" DataType="System.String"/>
+      <Column Name="Price" DataType="System.Decimal"/>
+      <Column Name="PriceBeforeTax" DataType="System.Decimal"/>
+      <Column Name="Total" DataType="System.Decimal"/>
+      <Column Name="Discount" DataType="System.Decimal"/>
+      <Column Name="DiscountType" DataType="System.Int32"/>
+      <Column Name="Name" DataType="System.String"/>
+      <Column Name="TotalBeforeTax" DataType="System.Decimal"/>
+      <Column Name="PriceBeforeTaxAfterDocumentDiscount" DataType="System.Decimal"/>
+      <Column Name="TotalBeforeTaxAfterDocumentDiscount" DataType="System.Decimal"/>
+      <Column Name="TaxCode" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="Taxes" ReferenceName="Receipt.Taxes" DataType="System.Int32" Enabled="true" TableName="Taxes">
+      <Column Name="Name" DataType="System.String"/>
+      <Column Name="Rate" DataType="System.Decimal"/>
+      <Column Name="Code" DataType="System.String"/>
+      <Column Name="IsFixed" DataType="System.Boolean"/>
+      <Column Name="Amount" DataType="System.Decimal"/>
+      <CommandParameter Name="Id" DataType="11" Expression="[Id]" DefaultValue="1"/>
+    </TableDataSource>
+    <TableDataSource Name="Payment" ReferenceName="Receipt.Payment" DataType="System.Int32" Enabled="true" TableName="Payment">
+      <Column Name="Name" DataType="System.String"/>
+      <Column Name="Amount" DataType="System.Decimal"/>
+      <Column Name="MarkAsPaid" DataType="System.Boolean" BindableControl="CheckBox"/>
+    </TableDataSource>
+    <TableDataSource Name="Translation" ReferenceName="Receipt.Translation" DataType="System.Int32" Enabled="true" TableName="Translation">
+      <Column Name="CompanyTaxNumber" DataType="System.String"/>
+      <Column Name="Customer" DataType="System.String"/>
+      <Column Name="CustomerAddress" DataType="System.String"/>
+      <Column Name="CustomerTaxNumber" DataType="System.String"/>
+      <Column Name="CustomerCode" DataType="System.String"/>
+      <Column Name="CustomerPhoneNumber" DataType="System.String"/>
+      <Column Name="CustomerEmail" DataType="System.String"/>
+      <Column Name="Number" DataType="System.String"/>
+      <Column Name="RefundNumber" DataType="System.String"/>
+      <Column Name="OrderNumber" DataType="System.String"/>
+      <Column Name="ItemsCount" DataType="System.String"/>
+      <Column Name="Discount" DataType="System.String"/>
+      <Column Name="Subtotal" DataType="System.String"/>
+      <Column Name="Tax" DataType="System.String"/>
+      <Column Name="Total" DataType="System.String"/>
+      <Column Name="PaidAmount" DataType="System.String"/>
+      <Column Name="AmountDue" DataType="System.String"/>
+      <Column Name="DueDate" DataType="System.String"/>
+      <Column Name="User" DataType="System.String"/>
+      <Column Name="Change" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="Options" ReferenceName="Receipt.Options" DataType="System.Int32" Enabled="true" TableName="Options">
+      <Column Name="PrintCustomerName" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="PrintCustomerAddress" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="PrintCustomerTaxNumber" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="PrintCustomerCode" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="PrintCustomerPhoneNumber" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="PrintCustomerEmail" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="PrintCustomerAddressLabel" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="PrintCustomerTaxNumberLabel" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="PrintCustomerCodeLabel" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="PrintCustomerPhoneNumberLabel" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="PrintCustomerEmailLabel" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="IsHeaderCentered" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="IsFooterCentered" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="PrintBarcode" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="PrintMeasurementUnit" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="Header" DataType="System.String"/>
+      <Column Name="Footer" DataType="System.String"/>
+    </TableDataSource>
+    <Parameter Name="Id" DataType="System.Int32"/>
+    <Parameter Name="MoneyFormat" DataType="System.String" Expression="&quot;C2&quot;"/>
+    <Parameter Name="ShowItemsCount" DataType="System.Boolean" Expression="true"/>
+    <Parameter Name="ShowTaxRates" DataType="System.Boolean" Expression="true"/>
+    <Parameter Name="ShowOrderNumber" DataType="System.Boolean" Expression="true"/>
+    <Parameter Name="ShortReceiptNumber" DataType="System.Boolean" Expression="false"/>
+    <Total Name="Total" Expression="[Items.Total]" Evaluator="DataItems" PrintOn="CartDiscountChildBand" ResetAfterPrint="false"/>
+    <Total Name="Subtotal" Expression="[Items.TotalBeforeTaxAfterDocumentDiscount]" Evaluator="DataItems" PrintOn="ChildSubtotal"/>
+    <Total Name="TotalPaid" Expression="[Payment.Amount]" Evaluator="DataPayments" PrintOn="PaidAndChangeFooter" ResetAfterPrint="false" EvaluateCondition="[Payment.MarkAsPaid]"/>
+    <Total Name="ItemsCount" TotalType="Count" Evaluator="DataItems" PrintOn="ItemsCountDataFooter" EvaluateCondition="[Items.Quantity] != 0"/>
+    <Total Name="TotalUnpaid" Expression="[Payment.Amount]" Evaluator="DataPayments" PrintOn="PaidAndChangeFooter" ResetAfterPrint="false" EvaluateCondition="[Payment.MarkAsPaid] == false"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="80" LeftMargin="0" TopMargin="0" RightMargin="0" BottomMargin="0" MirrorMargins="true" FirstPageSource="15" OtherPagesSource="15" ExtraDesignWidth="true" UnlimitedHeight="true" PrintOnRollPaper="true">
+    <ReportTitleBand Name="ReportTitle1" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true">
+      <TextObject Name="TextHeader" Width="302.4" Height="18.9" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Options.Header]" Font="Tahoma, 9pt"/>
+      <ChildBand Name="Child1" Top="22.9" Width="302.4" Height="75.6" CanGrow="true" CanShrink="true">
+        <PictureObject Name="PictureLogo" Width="302.4" Height="75.6" Dock="Fill" CanGrow="true" CanShrink="true" DataColumn="Company.Logo"/>
+        <ChildBand Name="CompanyNameChildBand" Top="102.5" Width="302.4" Height="37.8" CanGrow="true" CanShrink="true">
+          <TextObject Name="Text47" Width="302.4" Height="37.8" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Company.Name]" Padding="2, 5, 2, 5" HorzAlign="Center" Font="Tahoma, 14pt, style=Bold"/>
+          <ChildBand Name="CompanyDetailsChildBand" Top="144.3" Width="302.4" Height="94.5" CanGrow="true" CanShrink="true" CanBreak="true">
+            <TextObject Name="TextCompanyAddress" Width="302.4" Height="18.9" Dock="Top" CanGrow="true" CanShrink="true" ShiftMode="Never" Text="[Company.Address]" Padding="2, 0, 2, 5" HorzAlign="Center" Font="Tahoma, 9pt"/>
+            <TextObject Name="TextCompanyZipAndCity" Top="18.9" Width="302.4" Height="18.9" Dock="Top" CanGrow="true" CanShrink="true" ShiftMode="Never" Text="[Company.PostalCode] [Company.City]" HorzAlign="Center" Font="Tahoma, 9pt"/>
+            <TextObject Name="TextCompanyTaxNumber" Top="37.8" Width="302.4" Height="18.9" Dock="Top" CanGrow="true" CanShrink="true" ShiftMode="Never" Text="[IIf(string.IsNullOrEmpty([Company.TaxNumber]),&quot;&quot;,Format(&quot;{0}: {1}&quot;,[Translation.CompanyTaxNumber], [Company.TaxNumber]))]" HorzAlign="Center" Font="Tahoma, 9pt"/>
+            <TextObject Name="TextCompanyPhone" Top="56.7" Width="302.4" Height="18.9" Dock="Top" CanGrow="true" CanShrink="true" ShiftMode="Never" Text="[Company.PhoneNumber]" HorzAlign="Center" Font="Tahoma, 9pt"/>
+            <TextObject Name="TextCompanyEmail" Top="75.6" Width="302.4" Height="18.9" Dock="Top" CanGrow="true" CanShrink="true" ShiftMode="Never" Text="[Company.Email]" HorzAlign="Center" Font="Tahoma, 9pt"/>
+            <ChildBand Name="DocumentNumberChildBand" Top="242.8" Width="302.4" Height="28.35" CanGrow="true" CanShrink="true">
+              <TextObject Name="Text59" Width="302.4" Height="28.35" Dock="Fill" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Translation.Number]: [IIf([ShortReceiptNumber],Remove([Document.Number],0,[Document.Number].LastIndexOf(&quot;-&quot;) + 1),[Document.Number])]" Padding="2, 5, 2, 0" VertAlign="Center" Font="Tahoma, 9pt"/>
+              <ChildBand Name="RefundReceiptBand" Top="275.15" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true">
+                <TextObject Name="Text7" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true" Text="[Translation.Number]: [Document.ReferenceDocumentNumber]" Font="Tahoma, 9pt"/>
+                <TextObject Name="Text63" Width="302.4" Height="18.9" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Translation.Number]: [Document.ReferenceDocumentNumber]" Font="Tahoma, 9pt"/>
+                <ChildBand Name="ReceiptDetailsChildBand" Top="298.05" Width="302.4" Height="85.05" Border.Lines="Bottom" Border.Style="Dash" CanGrow="true" CanShrink="true" CanBreak="true">
+                  <TextObject Name="Text4" Width="302.4" Height="85.05" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Document.DateCreated]&#13;&#10;[Translation.User]: [Document.FirstName] [Document.LastName]&#13;&#10;[IIf([ShowOrderNumber], string.Format(&quot;{0}: {1}&quot;, [Translation.OrderNumber], [Document.OrderNumber]),string.Empty)]"/>
+                  <ChildBand Name="CustomerDetailsBand" Top="387.1" Width="302.4" Height="122.85" Border.Lines="Bottom" Border.Style="Dash" CanGrow="true" CanShrink="true">
+                    <TextObject Name="TextCustomer" Width="302.4" Height="122.85" Dock="Fill" CanGrow="true" CanShrink="true" Text="&lt;b&gt;[Translation.Customer]:&lt;/b&gt;&#13;&#10;[IIf([Options.PrintCustomerName],[Document.CustomerName] + &quot;\n&quot;,null)][IIf([Options.PrintCustomerAddressLabel] &amp;&amp; [Options.PrintCustomerAddress],&quot;&lt;b&gt;&quot; + [Translation.CustomerAddress] + &quot;:&lt;/b&gt;\n&quot;, null)][IIf([Options.PrintCustomerAddress],string.Format(&quot;{0}\n{1} {2}&quot;, [Document.CustomerAddress], [Document.CustomerPostalCode], [Document.CustomerCity]).Trim() + &quot;\n&quot;, null)][IIf([Options.PrintCustomerTaxNumberLabel] &amp;&amp; [Options.PrintCustomerTaxNumber],&quot;&lt;b&gt;&quot; + [Translation.CustomerTaxNumber] + &quot;:&lt;/b&gt; &quot;,null)][IIf([Options.PrintCustomerTaxNumber],[Document.CustomerTaxNumber]+&quot;\n&quot;,null)][IIf([Options.PrintCustomerCode] &amp;&amp; [Options.PrintCustomerCodeLabel],&quot;&lt;b&gt;&quot; + [Translation.CustomerCode] + &quot;:&lt;/b&gt; &quot;,null)][IIf([Options.PrintCustomerCode],[Document.CustomerCode]+&quot;\n&quot;,null)][IIf([Options.PrintCustomerPhoneNumber] &amp;&amp; [Options.PrintCustomerPhoneNumberLabel],&quot;&lt;b&gt;&quot; + [Translation.CustomerPhoneNumber] + &quot;:&lt;/b&gt; &quot;,null)][IIf([Options.PrintCustomerPhoneNumber],[Document.CustomerPhoneNumber]+&quot;\n&quot;,null)][IIf([Options.PrintCustomerEmail] &amp;&amp; [Options.PrintCustomerEmailLabel],&quot;&lt;b&gt;&quot; + [Translation.CustomerEmail] + &quot;:&lt;/b&gt; &quot;,null)][IIf([Options.PrintCustomerEmail],[Document.CustomerEmail],null)]" TextRenderType="HtmlTags"/>
+                  </ChildBand>
+                </ChildBand>
+              </ChildBand>
+            </ChildBand>
+          </ChildBand>
+        </ChildBand>
+      </ChildBand>
+    </ReportTitleBand>
+    <DataBand Name="DataItems" Top="513.95" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true" DataSource="Items" Filter="[Items.Quantity] != 0" Columns.Count="1" Columns.Width="302.4">
+      <TextObject Name="Text3" Width="302.4" Height="18.9" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Items.Name] [IIf(!String.IsNullOrEmpty([Items.TaxCode]),&quot;(&quot;+[Items.TaxCode]+&quot;)&quot;,String.Empty)]" Padding="2, 2, 2, 0" VertAlign="Center" Font="Tahoma, 9pt"/>
+      <ChildBand Name="ChildQuantityAndPrice" Top="536.85" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true" Guides="37.8">
+        <TextObject Name="Text49" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[Items.Quantity] [IIf([Options.PrintMeasurementUnit] &amp;&amp; !String.IsNullOrEmpty([Items.MeasurementUnit]), [Items.MeasurementUnit] + &quot; &quot;,&quot;&quot;)]x [[Items.Price].ToString([MoneyFormat])][IIf(([Items.Discount] &gt; 0M &amp;&amp; ToInt32([Items.DiscountType]) == 0),string.Format(&quot; (-{0}%)&quot;, [Items.Discount]),&quot;&quot;)][IIf(([Items.Discount] &gt; 0M &amp;&amp; ToInt32([Items.DiscountType]) == 1),string.Format(&quot; (-{0})&quot;, [Items.Discount].ToString([MoneyFormat])),&quot;&quot;)]" VertAlign="Center" Font="Tahoma, 9pt">
+          <Formats>
+            <GeneralFormat/>
+            <CurrencyFormat/>
+          </Formats>
+        </TextObject>
+        <TextObject Name="Text50" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" BeforePrintEvent="OnMoneyPrint" Text="[[Items.Total].ToString([MoneyFormat])]" HorzAlign="Right" VertAlign="Center" Font="Tahoma, 9pt"/>
+      </ChildBand>
+      <DataFooterBand Name="ItemsCountDataFooter" Top="559.75" Width="302.4" Height="28.35" Border.Lines="Top" Border.Style="Dash" CanGrow="true" CanShrink="true" BeforeLayoutEvent="OnItemsCountBandBeforeLayout">
+        <TextObject Name="TextItemsCount" Width="302.4" Height="28.35" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Translation.ItemsCount]: [ItemsCount]" Padding="2, 1, 2, 0" VertAlign="Center" Font="Tahoma, 9pt"/>
+        <ChildBand Name="CartDiscountChildBand" Top="592.1" Width="302.4" Height="28.35" CanGrow="true" CanShrink="true">
+          <TextObject Name="Text51" Width="151.2" Height="28.35" Dock="Left" CanGrow="true" CanShrink="true" Text="[Translation.Discount]:" VertAlign="Center" Font="Tahoma, 9pt">
+            <Formats>
+              <GeneralFormat/>
+              <GeneralFormat/>
+            </Formats>
+          </TextObject>
+          <TextObject Name="Text52" Left="151.2" Width="151.2" Height="28.35" Dock="Right" CanGrow="true" CanShrink="true" BeforePrintEvent="OnMoneyPrint" Text="[[Document.Total]-[Total]]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" Font="Tahoma, 9pt"/>
+          <ChildBand Name="ChildSubtotal" Top="624.45" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true">
+            <TextObject Name="Text53" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[Translation.Subtotal]:" VertAlign="Center" Font="Tahoma, 9pt">
+              <Formats>
+                <GeneralFormat/>
+                <CurrencyFormat/>
+              </Formats>
+            </TextObject>
+            <TextObject Name="Text54" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" BeforePrintEvent="OnMoneyPrint" Text="[IIf([Document.IsRefund],-[Subtotal],[Subtotal])]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" Font="Tahoma, 9pt"/>
+          </ChildBand>
+        </ChildBand>
+      </DataFooterBand>
+    </DataBand>
+    <DataBand Name="DataTaxes" Top="647.35" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true" DataSource="Taxes">
+      <TextObject Name="TextTaxRateAmount" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" BeforePrintEvent="OnMoneyPrint" Text="[Taxes.Amount]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" Font="Tahoma, 9pt"/>
+      <TextObject Name="TextTaxRateLabel" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[Translation.Tax] [IIf([Taxes.IsFixed],[Taxes.Rate].ToString([MoneyFormat]),String.Format(&quot;{0}%&quot;, [Taxes.Rate]))]:" VertAlign="Center" Font="Tahoma, 9pt">
+        <Formats>
+          <GeneralFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+    </DataBand>
+    <DataBand Name="DataPayments" Top="704.49" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true" DataSource="Payment">
+      <TextObject Name="Text5" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[Payment.Name]:" VertAlign="Center" Font="Tahoma, 9pt"/>
+      <TextObject Name="Text56" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" BeforePrintEvent="OnMoneyPrint" Text="[Payment.Amount]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" Font="Tahoma, 9pt"/>
+      <DataHeaderBand Name="TotalDataHeader" Top="670.25" Width="302.4" Height="30.24" Border.Lines="Bottom" Border.Style="Dash" CanGrow="true" CanShrink="true">
+        <TextObject Name="Text48" Width="151.2" Height="30.24" Dock="Left" CanGrow="true" CanShrink="true" Text="[Translation.Total]:" VertAlign="Center" Font="Tahoma, 11pt, style=Bold"/>
+        <TextObject Name="Text1" Left="151.2" Width="151.2" Height="30.24" Dock="Right" CanGrow="true" CanShrink="true" BeforePrintEvent="OnMoneyPrint" Text="[Document.Total]" Padding="2, 0, 1, 0" Format="Currency" Format.UseLocale="true" AutoWidth="true" HorzAlign="Right" VertAlign="Center" Font="Tahoma, 11pt, style=Bold"/>
+      </DataHeaderBand>
+      <DataFooterBand Name="PaidAndChangeFooter" Top="727.39" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true">
+        <TextObject Name="Text6" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[Translation.PaidAmount]:" VertAlign="Center" Font="Tahoma, 9pt"/>
+        <TextObject Name="Text57" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" BeforePrintEvent="OnMoneyPrint" Text="[TotalPaid]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" Font="Tahoma, 9pt"/>
+        <ChildBand Name="ChangeBand" Top="750.29" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true" BeforePrintEvent="OnChangeBandBeforePrint">
+          <TextObject Name="TextChange" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" BeforePrintEvent="OnMoneyPrint" Text="[[TotalPaid]-([Document.Total]-[TotalUnpaid])]" HorzAlign="Right" VertAlign="Center" Font="Tahoma, 9pt"/>
+          <TextObject Name="Text62" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[Translation.Change]:" VertAlign="Center" Font="Tahoma, 9pt"/>
+          <ChildBand Name="AmountDueBand" Top="773.19" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true" BeforeLayoutEvent="OnBeforeAmountDueBandLayout">
+            <TextObject Name="TextAmountDue" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" BeforePrintEvent="OnMoneyPrint" Text="[TotalUnpaid]" AutoWidth="true" HorzAlign="Right" Font="Tahoma, 9pt"/>
+            <TextObject Name="Text2" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[Translation.AmountDue]:" Font="Tahoma, 9pt"/>
+            <ChildBand Name="BarcodeChildBand" Top="796.09" Width="302.4" Height="62.37" CanGrow="true" CanShrink="true">
+              <BarcodeObject Name="Barcode1" Width="302.4" Height="62.37" Dock="Top" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Document.Number]" Padding="5, 10, 5, 5" AllowExpressions="true" Barcode="Code128" Barcode.AutoEncode="true"/>
+            </ChildBand>
+          </ChildBand>
+        </ChildBand>
+      </DataFooterBand>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="862.46" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true">
+      <TextObject Name="TextFooter" Width="302.4" Height="18.9" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Options.Footer]" Font="Tahoma, 9pt"/>
+    </ReportSummaryBand>
+  </ReportPage>
+</Report>

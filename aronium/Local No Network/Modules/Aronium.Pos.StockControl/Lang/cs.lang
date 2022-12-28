@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <StockControl>
+    <Product>
+      <Title Text="Kontrola skladu" />
+      <Supplier Text="Dodavatel">
+        <None Text="(žádný)" />
+        <Clear Text="vymazat" />
+      </Supplier>
+      <ReorderPoint Text="Bod znovuobjednání." />
+      <PreferredQuantity Text="Preferované množství" />
+      <LowStockWarning Text="Upozornění na nízké zásoby">
+        <WarningQuantity Text="pozornění na nízké skladové zásoby" />
+      </LowStockWarning>
+      <Reset Text="Obnovit do základního nastavení" />
+      <Info Text="Nastavte pravidla pro nízké množství zásob, která lze použít jako bod pro objednání zásob." />
+    </Product>
+    <Notification>
+      <Message Text="Některé produkty dosáhly bodu pro objednání.&#xA;Zvažte nákup následujících položek: {0}.">
+        <Title Text="Produkty dosahují nízkého skladového množství" />
+      </Message>
+    </Notification>
+    <Reports>
+      <Group Text="Kontrola skladu" />
+      <ReorderProductList Text="Změnit pořadí seznamu produktů">
+        <OrderQuantity Text="Množství objednávky." />
+      </ReorderProductList>
+      <LowStockWarning Text="Upozornění na nízké zásoby">
+        <QuantityOnHand Text="Množství na skladě" />
+        <PreferredQuantity Text="Preferované množství" />
+        <WarningQuantity Text="Varovné množství" />
+        <ReorderPoint Text="Bod znovuobjednání." />
+      </LowStockWarning>
+    </Reports>
+  </StockControl>
+</Language>

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="pt-br" name="Português do Brasil">
+  <Print>
+    <Labels>
+      <Documents>
+        <InventoryCount Text="Contagem de inventário">
+          <Counted Text="Contado" />
+          <CountedValue Text="Valor contado" />
+          <CreatedBy Text="Criado por" />
+          <DiffMinus Text="Dif -" />
+          <DiffPlus Text="Dif +" />
+          <Expected Text="Esperado" />
+          <Time Text="Tempo" />
+          <NegativeAmount Text="Valor -" />
+          <PositiveAmount Text="Valor +" />
+        </InventoryCount>
+        <Invoice Text="Fatura">
+          <AmountDue Text="Valor devido" />
+          <BankAccountNumber Text="Número de CC" />
+          <BankDetails Text="Detalhes bancários" />
+          <BillTo Text="Cobrança para" />
+          <InvoiceNumber Text="Fatura nº" />
+          <Item Text="Item" />
+          <ItemsCount Text="Contagem de itens" />
+          <PaidAmount Text="Quantidade paga" />
+          <PaymentMethod Text="Forma de pagamento" />
+          <PaymentStatus Text="Status do pagamento">
+            <Paid Text="Pago" />
+            <Unpaid Text="Não pago" />
+          </PaymentStatus>
+        </Invoice>
+        <LossAndDamage Text="Perda e dano" />
+        <ProformaInvoice Text="Proforma" />
+        <Purchase Text="Entrada de mercadorias" />
+        <Refund Text="Devolução">
+          <ReceiptNumber Text="Número do Recibo" />
+          <RefundNumber Text="Número da devolução" />
+        </Refund>
+        <StockReturn Text="Devolução de mercadorias" />
+      </Documents>
+      <General>
+        <CashRegister Text="Caixa registradora" />
+        <Code Text="Código" />
+        <Company Text="Companhia">
+          <Address Text="Endereço" />
+        </Company>
+        <Cost Text="Custo" />
+        <Customer Text="Cliente" />
+        <Date Text="Data" />
+        <Description Text="Descrição" />
+        <Discount Text="Desconto" />
+        <DiscountGranted Text="Desconto concedido" />
+        <Document Text="Documento" />
+        <DocumentNumber Text="Número do documento" />
+        <DueDate Text="Data de Vencimento" />
+        <Email Text="Email" />
+        <ExternalDocument Text="Documento externo" />
+        <Margin Text="Margem" />
+        <Name Text="Nome" />
+        <Numbering Text="#" />
+        <Page Text="Página" />
+        <Period Text="Período" />
+        <Phone Text="Telefone" />
+        <Product Text="Produto" />
+        <ProductGroup Text="Grupo de produtos" />
+        <ProductName Text="Nome do Produto" />
+        <Products Text="Produtos" />
+        <Profit Text="Lucro" />
+        <PurchaseNumber Text="Número de Compra" />
+        <TaxNumber Text="Imposto No." />
+        <Qty Text="Qtd." />
+        <Quantity Text="Quantidade" />
+        <Subtotal Text="Subtotal" />
+        <Supplier Text="Fornecedor" />
+        <Tax Text="Imposto" />
+        <TaxName Text="Nome do imposto" />
+        <Total Text="Total" />
+        <TotalAfterDiscount Text="Total após o desco." />
+        <TotalBeforeDiscount Text="Total antes do desco." />
+        <TotalBeforeTax Text="Total antes de impostos" />
+        <TotalDiscount Text="Desconto total" />
+        <TotalPaid Text="Total pago" />
+        <TotalUnpaid Text="Total unpaid" />
+        <UnitOfMeasurement Text="UDM" />
+        <UnitPrice Text="Preço unitário" />
+        <User Text="Usuário" />
+      </General>
+      <Reports>
+        <DailySales Text="Vendas diárias" />
+        <DiscountsGranted Text="Descontos concedidos">
+          <BeforeTax Text="(antes dos impostos)" />
+          <AfterTax Text="(depois dos impostos)" />
+          <NumberOfDiscounts Text="Número de pedidos com desconto" />
+          <TotalDiscounted Text="Total descontado" />
+        </DiscountsGranted>
+        <InventoryCount Text="Relatório de contagem de estoque" />
+        <Invoices Text="Faturas" />
+        <ItemsDiscounts Text="Descontos de itens" />
+        <LossAndDamageByProduct Text="Perda e dano por produto" />
+        <PaymentTypesByCustomer Text="Tipos de pagamento por clientes" />
+        <PaymentTypesByUser Text="Tipos de pagamento por usuários" />
+        <ProfitAndMargin Text="Lucro" />
+        <PurcahsedItemsDiscounts Text="Descontos em itens comprados" />
+        <PurchaseByProduct Text="Compra por produto" />
+        <PurchaseBySupplier Text="Compra por fornecedor" />
+        <PurchaseDiscounts Text="Descontos de compra" />
+        <PurchaseInvoices Text="Faturas de compra" />
+        <Refunds Text="Devoluções" />
+        <SalesByCustomer Text="Vendas por cliente" />
+        <SalesByPaymentType Text="Vendas por tipo de pagamento" />
+        <SalesByProduct Text="Vendas por produto" />
+        <SalesByProductGroups Text="Vendas por grupos de produtos" />
+        <SalesByUser Text="Vendas por usuários" />
+        <StartingCashEntries Text="Aberturas de caixa">
+          <ZReport Text="Relatório Z" />
+          <Open Text="Abrir" />
+        </StartingCashEntries>
+        <Stock Text="Relatório de estoque">
+          <CostIncludingTax Text="Custo c/ imposto" />
+          <History Text="Histórico do estoque">
+            <CustomerOrSupplier Text="Cliente / Fornecedor" />
+            <DocumentNumber Text="Doc. número" />
+            <DocumentType Text="Doc. tipo" />
+            <QuantityOnHand Text="Qtd. disp." />
+            <StockDate Text="Data de Estoque" />
+            <CostPrice Text="Preço de custo" />
+          </History>
+          <CostPrice Text="Preço de custo" />
+          <CostBeforeTax Text="Custo s/ imposto" />
+        </Stock>
+        <StockMovement Text="Movimento de estoque">
+          <AverageNumberOfSalesPerItem Text="Número médio de vendas por item" />
+          <FastMoving Text="Giro rápido" />
+          <SlowMoving Text="Giro lento" />
+          <NonMoving Text="Sem giro" />
+          <NumberOfSales Text="N. de vendas" />
+          <TotalNumberOfSales Text="Número total de vendas" />
+        </StockMovement>
+        <Taxes Text="IMPOSTO" />
+        <UnpaidPurchases Text="Compra não paga" />
+        <UnpaidSales Text="Vendas não pagas" />
+      </Reports>
+    </Labels>
+  </Print>
+</Language>

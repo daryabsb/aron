@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Users Text="بەکارهێنەران و پاراستن">
+    <View Text="بەکارهێنەران">
+      <Disabled Text="ئەو بەکارهێنەرانەی لەکاردانین پیشانبدە" />
+    </View>
+    <New Text="بەکارهێنەری نوێ" />
+    <ResetPassword Text="گۆڕینی وشەی نهێنی">
+      <Success Text="وشەی نهێنی بە سەرکەوتووی گۆڕا" />
+    </ResetPassword>
+    <LearnMore Text="زانیاری زیاتر وەربگرە لەسەر بەڕێوەبردنی بەکار‌هێنەران" />
+    <User>
+      <FirstName Text="ناوی یەکەم" />
+      <LastName Text="نازناو" />
+      <Email Text="ئیمەیڵ" />
+      <Password Text="وشەی نهێنی" />
+      <PasswordConfirmation Text="دڵنیاکردنەوەی وشەی نهێنی" />
+      <AccessLevel Text="ئاستی ڕێگەپێدان" />
+      <IsEnabled Text="لەکاردایە" />
+      <Error>
+        <PasswordConfirmationMatch Text="وشەی نهێنی و وشەی نهێنیی دڵنیایی دەبێت هەمانشتبن" />
+        <InvalidPassword Text="بەکارهێنەرێک بە هەمان وشەی نهێنی بوونی هەیە\nوشەی نهێنیێکی شاز بنووسە و دووبارە هەوڵبدەرەوە" />
+        <Disable>
+          <OpenOrders Text="لەکارخستنی بەکارهێنەر ڕێگری لێئەکات فرۆشە کراوەکان دابخات\nتکایە هەموو داواکاریە کراوەکانئ ئەم بەکارهێنەرە دابخە پێش لەکارخستنی">
+            <Title Text="لە توانادا نەبوو بەکارهێنەری خاوەن فرۆشت کراوە لەکاربخرێت" />
+          </OpenOrders>
+        </Disable>
+        <DuplicateEmail Text="ئەم ئیمەیڵە بەکارهاتووە\nتکایە ئیمەیڵێکی جیاواز بەکاربێنە" />
+      </Error>
+      <Saved Text="زانیاریەکانی بەکارهێنەرەکە بە سەرکەوتووی گۆڕا" />
+    </User>
+    <Delete Text="سڕینەوەی بەکارهێنەر">
+      <Confirmation Text="دڵنیایت دەتەوێت &quot;{0}&quot; بسڕیتەوە؟" />
+      <Error>
+        <CurrentUser Text="ناتوانیت خۆت بسڕیتەوە" />
+        <DataViolation Text="نەتوانرا بەکارهێنەرەکە بسڕێتەوە\nبەکارهێنەرەکە تۆمار و شتی لەو بابەتە لەخۆیدەگرێت" />
+      </Error>
+    </Delete>
+    <Security Text="پاراستن">
+      <Title Text="ئاستی ڕێگەپێدان دیاریبکە بۆ ئەم کردارە دیاریکراوانە" />
+      <Description Text="ئاستی ڕێگەپێدان دیاریبکە بۆ هەر کردارێک بۆئەوەی بەکارهێنەری پێویست ڕێگەپێدانی هەبێت" />
+      <LearnMore Text="زانیاری زیاتر وەربگرە لەسەر ئاستی ڕێگەپێدان و پاراستن" />
+      <MaximumAccessLevelWarning Text="ئاستی ڕێگەپێدانی دیاریکراو بەرزترە کە ئاستی ڕێگەپێدانی هەموو بەکارهێنەرەکان" />
+      <Save>
+        <Success Text="ئاستەکانی پاراستن بە سەرکەوتووی خەزنکرا" />
+        <AccessLevelViolation Text="سەرپێچی ئاستی ڕێگەپێدان">
+          <Info Text="ئاستی ڕێگەپێدان نابێت لە بەرزترین ئاستی بەکارهێنەر زیاتربێت\nتکایە هەڵەکان چاکبکەرەوە و دووبارە هەوڵبدەرەوە" />
+        </AccessLevelViolation>
+      </Save>
+      <Group>
+        <General Text="گشتی" />
+        <Sales Text="فرۆشەکان" />
+      </Group>
+    </Security>
+  </Users>
+</Language>

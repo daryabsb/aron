@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="de" name="Deutsch">
+  <CustomerDisplay>
+    <Total Text="Gesamt:" />
+    <Change Text="Wechselgeld:" />
+    <Paid Text="Bezahlt:" />
+    <WelcomeMessage Text="WILLKOMMEN!" />
+    <Settings Text="Kundenanzeige">
+      <Enabled Text="Aktiviert" />
+      <Port Text="COM-Port">
+        <Settings>
+          <BaudRate Text="Bits per second" />
+          <DataBits Text="Data bits" />
+          <StopBits Text="Stop bits" />
+          <Parity Text="Parity" />
+          <FlowControl Text="Flow control" />
+          <Show Text="Port-Einstellungen anzeigen" />
+          <Hide Text="Port-Einstellungen ausblenden" />
+          <ResetToDefaults Text="Standardwerte wiederherstellen" />
+        </Settings>
+      </Port>
+      <CharactersPerLine Text="Zeichenanzahl" />
+      <WelcomeMessage Text="Willkommensnachricht">
+        <TopLine Text="Obere Zeile" />
+        <BottomLine Text="Untere Zeile" />
+      </WelcomeMessage>
+      <Test Text="Anzeige testen" />
+    </Settings>
+    <Error>
+      <InvalidPortSettings Text="Fehler beim Initialisieren des Kundendisplays.&#xA;Bitte überprüfen Sie die Anschlusseinstellungen." />
+    </Error>
+  </CustomerDisplay>
+</Language>

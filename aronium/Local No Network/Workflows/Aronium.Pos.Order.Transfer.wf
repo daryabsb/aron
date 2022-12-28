@@ -1,0 +1,104 @@
+<Workflow>
+  <Name>Aronium.Pos.Order.Transfer</Name>
+  <Action>None</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="e9fe64f8-060c-4271-82d8-26d90134177e" name="Start">
+      <Transitions>
+        <DefaultTransition id="3febd3d0-745b-4340-9c16-c1d567dd3b1a" name="Details">
+          <Target>321fa0c1-d772-4894-ac7b-7c8b3dd016c1</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="321fa0c1-d772-4894-ac7b-7c8b3dd016c1" name="Transfer details">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="b18a6909-b71f-4637-bf92-8daf99e85a1b" name="Completed">
+          <Target>e7e75a66-2829-4fa7-8647-a4355363022f</Target>
+        </DefaultTransition>
+        <ErrorTransition id="4e62d5a4-15d5-4ceb-95bd-73470e2cb9d6" name="Cancel">
+          <Target>f8c5755d-2a72-48c8-a476-26a62f06c527</Target>
+        </ErrorTransition>
+        <DefaultTransition id="ccc11eb8-7f87-4c0f-b9c4-c282c70fd3ec" name="Order">
+          <Target>515b02e6-781e-4238-97ed-6bb4854694f1</Target>
+        </DefaultTransition>
+        <DefaultTransition id="918a7907-dd4c-48c2-8c7e-a6684cdfaef7" name="User">
+          <Target>58227db8-527c-48f2-9586-3ee5df1371db</Target>
+        </DefaultTransition>
+        <DefaultTransition id="dbbc2d94-7479-4105-802e-f9b33b4a7b52" name="Rounds">
+          <Target>793f2b70-4ac1-46f0-8ad2-d3572d1336de</Target>
+        </DefaultTransition>
+        <DefaultTransition id="fa981464-a277-45cf-b14d-1792382d6944" name="Transfer all">
+          <Target>c5b719c0-0531-461f-8c30-11a547055d11</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Transfer/Default.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="515b02e6-781e-4238-97ed-6bb4854694f1" name="Select order">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="289ef5d1-ce5c-47cd-be2d-4fd2c125ba3c" name="Order selected">
+          <Target>321fa0c1-d772-4894-ac7b-7c8b3dd016c1</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Transfer/SelectOrder.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="58227db8-527c-48f2-9586-3ee5df1371db" name="Select user">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="5c958f3f-ce2a-4c98-827b-90533e390dc0" name="Done">
+          <Target>321fa0c1-d772-4894-ac7b-7c8b3dd016c1</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/AuthenticateUser.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <AbortTask id="f8c5755d-2a72-48c8-a476-26a62f06c527" name="Abort" />
+    <EndTask id="66575831-a6f1-4b34-985b-44638aae0328" name="End" />
+    <ExternalTask id="793f2b70-4ac1-46f0-8ad2-d3572d1336de" name="Select rourds">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.AroniumViewTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="361d03e0-b0c0-45a3-b6ff-640ed891a94c" name="Completed">
+          <Target>321fa0c1-d772-4894-ac7b-7c8b3dd016c1</Target>
+        </DefaultTransition>
+      </Transitions>
+      <Variables>
+        <Variable name="Uri">/Aronium.Pos.Presentation;component/Views/Transfer/SelectOrderRounds.xaml</Variable>
+      </Variables>
+    </ExternalTask>
+    <ExternalTask id="e7e75a66-2829-4fa7-8647-a4355363022f" name="Transfer">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Transfer.TransferOrder</ClassName>
+      <Transitions>
+        <DefaultTransition id="ba596b06-948a-41c3-8b3b-d6a288135914" name="End">
+          <Target>66575831-a6f1-4b34-985b-44638aae0328</Target>
+        </DefaultTransition>
+        <ErrorTransition id="c541d6bd-3fec-48f5-946d-64ba97ad01f9" name="Error">
+          <Target>f8c5755d-2a72-48c8-a476-26a62f06c527</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="c5b719c0-0531-461f-8c30-11a547055d11" name="Transfer All">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Transfer.TransferOrdersTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="362939b6-9972-4774-86a1-26ec249a037b" name="End">
+          <Target>66575831-a6f1-4b34-985b-44638aae0328</Target>
+        </DefaultTransition>
+        <ErrorTransition id="6c3215f8-515f-44c4-8124-24550d4c6496" name="Error">
+          <Target>f8c5755d-2a72-48c8-a476-26a62f06c527</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+  </Tasks>
+</Workflow>

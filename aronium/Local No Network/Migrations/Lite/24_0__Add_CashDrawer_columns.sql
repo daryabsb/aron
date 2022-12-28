@@ -1,0 +1,4 @@
+ALTER TABLE PosPrinterSettings ADD COLUMN OpenCashDrawer INT (1) NOT NULL DEFAULT 1;
+ALTER TABLE PosPrinterSettings ADD COLUMN CashDrawerCommand TEXT;
+
+ALTER TABLE PaymentType ADD COLUMN OpenCashDrawer INT (1) NOT NULL DEFAULT 1;

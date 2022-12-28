@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language code="pt" name="Português">
+  <Management Text="Administração">
+    <Dashboard Text="Painel de controle">
+      <NoData Text="Sem dados para exibir" />
+      <MonthlySales Text="Vendas mensais">
+        <Description Text="Dados de vendas agrupados por mês" />
+        <Month Text="Moês" />
+        <Legend Text="Legenda" />
+        <CurrentYear Text="Ano actual" />
+        <TotalSales Text="Vendas Totais">
+          <TopMonth Text="Mês de maior rendimento:" />
+        </TotalSales>
+        <Year Text="Ano">
+          <Previous Text="Ano anterior" />
+          <Next Text="Próximo ano" />
+        </Year>
+      </MonthlySales>
+      <HourlySales Text="Vendas por hora">
+        <Description Text="Dados de vendas agrupados por horas" />
+        <Hour Text="Hora" />
+        <Options>
+          <Amount Text="Valor" />
+          <Count Text="Contagem" />
+        </Options>
+      </HourlySales>
+      <TopProducts Text="Produtos de Topo">
+        <Product Text="Produto" />
+        <Total Text="Total" />
+      </TopProducts>
+      <TopProductGroups Text="Grupos de Produtos de Topo">
+        <Description Text="Grupos de produtos mais vendidos num período seleccionado" />
+        <Group Text="Grupo de produto" />
+      </TopProductGroups>
+      <TopCustomers Text="Clientes de Topo">
+        <Description Text="Clientes principais no período seleccionado (top 5)" />
+      </TopCustomers>
+      <PeriodicReports Text="Relatórios Periódicos">
+        <SelectPeriod Text="Seleccione período do relatório" />
+      </PeriodicReports>
+    </Dashboard>
+    <Products Text="Produtos">
+      <Loading Text="A carregar produtos..." />
+      <LearnMore Text="Obtenha mais informações sobre produtos" />
+      <Taxes Text="Taxas de Impostos">
+        <LearnMore Text="Obtenha mais informações sobre taxas de impostos"/>
+        <New Text="Nova taxa de imposto" />
+        <Edit>
+          <Title Text="Editar imposto &quot;{0}&quot;" />
+        </Edit>
+        <Delete>
+          <Title Text="Eliminar taxa de imposto" />
+          <Confirmation Text="Tem a certeza que deseja eliminar a taxa de imposto &quot;{0}&quot;?" />
+          <Error Text="Ocorreu um erro ao tentar eliminar a taxa de imposto. Certifique-se que a taxa de imposto não está em uso e tenta novamente." />
+        </Delete>
+        <Tax>
+          <Code Text="Código" />
+          <Name Text="Nome" />
+          <Rate Text="Taxa" />
+        </Tax>
+        <Onboarding>
+          <Title Text="Taxas de imposto" />
+          <Info Text="Introduza as taxas de imposto usadas para as definições de produtos, se existe algum.\nDeve existir pelo menos uma taxa de imposto no sistema." />
+          <AddMore Text="Gravar &amp; adicionar mais">
+            <Error Text="Ocorreu um erro ao adicionar taxa de imposto. Verifique os seus dados e tente novamente" />
+            <Name Text="Nome do imposto (e.g. &quot;Isento&quot;)" />
+          </AddMore>
+          <Existing Text="Taxas de impostos existentes">
+            <NoItems Text="Não forma definidas taxas de impostos. Adicionar pelo menos uma taxa de imposto para que possa adicionar novos produtos.">
+              <AddDefault Text="Adicionar taxa de imposto padrão" />
+            </NoItems>
+          </Existing>
+        </Onboarding>
+      </Taxes>
+      <New Text="Novo produto">
+        <Product Text="Adicionar novo produto" />
+        <Or Text="ou" />
+        <Group Text="novo grupo de produtos" />
+      </New>
+      <Delete Text="Eliminar produto" />
+      <Edit Text="Editar produto" />
+      <Search Text="Pesquisar produtos">
+        <Result Text="Resultado" />
+        <Empty Text="Sem resultados" />
+      </Search>
+      <Groups Text="Grupos de produtos">
+        <Root Text="Produtos" />
+        <Empty Text="Grupo seleccionado não contém produtos">
+          <Info Text="Adicionar produto ao grupo seleccionado" />
+        </Empty>
+      </Groups>
+      <Group>
+        <New Text="Novo grupo" />
+        <Edit Text="Editar grupo">
+          <Title Text="Editar grupo &quot;{0}&quot;" />
+          <Error>
+            <InvalidParentGroup Text="Grupo mãe inválido" />
+          </Error>
+        </Edit>
+        <Name Text="Nome" />
+        <Color Text="Cor" />
+        <Delete Text="Eliminar grupo">
+          <Title Text="Eliminar grupo de produtos" />
+          <Confirmation Text="Tem a certeza que deseja eliminar o grupo &quot;{0}&quot;?" />
+          <Error Text="Ocorreu um erro ao tentar eliminar o grupo.\nMensagem de Sistema: {0}">
+            <DataViolation Text="Grupo seleccionado não pode ser eliminado.\n\nCertifique-se que o produto filho não existe em documentos, promoções ou quais quer vendas e tente novamente." />
+          </Error>
+        </Delete>
+        <Saved Text="Grupo gravado com sucesso" />
+      </Group>
+      <Product>
+        <Edit Text="Editar produto &quot;{0}&quot;" />
+        <Details Text="Detalhes do produto" />
+        <Name Text="Nome" />
+        <Code Text="Código" />
+        <Barcode Text="Código de Barras" />
+        <MeasurementUnit Text="Unidade de medida" />
+        <Taxes Text="Imposto" />
+        <SalePrice Text="Preço de venda" />
+        <IsTaxIncluded Text="Preço inclui Imposto" />
+        <Group Text="Grupo" />
+        <IsEnabled Text="Activo" />
+        <IsService Text="Serviço (não está a usar stock)" />
+        <IsDiscountAllowed Text="Desconto permitido" />
+        <IsPriceChangeAllowed Text="Alteração de preço permitido" />
+        <IsUsingDefaultQuantity Text="Quantidade padrão" />
+        <Description Text="Descrição" />
+        <Prices Text="Preço &amp; imposto" />
+        <Cost Text="Custo" />
+        <Markup Text="Markup" />
+        <ImageAndColor Text="Imagem &amp; cor">
+          <Image Text="Imagem">
+            <Browse Text="Pesquisar">
+              <Info Text="Seleccionar imagem do produto a partir do seu computador" />
+            </Browse>
+            <Clear Text="Limpar">
+              <Info Text="Remover a imagem do produto" />
+            </Clear>
+          </Image>
+          <Color Text="Cor" />
+        </ImageAndColor>
+        <DateCreated Text="Criado" />
+        <DateUpdated Text="Actualizado" />
+        <Saved>
+          <Created Text="Produto criado com sucesso" />
+          <Updated Text="Produto alterado com sucesso" />
+        </Saved>
+        <Delete Text="Eliminar produto">
+          <Confirmation Text="Tem a certeza que deseja eliminar o produto &quot;{0}&quot;?" />
+          <Error Text="Ocorreu um erro ao tentar eliminar o produto.\nMensagem de Sistema: {0}" />
+          <DataViolation Text="Não foi possível eliminar o produto.\nCertifique-se que o produto não existe em documentos e tente novamente." />
+        </Delete>
+        <Error>
+          <Code Text="Produto com código especificado (&quot;{0}&quot;) já existe.\nIntroduza um código de produto único e tente novamente." />
+          <Barcode Text="Produto com código de barras especificado (&quot;{0}&quot;) já existe.\nIntroduza código de barras único e tente novamente." />
+        </Error>
+      </Product>
+      <Export Text="Exportar">
+        <NoServices Text="Serviços de exporação indisponíveis." />
+        <Success Text="Exportação concluída com sucesso." />
+        <Error Text="Ocorreu um erro. Por favor tente novamente." />
+        <Select Text="Seleccione o tipo de exportação" />
+      </Export>
+      <Onboarding>
+        <Import Text="Importar produtos através de um ficheiro CSV">
+          <SelectFile Text="Seleccionar ficheiro">
+            <Description Text="Seleccionar o ficheiro CSV que contém os seus produtos." />
+          </SelectFile>
+          <Validate Text="Validar">
+            <Description Text="Validar conteúdos CSV e produtos para importação." />
+            <Error Text="Erro ao validar ficheiro CSV. Verificar os seus dados e tentar novamente." />
+            <Success Text="Produtos estão prontos para importação. Total de produtos: {0}" />
+          </Validate>
+          <ImportProducts Text="Importar">
+            <Description Text="Clique para importar produtos a partir do ficheiro CSV seleccionado." />
+          </ImportProducts>
+          <NoItems Text="Nada a importar" />
+          <Completed Text="Importação concluída com sucesso!">
+            <Result>
+              <Created Text="Artigos criados:" />
+              <Updated Text="Artigos actualizados:" />
+              <DocumentNumber Text="Documento criado:" />
+            </Result>
+            <Restart Text="Reiniciar importação" />
+          </Completed>
+          <Importing Text="A importar produtos... Por favor aguarde..." />
+        </Import>
+      </Onboarding>
+      <Count Text="Total de produtos:" />
+      <ChangeGroup Text="Produto &quot;{0}&quot; transferido para &quot;{1}&quot;" />
+      <Guide>
+        <Title Text="Abrir produtos" />
+        <Content Text="Clique aqui para abrir a secção dos produtos e adicionar alguns produtos à sua loja" />
+        <Add>
+          <Title Text="Adicionar um produto" />
+          <Content Text="Clique no botão &quot;Novo produto&quot; para começar a adicionar novos produtos" />
+          <Name>
+            <Title Text="Nome do produto" />
+            <Content Text="Adicionar nome e detalhes do produto usados para venda" />
+          </Name>
+          <Prices>
+            <Title Text="Preço do produto" />
+            <Content Text="Clique para definir o preço do produto" />
+            <SalePrice>
+              <Title Text="Preço de venda" />
+              <Content Text="Definir preço de venda do produto para que apareça no ecrã de vendas" />
+            </SalePrice>
+          </Prices>
+          <Save>
+            <Title Text="Gravar alterações" />
+            <Content Text="Clique no botão &quot;Gravar&quot; para gravar as suas alterações e adicionar um novo produto" />
+          </Save>
+        </Add>
+      </Guide>
+      <Settings Text="Produtos">
+        <Title Text="Configurações de produtos"/>
+        <PriceIncludesTax Text="Preço inclui imposto">
+          <Tooltip Text="Se seleccionado, novos produtos terão preço com impostos marcados por defeito" />
+        </PriceIncludesTax>
+        <DefaultTax Text="Taxa de imposto padrão" />
+        <MarkupOption Text="Preço de custo baseado em marcação">
+          <Tooltip Text="Se seleccionado, ao alterar o preço de custo o valor de marcação será actualizado em vez do preço de venda" />
+        </MarkupOption>
+      </Settings>
+      <Import Text="Importação">
+        <LearnMore Text="Obtenha mais informações sobre importação de ficheiros CSV" />
+        <Basic Text="Básica">
+          <Description Text="Pode usar esta importação básica seguindo as nossas orientações para criar ficheiros CSV no">
+            <Link Text="nosso centro de apoio" />
+            <Formatting Text="Se estiver a usar um ficheiro CSV preparado, por favor certifique-se de ler">
+              <Link Text="o tutorial de formatação de ficheiros CSV" />
+            </Formatting>
+            <Exported Text="Também, poderá usar esta importação básica para importar produtos previamente exportados usando a funcionalidade de exportação do software Aronium." />
+          </Description>
+        </Basic>
+        <Csv Text="Avançado">
+          <Description Text="Use importação avançada para fazer upload de produtos usando um ficheiro CSV customizado or um ficheiro CSV exportado de um outro aplicativo.\nPoderá ler mais sobre importação avançada no">
+            <Link Text="nosso centro de apoio" />
+          </Description>
+          <SelectFile Text="Seleccionar ficheiro" />
+          <Fields>
+            <Name Text="Nome" />
+            <ProductGroup Text="Grupo de produto" />
+            <SKU Text="SKU" />
+            <Barcode Text="Código de barras" />
+            <MeasurementUnit Text="Unidade de medida" />
+            <Cost Text="Custo" />
+            <Markup Text="Taxa de Marcação" />
+            <Price Text="Preço" />
+            <Tax Text="Imposto" />
+            <IsTaxInclusivePrice Text="Preço com imposto incluído" />
+            <IsPriceChangeAllowed Text="Permitido alterar preço" />
+            <IsUsingDefaultQuantity Text="Usar quantidade padrão" />
+            <IsService Text="Serviço (sem usar stock)" />
+            <IsEnabled Text="Habilitado" />
+            <Description Text="Descrição" />
+            <Quantity Text="Quantidade" />
+            <Clear Text="Limpar valor" />
+          </Fields>
+          <RequiredField Text="Indica campo obrigatório" />
+          <Import Text="Importar" />
+          <Preview Text="Prever">
+            <ProductsCount Text="Número de produtos a importar:" />
+          </Preview>
+          <Error>
+            <RequiredFields Text="Campos obrigatórios estão em falta. Por favor, seleccione todos os campos obrigatórios antes de importar." />
+            <InvalidContent Text="Erro ao analisar ficheiro CSV. Por favor verifique os seus conteúdos e tente novamente.\nMensagem de erro: {0}" />
+            <InvalidField Text="Entrada inválida para o campo &quot;{0}&quot;. Por favor, verifique o conteúdo do ficheiro e tente novamente." />
+            <FileNotSelected Text="Ficheiro CSV não está seleccionado. Por favor seleccione um ficheiro para continuar." />
+            <DuplicateSKU Text="Foram encontrados códigos de produtos duplicados. Nome do produto: &quot;{0}&quot;. Código duplicado: &quot;{1}&quot;" />
+            <DuplicateName Text="Foi detectado um nome de produto duplicado. Nome de produto: &quot;{0}&quot;." />
+          </Error>
+        </Csv>
+      </Import>
+      <PriceTags Text="Etiquetas de preços">
+        <Loading Text="A carregar modelo de etiquetas de preços... Por favor aguarde..." />
+        <Layout Text="Layout">
+          <Columns Text="Colunas" />
+          <RowHeight Text="Altura da linha" />
+        </Layout>
+        <Display Text="Display">
+          <Barcode Text="Código de barras">
+            <Type Text="Tipo de código de barras" />
+          </Barcode>
+          <Code Text="Código (SKU)" />
+        </Display>
+        <Products Text="Produtos">
+          <All Text="Todos os produtos" />
+          <Product Text="Produto" />
+          <NumberOfCopies Text="Número de cópias" />
+        </Products>
+      </PriceTags>
+    </Products>
+    <Customers Text="Clientes &amp; Fornecedores">
+      <Search Text="Pesquisar clientes &amp; fornecedores" />
+      <LearnMore Text="Obtenha mais informações sobre clientes e fornecedores" />
+      <New Text="Novo cliente / fornecedor" />
+      <Delete Text="Eliminar">
+        <Confirmation Text="Tem a certeza que deseja eliminar &quot;{0}&quot;?" />
+        <Error Text="Erro ao eliminar cliente. O cliente não pode ser eliminado.\nMensagem de Sistema: {0}" />
+      </Delete>
+      <Customer>
+        <Edit Text="Editar &quot;{0}&quot;" />
+        <General Text="Gera">
+          <Title Text="Informação Geral" />
+          <Code Text="Código" />
+          <Name Text="Nome" />
+          <Address Text="Endereço" />
+          <PostalCode Text="Código Postal" />
+          <City Text="Cidade" />
+          <Country Text="País" />
+          <TaxNumber Text="NIF" />
+          <RabatePercent Text="Desconto" />
+          <Email Text="Email" />
+          <PhoneNumber Text="Telefone" />
+          <IsEnabled Text="Activo" />
+          <IsCustomer Text="Cliente" />
+          <IsSupplier Text="Fornecedor" />
+        </General>
+        <Loyalty>
+          <Discounts Text="Descontos">
+            <Title Text="Definir descontos de cliente para produtos ou grupos de produtos" />
+            <Info Text="Definir desconto para artigos seleccionados" />
+            <NoItems Text="Sem descontos" />
+            <Existing Text="Desconto para &quot;{0}&quot; já existe." />
+            <Clear Text="Limpar todos os descontos" />
+          </Discounts>
+          <Cards Text="Cartões de lealdade">
+            <Title Text="Introduza cartões de lealdade de cliente" />
+            <CardNumber Text="Nº do Cartão" />
+            <Add Text="Adicionar cartão" />
+            <Duplicate Text="Cartão de lealdade já existe" />
+          </Cards>
+        </Loyalty>
+        <Saved>
+          <Created Text="Novo cliente criado com sucesso." />
+          <Updated Text="Cliente alterado com sucesso." />
+        </Saved>
+        <Existing Text="Cliente existente">
+          <Warning Text="Já existe um cliente semelhante: &quot;{0}&quot;.\nCampos duplicados: {1}.\n\nDeseja gravar este cliente na mesma?" />
+        </Existing>
+        <PaymentTerms Text="Termos de pagamento">
+          <DueDatePeriod Text="Perído de Expiração">
+            <Info Text="Utilizar o período de expiração para definir o prazo de pagamento em número de dias para cada venda por pagar atribuídas a este cliente" />
+            <Days Text="dias" />
+          </DueDatePeriod>
+        </PaymentTerms>
+      </Customer>
+      <Guide>
+        <Title Text="Clientes e fornecedores" />
+        <Content Text="Clique para abrir a secção dos clientes e fornecedores" />
+        <Add>
+          <Title Text="Adicionar cliente ou fornecedor" />
+          <Content Text="Clique aqui para criar um novo cliente ou fornecedor" />
+          <Name>
+            <Title Text="Inserir nome" />
+            <Content Text="Inserir nome do cliente ou fornecedor" />
+          </Name>
+          <Save>
+            <Title Text="Gravar alterações" />
+            <Content Text="Assim que tiver inserido os dados, clique no botão &quot;Gravar&quot; para gravar as alterações" />
+          </Save>
+        </Add>
+      </Guide>
+      <Import Text="Importar">
+        <Title Text="Importar clientes" />
+        <Description Text="Utilize a importação de clientes para fazer upload da lista de clientes usando o seu ficheiro CSV customizado ou um CSV exportado de um outro aplicativo.\nPoderá ler mais sobre importação de clientes no">
+          <Link Text="nosso centro de apoio" />
+        </Description>
+        <Fields>
+          <Name Text="Nome" />
+          <Code Text="Código" />
+          <TaxNumber Text="NIF" />
+          <Address Text="Endereço" />
+          <ZIP Text="Código Postal" />
+          <City Text="Cidade" />
+          <Country Text="País" />
+          <Email Text="Email" />
+          <Phone Text="Telefone" />
+          <IsEnabled Text="Habilitado" />
+          <IsCustomer Text="Cliente" />
+          <Clear Text="Limpar valor" />
+        </Fields>
+        <Import Text="Importar" />
+        <Preview Text="Prever" />
+        <RequiredField Text="Indica campo obrigatório" />
+        <Importing Text="A importar clientes... Por favor aguarde..." />
+        <Error>
+          <RequiredFields Text="Campos obrigatórios estão em falta. Por favor, seleccione todos os campos obrigatórios antes de importar." />
+          <InvalidContent Text="Erro ao analisar o ficheiro CSV. Por favor verifique os conteúdos do ficheiro e tente novamente: {0}" />
+          <InvalidField Text="Entrada inválida para o campo &quot;{0}&quot;. Por favor, verifique os conteúdos do ficheiro e tente novamente." />
+          <FileNotSelected Text="Ficheiro CSV não está seleccionado. Por favor seleccione um ficheiro para continuar." />
+          <DuplicateName Text="Foi detectado um nome de cliente duplicado. Nome do cliente: &quot;{0}&quot;." />
+        </Error>
+        <Completed Text="Clientes importados com sucesso!" />
+      </Import>
+      <Export Text="Exportar">
+        <Completed Text="Clientes exportados com sucesso!\nNome do ficheiro: &quot;{0}&quot;" />
+      </Export>
+    </Customers>
+    <PaymentTypes Text="Tipos de Pagamento">
+      <LearnMore Text="Obtenha mais informações sobre tipos de pagamento" />
+      <New Text="Novo tipo de pagamento" />
+      <Edit Text="Editar tipo de pagamento &quot;{0}&quot;" />
+      <Delete Text="Eliminar tipo de pagamento">
+        <Confirmation Text="Tem a certeza que deseja eliminar &quot;{0}&quot;?" />
+        <Error Text="Erro ao eliminar o tipo de pagamento. Tipo de pagamento não pode ser eliminado.\nMensagem de Sistema: {0}" />
+        <DataViolation Text="Não foi possível eliminar o tipo de pagamento seleccionado. Verifique que o tipo de pagamento não está a ser usado em documentos e tente novamente." />
+      </Delete>
+      <PaymentType>
+        <Name Text="Nome" />
+        <Code Text="Código" />
+        <IsCustomerRequired Text="Cliente é obrigatório" />
+        <IsFiscal Text="Imprimir recibo" />
+        <IsChangeAllowed Text="Alterações é permitido" />
+        <Ordinal Text="Posição" />
+        <IsEnabled Text="Habilitado" />
+        <IsQuickPayment Text="Pagamento rápido" />
+        <OpenCashDrawer Text="Abrir gaveta de dinheiro" />
+        <ShortcutKey Text="Tecla de atalho" />
+        <MarkAsPaid Text="Marcar transação como paga" />
+        <Saved>
+          <Created Text="Tipo de pagamento criado com sucesso." />
+          <Updated Text="Tipo de pagamento modificado com sucesso." />
+        </Saved>
+        <Error Text="erro">
+          <ExistingShortcutKey Text="Tecla de atalho especificada já foi atribuída a um tipo de pagamento &quot;{0}&quot;.\nTeclas de atalho devem ser únicas.\n\nPor favor especifique uma tecla de atalho diferente e tente novamente.">
+            <Title Text="Foi detectada uma tecla de atalho duplicada" />
+          </ExistingShortcutKey>
+        </Error>
+      </PaymentType>
+      <Onboarding>
+        <Title Text="Tipos de pagamento" />
+        <Info Text="Insira tipos de pagamento usados para vendas na sua loja." />
+        <AddMore Text="Gravar &amp; e adicionar mais">
+          <Error Text="Ocorreu um erro ao adicionar novo tipo de pagamento.\nVerifique a sua entrada e tente novamente" />
+        </AddMore>
+        <Existing Text="Tipos de pagamento existentes" />
+      </Onboarding>
+    </PaymentTypes>
+    <Documents Text="Documentos">
+      <View Text="Ver documentos" />
+      <Search Text="Pesquisar documentos">
+        <Customer Text="Cliente">
+          <All Text="Todos os clientes" />
+        </Customer>
+        <Product Text="Produto">
+          <All Text="Todos os produtos" />
+        </Product>
+        <Period Text="Período">
+          <Tip Text="Clique para seleccionar período de pesquisa" />
+        </Period>
+        <DocumentType Text="Tipo de documento">
+          <All Text="Todos os tipos de documento" />
+        </DocumentType>
+        <User Text="Utilizador">
+          <All Text="Todos os utilizadores" />
+        </User>
+        <PaidStatus Text="Estado de pagamento">
+          <None Text="Todas as transacções" />
+          <Paid Text="Pago" />
+          <Unpaid Text="Não pago" />
+        </PaidStatus>
+        <DocumentNumber Text="Documento Nº" />
+        <ReferenceDocumentNumber Text="Documento externo" />
+        <Clear Text="Limpar todos os filtros" />
+      </Search>
+      <Document>
+        <Save>
+          <Saved Text="Documento gravado com sucesso" />
+          <Error Text="Erro ao gravar documento. As alterações não foram gravadas.\nMensagem de Sistema: {0}">
+            <InvalidPayments Text="Valor pago inválido">
+              <Info Text="O valor pago deve ser igual ao total do documento. Por favor, corrija os tipos de pagamento e tente novamente.\n\nTotal do Documento: {0}. Valor pagamentos: {1}." />
+            </InvalidPayments>
+          </Error>
+        </Save>
+        <UnsavedChanges Text="Alterações não gravadas">
+          <Confirmation Text="Documento &quot;{0}&quot; contém alterações que não foram gravadas.\n\nDeseja gravar o documento antes de fechar?" />
+        </UnsavedChanges>
+        <StockDate Text="Seleccione a data de alteração de stock">
+          <Description Text="Altere a data quando a alteração de stock foi registada por este documento" />
+          <Invalid Text="Data de stock inválida">
+            <Description Text="Acção seleccionada não é permitida.\n\nInventário total existente não foi encontrado. Documento &quot;{0}&quot; criado em {1}.\n\nVerifique a data de stock do documento e tente novamente." />
+            <Message Text="Data de stock seleccionada não é permitida.\nInventário total {0} criado em {1}" />
+            <InvalidTime Text="Hora do inventário não pode ser no futuro" />
+          </Invalid>
+        </StockDate>
+        <Note Text="Nota" />
+        <InternalNote Text="Nota interna" />
+        <PaidStatus>
+          <Changed Text="Estado de pagamento modificado com sucesso" />
+        </PaidStatus>
+      </Document>
+      <New>
+        <SelectDocumentType Text="Seleccionar tipo de documento" />
+      </New>
+      <NoDocument Text="Documento solicitado não existe." />
+      <Inventory>
+        <Date Text="Seleccionar a data de inventário">
+          <Description Text="Insira a data quando a listagem de inventário foi criada." />
+        </Date>
+        <Document>
+          <Item>
+            <Expected Text="Esperado" />
+            <Counted Text="Contado" />
+            <ChangeQuantity Text="Alterar quantidade" />
+          </Item>
+          <ExistingItem Text="Artigo seleccionado já foi adicionado a este documento." />
+          <Service Text="A tentar adicionar serviço à contagem do inventário">
+            <Info Text="Artigo seleccionado &quot;{0}&quot; está marcado como serviço. Tem a certeza que deseja adicionar o serviço para a contagem do inventário?" />
+          </Service>
+          <AddGroup Text="Adicionar artigos de grupo ao documento">
+            <Confirmation Text="Tem a certeza que deseja todos os produtos do grupo &quot;{0}&quot; à contagem do inventário?" />
+          </AddGroup>
+        </Document>
+      </Inventory>
+      <Guide>
+        <Title Text="Abrir documentos" />
+        <Content Text="Clique aqui para abrir a secção de documentos e adicionar a sua primeira compra" />
+        <Add>
+          <Title Text="Criar documento" />
+          <Content Text="Clique aqui para criar uma nova compra e aumentar o stock dos" />
+          <Customer>
+            <Title Text="Seleccionar o cliente" />
+            <Content Text="Seleccione o cliente para este documento" />
+          </Customer>
+          <Supplier>
+            <Title Text="Seleccione o fornecedor" />
+            <Content Text="Seleccionar o fornecedor para este documento" />
+          </Supplier>
+          <Product>
+            <Title Text="Seleccione o produto" />
+            <Content Text="Faça duplo clique no produto que deseja adicionar ao documento" />
+          </Product>
+          <Item>
+            <Quantity>
+              <Title Text="Insira a quantidade" />
+              <Content Text="Insira a quantidade comprada. Esta quantidade será aumentada no stock" />
+            </Quantity>
+            <Price>
+              <Title Text="Preço" />
+              <Content Text="Insira o preço do produto" />
+            </Price>
+            <Save>
+              <Title Text="Gravar alterações" />
+              <Content Text="Clique no botão &quot;Gravar&quot; para gravar as alterações e adicionar este artigo ao documento" />
+            </Save>
+          </Item>
+          <Save>
+            <Title Text="Gravar documento" />
+            <Content Text="Clique no botão &quot;Gravar&quot; para gravar o documento" />
+          </Save>
+        </Add>
+      </Guide>
+    </Documents>
+    <Countries Text="Países">
+      <New Text="Novo país" />
+      <Delete>
+        <Title Text="Eliminar país" />
+        <Confirmation Text="Tem a certeza que deseja eliminar o país &quot;{0}&quot;?" />
+      </Delete>
+      <Country>
+        <Edit Text="Editar País &quot;{0}&quot;" />
+        <Name Text="Nome" />
+        <Code Text="Código" />
+        <Saved>
+          <Created Text="País criado com sucesso" />
+          <Updated Text="País foi editado com sucesso" />
+        </Saved>
+      </Country>
+    </Countries>
+    <Company Text="Minha Empresa">
+      <LearnMore Text="Obtenha mais informações sobre os detalhes da empresa" />
+      <Details Text="Os dados da minha empresa">
+        <Title Text="Dados da empresa" />
+        <Logo Text="Logo">
+          <Add Text="Pesquisar" />
+          <Remove Text="Limpar" />
+        </Logo>
+        <BankAccount Text="Conta bancária">
+          <Number Text="Nº conta bancária" />
+          <BankDetails Text="Dados do banco" />
+        </BankAccount>
+      </Details>
+      <Saved Text="Dados da empresa gravados com sucesso" />
+      <Onboarding>
+        <Title Text="Detalhes da empresa" />
+        <Info Text="Insira os dados da sua empresa. Detalhes da empresa são usados nos recibos e facturas" />
+      </Onboarding>
+      <Reset Text="Fazer reset à base de dados">
+        <AdminPassword Text="Insira a palavra passe do administrador" />
+        <Backup>
+          <Info Text="Backup da base de dados será executada antes de se fazer o reset.\nPoderá alterar o destino padrão de backup usando os campos abaixo." />
+          <Path Text="Caminho de backup da base de dados">
+            <Select Text="Seleccione o destino onde a backp da base de dados será gravado antes do reset ser executado." />
+          </Path>
+          <Completed Text="Backup da base de dados concluído" />
+        </Backup>
+        <PerformReset Text="Fazer reset à base de dados">
+          <Confirmation Text="Tem a certeza que deseja fazer reset à base de dados e limpar todos os dados?">
+            <Title Text="Reset da base de dados em execução" />
+          </Confirmation>
+        </PerformReset>
+        <Completed Text="Reset da base de dados concluído com sucesso. O software Aronium irá reiniciar." />
+      </Reset>
+    </Company>
+    <Guide>
+      <Title Text="Administração" />
+      <Content Text="Clique aqui para abrir a secção administrativa e adicionar produtos e clientes" />
+    </Guide>
+    <Authorization>
+      <Title Text="Por favor insira a password para aceder à secção administrativa" />
+    </Authorization>
+  </Management>
+</Language>

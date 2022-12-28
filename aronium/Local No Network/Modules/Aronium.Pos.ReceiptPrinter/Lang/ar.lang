@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ar" name="Arabic">
+  <FiscalPrinter>
+    <CloseFiscalDay Text="طباعة التقارير النھایة">
+      <PrinterDisabled Text="الطابعة معطلة أو غير محددة. لا يمكن طباعة التقارير۔" />
+      <ItemsReport Text="تقرير طباعة المنتجات">
+        <InProgress Text="بطباعة تقرير المنتجات ... الرجاء الانتظار ۔۔۔" />
+      </ItemsReport>
+      <SubReport Text="X طباعة تقریر">
+        <InProgress Text="۔۔۔ یرجی الانتظار ۔۔۔ X طباعة تقریر" />
+      </SubReport>
+      <DailyReport Text="Print Z report">
+        <InProgress Text="۔۔۔ یرجی الانتظار ۔۔۔ Z طباعة تقریر" />
+      </DailyReport>
+      <Info Text="الرجاء تحديد التقارير للطباعة. تأكد من توفر الطابعة وتشغيلها۔" />
+    </CloseFiscalDay>
+    <Check Text="جارٍ تحميل طابعة الفاتورة ۔۔۔">
+      <Status Text="فحص حالة الطابعة" />
+    </Check>
+  </FiscalPrinter>
+  <ReceiptPrinter Text="طابعة الفاتورة">
+    <CashDrawer Text="درج النقد">
+      <Test Text="فحص الدرج">
+        <InvalidCommand Text="الرجاء إدخال أمر درج النقود صالح لاختبار۔" />
+      </Test>
+      <Error>
+        <PrinterNotSet Text="لا يتم تعيين طابعة الفاتورة۔\nيرجى تهيئة طابعة الفاتورة للمتابعة۔" />
+        <CommandNotSet Text="لا يتم تعيين أمر درج النقد۔\nيرجى ضبط الأمر درج النقد للمتابعة۔" />
+      </Error>
+      <Command Text="أمر درج النقد">
+        <LearnMore Text="ما هذا؟" />
+      </Command>
+      <OpenCashDrawer Text="فتح درج النقد">
+        <AuthorizationRequired Text="درج النقود المفتوحة يتطلب تصريحا۔\nيرجى إدخال كلمة المرور المطلوبة لفتح درج النقود۔" />
+      </OpenCashDrawer>
+    </CashDrawer>
+    <PrintReceipt Text="اطبع الفاتورة" />
+    <DailyReport>
+      <Items Text="تقرير المنتجات">
+        <Groups Text="مجموعات المنتجات" />
+        <Products Text="المنتجات" />
+        <ReportNumber Text="تقرير #:" />
+      </Items>
+      <TotalBalance Text="اجمالي الرصيد: " />
+      <Total Text="اجمالي : " />
+      <Tax Text="ضريبة : " />
+      <TaxableTotal Text="اجمالي الخاضع للضريبة : " />
+      <TaxCollected Text="الضريبة المحصلة : " />
+      <Refunds Text="الاسترجاع : ">
+        <Total Text="اجمالي المبلغ الاسترجاع : " />
+      </Refunds>
+      <PaymentTypes Text="نوع طریق الدفع : ">
+        <Total Text="الاجمالی المدفوعة : " />
+      </PaymentTypes>
+      <UserSales Text="مبيعات المستخدم : " />
+      <CashOut Text="النقد خارج : " />
+      <CashIn Text="النقد داخل : " />
+      <ToDocument Text="الى توثيق : " />
+      <FromDocument Text="من توثيق : " />
+      <ReportNumber Text="تقرير #:" />
+      <Time Text="الوقت : " />
+      <Date Text="التاریخ : " />
+      <XReport Text="تقریر X" />
+      <ZReport Text="تقریر Z" />
+    </DailyReport>
+    <Receipt>
+      <PrinterNotFound Text="الطابعة معطلة أو غير محددة. لا يمكن طباعة التقارير۔ یرجی الفحص۔" />
+      <PaymentTypes>
+        <PrintDisabled Text="تم تعطيل الطباعة الفاتورة لأنواع الدفع المحددة۔\nيرجى تمكين طباعة الفاتورة لانواع الدفع المحددة قبل طباعة الفاتورة۔" />
+      </PaymentTypes>
+      <Company>
+        <TaxNumber Text="رقم الضريبة" />
+      </Company>
+      <Customer Text="العميل">
+        <Address Text="العنوان" />
+        <TaxNumber Text="رقم الضريبة" />
+        <Code Text="رمز" />
+        <PhoneNumber Text="رقم تیلیفون" />
+        <Email Text="البريد الالكتروني" />
+      </Customer>
+      <Number Text="رقم الفاتورة۔" />
+      <RefundNumber Text="رقم الاسترجاع۔" />
+      <OrderNumber Text="رقم الطلب" />
+      <ItemsCount Text="عدد المنتجات" />
+      <Subtotal Text="الاجمالي الفرعي" />
+      <Tax Text="ضريبة" />
+      <Discount Text="خصم العربة" />
+      <Total Text="اجمالي" />
+      <PaidAmount Text="المبلغ المدفوع" />
+      <AmountDue Text="المبلغ المستحق" />
+      <DueDate Text="تاريخ الاستحقاق" />
+      <User Text="المستخدم" />
+      <Change Text="تغيير" />
+      <Customize Text="تخصيص الفاتورة">
+        <CustomerDetails Text="تفاصيل العميل">
+          <Email Text="البريد الالكتروني" />
+          <PhoneNumber Text="رقم الهاتف" />
+          <Address Text="عنوان" />
+          <TaxNumber Text="الرقم الضريبي" />
+          <Code Text="رمز" />
+          <Name Text="الاسم" />
+          <Info Text="اختر ما هي تفاصيل العميل المطبوعة في الفاتورة" />
+        </CustomerDetails>
+        <Localize Text="تعريب النص الفاتورة">
+          <Change Text="تغيير" />
+          <User Text="المستخدم" />
+          <DueDate Text="تاريخ الاستحقاق" />
+          <AmountDue Text="المبلغ المستحق" />
+          <PaidAmount Text="المبلغ المدفوع" />
+          <Total Text="اجمالي" />
+          <Tax Text="نسبة الضريبة" />
+          <Subtotal Text="الاجمالي الفرعي" />
+          <Discount Text="خصم" />
+          <ItemsCount Text="عدد المنتجات" />
+          <OrderNumber Text="رقم الطلب" />
+          <RefundNumber Text="رقم الاسترجاع" />
+          <ReceiptNumber Text="رقم الفاتورة" />
+          <Customer Text="العميل">
+            <Email Text="بريد الالكتروني" />
+            <PhoneNumber Text="رقم الهاتف" />
+            <Code Text="رمز" />
+            <TaxNumber Text="الرقم الضريبي" />
+            <Address Text="العنوان" />
+          </Customer>
+          <CustomerDetails Text="تفاصيل العميل">
+            <Info Text="اختيار كيفية طباعة تفاصيل العملاء في اافاتورة۔\nيتعلق هذا القسم بالتسميات فقط ، وليس بتفاصيل العميل الفعلية المطبوعة على الفاتورة۔" />
+          </CustomerDetails>
+          <Company>
+            <TaxNumber Text="رقم الضريبة للشركة" />
+          </Company>
+          <Info Text="استخدم هذا النموذج لترجمة أو تعديل التسميات المطبوعة على الفاتورة۔" />
+        </Localize>
+        <Counter Text="عداد الفاتورة">
+          <Edit Text="اضغط لتعديل عداد رقم الفاتورة" />
+        </Counter>
+        <ShortReceiptNumber Text="رقم الفاتورة القصير" />
+        <PrintOrderNumber Text="طباعة رقم طلب" />
+        <PrintItemsCount Text="طباعة عدد المنتجات" />
+        <PrintTaxes Text="طباعة الاجمالی الضریبة" />
+        <NumberOfDecimalPlaces Text="منازل عشرية" />
+        <UseSystemCurrency Text="استخدام تنسيق العملة النظام" />
+      </Customize>
+    </Receipt>
+  </ReceiptPrinter>
+</Language>

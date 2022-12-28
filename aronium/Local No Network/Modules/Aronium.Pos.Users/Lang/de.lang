@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="de" name="Deutsch">
+  <Users Text="Benutzer &amp; Sicherheit">
+    <View Text="Benutzer">
+      <Disabled Text="Inaktive Benutzer anzeigen" />
+    </View>
+    <New Text="Benutzer hinzufügen" />
+    <ResetPassword Text="Passwort zurücksetzen">
+      <Success Text="Passwort erfolgreich geändert" />
+    </ResetPassword>
+    <LearnMore Text="Mehr erfahren über die Benutzerverwaltung" />
+    <User>
+      <FirstName Text="Vorname" />
+      <LastName Text="Nachname" />
+      <Email Text="E-Mail" />
+      <Password Text="Passwort" />
+      <PasswordConfirmation Text="Passwort bestätigen" />
+      <AccessLevel Text="Zugriffsebene" />
+      <IsEnabled Text="Aktiv" />
+      <Error>
+        <PasswordConfirmationMatch Text="Passwort und Passwortbestätigung müssen übereinstimmen." />
+        <InvalidPassword Text="Benutzer mit demselben Passwort existiert bereits.\nBitte geben Sie ein eindeutiges Passwort ein und versuchen Sie es erneut." />
+        <Disable>
+          <OpenOrders Text="Die Deaktivierung des Benutzers verhindert, dass er offene Verkäufe schließt.\nSchließen Sie alle offenen Bestellungen, die diesem Benutzer gehören, bevor Sie ihn deaktivieren.">
+            <Title Text="Der Benutzer kann nicht mit offenen Verkäufen deaktiviert werden" />
+          </OpenOrders>
+        </Disable>
+        <DuplicateEmail Text="Diese E-Mail ist schon vergeben.\nBitte verwenden Sie eine andere E-Mail-Adresse." />
+      </Error>
+      <Saved Text="Benutzerdetails wurden erfolgreich geändert." />
+    </User>
+    <Delete Text="Benutzer löschen">
+      <Confirmation Text="Möchten Sie &quot;{0}&quot; wirklich löschen?" />
+      <Error>
+        <CurrentUser Text="Sie können sich nicht selbst löschen!" />
+        <DataViolation Text="Benutzer konnte nicht gelöscht werden.\nBenutzer enthält Dokumente oder andere verwandte Elemente." />
+      </Error>
+    </Delete>
+    <Security Text="Sicherheit">
+      <Title Text="Zugriffsebene für vordefinierte Vorgänge festlegen" />
+      <Description Text="Wählen Sie die Zugriffsebene für jede Aktion aus, um die erforderlichen Benutzerberechtigungen festzulegen." />
+      <LearnMore Text="Mehr erfahren über Zugriffsebenen und Sicherheit" />
+      <MaximumAccessLevelWarning Text="Zugriffsebene liegt über dem höchsten Wert, der einem Benutzer zugewiesen ist." />
+      <Save>
+        <Success Text="Zugriffsebenen wurden erfolgreich gespeichert" />
+        <AccessLevelViolation Text="Zugriffsebenenverletzung">
+          <Info Text="Zugriffsebenen können auf einen maximalen Wert gesetzt werden, der jedem Benutzer zugewiesen ist. Andernfalls können Sie möglicherweise nicht auf den eingeschränkten Bereich zugreifen.\nBitte korrigieren Sie die Einstellungen und versuchen es erneut." />
+        </AccessLevelViolation>
+      </Save>
+      <Group>
+        <General Text="Allgemein" />
+        <Sales Text="Verkauf" />
+      </Group>
+    </Security>
+  </Users>
+</Language>

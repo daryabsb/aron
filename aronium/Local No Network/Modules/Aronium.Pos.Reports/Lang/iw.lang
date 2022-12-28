@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="iw" name="Hebrew">
+  <Reports Text="דוחות">
+    <Filter Text="סינון">
+      <User Text="משתמש">
+        <All Text="כל המשתמשים" />
+      </User>
+      <Customer Text="לקוחות וספקים">
+        <All Text="כל הלקוחות והספקים" />
+      </Customer>
+      <Product Text="מוצר">
+        <All Text="כל המוצרים" />
+      </Product>
+      <CashRegister Text="קופה">
+        <All Text="כל הקופות" />
+      </CashRegister>
+      <Period>
+        <Tip Text="לחץ\י כדי לשנות את תקופת הדוח" />
+      </Period>
+      <NotAvailable Text="לא רלוונטי לדוח שנבחר" />
+    </Filter>
+    <Report>
+      <Select Text="בחר\י דוח">
+        <Title Text="בחר דוח כדי להציג או להדפיס" />
+      </Select>
+      <Show Text="הצג דוח" />
+      <NotFound Text="תבנית הדוח חסרה" />
+    </Report>
+    <Sales Text="מכירות">
+      <Products Text="מוצרים" />
+      <ProductGroups Text="קבוצת מוצרים" />
+      <PaymentTypes Text="סוג תשלום" />
+      <PaymentTypesUsers Text="סוגי תשלום לפי משתמשים" />
+      <PaymentTypesCustomers Text="סוגי תשלום לפי לקוחות" />
+      <TaxRates Text="גובה מס" />
+      <Customers Text="לקוחות" />
+      <Users Text="משתמשים" />
+      <Refunds Text="זיכויים" />
+      <InvoiceList Text="רשימת חשבוניות" />
+      <Profit Text="רווחים" />
+      <Daily Text="מכירות יומיות" />
+      <Unpaid Text="מכירות שלא שולמו" />
+      <StartingCash Text="תנועות מזומנים בקופה" />
+      <Discounts Text="הנחות שניתנו" />
+      <ItemDiscounts Text="הנחות פריטים" />
+      <StockMovement Text="תנועות מלאי" />
+    </Sales>
+    <Purchase Text="רכישה">
+      <Suppliers Text="ספקים" />
+      <Products Text="מוצרים" />
+      <Unpaid Text="רכישות שלא שולנו" />
+      <Discounts Text="הנחות על רכישות" />
+      <ItemDiscounts Text="הנחות על פריטים שנרכשו" />
+    </Purchase>
+    <LossAndDamage Text="אובדן ונזק">
+      <Products Text="מוצרים" />
+    </LossAndDamage>
+  </Reports>
+</Language>

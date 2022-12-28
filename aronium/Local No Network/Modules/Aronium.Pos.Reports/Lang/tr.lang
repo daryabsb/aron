@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="tr" name="Türkçe">
+  <Reports Text="Raporlama">
+    <Filter Text="Filtre">
+      <User Text="Kullanıcı">
+        <All Text="Tüm kullanıcılar"></All>
+      </User>
+      <Customer Text="Müşteriler ve tedarikçiler">
+        <All Text="Tüm müşteriler ve tedarikçiler"></All>
+      </Customer>
+      <Product Text="Ürün">
+        <All Text="Tüm ürünler"></All>
+      </Product>
+      <Period>
+        <Tip Text="Rapor periyodunu değiştirmek için tıklayın"></Tip>
+      </Period>
+      <NotAvailable Text="Seçili rapor için uygulanamaz"></NotAvailable>
+      <CashRegister Text="Yazar kasa">
+        <All Text="Tüm yazar kasalar" />
+      </CashRegister>
+    </Filter>
+    <Report>
+      <Select Text="Rapor seçin">
+        <Title Text="Görüntülemek veya yazdırmak için rapor seç"></Title>
+      </Select>
+      <Show Text="Raporu göster"></Show>
+      <NotFound Text="Rapor şablonu eksik."></NotFound>
+    </Report>
+    <Sales Text="Satış">
+      <Products Text="Ürünler"></Products>
+      <ProductGroups Text="Ürün grupları"></ProductGroups>
+      <PaymentTypes Text="Ödeme türleri"></PaymentTypes>
+      <PaymentTypesUsers Text="Kullanıcının ödeme şekilleri"></PaymentTypesUsers>
+      <PaymentTypesCustomers Text="Müşterinin ödeme şekilleri"></PaymentTypesCustomers>
+      <TaxRates Text="Vergi oranları"></TaxRates>
+      <Customers Text="Müşteriler"></Customers>
+      <Users Text="Kullanıcılar"></Users>
+      <Refunds Text="İadeler"></Refunds>
+      <InvoiceList Text="Fatura listesi"></InvoiceList>
+      <Profit Text="Kâr ve marj"></Profit>
+      <Daily Text="Günlük satışlar"></Daily>
+      <Unpaid Text="Ödenmemiş satışlar"></Unpaid>
+      <StartingCash Text="Para girişleri"></StartingCash>
+      <Discounts Text="Verilen indirimler"></Discounts>
+      <ItemDiscounts Text="Ürün iskontoları"></ItemDiscounts>
+      <StockMovement Text="Stok hareketleri"></StockMovement>
+    </Sales>
+    <Purchase Text="Satınalma">
+      <Suppliers Text="Tedarikçiler"></Suppliers>
+      <Products Text="Ürünler"></Products>
+      <Unpaid Text="Ödenmemiş satın alma"></Unpaid>
+      <Discounts Text="İndirim satın al"></Discounts>
+      <ItemDiscounts Text="Satın alınan ürünlerin indirimleri"></ItemDiscounts>
+      <PurchaseInvoiceList Text="Satın alma fatura listesi" />
+    </Purchase>
+    <LossAndDamage Text="Zarar ve hasar">
+      <Products Text="Ürünler"></Products>
+    </LossAndDamage>
+  </Reports>
+</Language>

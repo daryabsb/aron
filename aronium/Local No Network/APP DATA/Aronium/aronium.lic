@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-16"?>
+<License>
+  <Data>
+    <Id>74dcec2d-6985-461f-a8d7-6dc94c996778</Id>
+    <StoreId>df464e06-cf0f-41af-9e7a-cebe60d51c03</StoreId>
+    <ActivationKey>231169A1F941B00AA3E087E707348D295508F4E15E3D1C9E4A5F0F4F7E1C4A40</ActivationKey>
+    <LicensedTo>Fig Quality Technology</LicensedTo>
+    <Email>daryabsb@gmail.com</Email>
+    <Products>
+      <Product>
+        <Id>33f7ccfe-5259-4b68-b1eb-a5d37f4df8e0</Id>
+        <Name>My logo</Name>
+        <LicenseType>Trial</LicenseType>
+        <ProductId>ef2613bc-efa0-4ff9-924e-06a67e825937</ProductId>
+        <ValidUntil>2022-09-05T00:00:00</ValidUntil>
+      </Product>
+      <Product>
+        <Id>9c098667-b361-487a-8d7a-74e4a159116f</Id>
+        <Name>Email reporting</Name>
+        <LicenseType>Trial</LicenseType>
+        <ProductId>70a98501-3718-404c-bd41-8134389d83ba</ProductId>
+        <ValidUntil>2022-09-05T00:00:00</ValidUntil>
+      </Product>
+      <Product>
+        <Id>b83fc87d-3920-471c-bd54-eaaefb1da089</Id>
+        <Name>Networking</Name>
+        <LicenseType>Trial</LicenseType>
+        <ProductId>0f090852-bb69-4855-9009-ec7e941537c3</ProductId>
+        <ValidUntil>2022-10-04T00:00:00</ValidUntil>
+      </Product>
+      <Product>
+        <Id>49b5cfc3-7584-4a99-bd13-8cc2f1ba8b56</Id>
+        <Name>Print stations</Name>
+        <LicenseType>Trial</LicenseType>
+        <ProductId>7d4ec33a-2744-4763-b09c-f7228537710c</ProductId>
+        <ValidUntil>2022-09-05T00:00:00</ValidUntil>
+      </Product>
+    </Products>
+  </Data>
+  <Signature>W89Vobh8zMKAU1MvnUMU32fDAvL0ORjrHz4ugT4GEBYfOOjmBfC8j7LQRohsmAil4g28hTomrbZ0bmPo0wzIHOuXOvA//uIYMXAIo70wd47ms1rpFQULIk33gfSIQ2LrflHVo2Tr2tC83pCk9iIARgCKSF2ysP5nu3Tf32MswPk=</Signature>
+</License>

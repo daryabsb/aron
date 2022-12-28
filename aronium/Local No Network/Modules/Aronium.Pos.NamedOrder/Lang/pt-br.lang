@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="pt-br" name="Português do Brasil">
+  <FloorPlans>
+    <Options>
+      <View>
+        <Orders>
+          <Order>
+            <Number Text="Pedido / Nome do cliente" />
+          </Order>
+        </Orders>
+      </View>
+    </Options>
+  </FloorPlans>
+  <Order>
+    <Name Text="Nome do pedido">
+      <Title Text="Pedido ou nome do cliente" />
+      <Info Text="Insira o nome ou número do pedido" />
+      <Validation>
+        <Duplicate Text="Já existe um pedido com o mesmo nome. Digite um nome diferente para continuar." />
+        <Empty Text="O nome ou número do pedido não pode ficar vazio para pedidos existentes." />
+        <Required Text="O nome ou número do pedido não pode ficar vazio." />
+      </Validation>
+      <Settings>
+        <Enabled Text="Ativar nome de pedido personalizado" />
+        <Required Text="Nome do pedido obrigatório" />
+        <RequestOrderName Text="Solicitar nome do pedido automaticamente" />
+      </Settings>
+    </Name>
+  </Order>
+</Language>

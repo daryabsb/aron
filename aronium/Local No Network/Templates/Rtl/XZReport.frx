@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" StartReportEvent="_StartReport" ReportInfo.Created="12/09/2017 12:08:33" ReportInfo.Modified="10/14/2021 15:46:57" ReportInfo.CreatorVersion="2018.4.0.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;  
+namespace FastReport
+{
+  public class ReportScript
+  {
+    private void _StartReport(object sender, EventArgs e)
+    {     
+      Picture1.Visible = Report.GetColumnValue(&quot;Company.Logo&quot;) != null;
+      
+      ChildCashOut.Visible = ChildStartingCash.Visible  = TotalBalanceSummary.Visible 
+        = Convert.ToDouble(Report.GetColumnValue(&quot;CashIn.CashIn&quot;)) != 0 || Convert.ToDouble(Report.GetColumnValue(&quot;CashIn.CashOut&quot;)) != 0;
+      
+      ChildReportNumber.Visible = ((Boolean)Report.GetColumnValue(&quot;Data.IsZReport&quot;));
+    }
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <SQLiteDataConnection Name="Connection" ConnectionString="rijcmlqIltkgxALMArhJ2W63qXqy9mHFxj3jszzPRFpX1ii4uTuch5qPIB4cGrB4iECYGs+zdGXqlEPX4zFY4oZokjGzFC/++UQ0S7HrISGyaXTcf5E+5NqXFsZKIG8Q3TIDhei">
+      <TableDataSource Name="Company" DataType="System.Int32" Enabled="true" TableName="Company">
+        <Column Name="Id" DataType="System.Int64"/>
+        <Column Name="Name" DataType="System.String"/>
+        <Column Name="Address" DataType="System.String"/>
+        <Column Name="PostalCode" DataType="System.String"/>
+        <Column Name="City" DataType="System.String"/>
+        <Column Name="CountryId" DataType="System.Int64"/>
+        <Column Name="TaxNumber" DataType="System.String"/>
+        <Column Name="Email" DataType="System.String"/>
+        <Column Name="PhoneNumber" DataType="System.String"/>
+        <Column Name="Logo" DataType="System.Byte[]" BindableControl="Picture"/>
+        <Column Name="BankAccountNumber" DataType="System.String"/>
+        <Column Name="BankDetails" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Table" Alias="Sales" DataType="System.Int32" Enabled="true" SelectCommand="SELECT  U.Id as UserId, &#13;&#10;        U.FirstName, &#13;&#10;        U.LastName,  &#13;&#10;        PT.Id AS PaymentTypeId,&#13;&#10;        PT.Name AS PaymentTypeName, &#13;&#10;        SUM(CASE WHEN DT.StockDirection=1 THEN -P.Amount ELSE P.Amount END) AS Total&#13;&#10;        FROM    User U &#13;&#10;        INNER JOIN Document D ON D.UserId = U.Id&#13;&#10;        INNER JOIN DocumentType DT ON D.DocumentTypeId = DT.Id&#13;&#10;        INNER JOIN Payment P ON P.DocumentId = D.Id&#13;&#10;        INNER JOIN PaymentType PT ON PT.Id = P.PaymentTypeId&#13;&#10;WHERE   DT.DocumentCategoryId = 2 AND D.Id &gt; (SELECT MAX(IFNULL(ToDocumentId,0)) FROM ZReport) &#13;&#10;        GROUP   BY U.Id, U.FirstName, U.LastName, PT.Name, DT.StockDirection &#13;&#10;ORDER   BY DT.StockDirection DESC   ">
+        <Column Name="FirstName" DataType="System.String"/>
+        <Column Name="LastName" DataType="System.String"/>
+        <Column Name="Total" DataType="System.Object"/>
+        <Column Name="UserId" DataType="System.Int64"/>
+        <Column Name="PaymentTypeId" DataType="System.Int64"/>
+        <Column Name="PaymentTypeName" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Table1" Alias="ReportDocuments" DataType="System.Int32" Enabled="true" SelectCommand="SELECT  SUBSTR(MIN(D.Number),8) AS FromDocument,&#13;&#10;        SUBSTR(MAX(D.Number),8) AS ToDocument,&#13;&#10;        MIN(Date) AS BusinessDay&#13;&#10;FROM    Document D &#13;&#10;        INNER JOIN DocumentType DT ON DT.Id = D.DocumentTypeId &#13;&#10;WHERE   DT.DocumentCategoryId = 2 &#13;&#10;        AND DT.StockDirection = 2 &#13;&#10;        AND D.Id &gt; (SELECT MAX(IFNULL(ToDocumentId,0)) FROM ZReport)">
+        <Column Name="FromDocument" DataType="System.String"/>
+        <Column Name="ToDocument" DataType="System.String"/>
+        <Column Name="BusinessDay" DataType="System.DateTime"/>
+      </TableDataSource>
+      <TableDataSource Name="Table3" Alias="CashIn" DataType="System.Int32" Enabled="true" SelectCommand="SELECT  SUM(CASE WHEN StartingCashType = 0 THEN Amount ELSE 0 END) AS CashIn,&#13;&#10;        SUM(CASE WHEN StartingCashType = 1 THEN -Amount ELSE 0 END) AS CashOut&#13;&#10;FROM    StartingCash WHERE ZReportNumber IS NULL">
+        <Column Name="CashIn" DataType="System.Object"/>
+        <Column Name="CashOut" DataType="System.Object"/>
+      </TableDataSource>
+      <TableDataSource Name="Table2" Alias="ZReportNumber" DataType="System.Int32" Enabled="true" SelectCommand="SELECT MAX(Number) + 1 AS Number FROM ZReport">
+        <Column Name="Number" DataType="System.Object"/>
+      </TableDataSource>
+      <TableDataSource Name="Table4" Alias="DocumensCount" DataType="System.Int32" Enabled="true" SelectCommand="SELECT  SUM(CASE WHEN DT.StockDirection = 2 THEN 1 ELSE 0 END) AS NumberOfSales,&#13;&#10;        SUM(CASE WHEN DT.StockDirection = 1 THEN 1 ELSE 0 END) AS NumberOfRefunds&#13;&#10;FROM    Document D &#13;&#10;        INNER JOIN DocumentType DT ON DT.Id = D.DocumentTypeId &#13;&#10;WHERE   DT.DocumentCategoryId = 2 &#13;&#10;        AND D.Id &gt; (SELECT MAX(IFNULL(ToDocumentId,0)) FROM ZReport)">
+        <Column Name="NumberOfSales" DataType="System.Object"/>
+        <Column Name="NumberOfRefunds" DataType="System.Object"/>
+      </TableDataSource>
+      <TableDataSource Name="Table5" Alias="Discounts" DataType="System.Int32" Enabled="true" SelectCommand="SELECT IFNULL(SUM(TotalDiscount),0.00) AS TotalDiscount FROM &#13;&#10;(&#13;&#10;    SELECT CASE WHEN DT.StockDirection=1 THEN ROUND(-1,2) ELSE ROUND(1,2) END * &#13;&#10;        CASE WHEN D.DiscountType = 0 THEN&#13;&#10;	CASE WHEN D.Discount = 100 THEN &#13;&#10;	(&#13;&#10;	    SELECT  SUM(DI.Price * DI.Quantity) - (SELECT COALESCE(SUM(Amount),0) AS Amount FROM DocumentItemTax WHERE DocumentItemId = DI.Id)&#13;&#10;	                  FROM DocumentItem DI&#13;&#10;		  WHERE DI.DocumentId = D.Id&#13;&#10;	)&#13;&#10;                ELSE (D.Total / ((ROUND(100,2) - D.Discount) / ROUND(100,2))) - D.Total END &#13;&#10;        ELSE D.Discount END AS TotalDiscount            &#13;&#10;    FROM Document D INNER JOIN DocumentType DT ON DT.Id = D.DocumentTypeId &#13;&#10;    WHERE DT.DocumentCategoryId = 2 AND D.Id &gt; (SELECT MAX(IFNULL(ToDocumentId,0)) FROM ZReport) AND D.Discount &gt; 0&#13;&#10;    UNION ALL&#13;&#10;    SELECT CASE WHEN DT.StockDirection=1 THEN ROUND(-1,2) ELSE ROUND(1,2) END *&#13;&#10;        CASE WHEN DI.DiscountType = 0 THEN &#13;&#10;           CASE WHEN DI.Discount = 100 THEN &#13;&#10;	(DI.Price * DI.Quantity) - (SELECT COALESCE(SUM(Amount),0) AS Amount FROM DocumentItemTax WHERE DocumentItemId = DI.Id) &#13;&#10;           ELSE (DI.Total / ((ROUND(100,2) - DI.Discount) / ROUND(100,2))) - DI.Total END&#13;&#10;        ELSE &#13;&#10;            DI.Discount END AS TotalDiscount &#13;&#10;    FROM DocumentItem DI INNER JOIN Document D ON D.Id = DI.DocumentId INNER JOIN DocumentType DT ON DT.Id = D.DocumentTypeId &#13;&#10;    WHERE DT.DocumentCategoryId = 2 AND D.Id &gt; (SELECT MAX(IFNULL(ToDocumentId,0)) FROM ZReport) AND DI.Discount &gt; 0&#13;&#10;)">
+        <Column Name="TotalDiscount" DataType="null"/>
+      </TableDataSource>
+    </SQLiteDataConnection>
+    <TableDataSource Name="Translation" ReferenceName="ZReport.Translation" DataType="System.Int32" Enabled="true" TableName="Translation">
+      <Column Name="Title" DataType="System.String"/>
+      <Column Name="Date" DataType="System.String"/>
+      <Column Name="Time" DataType="System.String"/>
+      <Column Name="ReportNumber" DataType="System.String"/>
+      <Column Name="FromDocument" DataType="System.String"/>
+      <Column Name="ToDocument" DataType="System.String"/>
+      <Column Name="CashIn" DataType="System.String"/>
+      <Column Name="CashOut" DataType="System.String"/>
+      <Column Name="UserSales" DataType="System.String"/>
+      <Column Name="PaymentTypes" DataType="System.String"/>
+      <Column Name="PaymentTypesTotal" DataType="System.String"/>
+      <Column Name="Refunds" DataType="System.String"/>
+      <Column Name="RefundsTotal" DataType="System.String"/>
+      <Column Name="TaxCollected" DataType="System.String"/>
+      <Column Name="TaxableTotal" DataType="System.String"/>
+      <Column Name="Tax" DataType="System.String"/>
+      <Column Name="Total" DataType="System.String"/>
+      <Column Name="TotalBalance" DataType="System.String"/>
+      <Column Name="DiscountsGranted" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="Data" ReferenceName="ZReport.Data" DataType="System.Int32" Enabled="true" TableName="Data">
+      <Column Name="Date" DataType="System.DateTime"/>
+      <Column Name="IsZReport" DataType="System.Boolean" BindableControl="CheckBox"/>
+    </TableDataSource>
+    <TableDataSource Name="Taxes" ReferenceName="ZReport.Taxes" DataType="System.Int32" Enabled="true" TableName="Taxes">
+      <Column Name="TaxName" DataType="System.String"/>
+      <Column Name="TaxRate" DataType="System.Decimal"/>
+      <Column Name="Total" DataType="System.Decimal"/>
+      <Column Name="IsFixed" DataType="System.Boolean"/>
+    </TableDataSource>
+    <Total Name="UserSalesTotal" Expression="[Sales.Total]" Evaluator="Data1" PrintOn="GroupFooterUserSales"/>
+    <Total Name="TotalPaymentType" Expression="[Sales.Total]" Evaluator="Data2" PrintOn="GroupFooterPaymentType"/>
+    <Total Name="TotalTendered" Expression="Convert.ToDouble([Sales.Total])" Evaluator="Data2"/>
+    <Total Name="TotalReturn" Expression="[Sales.Total]" Evaluator="DataReturns" PrintOn="RefundGroupFooter"/>
+    <Total Name="TotalReturns" Expression="[Sales.Total]" Evaluator="DataReturns" ResetAfterPrint="false"/>
+    <Total Name="TotalTax" Expression="[Taxes.Total]" Evaluator="DataTaxes"/>
+    <Total Name="TotalSales" Expression="[Sales.Total]" Evaluator="Data1"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="80" PaperHeight="1000" LeftMargin="0" TopMargin="0" RightMargin="0" BottomMargin="0" MirrorMargins="true" FirstPageSource="15" OtherPagesSource="15" ExtraDesignWidth="true" UnlimitedHeight="true" PrintOnRollPaper="true">
+    <ReportTitleBand Name="ReportTitle1" Width="302.4" Height="75.6" CanGrow="true" CanShrink="true">
+      <PictureObject Name="Picture1" Width="302.4" Height="75.6" Dock="Fill" DataColumn="Company.Logo"/>
+      <ChildBand Name="ChildCompanyName" Top="78.8" Width="302.4" Height="37.8" CanGrow="true" CanShrink="true">
+        <TextObject Name="Text47" Width="302.4" Height="37.8" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Company.Name]" Padding="2, 5, 2, 5" HorzAlign="Center" RightToLeft="true" Font="Arial, 14pt, style=Bold"/>
+        <ChildBand Name="ChildCompanyData" Top="119.8" Width="302.4" Height="37.8" Border.Lines="Bottom" Border.Style="Dash" CanGrow="true" CanShrink="true">
+          <TextObject Name="TextCompanyAddress" Width="302.4" Height="18.9" Dock="Top" CanGrow="true" CanShrink="true" ShiftMode="Never" Text="[Company.Address]" Padding="2, 0, 2, 5" HorzAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+          <TextObject Name="TextCompanyZipAndCity" Top="18.9" Width="302.4" Height="18.9" Dock="Top" CanGrow="true" CanShrink="true" ShiftMode="Never" Text="[Trim(string.Format(&quot;{0} {1}&quot;,[Company.PostalCode], [Company.City]))]" Padding="2, 0, 2, 5" HorzAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+          <ChildBand Name="ChildReportTitle" Top="160.8" Width="302.4" Height="28.35" CanGrow="true">
+            <TextObject Name="Text1" Width="302.4" Height="28.35" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Translation.Title]" Padding="2, 5, 2, 0" HorzAlign="Center" VertAlign="Center" RightToLeft="true" Font="Arial, 12pt, style=Bold"/>
+            <ChildBand Name="ChildreportData" Top="192.35" Width="302.4" Height="37.8" CanGrow="true">
+              <TextObject Name="Text2" Left="151.2" Width="151.2" Height="37.8" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.Date]&#13;&#10;[Translation.Time]" RightToLeft="true" Font="Arial, 9pt"/>
+              <TextObject Name="Text48" Width="151.2" Height="37.8" Dock="Left" CanGrow="true" CanShrink="true" Text="[Data.Date]&#13;&#10;[Date]" HorzAlign="Right" RightToLeft="true" Font="Arial, 9pt">
+                <Formats>
+                  <DateFormat/>
+                  <GeneralFormat/>
+                  <GeneralFormat/>
+                  <GeneralFormat/>
+                  <GeneralFormat/>
+                </Formats>
+              </TextObject>
+              <ChildBand Name="ChildReportNumber" Top="233.35" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true">
+                <TextObject Name="Text62" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.ReportNumber]" RightToLeft="true" Font="Arial, 9pt"/>
+                <TextObject Name="Text63" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[ZReportNumber.Number]" HorzAlign="Right" RightToLeft="true" Font="Arial, 9pt">
+                  <Formats>
+                    <DateFormat/>
+                    <GeneralFormat/>
+                    <GeneralFormat/>
+                    <GeneralFormat/>
+                    <GeneralFormat/>
+                  </Formats>
+                </TextObject>
+                <ChildBand Name="ChildFromDocumentBand" Top="255.45" Width="302.4" Height="47.25" CanGrow="true" CanShrink="true">
+                  <TextObject Name="TextFromDocumentLabel" Left="151.2" Width="151.2" Height="47.25" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.FromDocument]" Padding="2, 5, 2, 0" RightToLeft="true" Font="Arial, 9pt"/>
+                  <TextObject Name="TextFromDocument" Width="151.2" Height="47.25" Dock="Left" CanGrow="true" CanShrink="true" Text="[ReportDocuments.FromDocument]" Padding="2, 5, 2, 0" HorzAlign="Right" RightToLeft="true" Font="Arial, 9pt">
+                    <Formats>
+                      <DateFormat/>
+                      <GeneralFormat/>
+                      <GeneralFormat/>
+                      <GeneralFormat/>
+                      <GeneralFormat/>
+                    </Formats>
+                  </TextObject>
+                  <ChildBand Name="ChildToDocumentBand" Top="305.9" Width="302.4" Height="47.25" CanGrow="true" CanShrink="true">
+                    <TextObject Name="TextToDocument" Width="151.2" Height="47.25" Dock="Left" CanGrow="true" CanShrink="true" Text="[ReportDocuments.ToDocument]" Padding="2, 0, 2, 5" HorzAlign="Right" RightToLeft="true" Font="Arial, 9pt">
+                      <Formats>
+                        <DateFormat/>
+                        <GeneralFormat/>
+                        <GeneralFormat/>
+                        <GeneralFormat/>
+                        <GeneralFormat/>
+                      </Formats>
+                    </TextObject>
+                    <TextObject Name="TextToDocumentLabel" Left="151.2" Width="151.2" Height="47.25" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.ToDocument]" Padding="2, 0, 2, 5" RightToLeft="true" Font="Arial, 9pt"/>
+                    <ChildBand Name="ChildStartingCash" Top="356.35" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true">
+                      <TextObject Name="Text50" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[CashIn.CashIn]" HorzAlign="Right" RightToLeft="true" Font="Arial, 9pt">
+                        <Formats>
+                          <CurrencyFormat/>
+                          <CurrencyFormat/>
+                        </Formats>
+                      </TextObject>
+                      <TextObject Name="Text49" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.CashIn]" RightToLeft="true" Font="Arial, 9pt"/>
+                      <ChildBand Name="ChildCashOut" Top="378.45" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true">
+                        <TextObject Name="Text64" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[CashIn.CashOut]" HorzAlign="Right" RightToLeft="true" Font="Arial, 9pt">
+                          <Formats>
+                            <CurrencyFormat/>
+                            <CurrencyFormat/>
+                          </Formats>
+                        </TextObject>
+                        <TextObject Name="Text65" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.CashOut]" RightToLeft="true" Font="Arial, 9pt"/>
+                      </ChildBand>
+                    </ChildBand>
+                  </ChildBand>
+                </ChildBand>
+              </ChildBand>
+            </ChildBand>
+          </ChildBand>
+        </ChildBand>
+      </ChildBand>
+    </ReportTitleBand>
+    <GroupHeaderBand Name="GroupHeader1" Top="441.55" Width="302.4" Height="28.35" Border.Lines="Bottom" Border.Style="Dash" CanGrow="true" CanShrink="true" Condition="[Sales.UserId]">
+      <TextObject Name="Text3" Width="302.4" Height="28.35" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Sales.FirstName] [Sales.LastName]" Padding="2, 5, 2, 5" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+      <DataHeaderBand Name="DataHeader1" Top="400.55" Width="302.4" Height="37.8" Border.Lines="Top, Bottom" Border.Style="Dash" CanGrow="true" CanShrink="true">
+        <TextObject Name="Text51" Left="151.2" Width="151.2" Height="37.8" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.UserSales]" Padding="2, 10, 2, 0" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt, style=Bold"/>
+        <TextObject Name="TextNumberOfSales" Width="151.2" Height="37.8" Dock="Left" CanGrow="true" CanShrink="true" Text="[DocumensCount.NumberOfSales]" Padding="2, 10, 2, 0" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+      </DataHeaderBand>
+      <DataBand Name="Data1" Top="473.1" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true" DataSource="Table">
+        <TextObject Name="Text52" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" Text="[Sales.PaymentTypeName]:" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+        <TextObject Name="Text53" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[Sales.Total]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+        <Sort>
+          <Sort Expression="ToDouble([Sales.Total])" Descending="true"/>
+        </Sort>
+      </DataBand>
+      <GroupFooterBand Name="GroupFooterUserSales" Top="495.2" Width="302.4" Height="18.9" Border.Lines="Bottom" Border.Style="Dash" CanGrow="true" CanShrink="true">
+        <TextObject Name="Text4" Width="302.4" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="= [UserSalesTotal]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt, style=Bold"/>
+      </GroupFooterBand>
+    </GroupHeaderBand>
+    <GroupHeaderBand Name="GroupHeader2" Top="558.3" Width="302.4" Height="9.45" CanGrow="true" CanShrink="true" Condition="[Sales.PaymentTypeId]">
+      <DataHeaderBand Name="DataHeader2" Top="517.3" Width="302.4" Height="37.8" CanGrow="true" CanShrink="true" Guides="37.8">
+        <TextObject Name="Text5" Width="302.4" Height="37.8" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Translation.PaymentTypes]" Padding="2, 10, 2, 0" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt, style=Bold"/>
+      </DataHeaderBand>
+      <DataBand Name="Data2" Top="570.95" Width="302.4" Height="9.45" CanGrow="true" CanShrink="true" DataSource="Table" Filter="ToDouble([Sales.Total]) &gt;=0"/>
+      <GroupFooterBand Name="GroupFooterPaymentType" Top="583.6" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true" Guides="0">
+        <TextObject Name="Text6" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[TotalPaymentType]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+        <TextObject Name="Text54" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" Text="[Sales.PaymentTypeName]:" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+      </GroupFooterBand>
+    </GroupHeaderBand>
+    <DataBand Name="DataPaymentTotal" Top="605.7" Width="302.4" Height="28.35" Border.Lines="Top, Bottom" Border.Style="Dash" CanGrow="true" CanShrink="true">
+      <TextObject Name="Text55" Width="151.2" Height="28.35" Dock="Left" CanGrow="true" CanShrink="true" Text="[TotalTendered]" Padding="2, 5, 2, 5" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+      <TextObject Name="Text56" Left="151.2" Width="151.2" Height="28.35" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.PaymentTypesTotal]" Padding="2, 5, 2, 5" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+    </DataBand>
+    <GroupHeaderBand Name="GroupHeader3" Top="678.25" Width="302.4" Height="9.45" CanGrow="true" CanShrink="true" Condition="[Sales.PaymentTypeId]">
+      <DataHeaderBand Name="DataHeader3" Top="637.25" Width="302.4" Height="37.8" CanGrow="true" CanShrink="true">
+        <TextObject Name="Text58" Left="151.2" Width="151.2" Height="37.8" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.Refunds]" Padding="2, 10, 2, 0" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt, style=Bold"/>
+        <TextObject Name="TextNumberOfRefunds" Width="151.2" Height="37.8" Dock="Left" CanGrow="true" CanShrink="true" Text="[DocumensCount.NumberOfRefunds]" Padding="2, 10, 2, 0" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+      </DataHeaderBand>
+      <DataBand Name="DataReturns" Top="690.9" Width="302.4" Height="9.45" CanGrow="true" CanShrink="true" DataSource="Table" Filter="ToDouble([Sales.Total])&lt;0"/>
+      <GroupFooterBand Name="RefundGroupFooter" Top="703.55" Width="302.4" Height="18.9" CanGrow="true" CanShrink="true">
+        <TextObject Name="Text7" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" Text="[Sales.PaymentTypeName]:" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+        <TextObject Name="Text8" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[TotalReturn]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+      </GroupFooterBand>
+    </GroupHeaderBand>
+    <DataBand Name="DataTotalReturns" Top="725.65" Width="302.4" Height="28.35" Border.Lines="Top, Bottom" Border.Style="Dash" CanGrow="true" CanShrink="true">
+      <TextObject Name="Text9" Left="151.2" Width="151.2" Height="28.35" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.RefundsTotal]" Padding="2, 1, 2, 1" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+      <TextObject Name="Text59" Width="151.2" Height="28.35" Dock="Left" CanGrow="true" CanShrink="true" Text="[TotalReturns]" Padding="2, 1, 2, 1" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+    </DataBand>
+    <DataBand Name="DataDiscountsGranted" Top="757.2" Width="302.4" Height="28.35" CanGrow="true" CanShrink="true">
+      <TextObject Name="Text19" Left="151.2" Width="151.2" Height="28.35" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.DiscountsGranted]" Padding="2, 10, 2, 0" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt, style=Bold"/>
+      <TextObject Name="Text20" Width="151.2" Height="28.35" Dock="Left" CanGrow="true" CanShrink="true" Text="[Discounts.TotalDiscount]" Padding="2, 10, 2, 0" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+    </DataBand>
+    <DataBand Name="DataTaxes" Top="820.3" Width="302.4" Height="18.9" CanGrow="true" DataSource="Taxes" Filter="[Taxes.TaxRate] &gt; 0M">
+      <TextObject Name="Text10" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" Text="[Taxes.TaxName] ([Taxes.TaxRate][IIf([Taxes.IsFixed],&quot;&quot;,&quot;%&quot;)])" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt">
+        <Formats>
+          <GeneralFormat/>
+          <GeneralFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+      <TextObject Name="Text11" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[Taxes.Total]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" RightToLeft="true" WordWrap="false" Font="Arial, 9pt" Trimming="EllipsisCharacter"/>
+      <DataHeaderBand Name="DataHeader4" Top="788.75" Width="302.4" Height="28.35" CanGrow="true" CanShrink="true">
+        <TextObject Name="Text12" Width="302.4" Height="28.35" Dock="Fill" CanGrow="true" CanShrink="true" Text="[Translation.TaxCollected]" Padding="2, 10, 2, 5" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt, style=Bold"/>
+      </DataHeaderBand>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="842.4" Width="302.4" Height="18.9" Border.Lines="Top" CanGrow="true">
+      <TextObject Name="Text13" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.TaxableTotal]" Padding="2, 5, 2, 0" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+      <TextObject Name="Text60" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[[TotalSales] - [TotalTax]]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+      <ChildBand Name="Child1" Top="864.5" Width="302.4" Height="18.9" CanGrow="true">
+        <TextObject Name="Text14" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.Tax]" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+        <TextObject Name="Text18" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[TotalTax]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt"/>
+        <ChildBand Name="Child2" Top="886.6" Width="302.4" Height="18.9" Border.Lines="Bottom" CanGrow="true">
+          <TextObject Name="Text15" Left="151.2" Width="151.2" Height="18.9" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.Total]" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt, style=Bold"/>
+          <TextObject Name="Text17" Width="151.2" Height="18.9" Dock="Left" CanGrow="true" CanShrink="true" Text="[TotalSales]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt, style=Bold"/>
+          <ChildBand Name="TotalBalanceSummary" Top="908.7" Width="302.4" Height="28.35" Border.Lines="Bottom" CanGrow="true" CanShrink="true">
+            <TextObject Name="Text16" Left="151.2" Width="151.2" Height="28.35" Dock="Right" CanGrow="true" CanShrink="true" Text="[Translation.TotalBalance]" Padding="2, 5, 2, 5" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt, style=Bold"/>
+            <TextObject Name="Text61" Width="151.2" Height="28.35" Dock="Left" CanGrow="true" CanShrink="true" Text="[[TotalSales] + [CashIn.CashIn] + [CashIn.CashOut]]" Padding="2, 5, 2, 5" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Arial, 9pt, style=Bold"/>
+          </ChildBand>
+        </ChildBand>
+      </ChildBand>
+    </ReportSummaryBand>
+  </ReportPage>
+</Report>

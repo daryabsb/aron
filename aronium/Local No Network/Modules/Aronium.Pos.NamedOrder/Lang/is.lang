@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <FloorPlans>
+    <Options>
+      <View>
+        <Orders>
+          <Order>
+            <Number Text="Pöntun / Viðskiptavinur Nafn" />
+          </Order>
+        </Orders>
+      </View>
+    </Options>
+  </FloorPlans>
+  <Order>
+    <Name Text="Pöntun Nafn">
+      <Title Text="Pöntun eða Viðskiptavinur Nafn" />
+      <Info Text="Sláðu inn Pöntun Nafn eða Númer" />
+      <Validation>
+        <Duplicate Text="Pöntun með sama nafni er þegar til. Sláðu inn annað nafgn til að halda áfram." />
+        <Empty Text="Pöntun Nafn eða Númer getur ekki verið autt fyrir núverandi Pöntun." />
+        <Required Text="Pöntun Nafn eða Númer má ekki vera autt." />
+      </Validation>
+      <Settings>
+        <Enabled Text="Virka Viðskiptavinur Pöntun Nafn" />
+        <Required Text="Pöntun Nafn Þarfnast" />
+        <RequestOrderName Text="Biðja um Pöntun Nafn Sjálfkrafa" />
+      </Settings>
+    </Name>
+  </Order>
+</Language>

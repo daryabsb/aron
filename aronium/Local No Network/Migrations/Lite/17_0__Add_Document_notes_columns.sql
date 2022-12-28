@@ -1,0 +1,2 @@
+ALTER TABLE Document ADD COLUMN InternalNote TEXT;
+ALTER TABLE Document ADD COLUMN Note TEXT;

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="en" name="English">
+  <MovingAveragePrice>
+    <Recalculate Text="Mov. avg. price">
+      <Title Text="Moving average price" />
+      <Info Text="Select products or product groups you wish to recalculate moving average price for. Moving average price will be calculated and will update all documents in selected period.\nThis operation may take some time, depending on number of products and selected time period." />
+      <Selection>
+        <ProductGroups Text="Product groups"/>
+        <Products Text="Products"/>
+        <NoItems Text="No products selected" />
+      </Selection>
+      <SelectedPeriod Text="Selected period" />
+      <PeriodStart Text="Start of period" />
+      <PeriodEnd Text="End of period" />
+      <Start Text="Start" />
+      <Stop Text="Stop" />
+      <Product Text="Product: {0}" />
+      <OverallProgress Text="Overall progress" />
+      <Complete Text="Moving average price recalculated successfully." />
+      <Disabled Text="Moving average price is disabled. Enable moving average price to start tracking cost prices automatically.">
+        <Enable Text="Click here to enable moving average price" />
+      </Disabled>
+    </Recalculate>
+    <Settings>
+      <Title Text="Moving average price" />
+      <Enabled Text="Enable moving average price" />
+    </Settings>
+  </MovingAveragePrice>
+</Language>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ZReport>false</ZReport>
+  <XReport>false</XReport>
+  <Reports />
+  <ExportPdf>true</ExportPdf>
+  <ExportExcel>true</ExportExcel>
+  <SendIfEmpty>false</SendIfEmpty>
+  <IsRecurringSendEnabled>false</IsRecurringSendEnabled>
+  <Interval>60</Interval>
+  <BusinessHoursStart>0001-01-01T00:00:00</BusinessHoursStart>
+  <BusinessHoursEnd>0001-01-01T00:00:00</BusinessHoursEnd>
+  <Subject><![CDATA[]]></Subject>
+  <Message><![CDATA[]]></Message>
+  <HideGracePeriodWarningUntil>2022-10-05T00:00:00</HideGracePeriodWarningUntil>
+  <HideLicenseErrorMessage>false</HideLicenseErrorMessage>
+</Config>

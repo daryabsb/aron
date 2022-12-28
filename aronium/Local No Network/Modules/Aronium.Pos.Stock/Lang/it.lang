@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="it" name="Italian">
+  <Stock Text="Magazzino">
+    <Items>
+      <Item>
+        <Product>
+          <Id Text="Id" />
+          <Code Text="Codice" />
+          <Name Text="Nome" />
+          <MeasurementUnit Text="Unità di misura" />
+        </Product>
+        <Quantity Text="Quantità" />
+        <NegativeQuantity Text="Quantità scorte negativa" />
+        <TotalCostBeforeTax Text="Costo" />
+        <TotalCost Text="Costo con IVA" />
+        <TotalBeforeTax Text="Valuta" />
+        <TotalAfterTax Text="Valuta con IVA" />
+      </Item>
+      <Filter>
+        <NegativeQuantity Text="Quantità negativa">
+          <Info Text="Mostra solo i prodotti con quantità negative" />
+        </NegativeQuantity>
+        <NonZeroQuantity Text="Quantità non nulla">
+          <Info Text="Mostra solo i prodotti con quantità non nulla" />
+        </NonZeroQuantity>
+        <ZeroQuantity Text="Quantità a zero">
+          <Info Text="Mostra solo i prodotti con quantità a zero" />
+        </ZeroQuantity>
+      </Filter>
+      <Summary>
+        <NegativeCount Text="Totale articoli con quantità negativa in magazzino" />
+        <ZeroCount Text="Totale articoli a magazzino con quantità pari a zero" />
+        <PositiveCount Text="Totale articoli a magazzino con quantità positiva " />
+        <TotalBeforeTax Text="Totale:" />
+        <TotalIncludingTax Text="Totale con IVA:" />
+        <SellPrice Text="Prezzo di vendita" />
+        <CostPrice Text="Costo">
+          <TotalCostBeforeTax Text="Costo totale:" />
+          <TotalCostAfterTax Text="Costo totale con IVA:" />
+        </CostPrice>
+      </Summary>
+    </Items>
+    <Reset Text="Ricalcola i quantitativi delle scorte">
+      <Completed Text="Calcolo dei quantitativi completato correttamente." />
+    </Reset>
+    <History Text="Cronologia delle scorte">
+      <Start Text="Avvio" />
+      <End Text="Fine" />
+      <Document Text="Documento">
+        <DocumentType Text="Tipo di documento" />
+        <Customer Text="Cliente" />
+        <Date Text="Data" />
+        <StockDate Text="Data delle scorte" />
+      </Document>
+      <ChangeQuantity Text="Quantità" />
+      <InStock Text="In magazzino" />
+      <MeasurementUnit Text="Unità di misura" />
+    </History>
+    <Print>
+      <Report Text="Inventario" />
+    </Print>
+    <ProductDetails>
+      <OnHand Text="Quantità disponibile" />
+    </ProductDetails>
+    <Control>
+      <Settings>
+        <PreventNegativeQuantities Text="Previeni l'inventario negativo" />
+      </Settings>
+      <NegativeQuantity Text="Vendita articoli a quantità zero">
+        <Confirmation Text="Non hai una quantità sufficiente a disposizione per vendere questo oggetto. La vendita di questo articolo potrebbe comportare una quantità negativa in magazzino.\n\nQuantità a disposizione: {0}\nQuantità richiesta: {1}\n\nSei sicuro di voler aggiungere questo articolo alla vendita attuale?" />
+        <Title Text="Quantità disponibile mancante" />
+        <PermissionDenied Text="Non hai privilegi sufficienti per vendere articoli a quantità zero. Si prega di consultare l'amministratore." />
+        <Authorization>
+          <Title Text="Il controllo delle scorte è abilitato.\nInserire la password per vendere un articolo con quantità pari a zero" />
+        </Authorization>
+        <AllowMultiple>
+          <NotAllowed Text="La ripetizione dell'arrotondamento non è permessa quando il controllo delle scorte è attivato." />
+        </AllowMultiple>
+        <Security>
+          <Description Text="Controlla se un utente è in grado di vendere articoli con quantità negativa" />
+        </Security>
+      </NegativeQuantity>
+    </Control>
+    <QuickInventory Text="Inventario veloce">
+      <Description Text="Cambia i quantitativi delle scorte per gli articoli selezionati" />
+      <Title Text="Aggiorna i quantitativi delle scorte" />
+      <Subtitle Text="Imposta i quantitativi per i prodotti selezionati.\nIl documento dei conteggi dell'inventario sarà creato automaticamente." />
+      <Success Text="I quantitativi delle scorte sono stati cambiati correttamente.\nIl documento {0} è stato creato" />
+    </QuickInventory>
+    <LearnMore Text="Ulteriori informazioni su magazzino e inventario" />
+    <SearchResults Text="Risultato della ricerca" />
+  </Stock>
+</Language>

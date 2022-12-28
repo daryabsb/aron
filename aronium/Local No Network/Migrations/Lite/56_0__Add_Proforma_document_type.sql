@@ -1,0 +1,1 @@
+INSERT INTO DocumentType (PriceType, PrintTemplate, EditorType, StockDirection, WarehouseId, DocumentCategoryId, Code, Name) VALUES (1, 'Proforma', 0, 0, 1, 2, 230, 'Proforma');

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <StockControl>
+    <Product>
+      <Title Text="Varude kontroll" />
+      <Supplier Text="Tarnija">
+        <None Text="(pole)" />
+        <Clear Text="Tühjenda" />
+      </Supplier>
+      <ReorderPoint Text="Juurde tellimise jääk" />
+      <PreferredQuantity Text="Eelistatud kogus" />
+      <LowStockWarning Text="Madala laoseisu hoiatus">
+        <WarningQuantity Text="Madala laoseisu hoiatuskogus" />
+      </LowStockWarning>
+      <Reset Text="Vaikesätete taastamine" />
+      <Info Text="Määrake minimaalse laokoguse reeglid, mida saab kasutada kordustellimuse koostamisel." />
+    </Product>
+    <Notification>
+      <Message Text="Mõnede tootede laojääk on jõudnud kordustellimuse loomise piirini.&#xA;Kaaluge järgmiste toodete tarnimist lattu: {0}.">
+        <Title Text="Toodete laojääk on lõppemas" />
+      </Message>
+    </Notification>
+    <Reports>
+      <Group Text="Varude kontroll" />
+      <ReorderProductList Text="Kordustellitavate toodete loend">
+        <OrderQuantity Text="Tellitav kogus" />
+      </ReorderProductList>
+      <LowStockWarning Text="Madala laoseisu hoiatus">
+        <QuantityOnHand Text="Kogus hetkel" />
+        <PreferredQuantity Text="Eelistatud kogus" />
+        <WarningQuantity Text="Kriitiline kogus" />
+        <ReorderPoint Text="Kordustellimise piir" />
+      </LowStockWarning>
+    </Reports>
+  </StockControl>
+</Language>

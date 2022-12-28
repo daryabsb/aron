@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="pt-br" name="Português do Brasil">
+  <CustomerDisplay>
+    <Total Text="Total:" />
+    <Change Text="Troco:" />
+    <Paid Text="Pago:" />
+    <WelcomeMessage Text="BEM VINDO!" />
+    <Settings Text="Display do cliente">
+      <Enabled Text="Habilitado" />
+      <Port Text="Porta COM">
+        <Settings>
+          <BaudRate Text="Bits por segundo" />
+          <DataBits Text="Bits de dados" />
+          <StopBits Text="Bits de parada" />
+          <Parity Text="Paridade" />
+          <FlowControl Text="Controle de fluxo" />
+          <Show Text="Mostrar configurações de porta"/>
+          <Hide Text="Ocultar configurações de porta" />
+          <ResetToDefaults Text="Restaurar padrões" />
+        </Settings>
+      </Port>
+      <CharactersPerLine Text="Número de caracteres" />
+      <WelcomeMessage Text="Mensagem de boas-vindas">
+        <TopLine Text="Linha superior" />
+        <BottomLine Text="Linha inferior" />
+      </WelcomeMessage>
+      <Test Text="Tela de teste" />
+    </Settings>
+    <Error>
+      <InvalidPortSettings Text="Erro ao inicializar a exibição do cliente.\nVerifique as configurações da porta." />
+    </Error>
+  </CustomerDisplay>
+</Language>

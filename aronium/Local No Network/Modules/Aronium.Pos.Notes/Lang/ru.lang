@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="ru" name="Russian">
+  <Notes Text="Заметки">
+    <Add Text="Добавить заметки"/>
+    <Document>
+      <Number Text="Документ №:" />
+      <Customer Text="Гость:" />
+      <Total Text="Итого:" />
+    </Document>
+    <Note Text="Общая заметка">
+      <Description Text="Введите общую заметку" />
+    </Note>
+    <InternalNote Text="Внутреняя заметка">
+      <Description Text="Введите внутренюю заметку" />
+    </InternalNote>
+    <Saved Text="Заметка успешно сохранена" />
+  </Notes>
+</Language>

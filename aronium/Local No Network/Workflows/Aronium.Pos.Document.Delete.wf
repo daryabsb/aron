@@ -1,0 +1,50 @@
+<Workflow>
+  <Name>Aronium.Pos.Document.Delete</Name>
+  <Action>Delete</Action>
+  <UseWorkflowPool>True</UseWorkflowPool>
+  <Variables />
+  <Tasks>
+    <StartTask id="3bcbf02f-f10d-422b-bb4f-7c34913895d2" name="Start">
+      <Transitions>
+        <DefaultTransition id="91500fda-934b-4818-a232-3da18a3fe6ea" name="Validate stock date">
+          <Target>21274343-bae8-43bb-a9a5-f0baa119a63d</Target>
+        </DefaultTransition>
+      </Transitions>
+    </StartTask>
+    <ExternalTask id="47997fdf-9def-4e71-a3e0-2122eb0b6f85" name="Delete document">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Documents.DeleteDocument</ClassName>
+      <Transitions>
+        <DefaultTransition id="958ef3b4-93b5-4d61-9895-5064239c3056" name="Continue">
+          <Target>cbc67e2a-b134-401b-b9f7-47aea1c329c8</Target>
+        </DefaultTransition>
+        <ErrorTransition id="64d3ea74-cad0-4568-9c5b-9b7a57cef3fd" name="Error">
+          <Target>f78a2154-46da-43b5-91ec-0e933fad15a4</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <ExternalTask id="cbc67e2a-b134-401b-b9f7-47aea1c329c8" name="Update stock quantities">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Documents.UpdateStockQuantitiesTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="dd304c4c-ac11-47ad-8466-d10000836ace" name="End">
+          <Target>cf5dba4c-f69d-4cb3-93fe-28f8baf1ad06</Target>
+        </DefaultTransition>
+      </Transitions>
+    </ExternalTask>
+    <EndTask id="cf5dba4c-f69d-4cb3-93fe-28f8baf1ad06" name="End" />
+    <ExternalTask id="21274343-bae8-43bb-a9a5-f0baa119a63d" name="Validate delete">
+      <AssemblyName>Aronium.Pos.Common</AssemblyName>
+      <ClassName>Aronium.Pos.Common.Tasks.Documents.ValidateDocumentDeleteTask</ClassName>
+      <Transitions>
+        <DefaultTransition id="a5170a41-db8e-477f-88af-edbce3ea3324" name="Delete">
+          <Target>47997fdf-9def-4e71-a3e0-2122eb0b6f85</Target>
+        </DefaultTransition>
+        <ErrorTransition id="fdd74c12-7e8a-4068-8ce7-7b1670899140" name="Error">
+          <Target>f78a2154-46da-43b5-91ec-0e933fad15a4</Target>
+        </ErrorTransition>
+      </Transitions>
+    </ExternalTask>
+    <AbortTask id="f78a2154-46da-43b5-91ec-0e933fad15a4" name="Abort" />
+  </Tasks>
+</Workflow>

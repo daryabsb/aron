@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="is" name="Icelandic">
+  <Loyalty Text="Vild">
+    <Promotions Text="Tilboð &amp; Aðgerðir">
+      <New Text="Bæta Við Tilboð">
+        <Title Text="Nýtt Tilboð" />
+      </New>
+      <Delete Text="Eyða Tilboði">
+        <Confirmation Text="Ertu viss um að þú viljir eyða Tilboði &quot;{0}&quot;?" />
+        <Error Text="Villa við að Eyða Tilboði." />
+      </Delete>
+      <View>
+        <Enabled Text="Virkja" />
+        <Name Text="Nafn" />
+        <DaysOfWeek Text="Dagar Vikunnar" />
+        <StartDate Text="Byrjar Dagetning" />
+        <StartTime Text="Byrjar Tími" />
+        <EndDate Text="Lýkur Dagsetning" />
+        <EndTime Text="Lýkur Tími" />
+      </View>
+      <Promotion>
+        <Empty Text="Engar Vörur bætt við í TIlboð." />
+        <Name Text="Nafn á Tilboði" />
+        <Active Text="Virkja" />
+        <DaysOfWeek>
+          <All Text="Alla Daga">
+            <ShortName Text="Allt" />
+          </All>
+          <Monday Text="Mánudaga">
+            <ShortName Text="Mán" />
+          </Monday>
+          <Tuesday Text="Þriðjudaga">
+            <ShortName Text="Þri" />
+          </Tuesday>
+          <Wednesday Text="Miðvikudaga">
+            <ShortName Text="Mið" />
+          </Wednesday>
+          <Thursday Text="Fimmtudaga">
+            <ShortName Text="Fim" />
+          </Thursday>
+          <Friday Text="Föstudaga">
+            <ShortName Text="Fös" />
+          </Friday>
+          <Saturday Text="Laugardaga">
+            <ShortName Text="Lau" />
+          </Saturday>
+          <Sunday Text="Sunnudaga">
+            <ShortName Text="Sun" />
+          </Sunday>
+        </DaysOfWeek>
+        <Duration>
+          <Start Text="Byrjar" />
+          <End Text="Lýkur" />
+        </Duration>
+        <Item>
+          <PriceType>
+            <Discount Text="Afsláttur" />
+            <FixedPrice Text="Fast Verð" />
+          </PriceType>
+          <Condition Text="Skylda">
+            <Title Text="Ástand Magns" />
+            <ApplyToAll Text="Setja Á Allt" />
+            <Quantity>
+              <Description Text="Sláðu Inn Skyldu Magn Fyrir Þetta Tilboð" />
+            </Quantity>
+            <LimitToNext Text="Setja Á Næsta">
+              <Description Text="Sláðu inn Takmörk Magns sem þarf til að virkja tilboð" />
+            </LimitToNext>
+            <CopyToAll Text="Afrita Skyldur á Allar Vörur">
+              <Completed Text="Skyldur hafa verið Afritaðar" />
+            </CopyToAll>
+          </Condition>
+          <InvalidValue Text="Röng Gildi" />
+          <Errors>
+            <Existing Text="Vara &quot;{0}&quot; er þegar til í þessu Tilboði." />
+          </Errors>
+        </Item>
+        <Saved Text="Tilboð Hefur Verið Vistað." />
+        <InvalidItems Text="Tókst ekki að vista Tilboð. Reyndu Aftur." />
+      </Promotion>
+      <NoPromotions Text="Engin Tilboð">
+        <Add Text="Bú TIl Nýtt Tilboð" />
+      </NoPromotions>
+      <LearnMore Text="Læra Meira Um Tilboð og Happy Hour" />
+      <Edit>
+        <Title Text="Breyta Tilboði &quot;{0}&quot;" />
+      </Edit>
+    </Promotions>
+  </Loyalty>
+</Language>

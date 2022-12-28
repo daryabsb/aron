@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Print>
+    <Labels>
+      <Documents>
+        <Invoice Text="FACTURA">
+          <AmountDue Text="Cantidad adeudada" />
+          <BankAccountNumber Text="Bank acc. number" />
+          <PaymentStatus Text="Estado de pago">
+            <Unpaid Text="No pagado" />
+            <Paid Text="Pagado" />
+          </PaymentStatus>
+          <BillTo Text="Cliente" />
+          <InvoiceNumber Text="Factura No." />
+          <Item Text="Descripcion de articulo" />
+          <BankDetails Text="Bank details" />
+          <PaidAmount Text="Monto pagado" />
+          <PaymentMethod Text="Método de pagado" />
+          <ItemsCount Text="Cant. de art." />
+        </Invoice>
+      </Documents>
+      <General>
+        <Date Text="Fecha" />
+        <DueDate Text="Fecha de vencimiento" />
+        <Period Text="Periodo" />
+        <Customer Text="Cliente" />
+        <User Text="Usuario" />
+        <Product Text="Producto" />
+        <Company Text="Empresa">
+          <Address Text="Direccion" />
+        </Company>
+        <Code Text="Código" />
+        <Quantity Text="Cantidad" />
+        <Name Text="Nombre" />
+        <UnitOfMeasurement Text="UM" />
+        <TotalBeforeTax Text="Base imponible" />
+        <Total Text="Total" />
+        <ProductGroup Text="Grupo de productos" />
+        <Supplier Text="Proveedor" />
+        <TotalPaid Text="Total pagado" />
+        <TotalUnpaid Text="Total impago" />
+        <Cost Text="Costo" />
+        <Profit Text="Utilidad" />
+        <Margin Text="Margen" />
+        <Description Text="Descripcion" />
+      </General>
+      <Reports>
+        <Refunds Text="DEVOLUCIONES" />
+        <SalesByPaymentType Text="VENTAS SEGÚN MEDIOS DE PAGOS" />
+        <Invoices Text="FACTURAS" />
+        <DailySales Text="VENTAS DIARIAS" />
+        <UnpaidPurchases Text="COMPRAS IMPAGAS" />
+        <PurchaseBySupplier Text="COMPRAS POR PROVEEDOR" />
+        <PurchaseByProduct Text="COMPRAS POR PRODUCTOS" />
+        <ProfitAndMargin Text="UTIIDADES Y MARGEN" />
+        <StartingCashEntries Text="INICIO  DE CAJA - EFECTIVO" />
+        <SalesByUser Text="VENTAS POR USUARIO" />
+        <Taxes Text="IMPUESTOS" />
+        <UnpaidSales Text="VENTAS IMPAGAS" />
+      </Reports>
+    </Labels>
+  </Print>
+</Language>
