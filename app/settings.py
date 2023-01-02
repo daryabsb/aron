@@ -173,6 +173,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8081",
     "http://192.168.1.24:8080",
     "http://192.168.1.24:8081",
+    'http://192.168.1.7:5173',
 ]
 
 # CORS_ALLOWED_ORIGIN_REGEXES = [

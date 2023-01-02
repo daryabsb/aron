@@ -44,7 +44,9 @@ class PrinterNamesList(APIView):
         for line in data:
             for printer_name in line.split("  "):
                 if printer_name != "":
-                    print(printer_name)
+                    # print(printer_name)
                     printer_list.append(printer_name)
                     break
+
+        # print("PRINTERS")
         return Response(printer_list)
